@@ -1,14 +1,45 @@
 <!DOCTYPE html>
+
 <html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale:1.0">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
 
-<body>
-    <h1>hola mundo</h1>
-</body>
+		<title>Login</title>
 
-</html>
+	</head>
+
+	<body>
+
+
+		<div >
+
+			<form method="post" action="<?= base_url(" login ");?>">
+
+
+				<h2>log in</h2>
+				<div>
+
+					<div>
+                        <input name="email" type="email" id="email" placeholder="name@example.com">
+					</div>
+					<div>
+                        <input name="password" type="password" id="password" placeholder="password">
+					</div>
+				</div>
+
+				<div>
+					
+					<a href="<?= base_url(" register ");?>">sign up</a>
+				</div>
+				<input type="submit" value="Login">
+
+
+			</form>
+		</div>
+
+
+
+
+	</body>

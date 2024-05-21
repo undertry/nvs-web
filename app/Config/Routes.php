@@ -8,9 +8,9 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Home::index');
 
 // Seccion controlador User/Inicio_Sesion
-$routes->get('/inicio-sesion', 'User\Inicio_Sesion::index');
-$routes->POST('/inicio-sesion', 'User\Inicio_Sesion::index');
+$routes->get('login', 'User\Inicio_Sesion::index');
+$routes->POST('login', 'User\Inicio_Sesion::do_login');
 
 // Seccion controlador User/Registro
-$routes->get('/registro', 'User\Registro::index');
-$routes->POST('/registro', 'User\Registro::index');
+$routes->get('register', 'User\Registro::index');
+$routes->POST('register', 'User\Registro::do_register');
