@@ -11,23 +11,22 @@
 <body>
     <nav>
         <ul>
-            <li><a href="#features">Software</a>
+            <li><a href="#software">Software</a>
                 <ul class="dropdown">
-                    <li><a href="#what">¿Qué es?</a></li>
-                    <li><a href="#who">¿A quién está destinado?</a></li>
-                    <li><a href="#how">¿Cómo surgió?</a></li>
+                    <li><a href="#what">what is this?</a></li>
+                    <li><a href="#who">who is it intended for?</a></li>
+                    <li><a href="#how">how did it come about?</a></li>
                 </ul>
             </li>
             <li><a href="#about">About Us</a>
                 <ul class="dropdown">
-                    <li><a href="#creators">Creadores</a></li>
-                    <li><a href="#why">¿Para qué lo hicimos?</a></li>
+                    <li><a href="#creators">creators</a></li>
                 </ul>
             </li>
-            <li><a href="#contact">Menu</a>
+            <li><a href="#menu">Menu</a>
                 <ul class="dropdown">
-                    <li><a href="#console">Consola</a></li>
-                    <li><a href="#login">Iniciar Sesión</a></li>
+                    <li><a href="#console">console</a></li>
+                    <li><a href="#login">login</a></li>
                 </ul>
             </li>
         </ul>
