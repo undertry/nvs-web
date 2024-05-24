@@ -13,7 +13,7 @@ class UserModel extends Model
     protected $returnType = 'object';
     //protected $useSoftDeletes = true;
 
-    protected $allowedFields = ['name','email','password','cod_recup','created_at'];
+    protected $allowedFields = ['name','email','password','created_at'];
 
     protected $useTimestamps = false;
     protected $createdField = 'created_at';
@@ -28,10 +28,7 @@ class UserModel extends Model
     return $this->where('email', $email)->countAllResults() > 0;
 }
 
-public function isCodTaken($cod_recup)
-{
-    return $this->where('cod_recup', $cod_recup)->countAllResults() > 0;
-}
+
 public function register($ra)
 {
     $this->insert($ra);
@@ -43,5 +40,16 @@ public function getUserByEmail($email)
                 ->where('email', $email)
                 ->first();
 }
+/* 
+public function isCodTaken($cod_recup)
+{
+    return $this->where('cod_recup', $cod_recup)->countAllResults() > 0;
+}
+public function codrecup($cr)
+{
+    $this->insert($cr);
+
+}
+*/
 
 }
