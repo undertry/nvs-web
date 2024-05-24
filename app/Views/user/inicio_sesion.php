@@ -31,7 +31,8 @@
 
 				<div>
 					
-					<a href="<?= base_url(" register ");?>">sign up</a>
+					<a href="<?= base_url(" register ");?>">Sign up</a>
+					<a href="<?= base_url(" change_password ");?>">Forgot password?</a>
 				</div>
 				<input type="submit" value="Login">
 

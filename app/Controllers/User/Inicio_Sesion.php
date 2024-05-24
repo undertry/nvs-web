@@ -6,7 +6,6 @@ use App\Controllers\BaseController;
 
 use \App\Models\UserModel;
 
-// use App\Models\UserModel;
 
 // El nombre de la clase tiene que coincidir con el nomnbre del controlador
 class Inicio_Sesion extends BaseController

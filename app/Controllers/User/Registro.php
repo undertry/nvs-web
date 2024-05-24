@@ -7,7 +7,6 @@ use App\Controllers\BaseController;
 
 use \App\Models\UserModel;
 
-// use App\Models\UserModel;
 
 class Registro extends BaseController
 {
@@ -31,7 +30,24 @@ class Registro extends BaseController
     
     $password = password_hash($password, PASSWORD_BCRYPT);
 
-    $data = ['name' => $name, 'email' => $email, 'password' => $password];
+    // Codigo unico de recuperacion
+    $caracteres = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $cod_recup = '';
+    $max = strlen($caracteres) - 1;
+    $codigoUnico = false;
+    
+    while (!$codigoUnico) {
+        $cod_recup = '';
+        for ($i = 0; $i < 8; $i++) {
+            $cod_recup .= $caracteres[mt_rand(0, $max)];
+        }
+
+        if (!$userModel->isCodTaken($cod_recup)) {
+            $codigoUnico = true;
+        }
+    }
+    
+    $data = ['name' => $name, 'email' => $email, 'password' => $password,'cod_recup' => $cod_recup];
     $ra=($data);
     if ($ra)
 {   
@@ -46,4 +62,5 @@ else
 
     return redirect()->to('login');
 }
+
 }
