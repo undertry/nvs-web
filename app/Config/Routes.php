@@ -7,11 +7,13 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Home::index');
 
-// Seccion controlador Login
-$routes->get('/login', 'Login::index');
-$routes->POST('/login', 'Login::index');
+// Seccion controlador User/Inicio_Sesion
+$routes->get('login', 'User\Inicio_Sesion::index');
+$routes->POST('login', 'User\Inicio_Sesion::do_login');
 
-// Seccion controlador Register
-$routes->get('/register', 'Register::index');
-$routes->POST('/register', 'Register::index');
+// Seccion controlador User/Registro
+$routes->get('register', 'User\Registro::index');
+$routes->POST('register', 'User\Registro::do_register');
 
+// Seccion controlador User/Registro
+$routes->get('change_password', 'User\Change_Password::index');
