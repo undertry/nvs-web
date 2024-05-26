@@ -4,8 +4,7 @@ namespace App\Controllers;
 
 class Home extends BaseController
 {
-    public function index(): string
+    // Inicio de La Aplicacion Web
+    public function index()
     {
-        return view('home/home.php');
-    }
-}
+
