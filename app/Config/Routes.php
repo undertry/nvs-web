@@ -5,6 +5,8 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
+
+// Seccion controlador Home/index
 $routes->get('/', 'Home::index');
 
 // Seccion controlador User/Login
