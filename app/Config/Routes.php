@@ -19,3 +19,6 @@ $routes->POST('register', 'User\Register::do_register');
 
 // Seccion controlador User/Change_Password
 $routes->get('change_password', 'User\Change_Password::index');
+
+//Log out
+$routes->get('logout', 'User\Login::logout');

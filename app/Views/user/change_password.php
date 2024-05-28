@@ -31,6 +31,7 @@
     <div class="container">
         <h1>Estamos en Mantenimiento</h1>
         <p>Lo sentimos, estamos trabajando en el sitio. Vuelve pronto.</p>
+        <a href="<?= base_url('login'); ?>">login</a>
     </div>
 </body>
 </html>

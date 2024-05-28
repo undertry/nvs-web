@@ -1,62 +1,56 @@
 <?php
-
+// Se cambia user dependiendo en que carpeta este situado los controladores
 namespace App\Controllers\User;
 
 use App\Controllers\BaseController;
-use App\Models\UserModel;
 
+use \App\Models\UserModel;
+
+// use App\Models\UserModel;
+
+// El nombre de la clase tiene que coincidir con el nomnbre del controlador
 class Login extends BaseController
 {
-    protected $session;
-
-    public function __construct()
-    {
-        // Cargar la biblioteca de sesiones
-        $this->session = \Config\Services::session();
-    }
-
     public function index()
     {
-        return view('user/login.php');
+        return view('user/login');
     }
-
     public function do_login()
-    {
-        $userModel = new UserModel();
+{
+    $userModel = new UserModel();
 
-        $email = $this->request->getPost('email');
-        $password = $this->request->getPost('password');
+    $email = $this->request->getPost('email');
+    $password = $this->request->getPost('password');
 
-        $result = $userModel->getUserByEmail($email);
+    // Obtener el usuario por correo electrónico
+    $result = $userModel->getUserByEmail($email);
 
-        // Depuración: Verificar el valor y tipo de $result->password
-        error_log("Password type: " . gettype($result->password));
-        error_log("Password value: " . var_export($result->password, true));
-
-        // Verificar que $result no es null y que contiene una contraseña válida
-        if ($result !== null && isset($result->id_user) && $result->id_user > 0 && is_string($result->password) && !empty($result->password)) {
-            // Verificar si la contraseña es correcta
-            if (password_verify($password, $result->password)) {
-                unset($result->password);
-                $this->session->set("user", $result);
-                return redirect()->to('----'); // Reemplaza '----' con la ruta correcta
-            } else {
-                $this->session->setFlashdata('error', 'Contraseña incorrecta');
-            }
+    if ($result !== null && $result->id_user > 0) {
+        // Verificar si la contraseña es correcta
+        if (password_verify($password, $result->password)) {
+            // Eliminar la propiedad 'password' antes de guardar en la sesión
+            unset($result->password);
+            // Contraseña correcta, establecer la sesión del usuario y redirigir al panel de control
+            $this->session->set("user", $result);
+            return redirect()->to('----');
         } else {
-            // Depuración adicional
-            if ($result === null) {
-                error_log("Result is null");
-            } elseif (!isset($result->id_user) || $result->id_user <= 0) {
-                error_log("Invalid user ID");
-            } elseif (!is_string($result->password)) {
-                error_log("Password is not a string");
-            } elseif (empty($result->password)) {
-                error_log("Password is empty");
-            }
-            $this->session->setFlashdata('error', 'Correo electrónico no válido');
+            // Contraseña incorrecta
+            $this->session->setFlashdata('error', 'Contraseña incorrecta');
         }
-
-        return redirect()->to('login');
+    } else {
+        // Usuario no encontrado
+        $this->session->setFlashdata('error', 'Correo electrónico no válido');
     }
+
+    // Redirigir de nuevo a la página de inicio de sesión
+    return redirect()->to('login');
+}
+public function logout()
+{
+    // Destruir la sesión
+    session()->destroy();
+
+    // Redirigir a la página de inicio de sesión
+    return redirect()->to('/');
+}
 }
