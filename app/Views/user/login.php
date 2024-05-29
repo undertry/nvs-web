@@ -9,7 +9,7 @@
 </head>
 
 <body>
-	<h1 class="header"><a href="<?= base_url(''); ?>">NVS</a></h1>
+	<h1 class="header"><a href="<?= base_url('/'); ?>">NVS</a></h1>
 	<div class="box">
 		<form method="post" action="<?= base_url('login'); ?>" class="form">
 			<h2>Log In</h2>

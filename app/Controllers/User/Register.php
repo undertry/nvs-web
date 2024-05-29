@@ -33,7 +33,7 @@ class Register extends BaseController
 
     $data = ['name' => $name, 'email' => $email, 'password' => $password];
     $ra=($data);
-    if ($ra)
+    if ($ra !== null)
 {   
     $userModel->register($ra);
     $this->session->setFlashdata('success', 'Usuario registrado exitosamente!');

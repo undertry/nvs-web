@@ -32,7 +32,7 @@ class Login extends BaseController
             unset($result->password);
             // Contraseña correcta, establecer la sesión del usuario y redirigir al panel de control
             $this->session->set("user", $result);
-            return redirect()->to('/');
+            return redirect()->to('user_page');
         } else {
             // Contraseña incorrecta
             $this->session->setFlashdata('error', 'Contraseña incorrecta');
