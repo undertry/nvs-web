@@ -31,9 +31,10 @@ class UserModel extends Model
     {
         $this->insert($ra);
     }
+    // Consulta para obtener un Usuario por su email como tambien traer los campos id_user, name, email, password, created_at
     public function getUserByEmail($email)
     {
-        return $this->select("id_user, name, email,password")
+        return $this->select("id_user, name, email, password, created_at")
             ->where("email", $email)
             ->first();
     }

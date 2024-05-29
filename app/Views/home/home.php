@@ -30,8 +30,8 @@
                 
                 <ul class="dropdown">
                      <li><a href="#console">Console</a></li>
-                     <li><a href="<?= base_url('user_page'); ?>">User page</a></li>
-                     <li><a href="<?= base_url('logout'); ?>">logout</a></li>
+                     <li><a href="<?= base_url('dashboard'); ?>">Dashboard</a></li>
+                     <li><a href="<?= base_url('logout'); ?>">Log Out</a></li>
                      
                 <?php else: ?>
             <li><a href="#menu">Menu</a>

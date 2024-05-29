@@ -21,7 +21,6 @@ $routes->POST('register', 'User\Register::do_register');
 // Seccion controlador User/Change_Password
 $routes->get('change_password', 'User\Change_Password::index');
 
-
-// Seccion controlador User/Change_Password
-$routes->get('user_page', 'User\User_page::index');
+// Seccion controlador User/Dashboard
+$routes->get('dashboard', 'User\Dashboard::index');
 

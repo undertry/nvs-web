@@ -7,7 +7,7 @@ use App\Controllers\BaseController;
 use \App\Models\UserModel;
 
 // El nombre de la clase tiene que coincidir con el nomnbre del controlador
-class User_page extends BaseController
+class Dashboard extends BaseController
 {
     public function index()
     {
@@ -19,7 +19,7 @@ class User_page extends BaseController
             return redirect()->to('login');
         } else {
             // Cargar la vista del panel de control si el usuario está autenticado
-            return view('user/uhome');
+            return view('user/dashboard.php');
         }
     }
 }   
