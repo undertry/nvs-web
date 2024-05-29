@@ -25,17 +25,20 @@
                     <li><a href="#purpose">Why did we make it?</a></li>
                 </ul>
             </li>
+            <?php if (session('user') && session('user')->name): ?>
+                <li><a href="#menu"><?= session('user')->name; ?></a>
+                
+                <ul class="dropdown">
+                     <li><a href="#console">Console</a></li>
+                     <li><a href="<?= base_url('user_page'); ?>">User page</a></li>
+                     <li><a href="<?= base_url('logout'); ?>">logout</a></li>
+                     
+                <?php else: ?>
             <li><a href="#menu">Menu</a>
                 <ul class="dropdown">
-                    <li><a href="#console">Console</a></li>
-
-                    <?php if (session('user') && session('user')->name): ?>
-                        <li><a href="<?= base_url('user_page'); ?>"><?= session('user')->name; ?></a></li>
-                        <li><a href="<?= base_url('logout'); ?>">logout</a></li>
-
-                        <?php else: ?>
-                    <li><a href="<?= base_url('login'); ?>">Log In</a></li>
-                    <?php endif; ?>
+                     <li><a href="#console">Console</a></li>
+                     <li><a href="<?= base_url('login'); ?>">Log In</a></li>
+                <?php endif; ?>
 
                 </ul>
             </li>

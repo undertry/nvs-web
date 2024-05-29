@@ -31,7 +31,6 @@
     <div class="container">
       <h1>Estamos en Mantenimiento</h1>
       <p>Lo sentimos <?= session('user')->name; ?> ,estamos trabajando en el sitio. Vuelve pronto.</p>
-      
       <a href="<?= base_url('/'); ?>">home</a>
     </div>
   </body>   
