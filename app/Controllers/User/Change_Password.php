@@ -33,6 +33,6 @@ class Change_Password extends BaseController
 
     public function change_password()
     {
-        // Realizar codigo para poder cambiar la contraseña verificando que coincida el codigo de recuperacion
+       
     }
 }

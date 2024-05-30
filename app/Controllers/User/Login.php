@@ -13,7 +13,15 @@ class Login extends BaseController
 {
     public function index()
     {
-        return view('user/login');
+        // Verificar si el usuario está autenticado y tiene un ID de usuario válido
+        $user = session('user');
+    
+        if (!$user || $user->id_user < 1) {
+            // Redirigir a la página de inicio de sesión si el usuario no está autenticado
+            return view('user/login');
+        } else {
+            return redirect()->back();
+        }
     }
     public function do_login()
 {
