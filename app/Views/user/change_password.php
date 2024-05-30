@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>En Mantenimiento</title>
-    <style>
-      body {
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="website icon" type="png" href="<?php echo base_url('complements/styles/images/NVS.png'); ?>">
+  <title>En Mantenimiento</title>
+  <style>
+    body {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -13,29 +15,34 @@
       margin: 0;
       background-color: #f2f2f2;
       font-family: Arial, sans-serif;
-      }
-      .container {
+    }
+
+    .container {
       text-align: center;
-      }
-      h1 {
+    }
+
+    h1 {
       font-size: 2.5rem;
       color: #333;
-      }
-      p {
+    }
+
+    p {
       font-size: 1.2rem;
       color: #666;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <h1>Estamos en Mantenimiento</h1>
-      <p>Lo sentimos, estamos trabajando en el sitio. Vuelve pronto.</p>
-      <?php if (session('user')): ?>
-                  <p><a href="<?= base_url('dashboard'); ?>">Dashboard</a></p> 
-              <?php else: ?>
-                  <p> <a href="<?= base_url('login'); ?>">Login</a> </p>
-              <?php endif; ?>
-    </div>
-  </body>
-</html>   
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Estamos en Mantenimiento</h1>
+    <p>Lo sentimos, estamos trabajando en el sitio. Vuelve pronto.</p>
+    <?php if (session('user')) : ?>
+      <p><a href="<?= base_url('dashboard'); ?>">Dashboard</a></p>
+    <?php else : ?>
+      <p> <a href="<?= base_url('login'); ?>">Login</a> </p>
+    <?php endif; ?>
+  </div>
+</body>
+
+</html>

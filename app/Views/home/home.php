@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NVS</title>
     <link rel="stylesheet" href="<?php echo base_url('complements/styles/home.css'); ?>">
+    <link rel="website icon" type="png" href="<?php echo base_url('complements/styles/images/NVS.png'); ?>">
 
 </head>
 
@@ -26,24 +27,24 @@
                     <li><a href="#purpose">Why did we make it?</a></li>
                 </ul>
             </li>
-            <?php if (session('user') && session('user')->name): ?>
+            <?php if (session('user') && session('user')->name) : ?>
                 <li><a href="#menu"><?= session('user')->name; ?></a>
-                
-                <ul class="dropdown">
-                     <li><a href="#console">Console</a></li>
-                     <li><a href="<?= base_url('dashboard'); ?>">Dashboard</a></li>
-                     <li><a href="<?= base_url('logout'); ?>">Log Out</a></li>
-                     
-                <?php else: ?>
-            <li><a href="#menu">Menu</a>
-                <ul class="dropdown">
-                     <li><a href="#console">Console</a></li>
-                     <li><a href="<?= base_url('login'); ?>">Log In</a></li>
-                <?php endif; ?>
 
-                </ul>
-            </li>
-        </ul>
+                    <ul class="dropdown">
+                        <li><a href="#console">Console</a></li>
+                        <li><a href="<?= base_url('dashboard'); ?>">Dashboard</a></li>
+                        <li><a href="<?= base_url('logout'); ?>">Log Out</a></li>
+
+                    <?php else : ?>
+                        <li><a href="#menu">Menu</a>
+                            <ul class="dropdown">
+                                <li><a href="#console">Console</a></li>
+                                <li><a href="<?= base_url('login'); ?>">Log In</a></li>
+                            <?php endif; ?>
+
+                            </ul>
+                        </li>
+                    </ul>
     </nav>
     <div class="intro">
         <div class="intro-text">
