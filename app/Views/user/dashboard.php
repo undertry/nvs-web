@@ -55,9 +55,11 @@
         <a href="<?= base_url('/'); ?>">Home</a>
         <a href="<?= base_url('/logout'); ?>">Logout</a>
         <a href="<?= base_url('/console'); ?>">Console</a>
+        <a href="<?= base_url('change_password'); ?>">Change password</a>
+
     </div>
     <div class="profile-container">
-        <h1>Perfil de Usuario</h1>
+        <h1>Perfil de Usuario</h1>  
         <div class="profile-info">
             <p>Nombre: <?= session('user')->name; ?></p>
             <p>Email: <?= session('user')->email; ?></p>

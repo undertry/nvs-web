@@ -29,9 +29,9 @@ class UserModel extends Model
         return $this->where("email", $email)->countAllResults() > 0;
     }
 
-    public function register($ra)
+    public function register($data)
     {
-        $this->insert($ra);
+        $this->insert($data);
     }
     // Consulta para obtener datos de un Usuario por su email, los campos id_user, name, email, password, created_at
     public function getUserByEmail($email)

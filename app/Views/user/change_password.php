@@ -31,7 +31,11 @@
     <div class="container">
       <h1>Estamos en Mantenimiento</h1>
       <p>Lo sentimos, estamos trabajando en el sitio. Vuelve pronto.</p>
-      <a href="<?= base_url('login'); ?>">login</a>
+      <?php if (session('user')): ?>
+                  <p><a href="<?= base_url('dashboard'); ?>">Dashboard</a></p> 
+              <?php else: ?>
+                  <p> <a href="<?= base_url('login'); ?>">Login</a> </p>
+              <?php endif; ?>
     </div>
   </body>
-</html>
+</html>   
