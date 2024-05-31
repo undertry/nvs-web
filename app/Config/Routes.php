@@ -24,3 +24,7 @@ $routes->get('change_password', 'User\Change_Password::index');
 // Seccion controlador User/Dashboard
 $routes->get('dashboard', 'User\Dashboard::index');
 
+
+//Testing email
+$routes->get('email', 'Email::index');
+
