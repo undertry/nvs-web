@@ -67,10 +67,6 @@
     document.getElementById('password').addEventListener('keyup', function(event) {
       checkCapsLock(event, 'caps-lock-warning-password');
     });
-
-    document.getElementById('confirm_password').addEventListener('keyup', function(event) {
-      checkCapsLock(event, 'caps-lock-warning-confirm-password');
-    });
   </script>
 </body>
 
