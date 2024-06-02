@@ -26,5 +26,7 @@ $routes->get('dashboard', 'User\Dashboard::index');
 
 
 //Testing email
-$routes->get('email', 'Email::index');
+$routes->get('sendemail', 'Email::sendcode');
+
+
 

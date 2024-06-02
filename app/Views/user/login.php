@@ -51,12 +51,12 @@
       </div>
       <div class="links">
         <a href="<?= base_url('register'); ?>">Sign up</a>
-        <a href="<?= base_url('change_password'); ?>">Forgot password?</a>
+        <a href="<?= base_url('forgot-password'); ?>">Forgot password?</a>
       </div>
       <input type="submit" value="Login">
     </form>
   </div>
-  <script>
+  <script> 
     // Funcion para verificar si la tecla de Bloq Mayus esta activada
     function checkCapsLock(event, warningElementId) {
       const warningElement = document.getElementById(warningElementId);

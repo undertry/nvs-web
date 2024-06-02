@@ -42,7 +42,19 @@
     <?php else : ?>
       <p> <a href="<?= base_url('login'); ?>">Login</a> </p>
     <?php endif; ?>
+
+<!-- Para manejo de la vista si esta en sesion y demas muestre distintos formularios -->
+    <?php // if (session('user') && session('user')->email) : ?>
+                   
+                   <?php // elseif (session('user')) : ?>   
+                   <?php // else : ?>
+                   <?php // endif; ?>
+
+
+
+
   </div>
 </body>
 
 </html>
+

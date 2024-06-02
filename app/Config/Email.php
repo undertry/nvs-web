@@ -38,7 +38,7 @@ class Email extends BaseConfig
     /**
      * SMTP Password
      */
-    public string $SMTPPass = 'keytech123456789';
+    public string $SMTPPass = 'albn mqxr ssef kbta'; //debe ser la contraseña de aplicaciones no de la cuenta en si https://www.youtube.com/watch?v=sILP022LJMM  ----- https://www.youtube.com/watch?v=Q74nxFBCHCI
 
     /**
      * SMTP Port

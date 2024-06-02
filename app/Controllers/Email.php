@@ -4,17 +4,19 @@ namespace App\Controllers;
 
 class Email extends BaseController
 {
-    // Inicio de La Aplicacion Web
-    public function index()
+//Modificar la logica de funcionamiento del
+  public function index()
+    {      
+        return view('user/change_password');     
+    }
+    public function sendcode() 
     {
         $email = \Config\Services::email();
-        
+        $Emailu= session('user')->email;
         $email->setFrom('keytechempresa@gmail.com', 'Testing email code');
-        $email->setTo('tadeo270148@gmail.com');
-       // $email->cc('another@another-example.com');
-        //$email->bcc('them@their-example.com');
-
-        $email->setSubject('Email Test');
+       // $email->setTo('keytechempresa@gmail.com');  
+        $email->setTo($Emailu);
+        $email->setSubject('Verification Code');
         $email->setMessage('Testing the email class.'); 
 
       if ($email->send()) {

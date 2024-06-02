@@ -11,6 +11,7 @@ class Change_Password extends BaseController
 {
     public function index()
     {
+        
         return view('user/change_password');
     }
 
