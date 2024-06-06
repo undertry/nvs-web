@@ -12,10 +12,10 @@ class Email extends BaseController
     public function sendcode() 
     {
         $email = \Config\Services::email();
-        $Emailu= session('user')->email;
-        $email->setFrom('keytechempresa@gmail.com', 'Testing email code');
-       // $email->setTo('keytechempresa@gmail.com');  
-        $email->setTo($Emailu);
+        //$Emailu= session('user')->email;
+        $email->setFrom('cibersafe.verify@gmail.com', 'Testing email code');
+        $email->setTo('cristianmonteverde@alumnos.itr3.edu.ar');  
+       // $email->setTo($Emailu);
         $email->setSubject('Verification Code');
         $email->setMessage('Testing the email class.'); 
 

@@ -6,8 +6,8 @@ use CodeIgniter\Config\BaseConfig;
 
 class Email extends BaseConfig
 {
-    public string $fromEmail  = 'KeyTechEmpresa@gmail.com';
-    public string $fromName   = 'eze';
+    public string $fromEmail  = '';
+    public string $fromName   = '';
     public string $recipients = '';
 
     /**
@@ -33,13 +33,14 @@ class Email extends BaseConfig
     /**
      * SMTP Username
      */
-    public string $SMTPUser = 'KeyTechEmpresa@gmail.com';
-
+    public string $SMTPUser = 'cibersafe.verify@gmail.com';
+//KeyTechEmpresa@gmail.com
     /**
      * SMTP Password
-     */
-    public string $SMTPPass = 'albn mqxr ssef kbta'; //debe ser la contraseña de aplicaciones no de la cuenta en si https://www.youtube.com/watch?v=sILP022LJMM  ----- https://www.youtube.com/watch?v=Q74nxFBCHCI
+     */ 
 
+    public string $SMTPPass = 'ggxy pmfs qyvs tcdc'; //debe ser la contraseña de aplicaciones no de la cuenta en si https://www.youtube.com/watch?v=sILP022LJMM  ----- https://www.youtube.com/watch?v=Q74nxFBCHCI
+// keytech :  albn mqxr ssef kbta
     /**
      * SMTP Port
      */
