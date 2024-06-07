@@ -40,16 +40,14 @@ class UserModel extends Model
             ->where("email", $email)
             ->first();
     }
-
-    /* 
-    public function isCodTaken($cod_recup)
+    public function password_change($id_user,$data)
     {
-        return $this->where('cod_recup', $cod_recup)->countAllResults() > 0;
+        $this->update($id_user, $data);
     }
-
-    public function codrecup($data)
+    public function GetIdByemail($emailU)
     {
-        $this->insert($data);
+    return $this->select("id_user")
+                ->where("email",$emailU)
+                ->first();
     }
-    */
 }

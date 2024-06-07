@@ -35,23 +35,22 @@
 
 <body>
   <div class="container">
-    <h1>Estamos en Mantenimiento</h1>
-    <p>Lo sentimos, estamos trabajando en el sitio. Vuelve pronto.</p>
     <?php if (session('user')) : ?>
-      <p><a href="<?= base_url('dashboard'); ?>">Dashboard</a></p>
+      <form method="post" action="<?= base_url('password_change'); ?>" class="form">
+      <h2>Change Password</h2>
+      <div class="form-inputs">
+        <div class="form-label">
+          <input name="password" required pattern=".{8,}" type="password" id="password" placeholder="password">
+        </div>
+        <div class="form-label">
+          <input name="confirm_password" required pattern=".{8,}" type="password" id="confirm_password" placeholder="confirm password">
+        </div>
+      </div>
+      <input type="submit" value="Change_password">
+    </form>
     <?php else : ?>
       <p> <a href="<?= base_url('login'); ?>">Login</a> </p>
     <?php endif; ?>
-
-<!-- Para manejo de la vista si esta en sesion y demas muestre distintos formularios -->
-    <?php // if (session('user') && session('user')->email) : ?>
-                   
-                   <?php // elseif (session('user')) : ?>   
-                   <?php // else : ?>
-                   <?php // endif; ?>
-
-
-
 
   </div>
 </body>
