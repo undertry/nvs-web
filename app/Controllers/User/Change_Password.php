@@ -94,6 +94,9 @@ class Change_Password extends BaseController
             $Codigo->insertcod($data);
         }
 
+        // Eliminar códigos antiguos después de 15 minutos
+       // $Codigo->deleteCode();
+
         // Configurar y enviar el correo electrónico
         $email = \Config\Services::email();
         $email->setFrom('cibersafe.verify@gmail.com');
@@ -103,7 +106,7 @@ class Change_Password extends BaseController
 
         if ($email->send()) {
             return redirect()->to('change_forgot');
-        } else {
+        } else {    
             session()->setFlashdata('error', 'Error al enviar el email.');
             return redirect()->to('forgot_password');
         }

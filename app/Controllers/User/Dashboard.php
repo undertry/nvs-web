@@ -24,6 +24,8 @@ class Dashboard extends BaseController
             return view('user/dashboard.php');
         }
     }
+
+    //Cambio de contraseña del usuario en sesion
     public function password_change()
     {
         $userModel = new UserModel();
@@ -49,6 +51,9 @@ class Dashboard extends BaseController
     
         return redirect()->to('dashboard');
 }
+
+
+//Parte de se olvido la contraseña
 public function password_change_forgot()
 {
     $userModel = new UserModel();
@@ -58,20 +63,23 @@ public function password_change_forgot()
     $confirm_password = $this->request->getPost('confirm_password');
     $codigo = $this->request->getPost('codigo');
 
-    // Verificar si los campos están vacíos
-    if (empty($password) || empty($confirm_password) || empty($codigo)) {
-        $this->session->setFlashdata('error', 'Debe rellenar el formulario.');
-        return redirect()->to('change_password');
-    } elseif ($password !== $confirm_password) {
+    //NO NECESARIO
+    // Verificar si los campos están vacíos 
+    // if (empty($password) || empty($confirm_password) || empty($codigo)) {
+    //     $this->session->setFlashdata('error', 'Debe rellenar el formulario.');
+    //     return redirect()->to('change_forgot');
+    // } else
+
+    if ($password !== $confirm_password) {
         $this->session->setFlashdata('error', 'Las contraseñas no coinciden.');
-        return redirect()->to('change_password');
+        return redirect()->to('change_forgot');
     }
 
     // Obtener el id_user asociado al código de recuperación
     $user = $codigoModel->getUserByCodigo($codigo);
     if (!$user) {
         $this->session->setFlashdata('error', 'Código de recuperación inválido.');
-        return view('change_forgot');
+        return redirect()->to('change_forgot');
     }
     $id_user = $user->id_user;
 
