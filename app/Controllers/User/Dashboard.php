@@ -47,8 +47,8 @@ class Dashboard extends BaseController
         $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
         $data["password"] = $hashedPassword;
         $userModel->password_change($id_user, $data);
+
         $this->session->setFlashdata('success', 'Contraseña cambiada exitosamente.');
-    
         return redirect()->to('dashboard');
 }
 
@@ -92,6 +92,6 @@ public function password_change_forgot()
     $codigoModel->deleteByCodigo($codigo);
 
     $this->session->setFlashdata('success', 'Contraseña cambiada exitosamente.');
-    return redirect()->to('dashboard');
+    return redirect()->to('login');
 }
 }  
