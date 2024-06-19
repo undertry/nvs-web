@@ -11,20 +11,6 @@ use App\Models\CodigoModel;
 // El nombre de la clase tiene que coincidir con el nomnbre del controlador
 class Change_Password extends BaseController
 {
-    public function index()
-    {
-        {
-            // Verificar si el usuario está autenticado y tiene un ID de usuario válido
-            $user = session('user');
-            if (!$user ) {           
-                // Redirigir a la página de inicio de sesión si el usuario no está autenticado
-                return view('user/login');
-            } else {
-                return view("user/change_password");
-            }
-        }
-        return view('user/change_password');
-    }
     public function forgot_password()   
     {
         $user = session('user');
@@ -35,7 +21,6 @@ class Change_Password extends BaseController
         }
     }
     public function change_forgot()
-
 {
         $user = session('user');
         if (!$user ) {           
@@ -94,10 +79,7 @@ class Change_Password extends BaseController
             $Codigo->insertcod($data);
         }
 
-        // Eliminar códigos antiguos después de 15 minutos
-       // $Codigo->deleteCode();
-
-        // Configurar y enviar el correo electrónico
+        // Configuracion y envio del email
         $email = \Config\Services::email();
         $email->setFrom('cibersafe.verify@gmail.com');
         $email->setTo($emailU); 
@@ -111,4 +93,41 @@ class Change_Password extends BaseController
             return redirect()->to('forgot_password');
         }
     }
+
+
+    //Parte de se olvido la contraseña
+public function password_change_forgot()
+{
+    $userModel = new UserModel();
+    $codigoModel = new CodigoModel();
+
+    $password = $this->request->getPost('password');
+    $confirm_password = $this->request->getPost('confirm_password');
+    $codigo = $this->request->getPost('codigo');
+
+    if ($password !== $confirm_password) {
+        $this->session->setFlashdata('error', 'Las contraseñas no coinciden.');
+        return redirect()->to('change_forgot');
+    }
+
+    // Obtener el id_user asociado al código de recuperación
+    $user = $codigoModel->getUserByCodigo($codigo);
+    if (!$user) {
+        $this->session->setFlashdata('error', 'Código de recuperación inválido.');
+        return redirect()->to('change_forgot');
+    }
+    $id_user = $user->id_user;
+
+    // Cambiar la contraseña del usuario
+    $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
+    $data["password"] = $hashedPassword;
+    $userModel->password_change($id_user, $data);
+
+    // Limpiar el código de recuperación después de cambiar la contraseña
+    $codigoModel->deleteByCodigo($codigo);
+
+    $this->session->setFlashdata('success', 'Contraseña cambiada exitosamente.');
+    return redirect()->to('login');
+}
+
 }

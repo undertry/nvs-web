@@ -25,6 +25,23 @@ class Dashboard extends BaseController
         }
     }
 
+
+    public function change_password()
+    {
+        {
+            // Verificar si el usuario está autenticado y tiene un ID de usuario válido
+            $user = session('user');
+            if (!$user ) {           
+                // Redirigir a la página de inicio de sesión si el usuario no está autenticado
+                return view('user/login');
+            } else {
+                return view("user/change_password");
+            }
+        }
+    }
+
+
+
     //Cambio de contraseña del usuario en sesion
     public function password_change()
     {
@@ -52,46 +69,4 @@ class Dashboard extends BaseController
         return redirect()->to('dashboard');
 }
 
-
-//Parte de se olvido la contraseña
-public function password_change_forgot()
-{
-    $userModel = new UserModel();
-    $codigoModel = new CodigoModel();
-
-    $password = $this->request->getPost('password');
-    $confirm_password = $this->request->getPost('confirm_password');
-    $codigo = $this->request->getPost('codigo');
-
-    //NO NECESARIO
-    // Verificar si los campos están vacíos 
-    // if (empty($password) || empty($confirm_password) || empty($codigo)) {
-    //     $this->session->setFlashdata('error', 'Debe rellenar el formulario.');
-    //     return redirect()->to('change_forgot');
-    // } else
-
-    if ($password !== $confirm_password) {
-        $this->session->setFlashdata('error', 'Las contraseñas no coinciden.');
-        return redirect()->to('change_forgot');
-    }
-
-    // Obtener el id_user asociado al código de recuperación
-    $user = $codigoModel->getUserByCodigo($codigo);
-    if (!$user) {
-        $this->session->setFlashdata('error', 'Código de recuperación inválido.');
-        return redirect()->to('change_forgot');
-    }
-    $id_user = $user->id_user;
-
-    // Cambiar la contraseña del usuario
-    $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
-    $data["password"] = $hashedPassword;
-    $userModel->password_change($id_user, $data);
-
-    // Limpiar el código de recuperación después de cambiar la contraseña
-    $codigoModel->deleteByCodigo($codigo);
-
-    $this->session->setFlashdata('success', 'Contraseña cambiada exitosamente.');
-    return redirect()->to('login');
-}
 }  

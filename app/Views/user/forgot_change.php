@@ -23,7 +23,7 @@
           <input name="codigo" required  type="text" id="codigo" placeholder="verification code">
         </div>
       </div>
-      <input type="submit" value="Change_password">
+      <input type="submit" value="Change Password">
     </form>
 
   </div>
