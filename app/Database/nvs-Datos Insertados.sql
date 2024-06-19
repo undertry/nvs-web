@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-05-2024 a las 18:12:58
+-- Tiempo de generación: 19-06-2024 a las 15:20:56
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -39,10 +39,22 @@ CREATE TABLE `analisis_puertos` (
 
 INSERT INTO `analisis_puertos` (`id_analisis`, `id_puerto`, `id_dispositivos`) VALUES
 (1, 1, 1),
-(2, 3, 2),
-(3, 5, 3),
-(4, 2, 4),
-(5, 4, 5);
+(2, 2, 2),
+(3, 3, 3),
+(4, 4, 4),
+(5, 5, 5);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `codigo`
+--
+
+CREATE TABLE `codigo` (
+  `id_codigo_recuperacion` int(11) NOT NULL,
+  `cod_recup` varchar(45) DEFAULT NULL,
+  `id_user` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -56,17 +68,6 @@ CREATE TABLE `detalle_scan` (
   `id_dispositivos` int(11) DEFAULT NULL,
   `id_solucion` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Volcado de datos para la tabla `detalle_scan`
---
-
-INSERT INTO `detalle_scan` (`id_det_scan`, `id_scan`, `id_dispositivos`, `id_solucion`) VALUES
-(1, 1, 1, 1),
-(2, 2, 2, 2),
-(3, 3, 3, 3),
-(4, 4, 4, 4),
-(5, 5, 5, 5);
 
 -- --------------------------------------------------------
 
@@ -86,11 +87,35 @@ CREATE TABLE `dispositivos` (
 --
 
 INSERT INTO `dispositivos` (`id_dispositivos`, `direccion_ip`, `sistema_operativo`, `dir_mac`) VALUES
-(1, '192.168.1.10', 'Windows 10', '00:11:22:33:44:55'),
-(2, '192.168.1.10', 'Linux Ubuntu', 'AA:BB:CC:DD:EE:FF'),
-(3, '192.168.1.10', 'MacOS', '11:22:33:44:55:66'),
-(4, '192.168.1.10', 'Android', 'BB:CC:DD:EE:FF:AA'),
-(5, '192.168.1.10', 'iOS', 'CC:DD:EE:FF:AA:BB');
+(1, '192.168.1.10', 'Windows', '00:1A:2B:3C:4D:5E'),
+(2, '10.0.2.15', 'Linux', ' 08:00:27:B6:73'),
+(3, '172.217.6.46', 'Android', ' 64:A2:F9:82:1B'),
+(4, '192.168.0.10', 'Windows', '00:24:8C:7E:8A:0B'),
+(5, '172.205.3.46', 'iOS', '98:01:A7:B4:3F:71');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `estado_puerto`
+--
+
+CREATE TABLE `estado_puerto` (
+  `id_estado_puerto` int(11) NOT NULL,
+  `abierto` tinyint(1) DEFAULT NULL,
+  `cerrado` tinyint(1) DEFAULT NULL,
+  `filtrado` tinyint(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `estado_puerto`
+--
+
+INSERT INTO `estado_puerto` (`id_estado_puerto`, `abierto`, `cerrado`, `filtrado`) VALUES
+(1, 0, 1, 0),
+(2, 1, 0, 0),
+(3, 0, 0, 1),
+(4, 0, 1, 0),
+(5, 1, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -101,21 +126,21 @@ INSERT INTO `dispositivos` (`id_dispositivos`, `direccion_ip`, `sistema_operativ
 CREATE TABLE `puertos` (
   `id_puerto` int(11) NOT NULL,
   `puerto_nombre` varchar(15) DEFAULT NULL,
-  `estado` varchar(10) DEFAULT NULL,
   `servicio` varchar(45) DEFAULT NULL,
-  `protocolo` varchar(12) DEFAULT NULL
+  `protocolo` varchar(12) DEFAULT NULL,
+  `id_estado_puerto` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `puertos`
 --
 
-INSERT INTO `puertos` (`id_puerto`, `puerto_nombre`, `estado`, `servicio`, `protocolo`) VALUES
-(1, '80', 'Abierto', 'HTTP', 'TCP'),
-(2, '22', 'Cerrado', 'SSH', 'TCP'),
-(3, '443', 'Abierto', 'HTTPS', 'TCP'),
-(4, '21', 'Cerrado', 'FTP', 'TCP'),
-(5, '25', 'Abierto', 'SMTP', 'TCP');
+INSERT INTO `puertos` (`id_puerto`, `puerto_nombre`, `servicio`, `protocolo`, `id_estado_puerto`) VALUES
+(1, '80', 'HTTP', 'TCP', 1),
+(2, '22', 'SSH', 'TCP', 2),
+(3, '5228', 'VNC', 'TCP', 3),
+(4, '443', 'HTTPS', 'TCP', 4),
+(5, '5223', 'HTTP', 'TCP', 5);
 
 -- --------------------------------------------------------
 
@@ -137,11 +162,11 @@ CREATE TABLE `red` (
 --
 
 INSERT INTO `red` (`id_red`, `direccion_red`, `potencia`, `essid`, `bssid`, `id_tipo_seguridad`) VALUES
-(1, '192.168.1.0', 'Alta', 'MiRed1', '00:11:22:33:44:55', 1),
-(2, '10.0.0.0', 'Media', 'Casa', 'AA:BB:CC:DD:EE:FF', 2),
-(3, '172.16.0.0', 'Baja', 'Oficina', '11:22:33:44:55:66', 3),
-(4, '192.168.2.0', 'Alta', 'Empresa', 'BB:CC:DD:EE:FF:AA', 1),
-(5, '10.1.1.0', 'Media', 'OtroWifi', 'CC:DD:EE:FF:AA:BB', 2);
+(1, '192.168.1.0/24', '-65 dBm', 'WindowsNet', '00:1A:2B:3C:4D:5E', 1),
+(2, '10.0.0.0/24', '-70 dBm', 'LinuxWiFi', '08:00:27:B6:73', 2),
+(3, '172.16.0.0/24', '-68 dBm', 'AndroidAP', ' 64:A2:F9:82:1B', 3),
+(4, '192.168.0.0/24', ' -67 dBm', ' WindowsWireless', '00:24:8C:7E:8A:0B', 3),
+(5, '192.168.0.0/24', '-72 dBm', 'iOSWiFi', '98:01:A7:B4:3F:71', 4);
 
 -- --------------------------------------------------------
 
@@ -161,11 +186,11 @@ CREATE TABLE `scan` (
 --
 
 INSERT INTO `scan` (`id_scan`, `id_user`, `id_red`, `fecha_scan`) VALUES
-(1, 1, 1, '2024-05-14 11:00:00'),
-(2, 2, 2, '2024-05-14 12:00:00'),
-(3, 3, 3, '2024-05-14 13:00:00'),
-(4, 4, 4, '2024-05-14 14:00:00'),
-(5, 5, 5, '2024-05-14 15:00:00');
+(1, 1, 1, '2024-06-11 13:05:03'),
+(2, 2, 2, '2024-06-02 14:02:34'),
+(3, 3, 3, '2024-05-15 21:26:12'),
+(4, 4, 4, '2024-06-01 10:59:00'),
+(5, 5, 5, '2014-05-23 15:59:59');
 
 -- --------------------------------------------------------
 
@@ -178,17 +203,6 @@ CREATE TABLE `solucion` (
   `solucion` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Volcado de datos para la tabla `solucion`
---
-
-INSERT INTO `solucion` (`id_solucion`, `solucion`) VALUES
-(1, 'Actualizar firmware del router'),
-(2, 'Cambiar contraseña por una más segura'),
-(3, 'Desactivar el broadcast del SSID'),
-(4, 'Configurar MAC filtering'),
-(5, 'Actualizar software del dispositivo');
-
 -- --------------------------------------------------------
 
 --
@@ -197,7 +211,7 @@ INSERT INTO `solucion` (`id_solucion`, `solucion`) VALUES
 
 CREATE TABLE `tipo_seguridad` (
   `id_tipo_seguridad` int(11) NOT NULL,
-  `tipo` varchar(10) DEFAULT NULL
+  `tipo` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -205,11 +219,10 @@ CREATE TABLE `tipo_seguridad` (
 --
 
 INSERT INTO `tipo_seguridad` (`id_tipo_seguridad`, `tipo`) VALUES
-(1, 'WPA2'),
+(1, 'WEP'),
 (2, 'WPA'),
-(3, 'WEP'),
-(4, 'Sin Seguri'),
-(5, 'Otro');
+(3, 'WPA2'),
+(4, 'WPA3');
 
 -- --------------------------------------------------------
 
@@ -230,11 +243,11 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id_user`, `name`, `email`, `password`, `created_at`) VALUES
-(1, 'Ana López', 'ana@example.com', 'password123', '2024-05-14 15:50:51'),
-(2, 'Carlos García', 'carlos@example.com', 'securepass', '2024-05-14 15:50:51'),
-(3, 'María Rodríguez', 'maria@example.com', 'mysecretpassword', '2024-05-14 15:50:51'),
-(4, 'Pedro Martínez', 'pedro@example.com', '123456789', '2024-05-14 15:50:51'),
-(5, 'Laura Gómez', 'laura@example.com', 'password', '2024-05-14 15:50:51');
+(1, 'Tiago Comba', 'tiagocomba@gmail.com', '$2y$10$/Dzko5dYAR3bda3QaIvLku0XrR8JIRReQzwbK1qDCFHzNFEbbLAF.', '2024-06-19 11:51:50'),
+(2, 'Ezequiel Monteverde', 'eze@gmail.com', '$2y$10$EXqfxNoo/yvXzlXjIQBG5.Et1Ks5UK7rTxYkz3vwMqTghpBBHazTO', '2024-06-19 11:55:41'),
+(3, 'Octavio Galarza', 'octavio@gmail.com', '$2y$10$iRbBLO9mDATXsD4exG5EP.cngyQVGoBJQAYdk/8g3tve3uUw.6YzO', '2024-06-19 11:56:50'),
+(4, 'Pedro Carranza', 'pedro@gmail.com', '$2y$10$HTDMeI3Ei6SVp5ZSNDey4.B9aPxqd9gbdyWc4i3lGHLYnHLuq9pLW', '2024-06-19 11:58:00'),
+(5, 'Marcelo Asevedo', 'marcelo@gmail.com', '$2y$10$rKejczKDIuMkI2spq3IajuKL96MLjYHyXsx/9OE5EC.fO0ceoJj6a', '2024-06-19 11:58:50');
 
 --
 -- Índices para tablas volcadas
@@ -247,6 +260,13 @@ ALTER TABLE `analisis_puertos`
   ADD PRIMARY KEY (`id_analisis`),
   ADD KEY `id_puerto` (`id_puerto`),
   ADD KEY `id_dispositivos` (`id_dispositivos`);
+
+--
+-- Indices de la tabla `codigo`
+--
+ALTER TABLE `codigo`
+  ADD PRIMARY KEY (`id_codigo_recuperacion`),
+  ADD KEY `id_user` (`id_user`);
 
 --
 -- Indices de la tabla `detalle_scan`
@@ -264,10 +284,17 @@ ALTER TABLE `dispositivos`
   ADD PRIMARY KEY (`id_dispositivos`);
 
 --
+-- Indices de la tabla `estado_puerto`
+--
+ALTER TABLE `estado_puerto`
+  ADD PRIMARY KEY (`id_estado_puerto`);
+
+--
 -- Indices de la tabla `puertos`
 --
 ALTER TABLE `puertos`
-  ADD PRIMARY KEY (`id_puerto`);
+  ADD PRIMARY KEY (`id_puerto`),
+  ADD KEY `id_estado_puerto` (`id_estado_puerto`);
 
 --
 -- Indices de la tabla `red`
@@ -313,16 +340,28 @@ ALTER TABLE `analisis_puertos`
   MODIFY `id_analisis` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
+-- AUTO_INCREMENT de la tabla `codigo`
+--
+ALTER TABLE `codigo`
+  MODIFY `id_codigo_recuperacion` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT de la tabla `detalle_scan`
 --
 ALTER TABLE `detalle_scan`
-  MODIFY `id_det_scan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_det_scan` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `dispositivos`
 --
 ALTER TABLE `dispositivos`
   MODIFY `id_dispositivos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT de la tabla `estado_puerto`
+--
+ALTER TABLE `estado_puerto`
+  MODIFY `id_estado_puerto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `puertos`
@@ -346,13 +385,13 @@ ALTER TABLE `scan`
 -- AUTO_INCREMENT de la tabla `solucion`
 --
 ALTER TABLE `solucion`
-  MODIFY `id_solucion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_solucion` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `tipo_seguridad`
 --
 ALTER TABLE `tipo_seguridad`
-  MODIFY `id_tipo_seguridad` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_tipo_seguridad` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
@@ -372,12 +411,24 @@ ALTER TABLE `analisis_puertos`
   ADD CONSTRAINT `analisis_puertos_ibfk_2` FOREIGN KEY (`id_dispositivos`) REFERENCES `dispositivos` (`id_dispositivos`);
 
 --
+-- Filtros para la tabla `codigo`
+--
+ALTER TABLE `codigo`
+  ADD CONSTRAINT `codigo_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `usuarios` (`id_user`);
+
+--
 -- Filtros para la tabla `detalle_scan`
 --
 ALTER TABLE `detalle_scan`
   ADD CONSTRAINT `detalle_scan_ibfk_1` FOREIGN KEY (`id_scan`) REFERENCES `scan` (`id_scan`),
   ADD CONSTRAINT `detalle_scan_ibfk_2` FOREIGN KEY (`id_dispositivos`) REFERENCES `dispositivos` (`id_dispositivos`),
   ADD CONSTRAINT `detalle_scan_ibfk_3` FOREIGN KEY (`id_solucion`) REFERENCES `solucion` (`id_solucion`);
+
+--
+-- Filtros para la tabla `puertos`
+--
+ALTER TABLE `puertos`
+  ADD CONSTRAINT `puertos_ibfk_1` FOREIGN KEY (`id_estado_puerto`) REFERENCES `estado_puerto` (`id_estado_puerto`);
 
 --
 -- Filtros para la tabla `red`
