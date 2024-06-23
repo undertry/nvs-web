@@ -50,4 +50,7 @@ class UserModel extends Model
                 ->where("email",$emailU)
                 ->first();
     }
+
+
+    
 }

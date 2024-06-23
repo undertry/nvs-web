@@ -33,6 +33,9 @@ $routes->post('sendemail', 'User\Change_Password::sendemail');
 // Seccion controlador User/Dashboard
 $routes->get('dashboard', 'User\Dashboard::index');
 
+// vista para el historial de escaneos del usuario
+$routes->get('/history', 'User\Scan::history');
+
 
 
 

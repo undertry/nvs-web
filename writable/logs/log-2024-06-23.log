@@ -1,0 +1,1273 @@
+INFO - 2024-06-23 21:00:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 21:00:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 21:00:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 21:00:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 21:00:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 21:00:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 21:01:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 21:01:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 21:01:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 21:01:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 21:01:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 21:01:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 21:01:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 21:01:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 21:01:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 21:01:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 21:01:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 21:20:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 21:21:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 21:23:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 21:23:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 21:23:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 21:24:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 21:24:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 21:25:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 21:25:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 21:25:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 21:25:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 21:26:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 21:26:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 21:26:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 21:27:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 21:27:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 21:27:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-23 21:27:38 --> ErrorException: Undefined variable $id_scan
+[Method: GET, Route: record]
+in APPPATH\Controllers\User\Scan.php on line 15.
+ 1 APPPATH\Controllers\User\Scan.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id_scan', 'C:\\xampp\\htdocs\\NVS\\app\\Controllers\\User\\Scan.php', 15)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User\Scan->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\Scan))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-06-23 21:33:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 21:33:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 21:33:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-23 21:33:50 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "scan_view.php"
+[Method: GET, Route: history]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('scan_view.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('scan_view', [], true)
+ 3 APPPATH\Controllers\User\Scan.php(24): view('scan_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User\Scan->history()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\Scan))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-06-23 21:34:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 21:36:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 21:36:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 21:36:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 21:36:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 21:36:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 21:36:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 21:36:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 21:36:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 21:38:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 21:57:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 21:57:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 21:57:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 21:57:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 21:58:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 22:02:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 22:05:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 22:07:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 22:09:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 22:11:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 22:12:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 22:12:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 22:12:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 22:12:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 22:14:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-23 22:14:43 --> mysqli_sql_exception: Unknown column 'tipo_seguridad.tipo' in 'field list' in C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT `scan`.`...', 0)
+#1 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `scan`.`...')
+#2 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `scan`.`...')
+#3 C:\xampp\htdocs\NVS\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `scan`.`...', Array, false)
+#4 C:\xampp\htdocs\NVS\app\Models\ScanModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\NVS\app\Controllers\User\Scan.php(22): App\Models\ScanModel->getScanDetailsByUser('2')
+#6 C:\xampp\htdocs\NVS\system\CodeIgniter.php(933): App\Controllers\User\Scan->history()
+#7 C:\xampp\htdocs\NVS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\Scan))
+#8 C:\xampp\htdocs\NVS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\NVS\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\NVS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\NVS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-06-23 22:14:43 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tipo_seguridad.tipo' in 'field list'
+[Method: GET, Route: history]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `tipo_seguridad`.`tipo` AS `tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `analisis_puertos` ON `analisis_puertos`.`id_dispositivos` = `dispositivos`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `analisis_puertos`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = :scan.id_user:
+GROUP BY `scan`.`id_scan`', [...], false)
+ 2 APPPATH\Models\ScanModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\User\Scan.php(22): App\Models\ScanModel->getScanDetailsByUser('2')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User\Scan->history()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\Scan))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-23 22:14:43 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tipo_seguridad.tipo' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `tipo_seguridad`.`tipo` AS `tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `analisis_puertos` ON `analisis_puertos`.`id_dispositivos` = `dispositivos`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `analisis_puertos`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = \'2\'
+GROUP BY `scan`.`id_scan`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `tipo_seguridad`.`tipo` AS `tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `analisis_puertos` ON `analisis_puertos`.`id_dispositivos` = `dispositivos`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `analisis_puertos`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = \'2\'
+GROUP BY `scan`.`id_scan`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `tipo_seguridad`.`tipo` AS `tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `analisis_puertos` ON `analisis_puertos`.`id_dispositivos` = `dispositivos`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `analisis_puertos`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = :scan.id_user:
+GROUP BY `scan`.`id_scan`', [...], false)
+ 4 APPPATH\Models\ScanModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\User\Scan.php(22): App\Models\ScanModel->getScanDetailsByUser('2')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User\Scan->history()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\Scan))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-23 22:14:43 --> [Caused by] mysqli_sql_exception: Unknown column 'tipo_seguridad.tipo' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `tipo_seguridad`.`tipo` AS `tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `analisis_puertos` ON `analisis_puertos`.`id_dispositivos` = `dispositivos`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `analisis_puertos`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = \'2\'
+GROUP BY `scan`.`id_scan`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `tipo_seguridad`.`tipo` AS `tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `analisis_puertos` ON `analisis_puertos`.`id_dispositivos` = `dispositivos`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `analisis_puertos`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = \'2\'
+GROUP BY `scan`.`id_scan`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `tipo_seguridad`.`tipo` AS `tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `analisis_puertos` ON `analisis_puertos`.`id_dispositivos` = `dispositivos`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `analisis_puertos`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = \'2\'
+GROUP BY `scan`.`id_scan`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `tipo_seguridad`.`tipo` AS `tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `analisis_puertos` ON `analisis_puertos`.`id_dispositivos` = `dispositivos`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `analisis_puertos`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = :scan.id_user:
+GROUP BY `scan`.`id_scan`', [...], false)
+ 5 APPPATH\Models\ScanModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\User\Scan.php(22): App\Models\ScanModel->getScanDetailsByUser('2')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User\Scan->history()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\Scan))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-06-23 22:15:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-23 22:15:40 --> mysqli_sql_exception: Unknown column 'red.tipo_seguridad' in 'field list' in C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT `scan`.`...', 0)
+#1 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `scan`.`...')
+#2 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `scan`.`...')
+#3 C:\xampp\htdocs\NVS\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `scan`.`...', Array, false)
+#4 C:\xampp\htdocs\NVS\app\Models\ScanModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\NVS\app\Controllers\User\Scan.php(22): App\Models\ScanModel->getScanDetailsByUser('2')
+#6 C:\xampp\htdocs\NVS\system\CodeIgniter.php(933): App\Controllers\User\Scan->history()
+#7 C:\xampp\htdocs\NVS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\Scan))
+#8 C:\xampp\htdocs\NVS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\NVS\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\NVS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\NVS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-06-23 22:15:40 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'red.tipo_seguridad' in 'field list'
+[Method: GET, Route: history]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `red`.`tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `analisis_puertos` ON `analisis_puertos`.`id_dispositivos` = `dispositivos`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `analisis_puertos`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = :scan.id_user:
+GROUP BY `scan`.`id_scan`', [...], false)
+ 2 APPPATH\Models\ScanModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\User\Scan.php(22): App\Models\ScanModel->getScanDetailsByUser('2')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User\Scan->history()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\Scan))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-23 22:15:40 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'red.tipo_seguridad' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `red`.`tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `analisis_puertos` ON `analisis_puertos`.`id_dispositivos` = `dispositivos`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `analisis_puertos`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = \'2\'
+GROUP BY `scan`.`id_scan`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `red`.`tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `analisis_puertos` ON `analisis_puertos`.`id_dispositivos` = `dispositivos`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `analisis_puertos`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = \'2\'
+GROUP BY `scan`.`id_scan`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `red`.`tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `analisis_puertos` ON `analisis_puertos`.`id_dispositivos` = `dispositivos`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `analisis_puertos`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = :scan.id_user:
+GROUP BY `scan`.`id_scan`', [...], false)
+ 4 APPPATH\Models\ScanModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\User\Scan.php(22): App\Models\ScanModel->getScanDetailsByUser('2')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User\Scan->history()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\Scan))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-23 22:15:40 --> [Caused by] mysqli_sql_exception: Unknown column 'red.tipo_seguridad' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `red`.`tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `analisis_puertos` ON `analisis_puertos`.`id_dispositivos` = `dispositivos`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `analisis_puertos`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = \'2\'
+GROUP BY `scan`.`id_scan`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `red`.`tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `analisis_puertos` ON `analisis_puertos`.`id_dispositivos` = `dispositivos`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `analisis_puertos`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = \'2\'
+GROUP BY `scan`.`id_scan`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `red`.`tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `analisis_puertos` ON `analisis_puertos`.`id_dispositivos` = `dispositivos`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `analisis_puertos`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = \'2\'
+GROUP BY `scan`.`id_scan`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `red`.`tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `analisis_puertos` ON `analisis_puertos`.`id_dispositivos` = `dispositivos`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `analisis_puertos`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = :scan.id_user:
+GROUP BY `scan`.`id_scan`', [...], false)
+ 5 APPPATH\Models\ScanModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\User\Scan.php(22): App\Models\ScanModel->getScanDetailsByUser('2')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User\Scan->history()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\Scan))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-06-23 22:15:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 22:15:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 22:15:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-23 22:15:43 --> mysqli_sql_exception: Unknown column 'red.tipo_seguridad' in 'field list' in C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT `scan`.`...', 0)
+#1 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `scan`.`...')
+#2 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `scan`.`...')
+#3 C:\xampp\htdocs\NVS\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `scan`.`...', Array, false)
+#4 C:\xampp\htdocs\NVS\app\Models\ScanModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\NVS\app\Controllers\User\Scan.php(22): App\Models\ScanModel->getScanDetailsByUser('2')
+#6 C:\xampp\htdocs\NVS\system\CodeIgniter.php(933): App\Controllers\User\Scan->history()
+#7 C:\xampp\htdocs\NVS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\Scan))
+#8 C:\xampp\htdocs\NVS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\NVS\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\NVS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\NVS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-06-23 22:15:43 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'red.tipo_seguridad' in 'field list'
+[Method: GET, Route: history]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `red`.`tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `analisis_puertos` ON `analisis_puertos`.`id_dispositivos` = `dispositivos`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `analisis_puertos`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = :scan.id_user:
+GROUP BY `scan`.`id_scan`', [...], false)
+ 2 APPPATH\Models\ScanModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\User\Scan.php(22): App\Models\ScanModel->getScanDetailsByUser('2')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User\Scan->history()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\Scan))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-23 22:15:43 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'red.tipo_seguridad' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `red`.`tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `analisis_puertos` ON `analisis_puertos`.`id_dispositivos` = `dispositivos`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `analisis_puertos`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = \'2\'
+GROUP BY `scan`.`id_scan`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `red`.`tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `analisis_puertos` ON `analisis_puertos`.`id_dispositivos` = `dispositivos`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `analisis_puertos`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = \'2\'
+GROUP BY `scan`.`id_scan`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `red`.`tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `analisis_puertos` ON `analisis_puertos`.`id_dispositivos` = `dispositivos`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `analisis_puertos`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = :scan.id_user:
+GROUP BY `scan`.`id_scan`', [...], false)
+ 4 APPPATH\Models\ScanModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\User\Scan.php(22): App\Models\ScanModel->getScanDetailsByUser('2')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User\Scan->history()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\Scan))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-23 22:15:43 --> [Caused by] mysqli_sql_exception: Unknown column 'red.tipo_seguridad' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `red`.`tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `analisis_puertos` ON `analisis_puertos`.`id_dispositivos` = `dispositivos`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `analisis_puertos`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = \'2\'
+GROUP BY `scan`.`id_scan`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `red`.`tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `analisis_puertos` ON `analisis_puertos`.`id_dispositivos` = `dispositivos`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `analisis_puertos`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = \'2\'
+GROUP BY `scan`.`id_scan`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `red`.`tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `analisis_puertos` ON `analisis_puertos`.`id_dispositivos` = `dispositivos`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `analisis_puertos`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = \'2\'
+GROUP BY `scan`.`id_scan`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `red`.`tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `analisis_puertos` ON `analisis_puertos`.`id_dispositivos` = `dispositivos`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `analisis_puertos`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = :scan.id_user:
+GROUP BY `scan`.`id_scan`', [...], false)
+ 5 APPPATH\Models\ScanModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\User\Scan.php(22): App\Models\ScanModel->getScanDetailsByUser('2')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User\Scan->history()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\Scan))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-06-23 22:15:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 22:16:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-23 22:16:43 --> ParseError: syntax error, unexpected identifier "ppublic", expecting "function" or "const"
+[Method: GET, Route: history]
+in APPPATH\Models\ScanModel.php on line 13.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\NVS\\app\\Models\\ScanModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\ScanModel')
+ 3 APPPATH\Controllers\User\Scan.php(21): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\ScanModel')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User\Scan->history()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\Scan))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-06-23 22:16:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-23 22:16:55 --> mysqli_sql_exception: Unknown column 'red.tipo_seguridad' in 'field list' in C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT `scan`.`...', 0)
+#1 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `scan`.`...')
+#2 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `scan`.`...')
+#3 C:\xampp\htdocs\NVS\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `scan`.`...', Array, false)
+#4 C:\xampp\htdocs\NVS\app\Models\ScanModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\NVS\app\Controllers\User\Scan.php(22): App\Models\ScanModel->getScanDetailsByUser('2')
+#6 C:\xampp\htdocs\NVS\system\CodeIgniter.php(933): App\Controllers\User\Scan->history()
+#7 C:\xampp\htdocs\NVS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\Scan))
+#8 C:\xampp\htdocs\NVS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\NVS\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\NVS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\NVS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-06-23 22:16:55 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'red.tipo_seguridad' in 'field list'
+[Method: GET, Route: history]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `red`.`tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `analisis_puertos` ON `analisis_puertos`.`id_dispositivos` = `dispositivos`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `analisis_puertos`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = :scan.id_user:
+GROUP BY `scan`.`id_scan`', [...], false)
+ 2 APPPATH\Models\ScanModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\User\Scan.php(22): App\Models\ScanModel->getScanDetailsByUser('2')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User\Scan->history()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\Scan))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-23 22:16:55 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'red.tipo_seguridad' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `red`.`tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `analisis_puertos` ON `analisis_puertos`.`id_dispositivos` = `dispositivos`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `analisis_puertos`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = \'2\'
+GROUP BY `scan`.`id_scan`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `red`.`tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `analisis_puertos` ON `analisis_puertos`.`id_dispositivos` = `dispositivos`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `analisis_puertos`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = \'2\'
+GROUP BY `scan`.`id_scan`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `red`.`tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `analisis_puertos` ON `analisis_puertos`.`id_dispositivos` = `dispositivos`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `analisis_puertos`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = :scan.id_user:
+GROUP BY `scan`.`id_scan`', [...], false)
+ 4 APPPATH\Models\ScanModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\User\Scan.php(22): App\Models\ScanModel->getScanDetailsByUser('2')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User\Scan->history()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\Scan))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-23 22:16:55 --> [Caused by] mysqli_sql_exception: Unknown column 'red.tipo_seguridad' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `red`.`tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `analisis_puertos` ON `analisis_puertos`.`id_dispositivos` = `dispositivos`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `analisis_puertos`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = \'2\'
+GROUP BY `scan`.`id_scan`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `red`.`tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `analisis_puertos` ON `analisis_puertos`.`id_dispositivos` = `dispositivos`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `analisis_puertos`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = \'2\'
+GROUP BY `scan`.`id_scan`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `red`.`tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `analisis_puertos` ON `analisis_puertos`.`id_dispositivos` = `dispositivos`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `analisis_puertos`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = \'2\'
+GROUP BY `scan`.`id_scan`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `red`.`tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `analisis_puertos` ON `analisis_puertos`.`id_dispositivos` = `dispositivos`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `analisis_puertos`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = :scan.id_user:
+GROUP BY `scan`.`id_scan`', [...], false)
+ 5 APPPATH\Models\ScanModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\User\Scan.php(22): App\Models\ScanModel->getScanDetailsByUser('2')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User\Scan->history()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\Scan))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-06-23 22:17:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 22:23:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 22:24:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-23 22:24:57 --> ErrorException: Undefined array key "direccion_ip"
+[Method: GET, Route: history]
+in APPPATH\Views\user\scan.php on line 28.
+ 1 APPPATH\Views\user\scan.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "direccion_ip"', 'C:\\xampp\\htdocs\\NVS\\app\\Views\\user\\scan.php', 28)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\NVS\\app\\Views\\user\\scan.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('user/scan', [], true)
+ 5 APPPATH\Controllers\User\Scan.php(24): view('user/scan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User\Scan->history()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\Scan))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-06-23 22:25:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-23 22:25:43 --> mysqli_sql_exception: Unknown column 'detalle_scan.id_puerto' in 'on clause' in C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT `scan`.`...', 0)
+#1 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `scan`.`...')
+#2 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `scan`.`...')
+#3 C:\xampp\htdocs\NVS\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `scan`.`...', Array, false)
+#4 C:\xampp\htdocs\NVS\app\Models\ScanModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\NVS\app\Controllers\User\Scan.php(22): App\Models\ScanModel->getScanDetailsByUser('2')
+#6 C:\xampp\htdocs\NVS\system\CodeIgniter.php(933): App\Controllers\User\Scan->history()
+#7 C:\xampp\htdocs\NVS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\Scan))
+#8 C:\xampp\htdocs\NVS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\NVS\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\NVS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\NVS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-06-23 22:25:43 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'detalle_scan.id_puerto' in 'on clause'
+[Method: GET, Route: history]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `tipo_seguridad`.`tipo` AS `tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `tipo_seguridad` ON `tipo_seguridad`.`id_tipo_seguridad` = `red`.`id_tipo_seguridad`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `detalle_scan`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = :scan.id_user:
+GROUP BY `scan`.`id_scan`', [...], false)
+ 2 APPPATH\Models\ScanModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\User\Scan.php(22): App\Models\ScanModel->getScanDetailsByUser('2')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User\Scan->history()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\Scan))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-23 22:25:43 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'detalle_scan.id_puerto' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `tipo_seguridad`.`tipo` AS `tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `tipo_seguridad` ON `tipo_seguridad`.`id_tipo_seguridad` = `red`.`id_tipo_seguridad`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `detalle_scan`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = \'2\'
+GROUP BY `scan`.`id_scan`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `tipo_seguridad`.`tipo` AS `tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `tipo_seguridad` ON `tipo_seguridad`.`id_tipo_seguridad` = `red`.`id_tipo_seguridad`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `detalle_scan`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = \'2\'
+GROUP BY `scan`.`id_scan`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `tipo_seguridad`.`tipo` AS `tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `tipo_seguridad` ON `tipo_seguridad`.`id_tipo_seguridad` = `red`.`id_tipo_seguridad`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `detalle_scan`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = :scan.id_user:
+GROUP BY `scan`.`id_scan`', [...], false)
+ 4 APPPATH\Models\ScanModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\User\Scan.php(22): App\Models\ScanModel->getScanDetailsByUser('2')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User\Scan->history()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\Scan))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-23 22:25:43 --> [Caused by] mysqli_sql_exception: Unknown column 'detalle_scan.id_puerto' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `tipo_seguridad`.`tipo` AS `tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `tipo_seguridad` ON `tipo_seguridad`.`id_tipo_seguridad` = `red`.`id_tipo_seguridad`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `detalle_scan`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = \'2\'
+GROUP BY `scan`.`id_scan`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `tipo_seguridad`.`tipo` AS `tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `tipo_seguridad` ON `tipo_seguridad`.`id_tipo_seguridad` = `red`.`id_tipo_seguridad`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `detalle_scan`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = \'2\'
+GROUP BY `scan`.`id_scan`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `tipo_seguridad`.`tipo` AS `tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `tipo_seguridad` ON `tipo_seguridad`.`id_tipo_seguridad` = `red`.`id_tipo_seguridad`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `detalle_scan`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = \'2\'
+GROUP BY `scan`.`id_scan`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `tipo_seguridad`.`tipo` AS `tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `tipo_seguridad` ON `tipo_seguridad`.`id_tipo_seguridad` = `red`.`id_tipo_seguridad`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `detalle_scan`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = :scan.id_user:
+GROUP BY `scan`.`id_scan`', [...], false)
+ 5 APPPATH\Models\ScanModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\User\Scan.php(22): App\Models\ScanModel->getScanDetailsByUser('2')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User\Scan->history()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\Scan))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-06-23 22:26:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-23 22:26:45 --> mysqli_sql_exception: Unknown column 'detalle_scan.id_puerto' in 'on clause' in C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT `scan`.`...', 0)
+#1 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `scan`.`...')
+#2 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `scan`.`...')
+#3 C:\xampp\htdocs\NVS\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `scan`.`...', Array, false)
+#4 C:\xampp\htdocs\NVS\app\Models\ScanModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\NVS\app\Controllers\User\Scan.php(22): App\Models\ScanModel->getScanDetailsByUser('2')
+#6 C:\xampp\htdocs\NVS\system\CodeIgniter.php(933): App\Controllers\User\Scan->history()
+#7 C:\xampp\htdocs\NVS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\Scan))
+#8 C:\xampp\htdocs\NVS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\NVS\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\NVS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\NVS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-06-23 22:26:45 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'detalle_scan.id_puerto' in 'on clause'
+[Method: GET, Route: history]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `tipo_seguridad`.`tipo` AS `tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `tipo_seguridad` ON `tipo_seguridad`.`id_tipo_seguridad` = `red`.`id_tipo_seguridad`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `detalle_scan`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = :scan.id_user:
+GROUP BY `scan`.`id_scan`', [...], false)
+ 2 APPPATH\Models\ScanModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\User\Scan.php(22): App\Models\ScanModel->getScanDetailsByUser('2')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User\Scan->history()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\Scan))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-23 22:26:45 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'detalle_scan.id_puerto' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `tipo_seguridad`.`tipo` AS `tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `tipo_seguridad` ON `tipo_seguridad`.`id_tipo_seguridad` = `red`.`id_tipo_seguridad`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `detalle_scan`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = \'2\'
+GROUP BY `scan`.`id_scan`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `tipo_seguridad`.`tipo` AS `tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `tipo_seguridad` ON `tipo_seguridad`.`id_tipo_seguridad` = `red`.`id_tipo_seguridad`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `detalle_scan`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = \'2\'
+GROUP BY `scan`.`id_scan`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `tipo_seguridad`.`tipo` AS `tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `tipo_seguridad` ON `tipo_seguridad`.`id_tipo_seguridad` = `red`.`id_tipo_seguridad`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `detalle_scan`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = :scan.id_user:
+GROUP BY `scan`.`id_scan`', [...], false)
+ 4 APPPATH\Models\ScanModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\User\Scan.php(22): App\Models\ScanModel->getScanDetailsByUser('2')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User\Scan->history()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\Scan))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-23 22:26:45 --> [Caused by] mysqli_sql_exception: Unknown column 'detalle_scan.id_puerto' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `tipo_seguridad`.`tipo` AS `tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `tipo_seguridad` ON `tipo_seguridad`.`id_tipo_seguridad` = `red`.`id_tipo_seguridad`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `detalle_scan`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = \'2\'
+GROUP BY `scan`.`id_scan`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `tipo_seguridad`.`tipo` AS `tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `tipo_seguridad` ON `tipo_seguridad`.`id_tipo_seguridad` = `red`.`id_tipo_seguridad`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `detalle_scan`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = \'2\'
+GROUP BY `scan`.`id_scan`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `tipo_seguridad`.`tipo` AS `tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `tipo_seguridad` ON `tipo_seguridad`.`id_tipo_seguridad` = `red`.`id_tipo_seguridad`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `detalle_scan`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = \'2\'
+GROUP BY `scan`.`id_scan`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `tipo_seguridad`.`tipo` AS `tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `tipo_seguridad` ON `tipo_seguridad`.`id_tipo_seguridad` = `red`.`id_tipo_seguridad`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `detalle_scan`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = :scan.id_user:
+GROUP BY `scan`.`id_scan`', [...], false)
+ 5 APPPATH\Models\ScanModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\User\Scan.php(22): App\Models\ScanModel->getScanDetailsByUser('2')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User\Scan->history()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\Scan))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-06-23 22:26:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-23 22:26:46 --> mysqli_sql_exception: Unknown column 'detalle_scan.id_puerto' in 'on clause' in C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT `scan`.`...', 0)
+#1 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `scan`.`...')
+#2 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `scan`.`...')
+#3 C:\xampp\htdocs\NVS\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `scan`.`...', Array, false)
+#4 C:\xampp\htdocs\NVS\app\Models\ScanModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\NVS\app\Controllers\User\Scan.php(22): App\Models\ScanModel->getScanDetailsByUser('2')
+#6 C:\xampp\htdocs\NVS\system\CodeIgniter.php(933): App\Controllers\User\Scan->history()
+#7 C:\xampp\htdocs\NVS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\Scan))
+#8 C:\xampp\htdocs\NVS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\NVS\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\NVS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\NVS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-06-23 22:26:46 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'detalle_scan.id_puerto' in 'on clause'
+[Method: GET, Route: history]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `tipo_seguridad`.`tipo` AS `tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `tipo_seguridad` ON `tipo_seguridad`.`id_tipo_seguridad` = `red`.`id_tipo_seguridad`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `detalle_scan`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = :scan.id_user:
+GROUP BY `scan`.`id_scan`', [...], false)
+ 2 APPPATH\Models\ScanModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\User\Scan.php(22): App\Models\ScanModel->getScanDetailsByUser('2')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User\Scan->history()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\Scan))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-23 22:26:46 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'detalle_scan.id_puerto' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `tipo_seguridad`.`tipo` AS `tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `tipo_seguridad` ON `tipo_seguridad`.`id_tipo_seguridad` = `red`.`id_tipo_seguridad`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `detalle_scan`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = \'2\'
+GROUP BY `scan`.`id_scan`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `tipo_seguridad`.`tipo` AS `tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `tipo_seguridad` ON `tipo_seguridad`.`id_tipo_seguridad` = `red`.`id_tipo_seguridad`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `detalle_scan`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = \'2\'
+GROUP BY `scan`.`id_scan`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `tipo_seguridad`.`tipo` AS `tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `tipo_seguridad` ON `tipo_seguridad`.`id_tipo_seguridad` = `red`.`id_tipo_seguridad`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `detalle_scan`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = :scan.id_user:
+GROUP BY `scan`.`id_scan`', [...], false)
+ 4 APPPATH\Models\ScanModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\User\Scan.php(22): App\Models\ScanModel->getScanDetailsByUser('2')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User\Scan->history()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\Scan))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-23 22:26:46 --> [Caused by] mysqli_sql_exception: Unknown column 'detalle_scan.id_puerto' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `tipo_seguridad`.`tipo` AS `tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `tipo_seguridad` ON `tipo_seguridad`.`id_tipo_seguridad` = `red`.`id_tipo_seguridad`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `detalle_scan`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = \'2\'
+GROUP BY `scan`.`id_scan`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `tipo_seguridad`.`tipo` AS `tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `tipo_seguridad` ON `tipo_seguridad`.`id_tipo_seguridad` = `red`.`id_tipo_seguridad`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `detalle_scan`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = \'2\'
+GROUP BY `scan`.`id_scan`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `tipo_seguridad`.`tipo` AS `tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `tipo_seguridad` ON `tipo_seguridad`.`id_tipo_seguridad` = `red`.`id_tipo_seguridad`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `detalle_scan`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = \'2\'
+GROUP BY `scan`.`id_scan`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `tipo_seguridad`.`tipo` AS `tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `tipo_seguridad` ON `tipo_seguridad`.`id_tipo_seguridad` = `red`.`id_tipo_seguridad`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `detalle_scan`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = :scan.id_user:
+GROUP BY `scan`.`id_scan`', [...], false)
+ 5 APPPATH\Models\ScanModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\User\Scan.php(22): App\Models\ScanModel->getScanDetailsByUser('2')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User\Scan->history()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\Scan))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-06-23 22:26:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-23 22:26:47 --> mysqli_sql_exception: Unknown column 'detalle_scan.id_puerto' in 'on clause' in C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT `scan`.`...', 0)
+#1 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `scan`.`...')
+#2 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `scan`.`...')
+#3 C:\xampp\htdocs\NVS\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `scan`.`...', Array, false)
+#4 C:\xampp\htdocs\NVS\app\Models\ScanModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\NVS\app\Controllers\User\Scan.php(22): App\Models\ScanModel->getScanDetailsByUser('2')
+#6 C:\xampp\htdocs\NVS\system\CodeIgniter.php(933): App\Controllers\User\Scan->history()
+#7 C:\xampp\htdocs\NVS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\Scan))
+#8 C:\xampp\htdocs\NVS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\NVS\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\NVS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\NVS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-06-23 22:26:47 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'detalle_scan.id_puerto' in 'on clause'
+[Method: GET, Route: history]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `tipo_seguridad`.`tipo` AS `tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `tipo_seguridad` ON `tipo_seguridad`.`id_tipo_seguridad` = `red`.`id_tipo_seguridad`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `detalle_scan`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = :scan.id_user:
+GROUP BY `scan`.`id_scan`', [...], false)
+ 2 APPPATH\Models\ScanModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\User\Scan.php(22): App\Models\ScanModel->getScanDetailsByUser('2')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User\Scan->history()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\Scan))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-23 22:26:47 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'detalle_scan.id_puerto' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `tipo_seguridad`.`tipo` AS `tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `tipo_seguridad` ON `tipo_seguridad`.`id_tipo_seguridad` = `red`.`id_tipo_seguridad`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `detalle_scan`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = \'2\'
+GROUP BY `scan`.`id_scan`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `tipo_seguridad`.`tipo` AS `tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `tipo_seguridad` ON `tipo_seguridad`.`id_tipo_seguridad` = `red`.`id_tipo_seguridad`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `detalle_scan`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = \'2\'
+GROUP BY `scan`.`id_scan`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `tipo_seguridad`.`tipo` AS `tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `tipo_seguridad` ON `tipo_seguridad`.`id_tipo_seguridad` = `red`.`id_tipo_seguridad`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `detalle_scan`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = :scan.id_user:
+GROUP BY `scan`.`id_scan`', [...], false)
+ 4 APPPATH\Models\ScanModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\User\Scan.php(22): App\Models\ScanModel->getScanDetailsByUser('2')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User\Scan->history()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\Scan))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-06-23 22:26:47 --> [Caused by] mysqli_sql_exception: Unknown column 'detalle_scan.id_puerto' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `tipo_seguridad`.`tipo` AS `tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `tipo_seguridad` ON `tipo_seguridad`.`id_tipo_seguridad` = `red`.`id_tipo_seguridad`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `detalle_scan`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = \'2\'
+GROUP BY `scan`.`id_scan`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `tipo_seguridad`.`tipo` AS `tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `tipo_seguridad` ON `tipo_seguridad`.`id_tipo_seguridad` = `red`.`id_tipo_seguridad`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `detalle_scan`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = \'2\'
+GROUP BY `scan`.`id_scan`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `tipo_seguridad`.`tipo` AS `tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `tipo_seguridad` ON `tipo_seguridad`.`id_tipo_seguridad` = `red`.`id_tipo_seguridad`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `detalle_scan`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = \'2\'
+GROUP BY `scan`.`id_scan`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `scan`.`id_scan`, `scan`.`fecha_scan`, `usuarios`.`name` AS `user_name`, `red`.`direccion_red`, `red`.`potencia`, `red`.`essid`, `red`.`bssid`, `tipo_seguridad`.`tipo` AS `tipo_seguridad`, `dispositivos`.`direccion_ip`, `dispositivos`.`sistema_operativo`, `dispositivos`.`dir_mac`, `puertos`.`puerto_nombre`, `puertos`.`servicio`, `puertos`.`protocolo`, `estado_puerto`.`abierto`, `estado_puerto`.`cerrado`, `estado_puerto`.`filtrado`, `solucion`.`solucion`
+FROM `scan`
+JOIN `usuarios` ON `usuarios`.`id_user` = `scan`.`id_user`
+JOIN `red` ON `red`.`id_red` = `scan`.`id_red`
+JOIN `tipo_seguridad` ON `tipo_seguridad`.`id_tipo_seguridad` = `red`.`id_tipo_seguridad`
+JOIN `detalle_scan` ON `detalle_scan`.`id_scan` = `scan`.`id_scan`
+JOIN `dispositivos` ON `dispositivos`.`id_dispositivos` = `detalle_scan`.`id_dispositivos`
+JOIN `puertos` ON `puertos`.`id_puerto` = `detalle_scan`.`id_puerto`
+JOIN `estado_puerto` ON `estado_puerto`.`id_estado_puerto` = `puertos`.`id_estado_puerto`
+JOIN `solucion` ON `solucion`.`id_solucion` = `detalle_scan`.`id_solucion`
+WHERE `scan`.`id_user` = :scan.id_user:
+GROUP BY `scan`.`id_scan`', [...], false)
+ 5 APPPATH\Models\ScanModel.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\User\Scan.php(22): App\Models\ScanModel->getScanDetailsByUser('2')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User\Scan->history()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\Scan))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-06-23 22:27:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-23 22:28:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-23 22:28:14 --> BadMethodCallException: Call to undefined method App\Models\ScanModel::getScanDetailsByUser
+[Method: GET, Route: history]
+in SYSTEMPATH\Model.php on line 921.
+ 1 APPPATH\Controllers\User\Scan.php(22): CodeIgniter\Model->__call('getScanDetailsByUser', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User\Scan->history()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User\Scan))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-06-23 22:28:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

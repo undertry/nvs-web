@@ -66,14 +66,16 @@
         <a href="<?= base_url('/logout'); ?>">Logout</a>
         <a href="<?= base_url('/console'); ?>">Console</a>
         <a href="<?= base_url('/change_password'); ?>">Change password</a>
+        <a href="<?= base_url('/history'); ?>">History</a>
+
 
     </div>
     <div class="profile-container">
         <h1>Perfil de Usuario</h1>
         <div class="profile-info">
-            <p>Nombre: <?= session('user')->name; ?></p>
+            <p>Name: <?= session('user')->name; ?></p>
             <p>Email: <?= session('user')->email; ?></p>
-            <p>Cuenta creada: <?= session('user')->created_at; ?></p>
+            <p>Account created at: <?= session('user')->created_at; ?></p>
         </div>
     </div>
 </body>
