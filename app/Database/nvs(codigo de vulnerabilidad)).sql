@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-06-2024 a las 23:54:51
+-- Tiempo de generación: 25-06-2024 a las 01:18:39
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.1.17
 
@@ -66,19 +66,24 @@ CREATE TABLE `detalle_scan` (
   `id_det_scan` int(11) NOT NULL,
   `id_scan` int(11) DEFAULT NULL,
   `id_dispositivos` int(11) DEFAULT NULL,
-  `id_solucion` int(11) DEFAULT NULL
+  `id_solucion` int(11) DEFAULT NULL,
+  `codigo_vul` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `detalle_scan`
 --
 
-INSERT INTO `detalle_scan` (`id_det_scan`, `id_scan`, `id_dispositivos`, `id_solucion`) VALUES
-(1, 1, 1, 1),
-(2, 2, 2, 2),
-(3, 3, 3, 3),
-(4, 4, 4, 4),
-(5, 5, 5, 5);
+INSERT INTO `detalle_scan` (`id_det_scan`, `id_scan`, `id_dispositivos`, `id_solucion`, `codigo_vul`) VALUES
+(1, 1, 1, 1, ''),
+(2, 2, 2, 2, ''),
+(3, 3, 3, 3, ''),
+(4, 4, 4, 4, ''),
+(5, 5, 5, 5, ''),
+(6, 6, 1, 1, ''),
+(7, 6, 2, 2, ''),
+(8, 7, 1, 1, ''),
+(9, 7, 2, 2, '');
 
 -- --------------------------------------------------------
 
@@ -201,7 +206,9 @@ INSERT INTO `scan` (`id_scan`, `id_user`, `id_red`, `fecha_scan`) VALUES
 (2, 2, 2, '2024-06-02 14:02:34'),
 (3, 3, 3, '2024-05-15 21:26:12'),
 (4, 4, 4, '2024-06-01 10:59:00'),
-(5, 5, 5, '2014-05-23 15:59:59');
+(5, 5, 5, '2014-05-23 15:59:59'),
+(6, 5, 1, '2024-06-23 21:56:46'),
+(7, 2, 1, '2024-06-23 21:57:58');
 
 -- --------------------------------------------------------
 
@@ -372,7 +379,7 @@ ALTER TABLE `codigo`
 -- AUTO_INCREMENT de la tabla `detalle_scan`
 --
 ALTER TABLE `detalle_scan`
-  MODIFY `id_det_scan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_det_scan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `dispositivos`
@@ -402,7 +409,7 @@ ALTER TABLE `red`
 -- AUTO_INCREMENT de la tabla `scan`
 --
 ALTER TABLE `scan`
-  MODIFY `id_scan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_scan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `solucion`
