@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 25-06-2024 a las 01:18:39
+-- Tiempo de generación: 25-06-2024 a las 23:20:20
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.1.17
 
@@ -67,23 +67,24 @@ CREATE TABLE `detalle_scan` (
   `id_scan` int(11) DEFAULT NULL,
   `id_dispositivos` int(11) DEFAULT NULL,
   `id_solucion` int(11) DEFAULT NULL,
-  `codigo_vul` varchar(100) NOT NULL
+  `codigo_vul` varchar(100) NOT NULL,
+  `vulnerabilidad` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `detalle_scan`
 --
 
-INSERT INTO `detalle_scan` (`id_det_scan`, `id_scan`, `id_dispositivos`, `id_solucion`, `codigo_vul`) VALUES
-(1, 1, 1, 1, ''),
-(2, 2, 2, 2, ''),
-(3, 3, 3, 3, ''),
-(4, 4, 4, 4, ''),
-(5, 5, 5, 5, ''),
-(6, 6, 1, 1, ''),
-(7, 6, 2, 2, ''),
-(8, 7, 1, 1, ''),
-(9, 7, 2, 2, '');
+INSERT INTO `detalle_scan` (`id_det_scan`, `id_scan`, `id_dispositivos`, `id_solucion`, `codigo_vul`, `vulnerabilidad`) VALUES
+(1, 1, 1, 1, '', 0),
+(2, 2, 2, 2, '', 0),
+(3, 3, 3, 3, '', 0),
+(4, 4, 4, 4, '', 0),
+(5, 5, 5, 5, '', 0),
+(6, 6, 1, 1, '', 0),
+(7, 6, 2, 2, '', 0),
+(8, 7, 1, 1, '', 0),
+(9, 7, 2, 2, '', 0);
 
 -- --------------------------------------------------------
 
@@ -218,19 +219,21 @@ INSERT INTO `scan` (`id_scan`, `id_user`, `id_red`, `fecha_scan`) VALUES
 
 CREATE TABLE `solucion` (
   `id_solucion` int(11) NOT NULL,
-  `solucion` varchar(255) DEFAULT NULL
+  `solucion` varchar(255) DEFAULT NULL,
+  `codigo_vulnerabilidad` varchar(255) NOT NULL,
+  `descripcion_vuln` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `solucion`
 --
 
-INSERT INTO `solucion` (`id_solucion`, `solucion`) VALUES
-(1, 'Actualizar software para cerrar puerto 80'),
-(2, 'Configurar firewall para filtrar puerto 22'),
-(3, 'Cerrar puerto 5228 para mejorar seguridad'),
-(4, 'Revisar configuración de HTTPS en puerto 443'),
-(5, 'Configurar reglas de firewall para puerto 5223');
+INSERT INTO `solucion` (`id_solucion`, `solucion`, `codigo_vulnerabilidad`, `descripcion_vuln`) VALUES
+(1, 'Actualizar software para cerrar puerto 80', '', ''),
+(2, 'Configurar firewall para filtrar puerto 22', '', ''),
+(3, 'Cerrar puerto 5228 para mejorar seguridad', '', ''),
+(4, 'Revisar configuración de HTTPS en puerto 443', '', ''),
+(5, 'Configurar reglas de firewall para puerto 5223', '', '');
 
 -- --------------------------------------------------------
 
