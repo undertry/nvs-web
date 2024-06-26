@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Detalles del Scan</title>
+    <link rel="stylesheet" href="<?php echo base_url('complements/styles/historial.css'); ?>">
 </head>
 <body>
+<div class="container">
     <h1>Detalles del Scan</h1>
-    
+    <div class="columns">
+    <div class="left-column">
     <?php if (!empty($scanDetails) && is_array($scanDetails)): ?>
         <h2>Información del Scan</h2>
         <ul>
@@ -22,7 +25,8 @@
             <li><strong>BSSID:</strong> <?= $scanDetails[0]['bssid'] ?></li>
             <li><strong>Tipo de Seguridad:</strong> <?= $scanDetails[0]['tipo_seguridad'] ?></li>
         </ul>
-
+    </div>
+        <div class="right-column">
         <h2>Información de los Dispositivos</h2>
         <?php foreach ($scanDetails as $detail): ?>
             <h3>Dispositivo</h3>
@@ -55,5 +59,8 @@
     <?php else: ?>
         <p>No se encontraron detalles para este scan.</p>
     <?php endif; ?>
+    </div>
+    </div>
+</div>
 </body>
 </html>

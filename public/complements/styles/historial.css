@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+
+:root {
+  --color-main: #d60b0b;
+  --color-black: #151414;
+  --color-semiblack: #202020;
+  --color-white: #f3f2f2;
+  --color-grey: #333;
+}
+
+/* fonts select */
+@font-face {
+  font-family: "matter-medium";
+  src: url("./fonts/matter-font/Matter-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "aero";
+  src: url("./fonts/aeroxys/Aeroxys.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "nevol";
+  src: url("./fonts/nevolasty/Nevolasty-Light.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "arame";
+  src: url("./fonts/arame/Arame-Thin.ttf") format("truetype");
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Color de fondo */
+    color: #FFFFFF; /* Color del texto */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 110vh;
+}
+
+.container {
+    position: absolute;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(45deg, #333 0%, #151414 100%);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.columns {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px; /* Espacio entre el título y las columnas */
+}
+
+.left-column, .right-column {
+    flex: 1;
+    padding: 20px;
+    background-color: var(--color-grey); /* Color de fondo de las columnas */
+    border-radius: 8px;
+}
+
+h1 {
+    color: var(--color-main); 
+    font-family: "arame";/* Color del título */
+}
+
+h2, h3 {
+    color: #E53935; /* Color de los subtítulos */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+strong {
+    color: #FF5722; /* Color de los textos en negrita */
+}
