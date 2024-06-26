@@ -26,7 +26,7 @@ $routes->POST('password_change', 'User\Dashboard::password_change');
 //gets para las vistas de se olvido la contraseña y post para el envio de datos al controlador
 $routes->get('forgot_password', 'User\Change_Password::forgot_password');
 $routes->get('change_forgot', 'User\Change_Password::change_forgot');
-$routes->POST('password_change_forgot', 'User\Dashboard::password_change_forgot');
+$routes->POST('password_change_forgot', 'User\Change_Password::password_change_forgot');
 //envio de codigo mediante email
 $routes->post('sendemail', 'User\Change_Password::sendemail');
 

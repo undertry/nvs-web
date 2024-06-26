@@ -59,7 +59,11 @@ class Dashboard extends BaseController
                 $this->session->setFlashdata('error', 'Las contraseñas no coinciden.');
             return redirect()->to('change_password');
         }
-    
+        // Verificar si la contraseña cumple con los requisitos
+        if (!preg_match('/^(?=.*[A-Z])(?=.*[!@#$&*]).{8,}$/', $password)) {
+        $this->session->setFlashdata('error', 'La contraseña debe tener al menos 8 caracteres, 1 mayúscula y 1 caracter especial.');
+        return redirect()->to('change_password');
+        }  
         // Cambiar la contraseña si todas las validaciones son correctas
         $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
         $data["password"] = $hashedPassword;

@@ -109,7 +109,11 @@ public function password_change_forgot()
         $this->session->setFlashdata('error', 'Las contraseñas no coinciden.');
         return redirect()->to('change_forgot');
     }
-
+     // Verificar si la contraseña cumple con los requisitos
+    if (!preg_match('/^(?=.*[A-Z])(?=.*[!@#$&*]).{8,}$/', $password)) {
+        $this->session->setFlashdata('error', 'La contraseña debe tener al menos 8 caracteres, 1 mayúscula y 1 caracter especial.');
+        return redirect()->to('change_forgot');
+    }  
     // Obtener el id_user asociado al código de recuperación
     $user = $codigoModel->getUserByCodigo($codigo);
     if (!$user) {
