@@ -62,7 +62,14 @@
                                         ?>
                                     </li>
                                 </ul>
-
+                                <h3>Código Público</h3>
+                                <ul>
+                                    <li><?= $detail['codigo_vulnerabilidad'] ?></li>
+                                </ul>
+                                <h3>Descripción vulnerabilidad</h3>
+                                <ul>
+                                    <li><?= $detail['descripcion_vuln'] ?></li>
+                                </ul>
                                 <h3>Solución</h3>
                                 <ul>
                                     <li><?= $detail['solucion'] ?></li>

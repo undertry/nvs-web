@@ -13,7 +13,7 @@ class ScanModel extends Model
     public function getScanDetailsByUser($id_user)
     {
         return $this->db->table('scan')
-            ->select('scan.*, usuarios.name AS user_name, red.direccion_red, red.potencia, red.essid, red.bssid, tipo_seguridad.tipo AS tipo_seguridad, dispositivos.direccion_ip, dispositivos.sistema_operativo, dispositivos.dir_mac, puertos.puerto_nombre, puertos.servicio, puertos.protocolo, estado_puerto.abierto, estado_puerto.cerrado, estado_puerto.filtrado, solucion.solucion')
+            ->select('scan.*, usuarios.name AS user_name, red.direccion_red, red.potencia, red.essid, red.bssid, tipo_seguridad.tipo AS tipo_seguridad, dispositivos.direccion_ip, dispositivos.sistema_operativo, dispositivos.dir_mac, puertos.puerto_nombre, puertos.servicio, puertos.protocolo, estado_puerto.abierto, estado_puerto.cerrado, estado_puerto.filtrado, solucion.solucion, solucion.codigo_vulnerabilidad, solucion.descripcion_vuln')
             ->join('usuarios', 'usuarios.id_user = scan.id_user')
             ->join('red', 'red.id_red = scan.id_red')
             ->join('tipo_seguridad', 'tipo_seguridad.id_tipo_seguridad = red.id_tipo_seguridad')
