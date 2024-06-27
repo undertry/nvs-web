@@ -30,32 +30,44 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #121212; /* Color de fondo */
-    color: #FFFFFF; /* Color del texto */
+    font-family: "matter-medium", sans-serif;
+    background-color: var(--color-black); /* Color de fondo */
+    color: var(--color-white); /* Color del texto */
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 110vh;
+    height: 100vh;
+    padding-top: 50px;
+}
+.header a {
+  position: absolute;
+  top: 11px;
+  left: 20px;
+  color: var(--color-main);
+  font-size: 1.2em;
+  font-weight: 100;
+  font-family: "aero";
+  text-decoration: none;
 }
 
 .container {
     position: absolute;
-    max-width: 900px;
+    max-width: 100vh;
     margin: 0 auto;
     padding: 20px;
     background: linear-gradient(45deg, #333 0%, #151414 100%);
+    border: 1px solid #454545;
     border-radius: 8px;
     text-align: center;
 }
 
 .columns {
+    width: 60rem;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-top: 20px; /* Espacio entre el título y las columnas */
+    margin-top: 10px; /* Espacio entre el título y las columnas */
 }
 
 .scan-group {
@@ -70,24 +82,38 @@ body {
 }
 
 .scan-details {
-    display: none;
-    padding: 20px;
+    display: block;
+    height: 0;
+    overflow: hidden;
+    padding: 0 20px;
     background-color: var(--color-semiblack);
+    transition: height 0.3s ease;
 }
 
 .scan-details.visible {
-    display: block;
+    height: auto;
 }
 
 h1 {
-    color: var(--color-main); 
+    color: var(--color-white); 
     font-family: "arame";/* Color del título */
 }
 
-h2, h3 {
-    color: #E53935; /* Color de los subtítulos */
+h2 {
+    color: var(--color-main); /* Color de los subtítulos */
 }
 
+h3 {
+    color: #ff9e3c ; /* Color de los subtítulos */
+}
+
+#descripcion {
+    color: #eb5ef0; /* Color de las vulnerabilidades */
+}
+
+#solucion {
+    color: #14ff5a; /* Color de la solución */
+}
 ul {
     list-style-type: none;
     padding: 0;
@@ -98,5 +124,5 @@ li {
 }
 
 strong {
-    color: #FF5722; /* Color de los textos en negrita */
+    color: #a7a6a5; /* Color de los textos en negrita */
 }

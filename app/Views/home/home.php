@@ -12,7 +12,7 @@
 
 <body>
     <nav>
-        <div class="logo">NVS</div>
+    <div class="logo">NVS</div>
         <ul>
             <li><a href="#features">Software</a>
                 <ul class="dropdown">

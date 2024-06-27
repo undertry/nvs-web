@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="website icon" type="png" href="<?php echo base_url('complements/styles/images/NVS.png'); ?>">
-  <title>En Mantenimiento</title>
-  <style>
-    body {
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar Contraseña</title>
+    <style>
+      body {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -15,73 +13,135 @@
       margin: 0;
       background-color: #f2f2f2;
       font-family: Arial, sans-serif;
-    }
-
-    .container {
+      }
+      .container {
       text-align: center;
-    }
-
-    h1 {
-      font-size: 2.5rem;
+      max-width: 400px;
+      width: 100%;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h2 {
+      font-size: 2rem;
       color: #333;
-    }
-
-    p {
-      font-size: 1.2rem;
-      color: #666;
-    }
-  </style>
-</head>
-
-<body>
-  <div class="container">
-    <?php if (session('user')) : ?>
-      <form method="post" action="<?= base_url('password_change'); ?>" class="form">
-      <h2>Change Password</h2>
-      <div class="form-inputs">
-        <div class="form-label">
-          <input name="password" required pattern=".{8,}" type="password" id="password" placeholder="password">
-        </div>
-        <div class="form-label">
-          <input name="confirm_password" required pattern=".{8,}" type="password" id="confirm_password" placeholder="confirm password">
-        </div>
-      </div>
-      <input type="submit" value="Change_password">
-    </form>
-    <?php else : ?>
-      <p> <a href="<?= base_url('login'); ?>">Login</a> </p>
-    <?php endif; ?>
-
-  </div>
-  <!DOCTYPE html>
-<script>
- //   Funcion para validar la contraseña
-    function validatePassword() {
-      const password = document.getElementById('password').value;
-      const confirmPassword = document.getElementById('confirm_password').value;
-      const passwordCriteria = /^(?=.*[A-Z])(?=.*[!@#$&*]).{8,}$/;
-
-      if (!passwordCriteria.test(password)) {
-        alert('La contraseña debe tener al menos 8 caracteres, 1 mayúscula y 1 caracter especial.');
-        return false;
+      margin-bottom: 20px;
       }
-      //   Si las contraseñas no coinciden se vacia los inputs de password
-      if (password !== confirmPassword) {
-        alert('Las contraseñas no coinciden.');
-        document.getElementById('password').value = '';
-        document.getElementById('confirm_password').value = '';
-        return false;
+      .form-input {
+      margin-bottom: 15px;
+      text-align: left;
       }
-
-      return true;
-    }
-    //   Mensaje de la contraseña no coincide
-    <?php if (session()->getFlashdata('error') === 'Las contraseñas no coinciden.') : ?>
-      document.getElementById('password').value = '';
-      document.getElementById('confirm_password').value = '';
+      .form-input label {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 5px;
+      color: #555;
+      }
+      .form-input input[type="password"] {
+      width: 100%;
+      padding: 5px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      transition: border-color 0.3s ease;
+      }
+      .form-input input[type="password"]:focus {
+      outline: none;
+      border-color: #3366ff;
+      }
+      .form-input input[type="submit"] {
+      background-color: #3366ff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      }
+      .form-input input[type="submit"]:hover {
+      background-color: #254BFF;
+      }
+      .error-message {
+      color: #f00;
+      font-size: 0.9rem;
+      margin-top: 5px;
+      }
+      /* mensaje de alerta */
+      .message {
+      position: fixed;
+      top: 0;
+      margin-top: 10px;
+      left: 43%;
+      width: 15%;
+      border-radius: 10px;
+      padding: 10px;
+      text-align: center;
+      z-index: 1000;
+      box-sizing: border-box;
+      }
+      .error {
+      background-color: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+      }
+      .success {
+      background-color: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Mensaje de sesiones -->
+    <?php if (session()->getFlashdata('error')) : ?>
+    <div class="message error"><?= session()->getFlashdata('error'); ?></div>
     <?php endif; ?>
-  </script>
-</body>
-
+    <?php if (session()->getFlashdata('success')) : ?>
+    <div class="message success"><?= session()->getFlashdata('success'); ?></div>
+    <?php endif; ?>
+    <div class="container">
+      <?php if (session('user')) : ?>
+      <form method="post" action="<?= base_url('password_change'); ?>" class="form" onsubmit="return validatePassword()">
+        <h2>Cambiar Contraseña</h2>
+        <div class="form-input">
+          <label for="password">Nueva Contraseña</label>
+          <input name="password" required pattern=".{8,}" type="password" id="password" placeholder="Ingrese su nueva contraseña">
+        </div>
+        <div class="form-input">
+          <label for="confirm_password">Confirmar Contraseña</label>
+          <input name="confirm_password" required pattern=".{8,}" type="password" id="confirm_password" placeholder="Confirme su nueva contraseña">
+        </div>
+        <?php if (session()->getFlashdata('error')) : ?>
+        <div class="error-message"><?= session()->getFlashdata('error') ?></div>
+        <?php endif; ?>
+        <div class="form-input">
+          <input type="submit" value="Cambiar Contraseña">
+        </div>
+      </form>
+      <?php else : ?>
+      <p><a href="<?= base_url('login'); ?>">Iniciar sesión</a></p>
+      <?php endif; ?>
+    </div>
+    <script>
+      function validatePassword() {
+        const password = document.getElementById('password').value;
+        const confirmPassword = document.getElementById('confirm_password').value;
+        const passwordCriteria = /^(?=.*[A-Z])(?=.*[!@#$&*]).{8,}$/;
+      
+        if (!passwordCriteria.test(password)) {
+          alert('La contraseña debe tener al menos 8 caracteres, 1 mayúscula y 1 caracter especial.');
+          return false;
+        }
+      
+        if (password !== confirmPassword) {
+          alert('Las contraseñas no coinciden.');
+          return false;
+        }
+      
+        return true;
+      }
+    </script>
+  </body>
 </html>
-

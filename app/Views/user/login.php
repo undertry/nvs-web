@@ -24,6 +24,7 @@
     .caps-lock-warning.active {
       display: block;
     }
+    
   </style>
 </head>
 
