@@ -63,11 +63,6 @@
       .form-input input[type="submit"]:hover {
       background-color: #254BFF;
       }
-      .error-message {
-      color: #f00;
-      font-size: 0.9rem;
-      margin-top: 5px;
-      }
       /* mensaje de alerta */
       .message {
       position: fixed;
@@ -106,6 +101,10 @@
       <form method="post" action="<?= base_url('password_change'); ?>" class="form" onsubmit="return validatePassword()">
         <h2>Cambiar Contraseña</h2>
         <div class="form-input">
+          <label for="password">Contraseña Actual</label>
+          <input name="actual_password" required pattern=".{8,}" type="password" id="actual_password" placeholder="Ingrese su contraseña actual">
+        </div>
+        <div class="form-input">
           <label for="password">Nueva Contraseña</label>
           <input name="password" required pattern=".{8,}" type="password" id="password" placeholder="Ingrese su nueva contraseña">
         </div>
@@ -113,9 +112,6 @@
           <label for="confirm_password">Confirmar Contraseña</label>
           <input name="confirm_password" required pattern=".{8,}" type="password" id="confirm_password" placeholder="Confirme su nueva contraseña">
         </div>
-        <?php if (session()->getFlashdata('error')) : ?>
-        <div class="error-message"><?= session()->getFlashdata('error') ?></div>
-        <?php endif; ?>
         <div class="form-input">
           <input type="submit" value="Cambiar Contraseña">
         </div>
@@ -124,24 +120,5 @@
       <p><a href="<?= base_url('login'); ?>">Iniciar sesión</a></p>
       <?php endif; ?>
     </div>
-    <script>
-      function validatePassword() {
-        const password = document.getElementById('password').value;
-        const confirmPassword = document.getElementById('confirm_password').value;
-        const passwordCriteria = /^(?=.*[A-Z])(?=.*[!@#$&*]).{8,}$/;
-      
-        if (!passwordCriteria.test(password)) {
-          alert('La contraseña debe tener al menos 8 caracteres, 1 mayúscula y 1 caracter especial.');
-          return false;
-        }
-      
-        if (password !== confirmPassword) {
-          alert('Las contraseñas no coinciden.');
-          return false;
-        }
-      
-        return true;
-      }
-    </script>
   </body>
 </html>
