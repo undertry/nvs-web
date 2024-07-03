@@ -37,6 +37,22 @@
   font-weight: 400;
 }
 
+.caps-lock-warning {
+  display: none;
+  margin-top: 5px;
+  padding: 5px;
+  background-color: #ffc107;
+  color: #000;
+  text-align: center;
+  font-size: 12px;
+  border: 1px solid #ffa000;
+  border-radius: 3px;
+}
+
+.caps-lock-warning.active {
+  display: block;
+}
+
 /* mensaje de alerta */
 .message {
   position: fixed;
@@ -97,7 +113,7 @@ body {
   content: '';
   position: absolute;
   top: -50%;
-  left: -50%; 
+  left: -50%;
   width: 380px;
   height: 420px;
   transform-origin: bottom right;
