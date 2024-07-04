@@ -39,14 +39,20 @@
 
 .caps-lock-warning {
   display: none;
-  margin-top: 5px;
-  padding: 5px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 10px;
+  padding: 10px;
   background-color: #ffc107;
   color: #000;
   text-align: center;
-  font-size: 12px;
+  font-size: 14px;
   border: 1px solid #ffa000;
-  border-radius: 3px;
+  border-radius: 5px;
+  z-index: 1000;
+  /* Asegura que esté por encima del formulario */
 }
 
 .caps-lock-warning.active {
@@ -227,4 +233,32 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: var(--color-main);
   color: var(--color-black);
+}
+
+.form-label {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  cursor: pointer;
+}
+
+.field-icon {
+  color: #9B9A9A;
+  /* Color del icono por defecto */
+}
+
+/* Estilos adicionales cuando el usuario interactúa con el campo */
+.field-icon:hover {
+  color: var(--color-main);
+  /* Color del icono al hacer hover */
+}
+
+.show-password .field-icon {
+  color: var(--color-main);
+  /* Color del icono cuando la contraseña es visible */
 }

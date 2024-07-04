@@ -1,6 +1,10 @@
-<?= $this->include('common-user/start.php'); ?>
+<?= $this->include('common/user/start.php'); ?>
 <title>Sign Up</title>
 </head>
+<!-- Implementacion de Aviso de Mayuscula -->
+<div id="caps-lock-warning-password" class="caps-lock-warning">
+  <i class="fas fa-lock"></i> Caps Lock is on
+</div>
 
 <body>
   <!-- Mensaje de sesiones -->
@@ -23,12 +27,16 @@
           <input name="email" required type="email" id="email" placeholder="name@example.com" value="<?= old('email'); ?>">
         </div>
         <div class="form-label">
-          <input name="password" required pattern=".{8,}" type="password" id="password" placeholder="password">
-          <!-- Implementacion de Aviso de Mayuscula -->
-          <div id="caps-lock-warning-password" class="caps-lock-warning">Caps Lock is on</div>
+          <input name="password" required pattern=".{8,}" type="password" id="password" placeholder="Password">
+          <div class="password-toggle">
+            <span toggle="#password" class="field-icon toggle-password"><i class="fa-solid fa-eye-slash"></i></span>
+          </div>
         </div>
         <div class="form-label">
-          <input name="confirm_password" required pattern=".{8,}" type="password" id="confirm_password" placeholder="confirm password">
+          <input name="confirm_password" required pattern=".{8,}" type="password" id="confirm_password" placeholder="Confirm Password">
+          <div class="password-toggle">
+            <span toggle="#confirm_password" class="field-icon toggle-password"><i class="fa-solid fa-eye-slash"></i></span>
+          </div>
           <!-- Implementacion de Aviso de Mayuscula -->
           <div id="caps-lock-warning-confirm-password" class="caps-lock-warning">Caps Lock is on</div>
         </div>
@@ -39,4 +47,4 @@
       <input type="submit" value="Register">
     </form>
   </div>
-  <?= $this->include('common-user/end.php'); ?>
+  <?= $this->include('common/user/end.php'); ?>

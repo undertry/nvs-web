@@ -9,6 +9,9 @@
     document.getElementById('password').addEventListener('keyup', function(event) {
         checkCapsLock(event, 'caps-lock-warning-password');
     });
+    document.getElementById('confirm_password').addEventListener('keyup', function(event) {
+        checkCapsLock(event, 'caps-lock-warning-password');
+    });
     //   Funcion para validar la contraseña
     function validatePassword() {
         const password = document.getElementById('password').value;
@@ -34,6 +37,24 @@
         document.getElementById('password').value = '';
         document.getElementById('confirm_password').value = '';
     <?php endif; ?>
+</script>
+<!-- libreria de jquery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    // Funcion para mostrar la contraseña
+    $(document).ready(function() {
+        $('.toggle-password').click(function() {
+            $(this).toggleClass('show-password');
+            var input = $($(this).attr('toggle'));
+            if (input.attr('type') === 'password') {
+                input.attr('type', 'text');
+                $(this).html('<i class="fa-solid fa-eye"></i>');
+            } else {
+                input.attr('type', 'password');
+                $(this).html('<i class="fa-solid fa-eye-slash"></i>');
+            }
+        });
+    });
 </script>
 </body>
 

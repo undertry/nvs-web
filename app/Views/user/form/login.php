@@ -1,6 +1,10 @@
 <?= $this->include('common/user/start.php'); ?>
 <title>Log In</title>
 </head>
+<!-- Implementacion de Aviso de Mayuscula -->
+<div id="caps-lock-warning-password" class="caps-lock-warning">
+  <i class="fas fa-lock"></i> Caps Lock is on
+</div>
 
 <body>
   <!-- Mensaje de sesiones -->
@@ -21,8 +25,9 @@
         </div>
         <div class="form-label">
           <input name="password" type="password" id="password" placeholder="password" required>
-          <!-- Implementacion de Aviso de Mayuscula -->
-          <div id="caps-lock-warning-password" class="caps-lock-warning">Caps Lock is on</div>
+          <div class="password-toggle">
+            <span toggle="#password" class="field-icon toggle-password"><i class="fa-solid fa-eye-slash"></i></span>
+          </div>
         </div>
       </div>
       <div class="links">
