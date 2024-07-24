@@ -3,28 +3,30 @@
     --color-black: #151414;
     --color-white: #f3f2f2;
     --color-grey: #333;
-}
-/* fonts select */
-@font-face {
-	font-family: "matter-medium";
-	src: url("./fonts/matter-font/Matter-Medium.ttf") format("truetype");
-}
-
-@font-face {
-	font-family: "aero";
-	src: url("./fonts/aeroxys/Aeroxys.ttf") format("truetype");
-}
-
-@font-face {
-	font-family: "nevol";
-	src: url("./fonts/nevolasty/Nevolasty-Light.otf") format("truetype");
-}
-
-@font-face {
-	font-family: "arame";
-	src: url("./fonts/arame/Arame-Thin.ttf") format("truetype");
-}
-body {
+  }
+  
+  /* fonts select */
+  @font-face {
+    font-family: "matter-medium";
+    src: url("./fonts/matter-font/Matter-Medium.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "aero";
+    src: url("./fonts/aeroxys/Aeroxys.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "nevol";
+    src: url("./fonts/nevolasty/Nevolasty-Light.otf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "arame";
+    src: url("./fonts/arame/Arame-Thin.ttf") format("truetype");
+  }
+  
+  body {
     margin: 0;
     padding: 0;
     font-family: "matter-medium";
@@ -33,9 +35,9 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
-}
-
-nav {
+  }
+  
+  nav {
     width: 100%;
     position: fixed;
     top: 0;
@@ -46,102 +48,117 @@ nav {
     padding: 10px 20px;
     background-color: var(--color-black);
     border-bottom: 1px solid var(--color-grey);
-}
-
-nav .logo {
+  }
+  
+  nav .logo {
     font-family: "aero";
     font-size: 2.5em;
     color: var(--color-main);
-}
-
-nav ul {
+  }
+  
+  nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
-}
-
-nav ul li {
+  }
+  
+  nav ul li {
     position: relative;
     margin: 0 15px;
-}
-
-nav ul li a {
+  }
+  
+  nav ul li a {
     text-decoration: none;
     color: var(--color-white);
     font-family: "matter-medium";
     font-size: 1.1em;
     padding: 15px 20px;
     display: block;
-}
-
-nav ul li a:hover {
+  }
+  
+  nav ul li a:hover {
     color: var(--color-main);
-}
-
-nav ul li .dropdown {
+  }
+  
+  nav ul li .dropdown {
     display: none;
     position: absolute;
     top: 100%;
     right: 15%;
     background: linear-gradient(95deg, #333 0%, #151414 100%);
-    border: 1px solid #454545; 
+    border: 1px solid #454545;
     border-radius: 5px;
     padding: 0;
     margin: 0;
     list-style: none;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 1000;
-}
-
-nav ul li .dropdown li {
+  }
+  
+  nav ul li .dropdown li {
     width: 200px;
-}
-
-nav ul li .dropdown li a {
+  }
+  
+  nav ul li .dropdown li a {
     padding: 10px 10px;
     color: var(--color-white);
-}
-
-nav ul li .dropdown li a:hover {
+  }
+  
+  nav ul li .dropdown li a:hover {
     background-color: #575757;
     border-radius: 5px;
-}
-
-nav ul li:hover .dropdown {
+  }
+  
+  nav ul li:hover .dropdown {
     display: block;
-}
-
-.intro {
+  }
+  
+  .intro {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    padding-top: 60px; /* Para compensar el navbar fijo */
+    padding-top: 60px;
+    /* Para compensar el navbar fijo */
     color: var(--color-white);
-}
-
-.intro-text {
-    max-width: 45%;
-    padding: 20px;
-}
-
-.intro-text h1 {
+  }
+  
+  .intro-text h1 {
     font-size: 3em;
     font-family: "arame";
     margin-bottom: 20px;
-}
-
-.intro-text p {
+    overflow: hidden; /* Para asegurar que el texto no se desborde */
+    white-space: nowrap; /* Evita el salto de línea */
+    animation: typing 3s steps(35, end), blink-caret 0.75s step-end infinite; /* Animación de tipeo y parpadeo */
+  
+    /* Estilo adicional para el cursor */
+    border-right: 4px solid var(--color-white); /* Efecto cursor */
+    padding: 1px;
+  }
+  
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: var(--color-white) }
+  }
+  
+  
+  
+  .intro-text p {
     font-size: 1.2em;
     font-family: "matter-medium";
-}
-
-.buttons {
+  }
+  
+  .buttons {
     margin-top: 20px;
-}
-
-.buttons .btn {
+  }
+  
+  .buttons .btn {
     background-color: var(--color-main);
     color: var(--color-white);
     padding: 10px 20px;
@@ -149,13 +166,14 @@ nav ul li:hover .dropdown {
     border-radius: 5px;
     margin-right: 10px;
     transition: background-color 0.3s;
-}
-
-.buttons .btn:hover {
+  }
+  
+  .buttons .btn:hover {
     background-color: var(--color-grey);
-}
-
-.intro-image img {
+  }
+  
+  .intro-image img {
     max-width: 100%;
     border-radius: 10px;
-}
+    margin-left: 5%;
+  }
