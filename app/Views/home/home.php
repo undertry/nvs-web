@@ -51,6 +51,70 @@
             <img src="<?php echo base_url('complements/styles/images/kali.jpg'); ?>" alt="Kali Linux Interface">
         </div>
     </div>
+
+
+     <!-- Software Section -->
+     <section id="features">
+        <div class="section-header">
+            <h2>Software</h2>
+        </div>
+        <div class="section-content">
+            <div class="text-image-block" id="what-is">
+                <div class="text">
+                    <h3>What is it?</h3>
+                    <p>Description of what the software is about...</p>
+                </div>
+                <div class="image">
+                    <img src="<?php echo base_url('complements/styles/images/kali.jpg'); ?>" alt="Description Image">
+                </div>
+            </div>
+            <div class="text-image-block" id="who-for">
+                <div class="image">
+                    <img src="path/to/your/image2.jpg" alt="Description Image">
+                </div>
+                <div class="text">
+                    <h3>Who is it for?</h3>
+                    <p>Description of who the software is for...</p>
+                </div>
+            </div>
+            <div class="text-image-block" id="origin">
+                <div class="text">
+                    <h3>How did it start?</h3>
+                    <p>Description of how the software started...</p>
+                </div>
+                <div class="image">
+                    <img src="path/to/your/image3.jpg" alt="Description Image">
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <!-- About Us Section -->
+    <section id="about">
+        <div class="section-header">
+            <h2>About Us</h2>
+        </div>
+        <div class="section-content">
+            <div class="text-image-block" id="creators">
+                <div class="text">
+                    <h3>The Creators</h3>
+                    <p>Details about the creators...</p>
+                </div>
+                <div class="image">
+                    <img src="path/to/your/profile-image.jpg" alt="Profile Image">
+                </div>
+            </div>
+            <div class="text-image-block" id="purpose">
+                <div class="image">
+                    <img src="path/to/your/image4.jpg" alt="Description Image">
+                </div>
+                <div class="text">
+                    <h3>Why did we make it?</h3>
+                    <p>Explanation of why the project was made...</p>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>
