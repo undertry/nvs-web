@@ -1,5 +1,16 @@
 <?= $this->include('common/home/start.php'); ?>
 <title>NVS</title>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const heading = document.querySelector('.intro-text h1');
+        heading.addEventListener('animationend', function() {
+            if (event.animationName === 'typing') {
+                heading.classList.add('typing-finished');
+            }
+        });
+    });
+</script>
+
 </head>
 
 <body>
@@ -28,32 +39,33 @@
                         <li><a href="<?= base_url('logout'); ?>">Log Out</a></li>
 
                     <?php else : ?>
-                        <li><a href="#menu">Menu</a>
-                            <ul class="dropdown">
-                                <li><a href="#console">Console</a></li>
-                                <li><a href="<?= base_url('login'); ?>">Log In</a></li>
-                            <?php endif; ?>
 
-                            </ul>
-                        </li>
+                        <li><a href="<?= base_url('login'); ?>">Log In</a></li>
+                    <?php endif; ?>
+
                     </ul>
+                </li>
+        </ul>
     </nav>
-    <div class="intro">
-        <div class="intro-text">
-            <h1>Network Vulnerability Scan</h1>
-            <p>This project focuses on analyzing WiFi network vulnerabilities among other aspects...</p>
-            <div class="buttons">
-                <a href="#" class="btn">More Information</a>
-                <a href="#" class="btn">View Repository</a>
+
+
+    <section class="home">
+        <div class="intro">
+            <div class="intro-text">
+                <h1>Network Vulnerability Scan</h1>
+                <p>This project focuses on analyzing WiFi network vulnerabilities among other aspects...</p>
+                <div class="buttons">
+                    <a href="#" class="btn">More Information</a>
+                    <a href="#" class="btn">View Repository</a>
+                </div>
             </div>
+
         </div>
-        <div class="intro-image">
-            <img src="<?php echo base_url('complements/styles/images/kali.png'); ?>" alt="Kali Linux Interface">
+        <div class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
         </div>
-    </div>
-    <div class="scroll-down">
-        <i class="fas fa-chevron-down"></i>
-    </div>
+    </section>
+
 
 
     <!-- Software Section -->
@@ -118,6 +130,7 @@
             </div>
         </div>
     </section>
+
 </body>
 
 </html>
