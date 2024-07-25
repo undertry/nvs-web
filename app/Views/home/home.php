@@ -77,28 +77,34 @@
             <div class="text-image-block" id="what-is">
                 <div class="text">
                     <h3>What is it?</h3>
-                    <p>Description of what the software is about...</p>
+                    <p>It is a software designed to analyze available WiFi networks. Upon selecting a specific network, the software can perform the following functions:</p>
+                    <ul>
+          <li>Scan the network to detect connected devices.</li>
+          <li>Identify the operating system of each device.</li>
+          <li>Assess the vulnerabilities of connected devices, if possible.</li>
+          <li>Use a Raspberry Pi for data collection.</li>
+        </ul>
                 </div>
                 <div class="image">
-                    <img src="<?php echo base_url('complements/styles/images/kali.jpg'); ?>" alt="Description Image">
+                    <img src="<?php echo base_url('complements/styles/images/3.jpg'); ?>" alt="Description Image">
                 </div>
             </div>
-            <div class="text-image-block" id="who-for">
+            <div class="text-image-block who-for" id="who-for">
                 <div class="image">
-                    <img src="path/to/your/image2.jpg" alt="Description Image">
+                    <img src="<?php echo base_url('complements/styles/images/lock.jpg'); ?>" alt="Description Image">
                 </div>
                 <div class="text">
                     <h3>Who is it for?</h3>
-                    <p>Description of who the software is for...</p>
+                    <p>It is for individuals who are passionate about cybersecurity and want to add an extra layer of security to their networks by performing daily diagnostics to enhance the safety of their WiFi.</p>
                 </div>
             </div>
             <div class="text-image-block" id="origin">
                 <div class="text">
                     <h3>How did it start?</h3>
-                    <p>Description of how the software started...</p>
+                    <p>It began as a mere idea, but after giving it some thought, we realized it would be a great project for the thesis we needed to present. We conducted research until we could solidify this fantastic concept. The more we studied the topic, the more passionate we became about developing this project for the community.</p>
                 </div>
                 <div class="image">
-                    <img src="path/to/your/image3.jpg" alt="Description Image">
+                    <img src="<?php echo base_url('complements/styles/images/show.jpg'); ?>" alt="Description Image">
                 </div>
             </div>
         </div>
