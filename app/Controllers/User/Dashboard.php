@@ -87,4 +87,24 @@ class Dashboard extends BaseController
         // Redirigir de nuevo a la página de inicio de sesión si el usuario no se encuentra
         return redirect()->to('login');
     }
+
+    public function verification()
+    {
+        $session = session();
+        $email = $session->get('user')->email;
+
+        $userModel = new UserModel();
+        $user = $userModel->getUserByEmail($email);
+
+        if ($user) {
+            $verificationstatus = $user->verification == 1 ? 0 : 1;  // Cambia de 1 a 0 o de 0 a 1
+            $userModel->verification($email, $verificationstatus);
+
+            // Actualizar la sesión con el nuevo estado
+            $session->set('user', $userModel->getUserByEmail($email));
+        }
+
+        return redirect()->back();
+    }
+
 }

@@ -13,7 +13,7 @@ $routes->get('/', 'Home::index');
 $routes->get('login', 'User\Login::index');
 $routes->POST('login', 'User\Login::do_login');
 $routes->get('logout', 'User\Login::logout');
-
+$routes->get('2stepverify', 'User\Login::verify');
 // Seccion controlador User/Register
 $routes->get('register', 'User\Register::index');
 $routes->POST('register', 'User\Register::do_register');
@@ -22,6 +22,7 @@ $routes->POST('register', 'User\Register::do_register');
 //solo para usuarios en sesion
 $routes->get('change_password', 'User\Dashboard::change_password');
 $routes->POST('password_change', 'User\Dashboard::password_change');
+$routes->get('verification', 'User\Dashboard::verification');
 
 //gets para las vistas de se olvido la contraseña y post para el envio de datos al controlador
 $routes->get('forgot_password', 'User\Change_Password::forgot_password');

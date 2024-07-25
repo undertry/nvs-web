@@ -23,15 +23,15 @@
                 <li><a href="#menu"><?= session('user')->name; ?></a>
 
                     <ul class="dropdown">
-                        <li><a href="#console">Console</a></li>
                         <li><a href="<?= base_url('dashboard'); ?>">Dashboard</a></li>
                         <li><a href="<?= base_url('logout'); ?>">Log Out</a></li>
 
                     <?php else : ?>
                         <li><a href="#menu">Menu</a>
                             <ul class="dropdown">
-                                <li><a href="#console">Console</a></li>
                                 <li><a href="<?= base_url('login'); ?>">Log In</a></li>
+                                <li><a href="<?= base_url('register'); ?>">Register</a></li>
+
                             <?php endif; ?>
 
                             </ul>

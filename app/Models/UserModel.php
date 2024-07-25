@@ -14,7 +14,7 @@ class UserModel extends Model
     protected $returnType = "object";
     // protected $useSoftDeletes = true;
 
-    protected $allowedFields = ["name", "email", "password", "created_at"];
+    protected $allowedFields = ["name", "email", "password", "created_at", "verification"];
 
     protected $useTimestamps = false;
     protected $createdField = "created_at";
@@ -36,7 +36,7 @@ class UserModel extends Model
     // Consulta para obtener datos de un Usuario por su email, los campos id_user, name, email, password, created_at
     public function getUserByEmail($email)
     {
-        return $this->select("id_user, name, email, password, created_at")
+        return $this->select("id_user, name, email, password, created_at,verification")
             ->where("email", $email)
             ->first();
     }
@@ -51,6 +51,9 @@ class UserModel extends Model
                 ->first();
     }
 
-
+    public function verification($email,$verificationstatus)
+    {
+        $this->where('email', $email)->set(['verification' => $verificationstatus])->update();
+    }
     
 }
