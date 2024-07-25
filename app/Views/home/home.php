@@ -15,7 +15,7 @@
 
 <body>
     <nav>
-        <div class="logo">NVS</div>
+        <div class="logo"><a href="#home">NVS</a></div>
         <ul>
             <li><a href="#features">Software</a>
                 <ul class="dropdown">
@@ -49,7 +49,7 @@
     </nav>
 
 
-    <section class="home">
+    <section class="home" id="home">
         <div class="intro">
             <div class="intro-text">
                 <h1>Network Vulnerability Scan</h1>
@@ -119,11 +119,9 @@
             <div class="text-image-block" id="creators">
                 <div class="text">
                     <h3>The Creators</h3>
-                    <p>Details about the creators...</p>
+                    <div id="profiles"></div>
                 </div>
-                <div class="image">
-                    <img src="path/to/your/profile-image.jpg" alt="Profile Image">
-                </div>
+               
             </div>
             <div class="text-image-block" id="purpose">
                 <div class="image">
@@ -136,6 +134,36 @@
             </div>
         </div>
     </section>
+
+    <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const usernames = ["tiagocomba", "EzequielMonteverde"]; // Reemplaza con los nombres de usuario de GitHub
+    const profilesContainer = document.getElementById("profiles");
+
+    usernames.forEach(username => {
+      fetch(`https://api.github.com/users/${username}`)
+        .then(response => response.json())
+        .then(data => {
+          const profileDiv = document.createElement("div");
+          profileDiv.classList.add("profile");
+
+          const img = document.createElement("img");
+          img.src = data.avatar_url;
+          img.alt = `${data.login}'s Profile Image`;
+
+          const link = document.createElement("a");
+          link.href = data.html_url;
+          link.textContent = data.login;
+
+          profileDiv.appendChild(img);
+          profileDiv.appendChild(link);
+          profilesContainer.appendChild(profileDiv);
+        })
+        .catch(error => console.error("Error fetching GitHub profile:", error));
+    });
+  });
+</script>
+
 
 </body>
 
