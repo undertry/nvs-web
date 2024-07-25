@@ -48,13 +48,16 @@
             </div>
         </div>
         <div class="intro-image">
-            <img src="<?php echo base_url('complements/styles/images/kali.jpg'); ?>" alt="Kali Linux Interface">
+            <img src="<?php echo base_url('complements/styles/images/kali.png'); ?>" alt="Kali Linux Interface">
         </div>
+    </div>
+    <div class="scroll-down">
+        <i class="fas fa-chevron-down"></i>
     </div>
 
 
-     <!-- Software Section -->
-     <section id="features">
+    <!-- Software Section -->
+    <section id="features">
         <div class="section-header">
             <h2>Software</h2>
         </div>
