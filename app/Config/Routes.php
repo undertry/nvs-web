@@ -16,6 +16,8 @@ $routes->get('logout', 'User\Login::logout');
 $routes->get('2stepverify', 'User\Login::verify');
 //envio de codigo mediante email para la verificaicon
 $routes->get('verificationcode', 'User\Login::sendemailverification');
+//confirmacion de codigo de verificaicon
+$routes->POST('confirmcode', 'User\Login::verificationconfirm');
 
 // Seccion controlador User/Register
 $routes->get('register', 'User\Register::index');

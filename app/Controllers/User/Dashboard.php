@@ -25,9 +25,9 @@ class Dashboard extends BaseController
         }
     }
 
-
     public function change_password()
-    { {
+    { 
+        {
             // Verificar si el usuario está autenticado y tiene un ID de usuario válido
             $user = session('user');
             if (!$user) {

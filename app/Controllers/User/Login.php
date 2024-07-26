@@ -134,25 +134,27 @@ class Login extends BaseController
         {
             $userModel = new UserModel();
             $codigoModel = new CodigoModel();
-    
+
+
             $codigo = $this->request->getPost('code');
-
-
-            // REALIZAR VERIFICACION QUE EL CODIGO PERTENESCA AL USUARIO EN SESION
-
-
-            // Obtener el id_user asociado al código de recuperación
-            $user = $codigoModel->getUserByCodigo($codigo);
-            if (!$user) {
-                $this->session->setFlashdata('error', 'Código de verificación inválido.');
-                return redirect()->to('2stepverifiy');
-            }
+            $userse= session('user'); 
+            $emailU= $userse->email;
+            $user = $userModel->GetIdByemail($emailU);   
             $id_user = $user->id_user;
 
+            // REALIZAR VERIFICACION QUE EL CODIGO PERTENESCA AL USUARIO EN SESION
+            // Obtener el id_user asociado al código de recuperación
+            $userco = $codigoModel->getUserByCodigo($codigo);   
+            $id_userco= $userco->id_user;
+            if ($id_userco !== $id_user) {  
+                $this->session->setFlashdata('error', 'Código de verificación inválido.');
+                return redirect()->to('2stepverify');
+            }else{
             // Limpiar el código de recuperación después de cambiar la contraseña
             $codigoModel->deleteByCodigo($codigo);
-    
+            session('user')->id_user = $id_user;
             $this->session->setFlashdata('success', 'Verificación exitosa.');
             return redirect()->to('dashboard');
+             }
         }
 }
