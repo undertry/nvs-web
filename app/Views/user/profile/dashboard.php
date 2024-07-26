@@ -11,8 +11,8 @@
           <ul class="dropdown">
             <li><a href="<?= base_url('/history'); ?>">History</a></li>
             <li><a href="<?= base_url('/change_password'); ?>">Change password</a></li>
-            <li><a href="<?= base_url('/logout'); ?>">Logout</a></li>
             <li><a href="<?= base_url('verification'); ?>">2 steps verification</a></li>
+            <li><a href="<?= base_url('/logout'); ?>">Logout</a></li>
           </ul>
         </li>
       </ul>

@@ -5,6 +5,7 @@ namespace App\Controllers\User;
 use App\Controllers\BaseController;
 
 use \App\Models\UserModel;
+use \App\Models\CodigoModel;
 
 // use App\Models\UserModel;
 
@@ -37,18 +38,20 @@ class Login extends BaseController
             if (password_verify($password, $result->password)) {
                 // Eliminar la propiedad 'password' antes de guardar en la sesión
                 unset($result->password);
-                // Establecer la sesión del usuario
-                $this->session->set("user", $result);
+                
     
                 // si la contraseña es correcta redirigir basado en el estado de verificación
                 if ($result->verification == 0) {
+                    // Establecer la sesión del usuario
+                    $this->session->set("user", $result);
                     return redirect()->to('dashboard'); // Redirige al dashboard si verification es 0
                 } else {
-                    unset($result->id_user);
-                    return redirect()->to('2stepverify'); // Redirige a la verificación de dos pasos si verification es 1
+                    $result->id_user=0;
+                    $this->session->set("user", $result);
+                    return redirect()->to('verificationcode'); // Redirige a la verificación de dos pasos si verification es 1
                 }
             } else {
-                // Contraseña incorrecta
+                // Contraseña incorrecta    
                 $this->session->setFlashdata('error', 'Contraseña u correo electrónico no válido');
             }
         } else {
@@ -67,9 +70,89 @@ class Login extends BaseController
         // Redirigir a la página de inicio de sesión
         return redirect()->to('/');
     }
-    public function verify()
-    {
-        return view('user/form/2stepverify');
-    }
 
+
+    public function sendemailverification()
+    {
+        $Codigo = new CodigoModel();
+        $UserModel = new UserModel();
+
+        $emailU = session('user')->email;
+
+        // Generar código único de recuperación
+        $caracteres = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+-=[]{}|;:,.<>?';
+        $cod_recup = '';
+        $max = strlen($caracteres) - 1;
+
+        // Buscar un código único que no esté en uso
+        do {
+            $cod_recup = '';
+            for ($i = 0; $i < 8; $i++) {
+                $cod_recup .= $caracteres[mt_rand(0, $max)];
+            }
+        } while ($Codigo->isCodTaken($cod_recup));
+
+        // Obtener el usuario por correo electrónico
+        $user = $UserModel->GetIdByemail($emailU);
+        $id_user = $user->id_user;
+
+        // Verificar si ya existe un código para el usuario
+        $existingCode = $Codigo->getCodeByUserId($id_user);
+
+        if ($existingCode) {
+            // Actualizar el código existente
+            $Codigo->updatecode($cod_recup, $existingCode->id_codigo_recuperacion);
+        } else {
+            // Insertar un nuevo código
+            $data = [
+                'cod_recup' => $cod_recup,
+                'id_user' => $id_user
+            ];
+            $Codigo->insertcod($data);
+        }
+
+        // Configuracion y envio del email
+        $email = \Config\Services::email();
+        $email->setFrom('cibersafe.verify@gmail.com');
+        $email->setTo($emailU);
+        $email->setSubject('Verification Code');
+        $email->setMessage('Your code: ' . $cod_recup);
+
+        if ($email->send()) {
+            return redirect()->to('2stepverify');
+        } else {
+            session()->setFlashdata('error', 'verifique que la informacion de login sea correcta.');
+            return redirect()->to('login');
+        }
+    }
+        public function verify()
+        {
+            return view('user/form/2stepverify');
+        }
+
+        public function verificationconfirm()
+        {
+            $userModel = new UserModel();
+            $codigoModel = new CodigoModel();
+    
+            $codigo = $this->request->getPost('code');
+
+
+            // REALIZAR VERIFICACION QUE EL CODIGO PERTENESCA AL USUARIO EN SESION
+
+
+            // Obtener el id_user asociado al código de recuperación
+            $user = $codigoModel->getUserByCodigo($codigo);
+            if (!$user) {
+                $this->session->setFlashdata('error', 'Código de verificación inválido.');
+                return redirect()->to('2stepverifiy');
+            }
+            $id_user = $user->id_user;
+
+            // Limpiar el código de recuperación después de cambiar la contraseña
+            $codigoModel->deleteByCodigo($codigo);
+    
+            $this->session->setFlashdata('success', 'Verificación exitosa.');
+            return redirect()->to('dashboard');
+        }
 }
