@@ -145,8 +145,14 @@ class Login extends BaseController
             // REALIZAR VERIFICACION QUE EL CODIGO PERTENESCA AL USUARIO EN SESION
             // Obtener el id_user asociado al código de recuperación
             $userco = $codigoModel->getUserByCodigo($codigo);   
+              if (!$userco) {  
+                //cuando el codigo no se encuentra
+                $this->session->setFlashdata('error', 'Código de verificación inválido.');
+                return redirect()->to('2stepverify');
+            }
             $id_userco= $userco->id_user;
             if ($id_userco !== $id_user) {  
+                //si no coincide el codigo con el usuario
                 $this->session->setFlashdata('error', 'Código de verificación inválido.');
                 return redirect()->to('2stepverify');
             }else{
