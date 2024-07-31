@@ -55,8 +55,8 @@
                 <h1>Network Vulnerability Scan</h1>
                 <p>This project focuses on analyzing WiFi network vulnerabilities among other aspects...</p>
                 <div class="buttons">
-                    <a href="#" class="btn">More Information</a>
-                    <a href="#" class="btn">View Repository</a>
+                    <a href="https://github.com/tiagocomba/NVS/wiki" target="_blank" class="btn">More Information</a>
+                    <a href="https://github.com/tiagocomba/NVS/" target="_blank" class="btn">View Repository</a>
                 </div>
             </div>
 
@@ -71,19 +71,20 @@
     <!-- Software Section -->
     <section id="features">
         <div class="section-header">
-            <h2>Software</h2>
+            <h2>SOFTWARE</h2>
         </div>
         <div class="section-content">
             <div class="text-image-block" id="what-is">
                 <div class="text">
                     <h3>What is it?</h3>
+                    <h4>Software, Vulnerability, scan, networks</h4>
                     <p>It is a software designed to analyze available WiFi networks. Upon selecting a specific network, the software can perform the following functions:</p>
                     <ul>
-          <li>Scan the network to detect connected devices.</li>
-          <li>Identify the operating system of each device.</li>
-          <li>Assess the vulnerabilities of connected devices, if possible.</li>
-          <li>Use a Raspberry Pi for data collection.</li>
-        </ul>
+                        <li>Scan the network to detect <span>connected devices.</span></li>
+                        <li>Identify the <span>operating system</span> of each device.</li>
+                        <li>Assess the <span>vulnerabilities</span> of connected devices, if possible.</li>
+                        <li>Use a <span>Raspberry Pi</span> for data collection.</li>
+                    </ul>
                 </div>
                 <div class="image">
                     <img src="<?php echo base_url('complements/styles/images/3.jpg'); ?>" alt="Description Image">
@@ -113,7 +114,7 @@
     <!-- About Us Section -->
     <section id="about">
         <div class="section-header">
-            <h2>About Us</h2>
+            <h2>ABOUT US</h2>
         </div>
         <div class="section-content">
             <div class="text-image-block" id="creators">
@@ -121,7 +122,7 @@
                     <h3>The Creators</h3>
                     <div id="profiles"></div>
                 </div>
-               
+
             </div>
             <div class="text-image-block" id="purpose">
                 <div class="image">
@@ -136,33 +137,65 @@
     </section>
 
     <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const usernames = ["tiagocomba", "EzequielMonteverde"]; // Reemplaza con los nombres de usuario de GitHub
-    const profilesContainer = document.getElementById("profiles");
+        document.addEventListener("DOMContentLoaded", function() {
+            const usernames = ["tiagocomba", "EzequielMonteverde"]; // Reemplaza con los nombres de usuario de GitHub
+            const profilesContainer = document.getElementById("profiles");
 
-    usernames.forEach(username => {
-      fetch(`https://api.github.com/users/${username}`)
-        .then(response => response.json())
-        .then(data => {
-          const profileDiv = document.createElement("div");
-          profileDiv.classList.add("profile");
+            usernames.forEach(username => {
+                fetch(`https://api.github.com/users/${username}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        const profileDiv = document.createElement("div");
+                        profileDiv.classList.add("profile");
 
-          const img = document.createElement("img");
-          img.src = data.avatar_url;
-          img.alt = `${data.login}'s Profile Image`;
+                        const img = document.createElement("img");
+                        img.src = data.avatar_url;
+                        img.alt = `${data.login}'s Profile Image`;
 
-          const link = document.createElement("a");
-          link.href = data.html_url;
-          link.textContent = data.login;
+                        const link = document.createElement("a");
+                        link.href = data.html_url;
+                        link.textContent = data.login;
 
-          profileDiv.appendChild(img);
-          profileDiv.appendChild(link);
-          profilesContainer.appendChild(profileDiv);
-        })
-        .catch(error => console.error("Error fetching GitHub profile:", error));
-    });
-  });
-</script>
+                        profileDiv.appendChild(img);
+                        profileDiv.appendChild(link);
+                        profilesContainer.appendChild(profileDiv);
+                    })
+                    .catch(error => console.error("Error fetching GitHub profile:", error));
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const dropdowns = document.querySelectorAll("nav ul li");
+
+            dropdowns.forEach(dropdown => {
+                dropdown.addEventListener("mouseenter", function() {
+                    const menu = this.querySelector(".dropdown");
+                    if (menu) {
+                        menu.style.display = "block";
+                        setTimeout(() => {
+                            menu.style.opacity = "1";
+                            menu.style.visibility = "visible";
+                            menu.style.transform = "translateY(0)";
+                        }, 100); // Añade un pequeño retraso antes de iniciar la animación
+                    }
+                });
+
+                dropdown.addEventListener("mouseleave", function() {
+                    const menu = this.querySelector(".dropdown");
+                    if (menu) {
+                        menu.style.opacity = "0";
+                        menu.style.visibility = "hidden";
+                        menu.style.transform = "translateY(10px)";
+                        setTimeout(() => {
+                            menu.style.display = "none";
+                        }, 500); // Asegúrate de que coincida con la duración de la transición en el CSS
+                    }
+                });
+            });
+        });
+    </script>
 
 
 </body>
