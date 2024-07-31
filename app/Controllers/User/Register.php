@@ -61,6 +61,14 @@ class Register extends BaseController
         // Registrar usuario
         if ($data !== null) {
             $userModel->register($data);
+            $email = $data->email;
+            $name = $data->name;
+            // Configuracion y envio del email
+             $emailc = \Config\Services::email();
+             $emailc->setFrom('cibersafe.verify@gmail.com');
+             $emailc->setTo($email);
+             $emailc->setSubject('Registro Exitoso');
+             $emailc->setMessage('Muchas Gracias Por Regristrarte en Network Vulnerability Scan'. $name);
             $this->session->setFlashdata('success', 'Usuario registrado exitosamente! Redirigiendo a login...');
             return redirect()->to('login');
         } else {
