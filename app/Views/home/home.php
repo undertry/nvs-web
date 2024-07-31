@@ -87,12 +87,12 @@
                     </ul>
                 </div>
                 <div class="image">
-                    <img src="<?php echo base_url('complements/styles/images/3.jpg'); ?>" alt="Description Image">
+                    <img src="<?php echo base_url('complements/styles/images/prueba.png'); ?>" alt="Description Image">
                 </div>
             </div>
             <div class="text-image-block who-for" id="who-for">
                 <div class="image">
-                    <img src="<?php echo base_url('complements/styles/images/lock.jpg'); ?>" alt="Description Image">
+                    <img src="<?php echo base_url('complements/styles/images/hacker.png'); ?>" alt="Description Image">
                 </div>
                 <div class="text">
                     <h3>Who is it for?</h3>
@@ -105,7 +105,7 @@
                     <p>It began as a mere idea, but after giving it some thought, we realized it would be a great project for the thesis we needed to present. We conducted research until we could solidify this fantastic concept. The more we studied the topic, the more passionate we became about developing this project for the community.</p>
                 </div>
                 <div class="image">
-                    <img src="<?php echo base_url('complements/styles/images/show.jpg'); ?>" alt="Description Image">
+                    <img src="<?php echo base_url('complements/styles/images/kalila.png'); ?>" alt="Description Image">
                 </div>
             </div>
         </div>
