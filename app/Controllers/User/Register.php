@@ -7,8 +7,6 @@ use App\Controllers\BaseController;
 
 use \App\Models\UserModel;
 
-// use App\Models\UserModel;
-
 class Register extends BaseController
 {
     public function index()
@@ -60,15 +58,16 @@ class Register extends BaseController
 
         // Registrar usuario
         if ($data !== null) {
+
+                        // Configuracion y envio del email
+                        $emailc = \Config\Services::email();
+                        $emailc->setFrom('cibersafe.verify@gmail.com');
+                        $emailc->setTo($email);
+                        $emailc->setSubject('Registro Exitoso');
+                        $emailc->setMessage('Muchas Gracias '. $name .' Por Regristrarte en Network Vulnerability Scan');
+                        $emailc->send();
+
             $userModel->register($data);
-            $email = $data->email;
-            $name = $data->name;
-            // Configuracion y envio del email
-             $emailc = \Config\Services::email();
-             $emailc->setFrom('cibersafe.verify@gmail.com');
-             $emailc->setTo($email);
-             $emailc->setSubject('Registro Exitoso');
-             $emailc->setMessage('Muchas Gracias Por Regristrarte en Network Vulnerability Scan'. $name);
             $this->session->setFlashdata('success', 'Usuario registrado exitosamente! Redirigiendo a login...');
             return redirect()->to('login');
         } else {
