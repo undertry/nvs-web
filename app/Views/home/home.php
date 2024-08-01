@@ -139,17 +139,12 @@
                 <div class="footer-column">
                     <h4>Software</h4>
                     <ul>
-                        <li><a href="#">Modern Terminal</a></li>
-                        <li><a href="#">Warp Drive</a></li>
-                        <li><a href="#">Warp AI</a></li>
-                        <li><a href="#">Agent Mode</a></li>
+                        <li><a href="#">Scan</a></li>
+                        <li><a href="#">History</a></li>
+                        <li><a href="#">Dashboard</a></li>
                         <li><a href="#">Security</a></li>
                         <li><a href="#">All Features</a></li>
                         <li><a href="#">Changelog</a></li>
-                        <li><a href="#">Mac Terminal</a></li>
-                        <li><a href="#">Mac Terminal Themes</a></li>
-                        <li><a href="#">Linux Terminal</a></li>
-                        <li><a href="#">Windows Terminal</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -176,12 +171,10 @@
             <div class="footer-bottom">
                 <p>ALL RIGHTS RESERVED © 2024</p>
                 <div class="social-icons">
-                    <a href="#"><i class="fab fa-twitter"></i></a>
                     <a href="#"><i class="fab fa-youtube"></i></a>
-                    <a href="#"><i class="fab fa-tiktok"></i></a>
                     <a href="#"><i class="fab fa-discord"></i></a>
                     <a href="#"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fas fa-rss"></i></a>
+
                 </div>
             </div>
         </div>
