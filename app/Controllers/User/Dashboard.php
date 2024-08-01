@@ -99,9 +99,10 @@ class Dashboard extends BaseController
         if ($user) {
             $verificationstatus = $user->verification == 1 ? 0 : 1;  // Cambia de 1 a 0 o de 0 a 1
             $userModel->verification($email, $verificationstatus);
-
-            // Actualizar la sesión con el nuevo estado
-            $session->set('user', $userModel->getUserByEmail($email));
+            $user->verification = $verificationstatus;
+            unset($user->password);
+            // Actualizar la sesión con el nuevo estado de verificacion
+            $session->set('user',$user);
         }
 
         return redirect()->back();

@@ -11,7 +11,6 @@
           <ul class="dropdown">
             <li><a href="<?= base_url('/history'); ?>">History</a></li>
             <li><a href="<?= base_url('/change_password'); ?>">Change password</a></li>
-            <li><a href="<?= base_url('verification'); ?>">2 steps verification</a></li>
             <li><a href="<?= base_url('/logout'); ?>">Logout</a></li>
           </ul>
         </li>
@@ -23,7 +22,10 @@
         <p><strong>Name:</strong> <?= session('user')->name; ?></p>
         <p><strong>Email:</strong> <?= session('user')->email; ?></p>
         <p><strong>Account created at:</strong> <?= session('user')->created_at; ?></p>
-        <p><strong>verification:</strong> <?= session('user')->verification == 1 ? 'Enabled' : 'Disabled'; ?></p>
+        <p><strong>verification:</strong> <?= session('user')->verification == 1 ? 'Enabled' : 'Disabled'; ?></p> 
+        <button>
+          <a href="<?= base_url('verification'); ?>">2 steps verification</a>
+        </button>
       </div>
     </div>
   </body> 
