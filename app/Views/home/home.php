@@ -26,21 +26,20 @@
             </li>
             <li><a href="#about">About Us</a>
                 <ul class="dropdown">
-                    <li><a href="#creators">The Creators</a></li>
-                    <li><a href="#purpose">Why did we make it?</a></li>
+                    <li><a href="#creators">Developers</a></li>
                 </ul>
             </li>
             <?php if (session('user') && session('user')->name) : ?>
                 <li><a href="#menu"><?= session('user')->name; ?></a>
 
                     <ul class="dropdown">
-                        <li><a href="#console">Console</a></li>
                         <li><a href="<?= base_url('dashboard'); ?>">Dashboard</a></li>
                         <li><a href="<?= base_url('logout'); ?>">Log Out</a></li>
 
                     <?php else : ?>
 
                         <li><a href="<?= base_url('login'); ?>">Log In</a></li>
+                        <li><a href="<?= base_url('register'); ?>">Sign Up</a></li>
                     <?php endif; ?>
 
                     </ul>
@@ -121,20 +120,74 @@
         <div class="section-content">
             <div class="text-image-block" id="creators">
                 <div class="text">
-                    <h3>The Creators</h3>
+                    <h4>Developers</h4>
                     <div id="profiles"></div>
                 </div>
 
             </div>
-            <div class="text-image-block" id="purpose">
+        </div>
+    </section>
 
-                <div class="text">
-                    <h3>Why did we make it?</h3>
-                    <p>We did this due to the significant insecurity present in WiFi networks, as well as to provide extra protection for our WiFi networks and to be aware if they are being compromised. Additionally, it was a great challenge for our thesis since we had zero knowledge of how to do it.</p>
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="<?php echo base_url('complements/styles/images/NVS.png'); ?>" alt="Logo">
+            </div>
+
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h4>Software</h4>
+                    <ul>
+                        <li><a href="#">Modern Terminal</a></li>
+                        <li><a href="#">Warp Drive</a></li>
+                        <li><a href="#">Warp AI</a></li>
+                        <li><a href="#">Agent Mode</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">All Features</a></li>
+                        <li><a href="#">Changelog</a></li>
+                        <li><a href="#">Mac Terminal</a></li>
+                        <li><a href="#">Mac Terminal Themes</a></li>
+                        <li><a href="#">Linux Terminal</a></li>
+                        <li><a href="#">Windows Terminal</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="#">User Manual</a></li>
+                        <li><a href="#">Download</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">How We Work</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>ALL RIGHTS RESERVED © 2024</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fas fa-rss"></i></a>
                 </div>
             </div>
         </div>
-    </section>
+    </footer>
+
+
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {

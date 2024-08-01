@@ -1,6 +1,7 @@
 :root {
     --color-main: #d60b0b;
     --color-black: #151414;
+    --color-dark: #0c0b0b;
     --color-white: #f3f2f2;
     --color-grey: #333;
   }
@@ -371,9 +372,6 @@ hr {
 }
 
 
-#about {
-  background: radial-gradient(circle, #d60b0b 1%, #151414  40%);
-}
 
 #profiles {
   display: flex;
@@ -391,12 +389,24 @@ hr {
   border-radius: 5px;
   padding: 15px;
   max-width: 300px;
+  transition: transform 1s, width 1s, height 1s;
+}
+
+.profile:hover {
+  transform: rotateY(360deg) scale(1.2);
+  z-index: 10;
+  position: relative;
 }
 
 .profile img {
   border-radius: 50%;
   width: 100px;
   height: 100px;
+  transition: transform 0.5s;
+}
+
+.profile:hover img {
+  transform: scale(1.2);
 }
 
 .profile a {
@@ -438,7 +448,110 @@ hr {
 }
 
 #purpose {
-  text-align: center;
+  text-align: left;
   display: flex;
-  width: 50%;
+  width: 30%;
+  justify-content: left;
+}
+
+footer {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: 20px 0;
+  font-family: "matter-regular";
+  border-top: 1px solid var(--color-grey);
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.footer-logo {
+  margin-right: auto;
+}
+
+.footer-logo img {
+  max-width: 50px;
+  margin-bottom: 20px;
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.footer-column {
+  padding: 0 10px;
+}
+
+.footer-column h4 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-family: "matter-medium";
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  color: var(--color-white);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: var(--color-main);
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-top: 1px solid var(--color-grey);
+  padding-top: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-family: "arame";
+}
+
+.social-icons {
+  text-align: right;
+}
+
+.social-icons a {
+  color: var(--color-white);
+  text-decoration: none;
+  margin: 0 5px;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: var(--color-main);
 }
