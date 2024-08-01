@@ -96,13 +96,15 @@
                 </div>
                 <div class="text">
                     <h3>Who is it for?</h3>
-                    <p>It is for individuals who are passionate about cybersecurity and want to add an extra layer of security to their networks by performing daily diagnostics to enhance the safety of their WiFi.</p>
+                    <h4>Individuals passionate about cybersecurity</h4>
+                    <p>It is for individuals who are <span>passionate</span> about <span>cybersecurity</span> and want to add an extra layer of <span>security</span> to their networks by performing <span>daily diagnostics</span> to enhance the <span>safety</span> of their WiFi.</p>
                 </div>
             </div>
             <div class="text-image-block" id="origin">
                 <div class="text">
                     <h3>How did it start?</h3>
-                    <p>It began as a mere idea, but after giving it some thought, we realized it would be a great project for the thesis we needed to present. We conducted research until we could solidify this fantastic concept. The more we studied the topic, the more passionate we became about developing this project for the community.</p>
+                    <h4>From an idea to a project</h4>
+                    <p>It began as a <span>mere idea</span>, but after giving it some thought, we realized it would be a <span>great project</span> for the thesis we needed to present. We conducted research until we could <span>solidify this fantastic concept.</span> The more we studied the topic, the more passionate we became about developing <span>this project for the community.</span></p>
                 </div>
                 <div class="image">
                     <img src="<?php echo base_url('complements/styles/images/kalila.png'); ?>" alt="Description Image">
@@ -125,12 +127,10 @@
 
             </div>
             <div class="text-image-block" id="purpose">
-                <div class="image">
-                    <img src="path/to/your/image4.jpg" alt="Description Image">
-                </div>
+
                 <div class="text">
                     <h3>Why did we make it?</h3>
-                    <p>Explanation of why the project was made...</p>
+                    <p>We did this due to the significant insecurity present in WiFi networks, as well as to provide extra protection for our WiFi networks and to be aware if they are being compromised. Additionally, it was a great challenge for our thesis since we had zero knowledge of how to do it.</p>
                 </div>
             </div>
         </div>
@@ -156,8 +156,21 @@
                         link.href = data.html_url;
                         link.textContent = data.login;
 
+                        const description = document.createElement("p");
+                        description.textContent = data.bio ? data.bio : "No bio available";
+
+                        const followers = document.createElement("p");
+                        followers.classList.add("followers");
+                        followers.textContent = `Followers: ${data.followers}`;
+
+                        const achievements = document.createElement("div");
+                        achievements.classList.add("achievements");
+
                         profileDiv.appendChild(img);
                         profileDiv.appendChild(link);
+                        profileDiv.appendChild(description);
+                        profileDiv.appendChild(followers);
+                        profileDiv.appendChild(achievements);
                         profilesContainer.appendChild(profileDiv);
                     })
                     .catch(error => console.error("Error fetching GitHub profile:", error));

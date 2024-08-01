@@ -70,6 +70,7 @@
     backdrop-filter: blur(10px); /* Ajusta el valor de blur según tu preferencia */
     -webkit-backdrop-filter: blur(10px); /* Soporte para navegadores WebKit */
     border-bottom: 1px solid var(--color-grey);
+    z-index: 2000;
   }
   
   nav .logo a {
@@ -329,6 +330,12 @@
   font-family: "matter-regular";
 }
 
+.text p span {
+  color: var(--color-main);
+  font-family: "matter-medium";
+  font-weight: 600;
+}
+
 .text ul {
   font-size: 1em;
   margin-top: 10px;
@@ -363,6 +370,11 @@ hr {
   border: 1px solid var(--color-grey);
 }
 
+
+#about {
+  background: radial-gradient(circle, #d60b0b 1%, #151414  40%);
+}
+
 #profiles {
   display: flex;
   justify-content: center;
@@ -374,6 +386,11 @@ hr {
   flex-direction: column;
   align-items: center;
   margin: 20px;
+  background: linear-gradient(95deg, #333 0%, #151414 100%);
+  border: 1px solid #454545;
+  border-radius: 5px;
+  padding: 15px;
+  max-width: 300px;
 }
 
 .profile img {
@@ -386,12 +403,42 @@ hr {
   margin-top: 10px;
   font-family: "matter-regular";
   font-size: 1em;
+  font-weight: 600;
   text-decoration: none;
   color: var(--color-main);
 }
 
+.profile p {
+  font-family: "matter-regular";
+  font-size: 0.9em;
+  color: var(--color-secondary);
+  margin: 10px 0;
+}
+
+.profile .followers {
+  font-family: "matter-regular";
+  font-size: 0.9em;
+  color: var(--color-secondary);
+  margin: 10px 0;
+}
+
+.profile .achievements {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.profile .achievement {
+  margin: 5px;
+}
 #creators {
   display: flex;
   justify-content: center;
   text-align: center;
+}
+
+#purpose {
+  text-align: center;
+  display: flex;
+  width: 50%;
 }
