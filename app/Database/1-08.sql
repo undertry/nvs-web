@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-08-2024 a las 18:47:41
+-- Tiempo de generación: 26-07-2024 a las 15:34:55
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -55,6 +55,14 @@ CREATE TABLE `codigo` (
   `cod_recup` varchar(45) DEFAULT NULL,
   `id_user` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `codigo`
+--
+
+INSERT INTO `codigo` (`id_codigo_recuperacion`, `cod_recup`, `id_user`) VALUES
+(1, '#@U4LRXw', 7),
+(3, '3|K0QrDV', 6);
 
 -- --------------------------------------------------------
 
@@ -264,7 +272,7 @@ CREATE TABLE `usuarios` (
   `name` varchar(45) DEFAULT NULL,
   `email` varchar(128) DEFAULT NULL,
   `password` varchar(255) DEFAULT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `verification` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -279,11 +287,10 @@ INSERT INTO `usuarios` (`id_user`, `name`, `email`, `password`, `created_at`, `v
 (4, 'Pedro Carranza', 'pedro@gmail.com', '$2y$10$HTDMeI3Ei6SVp5ZSNDey4.B9aPxqd9gbdyWc4i3lGHLYnHLuq9pLW', '2024-06-19 11:58:00', 0),
 (5, 'Marcelo Asevedo', 'marcelo@gmail.com', '$2y$10$rKejczKDIuMkI2spq3IajuKL96MLjYHyXsx/9OE5EC.fO0ceoJj6a', '2024-06-19 11:58:50', 0),
 (6, 'eze', 'eze123@gmail.com', '$2y$10$YkObUX7kkKHXIPyQsqQkHOkmA17IZfGBE1KUHok8G.xMUWugIsFr6', '2024-07-26 11:49:16', 0),
+(7, 'test', 'tiagocomba@alumnos.itr3.edu.ar', '$2y$10$XsUr6y7OmBMB8o7TvhKbdOh4/mREuPNfG39t.QNybcUAKYHWn1mgO', '2024-06-27 10:54:14', 0),
 (8, 'Marcelo', 'marceloasevedo@itr3.edu.ar', '$2y$10$PPs/cXYqLb8KtV.g.C9ZFuZ1ex4jEXWb8Lv.i6ERwnju3WJyxgzBu', '2024-06-27 11:57:11', 0),
 (9, 'Laureano', 'laureanopeirone@alumnos.itr3.edu.ar', '$2y$10$M4bVB5LRV2QRtI3/pQDr9OyWxEijqKfzzFDC084DASOGV0keVVA3O', '2024-07-25 16:47:19', 0),
-(23, 'gaspar', 'gasparschwartz@alumnos.itr3.edu.ar', '$2y$10$Lq/lrLSnCOUsFtrRAEc9luQUCZ4rWv.jqYSZ8CEkm4W.rOhEYwjQm', '2024-07-31 13:07:04', 0),
-(24, 'eze', 'cristianmonteverde@alumnos.itr3.edu.ar', '$2y$10$a662NHdE/Oi9ZzaO8zqEGOG8TwonoGyYh..DDiRqgrpEzZE.V.im2', '2024-08-01 16:41:15', 0),
-(25, 'tiago', 'tiagocomba@alumnos.itr3.edu.ar', '$2y$10$rWuYYHMzS/yftJ4CD2nsBeRWM6wSboyG3TqG9nIe9qchjXFQAP1zS', '2024-08-01 16:45:45', 0);
+(10, 'eze', 'cristianmonteverde@alumnos.itr3.edu.ar', '$2y$10$DZ11oy/sTgGHHMgNVvX0JeBZKAT5/du2xNHniBf9S1Wgd3N21KsH2', '2024-07-26 13:25:55', 1);
 
 --
 -- Índices para tablas volcadas
@@ -379,7 +386,7 @@ ALTER TABLE `analisis_puertos`
 -- AUTO_INCREMENT de la tabla `codigo`
 --
 ALTER TABLE `codigo`
-  MODIFY `id_codigo_recuperacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_codigo_recuperacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `detalle_scan`
@@ -433,7 +440,7 @@ ALTER TABLE `tipo_seguridad`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- Restricciones para tablas volcadas
