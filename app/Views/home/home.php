@@ -1,18 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NVS</title>
-    <link rel="stylesheet" href="<?php echo base_url('complements/styles/home.css'); ?>">
-    <link rel="website icon" type="png" href="<?php echo base_url('complements/styles/images/NVS.png'); ?>">
-
+<?= $this->include('common/home/start.php'); ?>
+<title>NVS</title>
 </head>
 
 <body>
     <nav>
-    <div class="logo">NVS</div>
+        <div class="logo">NVS</div>
         <ul>
             <li><a href="#features">Software</a>
                 <ul class="dropdown">
@@ -31,15 +23,15 @@
                 <li><a href="#menu"><?= session('user')->name; ?></a>
 
                     <ul class="dropdown">
-                        <li><a href="#console">Console</a></li>
                         <li><a href="<?= base_url('dashboard'); ?>">Dashboard</a></li>
                         <li><a href="<?= base_url('logout'); ?>">Log Out</a></li>
 
                     <?php else : ?>
                         <li><a href="#menu">Menu</a>
                             <ul class="dropdown">
-                                <li><a href="#console">Console</a></li>
                                 <li><a href="<?= base_url('login'); ?>">Log In</a></li>
+                                <li><a href="<?= base_url('register'); ?>">Register</a></li>
+
                             <?php endif; ?>
 
                             </ul>
