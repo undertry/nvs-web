@@ -22,6 +22,7 @@
                     <li><a href="#what-is">What is it?</a></li>
                     <li><a href="#who-for">Who is it for?</a></li>
                     <li><a href="#origin">How did it start?</a></li>
+                    <li><a href="#security">Features & Security</a></li>
                 </ul>
             </li>
             <li><a href="#about">About Us</a>
@@ -109,11 +110,71 @@
                     <img src="<?php echo base_url('complements/styles/images/kalila.png'); ?>" alt="Description Image">
                 </div>
             </div>
+
+            <hr>
+            <div class="features-block" id="security">
+                <h3>Features & Security</h3>
+                <div class="feature-item">
+                    <div class="icon"><i class="fas fa-lock"></i></div>
+                    <div class="feature-text">
+                        <h4>Highly Secure</h4>
+                        <p>Passwords are hashed using Bcrypt.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="icon"><i class="fas fa-shield-alt"></i></div>
+                    <div class="feature-text">
+                        <h4>Local Deployment</h4>
+                        <p>Runs locally for enhanced security.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="icon"><i class="fas fa-file-download"></i></div>
+                    <div class="feature-text">
+                        <h4>Downloadable Reports</h4>
+                        <p>Delete and download scan history in PDF format.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="icon"><i class="fas fa-key"></i></div>
+                    <div class="feature-text">
+                        <h4>Advanced Security Features</h4>
+                        <p>Supports two-factor authentication, password recovery, and change password functionality.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="icon"><i class="fa-solid fa-satellite-dish"></i></div>
+                    <div class="feature-text">
+                        <h4>Compatibility</h4>
+                        <p>Compatible with Raspberry Pi 3 B+ and later versions.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+
+    <hr>
+    <section id="download">
+        <div class="section-header">
+            <h2>Download NVS</h2>
+        </div>
+        <div class="section-content">
+            <div class="download-buttons">
+                <button class="main-button">Join the Mobile waitlist</button>
+                <div class="dropdown">
+                    <button class="dropdown-button"> <i class="fas fa-chevron-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="https://github.com/tiagocomba/NVS.git" target="_blank">Clonar Repositorio</a>
+                        <a href="https://github.com/tiagocomba/NVS/archive/refs/heads/main.zip" target="_blank">Descargar .zip</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <hr>
     <!-- About Us Section -->
-    <section id="about">
+    <section class="about" id="about">
         <div class="section-header">
             <h2>ABOUT US</h2>
         </div>
@@ -255,6 +316,17 @@
             });
         });
     </script>
+
+    <script>
+        //script github download
+        document.querySelector('.dropdown-button').addEventListener('click', function() {
+            var dropdownContent = document.querySelector('.dropdown-content');
+            dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+        });
+    </script>
+
+
+
 
 
 </body>
