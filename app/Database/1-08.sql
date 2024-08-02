@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-06-2024 a las 23:54:51
--- Versión del servidor: 10.4.28-MariaDB
--- Versión de PHP: 8.1.17
+-- Tiempo de generación: 26-07-2024 a las 15:34:55
+-- Versión del servidor: 10.4.32-MariaDB
+-- Versión de PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -56,6 +56,14 @@ CREATE TABLE `codigo` (
   `id_user` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Volcado de datos para la tabla `codigo`
+--
+
+INSERT INTO `codigo` (`id_codigo_recuperacion`, `cod_recup`, `id_user`) VALUES
+(1, '#@U4LRXw', 7),
+(3, '3|K0QrDV', 6);
+
 -- --------------------------------------------------------
 
 --
@@ -66,19 +74,20 @@ CREATE TABLE `detalle_scan` (
   `id_det_scan` int(11) NOT NULL,
   `id_scan` int(11) DEFAULT NULL,
   `id_dispositivos` int(11) DEFAULT NULL,
-  `id_solucion` int(11) DEFAULT NULL
+  `id_solucion` int(11) DEFAULT NULL,
+  `codigo_vul` varchar(100) NOT NULL,
+  `vulnerabilidad` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `detalle_scan`
 --
 
-INSERT INTO `detalle_scan` (`id_det_scan`, `id_scan`, `id_dispositivos`, `id_solucion`) VALUES
-(1, 1, 1, 1),
-(2, 2, 2, 2),
-(3, 3, 3, 3),
-(4, 4, 4, 4),
-(5, 5, 5, 5);
+INSERT INTO `detalle_scan` (`id_det_scan`, `id_scan`, `id_dispositivos`, `id_solucion`, `codigo_vul`, `vulnerabilidad`) VALUES
+(1, 1, 1, 1, 'CVE-2017-0143 ', 1),
+(2, 2, 2, 7, 'CVE-2016-5195', 1),
+(3, 3, 3, 9, 'CVE-2015-7547', 1),
+(5, 5, 2, 7, 'CVE-2016-5195', 1);
 
 -- --------------------------------------------------------
 
@@ -122,7 +131,7 @@ CREATE TABLE `estado_puerto` (
 --
 
 INSERT INTO `estado_puerto` (`id_estado_puerto`, `abierto`, `cerrado`, `filtrado`) VALUES
-(1, 0, 1, 0),
+(1, 1, 0, 0),
 (2, 1, 0, 0),
 (3, 0, 0, 1),
 (4, 0, 1, 0),
@@ -199,9 +208,9 @@ CREATE TABLE `scan` (
 INSERT INTO `scan` (`id_scan`, `id_user`, `id_red`, `fecha_scan`) VALUES
 (1, 1, 1, '2024-06-11 13:05:03'),
 (2, 2, 2, '2024-06-02 14:02:34'),
-(3, 3, 3, '2024-05-15 21:26:12'),
-(4, 4, 4, '2024-06-01 10:59:00'),
-(5, 5, 5, '2014-05-23 15:59:59');
+(3, 9, 3, '2024-07-24 13:36:37'),
+(4, 1, 4, '2024-06-26 00:05:01'),
+(5, 9, 2, '2024-07-24 13:34:53');
 
 -- --------------------------------------------------------
 
@@ -211,19 +220,25 @@ INSERT INTO `scan` (`id_scan`, `id_user`, `id_red`, `fecha_scan`) VALUES
 
 CREATE TABLE `solucion` (
   `id_solucion` int(11) NOT NULL,
-  `solucion` varchar(255) DEFAULT NULL
+  `solucion` varchar(255) DEFAULT NULL,
+  `codigo_vulnerabilidad` varchar(255) NOT NULL,
+  `descripcion_vuln` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `solucion`
 --
 
-INSERT INTO `solucion` (`id_solucion`, `solucion`) VALUES
-(1, 'Actualizar software para cerrar puerto 80'),
-(2, 'Configurar firewall para filtrar puerto 22'),
-(3, 'Cerrar puerto 5228 para mejorar seguridad'),
-(4, 'Revisar configuración de HTTPS en puerto 443'),
-(5, 'Configurar reglas de firewall para puerto 5223');
+INSERT INTO `solucion` (`id_solucion`, `solucion`, `codigo_vulnerabilidad`, `descripcion_vuln`) VALUES
+(1, 'Instalar las actualizaciones de seguridad proporcionadas por Microsoft. Esta vulnerabilidad fue parcheada con actualizaciones de seguridad de Microsoft Windows.', 'CVE-2017-0143 ', 'Vulnerabilidad en el protocolo SMB de Windows que permite ejecución remota de código.'),
+(2, 'Actualizar Microsoft Edge a la versión más reciente disponible. Microsoft lanzó parches para corregir esta vulnerabilidad.', 'CVE-2018-8174', 'Vulnerabilidad en el motor de scripting de Microsoft Edge que permite ejecución remota de código.'),
+(3, 'Aplicar los parches de seguridad disponibles para las versiones afectadas de Windows. Microsoft proporcionó parches incluso para sistemas operativos fuera de soporte estándar.', 'CVE-2019-0708', 'Vulnerabilidad en el servicio de Escritorio remoto de Windows (BlueKeep) que permite ejecución remota de código sin autenticación.'),
+(4, 'Instalar las actualizaciones de seguridad de Windows. Microsoft lanzó parches para corregir esta vulnerabilidad.', 'CVE-2020-0601', 'Vulnerabilidad en la validación de certificados en Windows CryptoAPI que permite suplantación de identidad.'),
+(5, 'Aplicar las actualizaciones de seguridad proporcionadas por Microsoft. Además, se recomienda deshabilitar el servicio de impresión si no es esencial.', 'CVE-2021-34527 ', 'Vulnerabilidad en el servicio de impresión de Windows (PrintNightmare) que permite escalada de privilegios y ejecución remota de código.'),
+(6, 'Actualizar Apache Log4j a la versión 2.15.0 o superior, que corrige esta vulnerabilidad. También es importante asegurarse de que todas las dependencias y aplicaciones que utilizan Log4j estén actualizadas.', 'CVE-2021-44228', 'Vulnerabilidad crítica en la biblioteca de registro Log4j utilizada en aplicaciones Java que permite la ejecución remota de código.'),
+(7, 'Aplicar las actualizaciones del kernel proporcionadas por el proveedor de la distribución de Linux. Reiniciar los sistemas afectados tras aplicar las actualizaciones.', 'CVE-2016-5195', 'Vulnerabilidad en el kernel de Linux (Dirty COW) que permite escalada de privilegios.'),
+(8, 'Actualizar Adobe Flash Player a la última versión disponible. Adobe lanzó parches para corregir esta vulnerabilidad.', 'CVE-2018-4878', 'Vulnerabilidad en Adobe Flash Player que permite ejecución remota de código.'),
+(9, 'Aplicar las actualizaciones de seguridad proporcionadas por el proveedor de la distribución de Linux. Reiniciar los sistemas afectados tras aplicar las actualizaciones.', 'CVE-2015-7547', 'Vulnerabilidad en la librería GNU C (glibc) que permite ejecución remota de código.');
 
 -- --------------------------------------------------------
 
@@ -257,20 +272,25 @@ CREATE TABLE `usuarios` (
   `name` varchar(45) DEFAULT NULL,
   `email` varchar(128) DEFAULT NULL,
   `password` varchar(255) DEFAULT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `verification` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`id_user`, `name`, `email`, `password`, `created_at`) VALUES
-(1, 'Tiago Comba', 'tiagocomba@gmail.com', '$2y$10$/Dzko5dYAR3bda3QaIvLku0XrR8JIRReQzwbK1qDCFHzNFEbbLAF.', '2024-06-19 11:51:50'),
-(2, 'Ezequiel Monteverde', 'eze@gmail.com', '$2y$10$EXqfxNoo/yvXzlXjIQBG5.Et1Ks5UK7rTxYkz3vwMqTghpBBHazTO', '2024-06-19 11:55:41'),
-(3, 'Octavio Galarza', 'octavio@gmail.com', '$2y$10$iRbBLO9mDATXsD4exG5EP.cngyQVGoBJQAYdk/8g3tve3uUw.6YzO', '2024-06-19 11:56:50'),
-(4, 'Pedro Carranza', 'pedro@gmail.com', '$2y$10$HTDMeI3Ei6SVp5ZSNDey4.B9aPxqd9gbdyWc4i3lGHLYnHLuq9pLW', '2024-06-19 11:58:00'),
-(5, 'Marcelo Asevedo', 'marcelo@gmail.com', '$2y$10$rKejczKDIuMkI2spq3IajuKL96MLjYHyXsx/9OE5EC.fO0ceoJj6a', '2024-06-19 11:58:50'),
-(6, 'eze', 'cristianmonteverde@alumnos.itr3.edu.ar', '$2y$10$YkObUX7kkKHXIPyQsqQkHOkmA17IZfGBE1KUHok8G.xMUWugIsFr6', '2024-06-23 21:01:43');
+INSERT INTO `usuarios` (`id_user`, `name`, `email`, `password`, `created_at`, `verification`) VALUES
+(1, 'Tiago Comba', 'tiagocomba@gmail.com', '$2y$10$hR4ZI9WGXcnTZgsVdI2K6.GRiwVclxlpHMxIfzg7iHOWOUlTu81Y.', '2024-06-27 02:17:33', 0),
+(2, 'Ezequiel Monteverde', 'eze@gmail.com', '$2y$10$rfCt5w4s7gt6zX/ga2Cb3epPqKr637uwscK.CgMmSRj11RM9VEc5O', '2024-06-27 16:38:28', 0),
+(3, 'Octavio Galarza', 'octavio@gmail.com', '$2y$10$iRbBLO9mDATXsD4exG5EP.cngyQVGoBJQAYdk/8g3tve3uUw.6YzO', '2024-06-19 11:56:50', 0),
+(4, 'Pedro Carranza', 'pedro@gmail.com', '$2y$10$HTDMeI3Ei6SVp5ZSNDey4.B9aPxqd9gbdyWc4i3lGHLYnHLuq9pLW', '2024-06-19 11:58:00', 0),
+(5, 'Marcelo Asevedo', 'marcelo@gmail.com', '$2y$10$rKejczKDIuMkI2spq3IajuKL96MLjYHyXsx/9OE5EC.fO0ceoJj6a', '2024-06-19 11:58:50', 0),
+(6, 'eze', 'eze123@gmail.com', '$2y$10$YkObUX7kkKHXIPyQsqQkHOkmA17IZfGBE1KUHok8G.xMUWugIsFr6', '2024-07-26 11:49:16', 0),
+(7, 'test', 'tiagocomba@alumnos.itr3.edu.ar', '$2y$10$XsUr6y7OmBMB8o7TvhKbdOh4/mREuPNfG39t.QNybcUAKYHWn1mgO', '2024-06-27 10:54:14', 0),
+(8, 'Marcelo', 'marceloasevedo@itr3.edu.ar', '$2y$10$PPs/cXYqLb8KtV.g.C9ZFuZ1ex4jEXWb8Lv.i6ERwnju3WJyxgzBu', '2024-06-27 11:57:11', 0),
+(9, 'Laureano', 'laureanopeirone@alumnos.itr3.edu.ar', '$2y$10$M4bVB5LRV2QRtI3/pQDr9OyWxEijqKfzzFDC084DASOGV0keVVA3O', '2024-07-25 16:47:19', 0),
+(10, 'eze', 'cristianmonteverde@alumnos.itr3.edu.ar', '$2y$10$DZ11oy/sTgGHHMgNVvX0JeBZKAT5/du2xNHniBf9S1Wgd3N21KsH2', '2024-07-26 13:25:55', 1);
 
 --
 -- Índices para tablas volcadas
@@ -366,13 +386,13 @@ ALTER TABLE `analisis_puertos`
 -- AUTO_INCREMENT de la tabla `codigo`
 --
 ALTER TABLE `codigo`
-  MODIFY `id_codigo_recuperacion` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_codigo_recuperacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `detalle_scan`
 --
 ALTER TABLE `detalle_scan`
-  MODIFY `id_det_scan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_det_scan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `dispositivos`
@@ -402,13 +422,13 @@ ALTER TABLE `red`
 -- AUTO_INCREMENT de la tabla `scan`
 --
 ALTER TABLE `scan`
-  MODIFY `id_scan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_scan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `solucion`
 --
 ALTER TABLE `solucion`
-  MODIFY `id_solucion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_solucion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `tipo_seguridad`
@@ -420,7 +440,7 @@ ALTER TABLE `tipo_seguridad`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- Restricciones para tablas volcadas

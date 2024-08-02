@@ -40,7 +40,6 @@
                         <li><a href="<?= base_url('logout'); ?>">Log Out</a></li>
 
                     <?php else : ?>
-
                         <li><a href="<?= base_url('login'); ?>">Log In</a></li>
                         <li><a href="<?= base_url('register'); ?>">Sign Up</a></li>
                     <?php endif; ?>

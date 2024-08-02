@@ -25,9 +25,9 @@ class Dashboard extends BaseController
         }
     }
 
-
     public function change_password()
-    { {
+    { 
+        {
             // Verificar si el usuario está autenticado y tiene un ID de usuario válido
             $user = session('user');
             if (!$user) {
@@ -87,4 +87,25 @@ class Dashboard extends BaseController
         // Redirigir de nuevo a la página de inicio de sesión si el usuario no se encuentra
         return redirect()->to('login');
     }
+
+    public function verification()
+    {
+        $session = session();
+        $email = $session->get('user')->email;
+
+        $userModel = new UserModel();
+        $user = $userModel->getUserByEmail($email);
+
+        if ($user) {
+            $verificationstatus = $user->verification == 1 ? 0 : 1;  // Cambia de 1 a 0 o de 0 a 1
+            $userModel->verification($email, $verificationstatus);
+            $user->verification = $verificationstatus;
+            unset($user->password);
+            // Actualizar la sesión con el nuevo estado de verificacion
+            $session->set('user',$user);
+        }
+
+        return redirect()->back();
+    }
+
 }
