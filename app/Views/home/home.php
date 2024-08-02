@@ -13,7 +13,9 @@
 
 </head>
 
+
 <body>
+
     <nav>
         <div class="logo"><a href="#home">NVS</a></div>
         <ul>
@@ -164,8 +166,11 @@
                 <div class="dropdown">
                     <button class="dropdown-button"> <i class="fas fa-chevron-down"></i></button>
                     <div class="dropdown-content">
-                        <a href="https://github.com/tiagocomba/NVS.git" target="_blank">Clonar Repositorio</a>
-                        <a href="https://github.com/tiagocomba/NVS/archive/refs/heads/main.zip" target="_blank">Descargar .zip</a>
+                        <a href="#" id="clone-repo">
+                            <span class="original-text">Clone repository</span>
+                            <span class="copied-message">Copied</span>
+                        </a>
+                        <a href="https://github.com/tiagocomba/NVS/archive/refs/heads/main.zip" target="_blank">Download .zip</a>
                     </div>
                 </div>
             </div>
@@ -316,14 +321,45 @@
             });
         });
     </script>
-
     <script>
-        //script github download
-        document.querySelector('.dropdown-button').addEventListener('click', function() {
-            var dropdownContent = document.querySelector('.dropdown-content');
-            dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+        document.addEventListener('DOMContentLoaded', () => {
+            // Manejo del dropdown
+            document.querySelector('.dropdown-button').addEventListener('click', function() {
+                var dropdownContent = document.querySelector('.dropdown-content');
+                dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+            });
+
+            // Manejo del clic en "Clonar Repositorio"
+            document.querySelector('#clone-repo').addEventListener('click', function(e) {
+                e.preventDefault(); // Evitar la acción por defecto del enlace
+
+                const url = 'git clone https://github.com/tiagocomba/NVS.git';
+
+                // Crear un elemento de texto oculto para copiar al portapapeles
+                const tempInput = document.createElement('input');
+                tempInput.value = url;
+                document.body.appendChild(tempInput);
+                tempInput.select();
+                document.execCommand('copy');
+                document.body.removeChild(tempInput);
+
+                // Reemplazar el texto original con el mensaje de copiado
+                const originalText = this.querySelector('.original-text');
+                const message = this.querySelector('.copied-message');
+
+                // Ocultar el texto original y mostrar el mensaje
+                originalText.style.display = 'none';
+                message.style.display = 'inline';
+
+                // Restaurar el texto original después de 2 segundos
+                setTimeout(() => {
+                    originalText.style.display = 'inline';
+                    message.style.display = 'none';
+                }, 2000);
+            });
         });
     </script>
+
 
 
 

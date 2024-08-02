@@ -46,7 +46,10 @@
     scroll-behavior: smooth;
   }
 
+
+
   body {
+   
     margin: 0;
     padding: 0;
     font-family: "matter-medium";
@@ -480,6 +483,7 @@
   z-index: 1;
   border-radius: 5px;
   margin-top: 5px; /* Separar del botón */
+
 }
 
 #download .dropdown-content a {
@@ -487,13 +491,27 @@
   padding: 12px 16px;
   text-decoration: none;
   display: block;
-  font-family: "matter-regular";
+  font-family: "matter-medium";
+  position: relative;
+}
+
+#download .copied-message {
+  display: none; /* Oculto por defecto */
+  color: #4CAF50; /* Color verde para la tilde */
+  font-family: "matter-medium";
+}
+
+#download .original-text {
+  font-family: "matter-medium";
+}
+
+#download .dropdown-content a.copied {
+  color: #4CAF50; /* Cambiar color cuando se copia */
 }
 
 #download .dropdown-content a:hover {
   background-color: #575757;
 }
-
 
 
 
