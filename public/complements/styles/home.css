@@ -420,7 +420,6 @@
   }
 }
 
-
 #download {
   background-color: var(--color-black);
   padding: 40px 20px;
@@ -441,14 +440,12 @@
   gap: 5px;
 }
 
-
 #download .main-button, #download .dropdown-button {
   padding: 10px 15px;
   border: none;
   border-radius: 5px;
   font-size: 1em;
   cursor: pointer;
-  
 }
 
 #download .main-button {
@@ -457,7 +454,6 @@
   font-family: "matter-medium";
   transition: background-color 0.3s;
 }
-
 
 #download .dropdown {
   position: relative;
@@ -469,17 +465,21 @@
   border: 1px solid #454545;
   color: var(--color-white);
   font-family: "matter-medium";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
 }
 
 #download .dropdown-content {
-  display: none;
+  display: none; /* Ocultar el contenido por defecto */
   position: absolute;
   background: linear-gradient(40deg, #333 45%, #151414 100%);
   border: 1px solid #454545;
   min-width: 160px;
   z-index: 1;
   border-radius: 5px;
-  margin-top: 3px;
+  margin-top: 5px; /* Separar del botón */
 }
 
 #download .dropdown-content a {
@@ -494,9 +494,6 @@
   background-color: #575757;
 }
 
-#download .dropdown:hover .dropdown-content {
-  display: block;
-}
 
 
 
