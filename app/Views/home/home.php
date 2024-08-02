@@ -19,7 +19,7 @@
                     <li><a href="#purpose">Why did we make it?</a></li>
                 </ul>
             </li>
-            <?php if (session('user') && session('user')->name) : ?>
+            <?php if (session('user') && session('user')->id_user > 1 && session('user')->name) : ?>
                 <li><a href="#menu"><?= session('user')->name; ?></a>
 
                     <ul class="dropdown">
