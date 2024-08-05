@@ -5,7 +5,7 @@
 <body>
   <div class="container">
     <h1 class="header"><a href="<?= base_url('dashboard'); ?>">NVS</a></h1>
-    <h1>Detalles del Scan</h1>
+    <h1>Scan Details</h1>
     <div class="columns">
       <?php if (!empty($scanDetails) && is_array($scanDetails)) : ?>
         <?php
@@ -18,56 +18,56 @@
         <?php foreach ($scansGrouped as $fecha_scan => $details) : ?>
           <div class="scan-group">
             <div class="scan-summary" onclick="toggleDetails(this)">
-              <h2>Información del Scan</h2>
+              <h2>Scan Information</h2>
               <ul>
-                <li><strong>Fecha del Scan:</strong> <?= $fecha_scan ?></li>
-                <li><strong>Usuario:</strong> <?= $details[0]['user_name'] ?></li>
+                <li><strong>Scan Date:</strong> <?= $fecha_scan ?></li>
+                <li><strong>user:</strong> <?= $details[0]['user_name'] ?></li>
               </ul>
             </div>
             <div class="scan-details">
               <div class="left-column">
-                <h2>Información de la Red</h2>
+                <h2>Network Information</h2>
                 <ul>
-                  <li><strong>Dirección de Red:</strong> <?= $details[0]['direccion_red'] ?></li>
-                  <li><strong>Potencia:</strong> <?= $details[0]['potencia'] ?></li>
+                  <li><strong>Signal:</strong> <?= $details[0]['signal'] ?></li>
                   <li><strong>ESSID:</strong> <?= $details[0]['essid'] ?></li>
                   <li><strong>BSSID:</strong> <?= $details[0]['bssid'] ?></li>
-                  <li><strong>Tipo de Seguridad:</strong> <?= $details[0]['tipo_seguridad'] ?></li>
+                  <li><strong>Channel:</strong> <?= $details[0]['channel'] ?></li>
+                  <li><strong>Security Type:</strong> <?= $details[0]['security_type'] ?></li>
                 </ul>
               </div>
               <div class="right-column">
-                <h2>Información de los Dispositivos</h2>
+                <h2>Device Information</h2>
                 <?php foreach ($details as $detail) : ?>
-                  <h3>Dispositivo</h3>
+                  <h3>Device</h3>
                   <ul>
-                    <li><strong>IP:</strong> <?= $detail['direccion_ip'] ?></li>
-                    <li><strong>Sistema Operativo:</strong> <?= $detail['sistema_operativo'] ?></li>
-                    <li><strong>MAC:</strong> <?= $detail['dir_mac'] ?></li>
+                    <li><strong>IP:</strong> <?= $detail['IP_address'] ?></li>
+                    <li><strong>Operating System:</strong> <?= $detail['operating_system'] ?></li>
+                    <li><strong>MAC:</strong> <?= $detail['mac_address'] ?></li>
                   </ul>
-                  <h3>Información del Puerto</h3>
+                  <h3>Port Information</h3>
                   <ul>
-                    <li><strong>Puerto:</strong> <?= $detail['puerto_nombre'] ?></li>
-                    <li><strong>Servicio:</strong> <?= $detail['servicio'] ?></li>
-                    <li><strong>Protocolo:</strong> <?= $detail['protocolo'] ?></li>
-                    <li><strong>Estado:</strong>
+                    <li><strong>Port:</strong> <?= $detail['port_name'] ?></li>
+                    <li><strong>service:</strong> <?= $detail['service'] ?></li>
+                    <li><strong>Protocol:</strong> <?= $detail['protocol'] ?></li>
+                    <li><strong>Status:</strong>
                       <?php
-                      if ($detail['abierto']) echo 'Abierto';
-                      elseif ($detail['cerrado']) echo 'Cerrado';
-                      else echo 'Filtrado';
+                      if ($detail['open']) echo 'open';
+                      elseif ($detail['close']) echo 'close';
+                      else echo 'filtered';
                       ?>
                     </li>
                   </ul>
-                  <h3>Código Público</h3>
+                  <h3>Public Code</h3>
                   <ul>
-                    <li><?= $detail['codigo_vulnerabilidad'] ?></li>
+                    <li><?= $detail['vulnerability_code'] ?></li>
                   </ul>
-                  <h3 id="descripcion">Descripción vulnerabilidad</h3>
+                  <h3 id="description">Vulnerability Description</h3>
                   <ul>
-                    <li><?= $detail['descripcion_vuln'] ?></li>
+                    <li><?= $detail['vuln_description'] ?></li>
                   </ul>
-                  <h3 id="solucion">Solución</h3>
+                  <h3 id="solution">Solution</h3>
                   <ul>
-                    <li><?= $detail['solucion'] ?></li>
+                    <li><?= $detail['solution'] ?></li>
                   </ul>
                 <?php endforeach; ?>
               </div>
@@ -75,7 +75,7 @@
           </div>
         <?php endforeach; ?>
       <?php else : ?>
-        <p>No se encontraron detalles para este scan.</p>
+        <p>No details found for this scan</p>
       <?php endif; ?>
     </div>
   </div>

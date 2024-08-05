@@ -4,11 +4,11 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class ScanModel extends Model
+class RedModel extends Model
 {
     protected $table = 'red';
     protected $primaryKey = 'id_red';
-    protected $allowedFields = ['signal', 'essid', 'bssid','id_tipo_seguridad','channel','encryption'];
+    protected $allowedFields = ['signal', 'essid', 'bssid','id_security_type','channel'];
 
 
 

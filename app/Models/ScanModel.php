@@ -13,16 +13,20 @@ class ScanModel extends Model
     public function getScanDetailsByUser($id_user)
     {
         return $this->db->table('scan')
-            ->select('scan.*, usuarios.name AS user_name, red.direccion_red, red.potencia, red.essid, red.bssid, tipo_seguridad.tipo AS tipo_seguridad, dispositivos.direccion_ip, dispositivos.sistema_operativo, dispositivos.dir_mac, puertos.puerto_nombre, puertos.servicio, puertos.protocolo, estado_puerto.abierto, estado_puerto.cerrado, estado_puerto.filtrado, solucion.solucion, solucion.codigo_vulnerabilidad, solucion.descripcion_vuln')
-            ->join('usuarios', 'usuarios.id_user = scan.id_user')
+            ->select('scan.*, usuarios.name AS user_name, red.signal, red.essid, 
+            red.bssid, security_type.tipo AS security_type, devices.ip_address, 
+            devices.operating_system, devices.dir_mac, ports.port_name, ports.service, 
+            ports.protocol, port_status.open, port_status.close, port:status.filtered, 
+            solution.solution, solution.vulnerability_code, solution.vuln_description')
+            ->join('users', 'users.id_user = scan.id_user')
             ->join('red', 'red.id_red = scan.id_red')
-            ->join('tipo_seguridad', 'tipo_seguridad.id_tipo_seguridad = red.id_tipo_seguridad')
-            ->join('detalle_scan', 'detalle_scan.id_scan = scan.id_scan')
-            ->join('dispositivos', 'dispositivos.id_dispositivos = detalle_scan.id_dispositivos')
-            ->join('analisis_puertos', 'analisis_puertos.id_dispositivos = dispositivos.id_dispositivos')
-            ->join('puertos', 'puertos.id_puerto = analisis_puertos.id_puerto')
-            ->join('estado_puerto', 'estado_puerto.id_estado_puerto = puertos.id_estado_puerto')
-            ->join('solucion', 'solucion.id_solucion = detalle_scan.id_solucion')
+            ->join('security_type', 'security_type.id_security_type = red.id_security_type')
+            ->join('scan_details', 'scan_details.id_scan = scan.id_scan')
+            ->join('devices', 'devices.id_devices = scan_details.id_devices')
+            ->join('port_analysis', 'port_analysis.id_devices = devices.id_devices')
+            ->join('ports', 'ports.id_port = port_analysis.id_port')
+            ->join('port_status', 'port_status.id_port_status = ports.id_port_status')
+            ->join('solution', 'solution.id_solution = scan_details.id_solution')
             ->where('scan.id_user', $id_user)
             ->get()
             ->getResultArray();

@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Redes WiFi Disponibles</title>
+    <title>Available WiFi Networks</title>
 </head>
 <body>
-    <h1>Redes WiFi Disponibles</h1>
+    <h1>Available WiFi Networks</h1>
     <?php if (!empty($networks)): ?>
         <ul>
             <?php foreach ($networks as $network): ?>
@@ -20,7 +20,7 @@
             <?php endforeach; ?>
         </ul>
     <?php else: ?>
-        <p>No se encontraron redes WiFi.</p>
+        <p>No WiFi networks found</p>
     <?php endif; ?>
 </body>
 </html>

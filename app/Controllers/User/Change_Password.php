@@ -6,7 +6,7 @@ use App\Controllers\BaseController;
 
 use App\Models\UserModel;
 
-use App\Models\CodigoModel;
+use App\Models\CodeModel;
 
 // El nombre de la clase tiene que coincidir con el nomnbre del controlador
 class Change_Password extends BaseController
@@ -32,51 +32,51 @@ class Change_Password extends BaseController
 
     public function sendemail()
     {
-        $Codigo = new CodigoModel();
+        $Code = new CodeModel();
         $UserModel = new UserModel();
 
         $emailU = $this->request->getPost('email');
 
         if (!$UserModel->isEmailTaken($emailU)) {
-            $this->session->setFlashdata('error', 'Verifique su correo');
+            $this->session->setFlashdata('error', 'Check your email');
             return redirect()->to('forgot_password');
         }
 
         // Generar código único de recuperación
         $caracteres = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+-=[]{}|;:,.<>?';
-        $cod_recup = '';
+        $recovery_code = '';
         $max = strlen($caracteres) - 1;
 
         // Buscar un código único que no esté en uso
         do {
-            $cod_recup = '';
+            $recovery_code = '';
             for ($i = 0; $i < 8; $i++) {
-                $cod_recup .= $caracteres[mt_rand(0, $max)];
+                $recovery_code .= $caracteres[mt_rand(0, $max)];
             }
-        } while ($Codigo->isCodTaken($cod_recup));
+        } while ($Code->isCodTaken($recovery_code));
 
         // Obtener el usuario por correo electrónico
         $user = $UserModel->GetIdByemail($emailU);
         if (!$user) {
-            session()->setFlashdata('error', 'Usuario no encontrado.');
+            session()->setFlashdata('error', 'User not found.');
             return redirect()->to('forgot_password');
         }
 
         $id_user = $user->id_user;
 
         // Verificar si ya existe un código para el usuario
-        $existingCode = $Codigo->getCodeByUserId($id_user);
+        $existingCode = $Code->getCodeByUserId($id_user);
 
         if ($existingCode) {
             // Actualizar el código existente
-            $Codigo->updatecode($cod_recup, $existingCode->id_codigo_recuperacion);
+            $Code->updatecode($recovery_code, $existingCode->id_recovery_code);
         } else {
             // Insertar un nuevo código
             $data = [
-                'cod_recup' => $cod_recup,
+                'recovery_code' => $recovery_code,
                 'id_user' => $id_user
             ];
-            $Codigo->insertcod($data);
+            $Code->insertcod($data);
         }
 
         // Configuracion y envio del email
@@ -84,7 +84,7 @@ class Change_Password extends BaseController
         $email->setFrom('cibersafe.verify@gmail.com');
         $email->setTo($emailU);
         $email->setSubject('Verification Code');
-        $email->setMessage('Your code: ' . $cod_recup);
+        $email->setMessage('Your code: ' . $recovery_code);
 
         if ($email->send()) {
             return redirect()->to('change_forgot');
@@ -99,25 +99,25 @@ class Change_Password extends BaseController
     public function password_change_forgot()
     {
         $userModel = new UserModel();
-        $codigoModel = new CodigoModel();
+        $codeModel = new CodeModel();
 
         $password = $this->request->getPost('password');
         $confirm_password = $this->request->getPost('confirm_password');
-        $codigo = $this->request->getPost('codigo');
+        $code = $this->request->getPost('code');
 
         if ($password !== $confirm_password) {
-            $this->session->setFlashdata('error', 'Las contraseñas no coinciden.');
+            $this->session->setFlashdata('error', 'The passwords do not match.');
             return redirect()->to('change_forgot');
         }
         // Verificar si la contraseña cumple con los requisitos
         if (!preg_match('/^(?=.*[A-Z])(?=.*[!@#$&*]).{8,}$/', $password)) {
-            $this->session->setFlashdata('error', 'La contraseña debe tener al menos 8 caracteres, 1 mayúscula y 1 caracter especial.');
+            $this->session->setFlashdata('error', 'The password must have at least 8 characters, 1 uppercase letter, and 1 special character');
             return redirect()->to('change_forgot');
         }
         // Obtener el id_user asociado al código de recuperación
-        $user = $codigoModel->getUserByCodigo($codigo);
+        $user = $codeModel->getUserByCodigo($code);
         if (!$user) {
-            $this->session->setFlashdata('error', 'Código de recuperación inválido.');
+            $this->session->setFlashdata('error', 'Invalid recovery code');
             return redirect()->to('change_forgot');
         }
         $id_user = $user->id_user;
@@ -128,9 +128,9 @@ class Change_Password extends BaseController
         $userModel->password_change($id_user, $data);
 
         // Limpiar el código de recuperación después de cambiar la contraseña
-        $codigoModel->deleteByCodigo($codigo);
+        $codeModel->deleteByCodigo($code);
 
-        $this->session->setFlashdata('success', 'Contraseña cambiada exitosamente.');
+        $this->session->setFlashdata('success', 'Password changed successfully');
         return redirect()->to('login');
     }
 }

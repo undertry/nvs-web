@@ -6,7 +6,7 @@ use CodeIgniter\Model;
 
 class UserModel extends Model
 {
-    protected $table = "usuarios"; // Nombre de la tabla de usuarios
+    protected $table = "users"; // Nombre de la tabla de usuarios
     protected $primaryKey = "id_user"; // Llave primaria de la tabla
 
     protected $useAutoIncrement = true;
