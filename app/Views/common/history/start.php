@@ -4,4 +4,4 @@
 <head>
     <meta charset="UTF-8">
 
-    <link rel="stylesheet" href="<?php echo base_url('complements/styles/historial.css'); ?>">
+    <link rel="stylesheet" href="<?php echo base_url('complements/styles/history.css'); ?>">
