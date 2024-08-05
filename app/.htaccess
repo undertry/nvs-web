@@ -1,9 +1,17 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
+<<<<<<< security
     RewriteBase /NVS/public/
+=======
+    RewriteBase /nvs/public/
+>>>>>>> raspberry
 
     # Redirige las solicitudes a index.php
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^(.*)$ index.php/$1 [L]
+<<<<<<< security
 </IfModule>
+=======
+</IfModule>
+>>>>>>> raspberry
