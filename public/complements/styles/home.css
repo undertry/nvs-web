@@ -454,7 +454,7 @@
 }
 
 .comparison-table {
-  width: 70%;
+  width: 60%;
   border-collapse: collapse;
   margin: 0 auto;
 }
@@ -472,10 +472,17 @@
   color: var(--color-white);
 }
 
-.comparison-table .checkmark {
+.comparison-table .yes {
   font-size: 1.5rem;
-  color: var(--color-main);
+  color: yellowgreen;
+
 }
+
+.comparison-table .no {
+  font-size: 1.5rem;
+  color: var(--color-main)
+}
+
 
 
 

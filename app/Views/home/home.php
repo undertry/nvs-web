@@ -158,7 +158,7 @@
         </div>
     </section>
 
-
+    <hr>
     <section id="comparison" class="comparison-section">
         <h2>Comparación de Software</h2>
         <table class="comparison-table">
@@ -173,45 +173,45 @@
             <tbody>
                 <tr>
                     <td>Codigo Abierto</td>
-                    <td class="checkmark">&#10007;</td>
-                    <td class="checkmark">&#10003;</td>
-                    <td class="checkmark">&#10003;</td>
+                    <td class="no">&#10007;</td>
+                    <td class="yes">&#10003;</td>
+                    <td class="yes">&#10003;</td>
                 </tr>
                 <tr>
                     <td>Análisis de vulnerabilidades</td>
-                    <td class="checkmark">&#10003;</td>
-                    <td class="checkmark">&#10007;</td>
-                    <td class="checkmark">&#10007;</td>
+                    <td class="yes">&#10003;</td>
+                    <td class="no">&#10007;</td>
+                    <td class="no">&#10007;</td>
                 </tr>
                 <tr>
                     <td>Escaneo de redes</td>
-                    <td class="checkmark">&#10003;</td>
-                    <td class="checkmark">&#10003;</td>
-                    <td class="checkmark">&#10007;</td>
+                    <td class="yes">&#10003;</td>
+                    <td class="yes">&#10003;</td>
+                    <td class="no">&#10007;</td>
                 </tr>
                 <tr>
                     <td>Identificación de SO</td>
-                    <td class="checkmark">&#10003;</td>
-                    <td class="checkmark">&#10003;</td>
-                    <td class="checkmark">&#10003;</td>
+                    <td class="yes">&#10003;</td>
+                    <td class="yes">&#10003;</td>
+                    <td class="yes">&#10003;</td>
                 </tr>
                 <tr>
                     <td>Uso de Raspberry Pi</td>
-                    <td class="checkmark">&#10003;</td>
-                    <td class="checkmark">&#10007;</td>
-                    <td class="checkmark">&#10007;</td>
+                    <td class="yes">&#10003;</td>
+                    <td class="no">&#10007;</td>
+                    <td class="no">&#10007;</td>
                 </tr>
                 <tr>
                     <td>Historial de escaneos</td>
-                    <td class="checkmark">&#10003;</td>
-                    <td class="checkmark">&#10007;</td>
-                    <td class="checkmark">&#10007;</td>
+                    <td class="yes">&#10003;</td>
+                    <td class="no">&#10007;</td>
+                    <td class="no">&#10007;</td>
                 </tr>
                 <tr>
                     <td>Medidas de seguridad</td>
-                    <td class="checkmark">&#10003;</td>
-                    <td class="checkmark">&#10003;</td>
-                    <td class="checkmark">&#10007;</td>
+                    <td class="yes">&#10003;</td>
+                    <td class="yes">&#10003;</td>
+                    <td class="no">&#10007;</td>
                 </tr>
             </tbody>
         </table>
