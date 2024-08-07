@@ -4,17 +4,17 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class CodigoModel extends Model
+class CodeModel extends Model
 {
-    protected $table = "codigo"; // Nombre de la tabla de usuarios
-    protected $primaryKey = "id_codigo_recuperacion"; // Llave primaria de la tabla
+    protected $table = "code"; // Nombre de la tabla de usuarios
+    protected $primaryKey = "id_recovery_code"; // Llave primaria de la tabla
 
     protected $useAutoIncrement = true;
 
     protected $returnType = "object";
     // protected $useSoftDeletes = true;
 
-    protected $allowedFields = ["cod_recup", "id_user"];
+    protected $allowedFields = ["recovery_code", "id_user"];
 
     protected $useTimestamps = false;
     protected $createdField = "created_at";
@@ -22,9 +22,10 @@ class CodigoModel extends Model
     protected $validationRules = [];
     protected $validationMessages = [];
     protected $skipValidation = false;
-    public function isCodTaken($cod_recup)
+
+    public function isCodTaken($recovery_code)
     {
-        return $this->where('cod_recup', $cod_recup)->countAllResults() > 0;
+        return $this->where('recovery_code', $recovery_code)->countAllResults() > 0;
     }
 
     public function insertcod($data)
@@ -37,24 +38,24 @@ class CodigoModel extends Model
         return $this->where("id_user", $id_user)->first(); // Cambiado a first() para obtener solo un resultado
     }
 
-    public function updatecode($cod_recup, $id_codigo_recuperacion)
+    public function updatecode($recovery_code, $id_recovery_code)
     {
-        $this->set('cod_recup', $cod_recup)->where('id_codigo_recuperacion', $id_codigo_recuperacion)->update();
+        $this->set('recovery_code', $recovery_code)->where('id_recovery_code', $id_recovery_code)->update();
     }
 
-    public function getUserByCodigo($codigo)
+    public function getUserByCode($code)
 {
     return $this->db->table($this->table)
         ->select('id_user')
-        ->where('cod_recup', $codigo)
+        ->where('recovery_code', $code)
         ->get()
         ->getRow();
 }
 
-public function deleteByCodigo($codigo)
+public function deleteByCode($code)
 {
     return $this->db->table($this->table)
-        ->where('cod_recup', $codigo)
+        ->where('recovery_code', $code)
         ->delete();
 }
 }

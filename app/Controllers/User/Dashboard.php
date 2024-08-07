@@ -6,7 +6,6 @@ use App\Controllers\BaseController;
 
 use \App\Models\UserModel;
 
-use \App\Models\CodigoModel;
 
 // El nombre de la clase tiene que coincidir con el nomnbre del controlador
 class Dashboard extends BaseController
@@ -46,7 +45,7 @@ class Dashboard extends BaseController
     {
         $userModel = new UserModel();
 
-        $actual_password = $this->request->getPost('actual_password');
+        $current_password = $this->request->getPost('current_password');
         $password = $this->request->getPost('password');
         $confirm_password = $this->request->getPost('confirm_password');
         $id_user = session('user')->id_user;
@@ -61,15 +60,15 @@ class Dashboard extends BaseController
             if (password_verify($actual_password, $result->password)) {
                 // Verificar si los campos están vacíos
                 if (empty($password) || empty($confirm_password)) {
-                    $this->session->setFlashdata('error', 'Debe rellenar el formulario.');
+                    $this->session->setFlashdata('error', 'ou must fill out the form');
                     return redirect()->to('change_password');
                 } elseif ($password !== $confirm_password) {
-                    $this->session->setFlashdata('error', 'Las contraseñas no coinciden.');
+                    $this->session->setFlashdata('error', 'The passwords do not match');
                     return redirect()->to('change_password');
                 }
                 // Verificar si la contraseña cumple con los requisitos
                 if (!preg_match('/^(?=.*[A-Z])(?=.*[!@#$&*]).{8,}$/', $password)) {
-                    $this->session->setFlashdata('error', 'La contraseña debe tener al menos 8 caracteres, 1 mayúscula y 1 caracter especial.');
+                    $this->session->setFlashdata('error', 'The password must have at least 8 characters, 1 uppercase letter, and 1 special character');
                     return redirect()->to('change_password');
                 }
                 // Cambiar la contraseña si todas las validaciones son correctas
@@ -77,10 +76,10 @@ class Dashboard extends BaseController
                 $data["password"] = $hashedPassword;
                 $userModel->password_change($id_user, $data);
 
-                $this->session->setFlashdata('success', 'Contraseña cambiada exitosamente.');
+                $this->session->setFlashdata('success', 'Password changed successfully.');
                 return redirect()->to('dashboard');
             } else {
-                $this->session->setFlashdata('error', 'Verificar datos del formulario.');
+                $this->session->setFlashdata('error', 'Check the form data.');
                 return redirect()->to('change_password');
             }
         }
