@@ -33,6 +33,7 @@
     src: url("./fonts/arame/Arame-Thin.ttf") format("truetype");
   }
 
+
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
   
   *{
@@ -170,7 +171,7 @@
 }
   
   .intro-text h1 {
-    font-size: 3em;
+    font-size: 2.5em;
     font-weight: 500;
     font-family: "arame";
     overflow: hidden; /* Para asegurar que el texto no se desborde */
@@ -423,8 +424,68 @@
   }
 }
 
-#download {
+
+
+
+
+
+
+
+.comparison-section {
+  padding: 2rem;
   background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.comparison-section h2 {
+  color: var(--color-white);
+  font-size: 2.9em;
+  font-family: "matter-regular";
+  text-align: center;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+
+.comparison-section p,
+.comparison-section ul {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-family: "matter-regular";
+}
+
+.comparison-table {
+  width: 70%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.comparison-table th,
+.comparison-table td {
+  border: 1px solid var(--color-grey);
+  padding: 0.5rem;
+  text-align: center;
+  font-family: "matter-regular";
+}
+
+.comparison-table th {
+  background-color: var(--color-main);
+  color: var(--color-white);
+}
+
+.comparison-table .checkmark {
+  font-size: 1.5rem;
+  color: var(--color-main);
+}
+
+
+
+
+
+
+
+
+#download {
+  background: linear-gradient(to top, rgba(255, 0, 0, 0.233), var(--color-black));
   padding: 40px 20px;
   text-align: center;
 }
@@ -483,8 +544,8 @@
   z-index: 1;
   border-radius: 5px;
   margin-top: 5px; /* Separar del botón */
-
 }
+
 
 #download .dropdown-content a {
   color: var(--color-white);
@@ -521,12 +582,7 @@ hr {
   border: 1px solid var(--color-grey);
 }
 
-.about {
 
-  background: linear-gradient(to top, rgba(255, 0, 0, 0.233), var(--color-black));
-  
-
-}
 
 #profiles {
   display: flex;
@@ -681,9 +737,6 @@ footer {
 
 .footer-column ul li a:hover {
   color: var(--color-main);
-  font-family: "matter-regular";
-  font-weight: bold;
-
 }
 
 .footer-bottom {

@@ -70,7 +70,7 @@
 
 
     <!-- Software Section -->
-    <section id="features">
+    <section id="software">
         <div class="section-header">
             <h2>SOFTWARE</h2>
         </div>
@@ -111,50 +111,135 @@
                     <img src="<?php echo base_url('complements/styles/images/kalila.png'); ?>" alt="Description Image">
                 </div>
             </div>
+    </section>
 
-            <hr>
-            <div class="features-block" id="security">
-                <h3>Features & Security</h3>
-                <div class="feature-item">
-                    <div class="icon"><i class="fas fa-lock"></i></div>
-                    <div class="feature-text">
-                        <h4>Highly Secure</h4>
-                        <p>Passwords are hashed using Bcrypt.</p>
-                    </div>
+    <hr>
+    <section id="features">
+
+
+        <div class="features-block" id="security">
+            <h3>Features & Security</h3>
+            <div class="feature-item">
+                <div class="icon"><i class="fas fa-lock"></i></div>
+                <div class="feature-text">
+                    <h4>Highly Secure</h4>
+                    <p>Passwords are hashed using Bcrypt.</p>
                 </div>
-                <div class="feature-item">
-                    <div class="icon"><i class="fas fa-shield-alt"></i></div>
-                    <div class="feature-text">
-                        <h4>Local Deployment</h4>
-                        <p>Runs locally for enhanced security.</p>
-                    </div>
+            </div>
+            <div class="feature-item">
+                <div class="icon"><i class="fas fa-shield-alt"></i></div>
+                <div class="feature-text">
+                    <h4>Local Deployment</h4>
+                    <p>Runs locally for enhanced security.</p>
                 </div>
-                <div class="feature-item">
-                    <div class="icon"><i class="fas fa-file-download"></i></div>
-                    <div class="feature-text">
-                        <h4>Downloadable Reports</h4>
-                        <p>Delete and download scan history in PDF format.</p>
-                    </div>
+            </div>
+            <div class="feature-item">
+                <div class="icon"><i class="fas fa-file-download"></i></div>
+                <div class="feature-text">
+                    <h4>Downloadable Reports</h4>
+                    <p>Delete and download scan history in PDF format.</p>
                 </div>
-                <div class="feature-item">
-                    <div class="icon"><i class="fas fa-key"></i></div>
-                    <div class="feature-text">
-                        <h4>Advanced Security Features</h4>
-                        <p>Supports two-factor authentication, password recovery, and change password functionality.</p>
-                    </div>
+            </div>
+            <div class="feature-item">
+                <div class="icon"><i class="fas fa-key"></i></div>
+                <div class="feature-text">
+                    <h4>Advanced Security Features</h4>
+                    <p>Supports two-factor authentication, password recovery, and change password functionality.</p>
                 </div>
-                <div class="feature-item">
-                    <div class="icon"><i class="fa-solid fa-satellite-dish"></i></div>
-                    <div class="feature-text">
-                        <h4>Compatibility</h4>
-                        <p>Compatible with Raspberry Pi 3 B+ and later versions.</p>
-                    </div>
+            </div>
+            <div class="feature-item">
+                <div class="icon"><i class="fa-solid fa-satellite-dish"></i></div>
+                <div class="feature-text">
+                    <h4>Compatibility</h4>
+                    <p>Compatible with Raspberry Pi 3 B+ and later versions.</p>
                 </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+    <section id="comparison" class="comparison-section">
+        <h2>Comparación de Software</h2>
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Características</th>
+                    <th>NVS</th>
+                    <th>Nessus</th>
+                    <th>OpenVAS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Codigo Abierto</td>
+                    <td class="checkmark">&#10007;</td>
+                    <td class="checkmark">&#10003;</td>
+                    <td class="checkmark">&#10003;</td>
+                </tr>
+                <tr>
+                    <td>Análisis de vulnerabilidades</td>
+                    <td class="checkmark">&#10003;</td>
+                    <td class="checkmark">&#10007;</td>
+                    <td class="checkmark">&#10007;</td>
+                </tr>
+                <tr>
+                    <td>Escaneo de redes</td>
+                    <td class="checkmark">&#10003;</td>
+                    <td class="checkmark">&#10003;</td>
+                    <td class="checkmark">&#10007;</td>
+                </tr>
+                <tr>
+                    <td>Identificación de SO</td>
+                    <td class="checkmark">&#10003;</td>
+                    <td class="checkmark">&#10003;</td>
+                    <td class="checkmark">&#10003;</td>
+                </tr>
+                <tr>
+                    <td>Uso de Raspberry Pi</td>
+                    <td class="checkmark">&#10003;</td>
+                    <td class="checkmark">&#10007;</td>
+                    <td class="checkmark">&#10007;</td>
+                </tr>
+                <tr>
+                    <td>Historial de escaneos</td>
+                    <td class="checkmark">&#10003;</td>
+                    <td class="checkmark">&#10007;</td>
+                    <td class="checkmark">&#10007;</td>
+                </tr>
+                <tr>
+                    <td>Medidas de seguridad</td>
+                    <td class="checkmark">&#10003;</td>
+                    <td class="checkmark">&#10003;</td>
+                    <td class="checkmark">&#10007;</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+
+
+
+    <hr>
+
+    <!-- About Us Section -->
+    <section class="about" id="about">
+        <div class="section-header">
+            <h2>ABOUT US</h2>
+        </div>
+        <div class="section-content">
+            <div class="text-image-block" id="creators">
+                <div class="text">
+                    <h4>Developers</h4>
+                    <div id="profiles"></div>
+                </div>
+
             </div>
         </div>
     </section>
 
     <hr>
+
     <section id="download">
         <div class="section-header">
             <h2>Download NVS</h2>
@@ -172,23 +257,6 @@
                         <a href="https://github.com/tiagocomba/NVS/archive/refs/heads/main.zip" target="_blank">Download .zip</a>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <hr>
-    <!-- About Us Section -->
-    <section class="about" id="about">
-        <div class="section-header">
-            <h2>ABOUT US</h2>
-        </div>
-        <div class="section-content">
-            <div class="text-image-block" id="creators">
-                <div class="text">
-                    <h4>Developers</h4>
-                    <div id="profiles"></div>
-                </div>
-
             </div>
         </div>
     </section>
@@ -249,7 +317,7 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            const usernames = ["tiagocomba", "EzequielMonteverde"]; // Reemplaza con los nombres de usuario de GitHub
+            const usernames = ["tiagocomba", "Dr-Cristian"]; // Reemplaza con los nombres de usuario de GitHub
             const profilesContainer = document.getElementById("profiles");
 
             usernames.forEach(username => {
@@ -320,6 +388,8 @@
             });
         });
     </script>
+
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Manejo del dropdown
