@@ -19,7 +19,7 @@
     <nav>
         <div class="logo"><a href="#home">NVS</a></div>
         <ul>
-            <li><a href="#features">Software</a>
+            <li><a href="#software">Software</a>
                 <ul class="dropdown">
                     <li><a href="#what-is">What is it?</a></li>
                     <li><a href="#who-for">Who is it for?</a></li>
@@ -266,7 +266,7 @@
     <hr>
 
     <section id="download">
-        <div class="section-header">
+        <div class="section-header-download">
             <h2>Download NVS</h2>
         </div>
         <div class="section-content">
@@ -342,7 +342,7 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            const usernames = ["tiagocomba", "EzequielMonteverde"]; // Reemplaza con los nombres de usuario de GitHub
+            const usernames = ["tiagocomba", "EzequielMonteverde", "LaureanoCarlos"]; // Reemplaza con los nombres de usuario de GitHub
             const profilesContainer = document.getElementById("profiles");
 
             usernames.forEach(username => {

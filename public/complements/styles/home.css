@@ -279,16 +279,30 @@
 
 .section-header h2 {
   font-size: 1rem;
-  font-family: "matter-medium";
+  margin-left: 1em;
+  font-family: "matter-regular";
   color: var(--color-main);
   background: linear-gradient(40deg, #333 45%, #151414 100%);
   border: 1px solid #454545;
-  padding: 5px 20px; /* Ajusta el padding según sea necesario */
+  padding: 5px 10px; /* Ajusta el padding según sea necesario */
   border-radius: 5px; /* Ajusta el valor para redondear más o menos las esquinas */
   display: inline-block; /* Asegura que el fondo se ajuste al contenido del h2 */
   padding-bottom: 7px;
-
 }
+
+.section-header-download h2 {
+  font-size: 2.9em;
+  margin-left: 0.4em;
+  font-family: "matter-regular";
+  color: var(--color-white);
+  background: linear-gradient(40deg, #333 45%, #151414 100%);
+  border: 1px solid #454545;
+  padding: 5px 10px; /* Ajusta el padding según sea necesario */
+  border-radius: 5px; /* Ajusta el valor para redondear más o menos las esquinas */
+  display: inline-block; /* Asegura que el fondo se ajuste al contenido del h2 */
+  padding-bottom: 10px;
+}
+
 
 .section-content {
   display: flex;
