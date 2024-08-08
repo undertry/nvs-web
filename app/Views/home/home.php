@@ -252,6 +252,20 @@
         <div class="section-header">
             <h2>ABOUT US</h2>
         </div>
+
+
+
+
+        <div class="comments-section">
+            <h2>What our colleagues say about NVS</h2>
+            <div class="comments-carousel" id="comments">
+                <!-- Las tarjetas se generarán dinámicamente aquí -->
+            </div>
+        </div>
+
+
+
+
         <div class="section-content">
             <div class="text-image-block" id="creators">
                 <div class="text">
@@ -479,7 +493,67 @@
 
 
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const usernames = ["schwgon", "Dr-Cristian", "LaureanoCarlos", "Craifran", "Randalfd", "TadeoBoglione"]; // Agrega aquí los nombres de usuario de GitHub
+            const commentsContainer = document.getElementById("comments");
 
+            // Variable para almacenar todas las tarjetas antes de duplicarlas
+            let allCommentsHTML = "";
+
+            usernames.forEach(username => {
+                const storedProfile = localStorage.getItem(`profile_${username}`);
+
+                if (storedProfile) {
+                    allCommentsHTML += generateCommentHTML(JSON.parse(storedProfile));
+                } else {
+                    fetch(`https://api.github.com/users/${username}`)
+                        .then(response => response.json())
+                        .then(data => {
+                            localStorage.setItem(`profile_${username}`, JSON.stringify(data));
+                            allCommentsHTML += generateCommentHTML(data);
+                        })
+                        .catch(error => {
+                            console.error("Error fetching GitHub profile:", error);
+                        });
+                }
+            });
+
+            // Función para generar el HTML de cada tarjeta
+            function generateCommentHTML(data) {
+                return `
+            <div class="comment-card">
+                <img src="${data.avatar_url}" alt="${data.login}'s Profile Image">
+                <div class="comment-content">
+                    <h3>${data.name ? data.name : data.login}</h3>
+                    <p>Este es un comentario de ejemplo sobre tu software.</p>
+                </div>
+            </div>
+        `;
+            }
+
+            // Espera un breve tiempo para asegurarse de que todo el HTML se ha generado antes de duplicar
+            setTimeout(() => {
+                commentsContainer.innerHTML = allCommentsHTML + allCommentsHTML; // Duplicamos todo el contenido al final
+            }, 500);
+
+            // Configuración del carrusel continuo
+            let scrollAmount = 0;
+            const scrollStep = 1; // Ajusta esta velocidad para que sea más lenta o más rápida
+
+            function scrollCarousel() {
+                scrollAmount -= scrollStep;
+                commentsContainer.style.transform = `translateX(${scrollAmount}px)`;
+
+                if (Math.abs(scrollAmount) >= commentsContainer.scrollWidth / 2) {
+                    scrollAmount = 0;
+                }
+                requestAnimationFrame(scrollCarousel);
+            }
+
+            scrollCarousel(); // Iniciar el scroll continuo
+        });
+    </script>
 
 
 </body>
