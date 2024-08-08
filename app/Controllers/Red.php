@@ -16,8 +16,8 @@ class Red extends BaseController
         $response = $client->get('http://192.168.0.164:5000/scan');
 
         if ($response->getStatusCode() == 200) {
-            $redModel->red($networks);
             $networks = json_decode($response->getBody(), true);
+            $redModel->red($networks);
         } else {
             $networks = [];
         }
