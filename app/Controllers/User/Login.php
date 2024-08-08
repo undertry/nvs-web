@@ -147,19 +147,19 @@ class Login extends BaseController
             $userco = $codeModel->getUserByCode($code);   
               if (!$userco) {  
                 //cuando el codigo no se encuentra
-                $this->session->setFlashdata('error', 'Código de verificación inválido.');
+                $this->session->setFlashdata('error', 'Invalid verification code.');
                 return redirect()->to('2stepverify');
             }
             $id_userco= $userco->id_user;
             if ($id_userco !== $id_user) {  
                 //si no coincide el codigo con el usuario
-                $this->session->setFlashdata('error', 'Código de verificación inválido.');
+                $this->session->setFlashdata('error', 'Invalid verification code.');
                 return redirect()->to('2stepverify');
             }else{
             // Limpiar el código de recuperación después de cambiar la contraseña
             $codeModel->deleteByCode($code);
             session('user')->id_user = $id_user;
-            $this->session->setFlashdata('success', 'Verificación exitosa.');
+            $this->session->setFlashdata('success', 'Verification successful.');
             return redirect()->to('dashboard');
              }
         }

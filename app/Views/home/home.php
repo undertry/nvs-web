@@ -32,7 +32,7 @@
                     <li><a href="#creators">Developers</a></li>
                 </ul>
             </li>
-            <?php if (session('user') && session('user')->name) : ?>
+            <?php if (session('user') && session('user')->id_user > 0 && session('user')->name) : ?>
                 <li><a href="#menu"><?= session('user')->name; ?></a>
 
                     <ul class="dropdown">
