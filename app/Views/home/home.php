@@ -30,6 +30,7 @@
             </li>
             <li><a href="#about">About Us</a>
                 <ul class="dropdown">
+                    <li><a href="#comments">Comments</a></li>
                     <li><a href="#creators">Developers</a></li>
                 </ul>
             </li>
@@ -256,13 +257,12 @@
 
 
 
-        <div class="comments-section">
+        <section class="comments-section">
             <h2>What our colleagues say about NVS</h2>
             <div class="comments-carousel" id="comments">
                 <!-- Las tarjetas se generarán dinámicamente aquí -->
             </div>
-        </div>
-
+        </section>
 
 
 
@@ -356,7 +356,7 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            const usernames = ["tiagocomba", "EzequielMonteverde", "LaureanoCarlos"]; // Reemplaza con los nombres de usuario de GitHub
+            const usernames = ["tiagocomba", "EzequielMonteverde"]; // Reemplaza con los nombres de usuario de GitHub
             const profilesContainer = document.getElementById("profiles");
 
             usernames.forEach(username => {
@@ -432,7 +432,7 @@
                             menu.style.opacity = "1";
                             menu.style.visibility = "visible";
                             menu.style.transform = "translateY(0)";
-                        }, 100); // Añade un pequeño retraso antes de iniciar la animación
+                        }, 10); // Añade un pequeño retraso antes de iniciar la animación
                     }
                 });
 
