@@ -346,47 +346,62 @@
             const profilesContainer = document.getElementById("profiles");
 
             usernames.forEach(username => {
-                fetch(`https://api.github.com/users/${username}`)
-                    .then(response => response.json())
-                    .then(data => {
-                        const profileDiv = document.createElement("div");
-                        profileDiv.classList.add("profile");
+                // Intenta obtener datos del localStorage
+                const storedProfile = localStorage.getItem(`profile_${username}`);
 
-                        // Verificación de la URL del avatar
-                        const img = document.createElement("img");
-                        if (data.avatar_url) {
-                            console.log(`Avatar URL for ${username}: ${data.avatar_url}`);
-                            img.src = data.avatar_url;
-                            img.alt = `${data.login}'s Profile Image`;
-                        } else {
-                            console.error(`No avatar URL found for ${username}`);
-                            img.src = "ruta/a/una/imagen/por/defecto.png"; // Imagen por defecto
-                            img.alt = "Imagen por defecto";
-                        }
-
-                        const link = document.createElement("a");
-                        link.href = data.html_url;
-                        link.textContent = data.login;
-
-                        const description = document.createElement("p");
-                        description.textContent = data.bio ? data.bio : "No bio available";
-
-                        const followers = document.createElement("p");
-                        followers.classList.add("followers");
-                        followers.textContent = `Followers: ${data.followers}`;
-
-                        const achievements = document.createElement("div");
-                        achievements.classList.add("achievements");
-
-                        profileDiv.appendChild(img);
-                        profileDiv.appendChild(link);
-                        profileDiv.appendChild(description);
-                        profileDiv.appendChild(followers);
-                        profileDiv.appendChild(achievements);
-                        profilesContainer.appendChild(profileDiv);
-                    })
-                    .catch(error => console.error("Error fetching GitHub profile:", error));
+                if (storedProfile) {
+                    // Si hay datos almacenados, úsalos directamente
+                    displayProfile(JSON.parse(storedProfile));
+                } else {
+                    // Si no hay datos en localStorage, realiza la petición a la API
+                    fetch(`https://api.github.com/users/${username}`)
+                        .then(response => response.json())
+                        .then(data => {
+                            // Guarda la respuesta en localStorage
+                            localStorage.setItem(`profile_${username}`, JSON.stringify(data));
+                            displayProfile(data);
+                        })
+                        .catch(error => {
+                            console.error("Error fetching GitHub profile:", error);
+                        });
+                }
             });
+
+            function displayProfile(data) {
+                const profileDiv = document.createElement("div");
+                profileDiv.classList.add("profile");
+
+                // Verificación de la URL del avatar
+                const img = document.createElement("img");
+                if (data.avatar_url) {
+                    img.src = data.avatar_url;
+                    img.alt = `${data.login}'s Profile Image`;
+                } else {
+                    img.src = "ruta/a/una/imagen/por/defecto.png"; // Imagen por defecto
+                    img.alt = "Imagen por defecto";
+                }
+
+                const link = document.createElement("a");
+                link.href = data.html_url;
+                link.textContent = data.login;
+
+                const description = document.createElement("p");
+                description.textContent = data.bio ? data.bio : "No bio available";
+
+                const followers = document.createElement("p");
+                followers.classList.add("followers");
+                followers.textContent = `Followers: ${data.followers}`;
+
+                const achievements = document.createElement("div");
+                achievements.classList.add("achievements");
+
+                profileDiv.appendChild(img);
+                profileDiv.appendChild(link);
+                profileDiv.appendChild(description);
+                profileDiv.appendChild(followers);
+                profileDiv.appendChild(achievements);
+                profilesContainer.appendChild(profileDiv);
+            }
         });
     </script>
 
