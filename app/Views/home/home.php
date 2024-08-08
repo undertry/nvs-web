@@ -342,7 +342,7 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            const usernames = ["tiagocomba", "Dr-Cristian"]; // Reemplaza con los nombres de usuario de GitHub
+            const usernames = ["tiagocomba", "EzequielMonteverde"]; // Reemplaza con los nombres de usuario de GitHub
             const profilesContainer = document.getElementById("profiles");
 
             usernames.forEach(username => {
@@ -352,9 +352,17 @@
                         const profileDiv = document.createElement("div");
                         profileDiv.classList.add("profile");
 
+                        // Verificación de la URL del avatar
                         const img = document.createElement("img");
-                        img.src = data.avatar_url;
-                        img.alt = `${data.login}'s Profile Image`;
+                        if (data.avatar_url) {
+                            console.log(`Avatar URL for ${username}: ${data.avatar_url}`);
+                            img.src = data.avatar_url;
+                            img.alt = `${data.login}'s Profile Image`;
+                        } else {
+                            console.error(`No avatar URL found for ${username}`);
+                            img.src = "ruta/a/una/imagen/por/defecto.png"; // Imagen por defecto
+                            img.alt = "Imagen por defecto";
+                        }
 
                         const link = document.createElement("a");
                         link.href = data.html_url;
