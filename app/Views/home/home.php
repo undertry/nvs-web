@@ -25,6 +25,7 @@
                     <li><a href="#who-for">Who is it for?</a></li>
                     <li><a href="#origin">How did it start?</a></li>
                     <li><a href="#security">Features & Security</a></li>
+                    <li><a href="#comparison">Software Comparison</a></li>
                 </ul>
             </li>
             <li><a href="#about">About Us</a>
@@ -160,11 +161,11 @@
 
     <hr>
     <section id="comparison" class="comparison-section">
-        <h2>Comparación de Software</h2>
+        <h2>Software Comparison</h2>
         <table class="comparison-table">
             <thead>
                 <tr>
-                    <th>Características</th>
+                    <th>Features</th>
                     <th>NVS</th>
                     <th>Nessus</th>
                     <th>OpenVAS</th>
@@ -172,43 +173,67 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>Codigo Abierto</td>
-                    <td class="no">&#10007;</td>
+                    <td>Open Source</td>
                     <td class="yes">&#10003;</td>
+                    <td class="no">&#10007;</td>
                     <td class="yes">&#10003;</td>
                 </tr>
                 <tr>
-                    <td>Análisis de vulnerabilidades</td>
-                    <td class="yes">&#10003;</td>
-                    <td class="no">&#10007;</td>
-                    <td class="no">&#10007;</td>
-                </tr>
-                <tr>
-                    <td>Escaneo de redes</td>
+                    <td>Easy to Use</td>
                     <td class="yes">&#10003;</td>
                     <td class="yes">&#10003;</td>
                     <td class="no">&#10007;</td>
                 </tr>
                 <tr>
-                    <td>Identificación de SO</td>
+                    <td>Intuitive</td>
                     <td class="yes">&#10003;</td>
                     <td class="yes">&#10003;</td>
-                    <td class="yes">&#10003;</td>
-                </tr>
-                <tr>
-                    <td>Uso de Raspberry Pi</td>
-                    <td class="yes">&#10003;</td>
-                    <td class="no">&#10007;</td>
                     <td class="no">&#10007;</td>
                 </tr>
                 <tr>
-                    <td>Historial de escaneos</td>
+                    <td>Performance</td>
                     <td class="yes">&#10003;</td>
                     <td class="no">&#10007;</td>
                     <td class="no">&#10007;</td>
                 </tr>
                 <tr>
-                    <td>Medidas de seguridad</td>
+                    <td>Network Scanning</td>
+                    <td class="yes">&#10003;</td>
+                    <td class="yes">&#10003;</td>
+                    <td class="yes">&#10003;</td>
+                </tr>
+                <tr>
+                    <td>Vulnerability Analysis</td>
+                    <td class="yes">&#10003;</td>
+                    <td class="yes">&#10003;</td>
+                    <td class="yes">&#10003;</td>
+                </tr>
+                <tr>
+                    <td>Identification of SO</td>
+                    <td class="yes">&#10003;</td>
+                    <td class="yes">&#10003;</td>
+                    <td class="yes">&#10003;</td>
+                </tr>
+                <tr>
+                    <td>Scan History</td>
+                    <td class="yes">&#10003;</td>
+                    <td class="yes">&#10003;</td>
+                    <td class="yes">&#10003;</td>
+                </tr>
+                <tr>
+                    <td>Use of Raspberry Pi</td>
+                    <td class="yes">&#10003;</td>
+                    <td class="yes">&#10003;</td>
+                    <td class="no">&#10007;</td>
+                </tr>
+                <tr>
+                    <td>Safety Measures</td>
+                    <td class="yes">&#10003;</td>
+                    <td class="yes">&#10003;</td>
+                    <td class="yes">&#10003;</td>
+                </tr>
+                <tr>
+                    <td>Updates and Improvements</td>
                     <td class="yes">&#10003;</td>
                     <td class="yes">&#10003;</td>
                     <td class="no">&#10007;</td>
