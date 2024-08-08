@@ -506,7 +506,9 @@
   width: 100%;
   overflow: hidden;
   position: relative;
-}
+  height: 30vh;
+  background: radial-gradient(circle, #96232369  1%,  var(--color-black) 15%);
+  }
 
 .comments-section h2 {
   font-size: 2.9em;
@@ -687,7 +689,7 @@ hr {
 }
 
 .profile:hover {
-  transform: rotateY(360deg) scale(1.2);
+  transform:  scale(1.2);
   z-index: 10;
   position: relative;
 }

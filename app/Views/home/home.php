@@ -495,7 +495,7 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            const usernames = ["schwgon", "Dr-Cristian", "LaureanoCarlos", "Craifran", "Randalfd", "TadeoBoglione"]; // Agrega aquí los nombres de usuario de GitHub
+            const usernames = ["schwgon", "Dr-Cristian", "LaureanoCarlos", "Craifran", "Randalfd", "TadeoBoglione", "Naahuuel"]; // Agrega aquí los nombres de usuario de GitHub
             const commentsContainer = document.getElementById("comments");
 
             // Variable para almacenar todas las tarjetas antes de duplicarlas
