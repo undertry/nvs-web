@@ -28,26 +28,27 @@
                     <li><a href="#comparison">Software Comparison</a></li>
                 </ul>
             </li>
-            <li><a href="#about">About Us</a>
-                <ul class="dropdown">
-                    <li><a href="#comments">Comments</a></li>
-                    <li><a href="#creators">Developers</a></li>
-                </ul>
-            </li>
+            <li><a href="#about">About Us</a> </li>
+            <a class="button" href="#download">Download</a>
+
+
             <?php if (session('user') && session('user')->name) : ?>
                 <li><a href="#menu"><?= session('user')->name; ?></a>
 
                     <ul class="dropdown">
                         <li><a href="<?= base_url('dashboard'); ?>">Dashboard</a></li>
                         <li><a href="<?= base_url('logout'); ?>">Log Out</a></li>
-
-                    <?php else : ?>
-                        <li><a href="<?= base_url('login'); ?>">Log In</a></li>
-                        <li><a href="<?= base_url('register'); ?>">Sign Up</a></li>
-                    <?php endif; ?>
-
                     </ul>
-                </li>
+                <?php else : ?>
+                <li><a href="<?= base_url('login'); ?>">Log In</a></li>
+                <li><a href="<?= base_url('register'); ?>">Sign Up</a></li>
+
+
+            <?php endif; ?>
+
+
+
+
         </ul>
     </nav>
 
