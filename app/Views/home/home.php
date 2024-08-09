@@ -28,7 +28,11 @@
                     <li><a href="#comparison">Software Comparison</a></li>
                 </ul>
             </li>
-            <li><a href="#about">About Us</a> </li>
+            <li><a href="#about">About Us</a>
+                <ul class="dropdown">
+                    <li><a href="#faq">Faq</a></li>
+                </ul>
+            </li>
             <a class="button" href="#download">Download</a>
 
 
@@ -279,6 +283,80 @@
     </section>
 
     <hr>
+
+
+
+    <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>Pregunta 1?</h3>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, accusamus nostrum, commodi dolorum ipsum ratione dolore inventore, voluptatum voluptas modi excepturi! Ad iste voluptates culpa aperiam officia omnis et cupiditate.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>Pregunta 2?</h3>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nostrum culpa possimus autem ducimus explicabo earum architecto, delectus quia pariatur rem aperiam voluptate et cumque quibusdam dolor, quas mollitia nam.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>Pregunta 3?</h3>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nostrum culpa possimus autem ducimus explicabo earum architecto, delectus quia pariatur rem aperiam voluptate et cumque quibusdam dolor, quas mollitia nam.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>Pregunta 4?</h3>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nostrum culpa possimus autem ducimus explicabo earum architecto, delectus quia pariatur rem aperiam voluptate et cumque quibusdam dolor, quas mollitia nam.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>Pregunta 5?</h3>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nostrum culpa possimus autem ducimus explicabo earum architecto, delectus quia pariatur rem aperiam voluptate et cumque quibusdam dolor, quas mollitia nam.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>Pregunta 6?</h3>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nostrum culpa possimus autem ducimus explicabo earum architecto, delectus quia pariatur rem aperiam voluptate et cumque quibusdam dolor, quas mollitia nam.</p>
+            </div>
+        </div>
+
+        <!-- Añadir más preguntas aquí -->
+
+    </section>
+
+    <hr>
+
+
+
+
 
     <section id="download">
         <div class="section-header-download">
@@ -553,6 +631,23 @@
             }
 
             scrollCarousel(); // Iniciar el scroll continuo
+        });
+    </script>
+
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
+
+                // Para cerrar las otras respuestas cuando se abre una nueva
+                document.querySelectorAll('.faq-item').forEach(otherItem => {
+                    if (otherItem !== parent) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+            });
         });
     </script>
 
