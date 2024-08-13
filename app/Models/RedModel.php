@@ -1,8 +1,10 @@
 <?php
 
-namespace App\Models;
+namespace App\Controllers;
 
-use CodeIgniter\Model;
+use CodeIgniter\HTTP\CURLRequest;
+
+use App\Models\RedModel;
 
 class RedModel extends Model
 {
@@ -12,9 +14,21 @@ class RedModel extends Model
 
     public function red($networks)
     {
-        // Iterar sobre cada red en el array y luego insertar en la base de datos
+        // Filtrar redes duplicadas dentro del mismo array
+        $networks = array_unique($networks, SORT_REGULAR);
+
         foreach ($networks as $network) {
-            $this->insert($network);
+            // Verificar si ya existe una red con los mismos valores de bssid, channel, encryption, y essid
+            $existingNetwork = $this->where('bssid', $network['bssid'])
+                                    ->where('channel', $network['channel'])
+                                    ->where('encryption', $network['encryption'])
+                                    ->where('essid', $network['essid'])
+                                    ->first();
+
+            // Si no existe, insertar la nueva red
+            if (!$existingNetwork) {
+                $this->insert($network);
+            }
         }
     }
 }
