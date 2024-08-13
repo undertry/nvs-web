@@ -1,10 +1,8 @@
 <?php
 
-namespace App\Controllers;
+namespace App\Models;
 
-use CodeIgniter\HTTP\CURLRequest;
-
-use App\Models\RedModel;
+use CodeIgniter\Model;
 
 class RedModel extends Model
 {
