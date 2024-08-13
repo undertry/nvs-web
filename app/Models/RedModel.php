@@ -6,14 +6,15 @@ use CodeIgniter\Model;
 
 class RedModel extends Model
 {
-    protected $table = 'red';
+    protected $table = 'network';
     protected $primaryKey = 'id_red';
-    protected $allowedFields = ['signal', 'essid', 'bssid','id_security_type','channel'];
-
-
+    protected $allowedFields = ['signal', 'essid', 'bssid', 'encryption', 'channel'];
 
     public function red($networks)
     {
-        $this->insert($networks);
+        // Iterar sobre cada red en el array y luego insertar en la base de datos
+        foreach ($networks as $network) {
+            $this->insert($network);
+        }
     }
 }
