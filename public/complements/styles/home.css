@@ -5,7 +5,7 @@
     --color-white: #f3f2f2;
     --color-grey: #333;
   }
-  
+
   /* fonts select */
   @font-face {
     font-family: "matter-medium";
@@ -16,26 +16,32 @@
     font-family: "matter-regular";
     src: url("./fonts/matter-font/Matter-Regular.ttf") format("truetype");
   }
-  
-  
+
+
+  @font-face {
+    font-family: "matter-light";
+    src: url("./fonts/matter-font/Matter-Light.ttf") format("truetype");
+  }
+
   @font-face {
     font-family: "aero";
     src: url("./fonts/aeroxys/Aeroxys.ttf") format("truetype");
   }
-  
+
   @font-face {
     font-family: "nevol";
     src: url("./fonts/nevolasty/Nevolasty-Light.otf") format("truetype");
   }
-  
+
   @font-face {
     font-family: "arame";
     src: url("./fonts/arame/Arame-Thin.ttf") format("truetype");
   }
 
 
+
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-  
+
   *{
     margin: 0;
     padding: 0;
@@ -51,7 +57,7 @@
 
 
   body {
-   
+
     margin: 0;
     padding: 0;
     font-family: "matter-medium";
@@ -62,7 +68,7 @@
     height: 100vh;
 
   }
-  
+
   nav {
     width: 100%;
     position: fixed;
@@ -76,25 +82,25 @@
     border-bottom: 1px solid #454545;
     z-index: 2000;
   }
-  
+
   nav .logo a {
     font-family: "aero";
     font-size: 2.5em;
     color: var(--color-main);
   }
-  
+
   nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
   }
-  
+
   nav ul li {
     position: relative;
     margin: 0 15px;
   }
-  
+
   nav ul li a {
     text-decoration: none;
     color: var(--color-white);
@@ -112,6 +118,14 @@
     display: block;
   }
 
+  nav ul p {
+    color: var(--color-white);
+    font-family: "matter-medium";
+    font-size: 1.1em;
+    padding: 15px 20px;
+    display: block;
+  }
+
   .button {
     margin-top: 4px;
     background: linear-gradient(40deg, #333 45%, #151414 100%);
@@ -122,16 +136,17 @@
     text-align: center;
   }
 
+
+
   nav ul .button:hover {
     background: linear-gradient(40deg, #444444 45%, #151414 100%);
     border: 1px solid #4d4c4c;
   }
 
-  
   nav ul li a:hover {
     color: var(--color-main);
   }
-  
+
   nav ul li .dropdown {
     display: none;
     position: absolute;
@@ -154,27 +169,28 @@
   nav ul li .dropdown li {
     width: 200px;
   }
-  
+
   nav ul li .dropdown li a {
     padding: 10px 10px;
     color: var(--color-white);
+    font-weight: lighter;
   }
-  
+
   nav ul li .dropdown li a:hover {
     background-color: #575757;
     border-radius: 5px;
   }
-  
+
   nav ul li:hover .dropdown {
     display: block;
 
 }
 
   .home {
-    background-image: url(../styles/images/background.png);
-    background-size: cover;
+    background: linear-gradient(to top, rgba(63, 63, 63, 0.233), var(--color-black));
+
   }
-  
+
   .intro {
     display: flex;
     justify-content: space-between; /* Distribuye el espacio entre .intro-text y .intro-image */
@@ -182,65 +198,34 @@
     height: 100vh;
     padding-top: 22rem; /* Ajusta según tu diseño */
     color: var(--color-white);
-  
-}
 
+}
 
 
 .intro-text {
-  width: 45%; /* Ajusta el ancho del texto según tu diseño */
-  margin-left: 5%; /* Mueve el contenido hacia la izquierda */
-  margin-top: 5%; /* Ajusta según tu diseño */
+
+  margin: 5% auto 0 auto; /* Centra horizontalmente y ajusta el margen superior */
 }
-  
+
+
   .intro-text h1 {
-    font-size: 2.5em;
+    font-size: 8.5em;
     font-weight: 500;
-    font-family: "arame";
-    overflow: hidden; /* Para asegurar que el texto no se desborde */
-    white-space: nowrap; /* Evita el salto de línea */
-    animation: typing 3s steps(35, end), blink-caret 0.75s step-end infinite; /* Animación de tipeo y parpadeo */
-    /* Estilo adicional para el cursor */
-    border-right: 4px solid var(--color-white); /* Efecto cursor */
-    margin-bottom: 1rem;
-    display: inline-block;
-   max-width: fit-content;
-
-    
-  }
-  
-  @keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
-  }
-  
-  @keyframes blink-caret {
-    from, to { border-color: transparent; }
-    50% { border-color: var(--color-white) }
+    font-family: "aero";
+    font-weight: lighter;
   }
 
-  @keyframes typing-finished {
-    from { border-right-color: var(--color-white); }
-    to { border-right-color: transparent; }
-}
-
-.intro-text h1.typing-finished {
-    animation: blink-caret 0.75s step-end infinite, typing-finished 0.5s forwards;
-}
 
 
-  
-  
-  
   .intro-text p {
     font-size: 1.2em;
     font-family: "matter-regular";
   }
-  
+
   .buttons {
     margin-top: 20px;
   }
-  
+
   .buttons .btn {
     background-color: var(--color-main);
     font-family: "matter-medium";
@@ -251,7 +236,7 @@
     margin-right: 10px;
     transition: background-color 0.3s;
   }
-  
+
   .buttons .btn:hover {
     background-color: var(--color-grey);
   }
@@ -295,6 +280,11 @@
 }
 
   /* Agrega al final de tu archivo CSS */
+
+#software {
+  background: linear-gradient(to bottom, rgba(63, 63, 63, 0.233), var(--color-black));
+}
+
 .section-header {
   text-align: center;
   margin: 50px ;
@@ -353,6 +343,7 @@
 .text h3 {
   font-size: 1rem;
   font-family: "matter-medium";
+  font-weight: lighter;
   margin-bottom: 20px;
   background: linear-gradient(40deg, #333 45%, #151414 100%);
   border: 1px solid #454545;
@@ -366,7 +357,7 @@
   font-size: 2.9em;
   font-family: "matter-regular";
   padding-bottom: 10px;
-}	
+}
 
 .text p {
   font-size: 1.2em;
@@ -376,7 +367,7 @@
 .text p span {
   color: var(--color-main);
   font-family: "matter-medium";
-  font-weight: 600;
+  font-weight: lighter;
 }
 
 .text ul {
@@ -393,7 +384,7 @@
 .text ul li span {
   color: var(--color-main);
   font-family: "matter-medium";
-  font-weight: 600;
+  font-weight: lighter;
 }
 
 
@@ -406,7 +397,6 @@
   max-width: 100%;
   border-radius: 10px;
 }
-
 
 .features-block {
   display: grid;
@@ -448,12 +438,13 @@
   font-size: 1.1em;
   font-family: "matter-medium";
   color: var(--color-main);
-  font-weight: 600;
+  font-weight: lighter;
 }
 
 .feature-text p {
   margin: 5px 0 0;
   font-family: "matter-medium";
+  font-weight: lighter;
 }
 
 @media (max-width: 768px) {
@@ -654,7 +645,7 @@
 
 #download {
   background: linear-gradient(to top, rgba(255, 0, 0, 0.233), var(--color-black));
-  padding: 40px 20px;
+  padding: 100px 20px;
   text-align: center;
 }
 
@@ -690,6 +681,8 @@
 #download .dropdown {
   position: relative;
   display: inline-block;
+  padding-top: 10px;
+  padding-bottom: 12px;
 }
 
 #download .dropdown-button {

@@ -21,7 +21,7 @@
         <ul>
             <li><a href="#software">Software</a>
                 <ul class="dropdown">
-                    <li><a href="#what-is">What is it?</a></li>
+                    <li class="pav"><a href="#what-is">What is it?</a></li>
                     <li><a href="#who-for">Who is it for?</a></li>
                     <li><a href="#origin">How did it start?</a></li>
                     <li><a href="#security">Features & Security</a></li>
@@ -34,18 +34,19 @@
                 </ul>
             </li>
 
-           
-           
-            <a class="button" href="#download">Download</a>
 
 
-    
 
 
-            <?php if (session('user') && session('user')->id_user > 1 && session('user')->name) : ?>
 
-                <li><a href="#menu"><?= session('user')->name; ?></a>
 
+
+
+            <?php if (session('user') && session('user')->id_user > 0 && session('user')->name) : ?>
+
+
+                <li>
+                    <p class="button" href="#menu"><?= session('user')->name; ?></p>
                     <ul class="dropdown">
                         <li><a href="<?= base_url('dashboard'); ?>">Dashboard</a></li>
                         <li><a href="<?= base_url('logout'); ?>">Log Out</a></li>
@@ -53,10 +54,10 @@
                 <?php else : ?>
                 <li><a href="<?= base_url('login'); ?>">Log In</a></li>
                 <li><a href="<?= base_url('register'); ?>">Sign Up</a></li>
+                <a class="button" href="#download">Download</a>
 
 
             <?php endif; ?>
-
 
 
 
@@ -67,12 +68,7 @@
     <section class="home" id="home">
         <div class="intro">
             <div class="intro-text">
-                <h1>Network Vulnerability Scan</h1>
-                <p>This project focuses on analyzing WiFi network vulnerabilities among other aspects...</p>
-                <div class="buttons">
-                    <a href="https://github.com/tiagocomba/NVS/wiki" target="_blank" class="btn">More Information</a>
-                    <a href="https://github.com/tiagocomba/NVS/" target="_blank" class="btn">View Repository</a>
-                </div>
+                <h1>NVS</h1>
             </div>
 
         </div>
@@ -297,65 +293,64 @@
         <h2>Frequently Asked Questions</h2>
         <div class="faq-item">
             <div class="faq-question">
-                <h3>Pregunta 1?</h3>
+                <h3>How do I perform a scan?</h3>
                 <span class="faq-icon">+</span>
             </div>
             <div class="faq-answer">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, accusamus nostrum, commodi dolorum ipsum ratione dolore inventore, voluptatum voluptas modi excepturi! Ad iste voluptates culpa aperiam officia omnis et cupiditate.</p>
+                <p>To perform a scan, you just need to be logged into our software, go to your profile in the Network Scan section, and ensure your Raspberry Pi is properly configured.</p>
             </div>
         </div>
 
         <div class="faq-item">
             <div class="faq-question">
-                <h3>Pregunta 2?</h3>
+                <h3>Is it open source?</h3>
                 <span class="faq-icon">+</span>
             </div>
             <div class="faq-answer">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nostrum culpa possimus autem ducimus explicabo earum architecto, delectus quia pariatur rem aperiam voluptate et cumque quibusdam dolor, quas mollitia nam.</p>
+                <p>Yes, our project is open source and community-oriented. If you'd like, you can fork our repository and help us improve this great tool.</p>
             </div>
         </div>
 
         <div class="faq-item">
             <div class="faq-question">
-                <h3>Pregunta 3?</h3>
+                <h3>If I don’t have a Raspberry Pi, can I still use the software?</h3>
                 <span class="faq-icon">+</span>
             </div>
             <div class="faq-answer">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nostrum culpa possimus autem ducimus explicabo earum architecto, delectus quia pariatur rem aperiam voluptate et cumque quibusdam dolor, quas mollitia nam.</p>
+                <p>The software is optimized for use with a Raspberry Pi due to its portability, but there are no issues with using it on another device.</p>
             </div>
         </div>
 
         <div class="faq-item">
             <div class="faq-question">
-                <h3>Pregunta 4?</h3>
+                <h3>If I have no knowledge of configuring the Raspberry Pi, how can I use the software?</h3>
                 <span class="faq-icon">+</span>
             </div>
             <div class="faq-answer">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nostrum culpa possimus autem ducimus explicabo earum architecto, delectus quia pariatur rem aperiam voluptate et cumque quibusdam dolor, quas mollitia nam.</p>
+                <p>You can contact us via email, and we will respond to your questions or concerns. Additionally, if you are in our area, we can visit you in person to help with the setup.</p>
             </div>
         </div>
 
         <div class="faq-item">
             <div class="faq-question">
-                <h3>Pregunta 5?</h3>
+                <h3>Does it run locally?</h3>
                 <span class="faq-icon">+</span>
             </div>
             <div class="faq-answer">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nostrum culpa possimus autem ducimus explicabo earum architecto, delectus quia pariatur rem aperiam voluptate et cumque quibusdam dolor, quas mollitia nam.</p>
+                <p>Yes, the software is designed to run locally, enhancing user privacy and security by keeping everything off the cloud.</p>
             </div>
         </div>
 
         <div class="faq-item">
             <div class="faq-question">
-                <h3>Pregunta 6?</h3>
+                <h3>Will there be a mobile version?</h3>
                 <span class="faq-icon">+</span>
             </div>
             <div class="faq-answer">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nostrum culpa possimus autem ducimus explicabo earum architecto, delectus quia pariatur rem aperiam voluptate et cumque quibusdam dolor, quas mollitia nam.</p>
+                <p>We are considering developing a mobile app to make scanning easier without relying on a computer.</p>
             </div>
         </div>
 
-        <!-- Añadir más preguntas aquí -->
 
     </section>
 
@@ -442,7 +437,7 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            const usernames = ["tiagocomba", "EzequielMonteverde"]; // Reemplaza con los nombres de usuario de GitHub
+            const usernames = ["zzzizy89", "EzequielMonteverde"]; // Reemplaza con los nombres de usuario de GitHub
             const profilesContainer = document.getElementById("profiles");
 
             usernames.forEach(username => {
