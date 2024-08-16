@@ -34,10 +34,15 @@
                 </ul>
             </li>
 
+           
+           
             <a class="button" href="#download">Download</a>
 
 
-            <?php if (session('user') && session('user')->name) : ?>
+    
+
+
+            <?php if (session('user') && session('user')->id_user > 1 && session('user')->name) : ?>
 
                 <li><a href="#menu"><?= session('user')->name; ?></a>
 
