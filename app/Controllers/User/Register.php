@@ -32,19 +32,19 @@ class Register extends BaseController
 
         // Verificar si el correo electrónico ya está registrado
         if ($userModel->isEmailTaken($email)) {
-            $this->session->setFlashdata('error', 'El correo electrónico ya está registrado.');
+            $this->session->setFlashdata('error', 'The email address is already registered.');
             return redirect()->back()->withInput();
         }
 
         // Verificar si las contraseñas coinciden
         if ($password !== $confirm_password) {
-            $this->session->setFlashdata('error', 'Las contraseñas no coinciden.');
+            $this->session->setFlashdata('error', 'The passwords do not match.');
             return redirect()->back()->withInput();
         }
 
         // Verificar si la contraseña cumple con los requisitos
         if (!preg_match('/^(?=.*[A-Z])(?=.*[!@#$&*]).{8,}$/', $password)) {
-            $this->session->setFlashdata('error', 'La contraseña debe tener al menos 8 caracteres, 1 mayúscula y 1 caracter especial.');
+            $this->session->setFlashdata('error', 'The password must have at least 8 characters, 1 uppercase letter, and 1 special character.');
             return redirect()->back()->withInput();
         }
 
@@ -63,15 +63,15 @@ class Register extends BaseController
                         $emailc = \Config\Services::email();
                         $emailc->setFrom('cibersafe.verify@gmail.com');
                         $emailc->setTo($email);
-                        $emailc->setSubject('Registro Exitoso');
-                        $emailc->setMessage('Muchas Gracias '. $name .' Por Regristrarte en Network Vulnerability Scan');
+                        $emailc->setSubject('Registration Successful');
+                        $emailc->setMessage("Thank you, $name, for registering with Network Vulnerability Scan.");
                         $emailc->send();
 
             $userModel->register($data);
-            $this->session->setFlashdata('success', 'Usuario registrado exitosamente! Redirigiendo a login...');
+            $this->session->setFlashdata('success', 'User registered successfully! Redirecting to login...');
             return redirect()->to('login');
         } else {
-            $this->session->setFlashdata('error', 'Error durante el registro');
+            $this->session->setFlashdata('error', 'Error during registration');
             return redirect()->back()->withInput();
         }
     }

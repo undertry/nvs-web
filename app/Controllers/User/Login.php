@@ -5,7 +5,7 @@ namespace App\Controllers\User;
 use App\Controllers\BaseController;
 
 use \App\Models\UserModel;
-use \App\Models\CodigoModel;
+use \App\Models\CodeModel;
 
 // use App\Models\UserModel;
 
@@ -52,11 +52,11 @@ class Login extends BaseController
                 }
             } else {
                 // Contraseña incorrecta    
-                $this->session->setFlashdata('error', 'Contraseña u correo electrónico no válido');
+                $this->session->setFlashdata('error', 'Invalid password or email address');
             }
         } else {
             // Usuario no encontrado
-            $this->session->setFlashdata('error', 'Contraseña u correo electrónico no válido');
+            $this->session->setFlashdata('error', 'Invalid password or email address');
         }
     
         // Redirigir de nuevo a la página de inicio de sesión
@@ -74,41 +74,41 @@ class Login extends BaseController
 
     public function sendemailverification()
     {
-        $Codigo = new CodigoModel();
+        $code = new CodeModel();
         $UserModel = new UserModel();
 
         $emailU = session('user')->email;
 
         // Generar código único de recuperación
         $caracteres = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+-=[]{}|;:,.<>?';
-        $cod_recup = '';
+        $recovery_code = '';
         $max = strlen($caracteres) - 1;
 
         // Buscar un código único que no esté en uso
         do {
-            $cod_recup = '';
+            $recovery_code = '';
             for ($i = 0; $i < 8; $i++) {
-                $cod_recup .= $caracteres[mt_rand(0, $max)];
+                $recovery_code .= $caracteres[mt_rand(0, $max)];
             }
-        } while ($Codigo->isCodTaken($cod_recup));
+        } while ($code->isCodTaken($recovery_code));
 
         // Obtener el usuario por correo electrónico
         $user = $UserModel->GetIdByemail($emailU);
         $id_user = $user->id_user;
 
         // Verificar si ya existe un código para el usuario
-        $existingCode = $Codigo->getCodeByUserId($id_user);
+        $existingCode = $code->getCodeByUserId($id_user);
 
         if ($existingCode) {
             // Actualizar el código existente
-            $Codigo->updatecode($cod_recup, $existingCode->id_codigo_recuperacion);
+            $code->updatecode($recovery_code, $existingCode->id_recovery_code);
         } else {
             // Insertar un nuevo código
             $data = [
-                'cod_recup' => $cod_recup,
+                'recovery_code' => $recovery_code,
                 'id_user' => $id_user
             ];
-            $Codigo->insertcod($data);
+            $code->insertcod($data);
         }
 
         // Configuracion y envio del email
@@ -116,12 +116,12 @@ class Login extends BaseController
         $email->setFrom('cibersafe.verify@gmail.com');
         $email->setTo($emailU);
         $email->setSubject('Verification Code');
-        $email->setMessage('Your code: ' . $cod_recup);
+        $email->setMessage('Your code: ' . $recovery_code);
 
         if ($email->send()) {
             return redirect()->to('2stepverify');
         } else {
-            session()->setFlashdata('error', 'verifique que la informacion de login sea correcta.');
+            session()->setFlashdata('error', 'Please check that the login information is correct.');
             return redirect()->to('login');
         }
     }
@@ -133,10 +133,10 @@ class Login extends BaseController
         public function verificationconfirm()
         {
             $userModel = new UserModel();
-            $codigoModel = new CodigoModel();
+            $codeModel = new CodeModel();
 
 
-            $codigo = $this->request->getPost('code');
+            $code = $this->request->getPost('code');
             $userse= session('user'); 
             $emailU= $userse->email;
             $user = $userModel->GetIdByemail($emailU);   
@@ -144,22 +144,22 @@ class Login extends BaseController
 
             // REALIZAR VERIFICACION QUE EL CODIGO PERTENESCA AL USUARIO EN SESION
             // Obtener el id_user asociado al código de recuperación
-            $userco = $codigoModel->getUserByCodigo($codigo);   
+            $userco = $codeModel->getUserByCode($code);   
               if (!$userco) {  
                 //cuando el codigo no se encuentra
-                $this->session->setFlashdata('error', 'Código de verificación inválido.');
+                $this->session->setFlashdata('error', 'Invalid verification code.');
                 return redirect()->to('2stepverify');
             }
             $id_userco= $userco->id_user;
             if ($id_userco !== $id_user) {  
                 //si no coincide el codigo con el usuario
-                $this->session->setFlashdata('error', 'Código de verificación inválido.');
+                $this->session->setFlashdata('error', 'Invalid verification code.');
                 return redirect()->to('2stepverify');
             }else{
             // Limpiar el código de recuperación después de cambiar la contraseña
-            $codigoModel->deleteByCodigo($codigo);
+            $codeModel->deleteByCode($code);
             session('user')->id_user = $id_user;
-            $this->session->setFlashdata('success', 'Verificación exitosa.');
+            $this->session->setFlashdata('success', 'Verification successful.');
             return redirect()->to('dashboard');
              }
         }

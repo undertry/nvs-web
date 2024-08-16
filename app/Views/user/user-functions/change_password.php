@@ -99,25 +99,25 @@
     <div class="container">
       <?php if (session('user')) : ?>
       <form method="post" action="<?= base_url('password_change'); ?>" class="form" onsubmit="return validatePassword()">
-        <h2>Cambiar Contraseña</h2>
+        <h2>Change Password</h2>
         <div class="form-input">
-          <label for="password">Contraseña Actual</label>
-          <input name="actual_password" required pattern=".{8,}" type="password" id="actual_password" placeholder="Ingrese su contraseña actual">
+          <label for="password">Current Password</label>
+          <input name="current_password" required pattern=".{8,}" type="password" id="current_password" placeholder="Enter your current password">
         </div>
         <div class="form-input">
-          <label for="password">Nueva Contraseña</label>
-          <input name="password" required pattern=".{8,}" type="password" id="password" placeholder="Ingrese su nueva contraseña">
+          <label for="password">New Password</label>
+          <input name="password" required pattern=".{8,}" type="password" id="password" placeholder="Enter your new password">
         </div>
         <div class="form-input">
-          <label for="confirm_password">Confirmar Contraseña</label>
-          <input name="confirm_password" required pattern=".{8,}" type="password" id="confirm_password" placeholder="Confirme su nueva contraseña">
+          <label for="confirm_password">Confirm Password</label>
+          <input name="confirm_password" required pattern=".{8,}" type="password" id="confirm_password" placeholder="Confirm your new password">
         </div>
         <div class="form-input">
-          <input type="submit" value="Cambiar Contraseña">
+          <input type="submit" value="Change Password">
         </div>
       </form>
       <?php else : ?>
-      <p><a href="<?= base_url('login'); ?>">Iniciar sesión</a></p>
+      <p><a href="<?= base_url('login'); ?>">Log In</a></p>
       <?php endif; ?>
     </div>
   </body>

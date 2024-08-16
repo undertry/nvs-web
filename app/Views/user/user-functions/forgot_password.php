@@ -14,7 +14,7 @@
             </div>
             <input type="submit" value="Send Code">
       </form>
-      <p> <a href="<?= base_url('login'); ?>">Login</a> </p>
+      <p> <a href="<?= base_url('login'); ?>">Log In</a> </p>
       </div>
    </body>
 </html>
