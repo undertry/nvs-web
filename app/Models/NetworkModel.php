@@ -4,13 +4,13 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class RedModel extends Model
+class NetworkModel extends Model
 {
     protected $table = 'network';
-    protected $primaryKey = 'id_red';
+    protected $primaryKey = 'id_network';
     protected $allowedFields = ['signal', 'essid', 'bssid', 'encryption', 'channel'];
 
-    public function red($networks)
+    public function network($networks)
     {
         // Filtrar redes duplicadas dentro del mismo array
         $networks = array_unique($networks, SORT_REGULAR);

@@ -4,24 +4,24 @@ namespace App\Controllers;
 
 use CodeIgniter\HTTP\CURLRequest;
 
-use App\Models\RedModel;
+use App\Models\NetworkModel;
 
-class Red extends BaseController
+class Network extends BaseController
 {
     public function index()
     {
-        $redModel = new RedModel();
+        $NetworkModel = new NetworkModel();
 
         $client = \Config\Services::curlrequest();
         $response = $client->get('http://192.168.0.164:5000/scan');
 
         if ($response->getStatusCode() == 200) {
             $networks = json_decode($response->getBody(), true);
-            $redModel->red($networks);
+            $NetworkModel->network($networks);
         } else {
             $networks = [];
         }
 
-        return view('red', ['networks' => $networks]);
+        return view('network', ['networks' => $networks]);
     }
 }
