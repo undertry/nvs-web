@@ -19,33 +19,42 @@
     <nav>
         <div class="logo"><a href="#home">NVS</a></div>
         <ul>
-            <li><a href="#features">Software</a>
+            <li><a href="#software">Software</a>
                 <ul class="dropdown">
                     <li><a href="#what-is">What is it?</a></li>
                     <li><a href="#who-for">Who is it for?</a></li>
                     <li><a href="#origin">How did it start?</a></li>
                     <li><a href="#security">Features & Security</a></li>
+                    <li><a href="#comparison">Software Comparison</a></li>
                 </ul>
             </li>
             <li><a href="#about">About Us</a>
                 <ul class="dropdown">
-                    <li><a href="#creators">Developers</a></li>
+                    <li><a href="#faq">Faq</a></li>
                 </ul>
             </li>
-            <?php if (session('user') && session('user')->id_user > 0 && session('user')->name) : ?>
+
+            <a class="button" href="#download">Download</a>
+
+
+            <?php if (session('user') && session('user')->name) : ?>
+
                 <li><a href="#menu"><?= session('user')->name; ?></a>
 
                     <ul class="dropdown">
                         <li><a href="<?= base_url('dashboard'); ?>">Dashboard</a></li>
                         <li><a href="<?= base_url('logout'); ?>">Log Out</a></li>
-
-                    <?php else : ?>
-                        <li><a href="<?= base_url('login'); ?>">Log In</a></li>
-                        <li><a href="<?= base_url('register'); ?>">Sign Up</a></li>
-                    <?php endif; ?>
-
                     </ul>
-                </li>
+                <?php else : ?>
+                <li><a href="<?= base_url('login'); ?>">Log In</a></li>
+                <li><a href="<?= base_url('register'); ?>">Sign Up</a></li>
+
+
+            <?php endif; ?>
+
+
+
+
         </ul>
     </nav>
 
@@ -70,7 +79,7 @@
 
 
     <!-- Software Section -->
-    <section id="features">
+    <section id="software">
         <div class="section-header">
             <h2>SOFTWARE</h2>
         </div>
@@ -111,52 +120,248 @@
                     <img src="<?php echo base_url('complements/styles/images/kalila.png'); ?>" alt="Description Image">
                 </div>
             </div>
+    </section>
 
-            <hr>
-            <div class="features-block" id="security">
-                <h3>Features & Security</h3>
-                <div class="feature-item">
-                    <div class="icon"><i class="fas fa-lock"></i></div>
-                    <div class="feature-text">
-                        <h4>Highly Secure</h4>
-                        <p>Passwords are hashed using Bcrypt.</p>
-                    </div>
+    <hr>
+    <section id="features">
+
+
+        <div class="features-block" id="security">
+            <h3>Features & Security</h3>
+            <div class="feature-item">
+                <div class="icon"><i class="fas fa-lock"></i></div>
+                <div class="feature-text">
+                    <h4>Highly Secure</h4>
+                    <p>Passwords are hashed using Bcrypt.</p>
                 </div>
-                <div class="feature-item">
-                    <div class="icon"><i class="fas fa-shield-alt"></i></div>
-                    <div class="feature-text">
-                        <h4>Local Deployment</h4>
-                        <p>Runs locally for enhanced security.</p>
-                    </div>
+            </div>
+            <div class="feature-item">
+                <div class="icon"><i class="fas fa-shield-alt"></i></div>
+                <div class="feature-text">
+                    <h4>Local Deployment</h4>
+                    <p>Runs locally for enhanced security.</p>
                 </div>
-                <div class="feature-item">
-                    <div class="icon"><i class="fas fa-file-download"></i></div>
-                    <div class="feature-text">
-                        <h4>Downloadable Reports</h4>
-                        <p>Delete and download scan history in PDF format.</p>
-                    </div>
+            </div>
+            <div class="feature-item">
+                <div class="icon"><i class="fas fa-file-download"></i></div>
+                <div class="feature-text">
+                    <h4>Downloadable Reports</h4>
+                    <p>Delete and download scan history in PDF format.</p>
                 </div>
-                <div class="feature-item">
-                    <div class="icon"><i class="fas fa-key"></i></div>
-                    <div class="feature-text">
-                        <h4>Advanced Security Features</h4>
-                        <p>Supports two-factor authentication, password recovery, and change password functionality.</p>
-                    </div>
+            </div>
+            <div class="feature-item">
+                <div class="icon"><i class="fas fa-key"></i></div>
+                <div class="feature-text">
+                    <h4>Advanced Security Features</h4>
+                    <p>Supports two-factor authentication, password recovery, and change password functionality.</p>
                 </div>
-                <div class="feature-item">
-                    <div class="icon"><i class="fa-solid fa-satellite-dish"></i></div>
-                    <div class="feature-text">
-                        <h4>Compatibility</h4>
-                        <p>Compatible with Raspberry Pi 3 B+ and later versions.</p>
-                    </div>
+            </div>
+            <div class="feature-item">
+                <div class="icon"><i class="fa-solid fa-satellite-dish"></i></div>
+                <div class="feature-text">
+                    <h4>Compatibility</h4>
+                    <p>Compatible with Raspberry Pi 3 B+ and later versions.</p>
                 </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <hr>
+    <section id="comparison" class="comparison-section">
+        <h2>Software Comparison</h2>
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Features</th>
+                    <th>NVS</th>
+                    <th>Nessus</th>
+                    <th>OpenVAS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Open Source</td>
+                    <td class="yes">&#10003;</td>
+                    <td class="no">&#10007;</td>
+                    <td class="yes">&#10003;</td>
+                </tr>
+                <tr>
+                    <td>Easy to Use</td>
+                    <td class="yes">&#10003;</td>
+                    <td class="yes">&#10003;</td>
+                    <td class="no">&#10007;</td>
+                </tr>
+                <tr>
+                    <td>Intuitive</td>
+                    <td class="yes">&#10003;</td>
+                    <td class="yes">&#10003;</td>
+                    <td class="no">&#10007;</td>
+                </tr>
+                <tr>
+                    <td>Performance</td>
+                    <td class="yes">&#10003;</td>
+                    <td class="no">&#10007;</td>
+                    <td class="no">&#10007;</td>
+                </tr>
+                <tr>
+                    <td>Network Scanning</td>
+                    <td class="yes">&#10003;</td>
+                    <td class="yes">&#10003;</td>
+                    <td class="yes">&#10003;</td>
+                </tr>
+                <tr>
+                    <td>Vulnerability Analysis</td>
+                    <td class="yes">&#10003;</td>
+                    <td class="yes">&#10003;</td>
+                    <td class="yes">&#10003;</td>
+                </tr>
+                <tr>
+                    <td>Identification of SO</td>
+                    <td class="yes">&#10003;</td>
+                    <td class="yes">&#10003;</td>
+                    <td class="yes">&#10003;</td>
+                </tr>
+                <tr>
+                    <td>Scan History</td>
+                    <td class="yes">&#10003;</td>
+                    <td class="yes">&#10003;</td>
+                    <td class="yes">&#10003;</td>
+                </tr>
+                <tr>
+                    <td>Use of Raspberry Pi</td>
+                    <td class="yes">&#10003;</td>
+                    <td class="yes">&#10003;</td>
+                    <td class="no">&#10007;</td>
+                </tr>
+                <tr>
+                    <td>Safety Measures</td>
+                    <td class="yes">&#10003;</td>
+                    <td class="yes">&#10003;</td>
+                    <td class="yes">&#10003;</td>
+                </tr>
+                <tr>
+                    <td>Updates and Improvements</td>
+                    <td class="yes">&#10003;</td>
+                    <td class="yes">&#10003;</td>
+                    <td class="no">&#10007;</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+
+
+
+    <hr>
+
+    <!-- About Us Section -->
+    <section class="about" id="about">
+        <div class="section-header">
+            <h2>ABOUT US</h2>
+        </div>
+
+
+
+
+        <section class="comments-section">
+            <h2>What our colleagues say about NVS</h2>
+            <div class="comments-carousel" id="comments">
+                <!-- Las tarjetas se generarán dinámicamente aquí -->
+            </div>
+        </section>
+
+
+
+        <div class="section-content">
+            <div class="text-image-block" id="creators">
+                <div class="text">
+                    <h4>Developers</h4>
+                    <div id="profiles"></div>
+                </div>
+
             </div>
         </div>
     </section>
 
     <hr>
+
+
+
+    <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>Pregunta 1?</h3>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, accusamus nostrum, commodi dolorum ipsum ratione dolore inventore, voluptatum voluptas modi excepturi! Ad iste voluptates culpa aperiam officia omnis et cupiditate.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>Pregunta 2?</h3>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nostrum culpa possimus autem ducimus explicabo earum architecto, delectus quia pariatur rem aperiam voluptate et cumque quibusdam dolor, quas mollitia nam.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>Pregunta 3?</h3>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nostrum culpa possimus autem ducimus explicabo earum architecto, delectus quia pariatur rem aperiam voluptate et cumque quibusdam dolor, quas mollitia nam.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>Pregunta 4?</h3>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nostrum culpa possimus autem ducimus explicabo earum architecto, delectus quia pariatur rem aperiam voluptate et cumque quibusdam dolor, quas mollitia nam.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>Pregunta 5?</h3>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nostrum culpa possimus autem ducimus explicabo earum architecto, delectus quia pariatur rem aperiam voluptate et cumque quibusdam dolor, quas mollitia nam.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <h3>Pregunta 6?</h3>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nostrum culpa possimus autem ducimus explicabo earum architecto, delectus quia pariatur rem aperiam voluptate et cumque quibusdam dolor, quas mollitia nam.</p>
+            </div>
+        </div>
+
+        <!-- Añadir más preguntas aquí -->
+
+    </section>
+
+    <hr>
+
+
+
+
+
     <section id="download">
-        <div class="section-header">
+        <div class="section-header-download">
             <h2>Download NVS</h2>
         </div>
         <div class="section-content">
@@ -172,23 +377,6 @@
                         <a href="https://github.com/tiagocomba/NVS/archive/refs/heads/main.zip" target="_blank">Download .zip</a>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <hr>
-    <!-- About Us Section -->
-    <section class="about" id="about">
-        <div class="section-header">
-            <h2>ABOUT US</h2>
-        </div>
-        <div class="section-content">
-            <div class="text-image-block" id="creators">
-                <div class="text">
-                    <h4>Developers</h4>
-                    <div id="profiles"></div>
-                </div>
-
             </div>
         </div>
     </section>
@@ -253,39 +441,62 @@
             const profilesContainer = document.getElementById("profiles");
 
             usernames.forEach(username => {
-                fetch(`https://api.github.com/users/${username}`)
-                    .then(response => response.json())
-                    .then(data => {
-                        const profileDiv = document.createElement("div");
-                        profileDiv.classList.add("profile");
+                // Intenta obtener datos del localStorage
+                const storedProfile = localStorage.getItem(`profile_${username}`);
 
-                        const img = document.createElement("img");
-                        img.src = data.avatar_url;
-                        img.alt = `${data.login}'s Profile Image`;
-
-                        const link = document.createElement("a");
-                        link.href = data.html_url;
-                        link.textContent = data.login;
-
-                        const description = document.createElement("p");
-                        description.textContent = data.bio ? data.bio : "No bio available";
-
-                        const followers = document.createElement("p");
-                        followers.classList.add("followers");
-                        followers.textContent = `Followers: ${data.followers}`;
-
-                        const achievements = document.createElement("div");
-                        achievements.classList.add("achievements");
-
-                        profileDiv.appendChild(img);
-                        profileDiv.appendChild(link);
-                        profileDiv.appendChild(description);
-                        profileDiv.appendChild(followers);
-                        profileDiv.appendChild(achievements);
-                        profilesContainer.appendChild(profileDiv);
-                    })
-                    .catch(error => console.error("Error fetching GitHub profile:", error));
+                if (storedProfile) {
+                    // Si hay datos almacenados, úsalos directamente
+                    displayProfile(JSON.parse(storedProfile));
+                } else {
+                    // Si no hay datos en localStorage, realiza la petición a la API
+                    fetch(`https://api.github.com/users/${username}`)
+                        .then(response => response.json())
+                        .then(data => {
+                            // Guarda la respuesta en localStorage
+                            localStorage.setItem(`profile_${username}`, JSON.stringify(data));
+                            displayProfile(data);
+                        })
+                        .catch(error => {
+                            console.error("Error fetching GitHub profile:", error);
+                        });
+                }
             });
+
+            function displayProfile(data) {
+                const profileDiv = document.createElement("div");
+                profileDiv.classList.add("profile");
+
+                // Verificación de la URL del avatar
+                const img = document.createElement("img");
+                if (data.avatar_url) {
+                    img.src = data.avatar_url;
+                    img.alt = `${data.login}'s Profile Image`;
+                } else {
+                    img.src = "ruta/a/una/imagen/por/defecto.png"; // Imagen por defecto
+                    img.alt = "Imagen por defecto";
+                }
+
+                const link = document.createElement("a");
+                link.href = data.html_url;
+                link.textContent = data.login;
+
+                const description = document.createElement("p");
+                description.textContent = data.bio ? data.bio : "No bio available";
+
+                const followers = document.createElement("p");
+                followers.classList.add("followers");
+                followers.textContent = `Followers: ${data.followers}`;
+
+                const achievements = document.createElement("div");
+                achievements.classList.add("achievements");
+
+                profileDiv.appendChild(img);
+                profileDiv.appendChild(link);
+                profileDiv.appendChild(description);
+                profileDiv.appendChild(followers);
+                profileDiv.appendChild(achievements);
+                profilesContainer.appendChild(profileDiv);
+            }
         });
     </script>
 
@@ -302,7 +513,7 @@
                             menu.style.opacity = "1";
                             menu.style.visibility = "visible";
                             menu.style.transform = "translateY(0)";
-                        }, 100); // Añade un pequeño retraso antes de iniciar la animación
+                        }, 10); // Añade un pequeño retraso antes de iniciar la animación
                     }
                 });
 
@@ -320,6 +531,8 @@
             });
         });
     </script>
+
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Manejo del dropdown
@@ -361,7 +574,84 @@
 
 
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const usernames = ["schwgon", "Dr-Cristian", "LaureanoCarlos", "Craifran", "Randalfd", "TadeoBoglione", "Naahuuel"]; // Agrega aquí los nombres de usuario de GitHub
+            const commentsContainer = document.getElementById("comments");
 
+            // Variable para almacenar todas las tarjetas antes de duplicarlas
+            let allCommentsHTML = "";
+
+            usernames.forEach(username => {
+                const storedProfile = localStorage.getItem(`profile_${username}`);
+
+                if (storedProfile) {
+                    allCommentsHTML += generateCommentHTML(JSON.parse(storedProfile));
+                } else {
+                    fetch(`https://api.github.com/users/${username}`)
+                        .then(response => response.json())
+                        .then(data => {
+                            localStorage.setItem(`profile_${username}`, JSON.stringify(data));
+                            allCommentsHTML += generateCommentHTML(data);
+                        })
+                        .catch(error => {
+                            console.error("Error fetching GitHub profile:", error);
+                        });
+                }
+            });
+
+            // Función para generar el HTML de cada tarjeta
+            function generateCommentHTML(data) {
+                return `
+            <div class="comment-card">
+                <img src="${data.avatar_url}" alt="${data.login}'s Profile Image">
+                <div class="comment-content">
+                    <h3>${data.name ? data.name : data.login}</h3>
+                    <p>Este es un comentario de ejemplo sobre tu software.</p>
+                </div>
+            </div>
+        `;
+            }
+
+            // Espera un breve tiempo para asegurarse de que todo el HTML se ha generado antes de duplicar
+            setTimeout(() => {
+                commentsContainer.innerHTML = allCommentsHTML + allCommentsHTML; // Duplicamos todo el contenido al final
+            }, 500);
+
+            // Configuración del carrusel continuo
+            let scrollAmount = 0;
+            const scrollStep = 1; // Ajusta esta velocidad para que sea más lenta o más rápida
+
+            function scrollCarousel() {
+                scrollAmount -= scrollStep;
+                commentsContainer.style.transform = `translateX(${scrollAmount}px)`;
+
+                if (Math.abs(scrollAmount) >= commentsContainer.scrollWidth / 2) {
+                    scrollAmount = 0;
+                }
+                requestAnimationFrame(scrollCarousel);
+            }
+
+            scrollCarousel(); // Iniciar el scroll continuo
+        });
+    </script>
+
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
+
+                // Para cerrar las otras respuestas cuando se abre una nueva
+                document.querySelectorAll('.faq-item').forEach(otherItem => {
+                    if (otherItem !== parent) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+            });
+        });
+    </script>
 
 
 </body>
