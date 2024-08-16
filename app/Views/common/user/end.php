@@ -19,12 +19,12 @@
         const passwordCriteria = /^(?=.*[A-Z])(?=.*[!@#$&*]).{8,}$/;
 
         if (!passwordCriteria.test(password)) {
-            alert('La contraseña debe tener al menos 8 caracteres, 1 mayúscula y 1 caracter especial.');
+            alert('The password must have at least 8 characters, 1 uppercase letter, and 1 special character.');
             return false;
         }
         //   Si las contraseñas no coinciden se vacia los inputs de password
         if (password !== confirmPassword) {
-            alert('Las contraseñas no coinciden.');
+            alert('The passwords do not match.');
             document.getElementById('password').value = '';
             document.getElementById('confirm_password').value = '';
             return false;
@@ -33,7 +33,7 @@
         return true;
     }
     //   Mensaje de la contraseña no coincide
-    <?php if (session()->getFlashdata('error') === 'Las contraseñas no coinciden.') : ?>
+    <?php if (session()->getFlashdata('error') === 'The passwords do not match.') : ?>
         document.getElementById('password').value = '';
         document.getElementById('confirm_password').value = '';
     <?php endif; ?>

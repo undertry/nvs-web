@@ -14,10 +14,10 @@ class Change_Password extends BaseController
     public function forgot_password()
     {
         $user = session('user');
-        if (!$user) {
-            return view('user/user-functions/forgot_password');
-        } else {
+        if ($user && $user->id_user < 0) {
             return view("user/profile/dashboard");
+        } else {
+            return view('user/user-functions/forgot_password');
         }
     }
     public function change_forgot()
@@ -115,7 +115,7 @@ class Change_Password extends BaseController
             return redirect()->to('change_forgot');
         }
         // Obtener el id_user asociado al código de recuperación
-        $user = $codeModel->getUserByCodigo($code);
+        $user = $codeModel->getUserByCode($code);
         if (!$user) {
             $this->session->setFlashdata('error', 'Invalid recovery code');
             return redirect()->to('change_forgot');
@@ -128,7 +128,7 @@ class Change_Password extends BaseController
         $userModel->password_change($id_user, $data);
 
         // Limpiar el código de recuperación después de cambiar la contraseña
-        $codeModel->deleteByCodigo($code);
+        $codeModel->deleteByCode($code);
 
         $this->session->setFlashdata('success', 'Password changed successfully');
         return redirect()->to('login');

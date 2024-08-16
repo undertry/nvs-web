@@ -33,10 +33,12 @@
                     <li><a href="#faq">Faq</a></li>
                 </ul>
             </li>
+
             <a class="button" href="#download">Download</a>
 
 
             <?php if (session('user') && session('user')->name) : ?>
+
                 <li><a href="#menu"><?= session('user')->name; ?></a>
 
                     <ul class="dropdown">

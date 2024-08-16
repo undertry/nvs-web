@@ -12,9 +12,9 @@
                 <li>
                     <strong>ESSID:</strong> <?= esc($network['essid']) ?><br>
                     <strong>BSSID:</strong> <?= esc($network['bssid']) ?><br>
-                    <strong>Señal:</strong> <?= esc($network['signal']) ?><br>
-                    <strong>Canal:</strong> <?= esc($network['channel']) ?><br>
-                    <strong>Encriptación:</strong> <?= esc($network['encryption']) ?><br>
+                    <strong>Signal:</strong> <?= esc($network['signal']) ?><br>
+                    <strong>Channel:</strong> <?= esc($network['channel']) ?><br>
+                    <strong>Encryption:</strong> <?= esc($network['encryption']) ?><br>
                     <hr>
                 </li>
             <?php endforeach; ?>
