@@ -12,15 +12,15 @@
         // Agrupar los detalles del scan por cada scan
         $scansGrouped = [];
         foreach ($scanDetails as $detail) {
-          $scansGrouped[$detail['fecha_scan']][] = $detail;
+          $scansGrouped[$detail['scan_date']][] = $detail;
         }
         ?>
-        <?php foreach ($scansGrouped as $fecha_scan => $details) : ?>
+        <?php foreach ($scansGrouped as $scan_date => $details) : ?>
           <div class="scan-group">
             <div class="scan-summary" onclick="toggleDetails(this)">
               <h2>Scan Information</h2>
               <ul>
-                <li><strong>Scan Date:</strong> <?= $fecha_scan ?></li>
+                <li><strong>Scan Date:</strong> <?= $scan_date ?></li>
                 <li><strong>user:</strong> <?= $details[0]['user_name'] ?></li>
               </ul>
             </div>
@@ -40,7 +40,7 @@
                 <?php foreach ($details as $detail) : ?>
                   <h3>Device</h3>
                   <ul>
-                    <li><strong>IP:</strong> <?= $detail['IP_address'] ?></li>
+                    <li><strong>IP:</strong> <?= $detail['ip_address'] ?></li>
                     <li><strong>Operating System:</strong> <?= $detail['operating_system'] ?></li>
                     <li><strong>MAC:</strong> <?= $detail['mac_address'] ?></li>
                   </ul>
