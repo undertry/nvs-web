@@ -8,25 +8,23 @@ class NetworkModel extends Model
 {
     protected $table = 'network';
     protected $primaryKey = 'id_network';
-    protected $allowedFields = ['signal', 'essid', 'bssid', 'encryption', 'channel'];
+    protected $allowedFields = ['signal', 'essid', 'bssid', 'id_security_type', 'channel'];
 
     public function network($networks)
     {
         // Filtrar redes duplicadas dentro del mismo array
-        $networks = array_unique($networks, SORT_REGULAR);
+      //  $networks = array_unique($networks, SORT_REGULAR);
 
-        foreach ($networks as $network) {
             // Verificar si ya existe una red con los mismos valores de bssid, channel, encryption, y essid
-            $existingNetwork = $this->where('bssid', $network['bssid'])
-                                    ->where('channel', $network['channel'])
-                                    ->where('encryption', $network['encryption'])
-                                    ->where('essid', $network['essid'])
+            $existingNetwork = $this->where('bssid', $networks['bssid'])
+                                    ->where('channel', $networks['channel'])
+                                    ->where('id_security_type', $networks['id_security_type'])
+                                    ->where('essid', $networks['essid'])
                                     ->first();
 
             // Si no existe, insertar la nueva red
             if (!$existingNetwork) {
-                $this->insert($network);
+                $this->insert($networks);
             }
-        }
     }
 }
