@@ -14,7 +14,10 @@ class Change_Password extends BaseController
     public function forgot_password()
     {
         $user = session('user');
-        if ($user && $user->id_user < 0) {
+
+
+        if ($user && $user->id_user > 0) {
+
             return view("user/profile/dashboard");
         } else {
             return view('user/user-functions/forgot_password');
