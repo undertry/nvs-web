@@ -3,14 +3,14 @@
 
 <title>NVS</title>
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const heading = document.querySelector('.intro-text h1');
-        heading.addEventListener('animationend', function() {
-            if (event.animationName === 'typing') {
-                heading.classList.add('typing-finished');
-            }
-        });
+document.addEventListener('DOMContentLoaded', function() {
+    const heading = document.querySelector('.intro-text h1');
+    heading.addEventListener('animationend', function() {
+        if (event.animationName === 'typing') {
+            heading.classList.add('typing-finished');
+        }
     });
+});
 </script>
 
 </head>
@@ -18,31 +18,23 @@
 
 <body>
 
-<nav>
-    <div class="nav-left">
-        <ul>
-            <li><a href="#software">Software</a>
-                <ul class="dropdown">
-                    <li class="pav"><a href="#what-is">What is it?</a></li>
-                    <li><a href="#who-for">Who is it for?</a></li>
-                    <li><a href="#origin">How did it start?</a></li>
-                    <li><a href="#security">Features & Security</a></li>
-                    <li><a href="#comparison">Software Comparison</a></li>
-                </ul>
-            </li>
-            <li><a href="#about">About Us</a>
-                <ul class="dropdown">
-                    <li><a href="#faq">Faq</a></li>
-                </ul>
-            </li>
-        </ul>
-    </div>
+    <nav>
+        <div class="nav-left">
+            <ul>
+                <li><a href="#software">Software</a>
 
-    <div class="logo"><a href="#home">NVS</a></div>
+                </li>
+                <li><a href="#about">About Us</a>
 
-    <div class="nav-right">
-        <ul>
-            <?php if (session('user') && session('user')->id_user > 0 && session('user')->name) : ?>
+                </li>
+            </ul>
+        </div>
+
+        <div class="logo"><a href="#home">NVS</a></div>
+
+        <div class="nav-right">
+            <ul>
+                <?php if (session('user') && session('user')->id_user > 0 && session('user')->name) : ?>
                 <li>
                     <p class="button" href="#menu"><?= session('user')->name; ?></p>
                     <ul class="dropdown">
@@ -50,39 +42,42 @@
                         <li><a href="<?= base_url('logout'); ?>">Log Out</a></li>
                     </ul>
                 </li>
-            <?php else : ?>
+                <?php else : ?>
                 <li><a href="<?= base_url('login'); ?>">Log In</a></li>
                 <li><a href="<?= base_url('register'); ?>">Sign Up</a></li>
-            <?php endif; ?>
-            <li><a class="button" href="#download">Download</a></li>
-        </ul>
-    </div>
-</nav>
-
-
-
-<section class="home" id="home">
-    <div class="intro">
-        <div class="intro-text">
-            <h1 class="title-animate">NETWORK VULNERABILITY SCANNER</h1>
-            <p class="intro-subtext">New Reality is a design studio based in Tokyo, Japan. We work with many companies to build and proactively deliver engaging brand experiences. We are unique in our ability to take a strategic approach while being visually driven.</p>
+                <?php endif; ?>
+                <li><a class="button" href="#download">Download</a></li>
+            </ul>
         </div>
-    </div>
-</section>
+    </nav>
 
 
+
+    <section class="home" id="home">
+        <div class="intro">
+            <div class="intro-text">
+                <h1 class="title-animate">NETWORK VULNERABILITY SCANNER</h1>
+                <p class="intro-subtext">New Reality is a design studio based in Tokyo, Japan. We work with many
+                    companies to build and proactively deliver engaging brand experiences. We are unique in our ability
+                    to take a strategic approach while being visually driven.</p>
+            </div>
+        </div>
+    </section>
+
+    <hr>
 
     <!-- Software Section -->
     <section id="software">
-        <div class="section-header">
+        <div class="section-header hidden">
             <h2>SOFTWARE</h2>
         </div>
         <div class="section-content">
-            <div class="text-image-block" id="what-is">
+            <div class="text-image-block hidden" id="what-is">
                 <div class="text">
                     <h3>What is it?</h3>
-                    <h4>Software, Vulnerability, scan, networks</h4>
-                    <p>It is a software designed to analyze available WiFi networks. Upon selecting a specific network, the software can perform the following functions:</p>
+                    <h4>SOFTWARE | VULNERABILITY | SCAN | NETWORKS</h4>
+                    <p>It is a software designed to analyze available WiFi networks. Upon selecting a specific network,
+                        the software can perform the following functions:</p>
                     <ul>
                         <li>Scan the network to detect <span>connected devices.</span></li>
                         <li>Identify the <span>operating system</span> of each device.</li>
@@ -90,31 +85,59 @@
                         <li>Use a <span>Raspberry Pi</span> for data collection.</li>
                     </ul>
                 </div>
-                <div class="image">
-                    <img src="<?php echo base_url('complements/styles/images/prueba.png'); ?>" alt="Description Image">
-                </div>
+
             </div>
-            <div class="text-image-block who-for" id="who-for">
-                <div class="image">
-                    <img src="<?php echo base_url('complements/styles/images/hacker.png'); ?>" alt="Description Image">
-                </div>
+            <div class="text-image-block hidden" id="who-for">
+
                 <div class="text">
                     <h3>Who is it for?</h3>
-                    <h4>Individuals passionate about cybersecurity</h4>
-                    <p>It is for individuals who are <span>passionate</span> about <span>cybersecurity</span> and want to add an extra layer of <span>security</span> to their networks by performing <span>daily diagnostics</span> to enhance the <span>safety</span> of their WiFi.</p>
+                    <h4>INDIVIDUALS PASSIONATE ABOUT CYBERSECURITY</h4>
+                    <p>It is for individuals who are <span>passionate</span> about <span>cybersecurity</span> and want
+                        to add an extra layer of <span>security</span> to their networks by performing <span>daily
+                            diagnostics</span> to enhance the <span>safety</span> of their WiFi.</p>
                 </div>
             </div>
-            <div class="text-image-block" id="origin">
+            <div class="text-image-block hidden" id="origin">
                 <div class="text">
                     <h3>How did it start?</h3>
-                    <h4>From an idea to a project</h4>
-                    <p>It began as a <span>mere idea</span>, but after giving it some thought, we realized it would be a <span>great project</span> for the thesis we needed to present. We conducted research until we could <span>solidify this fantastic concept.</span> The more we studied the topic, the more passionate we became about developing <span>this project for the community.</span></p>
+                    <h4>FROM AN IDEA TO A PROJECT</h4>
+                    <p>It began as a <span>mere idea</span>, but after giving it some thought, we realized it would be a
+                        <span>great project</span> for the thesis we needed to present. We conducted research until we
+                        could <span>solidify this fantastic concept.</span> The more we studied the topic, the more
+                        passionate we became about developing <span>this project for the community.</span>
+                    </p>
                 </div>
-                <div class="image">
-                    <img src="<?php echo base_url('complements/styles/images/kalila.png'); ?>" alt="Description Image">
+
+            </div>
+            <div class="text hidden">
+                <h3>PREVIEW</h3>
+            </div>
+
+            <div class="carousel-container hidden">
+
+                <div class="carousel">
+                    <img src="<?php echo base_url('complements/styles/images/kali.jpg'); ?>" alt="Image 1">
+                    <img src="<?php echo base_url('complements/styles/images/3.jpg'); ?>" alt="Image 2">
+                    <img src="<?php echo base_url('complements/styles/images/preview.png'); ?>" alt="Image 3"
+                        class="expanded" id="initial-expanded">
+                    <img src="<?php echo base_url('complements/styles/images/network.jpg'); ?>" alt="Image 4">
+                    <img src="<?php echo base_url('complements/styles/images/grey.jpg'); ?>" alt="Image 5">
+                </div>
+                <div class="indicator-container">
+                    <!-- Indicadores de scroll -->
+                    <div class="indicator"></div>
+                    <div class="indicator"></div>
+                    <div class="indicator"></div>
+                    <div class="indicator"></div>
+                    <div class="indicator"></div>
                 </div>
             </div>
+        </div>
     </section>
+
+
+
+
 
     <hr>
     <section id="features">
@@ -290,7 +313,8 @@
                 <span class="faq-icon">+</span>
             </div>
             <div class="faq-answer">
-                <p>To perform a scan, you just need to be logged into our software, go to your profile in the Network Scan section, and ensure your Raspberry Pi is properly configured.</p>
+                <p>To perform a scan, you just need to be logged into our software, go to your profile in the Network
+                    Scan section, and ensure your Raspberry Pi is properly configured.</p>
             </div>
         </div>
 
@@ -300,7 +324,8 @@
                 <span class="faq-icon">+</span>
             </div>
             <div class="faq-answer">
-                <p>Yes, our project is open source and community-oriented. If you'd like, you can fork our repository and help us improve this great tool.</p>
+                <p>Yes, our project is open source and community-oriented. If you'd like, you can fork our repository
+                    and help us improve this great tool.</p>
             </div>
         </div>
 
@@ -310,7 +335,8 @@
                 <span class="faq-icon">+</span>
             </div>
             <div class="faq-answer">
-                <p>The software is optimized for use with a Raspberry Pi due to its portability, but there are no issues with using it on another device.</p>
+                <p>The software is optimized for use with a Raspberry Pi due to its portability, but there are no issues
+                    with using it on another device.</p>
             </div>
         </div>
 
@@ -320,7 +346,8 @@
                 <span class="faq-icon">+</span>
             </div>
             <div class="faq-answer">
-                <p>You can contact us via email, and we will respond to your questions or concerns. Additionally, if you are in our area, we can visit you in person to help with the setup.</p>
+                <p>You can contact us via email, and we will respond to your questions or concerns. Additionally, if you
+                    are in our area, we can visit you in person to help with the setup.</p>
             </div>
         </div>
 
@@ -330,7 +357,8 @@
                 <span class="faq-icon">+</span>
             </div>
             <div class="faq-answer">
-                <p>Yes, the software is designed to run locally, enhancing user privacy and security by keeping everything off the cloud.</p>
+                <p>Yes, the software is designed to run locally, enhancing user privacy and security by keeping
+                    everything off the cloud.</p>
             </div>
         </div>
 
@@ -367,7 +395,8 @@
                             <span class="original-text">Clone repository</span>
                             <span class="copied-message">Copied</span>
                         </a>
-                        <a href="https://github.com/tiagocomba/NVS/archive/refs/heads/main.zip" target="_blank">Download .zip</a>
+                        <a href="https://github.com/tiagocomba/NVS/archive/refs/heads/main.zip" target="_blank">Download
+                            .zip</a>
                     </div>
                 </div>
             </div>
@@ -429,173 +458,178 @@
 
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const usernames = ["zzzizy89", "EzequielMonteverde"]; // Reemplaza con los nombres de usuario de GitHub
-            const profilesContainer = document.getElementById("profiles");
+    document.addEventListener("DOMContentLoaded", function() {
+        const usernames = ["zzzizy89", "EzequielMonteverde"]; // Reemplaza con los nombres de usuario de GitHub
+        const profilesContainer = document.getElementById("profiles");
 
-            usernames.forEach(username => {
-                // Intenta obtener datos del localStorage
-                const storedProfile = localStorage.getItem(`profile_${username}`);
+        usernames.forEach(username => {
+            // Intenta obtener datos del localStorage
+            const storedProfile = localStorage.getItem(`profile_${username}`);
 
-                if (storedProfile) {
-                    // Si hay datos almacenados, úsalos directamente
-                    displayProfile(JSON.parse(storedProfile));
-                } else {
-                    // Si no hay datos en localStorage, realiza la petición a la API
-                    fetch(`https://api.github.com/users/${username}`)
-                        .then(response => response.json())
-                        .then(data => {
-                            // Guarda la respuesta en localStorage
-                            localStorage.setItem(`profile_${username}`, JSON.stringify(data));
-                            displayProfile(data);
-                        })
-                        .catch(error => {
-                            console.error("Error fetching GitHub profile:", error);
-                        });
-                }
-            });
-
-            function displayProfile(data) {
-                const profileDiv = document.createElement("div");
-                profileDiv.classList.add("profile");
-
-                // Verificación de la URL del avatar
-                const img = document.createElement("img");
-                if (data.avatar_url) {
-                    img.src = data.avatar_url;
-                    img.alt = `${data.login}'s Profile Image`;
-                } else {
-                    img.src = "ruta/a/una/imagen/por/defecto.png"; // Imagen por defecto
-                    img.alt = "Imagen por defecto";
-                }
-
-                const link = document.createElement("a");
-                link.href = data.html_url;
-                link.textContent = data.login;
-
-                const description = document.createElement("p");
-                description.textContent = data.bio ? data.bio : "No bio available";
-
-                const followers = document.createElement("p");
-                followers.classList.add("followers");
-                followers.textContent = `Followers: ${data.followers}`;
-
-                const achievements = document.createElement("div");
-                achievements.classList.add("achievements");
-
-                profileDiv.appendChild(img);
-                profileDiv.appendChild(link);
-                profileDiv.appendChild(description);
-                profileDiv.appendChild(followers);
-                profileDiv.appendChild(achievements);
-                profilesContainer.appendChild(profileDiv);
+            if (storedProfile) {
+                // Si hay datos almacenados, úsalos directamente
+                displayProfile(JSON.parse(storedProfile));
+            } else {
+                // Si no hay datos en localStorage, realiza la petición a la API
+                fetch(`https://api.github.com/users/${username}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        // Guarda la respuesta en localStorage
+                        localStorage.setItem(`profile_${username}`, JSON.stringify(data));
+                        displayProfile(data);
+                    })
+                    .catch(error => {
+                        console.error("Error fetching GitHub profile:", error);
+                    });
             }
         });
+
+        function displayProfile(data) {
+            const profileDiv = document.createElement("div");
+            profileDiv.classList.add("profile");
+
+            // Verificación de la URL del avatar
+            const img = document.createElement("img");
+            if (data.avatar_url) {
+                img.src = data.avatar_url;
+                img.alt = `${data.login}'s Profile Image`;
+            } else {
+                img.src = "ruta/a/una/imagen/por/defecto.png"; // Imagen por defecto
+                img.alt = "Imagen por defecto";
+            }
+
+            const link = document.createElement("a");
+            link.href = data.html_url;
+            link.textContent = data.login;
+
+            const description = document.createElement("p");
+            description.textContent = data.bio ? data.bio : "No bio available";
+
+            const followers = document.createElement("p");
+            followers.classList.add("followers");
+            followers.textContent = `Followers: ${data.followers}`;
+
+            const achievements = document.createElement("div");
+            achievements.classList.add("achievements");
+
+            profileDiv.appendChild(img);
+            profileDiv.appendChild(link);
+            profileDiv.appendChild(description);
+            profileDiv.appendChild(followers);
+            profileDiv.appendChild(achievements);
+            profilesContainer.appendChild(profileDiv);
+        }
+    });
     </script>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const dropdowns = document.querySelectorAll("nav ul li");
+    document.addEventListener("DOMContentLoaded", function() {
+        const dropdowns = document.querySelectorAll("nav ul li");
 
-            dropdowns.forEach(dropdown => {
-                dropdown.addEventListener("mouseenter", function() {
-                    const menu = this.querySelector(".dropdown");
-                    if (menu) {
-                        menu.style.display = "block";
-                        setTimeout(() => {
-                            menu.style.opacity = "1";
-                            menu.style.visibility = "visible";
-                            menu.style.transform = "translateY(0)";
-                        }, 10); // Añade un pequeño retraso antes de iniciar la animación
-                    }
-                });
-
-                dropdown.addEventListener("mouseleave", function() {
-                    const menu = this.querySelector(".dropdown");
-                    if (menu) {
-                        menu.style.opacity = "0";
-                        menu.style.visibility = "hidden";
-                        menu.style.transform = "translateY(10px)";
-                        setTimeout(() => {
-                            menu.style.display = "none";
-                        }, 500); // Asegúrate de que coincida con la duración de la transición en el CSS
-                    }
-                });
-            });
-        });
-    </script>
-
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Manejo del dropdown
-            document.querySelector('.dropdown-button').addEventListener('click', function() {
-                var dropdownContent = document.querySelector('.dropdown-content');
-                dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
-            });
-
-            // Manejo del clic en "Clonar Repositorio"
-            document.querySelector('#clone-repo').addEventListener('click', function(e) {
-                e.preventDefault(); // Evitar la acción por defecto del enlace
-
-                const url = 'git clone https://github.com/tiagocomba/NVS.git';
-
-                // Crear un elemento de texto oculto para copiar al portapapeles
-                const tempInput = document.createElement('input');
-                tempInput.value = url;
-                document.body.appendChild(tempInput);
-                tempInput.select();
-                document.execCommand('copy');
-                document.body.removeChild(tempInput);
-
-                // Reemplazar el texto original con el mensaje de copiado
-                const originalText = this.querySelector('.original-text');
-                const message = this.querySelector('.copied-message');
-
-                // Ocultar el texto original y mostrar el mensaje
-                originalText.style.display = 'none';
-                message.style.display = 'inline';
-
-                // Restaurar el texto original después de 2 segundos
-                setTimeout(() => {
-                    originalText.style.display = 'inline';
-                    message.style.display = 'none';
-                }, 2000);
-            });
-        });
-    </script>
-
-
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const usernames = ["schwgon", "Dr-Cristian", "LaureanoCarlos", "Craifran", "Randalfd", "TadeoBoglione", "Naahuuel"]; // Agrega aquí los nombres de usuario de GitHub
-            const commentsContainer = document.getElementById("comments");
-
-            // Variable para almacenar todas las tarjetas antes de duplicarlas
-            let allCommentsHTML = "";
-
-            usernames.forEach(username => {
-                const storedProfile = localStorage.getItem(`profile_${username}`);
-
-                if (storedProfile) {
-                    allCommentsHTML += generateCommentHTML(JSON.parse(storedProfile));
-                } else {
-                    fetch(`https://api.github.com/users/${username}`)
-                        .then(response => response.json())
-                        .then(data => {
-                            localStorage.setItem(`profile_${username}`, JSON.stringify(data));
-                            allCommentsHTML += generateCommentHTML(data);
-                        })
-                        .catch(error => {
-                            console.error("Error fetching GitHub profile:", error);
-                        });
+        dropdowns.forEach(dropdown => {
+            dropdown.addEventListener("mouseenter", function() {
+                const menu = this.querySelector(".dropdown");
+                if (menu) {
+                    menu.style.display = "block";
+                    setTimeout(() => {
+                        menu.style.opacity = "1";
+                        menu.style.visibility = "visible";
+                        menu.style.transform = "translateY(0)";
+                    }, 10); // Añade un pequeño retraso antes de iniciar la animación
                 }
             });
 
-            // Función para generar el HTML de cada tarjeta
-            function generateCommentHTML(data) {
-                return `
+            dropdown.addEventListener("mouseleave", function() {
+                const menu = this.querySelector(".dropdown");
+                if (menu) {
+                    menu.style.opacity = "0";
+                    menu.style.visibility = "hidden";
+                    menu.style.transform = "translateY(10px)";
+                    setTimeout(() => {
+                            menu.style.display = "none";
+                        },
+                        500
+                    ); // Asegúrate de que coincida con la duración de la transición en el CSS
+                }
+            });
+        });
+    });
+    </script>
+
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Manejo del dropdown
+        document.querySelector('.dropdown-button').addEventListener('click', function() {
+            var dropdownContent = document.querySelector('.dropdown-content');
+            dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' :
+                'block';
+        });
+
+        // Manejo del clic en "Clonar Repositorio"
+        document.querySelector('#clone-repo').addEventListener('click', function(e) {
+            e.preventDefault(); // Evitar la acción por defecto del enlace
+
+            const url = 'git clone https://github.com/tiagocomba/NVS.git';
+
+            // Crear un elemento de texto oculto para copiar al portapapeles
+            const tempInput = document.createElement('input');
+            tempInput.value = url;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+
+            // Reemplazar el texto original con el mensaje de copiado
+            const originalText = this.querySelector('.original-text');
+            const message = this.querySelector('.copied-message');
+
+            // Ocultar el texto original y mostrar el mensaje
+            originalText.style.display = 'none';
+            message.style.display = 'inline';
+
+            // Restaurar el texto original después de 2 segundos
+            setTimeout(() => {
+                originalText.style.display = 'inline';
+                message.style.display = 'none';
+            }, 2000);
+        });
+    });
+    </script>
+
+
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const usernames = ["schwgon", "Dr-Cristian", "LaureanoCarlos", "Craifran", "Randalfd", "TadeoBoglione",
+            "Naahuuel"
+        ]; // Agrega aquí los nombres de usuario de GitHub
+        const commentsContainer = document.getElementById("comments");
+
+        // Variable para almacenar todas las tarjetas antes de duplicarlas
+        let allCommentsHTML = "";
+
+        usernames.forEach(username => {
+            const storedProfile = localStorage.getItem(`profile_${username}`);
+
+            if (storedProfile) {
+                allCommentsHTML += generateCommentHTML(JSON.parse(storedProfile));
+            } else {
+                fetch(`https://api.github.com/users/${username}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        localStorage.setItem(`profile_${username}`, JSON.stringify(data));
+                        allCommentsHTML += generateCommentHTML(data);
+                    })
+                    .catch(error => {
+                        console.error("Error fetching GitHub profile:", error);
+                    });
+            }
+        });
+
+        // Función para generar el HTML de cada tarjeta
+        function generateCommentHTML(data) {
+            return `
             <div class="comment-card">
                 <img src="${data.avatar_url}" alt="${data.login}'s Profile Image">
                 <div class="comment-content">
@@ -604,47 +638,108 @@
                 </div>
             </div>
         `;
+        }
+
+        // Espera un breve tiempo para asegurarse de que todo el HTML se ha generado antes de duplicar
+        setTimeout(() => {
+            commentsContainer.innerHTML = allCommentsHTML +
+                allCommentsHTML; // Duplicamos todo el contenido al final
+        }, 500);
+
+        // Configuración del carrusel continuo
+        let scrollAmount = 0;
+        const scrollStep = 1; // Ajusta esta velocidad para que sea más lenta o más rápida
+
+        function scrollCarousel() {
+            scrollAmount -= scrollStep;
+            commentsContainer.style.transform = `translateX(${scrollAmount}px)`;
+
+            if (Math.abs(scrollAmount) >= commentsContainer.scrollWidth / 2) {
+                scrollAmount = 0;
             }
+            requestAnimationFrame(scrollCarousel);
+        }
 
-            // Espera un breve tiempo para asegurarse de que todo el HTML se ha generado antes de duplicar
-            setTimeout(() => {
-                commentsContainer.innerHTML = allCommentsHTML + allCommentsHTML; // Duplicamos todo el contenido al final
-            }, 500);
-
-            // Configuración del carrusel continuo
-            let scrollAmount = 0;
-            const scrollStep = 1; // Ajusta esta velocidad para que sea más lenta o más rápida
-
-            function scrollCarousel() {
-                scrollAmount -= scrollStep;
-                commentsContainer.style.transform = `translateX(${scrollAmount}px)`;
-
-                if (Math.abs(scrollAmount) >= commentsContainer.scrollWidth / 2) {
-                    scrollAmount = 0;
-                }
-                requestAnimationFrame(scrollCarousel);
-            }
-
-            scrollCarousel(); // Iniciar el scroll continuo
-        });
+        scrollCarousel(); // Iniciar el scroll continuo
+    });
     </script>
 
 
     <script>
-        document.querySelectorAll('.faq-question').forEach(item => {
-            item.addEventListener('click', () => {
-                const parent = item.parentElement;
-                parent.classList.toggle('active');
+    document.addEventListener('DOMContentLoaded', function() {
+        const images = document.querySelectorAll('.carousel img');
+        const indicators = document.querySelectorAll('.indicator');
+        const carousel = document.querySelector('.carousel');
+        const expandedImage = document.getElementById('initial-expanded');
+        let currentIndex = Array.from(images).indexOf(expandedImage) || 0;
 
-                // Para cerrar las otras respuestas cuando se abre una nueva
-                document.querySelectorAll('.faq-item').forEach(otherItem => {
-                    if (otherItem !== parent) {
-                        otherItem.classList.remove('active');
-                    }
-                });
+        function updateIndicators(index) {
+            indicators.forEach((indicator, i) => {
+                indicator.classList.toggle('active', i === index);
+            });
+        }
+
+        function goToImage(index) {
+            const image = images[index];
+            carousel.scrollLeft = image.offsetLeft;
+            updateIndicators(index);
+        }
+
+        function handleMouseOver(index) {
+            if (expandedImage) {
+                expandedImage.classList.remove('expanded');
+            }
+            images[index].classList.add('expanded');
+            updateIndicators(index);
+            currentIndex = index;
+        }
+
+        images.forEach((img, index) => {
+            img.addEventListener('mouseover', function() {
+                handleMouseOver(index);
+            });
+
+            img.addEventListener('mouseout', function() {
+                img.classList.remove('expanded');
+                if (expandedImage) {
+                    expandedImage.classList.add('expanded');
+                }
+                updateIndicators(currentIndex);
             });
         });
+
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', function() {
+                goToImage(index);
+                handleMouseOver(index);
+            });
+        });
+
+        // Inicializa el estado de los indicadores
+        updateIndicators(currentIndex);
+    });
     </script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const elements = document.querySelectorAll('.hidden');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+
+        elements.forEach(element => {
+            observer.observe(element);
+        });
+    });
+    </script>
+
+
 
 
 

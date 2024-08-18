@@ -94,6 +94,23 @@
     scroll-padding-top: 70px;
   }
 
+/* Clase para ocultar elementos por defecto */
+.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Clase para mostrar los elementos con animación */
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+
+
 
 
   body {
@@ -111,7 +128,7 @@
 
   nav {
     width: 100%;
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     display: flex;
@@ -145,7 +162,7 @@ nav .logo {
 nav .logo a {
     font-family: "aero";
     font-size: 2.5em;
-    color: var(--color-main);
+    color: var(--color-white);
     text-decoration: none;
 }
 
@@ -260,29 +277,7 @@ nav ul li:hover .dropdown {
 
 
 
-.scroll-down {
-  display: none;
-  position: absolute;
-  bottom: 20px; /* Ajusta según tu diseño */
-  left: 50%; /* Centra la flecha horizontalmente */
-  transform: translateX(-50%); /* Centra la flecha horizontalmente */
-  text-align: center;
-  animation: bounce 2s infinite; /* Animación de rebote */
-}
 
-.scroll-down i {
-  font-size: 1.1em;
-  color: var(--color-white);
-}
-
-@keyframes bounce {
-  0%, 100% {
-      transform: translateY(0);
-  }
-  50% {
-      transform: translateY(-10px);
-  }
-}
 
   /* Agrega al final de tu archivo CSS */
 
@@ -294,23 +289,17 @@ nav ul li:hover .dropdown {
 }
 
 .section-header h2 {
-  font-size: 1rem;
-  margin-left: 1em;
-  font-family: "matter-regular";
+  font-size: 8.2em;
+  font-family: "schabo";
+  color: #575757;
   font-weight: lighter;
-  color: var(--color-main);
-  background: linear-gradient(40deg, #333 45%, #151414 100%);
-  border: 1px solid #454545;
-  padding: 5px 10px; /* Ajusta el padding según sea necesario */
-  border-radius: 5px; /* Ajusta el valor para redondear más o menos las esquinas */
-  display: inline-block; /* Asegura que el fondo se ajuste al contenido del h2 */
-  padding-bottom: 7px;
 }
 
 .section-header-download h2 {
   font-size: 2.9em;
   margin-left: 0.4em;
-  font-family: "matter-regular";
+  font-family: "neue-medium";
+  font-weight: lighter;
   color: var(--color-white);
   background: linear-gradient(40deg, #333 45%, #151414 100%);
   border: 1px solid #454545;
@@ -344,60 +333,102 @@ nav ul li:hover .dropdown {
 }
 
 .text h3 {
-  font-size: 1rem;
-  font-family: "matter-medium";
+  font-size: 1.3em;
+  font-family: "neue";
   font-weight: lighter;
   margin-bottom: 20px;
-  background: linear-gradient(40deg, #333 45%, #151414 100%);
-  border: 1px solid #454545;
-  padding: 5px 20px; /* Ajusta el padding según sea necesario */
-  border-radius: 5px; /* Ajusta el valor para redondear más o menos las esquinas */
-  display: inline-block; /* Asegura que el fondo se ajuste al contenido del h2 */
-  padding-bottom: 7px;
+  color: #575757;
 }
 
 .text h4  {
   font-size: 3.2em;
-  font-family: "jet-bold";
+  font-family: "neue";
   padding-bottom: 10px;
+  font-weight: lighter;
 }
 
 .text p {
-  font-size: 1.2em;
-  font-family: "jet";
+  font-size: 2em;
+  font-family: "neue";
+  font-weight: lighter;
+  color: #575757;
 }
 
 .text p span {
   color: var(--color-main);
-  font-family: "jet";
+  font-family: "neue";
 }
 
 .text ul {
-  font-size: 1em;
+  font-size: 1.8em;
   margin-top: 10px;
   margin-left: 15px;
 }
 
 .text ul li {
   margin-bottom: 10px;
-  font-family: "jet";
+  font-family: "neue";
+  font-weight: lighter;
+  color: #575757;
 }
 
 .text ul li span {
   color: var(--color-main);
-  font-family: "jet";
+  font-family: "neue";
+  font-weight: lighter;
+}
+.carousel-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-
-.image {
-  flex: 1;
-  text-align: center;
+.indicator-container {
+  display: flex;
+  margin-bottom: 10px;
+  position: relative;
+  top: -20px; /* Ajusta según la posición deseada */
 }
 
-.image img {
-  max-width: 100%;
-  border-radius: 10px;
+.indicator {
+  width: 12px;
+  height: 12px;
+  background-color: #ddd;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: default; /* Cambia el cursor al pasar por encima */
+  transition: background-color 0.3s;
+  pointer-events: none; /* Desactiva la capacidad de hacer clic en los indicadores */
 }
+
+.indicator.active {
+  background-color: #333;
+}
+
+.carousel {
+  display: flex;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.carousel img {
+  width: 30px;
+  transition: width 0.5s ease;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+.carousel img.expanded {
+  width: 900px;
+}
+
+.carousel img:hover {
+  width: 900px;
+}
+
 
 .features-block {
   display: grid;
