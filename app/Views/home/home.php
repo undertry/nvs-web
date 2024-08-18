@@ -57,9 +57,10 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="intro">
             <div class="intro-text">
                 <h1 class="title-animate">NETWORK VULNERABILITY SCANNER</h1>
-                <p class="intro-subtext">New Reality is a design studio based in Tokyo, Japan. We work with many
-                    companies to build and proactively deliver engaging brand experiences. We are unique in our ability
-                    to take a strategic approach while being visually driven.</p>
+                <p class="intro-subtext hidden">We are a team of developers redefining the landscape of cybersecurity.
+                    Our
+                    mission is to make it easier than ever to protect yourself from cybercriminals. We combine
+                    innovative strategies with cutting-edge technology to safeguard your digital world.</p>
             </div>
         </div>
     </section>
@@ -109,29 +110,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
 
             </div>
-            <div class="text hidden">
-                <h3>PREVIEW</h3>
-            </div>
 
-            <div class="carousel-container hidden">
 
-                <div class="carousel">
-                    <img src="<?php echo base_url('complements/styles/images/kali.jpg'); ?>" alt="Image 1">
-                    <img src="<?php echo base_url('complements/styles/images/3.jpg'); ?>" alt="Image 2">
-                    <img src="<?php echo base_url('complements/styles/images/preview.png'); ?>" alt="Image 3"
-                        class="expanded" id="initial-expanded">
-                    <img src="<?php echo base_url('complements/styles/images/network.jpg'); ?>" alt="Image 4">
-                    <img src="<?php echo base_url('complements/styles/images/grey.jpg'); ?>" alt="Image 5">
-                </div>
-                <div class="indicator-container">
-                    <!-- Indicadores de scroll -->
-                    <div class="indicator"></div>
-                    <div class="indicator"></div>
-                    <div class="indicator"></div>
-                    <div class="indicator"></div>
-                    <div class="indicator"></div>
-                </div>
-            </div>
+
         </div>
     </section>
 
@@ -209,453 +190,407 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-        <div class="section-content">
-            <div class="text-image-block" id="creators">
-                <div class="text">
-                    <h4>DEVELOPERS</h4>
-                    <div id="profiles"></div>
+        <hr>
+
+
+
+        <section class="faq" id="faq">
+            <h2>FREQUENTLY ASKED QUESTIONS</h2>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>How do I perform a scan?</h3>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>To perform a scan, you just need to be logged into our software, go to your profile in the
+                        Network
+                        Scan section, and ensure your Raspberry Pi is properly configured.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Is it open source?</h3>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, our project is open source and community-oriented. If you'd like, you can fork our
+                        repository
+                        and help us improve this great tool.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>If I don’t have a Raspberry Pi, can I still use the software?</h3>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>The software is optimized for use with a Raspberry Pi due to its portability, but there are no
+                        issues
+                        with using it on another device.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>If I have no knowledge of configuring the Raspberry Pi, how can I use the software?</h3>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>You can contact us via email, and we will respond to your questions or concerns. Additionally, if
+                        you
+                        are in our area, we can visit you in person to help with the setup.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Does it run locally?</h3>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, the software is designed to run locally, enhancing user privacy and security by keeping
+                        everything off the cloud.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Will there be a mobile version?</h3>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>We are considering developing a mobile app to make scanning easier without relying on a computer.
+                    </p>
+                </div>
+            </div>
+
+
+        </section>
+
+        <hr>
+
+
+
+
+
+
+        <!-- Footer Section -->
+        <footer>
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <img src="<?php echo base_url('complements/styles/images/NVS.png'); ?>" alt="Logo">
                 </div>
 
-            </div>
-        </div>
-    </section>
+                <div class="footer-columns">
+                    <div class="footer-column">
+                        <h4>Software</h4>
+                        <ul>
+                            <li><a href="#">Scan</a></li>
+                            <li><a href="#">History</a></li>
+                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="#">Security</a></li>
+                            <li><a href="#">All Features</a></li>
+                            <li><a href="#">Changelog</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Explore</h4>
+                        <ul>
+                            <li><a href="#">User Manual</a></li>
+                            <li><a href="#">Download</a></li>
 
-    <hr>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">How We Work</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Terms</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>ALL RIGHTS RESERVED © 2024</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
 
-
-
-    <section id="faq">
-        <h2>Frequently Asked Questions</h2>
-        <div class="faq-item">
-            <div class="faq-question">
-                <h3>How do I perform a scan?</h3>
-                <span class="faq-icon">+</span>
-            </div>
-            <div class="faq-answer">
-                <p>To perform a scan, you just need to be logged into our software, go to your profile in the Network
-                    Scan section, and ensure your Raspberry Pi is properly configured.</p>
-            </div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question">
-                <h3>Is it open source?</h3>
-                <span class="faq-icon">+</span>
-            </div>
-            <div class="faq-answer">
-                <p>Yes, our project is open source and community-oriented. If you'd like, you can fork our repository
-                    and help us improve this great tool.</p>
-            </div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question">
-                <h3>If I don’t have a Raspberry Pi, can I still use the software?</h3>
-                <span class="faq-icon">+</span>
-            </div>
-            <div class="faq-answer">
-                <p>The software is optimized for use with a Raspberry Pi due to its portability, but there are no issues
-                    with using it on another device.</p>
-            </div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question">
-                <h3>If I have no knowledge of configuring the Raspberry Pi, how can I use the software?</h3>
-                <span class="faq-icon">+</span>
-            </div>
-            <div class="faq-answer">
-                <p>You can contact us via email, and we will respond to your questions or concerns. Additionally, if you
-                    are in our area, we can visit you in person to help with the setup.</p>
-            </div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question">
-                <h3>Does it run locally?</h3>
-                <span class="faq-icon">+</span>
-            </div>
-            <div class="faq-answer">
-                <p>Yes, the software is designed to run locally, enhancing user privacy and security by keeping
-                    everything off the cloud.</p>
-            </div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question">
-                <h3>Will there be a mobile version?</h3>
-                <span class="faq-icon">+</span>
-            </div>
-            <div class="faq-answer">
-                <p>We are considering developing a mobile app to make scanning easier without relying on a computer.</p>
-            </div>
-        </div>
-
-
-    </section>
-
-    <hr>
-
-
-
-
-
-    <section id="download">
-        <div class="section-header-download">
-            <h2>Download NVS</h2>
-        </div>
-        <div class="section-content">
-            <div class="download-buttons">
-                <button class="main-button">Join the Mobile waitlist</button>
-                <div class="dropdown">
-                    <button class="dropdown-button"> <i class="fas fa-chevron-down"></i></button>
-                    <div class="dropdown-content">
-                        <a href="#" id="clone-repo">
-                            <span class="original-text">Clone repository</span>
-                            <span class="copied-message">Copied</span>
-                        </a>
-                        <a href="https://github.com/tiagocomba/NVS/archive/refs/heads/main.zip" target="_blank">Download
-                            .zip</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Footer Section -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-logo">
-                <img src="<?php echo base_url('complements/styles/images/NVS.png'); ?>" alt="Logo">
-            </div>
-
-            <div class="footer-columns">
-                <div class="footer-column">
-                    <h4>Software</h4>
-                    <ul>
-                        <li><a href="#">Scan</a></li>
-                        <li><a href="#">History</a></li>
-                        <li><a href="#">Dashboard</a></li>
-                        <li><a href="#">Security</a></li>
-                        <li><a href="#">All Features</a></li>
-                        <li><a href="#">Changelog</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Explore</h4>
-                    <ul>
-                        <li><a href="#">User Manual</a></li>
-                        <li><a href="#">Download</a></li>
-
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">How We Work</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Privacy</a></li>
-                        <li><a href="#">FAQs</a></li>
-                        <li><a href="#">Terms</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>ALL RIGHTS RESERVED © 2024</p>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                    <a href="#"><i class="fab fa-discord"></i></a>
-                    <a href="#"><i class="fab fa-github"></i></a>
-
-                </div>
-            </div>
-        </div>
-    </footer>
+        </footer>
 
 
 
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const usernames = ["zzzizy89", "EzequielMonteverde"]; // Reemplaza con los nombres de usuario de GitHub
-        const profilesContainer = document.getElementById("profiles");
 
-        usernames.forEach(username => {
-            // Intenta obtener datos del localStorage
-            const storedProfile = localStorage.getItem(`profile_${username}`);
 
-            if (storedProfile) {
-                // Si hay datos almacenados, úsalos directamente
-                displayProfile(JSON.parse(storedProfile));
-            } else {
-                // Si no hay datos en localStorage, realiza la petición a la API
-                fetch(`https://api.github.com/users/${username}`)
-                    .then(response => response.json())
-                    .then(data => {
-                        // Guarda la respuesta en localStorage
-                        localStorage.setItem(`profile_${username}`, JSON.stringify(data));
-                        displayProfile(data);
-                    })
-                    .catch(error => {
-                        console.error("Error fetching GitHub profile:", error);
-                    });
-            }
-        });
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const dropdowns = document.querySelectorAll("nav ul li");
 
-        function displayProfile(data) {
-            const profileDiv = document.createElement("div");
-            profileDiv.classList.add("profile");
+            dropdowns.forEach(dropdown => {
+                dropdown.addEventListener("mouseenter", function() {
+                    const menu = this.querySelector(".dropdown");
+                    if (menu) {
+                        menu.style.display = "block";
+                        setTimeout(() => {
+                            menu.style.opacity = "1";
+                            menu.style.visibility = "visible";
+                            menu.style.transform = "translateY(0)";
+                        }, 10); // Añade un pequeño retraso antes de iniciar la animación
+                    }
+                });
 
-            // Verificación de la URL del avatar
-            const img = document.createElement("img");
-            if (data.avatar_url) {
-                img.src = data.avatar_url;
-                img.alt = `${data.login}'s Profile Image`;
-            } else {
-                img.src = "ruta/a/una/imagen/por/defecto.png"; // Imagen por defecto
-                img.alt = "Imagen por defecto";
-            }
-
-            const link = document.createElement("a");
-            link.href = data.html_url;
-            link.textContent = data.login;
-
-            const description = document.createElement("p");
-            description.textContent = data.bio ? data.bio : "No bio available";
-
-            const followers = document.createElement("p");
-            followers.classList.add("followers");
-            followers.textContent = `Followers: ${data.followers}`;
-
-            const achievements = document.createElement("div");
-            achievements.classList.add("achievements");
-
-            profileDiv.appendChild(img);
-            profileDiv.appendChild(link);
-            profileDiv.appendChild(description);
-            profileDiv.appendChild(followers);
-            profileDiv.appendChild(achievements);
-            profilesContainer.appendChild(profileDiv);
-        }
-    });
-    </script>
-
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const dropdowns = document.querySelectorAll("nav ul li");
-
-        dropdowns.forEach(dropdown => {
-            dropdown.addEventListener("mouseenter", function() {
-                const menu = this.querySelector(".dropdown");
-                if (menu) {
-                    menu.style.display = "block";
-                    setTimeout(() => {
-                        menu.style.opacity = "1";
-                        menu.style.visibility = "visible";
-                        menu.style.transform = "translateY(0)";
-                    }, 10); // Añade un pequeño retraso antes de iniciar la animación
-                }
-            });
-
-            dropdown.addEventListener("mouseleave", function() {
-                const menu = this.querySelector(".dropdown");
-                if (menu) {
-                    menu.style.opacity = "0";
-                    menu.style.visibility = "hidden";
-                    menu.style.transform = "translateY(10px)";
-                    setTimeout(() => {
-                            menu.style.display = "none";
-                        },
-                        500
-                    ); // Asegúrate de que coincida con la duración de la transición en el CSS
-                }
+                dropdown.addEventListener("mouseleave", function() {
+                    const menu = this.querySelector(".dropdown");
+                    if (menu) {
+                        menu.style.opacity = "0";
+                        menu.style.visibility = "hidden";
+                        menu.style.transform = "translateY(10px)";
+                        setTimeout(() => {
+                                menu.style.display = "none";
+                            },
+                            500
+                        ); // Asegúrate de que coincida con la duración de la transición en el CSS
+                    }
+                });
             });
         });
-    });
-    </script>
+        </script>
 
 
-    <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        // Manejo del dropdown
-        document.querySelector('.dropdown-button').addEventListener('click', function() {
-            var dropdownContent = document.querySelector('.dropdown-content');
-            dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' :
-                'block';
+        <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Manejo del dropdown
+            document.querySelector('.dropdown-button').addEventListener('click', function() {
+                var dropdownContent = document.querySelector('.dropdown-content');
+                dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' :
+                    'block';
+            });
+
+            // Manejo del clic en "Clonar Repositorio"
+            document.querySelector('#clone-repo').addEventListener('click', function(e) {
+                e.preventDefault(); // Evitar la acción por defecto del enlace
+
+                const url = 'git clone https://github.com/tiagocomba/NVS.git';
+
+                // Crear un elemento de texto oculto para copiar al portapapeles
+                const tempInput = document.createElement('input');
+                tempInput.value = url;
+                document.body.appendChild(tempInput);
+                tempInput.select();
+                document.execCommand('copy');
+                document.body.removeChild(tempInput);
+
+                // Reemplazar el texto original con el mensaje de copiado
+                const originalText = this.querySelector('.original-text');
+                const message = this.querySelector('.copied-message');
+
+                // Ocultar el texto original y mostrar el mensaje
+                originalText.style.display = 'none';
+                message.style.display = 'inline';
+
+                // Restaurar el texto original después de 2 segundos
+                setTimeout(() => {
+                    originalText.style.display = 'inline';
+                    message.style.display = 'none';
+                }, 2000);
+            });
         });
+        </script>
 
-        // Manejo del clic en "Clonar Repositorio"
-        document.querySelector('#clone-repo').addEventListener('click', function(e) {
-            e.preventDefault(); // Evitar la acción por defecto del enlace
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const commentsContainer = document.getElementById("comments");
 
-            const url = 'git clone https://github.com/tiagocomba/NVS.git';
+            const usernames = ["schwgon", "Dr-Cristian", "LaureanoCarlos", "Craifran", "Randalfd",
+                "TadeoBoglione",
+                "Naahuuel"
+            ];
+            const comments = [
+                "The NVS software has significantly enhanced my security by identifying network vulnerabilities. This has been particularly useful for protecting my extensive computer systems. ",
+                "I find this product to be excellent in fulfilling its promises. Despite still being in development, it is even better than some paid programs with the same purpose. Thank you.",
+                "A well-conceived idea from the initial design, it effectively meets its objectives and is free of defects. Its creators are visionary and proactive individuals.",
+                "The website is very pleasant, easy to understand, and visually appealing. The interaction with it is logical and comprehensible. Regarding the software, it is a very interesting idea that is well implemented.",
+                "Highly recommended for anyone in the industry.",
+                "The tool appears to be very useful for addressing current security concerns and frequent attacks. With this device, vulnerabilities are mitigated, and its advanced technology effectively handles highly specific issues.",
+                "This has changed the way we work, for the better."
+            ];
+            let allCommentsHTML = "";
 
-            // Crear un elemento de texto oculto para copiar al portapapeles
-            const tempInput = document.createElement('input');
-            tempInput.value = url;
-            document.body.appendChild(tempInput);
-            tempInput.select();
-            document.execCommand('copy');
-            document.body.removeChild(tempInput);
+            usernames.forEach((username, index) => {
+                allCommentsHTML += generateCommentHTML(username, comments[index % comments.length]);
+            });
 
-            // Reemplazar el texto original con el mensaje de copiado
-            const originalText = this.querySelector('.original-text');
-            const message = this.querySelector('.copied-message');
-
-            // Ocultar el texto original y mostrar el mensaje
-            originalText.style.display = 'none';
-            message.style.display = 'inline';
-
-            // Restaurar el texto original después de 2 segundos
             setTimeout(() => {
-                originalText.style.display = 'inline';
-                message.style.display = 'none';
-            }, 2000);
-        });
-    });
-    </script>
+                commentsContainer.innerHTML = allCommentsHTML;
+                initializeCardPositions();
+            }, 500);
 
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const usernames = ["schwgon", "Dr-Cristian", "LaureanoCarlos", "Craifran", "Randalfd", "TadeoBoglione",
-            "Naahuuel"
-        ]; // Agrega aquí los nombres de usuario de GitHub
-        const commentsContainer = document.getElementById("comments");
-
-        // Variable para almacenar todas las tarjetas antes de duplicarlas
-        let allCommentsHTML = "";
-
-        usernames.forEach(username => {
-            const storedProfile = localStorage.getItem(`profile_${username}`);
-
-            if (storedProfile) {
-                allCommentsHTML += generateCommentHTML(JSON.parse(storedProfile));
-            } else {
-                fetch(`https://api.github.com/users/${username}`)
-                    .then(response => response.json())
-                    .then(data => {
-                        localStorage.setItem(`profile_${username}`, JSON.stringify(data));
-                        allCommentsHTML += generateCommentHTML(data);
-                    })
-                    .catch(error => {
-                        console.error("Error fetching GitHub profile:", error);
-                    });
-            }
-        });
-
-        // Función para generar el HTML de cada tarjeta
-        function generateCommentHTML(data) {
-            return `
-        <div class="comment-card">
-            <img src="${data.avatar_url}" alt="${data.login}'s Profile Image">
-            <div class="comment-content">
-                <h3>${data.name ? data.name : data.login}</h3>
-                <p>Este es un comentario de ejemplo sobre tu software.</p>
+            function generateCommentHTML(username, comment) {
+                return `
+            <div class="comment-card">
+                <div class="comment-content">
+                    <p>${comment}</p>
+                    <h3>@${username}</h3>
+                </div>
             </div>
-        </div>
-    `;
-        }
-
-        // Espera un breve tiempo para asegurarse de que todo el HTML se ha generado antes de duplicar
-        setTimeout(() => {
-            commentsContainer.innerHTML = allCommentsHTML; // Elimina la duplicación
-        }, 500);
-
-        // Elimina la configuración del carrusel continuo
-    });
-    </script>
-
-
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const images = document.querySelectorAll('.carousel img');
-        const indicators = document.querySelectorAll('.indicator');
-        const carousel = document.querySelector('.carousel');
-        const expandedImage = document.getElementById('initial-expanded');
-        let currentIndex = Array.from(images).indexOf(expandedImage) || 0;
-
-        function updateIndicators(index) {
-            indicators.forEach((indicator, i) => {
-                indicator.classList.toggle('active', i === index);
-            });
-        }
-
-        function goToImage(index) {
-            const image = images[index];
-            carousel.scrollLeft = image.offsetLeft;
-            updateIndicators(index);
-        }
-
-        function handleMouseOver(index) {
-            if (expandedImage) {
-                expandedImage.classList.remove('expanded');
+        `;
             }
-            images[index].classList.add('expanded');
-            updateIndicators(index);
-            currentIndex = index;
-        }
 
-        images.forEach((img, index) => {
-            img.addEventListener('mouseover', function() {
-                handleMouseOver(index);
-            });
+            function initializeCardPositions() {
+                const cards = document.querySelectorAll('.comment-card');
 
-            img.addEventListener('mouseout', function() {
-                img.classList.remove('expanded');
-                if (expandedImage) {
-                    expandedImage.classList.add('expanded');
-                }
-                updateIndicators(currentIndex);
-            });
-        });
+                const positions = [{
+                        x: 400,
+                        y: 420
+                    },
+                    {
+                        x: 600,
+                        y: 35
+                    },
+                    {
+                        x: 10,
+                        y: 400
+                    },
+                    {
+                        x: 120,
+                        y: 10
+                    },
+                    {
+                        x: -260,
+                        y: 100
+                    },
+                    {
+                        x: -550,
+                        y: 400
+                    },
+                    {
+                        x: -600,
+                        y: 10
+                    }
+                ];
 
-        indicators.forEach((indicator, index) => {
-            indicator.addEventListener('click', function() {
-                goToImage(index);
-                handleMouseOver(index);
-            });
-        });
+                cards.forEach((card, index) => {
+                    const position = positions[index % positions.length];
+                    card.style.transform = `translate(${position.x}px, ${position.y}px)`;
 
-        // Inicializa el estado de los indicadores
-        updateIndicators(currentIndex);
-    });
-    </script>
+                    card.dataset.initialX = position.x;
+                    card.dataset.initialY = position.y;
+                });
 
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const elements = document.querySelectorAll('.hidden');
+                commentsContainer.addEventListener('mousemove', function(event) {
+                    const mouseX = event.clientX;
+                    const mouseY = event.clientY;
 
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        });
+                    cards.forEach(card => {
+                        const initialX = parseFloat(card.dataset.initialX);
+                        const initialY = parseFloat(card.dataset.initialY);
 
-        elements.forEach(element => {
-            observer.observe(element);
-        });
-    });
-    </script>
+                        const deltaX = (mouseX - (initialX + card.clientWidth / 2)) * 0.02;
+                        const deltaY = (mouseY - (initialY + card.clientHeight / 2)) * 0.02;
 
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const navbar = document.getElementById('navbar');
-
-        window.addEventListener('scroll', function() {
-            if (window.scrollY >
-                50) { // Ajusta el valor según el punto donde quieres que cambie el color
-                navbar.classList.add('navbar-scrolled');
-            } else {
-                navbar.classList.remove('navbar-scrolled');
+                        card.style.transform =
+                            `translate(${initialX + deltaX}px, ${initialY + deltaY}px)`;
+                    });
+                });
             }
         });
-    });
-    </script>
+        </script>
 
+
+
+
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.hidden');
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            });
+
+            elements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+        </script>
+
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navbar = document.getElementById('navbar');
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY >
+                    50) { // Ajusta el valor según el punto donde quieres que cambie el color
+                    navbar.classList.add('navbar-scrolled');
+                } else {
+                    navbar.classList.remove('navbar-scrolled');
+                }
+            });
+        });
+        </script>
+
+
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const title = document.querySelector('.title-animate');
+
+            const revealText = (element, finalText, speed = 100) => {
+                let chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
+                let textArray = finalText.split('');
+                let currentIndex = 0;
+
+                let interval = setInterval(() => {
+                    textArray = textArray.map((char, index) => {
+                        if (index <= currentIndex) {
+                            return finalText[index];
+                        }
+                        return chars[Math.floor(Math.random() * chars.length)];
+                    });
+
+                    element.textContent = textArray.join('');
+
+                    if (currentIndex < textArray.length) {
+                        currentIndex++;
+                    } else {
+                        clearInterval(interval);
+                    }
+                }, speed);
+            };
+
+            title.style.opacity = 1;
+            revealText(title, 'NETWORK VULNERABILITY SCANNER', 85);
+        });
+        </script>
+
+        <script>
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
+
+                // Para cerrar las otras respuestas cuando se abre una nueva
+                document.querySelectorAll('.faq-item').forEach(otherItem => {
+                    if (otherItem !== parent) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+            });
+        });
+        </script>
 
 
 

@@ -98,7 +98,7 @@
 .hidden {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
 }
 
 /* Clase para mostrar los elementos con animación */
@@ -264,10 +264,6 @@ nav ul li:hover .dropdown {
   font-family: "neue";
 }
 
-
-
-
-
 .intro-text h1 {
   font-size: 10em; /* Aumenta el tamaño de la fuente */
   font-weight: lighter;
@@ -275,7 +271,13 @@ nav ul li:hover .dropdown {
   text-align: center; /* Centra el texto */
   margin: 0 auto;
   color: #575757;/* Asegúrate de que el margen superior e inferior sea cero */
+  opacity: 0; /* Ocultar inicialmente */
+  transition: opacity 1s ease-in-out; /* Transición suave para la opacidad */
+  overflow: hidden; /* Previene desbordamientos */
+  white-space: nowrap; /* Evita que el texto se rompa en múltiples líneas */
 }
+
+
 
 
 
@@ -369,57 +371,9 @@ nav ul li:hover .dropdown {
   font-family: "neue";
   font-weight: lighter;
 }
-.carousel-container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
-.indicator-container {
-  display: flex;
-  margin-bottom: 10px;
-  position: relative;
-  top: -20px; /* Ajusta según la posición deseada */
-}
 
-.indicator {
-  width: 12px;
-  height: 12px;
-  background-color: #ddd;
-  border-radius: 50%;
-  margin: 0 5px;
-  cursor: default; /* Cambia el cursor al pasar por encima */
-  transition: background-color 0.3s;
-  pointer-events: none; /* Desactiva la capacidad de hacer clic en los indicadores */
-}
 
-.indicator.active {
-  background-color: #333;
-}
-
-.carousel {
-  display: flex;
-  width: 100%;
-  height: 500px;
-  overflow: hidden;
-  justify-content: center;
-}
-
-.carousel img {
-  width: 30px;
-  transition: width 0.5s ease;
-  cursor: pointer;
-  object-fit: cover;
-}
-
-.carousel img.expanded {
-  width: 900px;
-}
-
-.carousel img:hover {
-  width: 900px;
-}
 
 
 .features-block {
@@ -440,6 +394,8 @@ nav ul li:hover .dropdown {
   font-size: 2.9em;
   font-weight: lighter;
 }
+
+
 
 .feature-item {
   display: flex;
@@ -487,16 +443,11 @@ nav ul li:hover .dropdown {
 
 
 
-
-
-
-
 .comments-section {
   width: 100%;
   overflow: hidden;
   position: relative;
-  height: auto; /* Ajusta la altura automáticamente según el contenido */
-  background: radial-gradient(circle, #96232369  1%,  var(--color-black) 15%);
+  height: 110vh;
 }
 
 .comments-section h2 {
@@ -509,52 +460,51 @@ nav ul li:hover .dropdown {
 }
 
 .comments-carousel {
+  position: relative;
+  width: 100%;
+  height: 500px;
   display: flex;
-  flex-wrap: wrap; /* Permite que las tarjetas se ajusten a varias filas */
-  justify-content: center; /* Centra las tarjetas horizontalmente */
-  gap: 15px; /* Espacio entre las tarjetas */
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .comment-card {
-  display: flex;
-  align-items: center;
+  position: absolute;
   background: linear-gradient(40deg, #333 45%, #151414 100%);
-  border: 1px solid #454545;
   color: var(--color-white);
   border-radius: 8px;
   padding: 15px;
-  min-width: 300px; /* Tamaño mínimo de las tarjetas */
-  max-width: 450px; /* Tamaño máximo de las tarjetas */
-  box-sizing: border-box; /* Incluye padding y border en el tamaño total */
-}
-
-.comment-card img {
-  width: 50px; /* Ajusta el tamaño de la imagen */
-  height: 50px; /* Ajusta el tamaño de la imagen */
-  border-radius: 50%; /* Para hacer la imagen redonda */
-  margin-right: 15px; /* Espacio entre la imagen y el contenido */
+  width: 250px;
+  height: 370px;
+  transition: transform 0.2s ease-out;
+  will-change: transform;
 }
 
 .comment-content {
   display: flex;
-  flex-direction: column; /* Mantiene el título y el comentario en una columna */
-}
-
-.comment-content h3 {
-  font-size: 1.6em;
-  margin: 0;
-  padding: 0;
-  font-family: "neue";
-  font-weight: lighter;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .comment-content p {
-  margin-top: 5px;
   font-size: 1.5em;
   font-family: "neue";
   color: #7e7a7a;
 }
 
+.comment-content h3 {
+  font-size: 1.2em;
+  margin: 0;
+  padding: 0;
+  font-family: "neue";
+  font-weight: lighter;
+  text-align: left;
+  position: absolute;
+  bottom: 5px;
+  right: 15px;
+}
 
 
 
@@ -570,7 +520,8 @@ nav ul li:hover .dropdown {
   font-size: 2.9em;
   margin-bottom: 2rem;
   text-align: center;
-  font-family: "matter-regular";
+  font-family: "neue";
+  font-weight: lighter;
 }
 
 .faq-item {
@@ -590,8 +541,8 @@ nav ul li:hover .dropdown {
 
 .faq-question h3 {
   margin: 0;
-  font-size: 1.2rem;
-  font-family: "matter-regular";
+  font-size: 1.9rem;
+  font-family: "neue";
   font-weight: lighter;
 }
 
@@ -616,103 +567,13 @@ nav ul li:hover .dropdown {
 
 .faq-answer p {
   padding: 0 1rem;
-  font-family: "matter-regular";
+  font-family: "neue";
+  font-weight: lighter;
+  font-size: 1.5em;
+  color: #575757;
 }
 
 
-
-
-#download {
-  background: linear-gradient(to top, rgba(255, 0, 0, 0.233), var(--color-black));
-  padding: 100px 20px;
-  text-align: center;
-}
-
-#download .section-header h2 {
-  font-size: 2.5em;
-  color: var(--color-white);
-  margin-bottom: 20px;
-  font-family: "matter-regular";
-}
-
-#download .download-buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-}
-
-#download .main-button, #download .dropdown-button {
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  font-size: 1em;
-  cursor: pointer;
-}
-
-#download .main-button {
-  background-color: var(--color-main);
-  color: var(--color-white);
-  font-family: "matter-medium";
-  transition: background-color 0.3s;
-}
-
-#download .dropdown {
-  position: relative;
-  display: inline-block;
-  padding-top: 10px;
-  padding-bottom: 12px;
-}
-
-#download .dropdown-button {
-  background: linear-gradient(40deg, #333 45%, #151414 100%);
-  border: 1px solid #454545;
-  color: var(--color-white);
-  font-family: "matter-medium";
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-}
-
-#download .dropdown-content {
-  display: none; /* Ocultar el contenido por defecto */
-  position: absolute;
-  background: linear-gradient(40deg, #333 45%, #151414 100%);
-  border: 1px solid #454545;
-  min-width: 160px;
-  z-index: 1;
-  border-radius: 5px;
-  margin-top: 5px; /* Separar del botón */
-}
-
-
-#download .dropdown-content a {
-  color: var(--color-white);
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  font-family: "matter-medium";
-  position: relative;
-}
-
-#download .copied-message {
-  display: none; /* Oculto por defecto */
-  color: #4CAF50; /* Color verde para la tilde */
-  font-family: "matter-medium";
-}
-
-#download .original-text {
-  font-family: "matter-medium";
-}
-
-#download .dropdown-content a.copied {
-  color: #4CAF50; /* Cambiar color cuando se copia */
-}
-
-#download .dropdown-content a:hover {
-  background-color: #575757;
-}
 
 
 
