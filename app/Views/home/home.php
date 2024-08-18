@@ -1,5 +1,6 @@
 <?= $this->include('common/home/start.php'); ?>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 <title>NVS</title>
 <script>
@@ -18,6 +19,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <body>
 
+    <a href="#" class="scroll-to-top">
+        <i class="fa fa-arrow-up"></i> <!-- Usa el ícono de flecha de FontAwesome -->
+    </a>
+
     <nav id="navbar">
         <div class="nav-left">
             <ul>
@@ -30,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </ul>
         </div>
 
-        <div class="logo"><a href="#home">NVS</a></div>
+        <div class="logo"><a href="<?= base_url('/'); ?>">NVS</a></div>
 
         <div class="nav-right">
             <ul>
@@ -171,14 +176,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     <!-- About Us Section -->
     <section class="about" id="about">
-        <div class="section-header">
+        <div class="section-header hidden">
             <h2>ABOUT US</h2>
         </div>
 
 
 
 
-        <section class="comments-section">
+        <section class="comments-section hidden">
             <div class="text">
                 <h2>WHAT OUR COLLEAGUES SAY ABOUT NVS</h2>
             </div>
@@ -194,9 +199,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-        <section class="faq" id="faq">
+        <section class="faq hidden" id="faq">
             <h2>FREQUENTLY ASKED QUESTIONS</h2>
-            <div class="faq-item">
+            <div class="faq-item hidden">
                 <div class="faq-question">
                     <h3>How do I perform a scan?</h3>
                     <span class="faq-icon">+</span>
@@ -208,7 +213,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
             </div>
 
-            <div class="faq-item">
+            <div class="faq-item hidden">
                 <div class="faq-question">
                     <h3>Is it open source?</h3>
                     <span class="faq-icon">+</span>
@@ -220,7 +225,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
             </div>
 
-            <div class="faq-item">
+            <div class="faq-item hidden">
                 <div class="faq-question">
                     <h3>If I don’t have a Raspberry Pi, can I still use the software?</h3>
                     <span class="faq-icon">+</span>
@@ -232,7 +237,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
             </div>
 
-            <div class="faq-item">
+            <div class="faq-item hidden">
                 <div class="faq-question">
                     <h3>If I have no knowledge of configuring the Raspberry Pi, how can I use the software?</h3>
                     <span class="faq-icon">+</span>
@@ -244,7 +249,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
             </div>
 
-            <div class="faq-item">
+            <div class="faq-item hidden">
                 <div class="faq-question">
                     <h3>Does it run locally?</h3>
                     <span class="faq-icon">+</span>
@@ -255,7 +260,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
             </div>
 
-            <div class="faq-item">
+            <div class="faq-item hidden">
                 <div class="faq-question">
                     <h3>Will there be a mobile version?</h3>
                     <span class="faq-icon">+</span>
@@ -269,8 +274,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         </section>
 
-        <hr>
-
 
 
 
@@ -278,13 +281,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
         <!-- Footer Section -->
         <footer>
-            <div class="footer-container">
-                <div class="footer-logo">
-                    <img src="<?php echo base_url('complements/styles/images/NVS.png'); ?>" alt="Logo">
+            <div class="footer-container hidden">
+                <div class="footer-logo hidden">
+                    <div class="logo"><a>NVS</a></div>
                 </div>
 
                 <div class="footer-columns">
-                    <div class="footer-column">
+                    <div class="footer-column hidden">
                         <h4>Software</h4>
                         <ul>
                             <li><a href="#">Scan</a></li>
@@ -295,7 +298,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             <li><a href="#">Changelog</a></li>
                         </ul>
                     </div>
-                    <div class="footer-column">
+                    <div class="footer-column hidden">
                         <h4>Explore</h4>
                         <ul>
                             <li><a href="#">User Manual</a></li>
@@ -303,7 +306,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                         </ul>
                     </div>
-                    <div class="footer-column">
+                    <div class="footer-column hidden">
                         <h4>Company</h4>
                         <ul>
                             <li><a href="#">About</a></li>
@@ -316,9 +319,9 @@ document.addEventListener('DOMContentLoaded', function() {
                         </ul>
                     </div>
                 </div>
-                <div class="footer-bottom">
+                <div class="footer-bottom hidden">
                     <p>ALL RIGHTS RESERVED © 2024</p>
-                    <div class="social-icons">
+                    <div class="social-icons hidden">
                         <a href="#"><i class="fab fa-youtube"></i></a>
                         <a href="#"><i class="fab fa-discord"></i></a>
                         <a href="#"><i class="fab fa-github"></i></a>
@@ -592,8 +595,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         </script>
 
-
-
+        <script>
+        document.addEventListener('scroll', function() {
+            const scrollToTopBtn = document.querySelector('.scroll-to-top');
+            if (window.scrollY > 100) { // Ajusta el valor según cuándo quieres que aparezca el botón
+                scrollToTopBtn.style.opacity = '1';
+                scrollToTopBtn.style.pointerEvents = 'auto';
+            } else {
+                scrollToTopBtn.style.opacity = '0';
+                scrollToTopBtn.style.pointerEvents = 'none';
+            }
+        });
+        </script>
 </body>
 
 </html>

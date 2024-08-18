@@ -107,6 +107,31 @@
   transform: translateY(0);
 }
 
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s, box-shadow 0.3s, opacity 0.3s;
+  opacity: 0; /* Oculta el botón inicialmente */
+  pointer-events: none; /* Desactiva eventos de clic */
+  z-index: 1000;
+}
+
+.scroll-to-top:hover {
+  background-color: #555;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
 
 
 
@@ -667,10 +692,9 @@ hr {
 }
 
 footer {
-  background-color: var(--color-dark);
   color: var(--color-white);
   padding: 40px 0;
-  font-family: "matter-regular";
+  font-family: "neue";
   border-top: 1px solid var(--color-grey);
 }
 
@@ -696,9 +720,11 @@ footer {
   margin-top: 10px;
 }
 
-.footer-logo img {
+.footer-logo a {
   max-width: 50px;
   margin-bottom: 20px;
+  font-family: "aero";
+  font-size: 2.6em;
 }
 
 .footer-columns {
@@ -716,8 +742,9 @@ footer {
 
 .footer-column h4 {
   margin-bottom: 15px;
-  font-size: 20px;
-  font-family: "matter-regular";
+  font-size: 1.9em;
+  font-family: "neue";
+  font-weight: lighter;
 }
 
 .footer-column ul {
@@ -730,14 +757,16 @@ footer {
 }
 
 .footer-column ul li a {
-  color: var(--color-white);
+  color: #575757;
   text-decoration: none;
   transition: color 0.3s;
-  font-family: "matter-regular";
+  font-family: "neue";
+  font-size: 1.5em;
 }
 
 .footer-column ul li a:hover {
   color: var(--color-main);
+  font-weight: lighter;
 }
 
 .footer-bottom {
@@ -752,7 +781,9 @@ footer {
 
 .footer-bottom p {
   margin: 0;
-  font-family: "arame";
+  font-family: "neue";
+  font-weight: lighter;
+  font-size: 1.9em;
 }
 
 .social-icons {

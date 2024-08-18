@@ -8,7 +8,7 @@ use CodeIgniter\Router\RouteCollection;
 
 // Seccion controlador Home/index
 $routes->get('/', 'Home::index');
-
+$routes->get('home', 'Home::home');
 // Seccion controlador User/Login
 $routes->get('login', 'User\Login::index');
 $routes->POST('login', 'User\Login::do_login');
