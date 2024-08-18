@@ -104,7 +104,7 @@
         }
 
         // Inicia la animación de desencriptado
-        revealText(textElement, 'MCL/23', 85);
+        revealText(textElement, 'NVS/24', 85);
 
         // Después de que termine la animación, redirige
         setTimeout(() => {
