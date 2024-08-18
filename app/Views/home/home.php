@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <body>
 
-    <nav>
+    <nav id="navbar">
         <div class="nav-left">
             <ul>
                 <li><a href="#software">Software</a>
@@ -143,39 +143,38 @@ document.addEventListener('DOMContentLoaded', function() {
     <section id="features">
 
 
-        <div class="features-block" id="security">
-            <h3>Features & Security</h3>
+        <div class="features-block hidden" id="security">
+            <h3>FEATURES & SECURITY</h3>
             <div class="feature-item">
-                <div class="icon"><i class="fas fa-lock"></i></div>
-                <div class="feature-text">
+                <div class="feature-text hidden">
                     <h4>Highly Secure</h4>
                     <p>Passwords are hashed using Bcrypt.</p>
                 </div>
             </div>
             <div class="feature-item">
-                <div class="icon"><i class="fas fa-shield-alt"></i></div>
-                <div class="feature-text">
+
+                <div class="feature-text hidden">
                     <h4>Local Deployment</h4>
                     <p>Runs locally for enhanced security.</p>
                 </div>
             </div>
             <div class="feature-item">
-                <div class="icon"><i class="fas fa-file-download"></i></div>
-                <div class="feature-text">
+
+                <div class="feature-text hidden">
                     <h4>Downloadable Reports</h4>
                     <p>Delete and download scan history in PDF format.</p>
                 </div>
             </div>
             <div class="feature-item">
-                <div class="icon"><i class="fas fa-key"></i></div>
-                <div class="feature-text">
+
+                <div class="feature-text hidden">
                     <h4>Advanced Security Features</h4>
                     <p>Supports two-factor authentication, password recovery, and change password functionality.</p>
                 </div>
             </div>
             <div class="feature-item">
-                <div class="icon"><i class="fa-solid fa-satellite-dish"></i></div>
-                <div class="feature-text">
+
+                <div class="feature-text hidden">
                     <h4>Compatibility</h4>
                     <p>Compatible with Raspberry Pi 3 B+ and later versions.</p>
                 </div>
@@ -185,92 +184,9 @@ document.addEventListener('DOMContentLoaded', function() {
     </section>
 
     <hr>
-    <section id="comparison" class="comparison-section">
-        <h2>Software Comparison</h2>
-        <table class="comparison-table">
-            <thead>
-                <tr>
-                    <th>Features</th>
-                    <th>NVS</th>
-                    <th>Nessus</th>
-                    <th>OpenVAS</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Open Source</td>
-                    <td class="yes">&#10003;</td>
-                    <td class="no">&#10007;</td>
-                    <td class="yes">&#10003;</td>
-                </tr>
-                <tr>
-                    <td>Easy to Use</td>
-                    <td class="yes">&#10003;</td>
-                    <td class="yes">&#10003;</td>
-                    <td class="no">&#10007;</td>
-                </tr>
-                <tr>
-                    <td>Intuitive</td>
-                    <td class="yes">&#10003;</td>
-                    <td class="yes">&#10003;</td>
-                    <td class="no">&#10007;</td>
-                </tr>
-                <tr>
-                    <td>Performance</td>
-                    <td class="yes">&#10003;</td>
-                    <td class="no">&#10007;</td>
-                    <td class="no">&#10007;</td>
-                </tr>
-                <tr>
-                    <td>Network Scanning</td>
-                    <td class="yes">&#10003;</td>
-                    <td class="yes">&#10003;</td>
-                    <td class="yes">&#10003;</td>
-                </tr>
-                <tr>
-                    <td>Vulnerability Analysis</td>
-                    <td class="yes">&#10003;</td>
-                    <td class="yes">&#10003;</td>
-                    <td class="yes">&#10003;</td>
-                </tr>
-                <tr>
-                    <td>Identification of SO</td>
-                    <td class="yes">&#10003;</td>
-                    <td class="yes">&#10003;</td>
-                    <td class="yes">&#10003;</td>
-                </tr>
-                <tr>
-                    <td>Scan History</td>
-                    <td class="yes">&#10003;</td>
-                    <td class="yes">&#10003;</td>
-                    <td class="yes">&#10003;</td>
-                </tr>
-                <tr>
-                    <td>Use of Raspberry Pi</td>
-                    <td class="yes">&#10003;</td>
-                    <td class="yes">&#10003;</td>
-                    <td class="no">&#10007;</td>
-                </tr>
-                <tr>
-                    <td>Safety Measures</td>
-                    <td class="yes">&#10003;</td>
-                    <td class="yes">&#10003;</td>
-                    <td class="yes">&#10003;</td>
-                </tr>
-                <tr>
-                    <td>Updates and Improvements</td>
-                    <td class="yes">&#10003;</td>
-                    <td class="yes">&#10003;</td>
-                    <td class="no">&#10007;</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
 
 
 
-
-    <hr>
 
     <!-- About Us Section -->
     <section class="about" id="about">
@@ -282,7 +198,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
         <section class="comments-section">
-            <h2>What our colleagues say about NVS</h2>
+            <div class="text">
+                <h2>WHAT OUR COLLEAGUES SAY ABOUT NVS</h2>
+            </div>
+
             <div class="comments-carousel" id="comments">
                 <!-- Las tarjetas se generarán dinámicamente aquí -->
             </div>
@@ -293,7 +212,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="section-content">
             <div class="text-image-block" id="creators">
                 <div class="text">
-                    <h4>Developers</h4>
+                    <h4>DEVELOPERS</h4>
                     <div id="profiles"></div>
                 </div>
 
@@ -597,8 +516,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     </script>
 
-
-
     <script>
     document.addEventListener("DOMContentLoaded", function() {
         const usernames = ["schwgon", "Dr-Cristian", "LaureanoCarlos", "Craifran", "Randalfd", "TadeoBoglione",
@@ -630,37 +547,22 @@ document.addEventListener('DOMContentLoaded', function() {
         // Función para generar el HTML de cada tarjeta
         function generateCommentHTML(data) {
             return `
-            <div class="comment-card">
-                <img src="${data.avatar_url}" alt="${data.login}'s Profile Image">
-                <div class="comment-content">
-                    <h3>${data.name ? data.name : data.login}</h3>
-                    <p>Este es un comentario de ejemplo sobre tu software.</p>
-                </div>
+        <div class="comment-card">
+            <img src="${data.avatar_url}" alt="${data.login}'s Profile Image">
+            <div class="comment-content">
+                <h3>${data.name ? data.name : data.login}</h3>
+                <p>Este es un comentario de ejemplo sobre tu software.</p>
             </div>
-        `;
+        </div>
+    `;
         }
 
         // Espera un breve tiempo para asegurarse de que todo el HTML se ha generado antes de duplicar
         setTimeout(() => {
-            commentsContainer.innerHTML = allCommentsHTML +
-                allCommentsHTML; // Duplicamos todo el contenido al final
+            commentsContainer.innerHTML = allCommentsHTML; // Elimina la duplicación
         }, 500);
 
-        // Configuración del carrusel continuo
-        let scrollAmount = 0;
-        const scrollStep = 1; // Ajusta esta velocidad para que sea más lenta o más rápida
-
-        function scrollCarousel() {
-            scrollAmount -= scrollStep;
-            commentsContainer.style.transform = `translateX(${scrollAmount}px)`;
-
-            if (Math.abs(scrollAmount) >= commentsContainer.scrollWidth / 2) {
-                scrollAmount = 0;
-            }
-            requestAnimationFrame(scrollCarousel);
-        }
-
-        scrollCarousel(); // Iniciar el scroll continuo
+        // Elimina la configuración del carrusel continuo
     });
     </script>
 
@@ -739,7 +641,20 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     </script>
 
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const navbar = document.getElementById('navbar');
 
+        window.addEventListener('scroll', function() {
+            if (window.scrollY >
+                50) { // Ajusta el valor según el punto donde quieres que cambie el color
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+        });
+    });
+    </script>
 
 
 
