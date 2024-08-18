@@ -38,7 +38,47 @@
     src: url("./fonts/arame/Arame-Thin.ttf") format("truetype");
   }
 
+  @font-face {
+    font-family: "jet-bold";
+    src: url("./fonts/JetBrainsMono/JetBrainsMonoNerdFont-Bold.ttf") format("truetype");
+  }
 
+
+  @font-face {
+    font-family: "jet-boldi";
+    src: url("./fonts/JetBrainsMono/JetBrainsMonoNerdFont-BoldItalic.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "jet";
+    src: url("./fonts/JetBrainsMono/JetBrainsMonoNerdFont-Regular.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "jet-medium";
+    src: url("./fonts/JetBrainsMono/JetBrainsMonoNerdFont-Medium.ttf") format("truetype");
+  }
+
+
+  @font-face {
+    font-family: "akira";
+    src: url("./fonts/akira/Akira\ Expanded\ Demo.otf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "schabo";
+    src: url("./fonts/schabo/SCHABO-Condensed.otf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "neue";
+    src: url("./fonts/neue/NeueMontreal-Regular.otf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "neue-medium";
+    src: url("./fonts/neue/NeueMontreal-Medium.otf") format("truetype");
+  }
 
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
@@ -46,7 +86,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: "neue";
     text-decoration: none;
     border: none;
     outline: none;
@@ -60,7 +100,7 @@
 
     margin: 0;
     padding: 0;
-    font-family: "matter-medium";
+    font-family: "neue";
     background-color: var(--color-black);
     color: var(--color-white);
     display: flex;
@@ -78,80 +118,73 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background: linear-gradient(90deg, #1b1b1b  15%, #333 100%);
-    border-bottom: 1px solid #454545;
+
     z-index: 2000;
-  }
+}
 
-  nav .logo a {
-    font-family: "aero";
-    font-size: 2.5em;
-    color: var(--color-main);
-  }
+.nav-left,
+.nav-right {
+    display: flex;
+    align-items: center;
+}
 
-  nav ul {
+.nav-left ul,
+.nav-right ul {
+    display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
-  }
+}
 
-  nav ul li {
+nav .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+nav .logo a {
+    font-family: "aero";
+    font-size: 2.5em;
+    color: var(--color-main);
+    text-decoration: none;
+}
+
+nav ul li {
     position: relative;
     margin: 0 15px;
-  }
+}
 
-  nav ul li a {
+nav ul li a,
+nav ul p {
     text-decoration: none;
-    color: var(--color-white);
-    font-family: "matter-medium";
-    font-size: 1.1em;
+    font-size: 1.2em;
+  color: var(--color-white);
+  font-family: "neue";
     padding: 15px 20px;
     display: block;
-  }
+}
 
-  nav ul a  {
-    color: var(--color-white);
-    font-family: "matter-medium";
-    font-size: 1.1em;
-    padding: 15px 20px;
-    display: block;
-  }
-
-  nav ul p {
-    color: var(--color-white);
-    font-family: "matter-medium";
-    font-size: 1.1em;
-    padding: 15px 20px;
-    display: block;
-  }
-
-  .button {
+.button {
     margin-top: 4px;
     background: linear-gradient(40deg, #333 45%, #151414 100%);
     border: 1px solid #454545;
-    padding: 10px; /* Ajusta el padding según sea necesario */
-    border-radius: 5px; /* Ajusta el valor para redondear más o menos las esquinas */
+    padding: 10px;
+    border-radius: 5px;
     justify-content: center;
     text-align: center;
-  }
+}
 
-
-
-  nav ul .button:hover {
+nav ul .button:hover {
     background: linear-gradient(40deg, #444444 45%, #151414 100%);
     border: 1px solid #4d4c4c;
-  }
+}
 
-  nav ul li a:hover {
-    color: var(--color-main);
-  }
 
-  nav ul li .dropdown {
+nav ul li .dropdown {
     display: none;
     position: absolute;
     top: 100%;
-    right: 15%;
+    left: 15%;
     background: linear-gradient(95deg, #333 0%, #151414 100%);
     border: 1px solid #454545;
     border-radius: 5px;
@@ -164,99 +197,71 @@
     visibility: hidden;
     transform: translateY(10px);
     transition: opacity 0.5s ease, transform 0.5s ease;
-  }
-
-  nav ul li .dropdown li {
-    width: 200px;
-  }
-
-  nav ul li .dropdown li a {
-    padding: 10px 10px;
-    color: var(--color-white);
-    font-weight: lighter;
-  }
-
-  nav ul li .dropdown li a:hover {
-    background-color: #575757;
-    border-radius: 5px;
-  }
-
-  nav ul li:hover .dropdown {
-    display: block;
-
 }
 
-  .home {
-    background: linear-gradient(to top, rgba(63, 63, 63, 0.233), var(--color-black));
+nav ul li .dropdown li {
+    width: 200px;
+}
 
-  }
+nav ul li .dropdown li a {
+    padding: 10px 10px;
+    color: var(--color-white);
+}
+
+nav ul li .dropdown li a:hover {
+    color: #7e7a7a;
+    border-radius: 5px;
+}
+
+nav ul li:hover .dropdown {
+    display: block;
+}
+
+
 
   .intro {
     display: flex;
-    justify-content: space-between; /* Distribuye el espacio entre .intro-text y .intro-image */
-    align-items: flex-start; /* Alinea el contenido hacia arriba */
+    justify-content: center; /* Centra el contenido */
+    align-items: center; /* Centra el contenido verticalmente */
     height: 100vh;
-    padding-top: 22rem; /* Ajusta según tu diseño */
-    color: var(--color-white);
-
+    padding-top: 0; /* Elimina cualquier relleno superior */
 }
-
 
 .intro-text {
+  text-align: left;
+ /* Ajusta el margen superior e izquierdo */
+}
 
-  margin: 5% auto 0 auto; /* Centra horizontalmente y ajusta el margen superior */
+.intro-subtext {
+  position: absolute;
+  width: 50rem;
+  bottom: 5%; /* Ajusta este valor para mover el texto más arriba o más abajo */
+  left: 5%; /* Ajusta este valor para mover el texto más hacia la derecha o izquierda */
+  font-size: 1.2em;
+  color: #4d4c4c;
+  font-family: "neue";
 }
 
 
-  .intro-text h1 {
-    font-size: 8.5em;
-    font-weight: 500;
-    font-family: "aero";
-    font-weight: lighter;
-  }
 
 
 
-  .intro-text p {
-    font-size: 1.2em;
-    font-family: "matter-regular";
-  }
-
-  .buttons {
-    margin-top: 20px;
-  }
-
-  .buttons .btn {
-    background-color: var(--color-main);
-    font-family: "matter-medium";
-    color: var(--color-white);
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-right: 10px;
-    transition: background-color 0.3s;
-  }
-
-  .buttons .btn:hover {
-    background-color: var(--color-grey);
-  }
-
-  .intro-image {
-    width: 45%; /* Ajusta el ancho de la imagen según tu diseño */
-    text-align: right; /* Alinea la imagen hacia la derecha */
-    margin-right: 15rem;
-    margin-top: -2rem;
+.intro-text h1 {
+  font-size: 10em; /* Aumenta el tamaño de la fuente */
+  font-weight: lighter;
+  font-family: "schabo"; /* Asegúrate de que esta sea la fuente correcta */
+  text-align: center; /* Centra el texto */
+  margin: 0 auto;
+  color: #575757;/* Asegúrate de que el margen superior e inferior sea cero */
 }
 
-.intro-image img {
-  width: 45%; /* Asegura que la imagen no supere el 100% del ancho del contenedor */
-  height: auto; /* Permite que la altura se ajuste automáticamente */
-  border-radius: 10px;
 
-}
+
+
 
 
 .scroll-down {
+  display: none;
   position: absolute;
   bottom: 20px; /* Ajusta según tu diseño */
   left: 50%; /* Centra la flecha horizontalmente */
@@ -281,9 +286,7 @@
 
   /* Agrega al final de tu archivo CSS */
 
-#software {
-  background: linear-gradient(to bottom, rgba(63, 63, 63, 0.233), var(--color-black));
-}
+
 
 .section-header {
   text-align: center;
@@ -354,20 +357,19 @@
 }
 
 .text h4  {
-  font-size: 2.9em;
-  font-family: "matter-regular";
+  font-size: 3.2em;
+  font-family: "jet-bold";
   padding-bottom: 10px;
 }
 
 .text p {
   font-size: 1.2em;
-  font-family: "matter-regular";
+  font-family: "jet";
 }
 
 .text p span {
   color: var(--color-main);
-  font-family: "matter-medium";
-  font-weight: lighter;
+  font-family: "jet";
 }
 
 .text ul {
@@ -378,13 +380,12 @@
 
 .text ul li {
   margin-bottom: 10px;
-  font-family: "matter-regular";
+  font-family: "jet";
 }
 
 .text ul li span {
   color: var(--color-main);
-  font-family: "matter-medium";
-  font-weight: lighter;
+  font-family: "jet";
 }
 
 

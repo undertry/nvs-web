@@ -1,4 +1,6 @@
 <?= $this->include('common/home/start.php'); ?>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
 <title>NVS</title>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -16,8 +18,8 @@
 
 <body>
 
-    <nav>
-        <div class="logo"><a href="#home">NVS</a></div>
+<nav>
+    <div class="nav-left">
         <ul>
             <li><a href="#software">Software</a>
                 <ul class="dropdown">
@@ -33,49 +35,40 @@
                     <li><a href="#faq">Faq</a></li>
                 </ul>
             </li>
+        </ul>
+    </div>
 
+    <div class="logo"><a href="#home">NVS</a></div>
 
-
-
-
-
-
-
-
+    <div class="nav-right">
+        <ul>
             <?php if (session('user') && session('user')->id_user > 0 && session('user')->name) : ?>
-
-
                 <li>
                     <p class="button" href="#menu"><?= session('user')->name; ?></p>
                     <ul class="dropdown">
                         <li><a href="<?= base_url('dashboard'); ?>">Dashboard</a></li>
                         <li><a href="<?= base_url('logout'); ?>">Log Out</a></li>
                     </ul>
-                <?php else : ?>
+                </li>
+            <?php else : ?>
                 <li><a href="<?= base_url('login'); ?>">Log In</a></li>
                 <li><a href="<?= base_url('register'); ?>">Sign Up</a></li>
-                <a class="button" href="#download">Download</a>
-
-
             <?php endif; ?>
-
-
-
+            <li><a class="button" href="#download">Download</a></li>
         </ul>
-    </nav>
+    </div>
+</nav>
 
 
-    <section class="home" id="home">
-        <div class="intro">
-            <div class="intro-text">
-                <h1>NVS</h1>
-            </div>
 
+<section class="home" id="home">
+    <div class="intro">
+        <div class="intro-text">
+            <h1 class="title-animate">NETWORK VULNERABILITY SCANNER</h1>
+            <p class="intro-subtext">New Reality is a design studio based in Tokyo, Japan. We work with many companies to build and proactively deliver engaging brand experiences. We are unique in our ability to take a strategic approach while being visually driven.</p>
         </div>
-        <div class="scroll-down">
-            <i class="fas fa-chevron-down"></i>
-        </div>
-    </section>
+    </div>
+</section>
 
 
 
@@ -652,6 +645,8 @@
             });
         });
     </script>
+
+
 
 
 </body>
