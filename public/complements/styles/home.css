@@ -265,6 +265,11 @@ nav ul li:hover .dropdown {
 }
 
 
+.home {
+  background-image: url("../styles/images/gradient.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
   .intro {
     display: flex;
@@ -285,7 +290,7 @@ nav ul li:hover .dropdown {
   bottom: 5%; /* Ajusta este valor para mover el texto más arriba o más abajo */
   left: 5%; /* Ajusta este valor para mover el texto más hacia la derecha o izquierda */
   font-size: 1.2em;
-  color: #4d4c4c;
+  color: #a8a8a8;
   font-family: "neue";
 }
 
@@ -295,7 +300,7 @@ nav ul li:hover .dropdown {
   font-family: "schabo"; /* Asegúrate de que esta sea la fuente correcta */
   text-align: center; /* Centra el texto */
   margin: 0 auto;
-  color: #575757;/* Asegúrate de que el margen superior e inferior sea cero */
+  color: #bb0f0f;/* Asegúrate de que el margen superior e inferior sea cero */
   opacity: 0; /* Ocultar inicialmente */
   transition: opacity 1s ease-in-out; /* Transición suave para la opacidad */
   overflow: hidden; /* Previene desbordamientos */

@@ -4,120 +4,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="<?php echo base_url('complements/styles/intro.css'); ?>">
     <title>Document</title>
-    <style>
-    :root {
-        --color-main: #d60b0b;
-        --color-black: #151414;
-        --color-dark: #0c0b0b;
-        --color-white: #f3f2f2;
-        --color-grey: #333;
-    }
 
-    #loading-screen {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: var(--color-black);
-        color: #575757;
-        display: flex;
-        justify-content: flex-end;
-        /* Alinea el contenido a la derecha */
-        align-items: flex-end;
-        /* Alinea el contenido a la parte inferior */
-        padding: 1rem;
-        /* Ajusta el espacio alrededor del texto */
-        z-index: 9999;
-        font-family: 'Neue', sans-serif;
-        transition: opacity 0.5s ease;
-    }
-
-    #loading-text {
-        font-size: 5rem;
-        /* Tamaño grande para el texto desencriptado */
-        font-weight: bold;
-        transition: opacity 1s ease;
-    }
-
-    /* Encoje el texto cuando termina la carga */
-    .loading-done #loading-text {
-        transform: scale(0);
-        opacity: 0;
-    }
-
-
-    @font-face {
-        font-family: "schabo";
-        src: url("./fonts/schabo/SCHABO-Condensed.otf") format("truetype");
-    }
-
-    @font-face {
-        font-family: "neue";
-        src: url("./fonts/neue/NeueMontreal-Regular.otf") format("truetype");
-    }
-    </style>
 </head>
 
-
 <body>
-    <!-- Loading Screen -->
-    <div id="loading-screen">
-        <div id="loading-text" class="title-animate"></div>
+    <div id="intro-container">
+        <h1 id="title">NVS</h1>
+        <div id="counter">3</div>
     </div>
+    <div id="square-container"></div>
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
     <script>
     document.addEventListener('DOMContentLoaded', () => {
-        let textElement = document.getElementById('loading-text');
-        let loadingScreen = document.getElementById('loading-screen');
+        const title = document.getElementById('title');
+        const counter = document.getElementById('counter');
+        const squareContainer = document.getElementById('square-container');
 
-        const revealText = (element, finalText, speed = 100) => {
-            let chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
-            let textArray = finalText.split('');
-            let currentIndex = 0;
+        const squareSize = 100;
+        const screenWidth = window.innerWidth;
+        const screenHeight = window.innerHeight;
+        const numCols = Math.ceil(screenWidth / squareSize);
+        const numRows = Math.ceil(screenHeight / squareSize);
+        const numSquares = numCols * numRows;
 
-            let interval = setInterval(() => {
-                textArray = textArray.map((char, index) => {
-                    if (index <= currentIndex) {
-                        return finalText[index];
-                    }
-                    return chars[Math.floor(Math.random() * chars.length)];
-                });
-
-                element.textContent = textArray.join('');
-
-                if (currentIndex < textArray.length) {
-                    currentIndex++;
-                } else {
-                    clearInterval(interval);
-                }
-            }, speed);
-        };
-
-        // Función para redirigir a otra vista
-        function redirectToAnotherView() {
-            // Obtiene la URL absoluta utilizando PHP y redirige a la vista "inicio"
-            var absoluteUrl = "<?php echo site_url('home'); ?>";
-            window.location.href = absoluteUrl;
+        // Crear los cuadrados
+        for (let i = 0; i < numSquares; i++) {
+            const square = document.createElement('div');
+            square.classList.add('square');
+            squareContainer.appendChild(square);
         }
 
-        // Inicia la animación de desencriptado
-        revealText(textElement, 'NVS/24', 85);
+        const squares = document.querySelectorAll('.square');
 
-        // Después de que termine la animación, redirige
-        setTimeout(() => {
-            loadingScreen.classList.add('loading-done');
-            setTimeout(() => {
-                redirectToAnotherView();
-            }, 500); // Espera medio segundo para completar la animación de encogimiento
-        }, 2000); // Espera 2 segundos para mostrar el texto desencriptado antes de redirigir
+        // Animación del título (h1) desde abajo hacia arriba
+        gsap.fromTo(title, {
+            y: 50,
+            opacity: 0
+        }, {
+            y: 0,
+            opacity: 1,
+            duration: 1.5,
+            ease: 'power4.out',
+            stagger: 0.1
+        });
+
+        // Animación del contador tipo ruleta
+        gsap.fromTo(counter, {
+            y: -100,
+            opacity: 0
+        }, {
+            y: 0,
+            opacity: 1,
+            duration: 0.4,
+            ease: 'back.out(1.7)',
+            delay: 2,
+            onComplete: () => {
+                gsap.to(counter, {
+                    y: 100,
+                    opacity: 0,
+                    duration: 0.5,
+                    ease: 'back.in(1.7)',
+                    repeat: 2,
+                    yoyo: true,
+                    delay: 1,
+                    onRepeat: function() {
+                        let currentNumber = parseInt(counter.textContent);
+                        counter.textContent = currentNumber - 1;
+                    },
+                    onComplete: triggerSquaresAnimation
+                });
+            }
+        });
+
+        // Animación de los cuadrados tipo fuego
+        function triggerSquaresAnimation() {
+            gsap.to(squares, {
+                opacity: 1,
+                duration: 0.1,
+                stagger: {
+                    each: 0.005,
+                    from: "random"
+                },
+                onComplete: () => {
+                    window.location.href = "<?php echo site_url('home'); ?>";
+                }
+            });
+        }
     });
     </script>
-
-
-
 </body>
 
 </html>

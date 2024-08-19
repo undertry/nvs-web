@@ -23,45 +23,47 @@ document.addEventListener('DOMContentLoaded', function() {
         <i class="fa fa-arrow-up"></i> <!-- Usa el ícono de flecha de FontAwesome -->
     </a>
 
-    <nav id="navbar">
-        <div class="nav-left">
-            <ul>
-                <li><a href="#software">Software</a>
-
-                </li>
-                <li><a href="#about">About Us</a>
-
-                </li>
-            </ul>
-        </div>
-
-        <div class="logo"><a href="<?= base_url('/'); ?>">NVS</a></div>
-
-        <div class="nav-right">
-            <ul>
-                <?php if (session('user') && session('user')->id_user > 0 && session('user')->name) : ?>
-                <li>
-                    <p class="button" href="#menu"><?= session('user')->name; ?></p>
-                    <ul class="dropdown">
-                        <li><a href="<?= base_url('dashboard'); ?>">Dashboard</a></li>
-                        <li><a href="<?= base_url('logout'); ?>">Log Out</a></li>
-                    </ul>
-                </li>
-                <?php else : ?>
-                <li><a href="<?= base_url('login'); ?>">Log In</a></li>
-                <li><a href="<?= base_url('register'); ?>">Sign Up</a></li>
-                <?php endif; ?>
-                <li><a class="button" href="#download">Download</a></li>
-            </ul>
-        </div>
-    </nav>
-
-
 
     <section class="home" id="home">
+        <nav id="navbar">
+            <div class="nav-left">
+                <ul>
+                    <li><a href="#software">Software</a>
+
+                    </li>
+                    <li><a href="#about">About Us</a>
+
+                    </li>
+                </ul>
+            </div>
+
+            <div class="logo"><a href="<?= base_url('/'); ?>">NVS</a></div>
+
+            <div class="nav-right">
+                <ul>
+                    <?php if (session('user') && session('user')->id_user > 0 && session('user')->name) : ?>
+                    <li>
+                        <p class="button" href="#menu"><?= session('user')->name; ?></p>
+                        <ul class="dropdown">
+                            <li><a href="<?= base_url('dashboard'); ?>">Dashboard</a></li>
+                            <li><a href="<?= base_url('logout'); ?>">Log Out</a></li>
+                        </ul>
+                    </li>
+                    <?php else : ?>
+                    <li><a href="<?= base_url('login'); ?>">Log In</a></li>
+                    <li><a href="<?= base_url('register'); ?>">Sign Up</a></li>
+                    <?php endif; ?>
+                    <li><a class="button" href="#download">Download</a></li>
+                </ul>
+            </div>
+        </nav>
+
+
+
+
         <div class="intro">
             <div class="intro-text">
-                <h1 class="title-animate">NETWORK VULNERABILITY SCANNER</h1>
+                <h1 class="title-animate">NETWORK VULNERABILITY SCAN</h1>
                 <p class="intro-subtext hidden">We are a team of developers redefining the landscape of cybersecurity.
                     Our
                     mission is to make it easier than ever to protect yourself from cybercriminals. We combine
@@ -575,7 +577,7 @@ document.addEventListener('DOMContentLoaded', function() {
             };
 
             title.style.opacity = 1;
-            revealText(title, 'NETWORK VULNERABILITY SCANNER', 85);
+            revealText(title, 'NETWORK VULNERABILITY SCAN', 85);
         });
         </script>
 

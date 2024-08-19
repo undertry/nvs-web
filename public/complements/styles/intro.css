@@ -1,0 +1,72 @@
+:root {
+    --color-main: #d60b0b;
+    --color-black: #151414;
+    --color-dark: #0c0b0b;
+    --color-white: #f3f2f2;
+    --color-grey: #333;
+}
+
+@font-face {
+    font-family: "aero";
+    src: url("./fonts/aeroxys/Aeroxys.ttf") format("truetype");
+  }
+
+@font-face {
+    font-family: "schabo";
+    src: url("./fonts/schabo/SCHABO-Condensed.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "neue";
+    src: url("./fonts/neue/NeueMontreal-Regular.otf") format("truetype");
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--color-main);
+    font-family: Arial, sans-serif;
+}
+
+#intro-container {
+    text-align: center;
+    color: var(--color-white);
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 7.9rem;
+    opacity: 0;
+    font-family: "aero";
+    font-weight: lighter;
+}
+
+#counter {
+    font-size: 1em;
+    margin-top: 1rem;
+    opacity: 0;
+font-family: "neue";
+}
+
+#square-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.square {
+    background-color: var(--color-black);
+    width: 100px;
+    height: 100px;
+    opacity: 0;
+}
