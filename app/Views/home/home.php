@@ -49,8 +49,8 @@
 
 
                     <?php else : ?>
-                        <li><a href="<?= base_url('login'); ?>">Log In</a></li>
-                        <li><a href="<?= base_url('register'); ?>">Sign Up</a></li>
+                        <li><a href="<?= base_url('login-animation'); ?>">Log In</a></li>
+                        <li><a href="<?= base_url('signup-animation'); ?>">Sign Up</a></li>
                     <?php endif; ?>
                 </ul>
                 <button class="cta-button">Download</button>

@@ -10,6 +10,8 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Home::index');
 $routes->get('home', 'Home::home');
 // Seccion controlador User/Login
+
+$routes->get('login-animation', 'User\Login::animation');
 $routes->get('login', 'User\Login::index');
 $routes->POST('login', 'User\Login::do_login');
 $routes->get('logout', 'User\Login::logout');
@@ -20,6 +22,7 @@ $routes->get('verificationcode', 'User\Login::sendemailverification');
 $routes->POST('confirmcode', 'User\Login::verificationconfirm');
 
 // Seccion controlador User/Register
+$routes->get('signup-animation', 'User\Register::animation');
 $routes->get('register', 'User\Register::index');
 $routes->POST('register', 'User\Register::do_register');
 

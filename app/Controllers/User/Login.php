@@ -29,36 +29,36 @@ class Login extends BaseController
         $userModel = new UserModel();
         $email = $this->request->getPost('email');
         $password = $this->request->getPost('password');
-    
+
         // Obtener el usuario por correo electrónico
         $result = $userModel->getUserByEmail($email);
-    
+
         if ($result !== null && $result->id_user > 0) {
             // Verificar si la contraseña es correcta
             if (password_verify($password, $result->password)) {
                 // Eliminar la propiedad 'password' antes de guardar en la sesión
                 unset($result->password);
-                
-    
+
+
                 // si la contraseña es correcta redirigir basado en el estado de verificación
                 if ($result->verification == 0) {
                     // Establecer la sesión del usuario
                     $this->session->set("user", $result);
                     return redirect()->to('dashboard'); // Redirige al dashboard si verification es 0
                 } else {
-                    $result->id_user=0;
+                    $result->id_user = 0;
                     $this->session->set("user", $result);
                     return redirect()->to('verificationcode'); // Redirige a la verificación de dos pasos si verification es 1
                 }
             } else {
-                // Contraseña incorrecta    
+                // Contraseña incorrecta
                 $this->session->setFlashdata('error', 'Invalid password or email address');
             }
         } else {
             // Usuario no encontrado
             $this->session->setFlashdata('error', 'Invalid password or email address');
         }
-    
+
         // Redirigir de nuevo a la página de inicio de sesión
         return redirect()->to('login');
     }
@@ -125,42 +125,47 @@ class Login extends BaseController
             return redirect()->to('login');
         }
     }
-        public function verify()
-        {
-            return view('user/form/2stepverify');
+    public function verify()
+    {
+        return view('user/form/2stepverify');
+    }
+
+    public function verificationconfirm()
+    {
+        $userModel = new UserModel();
+        $codeModel = new CodeModel();
+
+
+        $code = $this->request->getPost('code');
+        $userse = session('user');
+        $emailU = $userse->email;
+        $user = $userModel->GetIdByemail($emailU);
+        $id_user = $user->id_user;
+
+        // REALIZAR VERIFICACION QUE EL CODIGO PERTENESCA AL USUARIO EN SESION
+        // Obtener el id_user asociado al código de recuperación
+        $userco = $codeModel->getUserByCode($code);
+        if (!$userco) {
+            //cuando el codigo no se encuentra
+            $this->session->setFlashdata('error', 'Invalid verification code.');
+            return redirect()->to('2stepverify');
         }
-
-        public function verificationconfirm()
-        {
-            $userModel = new UserModel();
-            $codeModel = new CodeModel();
-
-
-            $code = $this->request->getPost('code');
-            $userse= session('user'); 
-            $emailU= $userse->email;
-            $user = $userModel->GetIdByemail($emailU);   
-            $id_user = $user->id_user;
-
-            // REALIZAR VERIFICACION QUE EL CODIGO PERTENESCA AL USUARIO EN SESION
-            // Obtener el id_user asociado al código de recuperación
-            $userco = $codeModel->getUserByCode($code);   
-              if (!$userco) {  
-                //cuando el codigo no se encuentra
-                $this->session->setFlashdata('error', 'Invalid verification code.');
-                return redirect()->to('2stepverify');
-            }
-            $id_userco= $userco->id_user;
-            if ($id_userco !== $id_user) {  
-                //si no coincide el codigo con el usuario
-                $this->session->setFlashdata('error', 'Invalid verification code.');
-                return redirect()->to('2stepverify');
-            }else{
+        $id_userco = $userco->id_user;
+        if ($id_userco !== $id_user) {
+            //si no coincide el codigo con el usuario
+            $this->session->setFlashdata('error', 'Invalid verification code.');
+            return redirect()->to('2stepverify');
+        } else {
             // Limpiar el código de recuperación después de cambiar la contraseña
             $codeModel->deleteByCode($code);
             session('user')->id_user = $id_user;
             $this->session->setFlashdata('success', 'Verification successful.');
             return redirect()->to('dashboard');
-             }
         }
+    }
+
+    public function animation()
+    {
+        return view('common/user/login-animation');
+    }
 }
