@@ -10,6 +10,7 @@
 
 <body>
 
+    <div class="cursor"></div>
     <a href="#" class="scroll-to-top">
         <i class="fa fa-arrow-up"></i> <!-- Usa el ícono de flecha de FontAwesome -->
     </a>
@@ -85,23 +86,23 @@
         </div>
         <div class="section-content">
             <div class="text-image-block hidden" id="what-is">
-                <div class="text">
+                <div class="text hidden">
                     <h3>What is it?</h3>
                     <h4>SOFTWARE | VULNERABILITY | SCAN | NETWORKS</h4>
                     <p>It is a software designed to analyze available WiFi networks. Upon selecting a specific network,
                         the software can perform the following functions:</p>
                     <ul>
-                        <li>Scan the network to detect <span>connected devices.</span></li>
-                        <li>Identify the <span>operating system</span> of each device.</li>
-                        <li>Assess the <span>vulnerabilities</span> of connected devices, if possible.</li>
-                        <li>Use a <span>Raspberry Pi</span> for data collection.</li>
+                        <li>• Scan the network to detect <span>connected devices.</span></li>
+                        <li>• Identify the <span>operating system</span> of each device.</li>
+                        <li>• Assess the <span>vulnerabilities</span> of connected devices, if possible.</li>
+                        <li>• Use a <span>Raspberry Pi</span> for data collection.</li>
                     </ul>
                 </div>
 
             </div>
             <div class="text-image-block hidden" id="who-for">
 
-                <div class="text">
+                <div class="text hidden">
                     <h3>Who is it for?</h3>
                     <h4>INDIVIDUALS PASSIONATE ABOUT CYBERSECURITY</h4>
                     <p>It is for individuals who are <span>passionate</span> about <span>cybersecurity</span> and want
@@ -110,7 +111,7 @@
                 </div>
             </div>
             <div class="text-image-block hidden" id="origin">
-                <div class="text">
+                <div class="text hidden">
                     <h3>How did it start?</h3>
                     <h4>FROM AN IDEA TO A PROJECT</h4>
                     <p>It began as a <span>mere idea</span>, but after giving it some thought, we realized it would be a
@@ -136,6 +137,7 @@
 
 
         <div class="features-block hidden" id="security">
+
             <h3>FEATURES & SECURITY</h3>
             <div class="feature-item">
                 <div class="feature-text hidden">
@@ -341,39 +343,7 @@
 
 
 
-        <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const dropdowns = document.querySelectorAll("nav ul li");
 
-            dropdowns.forEach(dropdown => {
-                dropdown.addEventListener("mouseenter", function() {
-                    const menu = this.querySelector(".dropdown");
-                    if (menu) {
-                        menu.style.display = "block";
-                        setTimeout(() => {
-                            menu.style.opacity = "1";
-                            menu.style.visibility = "visible";
-                            menu.style.transform = "translateY(0)";
-                        }, 10); // Añade un pequeño retraso antes de iniciar la animación
-                    }
-                });
-
-                dropdown.addEventListener("mouseleave", function() {
-                    const menu = this.querySelector(".dropdown");
-                    if (menu) {
-                        menu.style.opacity = "0";
-                        menu.style.visibility = "hidden";
-                        menu.style.transform = "translateY(10px)";
-                        setTimeout(() => {
-                                menu.style.display = "none";
-                            },
-                            500
-                        ); // Asegúrate de que coincida con la duración de la transición en el CSS
-                    }
-                });
-            });
-        });
-        </script>
 
 
         <script>
@@ -537,17 +507,45 @@
         });
         </script>
 
+
         <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const navbar = document.getElementById('navbar');
+            // Obtén todos los elementos con la clase 'text hidden'
+            const elements = document.querySelectorAll('.text.hidden');
 
-            window.addEventListener('scroll', function() {
-                if (window.scrollY >
-                    50) { // Ajusta el valor según el punto donde quieres que cambie el color
-                    navbar.classList.add('navbar-scrolled');
-                } else {
-                    navbar.classList.remove('navbar-scrolled');
-                }
+            // Configura el IntersectionObserver
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        entry.target.classList.remove(
+                            'hidden'); // Elimina la clase hidden cuando se vuelve visible
+                        observer.unobserve(entry
+                            .target); // Deja de observar el elemento después de la animación
+                    }
+                });
+            }, {
+                threshold: 0.1 // Ajusta el umbral según tus necesidades
+            });
+
+            elements.forEach(element => {
+                observer.observe(element); // Empieza a observar los elementos
+            });
+        });
+        </script>
+
+
+
+
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const cursor = document.querySelector(".cursor");
+
+            document.addEventListener("mousemove", function(e) {
+                const x = e.pageX - cursor.offsetWidth / 2;
+                const y = e.pageY - cursor.offsetHeight / 2;
+
+                cursor.style.transform = `translate(${x}px, ${y}px)`;
             });
         });
         </script>
