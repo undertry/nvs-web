@@ -96,13 +96,14 @@
 
   .cursor {
     pointer-events: none;
-    position: absolute;
-    padding: 0.9vw;
-    border: 2px solid var(--color-white);
-    border-radius: 50%;
-    z-index: 9000;
-    transition: transform 0.1s ease;
+  position: absolute;
+  padding: 0.5vw;
+  border-radius: 50%;
+  z-index: 9000;
+  transition: transform 0.1s ease, width 0.3s ease, height 0.3s ease;
+  background: var(--color-white);
   }
+
 
 /* Clase para ocultar elementos por defecto */
 .hidden {
@@ -432,14 +433,18 @@
   width: 80%;
   border-radius: 10px;
 }
-
-
-
 .text {
-
-  position: relative; /* Necesario para el subrayado absoluto */
-  overflow: hidden; /* Oculta el subrayado cuando no está en vista */
+  position: relative; /* Posiciona el contenedor .text sobre el contenedor padre */
+  z-index: 1000; /* Asegúrate de que esté por encima de las tarjetas */
 }
+
+.text h2 {
+  font-size: 2.9em;
+  font-family: "aero";
+  font-weight: lighter;
+  margin: 1rem 0;
+}
+
 
 .text h3 {
   font-size: 1.3em;
@@ -448,6 +453,8 @@
   margin-bottom: 20px;
   color: #575757;
 }
+
+
 
 
 /* Animación de entrada para el texto */
@@ -528,8 +535,20 @@
   font-family: "neue";
   font-size: 2.9em;
   font-weight: lighter;
+  opacity: 0; /* Empieza oculto */
+  transform: translateX(-200px); /* Empieza desde la izquierda */
+  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
 }
 
+.features-block.visible h3 {
+  opacity: 1;
+  transform: translateX(0); /* Mueve el elemento a su posición final */
+}
+
+.features-block.visible h3::after {
+  transform: scaleX(1); /* Expande el subrayado hasta su tamaño final */
+
+}
 
 
 .feature-item {
@@ -576,14 +595,19 @@
 
 
 .about {
+  background-image: url("../styles/images/blocks.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
 
 }
 
 .comments-section {
+
   width: 100%;
   overflow: hidden;
   position: relative;
-  height: 110vh;
+  height: 120vh;
+
 
 }
 
@@ -595,6 +619,14 @@
   margin-bottom: 1rem;
   padding-bottom: 1rem;
 }
+
+
+.comments-section .text h2 {
+  color: #bb0f0f;
+  font-size: 10.9em;
+  font-family: "aero";
+  font-weight: lighter;
+  }
 
 .comments-carousel {
   position: relative;
@@ -608,14 +640,19 @@
 
 .comment-card {
   position: absolute;
-  background: #bb0f0f;
+  background: var(--color-black);
   color: var(--color-white);
   border-radius: 8px;
   padding: 15px;
   width: 250px;
   height: 370px;
-  transition: transform 0.2s ease-out;
-  will-change: transform;
+ transition: transform 0.2s ease-out, filter 0.2s ease-out;
+  will-change: transform, filter;
+  filter: blur(10px); /* Mantiene el blur en las cartas */
+}
+
+.comment-card:hover {
+  filter: none;
 }
 
 .comment-content {
@@ -653,12 +690,13 @@
   margin: 0 auto; /* Centra horizontalmente */
 }
 
-#faq h2 {
+.faq h2 {
   font-size: 2.9em;
   margin-bottom: 2rem;
   text-align: center;
   font-family: "neue";
   font-weight: lighter;
+  color: #bb0f0f;
 }
 
 .faq-item {
@@ -720,91 +758,11 @@ hr {
   border: 1px solid var(--color-grey);
 }
 
-
-
-#profiles {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.profile {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 20px;
-  background: linear-gradient(95deg, #333 0%, #151414 100%);
-  border: 1px solid #454545;
-  border-radius: 5px;
-  padding: 15px;
-  max-width: 300px;
-  transition: transform .5s, width .5s, height .5s;
-}
-
-.profile:hover {
-  transform: scale(1.2);
-  z-index: 10;
-  position: relative;
-}
-
-.profile img {
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  transition: transform 0.5s;
-}
-
-.profile:hover img {
-  transform: scale(1.2);
-}
-
-.profile a {
-  margin-top: 10px;
-  font-family: "neue";
-  font-size: 1em;
-  font-weight: 600;
-  text-decoration: none;
-  color: var(--color-main);
-}
-
-.profile p {
-  font-family: "neue";
-  font-size: 0.9em;
-  color: var(--color-secondary);
-  margin: 10px 0;
-}
-
-.profile .followers {
-  font-family: "neue";
-  font-size: 0.9em;
-  color: var(--color-secondary);
-  margin: 10px 0;
-}
-
-.profile .achievements {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.profile .achievement {
-  margin: 5px;
-}
-#creators {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-
-#purpose {
-  text-align: left;
-  display: flex;
-  width: 30%;
-  justify-content: left;
-}
+/* Estilos generales del footer */
 
 footer {
   color: var(--color-white);
+  background: var(--color-black);
   padding: 40px 0;
   font-family: "neue";
   border-top: 1px solid var(--color-grey);

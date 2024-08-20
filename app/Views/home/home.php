@@ -42,15 +42,15 @@
                     <li><a href="#about">About</a></li>
                     <?php if (session('user') && session('user')->id_user > 0 && session('user')->name) : ?>
 
-                        <li><a href="<?= base_url('dashboard'); ?>"><?= session('user')->name; ?></a>
-                        </li>
+                    <li><a href="<?= base_url('dashboard'); ?>"><?= session('user')->name; ?></a>
+                    </li>
 
-                        <li><a href="<?= base_url('logout'); ?>">Log Out</a></li>
+                    <li><a href="<?= base_url('logout'); ?>">Log Out</a></li>
 
 
                     <?php else : ?>
-                        <li><a href="<?= base_url('login-animation'); ?>">Log In</a></li>
-                        <li><a href="<?= base_url('signup-animation'); ?>">Sign Up</a></li>
+                    <li><a href="<?= base_url('login-animation'); ?>">Log In</a></li>
+                    <li><a href="<?= base_url('signup-animation'); ?>">Sign Up</a></li>
                     <?php endif; ?>
                 </ul>
                 <button class="cta-button">Download</button>
@@ -66,7 +66,7 @@
     <section class="home" id="home">
 
 
-        <div class="intro">
+        <div class="intro hidden ">
             <div class="intro-text">
                 <h1 class="title-animate">NETWORK VULNERABILITY SCAN</h1>
                 <p class="intro-subtext hidden">We are a team of developers redefining the landscape of cybersecurity.
@@ -184,21 +184,20 @@
 
     <!-- About Us Section -->
     <section class="about" id="about">
-        <div class="section-header hidden">
-            <h2>ABOUT US</h2>
-        </div>
-
-
 
 
         <section class="comments-section hidden">
-            <div class="text">
-                <h2>WHAT OUR COLLEAGUES SAY ABOUT NVS</h2>
-            </div>
 
             <div class="comments-carousel" id="comments">
-                <!-- Las tarjetas se generarán dinámicamente aquí -->
+
             </div>
+
+            <div class="text">
+                <h2>NVS</h2>
+            </div>
+
+
+
         </section>
 
 
@@ -347,75 +346,35 @@
 
 
         <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                // Manejo del dropdown
-                document.querySelector('.dropdown-button').addEventListener('click', function() {
-                    var dropdownContent = document.querySelector('.dropdown-content');
-                    dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' :
-                        'block';
-                });
+        document.addEventListener("DOMContentLoaded", function() {
+            const commentsContainer = document.getElementById("comments");
 
-                // Manejo del clic en "Clonar Repositorio"
-                document.querySelector('#clone-repo').addEventListener('click', function(e) {
-                    e.preventDefault(); // Evitar la acción por defecto del enlace
+            const usernames = ["schwgon", "Dr-Cristian", "LaureanoCarlos", "Craifran", "Randalfd",
+                "TadeoBoglione",
+                "Naahuuel"
+            ];
+            const comments = [
+                "The NVS software has significantly enhanced my security by identifying network vulnerabilities. This has been particularly useful for protecting my extensive computer systems. ",
+                "I find this product to be excellent in fulfilling its promises. Despite still being in development, it is even better than some paid programs with the same purpose. Thank you.",
+                "A well-conceived idea from the initial design, it effectively meets its objectives and is free of defects. Its creators are visionary and proactive individuals.",
+                "The website is very pleasant, easy to understand, and visually appealing. The interaction with it is logical and comprehensible. Regarding the software, it is a very interesting idea that is well implemented.",
+                "very good service, very simple and practical.",
+                "The tool appears to be very useful for addressing current security concerns and frequent attacks. With this device, vulnerabilities are mitigated, and its advanced technology effectively handles highly specific issues.",
+                "I found the site dynamic, interactive and with good navigation flow."
+            ];
+            let allCommentsHTML = "";
 
-                    const url = 'git clone https://github.com/tiagocomba/NVS.git';
-
-                    // Crear un elemento de texto oculto para copiar al portapapeles
-                    const tempInput = document.createElement('input');
-                    tempInput.value = url;
-                    document.body.appendChild(tempInput);
-                    tempInput.select();
-                    document.execCommand('copy');
-                    document.body.removeChild(tempInput);
-
-                    // Reemplazar el texto original con el mensaje de copiado
-                    const originalText = this.querySelector('.original-text');
-                    const message = this.querySelector('.copied-message');
-
-                    // Ocultar el texto original y mostrar el mensaje
-                    originalText.style.display = 'none';
-                    message.style.display = 'inline';
-
-                    // Restaurar el texto original después de 2 segundos
-                    setTimeout(() => {
-                        originalText.style.display = 'inline';
-                        message.style.display = 'none';
-                    }, 2000);
-                });
+            usernames.forEach((username, index) => {
+                allCommentsHTML += generateCommentHTML(username, comments[index % comments.length]);
             });
-        </script>
 
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                const commentsContainer = document.getElementById("comments");
+            setTimeout(() => {
+                commentsContainer.innerHTML = allCommentsHTML;
+                initializeCardPositions();
+            }, 500);
 
-                const usernames = ["schwgon", "Dr-Cristian", "LaureanoCarlos", "Craifran", "Randalfd",
-                    "TadeoBoglione",
-                    "Naahuuel"
-                ];
-                const comments = [
-                    "The NVS software has significantly enhanced my security by identifying network vulnerabilities. This has been particularly useful for protecting my extensive computer systems. ",
-                    "I find this product to be excellent in fulfilling its promises. Despite still being in development, it is even better than some paid programs with the same purpose. Thank you.",
-                    "A well-conceived idea from the initial design, it effectively meets its objectives and is free of defects. Its creators are visionary and proactive individuals.",
-                    "The website is very pleasant, easy to understand, and visually appealing. The interaction with it is logical and comprehensible. Regarding the software, it is a very interesting idea that is well implemented.",
-                    "very good service, very simple and practical.",
-                    "The tool appears to be very useful for addressing current security concerns and frequent attacks. With this device, vulnerabilities are mitigated, and its advanced technology effectively handles highly specific issues.",
-                    "I found the site dynamic, interactive and with good navigation flow."
-                ];
-                let allCommentsHTML = "";
-
-                usernames.forEach((username, index) => {
-                    allCommentsHTML += generateCommentHTML(username, comments[index % comments.length]);
-                });
-
-                setTimeout(() => {
-                    commentsContainer.innerHTML = allCommentsHTML;
-                    initializeCardPositions();
-                }, 500);
-
-                function generateCommentHTML(username, comment) {
-                    return `
+            function generateCommentHTML(username, comment) {
+                return `
             <div class="comment-card">
                 <div class="comment-content">
                     <p>${comment}</p>
@@ -423,217 +382,217 @@
                 </div>
             </div>
         `;
-                }
+            }
 
-                function initializeCardPositions() {
-                    const cards = document.querySelectorAll('.comment-card');
+            function initializeCardPositions() {
+                const cards = document.querySelectorAll('.comment-card');
 
-                    const positions = [{
-                            x: 400,
-                            y: 420
-                        },
-                        {
-                            x: 600,
-                            y: 35
-                        },
-                        {
-                            x: 10,
-                            y: 400
-                        },
-                        {
-                            x: 120,
-                            y: 10
-                        },
-                        {
-                            x: -260,
-                            y: 100
-                        },
-                        {
-                            x: -550,
-                            y: 400
-                        },
-                        {
-                            x: -600,
-                            y: 10
-                        }
-                    ];
+                const positions = [{
+                        x: 450,
+                        y: 650
+                    },
+                    {
+                        x: 800,
+                        y: 200
+                    },
+                    {
+                        x: 0,
+                        y: 700
+                    },
+                    {
+                        x: 280,
+                        y: 20
+                    },
+                    {
+                        x: -280,
+                        y: 20
+                    },
+                    {
+                        x: -450,
+                        y: 650
+                    },
+                    {
+                        x: -800,
+                        y: 200
+                    }
+                ];
 
-                    cards.forEach((card, index) => {
-                        const position = positions[index % positions.length];
-                        card.style.transform = `translate(${position.x}px, ${position.y}px)`;
+                cards.forEach((card, index) => {
+                    const position = positions[index % positions.length];
+                    card.style.transform = `translate(${position.x}px, ${position.y}px)`;
 
-                        card.dataset.initialX = position.x;
-                        card.dataset.initialY = position.y;
-                    });
+                    card.dataset.initialX = position.x;
+                    card.dataset.initialY = position.y;
+                });
 
-                    commentsContainer.addEventListener('mousemove', function(event) {
-                        const mouseX = event.clientX;
-                        const mouseY = event.clientY;
+                commentsContainer.addEventListener('mousemove', function(event) {
+                    const mouseX = event.clientX;
+                    const mouseY = event.clientY;
 
-                        cards.forEach(card => {
-                            const initialX = parseFloat(card.dataset.initialX);
-                            const initialY = parseFloat(card.dataset.initialY);
+                    cards.forEach(card => {
+                        const initialX = parseFloat(card.dataset.initialX);
+                        const initialY = parseFloat(card.dataset.initialY);
 
-                            const deltaX = (mouseX - (initialX + card.clientWidth / 2)) * 0.02;
-                            const deltaY = (mouseY - (initialY + card.clientHeight / 2)) * 0.02;
+                        const deltaX = (mouseX - (initialX + card.clientWidth / 2)) * 0.02;
+                        const deltaY = (mouseY - (initialY + card.clientHeight / 2)) * 0.02;
 
-                            card.style.transform =
-                                `translate(${initialX + deltaX}px, ${initialY + deltaY}px)`;
-                        });
-                    });
-                }
-            });
-        </script>
-
-
-
-
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const elements = document.querySelectorAll('.hidden');
-
-                const observer = new IntersectionObserver(entries => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('visible');
-                            observer.unobserve(entry.target);
-                        }
+                        card.style.transform =
+                            `translate(${initialX + deltaX}px, ${initialY + deltaY}px)`;
                     });
                 });
+            }
+        });
+        </script>
 
-                elements.forEach(element => {
-                    observer.observe(element);
+
+
+
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.hidden');
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
                 });
             });
+
+            elements.forEach(element => {
+                observer.observe(element);
+            });
+        });
         </script>
 
 
         <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                // Obtén todos los elementos con la clase 'text hidden'
-                const elements = document.querySelectorAll('.text.hidden');
+        document.addEventListener('DOMContentLoaded', function() {
+            // Obtén todos los elementos con la clase 'text hidden'
+            const elements = document.querySelectorAll('.text.hidden');
 
-                // Configura el IntersectionObserver
-                const observer = new IntersectionObserver(entries => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('visible');
-                            entry.target.classList.remove(
-                                'hidden'); // Elimina la clase hidden cuando se vuelve visible
-                            observer.unobserve(entry
-                                .target); // Deja de observar el elemento después de la animación
+            // Configura el IntersectionObserver
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        entry.target.classList.remove(
+                            'hidden'); // Elimina la clase hidden cuando se vuelve visible
+                        observer.unobserve(entry
+                            .target); // Deja de observar el elemento después de la animación
+                    }
+                });
+            }, {
+                threshold: 0.1 // Ajusta el umbral según tus necesidades
+            });
+
+            elements.forEach(element => {
+                observer.observe(element); // Empieza a observar los elementos
+            });
+        });
+        </script>
+
+
+
+
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const cursor = document.querySelector(".cursor");
+
+            document.addEventListener("mousemove", function(e) {
+                const x = e.pageX - cursor.offsetWidth / 2;
+                const y = e.pageY - cursor.offsetHeight / 2;
+
+                cursor.style.transform = `translate(${x}px, ${y}px)`;
+            });
+        });
+        </script>
+
+
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const title = document.querySelector('.title-animate');
+
+            const revealText = (element, finalText, speed = 100) => {
+                let chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
+                let textArray = finalText.split('');
+                let currentIndex = 0;
+
+                let interval = setInterval(() => {
+                    textArray = textArray.map((char, index) => {
+                        if (index <= currentIndex) {
+                            return finalText[index];
                         }
+                        return chars[Math.floor(Math.random() * chars.length)];
                     });
-                }, {
-                    threshold: 0.1 // Ajusta el umbral según tus necesidades
-                });
 
-                elements.forEach(element => {
-                    observer.observe(element); // Empieza a observar los elementos
-                });
-            });
-        </script>
+                    element.textContent = textArray.join('');
 
+                    if (currentIndex < textArray.length) {
+                        currentIndex++;
+                    } else {
+                        clearInterval(interval);
+                    }
+                }, speed);
+            };
 
-
-
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                const cursor = document.querySelector(".cursor");
-
-                document.addEventListener("mousemove", function(e) {
-                    const x = e.pageX - cursor.offsetWidth / 2;
-                    const y = e.pageY - cursor.offsetHeight / 2;
-
-                    cursor.style.transform = `translate(${x}px, ${y}px)`;
-                });
-            });
-        </script>
-
-
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                const title = document.querySelector('.title-animate');
-
-                const revealText = (element, finalText, speed = 100) => {
-                    let chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
-                    let textArray = finalText.split('');
-                    let currentIndex = 0;
-
-                    let interval = setInterval(() => {
-                        textArray = textArray.map((char, index) => {
-                            if (index <= currentIndex) {
-                                return finalText[index];
-                            }
-                            return chars[Math.floor(Math.random() * chars.length)];
-                        });
-
-                        element.textContent = textArray.join('');
-
-                        if (currentIndex < textArray.length) {
-                            currentIndex++;
-                        } else {
-                            clearInterval(interval);
-                        }
-                    }, speed);
-                };
-
-                title.style.opacity = 1;
-                revealText(title, 'NETWORK VULNERABILITY SCAN', 85);
-            });
+            title.style.opacity = 1;
+            revealText(title, 'NETWORK VULNERABILITY SCAN', 85);
+        });
         </script>
 
         <script>
-            document.querySelectorAll('.faq-question').forEach(item => {
-                item.addEventListener('click', () => {
-                    const parent = item.parentElement;
-                    parent.classList.toggle('active');
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
 
-                    // Para cerrar las otras respuestas cuando se abre una nueva
-                    document.querySelectorAll('.faq-item').forEach(otherItem => {
-                        if (otherItem !== parent) {
-                            otherItem.classList.remove('active');
-                        }
-                    });
+                // Para cerrar las otras respuestas cuando se abre una nueva
+                document.querySelectorAll('.faq-item').forEach(otherItem => {
+                    if (otherItem !== parent) {
+                        otherItem.classList.remove('active');
+                    }
                 });
             });
+        });
         </script>
 
         <script>
-            document.addEventListener('scroll', function() {
-                const scrollToTopBtn = document.querySelector('.scroll-to-top');
-                if (window.scrollY > 100) { // Ajusta el valor según cuándo quieres que aparezca el botón
-                    scrollToTopBtn.style.opacity = '1';
-                    scrollToTopBtn.style.pointerEvents = 'auto';
-                } else {
-                    scrollToTopBtn.style.opacity = '0';
-                    scrollToTopBtn.style.pointerEvents = 'none';
-                }
-            });
+        document.addEventListener('scroll', function() {
+            const scrollToTopBtn = document.querySelector('.scroll-to-top');
+            if (window.scrollY > 100) { // Ajusta el valor según cuándo quieres que aparezca el botón
+                scrollToTopBtn.style.opacity = '1';
+                scrollToTopBtn.style.pointerEvents = 'auto';
+            } else {
+                scrollToTopBtn.style.opacity = '0';
+                scrollToTopBtn.style.pointerEvents = 'none';
+            }
+        });
         </script>
 </body>
 
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var navbar = document.getElementById('navbar');
-        var initialBgColor = 'transparent'; // Color de fondo inicial
-        var scrollBgColor = '#151414'; // Color de fondo cuando se desplaza
+document.addEventListener('DOMContentLoaded', function() {
+    var navbar = document.getElementById('navbar');
+    var initialBgColor = 'transparent'; // Color de fondo inicial
+    var scrollBgColor = '#151414'; // Color de fondo cuando se desplaza
 
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 50) { // Cambia el valor según el desplazamiento que desees
-                navbar.style.backgroundColor = scrollBgColor;
-            } else {
-                navbar.style.backgroundColor = initialBgColor;
-            }
-        });
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) { // Cambia el valor según el desplazamiento que desees
+            navbar.style.backgroundColor = scrollBgColor;
+        } else {
+            navbar.style.backgroundColor = initialBgColor;
+        }
+    });
 
-        // Toggle menu and close class
-        document.getElementById('menuToggle').addEventListener('click', function() {
-            this.classList.toggle('close');
-            document.getElementById('overlayNav').classList.toggle('active');
-        });
-    })
+    // Toggle menu and close class
+    document.getElementById('menuToggle').addEventListener('click', function() {
+        this.classList.toggle('close');
+        document.getElementById('overlayNav').classList.toggle('active');
+    });
+})
 </script>
 
 
