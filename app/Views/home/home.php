@@ -3,16 +3,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 <title>NVS</title>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const heading = document.querySelector('.intro-text h1');
-    heading.addEventListener('animationend', function() {
-        if (event.animationName === 'typing') {
-            heading.classList.add('typing-finished');
-        }
-    });
-});
-</script>
+
 
 </head>
 
@@ -24,41 +15,54 @@ document.addEventListener('DOMContentLoaded', function() {
     </a>
 
 
-    <section class="home" id="home">
-        <nav id="navbar">
-            <div class="nav-left">
-                <ul>
-                    <li><a href="#software">Software</a>
+    <nav id="navbar">
+        <div class="logo"><a href="<?= base_url('/'); ?>">NVS</a></div>
+        <div id="menuToggle" class="menu-icon">
+            <span class="menu-icon-bar"></span>
+            <span class="menu-icon-bar"></span>
+            <span class="menu-icon-bar"></span>
+        </div>
+    </nav>
 
-                    </li>
-                    <li><a href="#about">About Us</a>
-
-                    </li>
-                </ul>
+    <div id="overlayNav">
+        <div class="overlay-content">
+            <div class="overlay-left">
+                <div class="overlay-video">
+                    <img src="<?= base_url('complements/styles/images/lines.jpg'); ?>" alt="Video">
+                    <div class="video-controls">
+                        <span>00: 13: 49: 12: 45: 02</span>
+                    </div>
+                </div>
             </div>
-
-            <div class="logo"><a href="<?= base_url('/'); ?>">NVS</a></div>
-
-            <div class="nav-right">
+            <div class="overlay-right">
                 <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#software">Software</a></li>
+                    <li><a href="#about">About</a></li>
                     <?php if (session('user') && session('user')->id_user > 0 && session('user')->name) : ?>
-                    <li>
-                        <p class="button" href="#menu"><?= session('user')->name; ?></p>
-                        <ul class="dropdown">
-                            <li><a href="<?= base_url('dashboard'); ?>">Dashboard</a></li>
-                            <li><a href="<?= base_url('logout'); ?>">Log Out</a></li>
-                        </ul>
+
+                    <li><a href="<?= base_url('dashboard'); ?>"><?= session('user')->name; ?></a>
                     </li>
+
+                    <li><a href="<?= base_url('logout'); ?>">Log Out</a></li>
+
+
                     <?php else : ?>
                     <li><a href="<?= base_url('login'); ?>">Log In</a></li>
                     <li><a href="<?= base_url('register'); ?>">Sign Up</a></li>
                     <?php endif; ?>
-                    <li><a class="button" href="#download">Download</a></li>
                 </ul>
+                <button class="cta-button">Download</button>
             </div>
-        </nav>
+        </div>
+    </div>
+
+    </div>
 
 
+
+
+    <section class="home" id="home">
 
 
         <div class="intro">
@@ -610,5 +614,31 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         </script>
 </body>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var navbar = document.getElementById('navbar');
+    var initialBgColor = 'transparent'; // Color de fondo inicial
+    var scrollBgColor = '#151414'; // Color de fondo cuando se desplaza
+
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) { // Cambia el valor según el desplazamiento que desees
+            navbar.style.backgroundColor = scrollBgColor;
+        } else {
+            navbar.style.backgroundColor = initialBgColor;
+        }
+    });
+
+    // Toggle menu and close class
+    document.getElementById('menuToggle').addEventListener('click', function() {
+        this.classList.toggle('close');
+        document.getElementById('overlayNav').classList.toggle('active');
+    });
+})
+</script>
+
+
+
 
 </html>

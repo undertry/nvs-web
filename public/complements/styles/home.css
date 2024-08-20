@@ -151,122 +151,196 @@
 
   }
 
-  nav {
-    width: 100%;
-    position: sticky;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background: transparent; /* Fondo transparente por defecto */
-    transition: background 0.3s ease; /* Transición suave para el cambio de color */
-    z-index: 2000;
-}
-/* Estilo del navbar con fondo cambiado */
-.navbar-scrolled {
-  background: var(--color-grey); /* Fondo negro con opacidad */
+/* Estilos generales del navbar */
+#navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: transparent;
+  z-index: 2000;
+  transition: background-color 0.3s ease; /* Transición suave para el cambio de color */
 }
 
-.nav-left,
-.nav-right {
-    display: flex;
-    align-items: center;
+#navbar .menu-icon {
+  cursor: pointer;
+  z-index: 2001;
+  position: relative;
 }
 
-.nav-left ul,
-.nav-right ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+#navbar .menu-icon-bar {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  background-color: #fff;
+  transition: all 0.3s ease;
 }
 
-nav .logo {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+/* Estilos para el ícono de cerrar */
+#navbar .menu-icon.close .menu-icon-bar:nth-child(1) {
+  transform: rotate(45deg);
+  position: absolute;
+  top: 50%;
+  left: 0;
 }
 
-nav .logo a {
-    font-family: "aero";
-    font-size: 2.5em;
-    color: var(--color-white);
-    text-decoration: none;
+#navbar .menu-icon.close .menu-icon-bar:nth-child(2) {
+  opacity: 0;
 }
 
-nav ul li {
-    position: relative;
-    margin: 0 15px;
+#navbar .menu-icon.close .menu-icon-bar:nth-child(3) {
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 50%;
+  left: 0;
 }
 
-nav ul li a,
-nav ul p {
-    text-decoration: none;
-    font-size: 1.2em;
+#navbar .menu-icon.close {
+  background-color: transparent;
+}
+
+.logo a {
+  font-family: "aero";
+  font-size: 2.5em;
+  color: var(--color-main);
+}
+
+
+
+
+/* Overlay y su contenido */
+#overlayNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: var(--color-black); /* Color de fondo similar al de la imagen */
+  overflow: hidden;
+  z-index: 1500;
+  transition: height 0.5s ease-in-out;
+}
+
+#overlayNav .overlay-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  height: 100%;
+}
+
+#overlayNav .overlay-left,
+#overlayNav .overlay-right {
+  width: 50%;
+}
+
+#overlayNav .overlay-video img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin-left: 15rem;
+  margin-top: 5rem;
+  border-radius: 5px;
+}
+
+#overlayNav .overlay-video .video-controls {
+  margin-top: 10px;
+  margin-left: 15rem;
   color: var(--color-white);
   font-family: "neue";
-    padding: 15px 20px;
-    display: block;
 }
 
-.button {
-    margin-top: 4px;
-    background: linear-gradient(40deg, #333 45%, #151414 100%);
-    border: 1px solid #454545;
-    padding: 10px;
-    border-radius: 5px;
-    justify-content: center;
-    text-align: center;
+#overlayNav .overlay-right ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 5rem;
 }
 
-nav ul .button:hover {
-    background: linear-gradient(40deg, #444444 45%, #151414 100%);
-    border: 1px solid #4d4c4c;
+#overlayNav .overlay-right ul li {
+  margin: 10px 0;
+}
+
+#overlayNav .overlay-right ul li a {
+  font-size: 2em;
+  color: var(--color-white);
+  text-decoration: none;
+  font-family: "neue";
+  position: relative; /* Necesario para el pseudo-elemento :after */
+  transition: text-decoration-color 0.3s ease, text-decoration-thickness 0.3s ease;
+}
+
+#overlayNav .overlay-right ul li a::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px; /* Grosor del subrayado */
+  background-color: var(--color-white); /* Color del subrayado */
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+
+#overlayNav .overlay-right ul li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 
-nav ul li .dropdown {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 15%;
-    background: linear-gradient(95deg, #333 0%, #151414 100%);
-    border: 1px solid #454545;
-    border-radius: 5px;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(10px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
+
+#overlayNav .cta-button {
+  position: relative; /* Necesario para el pseudo-elemento ::after */
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: transparent; /* Fondo inicial transparente */
+  border: 2px solid #fff;
+  color: #fff;
+  font-size: 1.5em;
+  cursor: pointer;
+  overflow: hidden; /* Asegura que el pseudo-elemento no se desborde */
+  transition: color 0.3s ease; /* Transición para el cambio de color del texto */
 }
 
-nav ul li .dropdown li {
-    width: 200px;
+#overlayNav .cta-button::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-main); /* Color de fondo al hacer hover */
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease; /* Transición suave para el cambio de color de fondo */
+  z-index: -1; /* Coloca el pseudo-elemento detrás del contenido del botón */
 }
 
-nav ul li .dropdown li a {
-    padding: 10px 10px;
-    color: var(--color-white);
+#overlayNav .cta-button:hover::after {
+  transform: scaleX(1);
 }
 
-nav ul li .dropdown li a:hover {
-    color: #7e7a7a;
-    border-radius: 5px;
+#overlayNav .cta-button:hover {
+  color: #fff; /* Cambia el color del texto si es necesario */
 }
 
-nav ul li:hover .dropdown {
-    display: block;
+/* Estado activo del overlay */
+#overlayNav.active {
+  height: 65vh; /* Ocupa un tercio de la pantalla */
 }
+
+
+
 
 
 .home {
-  background-image: url("../styles/images/gradient.png");
+  background-image: url("../styles/images/circle.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }

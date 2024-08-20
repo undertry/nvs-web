@@ -23,12 +23,8 @@
         const counter = document.getElementById('counter');
         const squareContainer = document.getElementById('square-container');
 
-        const squareSize = 100;
-        const screenWidth = window.innerWidth;
-        const screenHeight = window.innerHeight;
-        const numCols = Math.ceil(screenWidth / squareSize);
-        const numRows = Math.ceil(screenHeight / squareSize);
-        const numSquares = numCols * numRows;
+        const squareSize = 100; // Tamaño de los cuadrados
+        const numSquares = Math.ceil((window.innerWidth / squareSize) * (window.innerHeight / squareSize));
 
         // Crear los cuadrados
         for (let i = 0; i < numSquares; i++) {
@@ -58,7 +54,7 @@
         }, {
             y: 0,
             opacity: 1,
-            duration: 0.4,
+            duration: 0.5,
             ease: 'back.out(1.7)',
             delay: 2,
             onComplete: () => {
