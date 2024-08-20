@@ -1,0 +1,44 @@
+/* home section starts here */
+
+.home {
+  background-image : url("../images/circle.jpg");
+  background-size  : cover;
+  background-repeat: no-repeat;
+}
+
+.intro {
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
+  height         : 100vh;
+  padding-top    : 0;
+}
+
+.intro-text {
+  text-align: left;
+}
+
+.intro-subtext {
+  position   : absolute;
+  width      : 50rem;
+  bottom     : 5%;
+  right      : 2%;
+  font-size  : 1.2em;
+  color      : #888787;
+  font-family: "neue";
+}
+
+.intro-text h1 {
+  font-size  : 10em;
+  font-weight: lighter;
+  font-family: "schabo";
+  text-align : center;
+  margin     : 0 auto;
+  color      : #bb0f0f;
+  opacity    : 0;
+  transition : opacity 1s ease-in-out;
+  overflow   : hidden;
+  white-space: nowrap;
+}
+
+/* home sections ends here */
