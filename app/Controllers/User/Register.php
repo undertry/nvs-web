@@ -69,7 +69,7 @@ class Register extends BaseController
 
             $userModel->register($data);
             $this->session->setFlashdata('success', 'User registered successfully! Redirecting to login...');
-            return redirect()->to('login');
+            return redirect()->to('login-animation');
         } else {
             $this->session->setFlashdata('error', 'Error during registration');
             return redirect()->back()->withInput();

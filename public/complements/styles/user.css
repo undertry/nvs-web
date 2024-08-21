@@ -87,17 +87,21 @@
   margin-top   : 10px;
   left         : 43%;
   width        : 15%;
-  border-radius: 10px;
+  border-radius: 5px;
   padding      : 10px;
   text-align   : center;
   z-index      : 1000;
   box-sizing   : border-box;
+  font-family  : "neue";
+  font-size    : 1.2em;
+  font-weight  : lighter;
 }
 
 .error {
   background-color: #f8d7da;
   color           : #721c24;
   border          : 1px solid #f5c6cb;
+
 }
 
 .success {

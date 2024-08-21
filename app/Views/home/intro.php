@@ -54,14 +54,14 @@
         }, {
             y: 0,
             opacity: 1,
-            duration: 0.5,
+            duration: 0.2,
             ease: 'back.out(1.7)',
-            delay: 2,
+            delay: 1,
             onComplete: () => {
                 gsap.to(counter, {
                     y: 100,
                     opacity: 0,
-                    duration: 0.5,
+                    duration: 0.2,
                     ease: 'back.in(1.7)',
                     repeat: 2,
                     yoyo: true,
