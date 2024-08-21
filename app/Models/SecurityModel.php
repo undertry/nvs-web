@@ -15,3 +15,4 @@ class SecurityModel extends Model
         return $this->where('type', $encryption)->first();
     }
 }
+

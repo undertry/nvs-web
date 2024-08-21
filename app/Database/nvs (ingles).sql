@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-08-2024 a las 01:44:09
--- Versión del servidor: 10.4.28-MariaDB
--- Versión de PHP: 8.1.17
+-- Tiempo de generación: 16-08-2024 a las 13:52:27
+-- Versión del servidor: 10.4.32-MariaDB
+-- Versión de PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -175,9 +175,9 @@ CREATE TABLE `scan` (
 INSERT INTO `scan` (`id_scan`, `id_user`, `id_network`, `scan_date`) VALUES
 (1, 1, 1, '2024-06-11 13:05:03'),
 (2, 2, 2, '2024-06-02 14:02:34'),
-(3, 9, 3, '2024-07-24 13:36:37'),
+(3, 1, 3, '2024-08-16 11:41:21'),
 (4, 1, 4, '2024-06-26 00:05:01'),
-(5, 9, 2, '2024-07-24 13:34:53');
+(5, 38, 2, '2024-08-16 11:49:10');
 
 -- --------------------------------------------------------
 
@@ -232,7 +232,7 @@ INSERT INTO `security_type` (`id_security_type`, `type`) VALUES
 --
 
 CREATE TABLE `solution` (
-  `id_solucion` int(11) NOT NULL,
+  `id_solution` int(11) NOT NULL,
   `solution` varchar(255) DEFAULT NULL,
   `vulnerability_code` varchar(255) NOT NULL,
   `vuln_description` varchar(255) NOT NULL
@@ -242,7 +242,7 @@ CREATE TABLE `solution` (
 -- Volcado de datos para la tabla `solution`
 --
 
-INSERT INTO `solution` (`id_solucion`, `solution`, `vulnerability_code`, `vuln_description`) VALUES
+INSERT INTO `solution` (`id_solution`, `solution`, `vulnerability_code`, `vuln_description`) VALUES
 (1, 'Instalar las actualizaciones de seguridad proporcionadas por Microsoft. Esta vulnerabilidad fue parcheada con actualizaciones de seguridad de Microsoft Windows.', 'CVE-2017-0143 ', 'Vulnerabilidad en el protocolo SMB de Windows que permite ejecución remota de código.'),
 (2, 'Actualizar Microsoft Edge a la versión más reciente disponible. Microsoft lanzó parches para corregir esta vulnerabilidad.', 'CVE-2018-8174', 'Vulnerabilidad en el motor de scripting de Microsoft Edge que permite ejecución remota de código.'),
 (3, 'Aplicar los parches de seguridad disponibles para las versiones afectadas de Windows. Microsoft proporcionó parches incluso para sistemas operativos fuera de soporte estándar.', 'CVE-2019-0708', 'Vulnerabilidad en el servicio de Escritorio remoto de Windows (BlueKeep) que permite ejecución remota de código sin autenticación.'),
@@ -278,12 +278,7 @@ INSERT INTO `users` (`id_user`, `name`, `email`, `password`, `created_at`, `veri
 (3, 'Octavio Galarza', 'octavio@gmail.com', '$2y$10$iRbBLO9mDATXsD4exG5EP.cngyQVGoBJQAYdk/8g3tve3uUw.6YzO', '2024-06-19 11:56:50', 0),
 (4, 'Pedro Carranza', 'pedro@gmail.com', '$2y$10$HTDMeI3Ei6SVp5ZSNDey4.B9aPxqd9gbdyWc4i3lGHLYnHLuq9pLW', '2024-06-19 11:58:00', 0),
 (5, 'Marcelo Asevedo', 'marcelo@gmail.com', '$2y$10$rKejczKDIuMkI2spq3IajuKL96MLjYHyXsx/9OE5EC.fO0ceoJj6a', '2024-06-19 11:58:50', 0),
-(6, 'eze', 'eze123@gmail.com', '$2y$10$YkObUX7kkKHXIPyQsqQkHOkmA17IZfGBE1KUHok8G.xMUWugIsFr6', '2024-07-26 11:49:16', 0),
-(8, 'Marcelo', 'marceloasevedo@itr3.edu.ar', '$2y$10$PPs/cXYqLb8KtV.g.C9ZFuZ1ex4jEXWb8Lv.i6ERwnju3WJyxgzBu', '2024-06-27 11:57:11', 0),
-(9, 'Laureano', 'laureanopeirone@alumnos.itr3.edu.ar', '$2y$10$M4bVB5LRV2QRtI3/pQDr9OyWxEijqKfzzFDC084DASOGV0keVVA3O', '2024-07-25 16:47:19', 0),
-(23, 'gaspar', 'gasparschwartz@alumnos.itr3.edu.ar', '$2y$10$Lq/lrLSnCOUsFtrRAEc9luQUCZ4rWv.jqYSZ8CEkm4W.rOhEYwjQm', '2024-07-31 13:07:04', 0),
-(24, 'eze', 'cristianmonteverde@alumnos.itr3.edu.ar', '$2y$10$a662NHdE/Oi9ZzaO8zqEGOG8TwonoGyYh..DDiRqgrpEzZE.V.im2', '2024-08-01 16:41:15', 0),
-(25, 'tiago', 'tiagocomba@alumnos.itr3.edu.ar', '$2y$10$rWuYYHMzS/yftJ4CD2nsBeRWM6wSboyG3TqG9nIe9qchjXFQAP1zS', '2024-08-01 16:45:45', 0);
+(38, 'eze', 'cristianmonteverde@alumnos.itr3.edu.ar', '$2y$10$mH8SrWcCM1X0jioeom.lbepYkB17qKcUpcXffBhpQ1slefNxs2ATy', '2024-08-16 11:48:49', 0);
 
 --
 -- Índices para tablas volcadas
@@ -357,7 +352,7 @@ ALTER TABLE `security_type`
 -- Indices de la tabla `solution`
 --
 ALTER TABLE `solution`
-  ADD PRIMARY KEY (`id_solucion`);
+  ADD PRIMARY KEY (`id_solution`);
 
 --
 -- Indices de la tabla `users`
@@ -373,7 +368,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `code`
 --
 ALTER TABLE `code`
-  MODIFY `id_recovery_code` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_recovery_code` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT de la tabla `devices`
@@ -427,13 +422,13 @@ ALTER TABLE `security_type`
 -- AUTO_INCREMENT de la tabla `solution`
 --
 ALTER TABLE `solution`
-  MODIFY `id_solucion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_solution` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- Restricciones para tablas volcadas
@@ -477,7 +472,7 @@ ALTER TABLE `scan`
 ALTER TABLE `scan_details`
   ADD CONSTRAINT `scan_details_ibfk_1` FOREIGN KEY (`id_scan`) REFERENCES `scan` (`id_scan`),
   ADD CONSTRAINT `scan_details_ibfk_2` FOREIGN KEY (`id_devices`) REFERENCES `devices` (`id_devices`),
-  ADD CONSTRAINT `scan_details_ibfk_3` FOREIGN KEY (`id_solution`) REFERENCES `solution` (`id_solucion`);
+  ADD CONSTRAINT `scan_details_ibfk_3` FOREIGN KEY (`id_solution`) REFERENCES `solution` (`id_solution`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>Available WiFi Networks</title>
 </head>
-
 <body>
     <h1>Available WiFi Networks</h1>
     <?php if (!empty($networks)): ?>
@@ -27,3 +25,4 @@
 </body>
 
 </html>
+
