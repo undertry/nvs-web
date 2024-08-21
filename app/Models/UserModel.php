@@ -56,5 +56,5 @@ class UserModel extends Model
         $this->where('email', $email)
              ->set(['verification' => $verificationstatus])->update();
     }
-    
+
 }
