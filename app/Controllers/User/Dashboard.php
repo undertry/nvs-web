@@ -57,7 +57,7 @@ class Dashboard extends BaseController
         if ($result === null || $result->id_user <= 0) {
             return redirect()->to('change_password');
         } else {
-            if (password_verify($actual_password, $result->password)) {
+            if (password_verify($current_password, $result->password)) {
                 // Verificar si los campos están vacíos
                 if (empty($password) || empty($confirm_password)) {
                     $this->session->setFlashdata('error', 'ou must fill out the form');
