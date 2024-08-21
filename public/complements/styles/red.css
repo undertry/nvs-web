@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+
 :root {
     --color-main     : #d60b0b;
     --color-black    : #151414;
@@ -28,30 +30,18 @@
 }
 
 body {
-    font-family      : "nevol";
-    margin           : 0;
-    padding          : 0;
-    box-sizing       : border-box;
-    background-image : url("./images/linnes.jpg");
-    background-size  : cover;
-    background-repeat: no-repeat;
-    color            : var(--color-white);
-    width            : 100%;
-}
-
-/* cursor styles */
-.cursor {
-    pointer-events: none;
-    position      : absolute;
-    width         : 20px;
-    /* Tamaño del cursor */
-    height        : 20px;
-    /* Tamaño del cursor */
-    border-radius : 50%;
-    z-index       : 9000;
-    background    : var(--color-white);
-    transition    : width 0.3s ease, height 0.3s ease;
-    /* Transición de tamaño si es necesario */
+    font-family     : "neue", sans-serif;
+    font-weight     : lighter;
+    background-color: var(--color-black);
+    /* Color de fondo */
+    color           : var(--color-white);
+    /* Color del texto */
+    margin          : 0;
+    padding         : 0;
+    display         : flex;
+    justify-content : center;
+    height          : 100vh;
+    padding-top     : 50px;
 }
 
 /* Navbar Section */
@@ -232,27 +222,51 @@ body {
     height: 65vh;
 }
 
-/* Dashboard Header */
-.dashboard-header {
-    position                 : fixed;
-    bottom                   : -60px;
-    /* Ajusta según el espacio deseado desde el borde inferior */
-    right                    : 20px;
-    /* Ajusta según el espacio deseado desde el borde derecho */
-    font-size                : 16.8em;
-    font-family              : "schabo";
-    font-weight              : lighter;
-    color                    : var(--color-main);
-    padding                  : 20px;
-    border-top-left-radius   : 20px;
-    border-bottom-left-radius: 20px;
-    margin                   : 0;
-    opacity                  : 1;
-    /* Asegúrate de que sea visible */
+
+.container {
+    position     : absolute;
+    max-width    : 60rem;
+    margin       : 0 auto;
+    padding      : 20px;
+    background   : linear-gradient(45deg, #333 0%, #151414 100%);
+    border       : 1px solid #454545;
+    border-radius: 8px;
+    text-align   : center;
 }
 
-/* Opcional: Para animar la entrada */
-.dashboard-header.active {
-    transform : translateY(0);
-    transition: transform 0.5s ease;
+h1 {
+    color      : var(--color-white);
+    font-family: "neue";
+    font-weight: lighter;
+    font-size  : 2.9em;
+    /* Color del título */
+}
+
+ul {
+    list-style-type: none;
+    padding        : 0;
+    margin         : 0;
+}
+
+.container ul li {
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding      : 10px;
+    text-align   : left;
+    font-family  : "neue";
+    font-size    : 1.6em;
+}
+
+strong {
+    color      : var(--color-main);
+    font-family: "neue";
+    font-weight: lighter;
+
+    /* Color de los textos en negrita */
+}
+
+hr {
+    border    : none;
+    border-top: 1px solid var(--color-dark);
+    margin    : 10px 0;
 }

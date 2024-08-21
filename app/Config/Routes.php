@@ -49,4 +49,6 @@ $routes->get('configuration', 'User\Dashboard::configuration');
 // vista para el historial de escaneos del usuario
 $routes->get('/history', 'User\History::history');
 
-$routes->get('network', 'Network::index');
+$routes->get('red', 'Red::index');
+
+$routes->get('red-animation', 'Red::animation');

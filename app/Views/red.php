@@ -1,5 +1,11 @@
-<?= $this->include('common/dashboard/configuration.php'); ?>
-<title>Settings</title>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Redes WiFi Disponibles</title>
+
+    <link rel="stylesheet" href="<?php echo base_url('complements/styles/red.css'); ?>">
 </head>
 
 <body>
@@ -27,31 +33,38 @@
             <div class="overlay-right">
                 <ul>
                     <li><a href="<?= base_url('home-animation'); ?>">Home</a></li>
+
                     <?php if (session('user') && session('user')->id_user > 0 && session('user')->name) : ?>
                     <li><a href="<?= base_url('dashboard-animation'); ?>"><?= session('user')->name; ?></a></li>
                     <?php endif; ?>
                 </ul>
-                <button class="cta-button">Download</button>
+
             </div>
         </div>
     </div>
 
 
 
-    <div class="settings-container">
-        <h1>Settings</h1>
-        <div class="under-development">
-            <p>This section is under development.</p>
-        </div>
-        <div class="settings-info">
-            <p><strong>Name:</strong> <?= session('user')->name; ?></p>
-            <p><strong>Email:</strong> <?= session('user')->email; ?></p>
-            <p><strong>Account created at:</strong> <?= session('user')->created_at; ?></p>
-            <p><strong>Verification:</strong> <?= session('user')->verification == 1 ? 'Enabled' : 'Disabled'; ?></p>
-        </div>
-    </div>
 
-    <!-- JS for Menu Toggle -->
+    <div class="container">
+        <h1>Redes WiFi Disponibles</h1>
+        <?php if (!empty($networks)): ?>
+        <ul>
+            <?php foreach ($networks as $network): ?>
+            <li>
+                <strong>ESSID:</strong> <?= esc($network['essid']) ?><br>
+                <strong>BSSID:</strong> <?= esc($network['bssid']) ?><br>
+                <strong>Señal:</strong> <?= esc($network['signal']) ?><br>
+                <strong>Canal:</strong> <?= esc($network['channel']) ?><br>
+                <strong>Encriptación:</strong> <?= esc($network['encryption']) ?><br>
+                <hr>
+            </li>
+            <?php endforeach; ?>
+        </ul>
+        <?php else: ?>
+        <p>No se encontraron redes WiFi.</p>
+        <?php endif; ?>
+    </div>
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         var navbar = document.getElementById('navbar');
@@ -73,7 +86,6 @@
         });
     })
     </script>
-
 </body>
 
 </html>

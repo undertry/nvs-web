@@ -459,3 +459,2438 @@ INFO - 2024-08-21 01:55:20 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-08-21 01:55:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-08-21 01:55:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-08-21 01:56:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 02:11:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-21 02:11:31 --> Error: Class "App\Models\NetworkModel" not found
+[Method: GET, Route: network]
+in APPPATH\Controllers\Network.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Network->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Network))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-08-21 02:14:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 02:22:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 02:22:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 02:27:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 02:28:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-21 02:29:11 --> CodeIgniter\HTTP\Exceptions\HTTPException: 28 : Failed to connect to 192.168.0.164 port 5000 after 14024 ms: Couldn't connect to server
+[Method: GET, Route: network]
+in SYSTEMPATH\HTTP\CURLRequest.php on line 693.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(693): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('28', 'Failed to connect to 192.168.0.164 port 5000 after 14024 ms: Couldn\'t connect to server')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(383): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(152): CodeIgniter\HTTP\CURLRequest->send('GET', 'http://192.168.0.164:5000/scan')
+ 4 SYSTEMPATH\HTTP\CURLRequest.php(187): CodeIgniter\HTTP\CURLRequest->request('GET', 'http://192.168.0.164:5000/scan', [])
+ 5 APPPATH\Controllers\Network.php(19): CodeIgniter\HTTP\CURLRequest->get('http://192.168.0.164:5000/scan')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Network->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Network))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-08-21 02:29:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-21 02:29:25 --> CodeIgniter\HTTP\Exceptions\HTTPException: 28 : Failed to connect to 192.168.0.164 port 5000 after 14026 ms: Couldn't connect to server
+[Method: GET, Route: network]
+in SYSTEMPATH\HTTP\CURLRequest.php on line 693.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(693): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('28', 'Failed to connect to 192.168.0.164 port 5000 after 14026 ms: Couldn\'t connect to server')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(383): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(152): CodeIgniter\HTTP\CURLRequest->send('GET', 'http://192.168.0.164:5000/scan')
+ 4 SYSTEMPATH\HTTP\CURLRequest.php(187): CodeIgniter\HTTP\CURLRequest->request('GET', 'http://192.168.0.164:5000/scan', [])
+ 5 APPPATH\Controllers\Network.php(19): CodeIgniter\HTTP\CURLRequest->get('http://192.168.0.164:5000/scan')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Network->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Network))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-08-21 02:29:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 02:29:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 02:30:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 02:31:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 02:31:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-21 02:31:51 --> Error: Class "App\Models\RedModel" not found
+[Method: GET, Route: red]
+in APPPATH\Controllers\Red.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Red->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Red))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-08-21 02:33:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-21 02:33:13 --> Error: Class "App\Models\RedModel" not found
+[Method: GET, Route: red]
+in APPPATH\Controllers\Red.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Red->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Red))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-08-21 02:33:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-21 02:33:29 --> Error: Class "App\Controllers\NetworkModel" not found
+[Method: GET, Route: red]
+in APPPATH\Controllers\Red.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Red->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Red))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-08-21 02:33:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-21 02:33:33 --> Error: Class "App\Models\RedModel" not found
+[Method: GET, Route: red]
+in APPPATH\Controllers\Red.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Red->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Red))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-08-21 02:33:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-21 02:33:39 --> Error: Class "App\Models\RedModel" not found
+[Method: GET, Route: red]
+in APPPATH\Controllers\Red.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Red->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Red))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-08-21 02:34:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 02:37:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 02:37:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 02:39:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 02:40:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 02:40:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-21 02:41:08 --> CodeIgniter\HTTP\Exceptions\HTTPException: 28 : Failed to connect to 192.168.0.164 port 5000 after 14029 ms: Couldn't connect to server
+[Method: GET, Route: red]
+in SYSTEMPATH\HTTP\CURLRequest.php on line 693.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(693): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('28', 'Failed to connect to 192.168.0.164 port 5000 after 14029 ms: Couldn\'t connect to server')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(383): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(152): CodeIgniter\HTTP\CURLRequest->send('GET', 'http://192.168.0.164:5000/scan')
+ 4 SYSTEMPATH\HTTP\CURLRequest.php(187): CodeIgniter\HTTP\CURLRequest->request('GET', 'http://192.168.0.164:5000/scan', [])
+ 5 APPPATH\Controllers\Red.php(16): CodeIgniter\HTTP\CURLRequest->get('http://192.168.0.164:5000/scan')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Red->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Red))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-08-21 02:41:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-21 02:42:06 --> CodeIgniter\HTTP\Exceptions\HTTPException: 28 : Failed to connect to 192.168.0.164 port 5000 after 14021 ms: Couldn't connect to server
+[Method: GET, Route: red]
+in SYSTEMPATH\HTTP\CURLRequest.php on line 693.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(693): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('28', 'Failed to connect to 192.168.0.164 port 5000 after 14021 ms: Couldn\'t connect to server')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(383): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(152): CodeIgniter\HTTP\CURLRequest->send('GET', 'http://192.168.0.164:5000/scan')
+ 4 SYSTEMPATH\HTTP\CURLRequest.php(187): CodeIgniter\HTTP\CURLRequest->request('GET', 'http://192.168.0.164:5000/scan', [])
+ 5 APPPATH\Controllers\Red.php(16): CodeIgniter\HTTP\CURLRequest->get('http://192.168.0.164:5000/scan')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Red->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Red))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-08-21 02:43:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-21 02:43:54 --> CodeIgniter\HTTP\Exceptions\HTTPException: 7 : Failed to connect to 192.168.0.164 port 5000 after 1022 ms: Couldn't connect to server
+[Method: GET, Route: red]
+in SYSTEMPATH\HTTP\CURLRequest.php on line 693.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(693): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('7', 'Failed to connect to 192.168.0.164 port 5000 after 1022 ms: Couldn\'t connect to server')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(383): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(152): CodeIgniter\HTTP\CURLRequest->send('GET', 'http://192.168.0.164:5000/scan')
+ 4 SYSTEMPATH\HTTP\CURLRequest.php(187): CodeIgniter\HTTP\CURLRequest->request('GET', 'http://192.168.0.164:5000/scan', [])
+ 5 APPPATH\Controllers\Red.php(16): CodeIgniter\HTTP\CURLRequest->get('http://192.168.0.164:5000/scan')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Red->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Red))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-08-21 02:43:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-08-21 02:43:56 --> CodeIgniter\HTTP\Exceptions\HTTPException: 7 : Failed to connect to 192.168.0.164 port 5000 after 1021 ms: Couldn't connect to server
+[Method: GET, Route: red]
+in SYSTEMPATH\HTTP\CURLRequest.php on line 693.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(693): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('7', 'Failed to connect to 192.168.0.164 port 5000 after 1021 ms: Couldn\'t connect to server')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(383): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(152): CodeIgniter\HTTP\CURLRequest->send('GET', 'http://192.168.0.164:5000/scan')
+ 4 SYSTEMPATH\HTTP\CURLRequest.php(187): CodeIgniter\HTTP\CURLRequest->request('GET', 'http://192.168.0.164:5000/scan', [])
+ 5 APPPATH\Controllers\Red.php(16): CodeIgniter\HTTP\CURLRequest->get('http://192.168.0.164:5000/scan')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Red->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Red))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-08-21 02:54:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 02:54:11 --> Solicitud realizada a la API.
+ERROR - 2024-08-21 02:54:11 --> Excepción capturada al intentar conectarse a la API: There is no data to insert.
+INFO - 2024-08-21 02:55:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 02:55:24 --> Solicitud realizada a la API.
+INFO - 2024-08-21 02:55:24 --> Datos recibidos: Array
+(
+    [0] => Array
+        (
+            [bssid] => 78:45:61:DA:B9:C0
+            [channel] => 11
+            [encryption] => WPA2
+            [essid] => Fibertel Comba 2.4GHz
+            [signal] => -40
+        )
+
+)
+
+ERROR - 2024-08-21 02:55:24 --> Excepción capturada al intentar conectarse a la API: There is no data to insert.
+INFO - 2024-08-21 02:55:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 02:55:25 --> Solicitud realizada a la API.
+INFO - 2024-08-21 02:55:25 --> Datos recibidos: Array
+(
+    [0] => Array
+        (
+            [bssid] => 78:45:61:DA:B9:C0
+            [channel] => 11
+            [encryption] => WPA2
+            [essid] => Fibertel Comba 2.4GHz
+            [signal] => -40
+        )
+
+)
+
+ERROR - 2024-08-21 02:55:25 --> Excepción capturada al intentar conectarse a la API: There is no data to insert.
+INFO - 2024-08-21 02:55:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 02:55:25 --> Solicitud realizada a la API.
+INFO - 2024-08-21 02:55:25 --> Datos recibidos: Array
+(
+    [0] => Array
+        (
+            [bssid] => 78:45:61:DA:B9:C0
+            [channel] => 11
+            [encryption] => WPA2
+            [essid] => Fibertel Comba 2.4GHz
+            [signal] => -40
+        )
+
+)
+
+ERROR - 2024-08-21 02:55:25 --> Excepción capturada al intentar conectarse a la API: There is no data to insert.
+INFO - 2024-08-21 02:55:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 02:55:25 --> Solicitud realizada a la API.
+INFO - 2024-08-21 02:55:25 --> Datos recibidos: Array
+(
+    [0] => Array
+        (
+            [bssid] => 78:45:61:DA:B9:C0
+            [channel] => 11
+            [encryption] => WPA2
+            [essid] => Fibertel Comba 2.4GHz
+            [signal] => -40
+        )
+
+)
+
+ERROR - 2024-08-21 02:55:25 --> Excepción capturada al intentar conectarse a la API: There is no data to insert.
+INFO - 2024-08-21 02:55:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 02:55:28 --> Solicitud realizada a la API.
+INFO - 2024-08-21 02:55:28 --> Datos recibidos: Array
+(
+    [0] => Array
+        (
+            [bssid] => 78:45:61:DA:B9:C0
+            [channel] => 11
+            [encryption] => WPA2
+            [essid] => Fibertel Comba 2.4GHz
+            [signal] => -40
+        )
+
+)
+
+ERROR - 2024-08-21 02:55:28 --> Excepción capturada al intentar conectarse a la API: There is no data to insert.
+INFO - 2024-08-21 02:55:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 02:55:58 --> Solicitud realizada a la API.
+INFO - 2024-08-21 02:55:58 --> Datos recibidos: Array
+(
+    [0] => Array
+        (
+            [bssid] => 78:45:61:DA:B9:C0
+            [channel] => 11
+            [encryption] => WPA2
+            [essid] => Fibertel Comba 2.4GHz
+            [signal] => -40
+        )
+
+)
+
+INFO - 2024-08-21 03:01:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:01:22 --> Solicitud realizada a la API.
+INFO - 2024-08-21 03:01:22 --> Datos recibidos: Array
+(
+    [0] => Array
+        (
+            [bssid] => 78:45:61:DA:B9:C0
+            [channel] => 11
+            [encryption] => WPA2
+            [essid] => Fibertel Comba 2.4GHz
+            [signal] => -40
+        )
+
+    [1] => Array
+        (
+            [bssid] => 34:12:98:AB:CD:12
+            [channel] => 6
+            [encryption] => WPA2
+            [essid] => Home Network
+            [signal] => -50
+        )
+
+    [2] => Array
+        (
+            [bssid] => 56:EF:12:34:78:90
+            [channel] => 1
+            [encryption] => WPA
+            [essid] => Guest_WiFi
+            [signal] => -60
+        )
+
+    [3] => Array
+        (
+            [bssid] => 12:34:56:78:90:AB
+            [channel] => 36
+            [encryption] => WPA2
+            [essid] => Office_WLAN
+            [signal] => -30
+        )
+
+    [4] => Array
+        (
+            [bssid] => 98:76:54:32:10:FF
+            [channel] => 44
+            [encryption] => Open
+            [essid] => Public_Hotspot
+            [signal] => -70
+        )
+
+)
+
+INFO - 2024-08-21 03:04:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-08-21 03:04:36 --> Excepción capturada al intentar conectarse a la API: 7 : Failed to connect to 192.168.0.164 port 5000 after 1089 ms: Couldn't connect to server
+INFO - 2024-08-21 03:04:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-08-21 03:04:39 --> Excepción capturada al intentar conectarse a la API: 7 : Failed to connect to 192.168.0.164 port 5000 after 1026 ms: Couldn't connect to server
+INFO - 2024-08-21 03:04:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:04:48 --> Solicitud realizada a la API.
+INFO - 2024-08-21 03:04:48 --> Datos recibidos: Array
+(
+    [0] => Array
+        (
+            [bssid] => 78:45:61:DA:B9:C0
+            [channel] => 11
+            [encryption] => WPA2
+            [essid] => Fibertel Comba 2.4GHz
+            [signal] => -40
+        )
+
+    [1] => Array
+        (
+            [bssid] => 34:12:98:AB:CD:12
+            [channel] => 6
+            [encryption] => WPA2
+            [essid] => Home Network
+            [signal] => -50
+        )
+
+    [2] => Array
+        (
+            [bssid] => 56:EF:12:34:78:90
+            [channel] => 1
+            [encryption] => WPA
+            [essid] => Guest_WiFi
+            [signal] => -60
+        )
+
+    [3] => Array
+        (
+            [bssid] => 12:34:56:78:90:AB
+            [channel] => 36
+            [encryption] => WPA2
+            [essid] => Office_WLAN
+            [signal] => -30
+        )
+
+    [4] => Array
+        (
+            [bssid] => 98:76:54:32:10:FF
+            [channel] => 44
+            [encryption] => Open
+            [essid] => Public_Hotspot
+            [signal] => -70
+        )
+
+)
+
+INFO - 2024-08-21 03:04:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:04:51 --> Solicitud realizada a la API.
+INFO - 2024-08-21 03:04:51 --> Datos recibidos: Array
+(
+    [0] => Array
+        (
+            [bssid] => 78:45:61:DA:B9:C0
+            [channel] => 11
+            [encryption] => WPA2
+            [essid] => Fibertel Comba 2.4GHz
+            [signal] => -40
+        )
+
+    [1] => Array
+        (
+            [bssid] => 34:12:98:AB:CD:12
+            [channel] => 6
+            [encryption] => WPA2
+            [essid] => Home Network
+            [signal] => -50
+        )
+
+    [2] => Array
+        (
+            [bssid] => 56:EF:12:34:78:90
+            [channel] => 1
+            [encryption] => WPA
+            [essid] => Guest_WiFi
+            [signal] => -60
+        )
+
+    [3] => Array
+        (
+            [bssid] => 12:34:56:78:90:AB
+            [channel] => 36
+            [encryption] => WPA2
+            [essid] => Office_WLAN
+            [signal] => -30
+        )
+
+    [4] => Array
+        (
+            [bssid] => 98:76:54:32:10:FF
+            [channel] => 44
+            [encryption] => Open
+            [essid] => Public_Hotspot
+            [signal] => -70
+        )
+
+)
+
+INFO - 2024-08-21 03:04:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:04:57 --> Solicitud realizada a la API.
+INFO - 2024-08-21 03:04:57 --> Datos recibidos: Array
+(
+    [0] => Array
+        (
+            [bssid] => 78:45:61:DA:B9:C0
+            [channel] => 11
+            [encryption] => WPA2
+            [essid] => Fibertel Comba 2.4GHz
+            [signal] => -40
+        )
+
+    [1] => Array
+        (
+            [bssid] => 34:12:98:AB:CD:12
+            [channel] => 6
+            [encryption] => WPA2
+            [essid] => Home Network
+            [signal] => -50
+        )
+
+    [2] => Array
+        (
+            [bssid] => 56:EF:12:34:78:90
+            [channel] => 1
+            [encryption] => WPA
+            [essid] => Guest_WiFi
+            [signal] => -60
+        )
+
+    [3] => Array
+        (
+            [bssid] => 12:34:56:78:90:AB
+            [channel] => 36
+            [encryption] => WPA2
+            [essid] => Office_WLAN
+            [signal] => -30
+        )
+
+    [4] => Array
+        (
+            [bssid] => 98:76:54:32:10:FF
+            [channel] => 44
+            [encryption] => Open
+            [essid] => Public_Hotspot
+            [signal] => -70
+        )
+
+)
+
+INFO - 2024-08-21 03:08:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:08:17 --> Solicitud realizada a la API.
+INFO - 2024-08-21 03:08:17 --> Datos recibidos: Array
+(
+    [0] => Array
+        (
+            [bssid] => 78:45:61:DA:B9:C0
+            [channel] => 11
+            [encryption] => WPA2
+            [essid] => Fibertel Comba 2.4GHz
+            [signal] => -40
+        )
+
+    [1] => Array
+        (
+            [bssid] => 34:12:98:AB:CD:12
+            [channel] => 6
+            [encryption] => WPA2
+            [essid] => Home Network
+            [signal] => -50
+        )
+
+    [2] => Array
+        (
+            [bssid] => 56:EF:12:34:78:90
+            [channel] => 1
+            [encryption] => WPA
+            [essid] => Guest_WiFi
+            [signal] => -60
+        )
+
+    [3] => Array
+        (
+            [bssid] => 12:34:56:78:90:AB
+            [channel] => 36
+            [encryption] => WPA2
+            [essid] => Office_WLAN
+            [signal] => -30
+        )
+
+    [4] => Array
+        (
+            [bssid] => 98:76:54:32:10:FF
+            [channel] => 44
+            [encryption] => Open
+            [essid] => Public_Hotspot
+            [signal] => -70
+        )
+
+)
+
+INFO - 2024-08-21 03:08:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:08:21 --> Solicitud realizada a la API.
+INFO - 2024-08-21 03:08:21 --> Datos recibidos: Array
+(
+    [0] => Array
+        (
+            [bssid] => 78:45:61:DA:B9:C0
+            [channel] => 11
+            [encryption] => WPA2
+            [essid] => Fibertel Comba 2.4GHz
+            [signal] => -40
+        )
+
+    [1] => Array
+        (
+            [bssid] => 34:12:98:AB:CD:12
+            [channel] => 6
+            [encryption] => WPA2
+            [essid] => Home Network
+            [signal] => -50
+        )
+
+    [2] => Array
+        (
+            [bssid] => 56:EF:12:34:78:90
+            [channel] => 1
+            [encryption] => WPA
+            [essid] => Guest_WiFi
+            [signal] => -60
+        )
+
+    [3] => Array
+        (
+            [bssid] => 12:34:56:78:90:AB
+            [channel] => 36
+            [encryption] => WPA2
+            [essid] => Office_WLAN
+            [signal] => -30
+        )
+
+    [4] => Array
+        (
+            [bssid] => 98:76:54:32:10:FF
+            [channel] => 44
+            [encryption] => Open
+            [essid] => Public_Hotspot
+            [signal] => -70
+        )
+
+)
+
+INFO - 2024-08-21 03:09:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:09:39 --> Solicitud realizada a la API.
+INFO - 2024-08-21 03:09:39 --> Datos recibidos: Array
+(
+    [0] => Array
+        (
+            [bssid] => 78:45:61:DA:B9:C0
+            [channel] => 11
+            [encryption] => WPA2
+            [essid] => Fibertel Comba 2.4GHz
+            [signal] => -40
+        )
+
+    [1] => Array
+        (
+            [bssid] => 34:12:98:AB:CD:12
+            [channel] => 6
+            [encryption] => WPA2
+            [essid] => Home Network
+            [signal] => -50
+        )
+
+    [2] => Array
+        (
+            [bssid] => 56:EF:12:34:78:90
+            [channel] => 1
+            [encryption] => WPA
+            [essid] => Guest_WiFi
+            [signal] => -60
+        )
+
+    [3] => Array
+        (
+            [bssid] => 12:34:56:78:90:AB
+            [channel] => 36
+            [encryption] => WPA2
+            [essid] => Office_WLAN
+            [signal] => -30
+        )
+
+    [4] => Array
+        (
+            [bssid] => 98:76:54:32:10:FF
+            [channel] => 44
+            [encryption] => Open
+            [essid] => Public_Hotspot
+            [signal] => -70
+        )
+
+)
+
+INFO - 2024-08-21 03:12:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:12:03 --> Solicitud realizada a la API.
+INFO - 2024-08-21 03:12:03 --> Datos recibidos: Array
+(
+    [0] => Array
+        (
+            [bssid] => 78:45:61:DA:B9:C0
+            [channel] => 11
+            [encryption] => WPA2
+            [essid] => Fibertel Comba 2.4GHz
+            [signal] => -40
+        )
+
+    [1] => Array
+        (
+            [bssid] => 34:12:98:AB:CD:12
+            [channel] => 6
+            [encryption] => WPA2
+            [essid] => Home Network
+            [signal] => -50
+        )
+
+    [2] => Array
+        (
+            [bssid] => 56:EF:12:34:78:90
+            [channel] => 1
+            [encryption] => WPA
+            [essid] => Guest_WiFi
+            [signal] => -60
+        )
+
+    [3] => Array
+        (
+            [bssid] => 12:34:56:78:90:AB
+            [channel] => 36
+            [encryption] => WPA2
+            [essid] => Office_WLAN
+            [signal] => -30
+        )
+
+    [4] => Array
+        (
+            [bssid] => 98:76:54:32:10:FF
+            [channel] => 44
+            [encryption] => Open
+            [essid] => Public_Hotspot
+            [signal] => -70
+        )
+
+)
+
+INFO - 2024-08-21 03:13:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:13:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:14:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:14:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:14:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:14:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:14:39 --> Solicitud realizada a la API.
+INFO - 2024-08-21 03:14:39 --> Datos recibidos: Array
+(
+    [0] => Array
+        (
+            [bssid] => 78:45:61:DA:B9:C0
+            [channel] => 11
+            [encryption] => WPA2
+            [essid] => Fibertel Comba 2.4GHz
+            [signal] => -40
+        )
+
+    [1] => Array
+        (
+            [bssid] => 34:12:98:AB:CD:12
+            [channel] => 6
+            [encryption] => WPA2
+            [essid] => Home Network
+            [signal] => -50
+        )
+
+    [2] => Array
+        (
+            [bssid] => 56:EF:12:34:78:90
+            [channel] => 1
+            [encryption] => WPA
+            [essid] => Guest_WiFi
+            [signal] => -60
+        )
+
+    [3] => Array
+        (
+            [bssid] => 12:34:56:78:90:AB
+            [channel] => 36
+            [encryption] => WPA2
+            [essid] => Office_WLAN
+            [signal] => -30
+        )
+
+    [4] => Array
+        (
+            [bssid] => 98:76:54:32:10:FF
+            [channel] => 44
+            [encryption] => Open
+            [essid] => Public_Hotspot
+            [signal] => -70
+        )
+
+)
+
+INFO - 2024-08-21 03:14:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:16:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:16:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:16:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:16:35 --> Solicitud realizada a la API.
+INFO - 2024-08-21 03:16:35 --> Datos recibidos: Array
+(
+    [0] => Array
+        (
+            [bssid] => 78:45:61:DA:B9:C0
+            [channel] => 11
+            [encryption] => WPA2
+            [essid] => Fibertel Comba 2.4GHz
+            [signal] => -40
+        )
+
+    [1] => Array
+        (
+            [bssid] => 34:12:98:AB:CD:12
+            [channel] => 6
+            [encryption] => WPA2
+            [essid] => Home Network
+            [signal] => -50
+        )
+
+    [2] => Array
+        (
+            [bssid] => 56:EF:12:34:78:90
+            [channel] => 1
+            [encryption] => WPA
+            [essid] => Guest_WiFi
+            [signal] => -60
+        )
+
+    [3] => Array
+        (
+            [bssid] => 12:34:56:78:90:AB
+            [channel] => 36
+            [encryption] => WPA2
+            [essid] => Office_WLAN
+            [signal] => -30
+        )
+
+    [4] => Array
+        (
+            [bssid] => 98:76:54:32:10:FF
+            [channel] => 44
+            [encryption] => Open
+            [essid] => Public_Hotspot
+            [signal] => -70
+        )
+
+)
+
+INFO - 2024-08-21 03:17:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:17:26 --> Solicitud realizada a la API.
+INFO - 2024-08-21 03:17:26 --> Datos recibidos: Array
+(
+    [0] => Array
+        (
+            [bssid] => 78:45:61:DA:B9:C0
+            [channel] => 11
+            [encryption] => WPA2
+            [essid] => Fibertel Comba 2.4GHz
+            [signal] => -40
+        )
+
+    [1] => Array
+        (
+            [bssid] => 34:12:98:AB:CD:12
+            [channel] => 6
+            [encryption] => WPA2
+            [essid] => Home Network
+            [signal] => -50
+        )
+
+    [2] => Array
+        (
+            [bssid] => 56:EF:12:34:78:90
+            [channel] => 1
+            [encryption] => WPA
+            [essid] => Guest_WiFi
+            [signal] => -60
+        )
+
+    [3] => Array
+        (
+            [bssid] => 12:34:56:78:90:AB
+            [channel] => 36
+            [encryption] => WPA2
+            [essid] => Office_WLAN
+            [signal] => -30
+        )
+
+    [4] => Array
+        (
+            [bssid] => 98:76:54:32:10:FF
+            [channel] => 44
+            [encryption] => Open
+            [essid] => Public_Hotspot
+            [signal] => -70
+        )
+
+)
+
+INFO - 2024-08-21 03:18:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:18:05 --> Solicitud realizada a la API.
+INFO - 2024-08-21 03:18:05 --> Datos recibidos: Array
+(
+    [0] => Array
+        (
+            [bssid] => 78:45:61:DA:B9:C0
+            [channel] => 11
+            [encryption] => WPA2
+            [essid] => Fibertel Comba 2.4GHz
+            [signal] => -40
+        )
+
+    [1] => Array
+        (
+            [bssid] => 34:12:98:AB:CD:12
+            [channel] => 6
+            [encryption] => WPA2
+            [essid] => Home Network
+            [signal] => -50
+        )
+
+    [2] => Array
+        (
+            [bssid] => 56:EF:12:34:78:90
+            [channel] => 1
+            [encryption] => WPA
+            [essid] => Guest_WiFi
+            [signal] => -60
+        )
+
+    [3] => Array
+        (
+            [bssid] => 12:34:56:78:90:AB
+            [channel] => 36
+            [encryption] => WPA2
+            [essid] => Office_WLAN
+            [signal] => -30
+        )
+
+    [4] => Array
+        (
+            [bssid] => 98:76:54:32:10:FF
+            [channel] => 44
+            [encryption] => Open
+            [essid] => Public_Hotspot
+            [signal] => -70
+        )
+
+)
+
+INFO - 2024-08-21 03:18:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:18:37 --> Solicitud realizada a la API.
+INFO - 2024-08-21 03:18:37 --> Datos recibidos: Array
+(
+    [0] => Array
+        (
+            [bssid] => 78:45:61:DA:B9:C0
+            [channel] => 11
+            [encryption] => WPA2
+            [essid] => Fibertel Comba 2.4GHz
+            [signal] => -40
+        )
+
+    [1] => Array
+        (
+            [bssid] => 34:12:98:AB:CD:12
+            [channel] => 6
+            [encryption] => WPA2
+            [essid] => Home Network
+            [signal] => -50
+        )
+
+    [2] => Array
+        (
+            [bssid] => 56:EF:12:34:78:90
+            [channel] => 1
+            [encryption] => WPA
+            [essid] => Guest_WiFi
+            [signal] => -60
+        )
+
+    [3] => Array
+        (
+            [bssid] => 12:34:56:78:90:AB
+            [channel] => 36
+            [encryption] => WPA2
+            [essid] => Office_WLAN
+            [signal] => -30
+        )
+
+    [4] => Array
+        (
+            [bssid] => 98:76:54:32:10:FF
+            [channel] => 44
+            [encryption] => Open
+            [essid] => Public_Hotspot
+            [signal] => -70
+        )
+
+)
+
+INFO - 2024-08-21 03:19:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:19:05 --> Solicitud realizada a la API.
+INFO - 2024-08-21 03:19:05 --> Datos recibidos: Array
+(
+    [0] => Array
+        (
+            [bssid] => 78:45:61:DA:B9:C0
+            [channel] => 11
+            [encryption] => WPA2
+            [essid] => Fibertel Comba 2.4GHz
+            [signal] => -40
+        )
+
+    [1] => Array
+        (
+            [bssid] => 34:12:98:AB:CD:12
+            [channel] => 6
+            [encryption] => WPA2
+            [essid] => Home Network
+            [signal] => -50
+        )
+
+    [2] => Array
+        (
+            [bssid] => 56:EF:12:34:78:90
+            [channel] => 1
+            [encryption] => WPA
+            [essid] => Guest_WiFi
+            [signal] => -60
+        )
+
+    [3] => Array
+        (
+            [bssid] => 12:34:56:78:90:AB
+            [channel] => 36
+            [encryption] => WPA2
+            [essid] => Office_WLAN
+            [signal] => -30
+        )
+
+    [4] => Array
+        (
+            [bssid] => 98:76:54:32:10:FF
+            [channel] => 44
+            [encryption] => Open
+            [essid] => Public_Hotspot
+            [signal] => -70
+        )
+
+)
+
+INFO - 2024-08-21 03:19:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:19:10 --> Solicitud realizada a la API.
+INFO - 2024-08-21 03:19:10 --> Datos recibidos: Array
+(
+    [0] => Array
+        (
+            [bssid] => 78:45:61:DA:B9:C0
+            [channel] => 11
+            [encryption] => WPA2
+            [essid] => Fibertel Comba 2.4GHz
+            [signal] => -40
+        )
+
+    [1] => Array
+        (
+            [bssid] => 34:12:98:AB:CD:12
+            [channel] => 6
+            [encryption] => WPA2
+            [essid] => Home Network
+            [signal] => -50
+        )
+
+    [2] => Array
+        (
+            [bssid] => 56:EF:12:34:78:90
+            [channel] => 1
+            [encryption] => WPA
+            [essid] => Guest_WiFi
+            [signal] => -60
+        )
+
+    [3] => Array
+        (
+            [bssid] => 12:34:56:78:90:AB
+            [channel] => 36
+            [encryption] => WPA2
+            [essid] => Office_WLAN
+            [signal] => -30
+        )
+
+    [4] => Array
+        (
+            [bssid] => 98:76:54:32:10:FF
+            [channel] => 44
+            [encryption] => Open
+            [essid] => Public_Hotspot
+            [signal] => -70
+        )
+
+)
+
+INFO - 2024-08-21 03:19:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:19:15 --> Solicitud realizada a la API.
+INFO - 2024-08-21 03:19:15 --> Datos recibidos: Array
+(
+    [0] => Array
+        (
+            [bssid] => 78:45:61:DA:B9:C0
+            [channel] => 11
+            [encryption] => WPA2
+            [essid] => Fibertel Comba 2.4GHz
+            [signal] => -40
+        )
+
+    [1] => Array
+        (
+            [bssid] => 34:12:98:AB:CD:12
+            [channel] => 6
+            [encryption] => WPA2
+            [essid] => Home Network
+            [signal] => -50
+        )
+
+    [2] => Array
+        (
+            [bssid] => 56:EF:12:34:78:90
+            [channel] => 1
+            [encryption] => WPA
+            [essid] => Guest_WiFi
+            [signal] => -60
+        )
+
+    [3] => Array
+        (
+            [bssid] => 12:34:56:78:90:AB
+            [channel] => 36
+            [encryption] => WPA2
+            [essid] => Office_WLAN
+            [signal] => -30
+        )
+
+    [4] => Array
+        (
+            [bssid] => 98:76:54:32:10:FF
+            [channel] => 44
+            [encryption] => Open
+            [essid] => Public_Hotspot
+            [signal] => -70
+        )
+
+)
+
+INFO - 2024-08-21 03:19:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:19:23 --> Solicitud realizada a la API.
+INFO - 2024-08-21 03:19:23 --> Datos recibidos: Array
+(
+    [0] => Array
+        (
+            [bssid] => 78:45:61:DA:B9:C0
+            [channel] => 11
+            [encryption] => WPA2
+            [essid] => Fibertel Comba 2.4GHz
+            [signal] => -40
+        )
+
+    [1] => Array
+        (
+            [bssid] => 34:12:98:AB:CD:12
+            [channel] => 6
+            [encryption] => WPA2
+            [essid] => Home Network
+            [signal] => -50
+        )
+
+    [2] => Array
+        (
+            [bssid] => 56:EF:12:34:78:90
+            [channel] => 1
+            [encryption] => WPA
+            [essid] => Guest_WiFi
+            [signal] => -60
+        )
+
+    [3] => Array
+        (
+            [bssid] => 12:34:56:78:90:AB
+            [channel] => 36
+            [encryption] => WPA2
+            [essid] => Office_WLAN
+            [signal] => -30
+        )
+
+    [4] => Array
+        (
+            [bssid] => 98:76:54:32:10:FF
+            [channel] => 44
+            [encryption] => Open
+            [essid] => Public_Hotspot
+            [signal] => -70
+        )
+
+)
+
+INFO - 2024-08-21 03:19:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:19:30 --> Solicitud realizada a la API.
+INFO - 2024-08-21 03:19:30 --> Datos recibidos: Array
+(
+    [0] => Array
+        (
+            [bssid] => 78:45:61:DA:B9:C0
+            [channel] => 11
+            [encryption] => WPA2
+            [essid] => Fibertel Comba 2.4GHz
+            [signal] => -40
+        )
+
+    [1] => Array
+        (
+            [bssid] => 34:12:98:AB:CD:12
+            [channel] => 6
+            [encryption] => WPA2
+            [essid] => Home Network
+            [signal] => -50
+        )
+
+    [2] => Array
+        (
+            [bssid] => 56:EF:12:34:78:90
+            [channel] => 1
+            [encryption] => WPA
+            [essid] => Guest_WiFi
+            [signal] => -60
+        )
+
+    [3] => Array
+        (
+            [bssid] => 12:34:56:78:90:AB
+            [channel] => 36
+            [encryption] => WPA2
+            [essid] => Office_WLAN
+            [signal] => -30
+        )
+
+    [4] => Array
+        (
+            [bssid] => 98:76:54:32:10:FF
+            [channel] => 44
+            [encryption] => Open
+            [essid] => Public_Hotspot
+            [signal] => -70
+        )
+
+)
+
+INFO - 2024-08-21 03:19:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:19:45 --> Solicitud realizada a la API.
+INFO - 2024-08-21 03:19:45 --> Datos recibidos: Array
+(
+    [0] => Array
+        (
+            [bssid] => 78:45:61:DA:B9:C0
+            [channel] => 11
+            [encryption] => WPA2
+            [essid] => Fibertel Comba 2.4GHz
+            [signal] => -40
+        )
+
+    [1] => Array
+        (
+            [bssid] => 34:12:98:AB:CD:12
+            [channel] => 6
+            [encryption] => WPA2
+            [essid] => Home Network
+            [signal] => -50
+        )
+
+    [2] => Array
+        (
+            [bssid] => 56:EF:12:34:78:90
+            [channel] => 1
+            [encryption] => WPA
+            [essid] => Guest_WiFi
+            [signal] => -60
+        )
+
+    [3] => Array
+        (
+            [bssid] => 12:34:56:78:90:AB
+            [channel] => 36
+            [encryption] => WPA2
+            [essid] => Office_WLAN
+            [signal] => -30
+        )
+
+    [4] => Array
+        (
+            [bssid] => 98:76:54:32:10:FF
+            [channel] => 44
+            [encryption] => Open
+            [essid] => Public_Hotspot
+            [signal] => -70
+        )
+
+)
+
+INFO - 2024-08-21 03:20:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:20:12 --> Solicitud realizada a la API.
+INFO - 2024-08-21 03:20:12 --> Datos recibidos: Array
+(
+    [0] => Array
+        (
+            [bssid] => 78:45:61:DA:B9:C0
+            [channel] => 11
+            [encryption] => WPA2
+            [essid] => Fibertel Comba 2.4GHz
+            [signal] => -40
+        )
+
+    [1] => Array
+        (
+            [bssid] => 34:12:98:AB:CD:12
+            [channel] => 6
+            [encryption] => WPA2
+            [essid] => Home Network
+            [signal] => -50
+        )
+
+    [2] => Array
+        (
+            [bssid] => 56:EF:12:34:78:90
+            [channel] => 1
+            [encryption] => WPA
+            [essid] => Guest_WiFi
+            [signal] => -60
+        )
+
+    [3] => Array
+        (
+            [bssid] => 12:34:56:78:90:AB
+            [channel] => 36
+            [encryption] => WPA2
+            [essid] => Office_WLAN
+            [signal] => -30
+        )
+
+    [4] => Array
+        (
+            [bssid] => 98:76:54:32:10:FF
+            [channel] => 44
+            [encryption] => Open
+            [essid] => Public_Hotspot
+            [signal] => -70
+        )
+
+)
+
+INFO - 2024-08-21 03:20:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:20:48 --> Solicitud realizada a la API.
+INFO - 2024-08-21 03:20:48 --> Datos recibidos: Array
+(
+    [0] => Array
+        (
+            [bssid] => 78:45:61:DA:B9:C0
+            [channel] => 11
+            [encryption] => WPA2
+            [essid] => Fibertel Comba 2.4GHz
+            [signal] => -40
+        )
+
+    [1] => Array
+        (
+            [bssid] => 34:12:98:AB:CD:12
+            [channel] => 6
+            [encryption] => WPA2
+            [essid] => Home Network
+            [signal] => -50
+        )
+
+    [2] => Array
+        (
+            [bssid] => 56:EF:12:34:78:90
+            [channel] => 1
+            [encryption] => WPA
+            [essid] => Guest_WiFi
+            [signal] => -60
+        )
+
+    [3] => Array
+        (
+            [bssid] => 12:34:56:78:90:AB
+            [channel] => 36
+            [encryption] => WPA2
+            [essid] => Office_WLAN
+            [signal] => -30
+        )
+
+    [4] => Array
+        (
+            [bssid] => 98:76:54:32:10:FF
+            [channel] => 44
+            [encryption] => Open
+            [essid] => Public_Hotspot
+            [signal] => -70
+        )
+
+)
+
+INFO - 2024-08-21 03:20:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:20:48 --> Solicitud realizada a la API.
+INFO - 2024-08-21 03:20:48 --> Datos recibidos: Array
+(
+    [0] => Array
+        (
+            [bssid] => 78:45:61:DA:B9:C0
+            [channel] => 11
+            [encryption] => WPA2
+            [essid] => Fibertel Comba 2.4GHz
+            [signal] => -40
+        )
+
+    [1] => Array
+        (
+            [bssid] => 34:12:98:AB:CD:12
+            [channel] => 6
+            [encryption] => WPA2
+            [essid] => Home Network
+            [signal] => -50
+        )
+
+    [2] => Array
+        (
+            [bssid] => 56:EF:12:34:78:90
+            [channel] => 1
+            [encryption] => WPA
+            [essid] => Guest_WiFi
+            [signal] => -60
+        )
+
+    [3] => Array
+        (
+            [bssid] => 12:34:56:78:90:AB
+            [channel] => 36
+            [encryption] => WPA2
+            [essid] => Office_WLAN
+            [signal] => -30
+        )
+
+    [4] => Array
+        (
+            [bssid] => 98:76:54:32:10:FF
+            [channel] => 44
+            [encryption] => Open
+            [essid] => Public_Hotspot
+            [signal] => -70
+        )
+
+)
+
+INFO - 2024-08-21 03:20:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:20:48 --> Solicitud realizada a la API.
+INFO - 2024-08-21 03:20:48 --> Datos recibidos: Array
+(
+    [0] => Array
+        (
+            [bssid] => 78:45:61:DA:B9:C0
+            [channel] => 11
+            [encryption] => WPA2
+            [essid] => Fibertel Comba 2.4GHz
+            [signal] => -40
+        )
+
+    [1] => Array
+        (
+            [bssid] => 34:12:98:AB:CD:12
+            [channel] => 6
+            [encryption] => WPA2
+            [essid] => Home Network
+            [signal] => -50
+        )
+
+    [2] => Array
+        (
+            [bssid] => 56:EF:12:34:78:90
+            [channel] => 1
+            [encryption] => WPA
+            [essid] => Guest_WiFi
+            [signal] => -60
+        )
+
+    [3] => Array
+        (
+            [bssid] => 12:34:56:78:90:AB
+            [channel] => 36
+            [encryption] => WPA2
+            [essid] => Office_WLAN
+            [signal] => -30
+        )
+
+    [4] => Array
+        (
+            [bssid] => 98:76:54:32:10:FF
+            [channel] => 44
+            [encryption] => Open
+            [essid] => Public_Hotspot
+            [signal] => -70
+        )
+
+)
+
+INFO - 2024-08-21 03:21:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:21:29 --> Solicitud realizada a la API.
+INFO - 2024-08-21 03:21:29 --> Datos recibidos: Array
+(
+    [0] => Array
+        (
+            [bssid] => 78:45:61:DA:B9:C0
+            [channel] => 11
+            [encryption] => WPA2
+            [essid] => Fibertel Comba 2.4GHz
+            [signal] => -40
+        )
+
+    [1] => Array
+        (
+            [bssid] => 34:12:98:AB:CD:12
+            [channel] => 6
+            [encryption] => WPA2
+            [essid] => Home Network
+            [signal] => -50
+        )
+
+    [2] => Array
+        (
+            [bssid] => 56:EF:12:34:78:90
+            [channel] => 1
+            [encryption] => WPA
+            [essid] => Guest_WiFi
+            [signal] => -60
+        )
+
+    [3] => Array
+        (
+            [bssid] => 12:34:56:78:90:AB
+            [channel] => 36
+            [encryption] => WPA2
+            [essid] => Office_WLAN
+            [signal] => -30
+        )
+
+    [4] => Array
+        (
+            [bssid] => 98:76:54:32:10:FF
+            [channel] => 44
+            [encryption] => Open
+            [essid] => Public_Hotspot
+            [signal] => -70
+        )
+
+)
+
+INFO - 2024-08-21 03:21:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:21:37 --> Solicitud realizada a la API.
+INFO - 2024-08-21 03:21:37 --> Datos recibidos: Array
+(
+    [0] => Array
+        (
+            [bssid] => 78:45:61:DA:B9:C0
+            [channel] => 11
+            [encryption] => WPA2
+            [essid] => Fibertel Comba 2.4GHz
+            [signal] => -40
+        )
+
+    [1] => Array
+        (
+            [bssid] => 34:12:98:AB:CD:12
+            [channel] => 6
+            [encryption] => WPA2
+            [essid] => Home Network
+            [signal] => -50
+        )
+
+    [2] => Array
+        (
+            [bssid] => 56:EF:12:34:78:90
+            [channel] => 1
+            [encryption] => WPA
+            [essid] => Guest_WiFi
+            [signal] => -60
+        )
+
+    [3] => Array
+        (
+            [bssid] => 12:34:56:78:90:AB
+            [channel] => 36
+            [encryption] => WPA2
+            [essid] => Office_WLAN
+            [signal] => -30
+        )
+
+    [4] => Array
+        (
+            [bssid] => 98:76:54:32:10:FF
+            [channel] => 44
+            [encryption] => Open
+            [essid] => Public_Hotspot
+            [signal] => -70
+        )
+
+)
+
+INFO - 2024-08-21 03:21:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:21:47 --> Solicitud realizada a la API.
+INFO - 2024-08-21 03:21:47 --> Datos recibidos: Array
+(
+    [0] => Array
+        (
+            [bssid] => 78:45:61:DA:B9:C0
+            [channel] => 11
+            [encryption] => WPA2
+            [essid] => Fibertel Comba 2.4GHz
+            [signal] => -40
+        )
+
+    [1] => Array
+        (
+            [bssid] => 34:12:98:AB:CD:12
+            [channel] => 6
+            [encryption] => WPA2
+            [essid] => Home Network
+            [signal] => -50
+        )
+
+    [2] => Array
+        (
+            [bssid] => 56:EF:12:34:78:90
+            [channel] => 1
+            [encryption] => WPA
+            [essid] => Guest_WiFi
+            [signal] => -60
+        )
+
+    [3] => Array
+        (
+            [bssid] => 12:34:56:78:90:AB
+            [channel] => 36
+            [encryption] => WPA2
+            [essid] => Office_WLAN
+            [signal] => -30
+        )
+
+    [4] => Array
+        (
+            [bssid] => 98:76:54:32:10:FF
+            [channel] => 44
+            [encryption] => Open
+            [essid] => Public_Hotspot
+            [signal] => -70
+        )
+
+)
+
+INFO - 2024-08-21 03:21:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:21:51 --> Solicitud realizada a la API.
+INFO - 2024-08-21 03:21:51 --> Datos recibidos: Array
+(
+    [0] => Array
+        (
+            [bssid] => 78:45:61:DA:B9:C0
+            [channel] => 11
+            [encryption] => WPA2
+            [essid] => Fibertel Comba 2.4GHz
+            [signal] => -40
+        )
+
+    [1] => Array
+        (
+            [bssid] => 34:12:98:AB:CD:12
+            [channel] => 6
+            [encryption] => WPA2
+            [essid] => Home Network
+            [signal] => -50
+        )
+
+    [2] => Array
+        (
+            [bssid] => 56:EF:12:34:78:90
+            [channel] => 1
+            [encryption] => WPA
+            [essid] => Guest_WiFi
+            [signal] => -60
+        )
+
+    [3] => Array
+        (
+            [bssid] => 12:34:56:78:90:AB
+            [channel] => 36
+            [encryption] => WPA2
+            [essid] => Office_WLAN
+            [signal] => -30
+        )
+
+    [4] => Array
+        (
+            [bssid] => 98:76:54:32:10:FF
+            [channel] => 44
+            [encryption] => Open
+            [essid] => Public_Hotspot
+            [signal] => -70
+        )
+
+)
+
+INFO - 2024-08-21 03:21:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:21:58 --> Solicitud realizada a la API.
+INFO - 2024-08-21 03:21:58 --> Datos recibidos: Array
+(
+    [0] => Array
+        (
+            [bssid] => 78:45:61:DA:B9:C0
+            [channel] => 11
+            [encryption] => WPA2
+            [essid] => Fibertel Comba 2.4GHz
+            [signal] => -40
+        )
+
+    [1] => Array
+        (
+            [bssid] => 34:12:98:AB:CD:12
+            [channel] => 6
+            [encryption] => WPA2
+            [essid] => Home Network
+            [signal] => -50
+        )
+
+    [2] => Array
+        (
+            [bssid] => 56:EF:12:34:78:90
+            [channel] => 1
+            [encryption] => WPA
+            [essid] => Guest_WiFi
+            [signal] => -60
+        )
+
+    [3] => Array
+        (
+            [bssid] => 12:34:56:78:90:AB
+            [channel] => 36
+            [encryption] => WPA2
+            [essid] => Office_WLAN
+            [signal] => -30
+        )
+
+    [4] => Array
+        (
+            [bssid] => 98:76:54:32:10:FF
+            [channel] => 44
+            [encryption] => Open
+            [essid] => Public_Hotspot
+            [signal] => -70
+        )
+
+)
+
+INFO - 2024-08-21 03:22:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:22:24 --> Solicitud realizada a la API.
+INFO - 2024-08-21 03:22:24 --> Datos recibidos: Array
+(
+    [0] => Array
+        (
+            [bssid] => 78:45:61:DA:B9:C0
+            [channel] => 11
+            [encryption] => WPA2
+            [essid] => Fibertel Comba 2.4GHz
+            [signal] => -40
+        )
+
+    [1] => Array
+        (
+            [bssid] => 34:12:98:AB:CD:12
+            [channel] => 6
+            [encryption] => WPA2
+            [essid] => Home Network
+            [signal] => -50
+        )
+
+    [2] => Array
+        (
+            [bssid] => 56:EF:12:34:78:90
+            [channel] => 1
+            [encryption] => WPA
+            [essid] => Guest_WiFi
+            [signal] => -60
+        )
+
+    [3] => Array
+        (
+            [bssid] => 12:34:56:78:90:AB
+            [channel] => 36
+            [encryption] => WPA2
+            [essid] => Office_WLAN
+            [signal] => -30
+        )
+
+    [4] => Array
+        (
+            [bssid] => 98:76:54:32:10:FF
+            [channel] => 44
+            [encryption] => Open
+            [essid] => Public_Hotspot
+            [signal] => -70
+        )
+
+)
+
+INFO - 2024-08-21 03:22:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:22:32 --> Solicitud realizada a la API.
+INFO - 2024-08-21 03:22:32 --> Datos recibidos: Array
+(
+    [0] => Array
+        (
+            [bssid] => 78:45:61:DA:B9:C0
+            [channel] => 11
+            [encryption] => WPA2
+            [essid] => Fibertel Comba 2.4GHz
+            [signal] => -40
+        )
+
+    [1] => Array
+        (
+            [bssid] => 34:12:98:AB:CD:12
+            [channel] => 6
+            [encryption] => WPA2
+            [essid] => Home Network
+            [signal] => -50
+        )
+
+    [2] => Array
+        (
+            [bssid] => 56:EF:12:34:78:90
+            [channel] => 1
+            [encryption] => WPA
+            [essid] => Guest_WiFi
+            [signal] => -60
+        )
+
+    [3] => Array
+        (
+            [bssid] => 12:34:56:78:90:AB
+            [channel] => 36
+            [encryption] => WPA2
+            [essid] => Office_WLAN
+            [signal] => -30
+        )
+
+    [4] => Array
+        (
+            [bssid] => 98:76:54:32:10:FF
+            [channel] => 44
+            [encryption] => Open
+            [essid] => Public_Hotspot
+            [signal] => -70
+        )
+
+)
+
+INFO - 2024-08-21 03:22:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:22:39 --> Solicitud realizada a la API.
+INFO - 2024-08-21 03:22:39 --> Datos recibidos: Array
+(
+    [0] => Array
+        (
+            [bssid] => 78:45:61:DA:B9:C0
+            [channel] => 11
+            [encryption] => WPA2
+            [essid] => Fibertel Comba 2.4GHz
+            [signal] => -40
+        )
+
+    [1] => Array
+        (
+            [bssid] => 34:12:98:AB:CD:12
+            [channel] => 6
+            [encryption] => WPA2
+            [essid] => Home Network
+            [signal] => -50
+        )
+
+    [2] => Array
+        (
+            [bssid] => 56:EF:12:34:78:90
+            [channel] => 1
+            [encryption] => WPA
+            [essid] => Guest_WiFi
+            [signal] => -60
+        )
+
+    [3] => Array
+        (
+            [bssid] => 12:34:56:78:90:AB
+            [channel] => 36
+            [encryption] => WPA2
+            [essid] => Office_WLAN
+            [signal] => -30
+        )
+
+    [4] => Array
+        (
+            [bssid] => 98:76:54:32:10:FF
+            [channel] => 44
+            [encryption] => Open
+            [essid] => Public_Hotspot
+            [signal] => -70
+        )
+
+)
+
+INFO - 2024-08-21 03:23:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:23:27 --> Solicitud realizada a la API.
+INFO - 2024-08-21 03:23:27 --> Datos recibidos: Array
+(
+    [0] => Array
+        (
+            [bssid] => 78:45:61:DA:B9:C0
+            [channel] => 11
+            [encryption] => WPA2
+            [essid] => Fibertel Comba 2.4GHz
+            [signal] => -40
+        )
+
+    [1] => Array
+        (
+            [bssid] => 34:12:98:AB:CD:12
+            [channel] => 6
+            [encryption] => WPA2
+            [essid] => Home Network
+            [signal] => -50
+        )
+
+    [2] => Array
+        (
+            [bssid] => 56:EF:12:34:78:90
+            [channel] => 1
+            [encryption] => WPA
+            [essid] => Guest_WiFi
+            [signal] => -60
+        )
+
+    [3] => Array
+        (
+            [bssid] => 12:34:56:78:90:AB
+            [channel] => 36
+            [encryption] => WPA2
+            [essid] => Office_WLAN
+            [signal] => -30
+        )
+
+    [4] => Array
+        (
+            [bssid] => 98:76:54:32:10:FF
+            [channel] => 44
+            [encryption] => Open
+            [essid] => Public_Hotspot
+            [signal] => -70
+        )
+
+)
+
+INFO - 2024-08-21 03:23:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:23:42 --> Solicitud realizada a la API.
+INFO - 2024-08-21 03:23:42 --> Datos recibidos: Array
+(
+    [0] => Array
+        (
+            [bssid] => 78:45:61:DA:B9:C0
+            [channel] => 11
+            [encryption] => WPA2
+            [essid] => Fibertel Comba 2.4GHz
+            [signal] => -40
+        )
+
+    [1] => Array
+        (
+            [bssid] => 34:12:98:AB:CD:12
+            [channel] => 6
+            [encryption] => WPA2
+            [essid] => Home Network
+            [signal] => -50
+        )
+
+    [2] => Array
+        (
+            [bssid] => 56:EF:12:34:78:90
+            [channel] => 1
+            [encryption] => WPA
+            [essid] => Guest_WiFi
+            [signal] => -60
+        )
+
+    [3] => Array
+        (
+            [bssid] => 12:34:56:78:90:AB
+            [channel] => 36
+            [encryption] => WPA2
+            [essid] => Office_WLAN
+            [signal] => -30
+        )
+
+    [4] => Array
+        (
+            [bssid] => 98:76:54:32:10:FF
+            [channel] => 44
+            [encryption] => Open
+            [essid] => Public_Hotspot
+            [signal] => -70
+        )
+
+)
+
+INFO - 2024-08-21 03:23:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:23:48 --> Solicitud realizada a la API.
+INFO - 2024-08-21 03:23:48 --> Datos recibidos: Array
+(
+    [0] => Array
+        (
+            [bssid] => 78:45:61:DA:B9:C0
+            [channel] => 11
+            [encryption] => WPA2
+            [essid] => Fibertel Comba 2.4GHz
+            [signal] => -40
+        )
+
+    [1] => Array
+        (
+            [bssid] => 34:12:98:AB:CD:12
+            [channel] => 6
+            [encryption] => WPA2
+            [essid] => Home Network
+            [signal] => -50
+        )
+
+    [2] => Array
+        (
+            [bssid] => 56:EF:12:34:78:90
+            [channel] => 1
+            [encryption] => WPA
+            [essid] => Guest_WiFi
+            [signal] => -60
+        )
+
+    [3] => Array
+        (
+            [bssid] => 12:34:56:78:90:AB
+            [channel] => 36
+            [encryption] => WPA2
+            [essid] => Office_WLAN
+            [signal] => -30
+        )
+
+    [4] => Array
+        (
+            [bssid] => 98:76:54:32:10:FF
+            [channel] => 44
+            [encryption] => Open
+            [essid] => Public_Hotspot
+            [signal] => -70
+        )
+
+)
+
+INFO - 2024-08-21 03:24:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:24:22 --> Solicitud realizada a la API.
+INFO - 2024-08-21 03:24:22 --> Datos recibidos: Array
+(
+    [0] => Array
+        (
+            [bssid] => 78:45:61:DA:B9:C0
+            [channel] => 11
+            [encryption] => WPA2
+            [essid] => Fibertel Comba 2.4GHz
+            [signal] => -40
+        )
+
+    [1] => Array
+        (
+            [bssid] => 34:12:98:AB:CD:12
+            [channel] => 6
+            [encryption] => WPA2
+            [essid] => Home Network
+            [signal] => -50
+        )
+
+    [2] => Array
+        (
+            [bssid] => 56:EF:12:34:78:90
+            [channel] => 1
+            [encryption] => WPA
+            [essid] => Guest_WiFi
+            [signal] => -60
+        )
+
+    [3] => Array
+        (
+            [bssid] => 12:34:56:78:90:AB
+            [channel] => 36
+            [encryption] => WPA2
+            [essid] => Office_WLAN
+            [signal] => -30
+        )
+
+    [4] => Array
+        (
+            [bssid] => 98:76:54:32:10:FF
+            [channel] => 44
+            [encryption] => Open
+            [essid] => Public_Hotspot
+            [signal] => -70
+        )
+
+)
+
+INFO - 2024-08-21 03:24:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:24:33 --> Solicitud realizada a la API.
+INFO - 2024-08-21 03:24:33 --> Datos recibidos: Array
+(
+    [0] => Array
+        (
+            [bssid] => 78:45:61:DA:B9:C0
+            [channel] => 11
+            [encryption] => WPA2
+            [essid] => Fibertel Comba 2.4GHz
+            [signal] => -40
+        )
+
+    [1] => Array
+        (
+            [bssid] => 34:12:98:AB:CD:12
+            [channel] => 6
+            [encryption] => WPA2
+            [essid] => Home Network
+            [signal] => -50
+        )
+
+    [2] => Array
+        (
+            [bssid] => 56:EF:12:34:78:90
+            [channel] => 1
+            [encryption] => WPA
+            [essid] => Guest_WiFi
+            [signal] => -60
+        )
+
+    [3] => Array
+        (
+            [bssid] => 12:34:56:78:90:AB
+            [channel] => 36
+            [encryption] => WPA2
+            [essid] => Office_WLAN
+            [signal] => -30
+        )
+
+    [4] => Array
+        (
+            [bssid] => 98:76:54:32:10:FF
+            [channel] => 44
+            [encryption] => Open
+            [essid] => Public_Hotspot
+            [signal] => -70
+        )
+
+)
+
+INFO - 2024-08-21 03:25:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:25:03 --> Solicitud realizada a la API.
+INFO - 2024-08-21 03:25:03 --> Datos recibidos: Array
+(
+    [0] => Array
+        (
+            [bssid] => 78:45:61:DA:B9:C0
+            [channel] => 11
+            [encryption] => WPA2
+            [essid] => Fibertel Comba 2.4GHz
+            [signal] => -40
+        )
+
+    [1] => Array
+        (
+            [bssid] => 34:12:98:AB:CD:12
+            [channel] => 6
+            [encryption] => WPA2
+            [essid] => Home Network
+            [signal] => -50
+        )
+
+    [2] => Array
+        (
+            [bssid] => 56:EF:12:34:78:90
+            [channel] => 1
+            [encryption] => WPA
+            [essid] => Guest_WiFi
+            [signal] => -60
+        )
+
+    [3] => Array
+        (
+            [bssid] => 12:34:56:78:90:AB
+            [channel] => 36
+            [encryption] => WPA2
+            [essid] => Office_WLAN
+            [signal] => -30
+        )
+
+    [4] => Array
+        (
+            [bssid] => 98:76:54:32:10:FF
+            [channel] => 44
+            [encryption] => Open
+            [essid] => Public_Hotspot
+            [signal] => -70
+        )
+
+)
+
+INFO - 2024-08-21 03:25:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:25:09 --> Solicitud realizada a la API.
+INFO - 2024-08-21 03:25:09 --> Datos recibidos: Array
+(
+    [0] => Array
+        (
+            [bssid] => 78:45:61:DA:B9:C0
+            [channel] => 11
+            [encryption] => WPA2
+            [essid] => Fibertel Comba 2.4GHz
+            [signal] => -40
+        )
+
+    [1] => Array
+        (
+            [bssid] => 34:12:98:AB:CD:12
+            [channel] => 6
+            [encryption] => WPA2
+            [essid] => Home Network
+            [signal] => -50
+        )
+
+    [2] => Array
+        (
+            [bssid] => 56:EF:12:34:78:90
+            [channel] => 1
+            [encryption] => WPA
+            [essid] => Guest_WiFi
+            [signal] => -60
+        )
+
+    [3] => Array
+        (
+            [bssid] => 12:34:56:78:90:AB
+            [channel] => 36
+            [encryption] => WPA2
+            [essid] => Office_WLAN
+            [signal] => -30
+        )
+
+    [4] => Array
+        (
+            [bssid] => 98:76:54:32:10:FF
+            [channel] => 44
+            [encryption] => Open
+            [essid] => Public_Hotspot
+            [signal] => -70
+        )
+
+)
+
+INFO - 2024-08-21 03:25:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:25:14 --> Solicitud realizada a la API.
+INFO - 2024-08-21 03:25:14 --> Datos recibidos: Array
+(
+    [0] => Array
+        (
+            [bssid] => 78:45:61:DA:B9:C0
+            [channel] => 11
+            [encryption] => WPA2
+            [essid] => Fibertel Comba 2.4GHz
+            [signal] => -40
+        )
+
+    [1] => Array
+        (
+            [bssid] => 34:12:98:AB:CD:12
+            [channel] => 6
+            [encryption] => WPA2
+            [essid] => Home Network
+            [signal] => -50
+        )
+
+    [2] => Array
+        (
+            [bssid] => 56:EF:12:34:78:90
+            [channel] => 1
+            [encryption] => WPA
+            [essid] => Guest_WiFi
+            [signal] => -60
+        )
+
+    [3] => Array
+        (
+            [bssid] => 12:34:56:78:90:AB
+            [channel] => 36
+            [encryption] => WPA2
+            [essid] => Office_WLAN
+            [signal] => -30
+        )
+
+    [4] => Array
+        (
+            [bssid] => 98:76:54:32:10:FF
+            [channel] => 44
+            [encryption] => Open
+            [essid] => Public_Hotspot
+            [signal] => -70
+        )
+
+)
+
+INFO - 2024-08-21 03:25:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:25:54 --> Solicitud realizada a la API.
+INFO - 2024-08-21 03:25:54 --> Datos recibidos: Array
+(
+    [0] => Array
+        (
+            [bssid] => 78:45:61:DA:B9:C0
+            [channel] => 11
+            [encryption] => WPA2
+            [essid] => Fibertel Comba 2.4GHz
+            [signal] => -40
+        )
+
+    [1] => Array
+        (
+            [bssid] => 34:12:98:AB:CD:12
+            [channel] => 6
+            [encryption] => WPA2
+            [essid] => Home Network
+            [signal] => -50
+        )
+
+    [2] => Array
+        (
+            [bssid] => 56:EF:12:34:78:90
+            [channel] => 1
+            [encryption] => WPA
+            [essid] => Guest_WiFi
+            [signal] => -60
+        )
+
+    [3] => Array
+        (
+            [bssid] => 12:34:56:78:90:AB
+            [channel] => 36
+            [encryption] => WPA2
+            [essid] => Office_WLAN
+            [signal] => -30
+        )
+
+    [4] => Array
+        (
+            [bssid] => 98:76:54:32:10:FF
+            [channel] => 44
+            [encryption] => Open
+            [essid] => Public_Hotspot
+            [signal] => -70
+        )
+
+)
+
+INFO - 2024-08-21 03:26:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:26:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:26:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:26:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:26:08 --> Solicitud realizada a la API.
+INFO - 2024-08-21 03:26:08 --> Datos recibidos: Array
+(
+    [0] => Array
+        (
+            [bssid] => 78:45:61:DA:B9:C0
+            [channel] => 11
+            [encryption] => WPA2
+            [essid] => Fibertel Comba 2.4GHz
+            [signal] => -40
+        )
+
+    [1] => Array
+        (
+            [bssid] => 34:12:98:AB:CD:12
+            [channel] => 6
+            [encryption] => WPA2
+            [essid] => Home Network
+            [signal] => -50
+        )
+
+    [2] => Array
+        (
+            [bssid] => 56:EF:12:34:78:90
+            [channel] => 1
+            [encryption] => WPA
+            [essid] => Guest_WiFi
+            [signal] => -60
+        )
+
+    [3] => Array
+        (
+            [bssid] => 12:34:56:78:90:AB
+            [channel] => 36
+            [encryption] => WPA2
+            [essid] => Office_WLAN
+            [signal] => -30
+        )
+
+    [4] => Array
+        (
+            [bssid] => 98:76:54:32:10:FF
+            [channel] => 44
+            [encryption] => Open
+            [essid] => Public_Hotspot
+            [signal] => -70
+        )
+
+)
+
+INFO - 2024-08-21 03:26:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:26:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:26:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:26:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:27:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:27:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:27:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:27:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:27:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:28:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:28:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:28:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:28:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:28:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:28:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:28:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:28:50 --> Solicitud realizada a la API.
+INFO - 2024-08-21 03:28:50 --> Datos recibidos: Array
+(
+    [0] => Array
+        (
+            [bssid] => 78:45:61:DA:B9:C0
+            [channel] => 11
+            [encryption] => WPA2
+            [essid] => Fibertel Comba 2.4GHz
+            [signal] => -40
+        )
+
+    [1] => Array
+        (
+            [bssid] => 34:12:98:AB:CD:12
+            [channel] => 6
+            [encryption] => WPA2
+            [essid] => Home Network
+            [signal] => -50
+        )
+
+    [2] => Array
+        (
+            [bssid] => 56:EF:12:34:78:90
+            [channel] => 1
+            [encryption] => WPA
+            [essid] => Guest_WiFi
+            [signal] => -60
+        )
+
+    [3] => Array
+        (
+            [bssid] => 12:34:56:78:90:AB
+            [channel] => 36
+            [encryption] => WPA2
+            [essid] => Office_WLAN
+            [signal] => -30
+        )
+
+    [4] => Array
+        (
+            [bssid] => 98:76:54:32:10:FF
+            [channel] => 44
+            [encryption] => Open
+            [essid] => Public_Hotspot
+            [signal] => -70
+        )
+
+)
+
+INFO - 2024-08-21 03:28:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-21 03:28:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
