@@ -14,4 +14,9 @@ class Home extends BaseController
     {
         return view('home/home');
     }
+
+    public function animation()
+    {
+        return view('common/home/animation');
+    }
 }

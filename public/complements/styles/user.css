@@ -36,6 +36,25 @@
   font-weight: 400;
 }
 
+
+/* cursor styles */
+.cursor {
+  pointer-events: none;
+  position      : absolute;
+  width         : 20px;
+  /* Tamaño del cursor */
+  height        : 20px;
+  /* Tamaño del cursor */
+  border-radius : 50%;
+  z-index       : 9000;
+  background    : var(--color-white);
+  transition    : width 0.3s ease, height 0.3s ease;
+  /* Transición de tamaño si es necesario */
+}
+
+
+
+
 .caps-lock-warning {
   display         : none;
   position        : absolute;
@@ -104,8 +123,9 @@ body {
 }
 
 .left-section {
-  width   : 33%;
-  position: relative;
+  width       : 33%;
+  position    : relative;
+  border-right: 2px solid var(--color-grey);
 }
 
 .left-section img {
@@ -215,13 +235,41 @@ h2 {
   font-family     : "neue";
   font-weight     : lighter;
   color           : var(--color-white);
-  /* Color blanco inicial */
   background-color: transparent;
   border          : 2px solid var(--color-white);
-  /* Borde blanco */
   border-radius   : 5px;
   cursor          : pointer;
   overflow        : hidden;
-  transition      : color 0.4s ease;
-  /* Transición de color */
+  transition      : color 0.4s ease, background-color 0.4s ease, transform 0.4s ease;
+}
+
+.submit-button::before {
+  content      : "";
+  position     : absolute;
+  top          : 50%;
+  left         : 50%;
+  width        : 300%;
+  height       : 300%;
+  background   : var(--color-white);
+  transition   : width 0.4s ease, height 0.4s ease, top 0.4s ease, left 0.4s ease;
+  border-radius: 50%;
+  z-index      : 0;
+  transform    : translate(-50%, -50%);
+}
+
+.submit-button:hover::before {
+  width : 0;
+  height: 0;
+  top   : 50%;
+  left  : 50%;
+}
+
+.submit-button:hover {
+  color: var(--color-white);
+
+}
+
+.submit-button span {
+  position: relative;
+  z-index : 1;
 }

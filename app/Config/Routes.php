@@ -9,6 +9,7 @@ use CodeIgniter\Router\RouteCollection;
 // Seccion controlador Home/index
 $routes->get('/', 'Home::index');
 $routes->get('home', 'Home::home');
+$routes->get('home-animation', 'Home::animation');
 // Seccion controlador User/Login
 
 $routes->get('login-animation', 'User\Login::animation');
