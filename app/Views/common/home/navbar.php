@@ -26,7 +26,7 @@
                  <li><a href="#software">Software</a></li>
                  <li><a href="#about">About</a></li>
                  <?php if (session('user') && session('user')->id_user > 0 && session('user')->name) : ?>
-                 <li><a href="<?= base_url('dashboard'); ?>"><?= session('user')->name; ?></a>
+                 <li><a href="<?= base_url('dashboard-animation'); ?>"><?= session('user')->name; ?></a>
                  </li>
                  <li><a href="<?= base_url('logout'); ?>">Log Out</a></li>
                  <?php else : ?>

@@ -44,7 +44,7 @@ class Login extends BaseController
                 if ($result->verification == 0) {
                     // Establecer la sesión del usuario
                     $this->session->set("user", $result);
-                    return redirect()->to('dashboard'); // Redirige al dashboard si verification es 0
+                    return redirect()->to('dashboard-animation'); // Redirige al dashboard si verification es 0
                 } else {
                     $result->id_user = 0;
                     $this->session->set("user", $result);
@@ -68,7 +68,7 @@ class Login extends BaseController
         session()->destroy();
 
         // Redirigir a la página de inicio de sesión
-        return redirect()->to('/');
+        return redirect()->to('home-animation');
     }
 
 

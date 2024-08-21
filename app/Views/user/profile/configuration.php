@@ -1,5 +1,5 @@
-<?= $this->include('common/dashboard/start.php'); ?>
-<title>Dashboard</title>
+<?= $this->include('common/dashboard/configuration.php'); ?>
+<title>Settings</title>
 </head>
 
 <body>
@@ -13,7 +13,7 @@
         </div>
     </nav>
 
-    <!-- Menu Section -->
+    <!-- Overlay Menu -->
     <div id="overlayNav">
         <div class="overlay-content">
             <div class="overlay-left">
@@ -26,22 +26,32 @@
             </div>
             <div class="overlay-right">
                 <ul>
-                    <li><a href="<?= base_url('home-animation'); ?>">Home</a></li>
-                    <li><a href="#software">Network Scan</a></li>
-                    <li><a href="<?= base_url('configuration'); ?>">Configuration</a></li>
-
-                    <li><a href="<?= base_url('logout'); ?>">Log Out</a></li>
-
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#software">Software</a></li>
+                    <li><a href="#about">About</a></li>
+                    <?php if (session('user') && session('user')->id_user > 0 && session('user')->name) : ?>
+                    <li><a href="<?= base_url('dashboard-animation'); ?>"><?= session('user')->name; ?></a></li>
+                    <?php endif; ?>
                 </ul>
+                <button class="cta-button">Download</button>
             </div>
         </div>
     </div>
 
 
 
-    <h1 class="dashboard-header title-animate">DASHBOARD</h1>
-
-
+    <div class="settings-container">
+        <h1>Settings</h1>
+        <div class="under-development">
+            <p>This section is under development.</p>
+        </div>
+        <div class="settings-info">
+            <p><strong>Name:</strong> <?= session('user')->name; ?></p>
+            <p><strong>Email:</strong> <?= session('user')->email; ?></p>
+            <p><strong>Account created at:</strong> <?= session('user')->created_at; ?></p>
+            <p><strong>Verification:</strong> <?= session('user')->verification == 1 ? 'Enabled' : 'Disabled'; ?></p>
+        </div>
+    </div>
 
     <!-- JS for Menu Toggle -->
     <script>
@@ -66,43 +76,6 @@
     })
     </script>
 
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const title = document.querySelector('.title-animate');
-        const header = document.querySelector('.dashboard-header');
-
-        const revealText = (element, finalText, speed = 100) => {
-            let chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
-            let textArray = finalText.split('');
-            let currentIndex = 0;
-
-            let interval = setInterval(() => {
-                textArray = textArray.map((char, index) => {
-                    if (index <= currentIndex) {
-                        return finalText[index];
-                    }
-                    return chars[Math.floor(Math.random() * chars.length)];
-                });
-
-                element.textContent = textArray.join('');
-
-                if (currentIndex < textArray.length) {
-                    currentIndex++;
-                } else {
-                    clearInterval(interval);
-                }
-            }, speed);
-        };
-
-        title.style.opacity = 1;
-        revealText(title, 'DASHBOARD', 85);
-
-        // Aplicar la clase activa después de que el texto haya sido revelado
-        setTimeout(() => {
-            header.classList.add('active');
-        }, 1000); // Ajusta el tiempo según sea necesario
-    });
-    </script>
 </body>
 
 </html>

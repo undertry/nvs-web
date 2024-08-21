@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?php echo base_url('complements/styles/intro.css'); ?>">
-    <title>Document</title>
+    <link rel="website icon" type="png" href="<?php echo base_url('complements/styles/images/NVS.png'); ?>">
+    <title>| Animation |</title>
 </head>
 
 <body>

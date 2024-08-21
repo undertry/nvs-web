@@ -27,12 +27,13 @@
     src        : url("./fonts/neue/NeueMontreal-Medium.otf") format("truetype");
 }
 
+
 body {
     font-family      : "nevol";
     margin           : 0;
     padding          : 0;
     box-sizing       : border-box;
-    background-image : url("./images/linnes.jpg");
+    background-image : url("./images/torre.jpg");
     background-size  : cover;
     background-repeat: no-repeat;
     color            : var(--color-white);
@@ -98,7 +99,7 @@ body {
     text-decoration: none;
 }
 
-/* Menu Section */
+/* Overlay Menu */
 #overlayNav {
     position        : fixed;
     top             : 0;
@@ -217,27 +218,41 @@ body {
     height: 65vh;
 }
 
-/* Dashboard Header */
-.dashboard-header {
-    position                 : fixed;
-    bottom                   : -60px;
-    /* Ajusta según el espacio deseado desde el borde inferior */
-    right                    : 20px;
-    /* Ajusta según el espacio deseado desde el borde derecho */
-    font-size                : 16.8em;
-    font-family              : "schabo";
-    font-weight              : lighter;
-    color                    : var(--color-main);
-    padding                  : 20px;
-    border-top-left-radius   : 20px;
-    border-bottom-left-radius: 20px;
-    margin                   : 0;
-    opacity                  : 1;
-    /* Asegúrate de que sea visible */
+/* Settings Section */
+.settings-container {
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+    padding       : 20px;
+    margin-top    : 60px;
 }
 
-/* Opcional: Para animar la entrada */
-.dashboard-header.active {
-    transform : translateY(0);
-    transition: transform 0.5s ease;
+.settings-container h1 {
+    font-size    : 2.5em;
+    font-family  : "neue";
+    margin-bottom: 20px;
+}
+
+.settings-info {
+    font-family: "neue";
+    font-size  : 1.2em;
+    text-align : center;
+}
+
+.settings-info p {
+    margin: 10px 0;
+}
+
+/* Under Development Message */
+.under-development {
+    background-color: #f0c04a;
+    /* Color amarillo */
+    color           : #333;
+    /* Texto oscuro para buen contraste */
+    padding         : 10px;
+    border-radius   : 5px;
+    margin-bottom   : 20px;
+    text-align      : center;
+    font-size       : 1.2em;
+    font-family     : "neue";
 }
