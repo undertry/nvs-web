@@ -59,20 +59,25 @@ class Register extends BaseController
         // Registrar usuario
         if ($data !== null) {
 
-                        // Configuracion y envio del email
-                        $emailc = \Config\Services::email();
-                        $emailc->setFrom('cibersafe.verify@gmail.com');
-                        $emailc->setTo($email);
-                        $emailc->setSubject('Registration Successful');
-                        $emailc->setMessage("Thank you, $name, for registering with Network Vulnerability Scan.");
-                        $emailc->send();
+            // Configuracion y envio del email
+            $emailc = \Config\Services::email();
+            $emailc->setFrom('cibersafe.verify@gmail.com');
+            $emailc->setTo($email);
+            $emailc->setSubject('Registration Successful');
+            $emailc->setMessage("Thank you, $name, for registering with Network Vulnerability Scan.");
+            $emailc->send();
 
             $userModel->register($data);
             $this->session->setFlashdata('success', 'User registered successfully! Redirecting to login...');
-            return redirect()->to('login');
+            return redirect()->to('login-animation');
         } else {
             $this->session->setFlashdata('error', 'Error during registration');
             return redirect()->back()->withInput();
         }
+    }
+
+    public function animation()
+    {
+        return view('common/user/signup-animation');
     }
 }

@@ -1,0 +1,181 @@
+/* navbar section starts here */
+
+#navbar {
+    width          : 100%;
+    position       : fixed;
+    top            : 0;
+    left           : 0;
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+    padding        : 10px 20px;
+    background     : transparent;
+    z-index        : 2000;
+    transition     : background-color 0.3s ease;
+}
+
+#navbar .menu-icon {
+    cursor  : pointer;
+    z-index : 2001;
+    position: relative;
+}
+
+#navbar .menu-icon-bar {
+    display         : block;
+    width           : 33px;
+    height          : 4px;
+    margin-bottom   : 5px;
+    background-color: #fff;
+    transition      : all 0.3s ease;
+}
+
+#navbar .menu-icon.close .menu-icon-bar:nth-child(1) {
+    transform: rotate(45deg);
+    position : absolute;
+    top      : 50%;
+    left     : 0;
+}
+
+#navbar .menu-icon.close .menu-icon-bar:nth-child(2) {
+    opacity: 0;
+}
+
+#navbar .menu-icon.close .menu-icon-bar:nth-child(3) {
+    transform: rotate(-45deg);
+    position : absolute;
+    top      : 50%;
+    left     : 0;
+}
+
+#navbar .menu-icon.close {
+    background-color: transparent;
+}
+
+.logo a {
+    font-family: "aero";
+    font-size  : 2.5em;
+    color      : var(--color-main);
+}
+
+/* navbar section ends here */
+
+/* menu section starts here */
+#overlayNav {
+    position        : fixed;
+    top             : 0;
+    left            : 0;
+    width           : 100%;
+    height          : 0;
+    background-color: var(--color-black);
+    overflow        : hidden;
+    z-index         : 1500;
+    transition      : height 0.5s ease-in-out;
+}
+
+#overlayNav .overlay-content {
+    display        : flex;
+    justify-content: space-between;
+    padding        : 20px;
+    height         : 100%;
+}
+
+#overlayNav .overlay-left,
+#overlayNav .overlay-right {
+    width: 50%;
+}
+
+#overlayNav .overlay-video img {
+    width        : 100%;
+    max-width    : 500px;
+    height       : auto;
+    margin-left  : 15rem;
+    margin-top   : 5rem;
+    border-radius: 5px;
+}
+
+#overlayNav .overlay-video .video-controls {
+    margin-top : 10px;
+    margin-left: 15rem;
+    color      : var(--color-white);
+    font-family: "neue";
+}
+
+#overlayNav .overlay-right ul {
+    list-style: none;
+    padding   : 0;
+    margin-top: 5rem;
+}
+
+#overlayNav .overlay-right ul li {
+    margin: 10px 0;
+}
+
+#overlayNav .overlay-right ul li a {
+    font-size      : 2em;
+    color          : var(--color-white);
+    text-decoration: none;
+    font-family    : "neue";
+    position       : relative;
+    transition     : text-decoration-color 0.3s ease, text-decoration-thickness 0.3s ease;
+}
+
+#overlayNav .overlay-right ul li a::after {
+    content         : '';
+    display         : block;
+    position        : absolute;
+    left            : 0;
+    bottom          : 0;
+    width           : 100%;
+    height          : 2px;
+    background-color: var(--color-white);
+    transform       : scaleX(0);
+    transform-origin: bottom right;
+    transition      : transform 0.3s ease;
+}
+
+#overlayNav .overlay-right ul li a:hover::after {
+    transform       : scaleX(1);
+    transform-origin: bottom left;
+}
+
+#overlayNav .cta-button {
+    position  : relative;
+    margin-top: 20px;
+    padding   : 10px 20px;
+    background: transparent;
+    border    : 2px solid #fff;
+    color     : #fff;
+    font-size : 1.5em;
+    cursor    : pointer;
+    overflow  : hidden;
+    transition: color 0.3s ease;
+}
+
+#overlayNav .cta-button::after {
+    content         : '';
+    display         : block;
+    position        : absolute;
+    left            : 0;
+    top             : 0;
+    width           : 100%;
+    height          : 100%;
+    background-color: var(--color-main);
+    transform       : scaleX(0);
+    transform-origin: left;
+    transition      : transform 0.3s ease;
+    z-index         : -1;
+}
+
+#overlayNav .cta-button:hover::after {
+    transform: scaleX(1);
+}
+
+#overlayNav .cta-button:hover {
+    color: #fff;
+}
+
+#overlayNav.active {
+    height: 65vh;
+}
+
+/* menu section ends here */

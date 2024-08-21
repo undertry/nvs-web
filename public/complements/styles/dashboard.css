@@ -1,166 +1,243 @@
 :root {
-    --color-main: #d60b0b;
-    --color-black: #151414;
+    --color-main     : #d60b0b;
+    --color-black    : #151414;
     --color-semiblack: #202020;
-    --color-white: #f3f2f2;
-    --color-grey: #333;
-  }
-  
-  /* fonts select */
-  @font-face {
-    font-family: "matter-medium";
-    src: url("./fonts/matter-font/Matter-Medium.ttf") format("truetype");
-  }
-  
-  @font-face {
+    --color-white    : #f3f2f2;
+    --color-grey     : #333;
+}
+
+/* fonts select */
+@font-face {
     font-family: "aero";
-    src: url("./fonts/aeroxys/Aeroxys.ttf") format("truetype");
-  }
-  
-  @font-face {
-    font-family: "nevol";
-    src: url("./fonts/nevolasty/Nevolasty-Light.otf") format("truetype");
-  }
-  
-  @font-face {
-    font-family: "arame";
-    src: url("./fonts/arame/Arame-Thin.ttf") format("truetype");
-  }
+    src        : url("./fonts/aeroxys/Aeroxys.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "schabo";
+    src        : url("./fonts/schabo/SCHABO-Condensed.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "neue";
+    src        : url("./fonts/neue/NeueMontreal-Regular.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "neue-medium";
+    src        : url("./fonts/neue/NeueMontreal-Medium.otf") format("truetype");
+}
 
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: var(--color-black);
-    color: var(--color-white);
-    font-family: "matter-medium", sans-serif;
+    font-family      : "nevol";
+    margin           : 0;
+    padding          : 0;
+    box-sizing       : border-box;
+    background-image : url("./images/linnes.jpg");
+    background-size  : cover;
+    background-repeat: no-repeat;
+    color            : var(--color-white);
+    width            : 100%;
 }
 
-.header a {
-    position: absolute;
-    top: 11px;
-    left: 20px;
-    color: var(--color-main);
-    font-size: 1.3em;
-    font-family: "aero";
-    text-decoration: none;
-  }
-  
-nav {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
+/* Navbar Section */
+#navbar {
+    width          : 98%;
+    position       : fixed;
+    top            : 0;
+    left           : 0;
+    display        : flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: var(--color-black);
-    border-bottom: 1px solid var(--color-grey);
+    align-items    : center;
+    padding        : 10px 20px;
+    background     : transparent;
+    z-index        : 2000;
+    transition     : background-color 0.3s ease;
 }
 
-.header a {
-    position: absolute;
-    top: 11px;
-    left: 20px;
-    color: var(--color-main);
-    font-size: 1.6em;
-    font-weight: 100;
-    font-family: "aero";
-    text-decoration: none;
-  }
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-nav ul li {
+#navbar .menu-icon {
+    cursor  : pointer;
+    z-index : 2001;
     position: relative;
-    margin: 0 15px;
 }
 
-nav ul li a {
+#navbar .menu-icon-bar {
+    display         : block;
+    width           : 33px;
+    height          : 4px;
+    margin-bottom   : 5px;
+    background-color: #fff;
+    transition      : all 0.3s ease;
+}
+
+#navbar .menu-icon.close .menu-icon-bar:nth-child(1) {
+    transform: rotate(45deg);
+    position : absolute;
+    top      : 50%;
+    left     : 0;
+}
+
+#navbar .menu-icon.close .menu-icon-bar:nth-child(2) {
+    opacity: 0;
+}
+
+#navbar .menu-icon.close .menu-icon-bar:nth-child(3) {
+    transform: rotate(-45deg);
+    position : absolute;
+    top      : 50%;
+    left     : 0;
+}
+
+#navbar .menu-icon.close {
+    background-color: transparent;
+}
+
+.logo a {
+    font-family    : "aero";
+    font-size      : 2.5em;
+    color          : var(--color-main);
     text-decoration: none;
-    color: var(--color-white);
-    font-family: "matter-medium";
-    font-size: 1.1em;
-    padding: 15px 20px;
-    display: block;
 }
 
-nav ul li a:hover {
-    color: var(--color-main);
+/* Menu Section */
+#overlayNav {
+    position        : fixed;
+    top             : 0;
+    left            : 0;
+    width           : 100%;
+    height          : 0;
+    background-color: var(--color-black);
+    overflow        : hidden;
+    z-index         : 1500;
+    transition      : height 0.5s ease-in-out;
 }
 
-nav ul li .dropdown {
-    display: none;
-    position: absolute;
-    top: 100%;
-    right: 15%;
-    background: linear-gradient(95deg, #333 0%, #151414 100%);
-    border: 1px solid #454545;
+#overlayNav .overlay-content {
+    display        : flex;
+    justify-content: space-between;
+    padding        : 20px;
+    height         : 100%;
+}
+
+#overlayNav .overlay-left,
+#overlayNav .overlay-right {
+    width: 50%;
+}
+
+#overlayNav .overlay-video img {
+    width        : 100%;
+    max-width    : 500px;
+    height       : auto;
+    margin-left  : 15rem;
+    margin-top   : 5rem;
     border-radius: 5px;
-    padding: 0;
-    margin: 0;
+}
+
+#overlayNav .overlay-video .video-controls {
+    margin-top : 10px;
+    margin-left: 15rem;
+    color      : var(--color-white);
+    font-family: "neue";
+}
+
+#overlayNav .overlay-right ul {
     list-style: none;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
+    padding   : 0;
+    margin-top: 5rem;
 }
 
-nav ul li .dropdown li {
-    width: 200px;
+#overlayNav .overlay-right ul li {
+    margin: 10px 0;
 }
 
-nav ul li .dropdown li a {
-    padding: 10px 10px;
-    color: var(--color-white);
+#overlayNav .overlay-right ul li a {
+    font-size      : 2em;
+    color          : var(--color-white);
+    text-decoration: none;
+    font-family    : "neue";
+    position       : relative;
+    transition     : text-decoration-color 0.3s ease, text-decoration-thickness 0.3s ease;
 }
 
-nav ul li .dropdown li a:hover {
-    background-color: #575757;
-    border-radius: 5px;
+#overlayNav .overlay-right ul li a::after {
+    content         : '';
+    display         : block;
+    position        : absolute;
+    left            : 0;
+    bottom          : 0;
+    width           : 100%;
+    height          : 2px;
+    background-color: var(--color-white);
+    transform       : scaleX(0);
+    transform-origin: bottom right;
+    transition      : transform 0.3s ease;
 }
 
-nav ul li:hover .dropdown {
-    display: block;
+#overlayNav .overlay-right ul li a:hover::after {
+    transform       : scaleX(1);
+    transform-origin: bottom left;
 }
 
-.profile-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 100px;
-    background: linear-gradient(45deg, #333 0%, #151414 100%);
-    border: 1px solid #454545;
-    padding: 20px;
-    border-radius: 10px;
-    width: 80%;
-    max-width: 600px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.profile-container h1 {
-    font-size: 2rem;
-    color: var(--color-white);
-    margin: 0;
-    font-family: "arame";
-}
-
-.profile-info {
-    font-family: "Matter-medium", Courier, monospace;
-    font-size: 1.2rem;
+#overlayNav .cta-button {
+    position  : relative;
     margin-top: 20px;
-    width: 100%;
-    white-space: pre;
-    color: var(--color-white);
+    padding   : 10px 20px;
+    background: transparent;
+    border    : 2px solid #fff;
+    color     : #fff;
+    font-size : 1.5em;
+    cursor    : pointer;
+    overflow  : hidden;
+    transition: color 0.3s ease;
 }
 
-strong {
-    color: var(--color-main); /* Color de los textos en negrita */
+#overlayNav .cta-button::after {
+    content         : '';
+    display         : block;
+    position        : absolute;
+    left            : 0;
+    top             : 0;
+    width           : 100%;
+    height          : 100%;
+    background-color: var(--color-main);
+    transform       : scaleX(0);
+    transform-origin: left;
+    transition      : transform 0.3s ease;
+    z-index         : -1;
+}
+
+#overlayNav .cta-button:hover::after {
+    transform: scaleX(1);
+}
+
+#overlayNav .cta-button:hover {
+    color: #fff;
+}
+
+#overlayNav.active {
+    height: 65vh;
+}
+
+/* Dashboard Header */
+.dashboard-header {
+    position                 : fixed;
+    bottom                   : -60px;
+    /* Ajusta según el espacio deseado desde el borde inferior */
+    right                    : 20px;
+    /* Ajusta según el espacio deseado desde el borde derecho */
+    font-size                : 16.8em;
+    font-family              : "schabo";
+    font-weight              : lighter;
+    color                    : var(--color-main);
+    padding                  : 20px;
+    border-top-left-radius   : 20px;
+    border-bottom-left-radius: 20px;
+    margin                   : 0;
+    opacity                  : 1;
+    /* Asegúrate de que sea visible */
+}
+
+/* Opcional: Para animar la entrada */
+.dashboard-header.active {
+    transform : translateY(0);
+    transition: transform 0.5s ease;
 }

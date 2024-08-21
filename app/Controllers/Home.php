@@ -7,6 +7,16 @@ class Home extends BaseController
     // Inicio de La Aplicacion Web
     public function index()
     {
+        return view('home/intro');
+    }
+
+    public function home()
+    {
         return view('home/home');
+    }
+
+    public function animation()
+    {
+        return view('common/home/animation');
     }
 }

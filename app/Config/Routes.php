@@ -8,8 +8,11 @@ use CodeIgniter\Router\RouteCollection;
 
 // Seccion controlador Home/index
 $routes->get('/', 'Home::index');
-
+$routes->get('home', 'Home::home');
+$routes->get('home-animation', 'Home::animation');
 // Seccion controlador User/Login
+
+$routes->get('login-animation', 'User\Login::animation');
 $routes->get('login', 'User\Login::index');
 $routes->POST('login', 'User\Login::do_login');
 $routes->get('logout', 'User\Login::logout');
@@ -20,6 +23,7 @@ $routes->get('verificationcode', 'User\Login::sendemailverification');
 $routes->POST('confirmcode', 'User\Login::verificationconfirm');
 
 // Seccion controlador User/Register
+$routes->get('signup-animation', 'User\Register::animation');
 $routes->get('register', 'User\Register::index');
 $routes->POST('register', 'User\Register::do_register');
 
@@ -39,8 +43,12 @@ $routes->post('sendemail', 'User\Change_Password::sendemail');
 
 // Seccion controlador User/Dashboard
 $routes->get('dashboard', 'User\Dashboard::index');
+$routes->get('dashboard-animation', 'User\Dashboard::animation');
+$routes->get('configuration', 'User\Dashboard::configuration');
 
 // vista para el historial de escaneos del usuario
 $routes->get('/history', 'User\History::history');
 
+
 $routes->get('network', 'Network::index');
+

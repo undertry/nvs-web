@@ -1,57 +1,78 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
 
 :root {
-  --color-main: #d60b0b;
-  --color-black: #151414;
+  --color-main     : #d60b0b;
+  --color-black    : #151414;
   --color-semiblack: #202020;
-  --color-white: #f3f2f2;
-  --color-grey: #333;
-}
-
-/* fonts select */
-@font-face {
-  font-family: "matter-medium";
-  src: url("./fonts/matter-font/Matter-Medium.ttf") format("truetype");
+  --color-white    : #f3f2f2;
+  --color-grey     : #333;
 }
 
 @font-face {
   font-family: "aero";
-  src: url("./fonts/aeroxys/Aeroxys.ttf") format("truetype");
+  src        : url("./fonts/aeroxys/Aeroxys.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "nevol";
-  src: url("./fonts/nevolasty/Nevolasty-Light.otf") format("truetype");
+  font-family: "schabo";
+  src        : url("./fonts/schabo/SCHABO-Condensed.otf") format("truetype");
 }
 
 @font-face {
-  font-family: "arame";
-  src: url("./fonts/arame/Arame-Thin.ttf") format("truetype");
+  font-family: "neue";
+  src        : url("./fonts/neue/NeueMontreal-Regular.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "neue-medium";
+  src        : url("./fonts/neue/NeueMontreal-Medium.otf") format("truetype");
 }
 
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+  padding    : 0;
+  margin     : 0;
+  box-sizing : border-box;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
 }
 
+
+/* cursor styles */
+.cursor {
+  pointer-events: none;
+  position      : absolute;
+  width         : 20px;
+  /* Tamaño del cursor */
+  height        : 20px;
+  /* Tamaño del cursor */
+  border-radius : 50%;
+  z-index       : 9000;
+  background    : var(--color-white);
+  transition    : width 0.3s ease, height 0.3s ease;
+  /* Transición de tamaño si es necesario */
+}
+
+
+
+
 .caps-lock-warning {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-top: 10px;
-  padding: 10px;
+  display         : none;
+  position        : absolute;
+  top             : 0;
+  left            : 50%;
+  transform       : translateX(-50%);
+  margin-top      : 10px;
+  padding         : 10px;
   background-color: #ffc107;
-  color: #000;
-  text-align: center;
-  font-size: 14px;
-  border: 1px solid #ffa000;
-  border-radius: 5px;
-  z-index: 1000;
+  color           : #000;
+  text-align      : center;
+  font-size       : 14px;
+  border          : 1px solid #ffa000;
+  border-radius   : 5px;
+  z-index         : 1000;
+  font-family     : "neue";
+  font-size       : 1.2em;
+  font-weight     : lighter;
   /* Asegura que esté por encima del formulario */
 }
 
@@ -61,204 +82,198 @@
 
 /* mensaje de alerta */
 .message {
-  position: fixed;
-  top: 0;
-  margin-top: 10px;
-  left: 43%;
-  width: 15%;
-  border-radius: 10px;
-  padding: 10px;
-  text-align: center;
-  z-index: 1000;
-  box-sizing: border-box;
+  position     : fixed;
+  top          : 0;
+  margin-top   : 10px;
+  left         : 43%;
+  width        : 15%;
+  border-radius: 5px;
+  padding      : 10px;
+  text-align   : center;
+  z-index      : 1000;
+  box-sizing   : border-box;
+  font-family  : "neue";
+  font-size    : 1.2em;
+  font-weight  : lighter;
 }
 
 .error {
   background-color: #f8d7da;
-  color: #721c24;
-  border: 1px solid #f5c6cb;
+  color           : #721c24;
+  border          : 1px solid #f5c6cb;
+
 }
 
 .success {
   background-color: #d4edda;
-  color: #155724;
-  border: 1px solid #c3e6cb;
-}
-
-.header a {
-  position: absolute;
-  top: 11px;
-  left: 20px;
-  color: var(--color-main);
-  font-size: 1.3em;
-  font-family: "aero";
-  text-decoration: none;
+  color           : #155724;
+  border          : 1px solid #c3e6cb;
 }
 
 body {
-  min-height: 100vh;
-  width: 100%;
+  min-height      : 100vh;
+  width           : 100%;
   background-color: var(--color-black);
+  display         : flex;
+  align-items     : center;
+  justify-content : center;
+  margin          : 0;
+}
+
+.login-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: nowrap;
+  width  : 100%;
+  height : 100vh;
 }
 
-.box {
-  position: relative;
-  width: 380px;
-  height: 500px;
-  /* Adjusted height to fit the form content */
+.left-section {
+  width       : 33%;
+  position    : relative;
+  border-right: 2px solid var(--color-grey);
+}
+
+.left-section img {
+  width     : 100%;
+  height    : 100%;
+  object-fit: cover;
+  display   : block;
+}
+
+.logo-nvs a {
+  position       : absolute;
+  top            : 10px;
+  left           : 10px;
+  color          : red;
+  font-size      : 2.9em;
+  font-family    : "aero";
+  z-index        : 10;
+  text-decoration: none;
+}
+
+.right-section {
+  width           : 67%;
+  display         : flex;
+  align-items     : center;
+  justify-content : center;
+  padding         : 40px;
   background-color: var(--color-black);
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.box:before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 380px;
-  height: 420px;
-  transform-origin: bottom right;
-  background-image: linear-gradient(0deg, transparent, var(--color-main), var(--color-main));
-  animation: animacion 6s linear infinite;
-}
-
-
-@keyframes animacion {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 .form {
-  position: absolute;
-  inset: 2px;
-  background: linear-gradient(45deg, #333 0%, #151414 100%);
-  border: 1px solid #454545;
-  border-radius: 10px;
-  padding: 30px;
-  display: flex;
-  justify-content: space-evenly;
+  display       : flex;
   flex-direction: column;
-  z-index: 10;
+  width         : 100%;
+  max-width     : 400px;
+  color         : var(--color-white);
 }
 
 h2 {
-  font-size: 32px;
-  font-weight: 900;
-  color: var(--color-main);
-  font-family: "arame";
-  letter-spacing: 2.5px;
-  text-align: center;
-}
-
-.form-inputs {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-
-}
-
-.form-label {
-  width: 100%;
-  height: 50px;
-  display: flex;
-
+  font-size    : 2.9em;
+  margin-bottom: 20px;
+  text-align   : center;
+  font-family  : "neue";
+  font-weight  : lighter;
 }
 
 .form-label input {
-  width: 100%;
-  height: 100%;
-  padding: 10px 30px;
-  outline: none;
-  background-color: var(--color-grey);
-  border-radius: 10px;
-  border: none;
-  color: var(--color-white);
-  font-family: "matter-medium";
-  font-size: 16px;
-  transition: .5s;
+  width        : 100%;
+  padding      : 12px;
+  margin-bottom: 20px;
+  background   : var(--color-grey);
+  border-radius: 50px;
+  border       : 1px solid #686868;
+  color        : var(--color-white);
+  font-size    : 1.2em;
+  font-family  : "neue";
+  font-weight  : lighter;
+  outline      : none;
 }
 
-.form-label input:focus {
-  border-radius: 10px;
-  background-color: var(--color-black);
-  color: var(--color-white);
+.password-container {
+  position: relative;
 }
+
+.password-container .field-icon {
+  position : absolute;
+  right    : 12px;
+  top      : 37%;
+  transform: translateY(-50%);
+  cursor   : pointer;
+  color    : #9B9A9A;
+}
+
+.password-container input {
+  padding-right: 40px;
+  /* Ajusta el padding para evitar que el texto se solape con el icono */
+}
+
+.toggle-password {
+  font-size: 1.2em;
+}
+
 
 .links {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  display        : flex;
+  justify-content: space-between;
+  color          : #9B9A9A;
+  font-family    : "neue";
+  padding-bottom : 20px;
 }
 
 .links a {
   text-decoration: none;
-  color: #9B9A9A;
-  transition: .5s;
-  font-family: "matter-medium";
+  color          : inherit;
+  transition     : 0.5s;
 }
 
-.links a:first-child:hover {
-  color: var(--color-main);
+.links a:hover {
+  text-decoration: none;
+  color          : var(--color-main);
 }
 
-.links a:nth-child(2) {
-  color: #9B9A9A;
+.submit-button {
+  position        : relative;
+  display         : inline-block;
+  padding         : 12px 24px;
+  font-size       : 1.2em;
+  font-family     : "neue";
+  font-weight     : lighter;
+  color           : var(--color-white);
+  background-color: transparent;
+  border          : 2px solid var(--color-white);
+  border-radius   : 5px;
+  cursor          : pointer;
+  overflow        : hidden;
+  transition      : color 0.4s ease, background-color 0.4s ease, transform 0.4s ease;
 }
 
-.links a:nth-child(2):hover {
-  color: var(--color-main);
+.submit-button::before {
+  content      : "";
+  position     : absolute;
+  top          : 50%;
+  left         : 50%;
+  width        : 300%;
+  height       : 300%;
+  background   : var(--color-white);
+  transition   : width 0.4s ease, height 0.4s ease, top 0.4s ease, left 0.4s ease;
+  border-radius: 50%;
+  z-index      : 0;
+  transform    : translate(-50%, -50%);
 }
 
-input[type="submit"] {
-  background-color: var(--color-black);
+.submit-button:hover::before {
+  width : 0;
+  height: 0;
+  top   : 50%;
+  left  : 50%;
+}
+
+.submit-button:hover {
   color: var(--color-white);
-  padding: 15px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: .5s;
-  border: none;
-  font-family: "matter-medium";
+
 }
 
-input[type="submit"]:hover {
-  background-color: var(--color-main);
-  color: var(--color-black);
-}
-
-.form-label {
+.submit-button span {
   position: relative;
-}
-
-.password-toggle {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 10px;
-  cursor: pointer;
-}
-
-.field-icon {
-  color: #9B9A9A;
-  /* Color del icono por defecto */
-}
-
-/* Estilos adicionales cuando el usuario interactúa con el campo */
-.field-icon:hover {
-  color: var(--color-main);
-  /* Color del icono al hacer hover */
-}
-
-.show-password .field-icon {
-  color: var(--color-main);
-  /* Color del icono cuando la contraseña es visible */
+  z-index : 1;
 }
