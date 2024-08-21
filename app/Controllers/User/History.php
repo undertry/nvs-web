@@ -14,7 +14,7 @@ class History extends BaseController
         $id_user = session('user')->id_user;
 
         if (!$id_user) {
-            // Si no hay id_user en sesión, redirigir a la página de inicio de sesión 
+            // Si no hay id_user en sesión, redirigir a la página de inicio de sesión
             return redirect()->to('/login');
         } else {
 
@@ -23,5 +23,9 @@ class History extends BaseController
 
             echo view('user/user-functions/history', $data);
         }
+    }
+    public function animation()
+    {
+        echo view('common/history/animation');
     }
 }

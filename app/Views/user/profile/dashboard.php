@@ -28,6 +28,7 @@
                 <ul>
                     <li><a href="<?= base_url('home-animation'); ?>">Home</a></li>
                     <li><a href="<?= base_url('red-animation'); ?>">Network Scan</a></li>
+                    <li><a href="<?= base_url('history-animation'); ?>">History</a></li>
                     <li><a href="<?= base_url('configuration'); ?>">Configuration</a></li>
 
                     <li><a href="<?= base_url('logout'); ?>">Log Out</a></li>

@@ -48,6 +48,12 @@
             <p><strong>Email:</strong> <?= session('user')->email; ?></p>
             <p><strong>Account created at:</strong> <?= session('user')->created_at; ?></p>
             <p><strong>Verification:</strong> <?= session('user')->verification == 1 ? 'Enabled' : 'Disabled'; ?></p>
+            <button>
+                <a href="<?= base_url('verification'); ?>">2 steps verification</a>
+            </button>
+            <button>
+                <a href="<?= base_url('change_password'); ?>">Change password</a>
+            </button>
         </div>
     </div>
 
