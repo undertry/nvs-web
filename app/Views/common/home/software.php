@@ -11,10 +11,10 @@
                 <p>It is a software designed to analyze available WiFi networks. Upon selecting a specific network,
                     the software can perform the following functions:</p>
                 <ul>
-                    <li>• Scan the network to detect <span>connected devices.</span></li>
-                    <li>• Identify the <span>operating system</span> of each device.</li>
-                    <li>• Assess the <span>vulnerabilities</span> of connected devices, if possible.</li>
-                    <li>• Use a <span>Raspberry Pi</span> for data collection.</li>
+                    <li>Scan the network to detect <span>connected devices.</span></li>
+                    <li>Identify the <span>operating system</span> of each device.</li>
+                    <li>Assess the <span>vulnerabilities</span> of connected devices, if possible.</li>
+                    <li>Use a <span>Raspberry Pi</span> for data collection.</li>
                 </ul>
             </div>
         </div>
