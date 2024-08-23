@@ -21,6 +21,18 @@
     src: url("./fonts/neue/NeueMontreal-Regular.otf") format("truetype");
 }
 
+/* cursor styles */
+.cursor {
+    pointer-events: none;
+    position      : absolute;
+    padding       : 0.5vw;
+    border-radius : 50%;
+    z-index       : 9000;
+    transition    : transform 0.1s ease, width 0.3s ease, height 0.3s ease;
+    background    : var(--color-white);
+  }
+
+
 body {
     margin: 0;
     overflow: hidden;
