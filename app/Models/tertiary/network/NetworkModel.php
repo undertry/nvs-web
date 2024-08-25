@@ -8,7 +8,7 @@ class NetworkModel extends Model
 {
     protected $table = 'network';
     protected $primaryKey = 'id_network';
-    protected $allowedFields = ['signal', 'essid', 'bssid','channel','encryption'];
+    protected $allowedFields = ['signal', 'essid', 'bssid','channel','id_security_type'];
 
 
 
