@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Controllers\tertiary\network;
+namespace App\Controllers\secondary\network;
 
 use CodeIgniter\HTTP\CURLRequest;
 
-use App\Models\tertiary\RedModel;
+use App\Models\tertiary\network\RedModel;
 
 class Red extends BaseController
 {
@@ -37,6 +37,6 @@ class Red extends BaseController
 
 public function animation()
     {
-        return view('animations/network/animation');
+        return view('animations/home/animation');
     }
 }

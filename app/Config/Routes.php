@@ -35,11 +35,11 @@ $routes->POST('password_change', 'secondary\profile\Dashboard::password_change')
 $routes->get('verification', 'secondary\profile\Dashboard::verification');
 
 //gets para las vistas de se olvido la contraseña y post para el envio de datos al controlador
-$routes->get('forgot_password', 'secondary\user-functions\Change_Password::forgot_password');
-$routes->get('change_forgot', 'secondary\user-functions\Change_Password::change_forgot');
-$routes->POST('password_change_forgot', 'secondary\user-functions\Change_Password::password_change_forgot');
+$routes->get('forgot_password', 'secondary\user_functions\Change_Password::forgot_password');
+$routes->get('change_forgot', 'secondary\user_functions\Change_Password::change_forgot');
+$routes->POST('password_change_forgot', 'secondary\user_functions\Change_Password::password_change_forgot');
 //envio de codigo mediante email
-$routes->post('sendemail', 'secondary\user-functions\Change_Password::sendemail');
+$routes->post('sendemail', 'secondary\user_functions\Change_Password::sendemail');
 
 // Seccion controlador User/Dashboard
 $routes->get('dashboard', 'secondary\profile\Dashboard::index');
@@ -52,4 +52,4 @@ $routes->get('history-animation', 'secondary\profile\History::animation');
 
 $routes->get('red', 'tertiary\network\Red::index');
 
-$routes->get('red-animation', 'tertiary\network\Red::animation');
+$routes->get('red-animation', 'secondary\form\Red::animation');

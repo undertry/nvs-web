@@ -9,22 +9,22 @@
 /* fonts select */
 @font-face {
     font-family: "aero";
-    src        : url("./fonts/aeroxys/Aeroxys.ttf") format("truetype");
+    src        : url("../../fonts/aeroxys/Aeroxys.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "schabo";
-    src        : url("./fonts/schabo/SCHABO-Condensed.otf") format("truetype");
+    src        : url("../../fonts/schabo/SCHABO-Condensed.otf") format("truetype");
 }
 
 @font-face {
     font-family: "neue";
-    src        : url("./fonts/neue/NeueMontreal-Regular.otf") format("truetype");
+    src        : url("../../fonts/neue/NeueMontreal-Regular.otf") format("truetype");
 }
 
 @font-face {
     font-family: "neue-medium";
-    src        : url("./fonts/neue/NeueMontreal-Medium.otf") format("truetype");
+    src        : url("../../fonts/neue/NeueMontreal-Medium.otf") format("truetype");
 }
 
 
@@ -33,7 +33,7 @@ body {
     margin           : 0;
     padding          : 0;
     box-sizing       : border-box;
-    background-image : url("./images/torre.jpg");
+    background-image : url("../../images/torre.jpg");
     background-size  : cover;
     background-repeat: no-repeat;
     color            : var(--color-white);
