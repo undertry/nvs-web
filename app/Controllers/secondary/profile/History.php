@@ -21,11 +21,11 @@ class History extends BaseController
             $scanModel = new ScanModel();
             $data['scanDetails'] = $scanModel->getScanDetailsByUser($id_user);
 
-            echo view('secondary/user-functions/history', $data);
+            return view('secondary/user-functions/history', $data);
         }
     }
     public function animation()
     {
-        echo view('animations/history/animation');
+        return view('animations/history/animation');
     }
 }

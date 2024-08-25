@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Redes WiFi Disponibles</title>
+    <title>Available WiFi Networks</title>
 
-    <link rel="stylesheet" href="<?php echo base_url('complements/styles/tertiary/red.css'); ?>">
+    <link rel="stylesheet" href="<?php echo base_url('complements/styles/tertiary/network.css'); ?>">
 </head>
 
 <body>
@@ -47,22 +47,22 @@
 
 
     <div class="container">
-        <h1>Redes WiFi Disponibles</h1>
+        <h1>Available WiFi NetworksR</h1>
         <?php if (!empty($networks)): ?>
         <ul>
             <?php foreach ($networks as $network): ?>
             <li>
                 <strong>ESSID:</strong> <?= esc($network['essid']) ?><br>
                 <strong>BSSID:</strong> <?= esc($network['bssid']) ?><br>
-                <strong>Señal:</strong> <?= esc($network['signal']) ?><br>
-                <strong>Canal:</strong> <?= esc($network['channel']) ?><br>
-                <strong>Encriptación:</strong> <?= esc($network['encryption']) ?><br>
+                <strong>Signal:</strong> <?= esc($network['signal']) ?><br>
+                <strong>Channel:</strong> <?= esc($network['channel']) ?><br>
+                <strong>Encryption:</strong> <?= esc($network['encryption']) ?><br>
                 <hr>
             </li>
             <?php endforeach; ?>
         </ul>
         <?php else: ?>
-        <p>No se encontraron redes WiFi.</p>
+        <p>No WiFi networks found.</p>
         <?php endif; ?>
     </div>
     <script>

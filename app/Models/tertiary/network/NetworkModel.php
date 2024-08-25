@@ -4,15 +4,15 @@ namespace App\Models\tertiary\network;
 
 use CodeIgniter\Model;
 
-class RedModel extends Model
+class NetworkModel extends Model
 {
-    protected $table = 'red';
-    protected $primaryKey = 'id_red';
+    protected $table = 'network';
+    protected $primaryKey = 'id_network';
     protected $allowedFields = ['signal', 'essid', 'bssid','channel','encryption'];
 
 
 
-    public function red($networks)
+    public function network($networks)
     {
         if (isset($networks[0]) && is_array($networks[0])) {
             // Si es un array de arrays (múltiples redes)

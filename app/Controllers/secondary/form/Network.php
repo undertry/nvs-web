@@ -4,13 +4,16 @@ namespace App\Controllers\secondary\network;
 
 use CodeIgniter\HTTP\CURLRequest;
 
-use App\Models\tertiary\network\RedModel;
+use App\Models\tertiary\network\NetworkModel;
 
-class Red extends BaseController
+class Network extends BaseController
 {
     public function index()
     {
         $client = \Config\Services::curlrequest();
+
+        $NetworkModel = new NetworkModel();
+
 
         try {
             $response = $client->get('http://192.168.0.164:5000/scan');
@@ -21,7 +24,7 @@ class Red extends BaseController
                 log_message('info', 'Datos recibidos: ' . print_r($networks, true));
 
                 // Descomenta la siguiente línea para desactivar la inserción en la base de datos temporalmente
-                // $redModel->red($networks);
+                // $NetworkModel->network($networks);
 
             } else {
                 log_message('error', 'Error en la respuesta de la API: ' . $response->getStatusCode());
@@ -32,7 +35,7 @@ class Red extends BaseController
             $networks = [];
         }
 
-        return view('tertiary/network/red', ['networks' => $networks]);
+        return view('tertiary/network/network', ['networks' => $networks]);
     }
 
 public function animation()
