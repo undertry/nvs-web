@@ -1,4 +1,4 @@
-<?= $this->include('common/dashboard/start.php'); ?>
+<?= $this->include('modules/dashboard/start.php'); ?>
 <title>Dashboard</title>
 </head>
 

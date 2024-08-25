@@ -1,4 +1,4 @@
-<?= $this->include('common/history/start.php'); ?>
+<?= $this->include('modules/history/start.php'); ?>
 <title>Detalles del Scan</title>
 </head>
 
@@ -79,4 +79,4 @@
             <?php endif; ?>
         </div>
     </div>
-    <?= $this->include('common/history/end.php'); ?>
+    <?= $this->include('modules/history/end.php'); ?>

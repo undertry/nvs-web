@@ -11,22 +11,22 @@
 /* fonts select */
 @font-face {
   font-family: "matter-medium";
-  src: url("./fonts/matter-font/Matter-Medium.ttf") format("truetype");
+  src: url("../../fonts/matter-font/Matter-Medium.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "aero";
-  src: url("./fonts/aeroxys/Aeroxys.ttf") format("truetype");
+  src: url("../../fonts/aeroxys/Aeroxys.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "nevol";
-  src: url("./fonts/nevolasty/Nevolasty-Light.otf") format("truetype");
+  src: url("../../fonts/nevolasty/Nevolasty-Light.otf") format("truetype");
 }
 
 @font-face {
   font-family: "arame";
-  src: url("./fonts/arame/Arame-Thin.ttf") format("truetype");
+  src: url("../../fonts/arame/Arame-Thin.ttf") format("truetype");
 }
 
 body {
@@ -95,7 +95,7 @@ body {
 }
 
 h1 {
-    color: var(--color-white); 
+    color: var(--color-white);
     font-family: "arame";/* Color del título */
 }
 

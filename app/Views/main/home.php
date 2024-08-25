@@ -1,11 +1,11 @@
 <!-- modules section starts here -->
-<?= $this->include('common/home/start.php'); ?>
-<?= $this->include('common/home/navbar.php'); ?>
-<?= $this->include('common/home/home.php'); ?>
-<?= $this->include('common/home/software.php'); ?>
-<?= $this->include('common/home/features.php'); ?>
-<?= $this->include('common/home/about.php'); ?>
-<?= $this->include('common/home/faq.php'); ?>
-<?= $this->include('common/home/footer.php'); ?>
-<?= $this->include('common/home/end.php'); ?>
+<?= $this->include('modules/home/start.php'); ?>
+<?= $this->include('modules/home/navbar.php'); ?>
+<?= $this->include('modules/home/home.php'); ?>
+<?= $this->include('modules/home/software.php'); ?>
+<?= $this->include('modules/home/features.php'); ?>
+<?= $this->include('modules/home/about.php'); ?>
+<?= $this->include('modules/home/faq.php'); ?>
+<?= $this->include('modules/home/footer.php'); ?>
+<?= $this->include('modules/home/end.php'); ?>
 <!-- modules section ends here -->

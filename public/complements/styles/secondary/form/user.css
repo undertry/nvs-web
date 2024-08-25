@@ -10,22 +10,22 @@
 
 @font-face {
   font-family: "aero";
-  src        : url("./fonts/aeroxys/Aeroxys.ttf") format("truetype");
+  src        : url("../../fonts/aeroxys/Aeroxys.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "schabo";
-  src        : url("./fonts/schabo/SCHABO-Condensed.otf") format("truetype");
+  src        : url("../../fonts/schabo/SCHABO-Condensed.otf") format("truetype");
 }
 
 @font-face {
   font-family: "neue";
-  src        : url("./fonts/neue/NeueMontreal-Regular.otf") format("truetype");
+  src        : url("../../fonts/neue/NeueMontreal-Regular.otf") format("truetype");
 }
 
 @font-face {
   font-family: "neue-medium";
-  src        : url("./fonts/neue/NeueMontreal-Medium.otf") format("truetype");
+  src        : url("../../fonts/neue/NeueMontreal-Medium.otf") format("truetype");
 }
 
 * {

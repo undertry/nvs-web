@@ -1,10 +1,10 @@
 <?php
 // Se cambia user dependiendo en que carpeta este situado los controladores
-namespace App\Controllers\User;
+namespace App\Controllers\secondary\profile;
 
-use App\Controllers\BaseController;
+use App\Controllers\main\BaseController;
 
-use \App\Models\UserModel;
+use \App\Models\secondary\form\UserModel;
 
 
 // El nombre de la clase tiene que coincidir con el nomnbre del controlador
@@ -20,7 +20,7 @@ class Dashboard extends BaseController
             return redirect()->to('login');
         } else {
             // Cargar la vista del panel de control si el usuario está autenticado
-            return view('user/profile/dashboard.php');
+            return view('secondary/profile/dashboard.php');
         }
     }
 
@@ -31,9 +31,9 @@ class Dashboard extends BaseController
             $user = session('user');
             if (!$user) {
                 // Redirigir a la página de inicio de sesión si el usuario no está autenticado
-                return view('user/form/login');
+                return view('secondary/form/login');
             } else {
-                return view("user/user-functions/change_password");
+                return view("secondary/user-functions/change_password");
             }
         }
     }
@@ -109,12 +109,12 @@ class Dashboard extends BaseController
 
     public function animation()
     {
-        return view('common/dashboard/animation');
+        return view('animations/dashboard/animation');
     }
 
     public function configuration()
     {
-        return view('user/profile/configuration');
+        return view('secondary/profile/configuration');
     }
 
 }

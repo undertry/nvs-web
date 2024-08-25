@@ -1,4 +1,4 @@
-<?= $this->include('common/dashboard/configuration.php'); ?>
+<?= $this->include('modules/dashboard/configuration.php'); ?>
 <title>Settings</title>
 </head>
 

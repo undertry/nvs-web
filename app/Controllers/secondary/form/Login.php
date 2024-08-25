@@ -1,11 +1,11 @@
 <?php
 // Se cambia user dependiendo en que carpeta este situado los controladores
-namespace App\Controllers\User;
+namespace App\Controllers\secondary\form;
 
-use App\Controllers\BaseController;
+use App\Controllers\main\BaseController;
 
-use \App\Models\UserModel;
-use \App\Models\CodeModel;
+use \App\Models\secondary\form\UserModel;
+use \App\Models\secondary\form\CodeModel;
 
 // use App\Models\UserModel;
 
@@ -19,7 +19,7 @@ class Login extends BaseController
 
         if (!$user || $user->id_user < 1) {
             // Redirigir a la página de inicio de sesión si el usuario no está autenticado
-            return view('user/form/login');
+            return view('secondary/form/login');
         } else {
             return redirect()->back();
         }
@@ -127,7 +127,7 @@ class Login extends BaseController
     }
     public function verify()
     {
-        return view('user/form/2stepverify');
+        return view('secondary/user-functions/2stepverify');
     }
 
     public function verificationconfirm()
@@ -166,6 +166,6 @@ class Login extends BaseController
 
     public function animation()
     {
-        return view('common/user/login-animation');
+        return view('animations/user/login-animation');
     }
 }

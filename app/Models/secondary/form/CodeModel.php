@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\secondary\form;
 
 use CodeIgniter\Model;
 
@@ -59,4 +59,3 @@ public function deleteByCode($code)
         ->delete();
 }
 }
-

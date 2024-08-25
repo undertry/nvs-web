@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Controllers;
+namespace App\Controllers\tertiary\network;
 
 use CodeIgniter\HTTP\CURLRequest;
 
-use App\Models\RedModel;
+use App\Models\tertiary\RedModel;
 
 class Red extends BaseController
 {
@@ -32,11 +32,11 @@ class Red extends BaseController
             $networks = [];
         }
 
-        return view('red', ['networks' => $networks]);
+        return view('tertiary/network/red', ['networks' => $networks]);
     }
 
 public function animation()
     {
-        return view('common/network/animation');
+        return view('animations/network/animation');
     }
 }

@@ -1,12 +1,12 @@
 <?php
 // Se cambia user dependiendo en que carpeta este situado los controladores
-namespace App\Controllers\User;
+namespace App\Controllers\secondary\user_functions;
 
-use App\Controllers\BaseController;
+use App\Controllers\main\BaseController;
 
-use App\Models\UserModel;
+use App\Models\secondary\form\UserModel;
 
-use App\Models\CodeModel;
+use App\Models\secondary\form\CodeModel;
 
 // El nombre de la clase tiene que coincidir con el nomnbre del controlador
 class Change_Password extends BaseController
@@ -18,18 +18,18 @@ class Change_Password extends BaseController
 
         if ($user && $user->id_user > 0) {
 
-            return view("user/profile/dashboard");
+            return view("secondary/profile/dashboard");
         } else {
-            return view('user/user-functions/forgot_password');
+            return view('secondary/user-functions/forgot_password');
         }
     }
     public function change_forgot()
     {
         $user = session('user');
         if (!$user) {
-            return view('user/user-functions/forgot_change');
+            return view('secondary/user-functions/forgot_change');
         } else {
-            return view("user/profile/dashboard");
+            return view("secondary/profile/dashboard");
         }
     }
 

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Redes WiFi Disponibles</title>
 
-    <link rel="stylesheet" href="<?php echo base_url('complements/styles/red.css'); ?>">
+    <link rel="stylesheet" href="<?php echo base_url('complements/styles/tertiary/red.css'); ?>">
 </head>
 
 <body>

@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Controllers\User;
+namespace App\Controllers\secondary\profile;
 
-use App\Controllers\BaseController;
+use App\Controllers\main\BaseController;
 
-use App\Models\ScanModel;
+use App\Models\secondary\form\ScanModel;
 
 class History extends BaseController
 {
@@ -21,11 +21,11 @@ class History extends BaseController
             $scanModel = new ScanModel();
             $data['scanDetails'] = $scanModel->getScanDetailsByUser($id_user);
 
-            echo view('user/user-functions/history', $data);
+            echo view('secondary/user-functions/history', $data);
         }
     }
     public function animation()
     {
-        echo view('common/history/animation');
+        echo view('animations/history/animation');
     }
 }

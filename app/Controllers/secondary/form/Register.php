@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Controllers\User;
+namespace App\Controllers\secondary\form;
 
 
-use App\Controllers\BaseController;
+use App\Controllers\main\BaseController;
 
-use \App\Models\UserModel;
+use \App\Models\secondary\form\UserModel;
 
 class Register extends BaseController
 {
@@ -16,7 +16,7 @@ class Register extends BaseController
 
         if (!$user || $user->id_user < 1) {
             // Redirigir a la página de inicio de sesión si el usuario no está autenticado
-            return view('user/form/register');
+            return view('secondary/form/register');
         } else {
             return redirect()->back();
         }
@@ -78,6 +78,6 @@ class Register extends BaseController
 
     public function animation()
     {
-        return view('common/user/signup-animation');
+        return view('animations/user/signup-animation');
     }
 }
