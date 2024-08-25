@@ -6,6 +6,9 @@ use CodeIgniter\HTTP\CURLRequest;
 
 use App\Models\tertiary\network\NetworkModel;
 
+use App\Models\secondary\form\SecurityModel;
+
+
 class Network extends BaseController
 {
     public function index()
@@ -13,31 +16,47 @@ class Network extends BaseController
         $client = \Config\Services::curlrequest();
 
         $NetworkModel = new NetworkModel();
-
+        $SecurityModel = new SecurityModel();
 
         try {
             $response = $client->get('http://192.168.0.164:5000/scan');
             log_message('info', 'Solicitud realizada a la API.');
 
             if ($response->getStatusCode() == 200) {
-                $networks = json_decode($response->getBody(), true);
-                log_message('info', 'Datos recibidos: ' . print_r($networks, true));
+                $network = json_decode($response->getBody(), true);
+                log_message('info', 'Datos recibidos: ' . print_r($network, true));
+
+                // Obtener el valor de 'encryption' y buscar la id correspondiente
+                $encryption = $network['encryption'] ?? null;
+
+                if ($encryption) {
+                    $securityData = $SecurityModel->IdSecurityType($encryption);
+
+                    if ($securityData) {
+                        // Cambiar 'encryption' por 'id_security_type'
+                        $network['id_security_type'] = $securityData['id_security_type'];
+                        unset($network['encryption']);
+                    } else {
+                        log_message('error', 'Tipo de cifrado no encontrado en la base de datos: ' . $encryption);
+                    }
+                }
+
+                log_message('info', 'Datos procesados: ' . print_r($network, true));
 
                 // Descomenta la siguiente línea para desactivar la inserción en la base de datos temporalmente
-                // $NetworkModel->network($networks);
+                // $NetworkModel->network($network);
 
             } else {
                 log_message('error', 'Error en la respuesta de la API: ' . $response->getStatusCode());
-                $networks = [];
+                $network = [];
             }
         } catch (\Exception $e) {
             log_message('error', 'Excepción capturada al intentar conectarse a la API: ' . $e->getMessage());
-            $networks = [];
+            $network = [];
         }
 
-        return view('tertiary/network/network', ['networks' => $networks]);
+        return view('tertiary/network/network', ['network' => $network]);
     }
-
 public function animation()
     {
         return view('animations/home/animation');
