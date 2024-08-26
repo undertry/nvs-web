@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models\secondary\form;
+namespace App\Models\tertiary\network;
 
 use CodeIgniter\Model;
 
