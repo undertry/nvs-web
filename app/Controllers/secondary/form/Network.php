@@ -59,6 +59,6 @@ class Network extends BaseController
     }
 public function animation()
     {
-        return view('animations/home/animation');
+        return view('animations/network/animation');
     }
 }

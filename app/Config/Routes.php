@@ -52,4 +52,4 @@ $routes->get('history-animation', 'secondary\profile\History::animation');
 
 $routes->get('network', 'secondary\form\Network::index');
 
-$routes->get('network-animation', 'secondary\form\network::animation');
+$routes->get('network-animation', 'secondary\form\Network::animation');

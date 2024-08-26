@@ -6238,3 +6238,124 @@ INFO - 2024-08-26 00:30:13 --> Datos procesados: Array
 
 )
 
+INFO - 2024-08-26 00:31:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-26 00:31:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-26 00:31:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-26 00:31:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-26 00:31:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-26 00:31:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-26 00:31:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-26 00:31:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-26 00:31:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-26 00:32:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-26 00:32:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-26 00:33:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-26 00:33:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-26 00:33:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-26 00:33:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-26 00:33:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-26 00:33:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-26 00:33:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-26 00:33:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-26 00:33:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-26 00:33:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-26 00:33:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-26 00:33:54 --> Solicitud realizada a la API.
+INFO - 2024-08-26 00:33:54 --> Datos recibidos: Array
+(
+    [0] => Array
+        (
+            [bssid] => 78:45:61:DA:B9:C0
+            [channel] => 11
+            [encryption] => WPA2
+            [essid] => Fibertel Comba 2.4GHz
+            [signal] => -40
+        )
+
+    [1] => Array
+        (
+            [bssid] => 34:12:98:AB:CD:12
+            [channel] => 6
+            [encryption] => WPA2
+            [essid] => Home Network
+            [signal] => -50
+        )
+
+    [2] => Array
+        (
+            [bssid] => 56:EF:12:34:78:90
+            [channel] => 1
+            [encryption] => WPA
+            [essid] => Guest_WiFi
+            [signal] => -60
+        )
+
+    [3] => Array
+        (
+            [bssid] => 12:34:56:78:90:AB
+            [channel] => 36
+            [encryption] => WPA2
+            [essid] => Office_WLAN
+            [signal] => -30
+        )
+
+    [4] => Array
+        (
+            [bssid] => 98:76:54:32:10:FF
+            [channel] => 44
+            [encryption] => Open
+            [essid] => Public_Hotspot
+            [signal] => -70
+        )
+
+)
+
+INFO - 2024-08-26 00:33:54 --> Datos procesados: Array
+(
+    [0] => Array
+        (
+            [bssid] => 78:45:61:DA:B9:C0
+            [channel] => 11
+            [encryption] => WPA2
+            [essid] => Fibertel Comba 2.4GHz
+            [signal] => -40
+        )
+
+    [1] => Array
+        (
+            [bssid] => 34:12:98:AB:CD:12
+            [channel] => 6
+            [encryption] => WPA2
+            [essid] => Home Network
+            [signal] => -50
+        )
+
+    [2] => Array
+        (
+            [bssid] => 56:EF:12:34:78:90
+            [channel] => 1
+            [encryption] => WPA
+            [essid] => Guest_WiFi
+            [signal] => -60
+        )
+
+    [3] => Array
+        (
+            [bssid] => 12:34:56:78:90:AB
+            [channel] => 36
+            [encryption] => WPA2
+            [essid] => Office_WLAN
+            [signal] => -30
+        )
+
+    [4] => Array
+        (
+            [bssid] => 98:76:54:32:10:FF
+            [channel] => 44
+            [encryption] => Open
+            [essid] => Public_Hotspot
+            [signal] => -70
+        )
+
+)
+

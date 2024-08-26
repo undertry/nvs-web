@@ -27,7 +27,7 @@
             <div class="overlay-right">
                 <ul>
                     <li><a href="<?= base_url('home-animation'); ?>">Home</a></li>
-                    <li><a href="<?= base_url('network'); ?>">Network Scan</a></li>
+                    <li><a href="<?= base_url('network-animation'); ?>">Network Scan</a></li>
                     <li><a href="<?= base_url('history-animation'); ?>">History</a></li>
                     <li><a href="<?= base_url('configuration'); ?>">Configuration</a></li>
 
