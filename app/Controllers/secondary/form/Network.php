@@ -7,7 +7,7 @@ use CodeIgniter\HTTP\CURLRequest;
 use App\Controllers\main\BaseController; // Asegúrate de importar la clase correcta , hay que importar el BseController de main
 use App\Models\tertiary\network\NetworkModel;
 
-use App\Models\secondary\form\SecurityModel;
+use App\Models\tertiary\network\SecurityModel;
 
 
 class Network extends BaseController
