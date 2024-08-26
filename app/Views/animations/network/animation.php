@@ -39,7 +39,7 @@
                     from: "random"
                 },
                 onComplete: () => {
-                    window.location.href = "<?php echo site_url('red'); ?>";
+                    window.location.href = "<?php echo site_url('network'); ?>";
                 }
             });
         }

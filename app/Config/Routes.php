@@ -50,6 +50,6 @@ $routes->get('configuration', 'secondary\profile\Dashboard::configuration');
 $routes->get('/history', 'secondary\profile\History::history');
 $routes->get('history-animation', 'secondary\profile\History::animation');
 
-$routes->get('network', 'tertiary\network\network::index');
+$routes->get('network', 'secondary\form\Network::index');
 
 $routes->get('network-animation', 'secondary\form\network::animation');

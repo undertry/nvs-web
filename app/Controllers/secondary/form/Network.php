@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Controllers\secondary\network;
+namespace App\Controllers\secondary\form;
 
 use CodeIgniter\HTTP\CURLRequest;
 
+use App\Controllers\main\BaseController; // Asegúrate de importar la clase correcta , hay que importar el BseController de main
 use App\Models\tertiary\network\NetworkModel;
 
 use App\Models\secondary\form\SecurityModel;
@@ -43,8 +44,7 @@ class Network extends BaseController
 
                 log_message('info', 'Datos procesados: ' . print_r($network, true));
 
-                // Descomenta la siguiente línea para desactivar la inserción en la base de datos temporalmente
-                // $NetworkModel->network($network);
+                $NetworkModel->network($network);
 
             } else {
                 log_message('error', 'Error en la respuesta de la API: ' . $response->getStatusCode());
