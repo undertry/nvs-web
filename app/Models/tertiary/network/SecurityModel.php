@@ -12,6 +12,8 @@ class SecurityModel extends Model
 
     public function IdSecurityType($encryption)
     {
-        return $this->where('type', $encryption)->first();
+        return $this->select("id_security_type")
+                    ->where('type', $encryption)
+                    ->first();
     }
 }
