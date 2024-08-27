@@ -2546,3 +2546,203 @@ WARNING - 2024-08-27 15:51:10 --> [DEPRECATED] Creation of dynamic property App\
  4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-08-27 21:57:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-27 21:57:31 --> Solicitud realizada a la API.
+INFO - 2024-08-27 21:57:31 --> Datos recibidos: Array
+(
+    [0] => Array
+        (
+            [bssid] => 78:45:61:DA:B9:C0
+            [channel] => 11
+            [encryption] => WPA2
+            [essid] => Fibertel Comba 2.4GHz
+            [signal] => -40
+        )
+
+    [1] => Array
+        (
+            [bssid] => 34:12:98:AB:CD:12
+            [channel] => 6
+            [encryption] => WPA2
+            [essid] => Home Network
+            [signal] => -50
+        )
+
+    [2] => Array
+        (
+            [bssid] => 56:EF:12:34:78:90
+            [channel] => 1
+            [encryption] => WPA
+            [essid] => Guest_WiFi
+            [signal] => -60
+        )
+
+    [3] => Array
+        (
+            [bssid] => 12:34:56:78:90:AB
+            [channel] => 36
+            [encryption] => WPA2
+            [essid] => Office_WLAN
+            [signal] => -30
+        )
+
+    [4] => Array
+        (
+            [bssid] => 98:76:54:32:10:FF
+            [channel] => 44
+            [encryption] => Open
+            [essid] => Public_Hotspot
+            [signal] => -70
+        )
+
+)
+
+INFO - 2024-08-27 21:57:31 --> Datos procesados: Array
+(
+    [0] => Array
+        (
+            [bssid] => 78:45:61:DA:B9:C0
+            [channel] => 11
+            [encryption] => WPA2
+            [essid] => Fibertel Comba 2.4GHz
+            [signal] => -40
+        )
+
+    [1] => Array
+        (
+            [bssid] => 34:12:98:AB:CD:12
+            [channel] => 6
+            [encryption] => WPA2
+            [essid] => Home Network
+            [signal] => -50
+        )
+
+    [2] => Array
+        (
+            [bssid] => 56:EF:12:34:78:90
+            [channel] => 1
+            [encryption] => WPA
+            [essid] => Guest_WiFi
+            [signal] => -60
+        )
+
+    [3] => Array
+        (
+            [bssid] => 12:34:56:78:90:AB
+            [channel] => 36
+            [encryption] => WPA2
+            [essid] => Office_WLAN
+            [signal] => -30
+        )
+
+    [4] => Array
+        (
+            [bssid] => 98:76:54:32:10:FF
+            [channel] => 44
+            [encryption] => Open
+            [essid] => Public_Hotspot
+            [signal] => -70
+        )
+
+)
+
+INFO - 2024-08-27 22:00:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-08-27 22:00:19 --> Solicitud realizada a la API.
+INFO - 2024-08-27 22:00:19 --> Datos recibidos: Array
+(
+    [0] => Array
+        (
+            [bssid] => 78:45:61:DA:B9:C0
+            [channel] => 11
+            [encryption] => WPA2
+            [essid] => Fibertel Comba 2.4GHz
+            [signal] => -40
+        )
+
+    [1] => Array
+        (
+            [bssid] => 34:12:98:AB:CD:12
+            [channel] => 6
+            [encryption] => WPA2
+            [essid] => Home Network
+            [signal] => -50
+        )
+
+    [2] => Array
+        (
+            [bssid] => 56:EF:12:34:78:90
+            [channel] => 1
+            [encryption] => WPA
+            [essid] => Guest_WiFi
+            [signal] => -60
+        )
+
+    [3] => Array
+        (
+            [bssid] => 12:34:56:78:90:AB
+            [channel] => 36
+            [encryption] => WPA2
+            [essid] => Office_WLAN
+            [signal] => -30
+        )
+
+    [4] => Array
+        (
+            [bssid] => 98:76:54:32:10:FF
+            [channel] => 44
+            [encryption] => Open
+            [essid] => Public_Hotspot
+            [signal] => -70
+        )
+
+)
+
+INFO - 2024-08-27 22:00:19 --> Datos procesados: Array
+(
+    [0] => Array
+        (
+            [bssid] => 78:45:61:DA:B9:C0
+            [channel] => 11
+            [encryption] => WPA2
+            [essid] => Fibertel Comba 2.4GHz
+            [signal] => -40
+        )
+
+    [1] => Array
+        (
+            [bssid] => 34:12:98:AB:CD:12
+            [channel] => 6
+            [encryption] => WPA2
+            [essid] => Home Network
+            [signal] => -50
+        )
+
+    [2] => Array
+        (
+            [bssid] => 56:EF:12:34:78:90
+            [channel] => 1
+            [encryption] => WPA
+            [essid] => Guest_WiFi
+            [signal] => -60
+        )
+
+    [3] => Array
+        (
+            [bssid] => 12:34:56:78:90:AB
+            [channel] => 36
+            [encryption] => WPA2
+            [essid] => Office_WLAN
+            [signal] => -30
+        )
+
+    [4] => Array
+        (
+            [bssid] => 98:76:54:32:10:FF
+            [channel] => 44
+            [encryption] => Open
+            [essid] => Public_Hotspot
+            [signal] => -70
+        )
+
+)
+

@@ -27,21 +27,6 @@ class Network extends BaseController
                 $network = json_decode($response->getBody(), true);
                 log_message('info', 'Datos recibidos: ' . print_r($network, true));
 
-                // Obtener el valor de 'encryption' y buscar la id correspondiente
-                $encryption = $network['encryption'] ?? null;
-
-                if ($encryption) {
-                    $securityData = $SecurityModel->IdSecurityType($encryption);
-
-                    if ($securityData) {
-                        // Cambiar 'encryption' por 'id_security_type'
-                        $network['id_security_type'] = $securityData['id_security_type'];
-                        unset($network['encryption']);
-                    } else {
-                        log_message('error', 'Tipo de cifrado no encontrado en la base de datos: ' . $encryption);
-                    }
-                }
-
                 log_message('info', 'Datos procesados: ' . print_r($network, true));
 
                 $NetworkModel->network($network);
