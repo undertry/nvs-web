@@ -12,15 +12,15 @@
 
     <!-- Mensaje de sesiones -->
     <?php if (session()->getFlashdata('error')) : ?>
-    <div class="message error"><?= session()->getFlashdata('error'); ?></div>
+        <div class="message error"><?= session()->getFlashdata('error'); ?></div>
     <?php endif; ?>
     <?php if (session()->getFlashdata('success')) : ?>
-    <div class="message success"><?= session()->getFlashdata('success'); ?></div>
+        <div class="message success"><?= session()->getFlashdata('success'); ?></div>
     <?php endif; ?>
     <div class="login-container">
         <!-- Sección de la izquierda con GIF -->
         <div class="left-section">
-            <img id="loginModeImage" alt="Login GIF">
+            <img id="loginImage" alt="Login GIF">
         </div>
 
         <!-- Sección de la derecha con el formulario -->
@@ -50,37 +50,37 @@
 
     <?= $this->include('modules/user/end.php'); ?>
     <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const cursor = document.querySelector(".cursor");
+        document.addEventListener("DOMContentLoaded", function() {
+            const cursor = document.querySelector(".cursor");
 
-        let targetX = 0;
-        let targetY = 0;
+            let targetX = 0;
+            let targetY = 0;
 
-        document.addEventListener("mousemove", function(e) {
-            targetX = e.pageX - cursor.offsetWidth / 2;
-            targetY = e.pageY - cursor.offsetHeight / 2;
+            document.addEventListener("mousemove", function(e) {
+                targetX = e.pageX - cursor.offsetWidth / 2;
+                targetY = e.pageY - cursor.offsetHeight / 2;
+            });
+
+            function updateCursor() {
+                const currentX = parseFloat(cursor.style.left || 0);
+                const currentY = parseFloat(cursor.style.top || 0);
+
+                const dx = targetX - currentX;
+                const dy = targetY - currentY;
+
+                cursor.style.left = `${currentX + dx * 0.1}px`; // Ajusta el factor de suavidad aquí
+                cursor.style.top = `${currentY + dy * 0.1}px`; // Ajusta el factor de suavidad aquí
+
+                requestAnimationFrame(updateCursor);
+            }
+
+            updateCursor();
         });
-
-        function updateCursor() {
-            const currentX = parseFloat(cursor.style.left || 0);
-            const currentY = parseFloat(cursor.style.top || 0);
-
-            const dx = targetX - currentX;
-            const dy = targetY - currentY;
-
-            cursor.style.left = `${currentX + dx * 0.1}px`; // Ajusta el factor de suavidad aquí
-            cursor.style.top = `${currentY + dy * 0.1}px`; // Ajusta el factor de suavidad aquí
-
-            requestAnimationFrame(updateCursor);
-        }
-
-        updateCursor();
-    });
     </script>
 
     <script>
-    const loginLightImage = "<?= base_url('complements/styles/images/trasparent.jpg'); ?>";
-    const loginDarkImage = "<?= base_url('complements/styles/images/alone1.jpg'); ?>";
+        const loginLightImage = "<?= base_url('complements/styles/images/trasparent.jpg'); ?>";
+        const loginDarkImage = "<?= base_url('complements/styles/images/alone1.jpg'); ?>";
     </script>
 </body>
 

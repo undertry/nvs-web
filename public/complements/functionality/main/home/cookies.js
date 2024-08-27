@@ -3,7 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const body = document.body;
     const imgElement = document.querySelector('#overlayNav .overlay-video img');
     const homeSection = document.querySelector('.home');
-
+    const loginImage = document.getElementById('loginImage'); // Seleccionar la imagen de la sección de login
+    const registerImage = document.getElementById('registerImage');
     // Verificar si hay un modo guardado en cookies
     const savedMode = getCookie('mode') || 'dark'; // Predeterminado en modo oscuro
 
@@ -25,6 +26,12 @@ document.addEventListener('DOMContentLoaded', function() {
             if (homeSection) {
                 homeSection.classList.add('light-mode');
             }
+            if (loginImage) {
+                loginImage.src = loginLightImage; // Cambiar la imagen de login en modo claro
+            }
+            if (registerImage) {
+                registerImage.src = registerLightImage; // Cambiar la imagen de login en modo claro
+            }
         } else {
             body.classList.add('dark-mode');
             body.classList.remove('light-mode');
@@ -32,6 +39,12 @@ document.addEventListener('DOMContentLoaded', function() {
             imgElement.src = darkImage;
             if (homeSection) {
                 homeSection.classList.remove('light-mode');
+            }
+            if (loginImage) {
+                loginImage.src = loginDarkImage; // Cambiar la imagen de login en modo oscuro
+            }
+            if (registerImage) {
+                registerImage.src = registerDarkImage; // Cambiar la imagen de login en modo claro
             }
         }
     }
