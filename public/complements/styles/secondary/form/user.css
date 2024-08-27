@@ -7,6 +7,7 @@
   --color-dark     : #0c0b0b;
   --color-white    : #f3f2f2;
   --color-grey     : #333;
+  --color-semigrey : #565555;
   --mode-light     : #FCFCFC;
 }
 
@@ -134,6 +135,11 @@ body {
   width       : 33%;
   position    : relative;
   border-right: 2px solid var(--color-grey);
+  transition: boder-right 0.5s ease;
+}
+
+.light-mode .left-section {
+  border-right: 2px solid var(--color-semigrey);
 }
 
 .left-section img {

@@ -23,6 +23,7 @@
     cursor  : pointer;
     z-index : 2001;
     position: relative;
+    width: calc(100% - 97%);
 }
 
 #navbar .menu-icon-bar {

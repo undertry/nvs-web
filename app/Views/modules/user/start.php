@@ -36,17 +36,7 @@
             </div>
             <div class="overlay-right">
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#software">Software</a></li>
-                    <li><a href="#about">About</a></li>
-                    <?php if (session('user') && session('user')->id_user > 0 && session('user')->name) : ?>
-                    <li><a href="<?= base_url('dashboard-animation'); ?>"><?= session('user')->name; ?></a>
-                    </li>
-                    <li><a href="<?= base_url('logout'); ?>">Log Out</a></li>
-                    <?php else : ?>
-                    <li><a href="<?= base_url('login-animation'); ?>">Log In</a></li>
-                    <li><a href="<?= base_url('signup-animation'); ?>">Sign Up</a></li>
-                    <?php endif; ?>
+                    <li><a href="<?= base_url('home-animation'); ?>">Home</a></li>
                 </ul>
                 <button class="cta-button">Download</button>
                 <hr class="line">
@@ -58,8 +48,8 @@
     </div>
 
     <script>
-    const lightImage = "<?= base_url('complements/styles/images/polygon.jpg'); ?>";
-    const darkImage = "<?= base_url('complements/styles/images/lines.jpg'); ?>";
+        const lightImage = "<?= base_url('complements/styles/images/polygon.jpg'); ?>";
+        const darkImage = "<?= base_url('complements/styles/images/lines.jpg'); ?>";
     </script>
 
     <!-- menu section ends here -->

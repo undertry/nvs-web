@@ -98,7 +98,7 @@
     </script>
 
     <script>
-        const registerLightImage = "<?= base_url('complements/styles/images/corner.jpg'); ?>";
+        const registerLightImage = "<?= base_url('complements/styles/images/dots.png'); ?>";
         const registerDarkImage = "<?= base_url('complements/styles/images/alone.jpg'); ?>";
     </script>
 

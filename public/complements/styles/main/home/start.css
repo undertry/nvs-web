@@ -4,7 +4,8 @@
   --color-semiblack: #202020;
   --color-dark     : #0c0b0b;
   --color-white    : #f3f2f2;
-  --color-grey     : #333;
+  --color-grey     : #535151;
+  --color-semigrey : #565555;
   --mode-light     : #FCFCFC;
 }
 
@@ -61,6 +62,10 @@ hr {
   width : 80%;
   margin: 50px auto;
   border: 1px solid var(--color-grey);
+}
+
+.light-mode hr {
+  border-color: var(--color-semigrey);
 }
 
 /* Clase para ocultar elementos por defecto */
@@ -122,8 +127,11 @@ body {
   display         : flex;
   flex-direction  : column;
   height          : 100vh;
+  overflow-x: hidden;
   transition      : background-color 0.5s ease, color 0.5s ease;
 }
+
+
 
 body.light-mode {
   background: var(--mode-light);
