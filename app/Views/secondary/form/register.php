@@ -20,9 +20,7 @@
     <div class="login-container">
         <!-- GIF Ocupando un tercio del lado izquierdo -->
         <div class="left-section">
-            <img src="<?= base_url('complements/styles/images/giphy.gif'); ?>" alt="Gif Descripción"
-                class="gif-rectangular">
-            <div class="logo-nvs"><a href="<?= base_url('home-animation'); ?>">NVS</a></div>
+            <img id="registerGif" alt="Gif Descripción" class="gif-rectangular">
         </div>
 
 
@@ -98,5 +96,8 @@
         updateCursor();
     });
     </script>
+
+
+
     <?= $this->include('modules/user/end.php'); ?>
 </body>

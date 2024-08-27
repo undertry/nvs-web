@@ -15,7 +15,8 @@
 }
 
 .light-mode #navbar {
-    background-color: transparent; /* Fondo blanco para modo claro */
+    background-color: transparent;
+    /* Fondo blanco para modo claro */
 }
 
 #navbar .menu-icon {
@@ -34,7 +35,8 @@
 }
 
 .light-mode #navbar .menu-icon-bar {
-    background-color: #000; /* Color de las barras en modo claro */
+    background-color: #000;
+    /* Color de las barras en modo claro */
 }
 
 #navbar .menu-icon.close .menu-icon-bar:nth-child(1) {
@@ -60,15 +62,16 @@
 }
 
 .logo a {
-    font-family: "aero";
-    font-size  : 2.5em;
-    color      : var(--color-main);
+    font-family    : "aero";
+    font-size      : 2.5em;
+    color          : var(--color-main);
+    text-decoration: none;
 }
 
 .line {
-    border: 0;
+    border    : 0;
     border-top: 1px solid var(--color-grey);
-    margin: 20px 0;
+    margin    : 20px 0;
 }
 
 
@@ -89,7 +92,8 @@
 }
 
 .light-mode #overlayNav {
-    background-color: var(--mode-light); /* Fondo blanco para modo claro */
+    background-color: var(--mode-light);
+    /* Fondo blanco para modo claro */
 }
 
 #overlayNav .overlay-content {
@@ -121,7 +125,8 @@
 }
 
 .light-mode #overlayNav .overlay-video .video-controls {
-    color: var(--color-black); /* Color de los controles en modo claro */
+    color: var(--color-black);
+    /* Color de los controles en modo claro */
 }
 
 #overlayNav .overlay-right ul {
@@ -144,7 +149,8 @@
 }
 
 .light-mode #overlayNav .overlay-right ul li a {
-    color: var(--color-black); /* Color de los enlaces en modo claro */
+    color: var(--color-black);
+    /* Color de los enlaces en modo claro */
 }
 
 #overlayNav .overlay-right ul li a::after {
@@ -162,7 +168,8 @@
 }
 
 .light-mode #overlayNav .overlay-right ul li a::after {
-    background-color: var(--color-black); /* Color de la línea en modo claro */
+    background-color: var(--color-black);
+    /* Color de la línea en modo claro */
 }
 
 #overlayNav .overlay-right ul li a:hover::after {
@@ -183,8 +190,9 @@
     transition: color 0.3s ease;
 }
 
-.light-mode #overlayNav .cta-button{
-    color: #000; /* Color del botón en modo claro */
+.light-mode #overlayNav .cta-button {
+    color : #000;
+    /* Color del botón en modo claro */
     border: 2px solid #000;
 }
 
@@ -212,7 +220,8 @@
 }
 
 .light-mode #overlayNav .cta-button:hover {
-    color: #000; /* Color del botón en modo claro */
+    color: #000;
+    /* Color del botón en modo claro */
 }
 
 #overlayNav.active {

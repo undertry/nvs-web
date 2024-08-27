@@ -20,8 +20,7 @@
     <div class="login-container">
         <!-- Sección de la izquierda con GIF -->
         <div class="left-section">
-            <img src="<?= base_url('complements/styles/images/walk.gif'); ?>" alt="Login GIF">
-            <div class="logo-nvs"><a href="<?= base_url('home-animation'); ?>">NVS</a></div>
+            <img id="loginModeImage" alt="Login GIF">
         </div>
 
         <!-- Sección de la derecha con el formulario -->
@@ -77,6 +76,11 @@
 
         updateCursor();
     });
+    </script>
+
+    <script>
+    const loginLightImage = "<?= base_url('complements/styles/images/trasparent.jpg'); ?>";
+    const loginDarkImage = "<?= base_url('complements/styles/images/alone1.jpg'); ?>";
     </script>
 </body>
 

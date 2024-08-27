@@ -4,8 +4,10 @@
   --color-main     : #d60b0b;
   --color-black    : #151414;
   --color-semiblack: #202020;
+  --color-dark     : #0c0b0b;
   --color-white    : #f3f2f2;
   --color-grey     : #333;
+  --mode-light     : #FCFCFC;
 }
 
 @font-face {
@@ -48,12 +50,13 @@
   border-radius : 50%;
   z-index       : 9000;
   background    : var(--color-white);
-  transition    : width 0.3s ease, height 0.3s ease;
+  transition    : width 0.3s ease, height 0.3s ease, background-color 0.5s ease;
   /* Transición de tamaño si es necesario */
 }
 
-
-
+.light-mode .cursor {
+  background-color: var(--color-black);
+}
 
 .caps-lock-warning {
   display         : none;
@@ -120,6 +123,7 @@ body {
   margin          : 0;
 }
 
+
 .login-container {
   display: flex;
   width  : 100%;
@@ -139,16 +143,6 @@ body {
   display   : block;
 }
 
-.logo-nvs a {
-  position       : absolute;
-  top            : 10px;
-  left           : 10px;
-  color          : red;
-  font-size      : 2.9em;
-  font-family    : "aero";
-  z-index        : 10;
-  text-decoration: none;
-}
 
 .right-section {
   width           : 67%;
@@ -157,6 +151,11 @@ body {
   justify-content : center;
   padding         : 40px;
   background-color: var(--color-black);
+  transition      : background-color 0.5s ease;
+}
+
+.light-mode .right-section {
+  background-color: var(--mode-light);
 }
 
 .form {
@@ -165,6 +164,11 @@ body {
   width         : 100%;
   max-width     : 400px;
   color         : var(--color-white);
+  transition    : color 0.5s ease;
+}
+
+.light-mode .form {
+  color: var(--color-black);
 }
 
 h2 {
@@ -176,17 +180,24 @@ h2 {
 }
 
 .form-label input {
-  width        : 100%;
-  padding      : 12px;
-  margin-bottom: 20px;
-  background   : var(--color-grey);
-  border-radius: 50px;
-  border       : 1px solid #686868;
-  color        : var(--color-white);
-  font-size    : 1.2em;
-  font-family  : "neue";
-  font-weight  : lighter;
-  outline      : none;
+  width           : 100%;
+  padding         : 12px;
+  margin-bottom   : 20px;
+  background-color: var(--color-grey);
+  border-radius   : 50px;
+  border          : 1px solid #686868;
+  color           : var(--color-white);
+  font-size       : 1.2em;
+  font-family     : "neue";
+  font-weight     : lighter;
+  outline         : none;
+  transition      : background-color 0.5s ease, color 0.5s ease;
+}
+
+.light-mode .form-label input {
+  background-color: var(--color-white);
+  color           : var(--color-black);
+
 }
 
 .password-container {
@@ -247,6 +258,11 @@ h2 {
   transition      : color 0.4s ease, background-color 0.4s ease, transform 0.4s ease;
 }
 
+.light-mode .submit-button {
+  color : var(--color-black);
+  border: 2px solid var(--color-black);
+}
+
 .submit-button::before {
   content      : "";
   position     : absolute;
@@ -261,6 +277,10 @@ h2 {
   transform    : translate(-50%, -50%);
 }
 
+.light-mode .submit-button::before {
+  background: var(--color-black);
+}
+
 .submit-button:hover::before {
   width : 0;
   height: 0;
@@ -270,7 +290,10 @@ h2 {
 
 .submit-button:hover {
   color: var(--color-white);
+}
 
+.light-mode .submit-button:hover {
+  color: var(--color-black);
 }
 
 .submit-button span {
