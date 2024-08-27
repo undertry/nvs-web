@@ -123,6 +123,7 @@
         updateCursor();
     });
     </script>
+    <script src="<?php echo base_url('complements/functionality/main/home/cookies.js'); ?>"></script>
 </body>
 
 </html>
