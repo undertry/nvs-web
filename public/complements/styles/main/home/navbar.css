@@ -11,7 +11,11 @@
     padding        : 10px 20px;
     background     : transparent;
     z-index        : 2000;
-    transition     : background-color 0.3s ease;
+    transition     : background-color 0.5s ease, color 0.5s ease;
+}
+
+.light-mode #navbar {
+    background-color: transparent; /* Fondo blanco para modo claro */
 }
 
 #navbar .menu-icon {
@@ -27,6 +31,10 @@
     margin-bottom   : 5px;
     background-color: #fff;
     transition      : all 0.3s ease;
+}
+
+.light-mode #navbar .menu-icon-bar {
+    background-color: #000; /* Color de las barras en modo claro */
 }
 
 #navbar .menu-icon.close .menu-icon-bar:nth-child(1) {
@@ -57,6 +65,14 @@
     color      : var(--color-main);
 }
 
+.line {
+    border: 0;
+    border-top: 1px solid var(--color-grey);
+    margin: 20px 0;
+}
+
+
+
 /* navbar section ends here */
 
 /* menu section starts here */
@@ -69,7 +85,11 @@
     background-color: var(--color-black);
     overflow        : hidden;
     z-index         : 1500;
-    transition      : height 0.5s ease-in-out;
+    transition      : height 0.5s ease-in-out, background-color 0.5s ease;
+}
+
+.light-mode #overlayNav {
+    background-color: var(--mode-light); /* Fondo blanco para modo claro */
 }
 
 #overlayNav .overlay-content {
@@ -100,6 +120,10 @@
     font-family: "neue";
 }
 
+.light-mode #overlayNav .overlay-video .video-controls {
+    color: var(--color-black); /* Color de los controles en modo claro */
+}
+
 #overlayNav .overlay-right ul {
     list-style: none;
     padding   : 0;
@@ -119,6 +143,10 @@
     transition     : text-decoration-color 0.3s ease, text-decoration-thickness 0.3s ease;
 }
 
+.light-mode #overlayNav .overlay-right ul li a {
+    color: var(--color-black); /* Color de los enlaces en modo claro */
+}
+
 #overlayNav .overlay-right ul li a::after {
     content         : '';
     display         : block;
@@ -131,6 +159,10 @@
     transform       : scaleX(0);
     transform-origin: bottom right;
     transition      : transform 0.3s ease;
+}
+
+.light-mode #overlayNav .overlay-right ul li a::after {
+    background-color: var(--color-black); /* Color de la línea en modo claro */
 }
 
 #overlayNav .overlay-right ul li a:hover::after {
@@ -149,6 +181,11 @@
     cursor    : pointer;
     overflow  : hidden;
     transition: color 0.3s ease;
+}
+
+.light-mode #overlayNav .cta-button{
+    color: #000; /* Color del botón en modo claro */
+    border: 2px solid #000;
 }
 
 #overlayNav .cta-button::after {
@@ -172,6 +209,10 @@
 
 #overlayNav .cta-button:hover {
     color: #fff;
+}
+
+.light-mode #overlayNav .cta-button:hover {
+    color: #000; /* Color del botón en modo claro */
 }
 
 #overlayNav.active {

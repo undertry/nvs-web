@@ -14,7 +14,7 @@
      <div class="overlay-content">
          <div class="overlay-left">
              <div class="overlay-video">
-                 <img src="<?= base_url('complements/styles/images/lines.jpg'); ?>" alt="Video">
+                 <img id="modeImage" alt="Video">
                  <div class="video-controls">
                      <span>00: 13: 49: 12: 45: 02</span>
                  </div>
@@ -35,7 +35,17 @@
                  <?php endif; ?>
              </ul>
              <button class="cta-button">Download</button>
+             <hr class="line">
+             <ul>
+                 <li><a id="modeToggle" href="javascript:void(0);">Dark</a></li>
+             </ul>
          </div>
      </div>
  </div>
+
+ <script>
+const lightImage = "<?= base_url('complements/styles/images/polygon.jpg'); ?>";
+const darkImage = "<?= base_url('complements/styles/images/lines.jpg'); ?>";
+ </script>
+
  <!-- menu section ends here -->

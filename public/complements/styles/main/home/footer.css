@@ -2,10 +2,15 @@
 
 footer {
     color      : var(--color-white);
-    background : var(--color-black);
+    background : var(--color-semiblack);
     padding    : 40px 0;
     font-family: "neue";
     border-top : 1px solid var(--color-grey);
+}
+
+.light-mode footer {
+    color     : var(--color-black);
+    background: var(--color-white);
 }
 
 .footer-container {
@@ -106,6 +111,10 @@ footer {
     margin         : 0 5px;
     font-size      : 18px;
     transition     : color 0.3s;
+}
+
+.light-mode .social-icons a {
+    color: var(--color-black);
 }
 
 .social-icons a:hover {
