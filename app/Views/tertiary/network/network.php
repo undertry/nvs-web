@@ -48,9 +48,9 @@
 
     <div class="container">
         <h1>Available WiFi Networks</h1>
-        <?php if (!empty($network)): ?>
+        <?php if (!empty($networks)): ?>
         <ul>
-            <?php foreach ($network as $network): ?>
+            <?php foreach ($networks as $network): ?>
             <li>
                 <strong>ESSID:</strong> <?= esc($network['essid']) ?><br>
                 <strong>BSSID:</strong> <?= esc($network['bssid']) ?><br>
