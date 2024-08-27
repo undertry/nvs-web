@@ -48,8 +48,8 @@
     </div>
 
     <script>
-        const lightImage = "<?= base_url('complements/styles/images/polygon.jpg'); ?>";
-        const darkImage = "<?= base_url('complements/styles/images/lines.jpg'); ?>";
+    const lightImage = "<?= base_url('complements/styles/images/blacky.png'); ?>";
+    const darkImage = "<?= base_url('complements/styles/images/corner.jpg'); ?>";
     </script>
 
     <!-- menu section ends here -->

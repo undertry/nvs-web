@@ -2,7 +2,8 @@
 <title>Dashboard</title>
 </head>
 
-<body>
+<body class="dashboard">
+
     <!-- Navbar Section -->
     <nav id="navbar">
         <div class="logo"><a href="<?= base_url('home-animation'); ?>">NVS</a></div>
@@ -43,85 +44,85 @@
     </div>
 
 
-    <section class="dashboard" id="dashboard">
-        <h1 class="dashboard-header title-animate">DASHBOARD</h1>
 
-    </section>
+    <h1 class="dashboard-header title-animate">DASHBOARD</h1>
+
+
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const cursor = document.querySelector(".cursor");
+    document.addEventListener("DOMContentLoaded", function() {
+        const cursor = document.querySelector(".cursor");
 
-            let targetX = 0;
-            let targetY = 0;
+        let targetX = 0;
+        let targetY = 0;
 
-            document.addEventListener("mousemove", function(e) {
-                targetX = e.pageX - cursor.offsetWidth / 2;
-                targetY = e.pageY - cursor.offsetHeight / 2;
-            });
-
-            function updateCursor() {
-                const currentX = parseFloat(cursor.style.left || 0);
-                const currentY = parseFloat(cursor.style.top || 0);
-
-                const dx = targetX - currentX;
-                const dy = targetY - currentY;
-
-                cursor.style.left = `${currentX + dx * 0.1}px`; // Ajusta el factor de suavidad aquí
-                cursor.style.top = `${currentY + dy * 0.1}px`; // Ajusta el factor de suavidad aquí
-
-                requestAnimationFrame(updateCursor);
-            }
-
-            updateCursor();
+        document.addEventListener("mousemove", function(e) {
+            targetX = e.pageX - cursor.offsetWidth / 2;
+            targetY = e.pageY - cursor.offsetHeight / 2;
         });
+
+        function updateCursor() {
+            const currentX = parseFloat(cursor.style.left || 0);
+            const currentY = parseFloat(cursor.style.top || 0);
+
+            const dx = targetX - currentX;
+            const dy = targetY - currentY;
+
+            cursor.style.left = `${currentX + dx * 0.1}px`; // Ajusta el factor de suavidad aquí
+            cursor.style.top = `${currentY + dy * 0.1}px`; // Ajusta el factor de suavidad aquí
+
+            requestAnimationFrame(updateCursor);
+        }
+
+        updateCursor();
+    });
     </script>
 
 
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const title = document.querySelector('.title-animate');
-            const header = document.querySelector('.dashboard-header');
+    document.addEventListener("DOMContentLoaded", function() {
+        const title = document.querySelector('.title-animate');
+        const header = document.querySelector('.dashboard-header');
 
-            const revealText = (element, finalText, speed = 100) => {
-                let chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
-                let textArray = finalText.split('');
-                let currentIndex = 0;
+        const revealText = (element, finalText, speed = 100) => {
+            let chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
+            let textArray = finalText.split('');
+            let currentIndex = 0;
 
-                let interval = setInterval(() => {
-                    textArray = textArray.map((char, index) => {
-                        if (index <= currentIndex) {
-                            return finalText[index];
-                        }
-                        return chars[Math.floor(Math.random() * chars.length)];
-                    });
-
-                    element.textContent = textArray.join('');
-
-                    if (currentIndex < textArray.length) {
-                        currentIndex++;
-                    } else {
-                        clearInterval(interval);
+            let interval = setInterval(() => {
+                textArray = textArray.map((char, index) => {
+                    if (index <= currentIndex) {
+                        return finalText[index];
                     }
-                }, speed);
-            };
+                    return chars[Math.floor(Math.random() * chars.length)];
+                });
 
-            title.style.opacity = 1;
-            revealText(title, 'DASHBOARD', 85);
+                element.textContent = textArray.join('');
 
-            // Aplicar la clase activa después de que el texto haya sido revelado
-            setTimeout(() => {
-                header.classList.add('active');
-            }, 1000); // Ajusta el tiempo según sea necesario
-        });
+                if (currentIndex < textArray.length) {
+                    currentIndex++;
+                } else {
+                    clearInterval(interval);
+                }
+            }, speed);
+        };
+
+        title.style.opacity = 1;
+        revealText(title, 'DASHBOARD', 85);
+
+        // Aplicar la clase activa después de que el texto haya sido revelado
+        setTimeout(() => {
+            header.classList.add('active');
+        }, 1000); // Ajusta el tiempo según sea necesario
+    });
     </script>
     <script src="<?php echo base_url('complements/functionality/main/home/cookies.js'); ?>"></script>
     <script src="<?php echo base_url('complements/functionality/main/home/navbar.js'); ?>"></script>
 
     <script>
-        const lightImage = "<?= base_url('complements/styles/images/polygon.jpg'); ?>";
-        const darkImage = "<?= base_url('complements/styles/images/lines.jpg'); ?>";
+    const lightImage = "<?= base_url('complements/styles/images/dots.png'); ?>";
+    const darkImage = "<?= base_url('complements/styles/images/redd.png'); ?>";
     </script>
 </body>
 

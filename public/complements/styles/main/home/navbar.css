@@ -23,7 +23,7 @@
     cursor  : pointer;
     z-index : 2001;
     position: relative;
-    width: calc(100% - 97%);
+    width   : calc(100% - 97%);
 }
 
 #navbar .menu-icon-bar {
@@ -110,9 +110,8 @@
 }
 
 #overlayNav .overlay-video img {
-    width        : 100%;
-    max-width    : 500px;
-    height       : auto;
+    width        : 500px;
+    height       : 300px;
     margin-left  : 15rem;
     margin-top   : 5rem;
     border-radius: 5px;

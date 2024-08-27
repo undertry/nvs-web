@@ -43,19 +43,33 @@
         <div class="under-development">
             <p>This section is under development.</p>
         </div>
-        <div class="settings-info">
-            <p><strong>Name:</strong> <?= session('user')->name; ?></p>
-            <p><strong>Email:</strong> <?= session('user')->email; ?></p>
-            <p><strong>Account created at:</strong> <?= session('user')->created_at; ?></p>
-            <p><strong>Verification:</strong> <?= session('user')->verification == 1 ? 'Enabled' : 'Disabled'; ?></p>
-            <button>
-                <a href="<?= base_url('verification'); ?>">2 steps verification</a>
-            </button>
-            <button>
-                <a href="<?= base_url('change_password'); ?>">Change password</a>
-            </button>
+        <div class="settings-sections">
+            <!-- Datos Personales -->
+            <div class="personal-info">
+                <h2>Personal Information</h2>
+                <div class="settings-info">
+                    <p><strong>Name:</strong> <?= session('user')->name; ?></p>
+                    <p><strong>Email:</strong> <?= session('user')->email; ?></p>
+                    <p><strong>Account created at:</strong> <?= session('user')->created_at; ?></p>
+                    <p><strong>Verification:</strong>
+                        <?= session('user')->verification == 1 ? 'Enabled' : 'Disabled'; ?></p>
+                </div>
+            </div>
+            <!-- Funcionalidades -->
+            <div class="functionalities">
+                <h2>Functionalities</h2>
+                <div class="settings-info">
+                    <button>
+                        <a href="<?= base_url('verification'); ?>">2 steps verification</a>
+                    </button>
+                    <button>
+                        <a href="<?= base_url('change_password'); ?>">Change password</a>
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
+
 
     <!-- JS for Menu Toggle -->
     <script>

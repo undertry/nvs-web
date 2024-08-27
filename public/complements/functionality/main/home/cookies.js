@@ -6,17 +6,45 @@ document.addEventListener('DOMContentLoaded', function() {
     const dashboardSection = document.querySelector('.dashboard');
     const loginImage = document.getElementById('loginImage'); // Seleccionar la imagen de la sección de login
     const registerImage = document.getElementById('registerImage');
-    // Verificar si hay un modo guardado en cookies
-    const savedMode = getCookie('mode') || 'dark'; // Predeterminado en modo oscuro
 
-    // Aplicar el modo guardado
-    applyMode(savedMode);
+    if (homeSection) {
+        // Crear el mensaje de cookies solo en la vista "home"
+        const cookieBanner = document.createElement('div');
+        cookieBanner.className = 'cookie-banner';
+        cookieBanner.innerHTML = `
+            <p>This website uses cookies. <a href="#" id="acceptCookies">Accept</a></p>
+        `;
+        document.body.appendChild(cookieBanner);
 
-    toggleButton.addEventListener('click', function() {
-        const currentMode = body.classList.contains('light-mode') ? 'dark' : 'light';
-        applyMode(currentMode);
-        setCookie('mode', currentMode, 7); // Guardar el modo en cookies por 7 días
-    });
+        const acceptCookiesButton = document.getElementById('acceptCookies');
+
+        // Verificar si el usuario ha aceptado las cookies
+        const cookiesAccepted = getCookie('cookiesAccepted');
+        if (cookiesAccepted) {
+            cookieBanner.style.display = 'none';
+            initializeMode();
+        } else {
+            cookieBanner.style.display = 'block';
+            acceptCookiesButton.addEventListener('click', function() {
+                setCookie('cookiesAccepted', 'true', 365); // Cookies aceptadas por un año
+                cookieBanner.style.display = 'none';
+                initializeMode();
+            });
+        }
+    } else {
+        initializeMode();
+    }
+
+    function initializeMode() {
+        const savedMode = getCookie('mode') || 'dark'; // Predeterminado en modo oscuro
+        applyMode(savedMode);
+
+        toggleButton.addEventListener('click', function() {
+            const currentMode = body.classList.contains('light-mode') ? 'dark' : 'light';
+            applyMode(currentMode);
+            setCookie('mode', currentMode, 7); // Guardar el modo en cookies por 7 días
+        });
+    }
 
     function applyMode(mode) {
         if (mode === 'light') {
@@ -24,35 +52,19 @@ document.addEventListener('DOMContentLoaded', function() {
             body.classList.remove('dark-mode');
             toggleButton.textContent = 'Dark';
             imgElement.src = lightImage;
-            if (homeSection) {
-                homeSection.classList.add('light-mode');
-            }
-            if (dashboardSection) {
-                dashboardSection.classList.add('light-mode');
-            }
-            if (loginImage) {
-                loginImage.src = loginLightImage; // Cambiar la imagen de login en modo claro
-            }
-            if (registerImage) {
-                registerImage.src = registerLightImage; // Cambiar la imagen de login en modo claro
-            }
+            if (homeSection) homeSection.classList.add('light-mode');
+            if (dashboardSection) dashboardSection.classList.add('light-mode');
+            if (loginImage) loginImage.src = loginLightImage;
+            if (registerImage) registerImage.src = registerLightImage;
         } else {
             body.classList.add('dark-mode');
             body.classList.remove('light-mode');
             toggleButton.textContent = 'Light';
             imgElement.src = darkImage;
-            if (homeSection) {
-                homeSection.classList.remove('light-mode');
-            }
-            if (dashboardSection) {
-                dashboardSection.classList.remove('light-mode');
-            }
-            if (loginImage) {
-                loginImage.src = loginDarkImage; // Cambiar la imagen de login en modo oscuro
-            }
-            if (registerImage) {
-                registerImage.src = registerDarkImage; // Cambiar la imagen de login en modo claro
-            }
+            if (homeSection) homeSection.classList.remove('light-mode');
+            if (dashboardSection) dashboardSection.classList.remove('light-mode');
+            if (loginImage) loginImage.src = loginDarkImage;
+            if (registerImage) registerImage.src = registerDarkImage;
         }
     }
 
