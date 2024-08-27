@@ -121,8 +121,8 @@
     <script src="<?php echo base_url('complements/functionality/main/home/navbar.js'); ?>"></script>
 
     <script>
-    const lightImage = "<?= base_url('complements/styles/images/dots.png'); ?>";
-    const darkImage = "<?= base_url('complements/styles/images/redd.png'); ?>";
+    const lightImage = "<?= base_url('complements/styles/images/asbtarct.jpg'); ?>";
+    const darkImage = "<?= base_url('complements/styles/images/network.png'); ?>";
     </script>
 </body>
 

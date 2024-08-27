@@ -110,11 +110,12 @@
 }
 
 #overlayNav .overlay-video img {
-    width        : 500px;
-    height       : 300px;
-    margin-left  : 15rem;
-    margin-top   : 5rem;
-    border-radius: 5px;
+    width         : 500px;
+    height        : 300px;
+    margin-left   : 15rem;
+    margin-top    : 5rem;
+    border-radius : 5px;
+    pointer-events: none;
 }
 
 #overlayNav .overlay-video .video-controls {
