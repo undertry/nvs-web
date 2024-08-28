@@ -14,13 +14,12 @@ class ScanModel extends Model
     {
         return $this->db->table('scan')
             ->select('scan.*, users.name AS user_name, network.signal, network.essid,
-            network.bssid, security_type.type AS security_type, devices.ip_address,
+            network.bssid, network.encryption AS security_type, devices.ip_address,
             devices.operating_system, devices.mac_address, ports.port_name, ports.service,
             ports.protocol, port_status.open, port_status.close, port_status.filtered,
             solution.solution, solution.vulnerability_code, solution.vuln_description, network.channel')
             ->join('users', 'users.id_user = scan.id_user')
             ->join('network', 'network.id_network = scan.id_network')
-            ->join('security_type', 'security_type.id_security_type = network.id_security_type')
             ->join('scan_details', 'scan_details.id_scan = scan.id_scan')
             ->join('devices', 'devices.id_devices = scan_details.id_devices')
             ->join('port_analysis', 'port_analysis.id_devices = devices.id_devices')

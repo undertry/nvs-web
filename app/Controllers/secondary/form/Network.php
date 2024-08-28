@@ -7,7 +7,6 @@ use CodeIgniter\HTTP\CURLRequest;
 use App\Controllers\main\BaseController; // Asegúrate de importar la clase correcta , hay que importar el BseController de main
 use App\Models\tertiary\network\NetworkModel;
 
-use App\Models\tertiary\network\SecurityModel;
 
 
 class Network extends BaseController
@@ -17,7 +16,6 @@ class Network extends BaseController
         $client = \Config\Services::curlrequest();
 
         $NetworkModel = new NetworkModel();
-        $SecurityModel = new SecurityModel();
 
         try {
             $response = $client->get('http://192.168.0.164:5000/scan');
