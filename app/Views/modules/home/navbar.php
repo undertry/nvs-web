@@ -43,9 +43,4 @@
      </div>
  </div>
 
- <script>
-const lightImage = "<?= base_url('complements/styles/images/polygon.jpg'); ?>";
-const darkImage = "<?= base_url('complements/styles/images/lines.jpg'); ?>";
- </script>
-
  <!-- menu section ends here -->
