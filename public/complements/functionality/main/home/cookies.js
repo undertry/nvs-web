@@ -4,11 +4,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const imgElement = document.querySelector('#overlayNav .overlay-video img');
     const homeSection = document.querySelector('.home');
     const dashboardSection = document.querySelector('.dashboard');
-    const loginImage = document.getElementById('loginImage'); // Seleccionar la imagen de la sección de login
+    const loginImage = document.getElementById('loginImage');
     const registerImage = document.getElementById('registerImage');
+    const navbar = document.getElementById('navbar');
+
+    const initialBgColor = 'transparent';
+    const scrollBgColorLightMode = '#FCFCFC';
+    const scrollBgColorDarkMode = '#151414';
 
     if (homeSection) {
-        // Crear el mensaje de cookies solo en la vista "home"
         const cookieBanner = document.createElement('div');
         cookieBanner.className = 'cookie-banner';
         cookieBanner.innerHTML = `
@@ -17,18 +21,19 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.appendChild(cookieBanner);
 
         const acceptCookiesButton = document.getElementById('acceptCookies');
-
-        // Verificar si el usuario ha aceptado las cookies
         const cookiesAccepted = getCookie('cookiesAccepted');
+
         if (cookiesAccepted) {
             cookieBanner.style.display = 'none';
             initializeMode();
+            initializeNavbarColor(); // Inicializa el color del navbar solo si las cookies están aceptadas
         } else {
             cookieBanner.style.display = 'block';
             acceptCookiesButton.addEventListener('click', function() {
-                setCookie('cookiesAccepted', 'true', 365); // Cookies aceptadas por un año
+                setCookie('cookiesAccepted', 'true', 365);
                 cookieBanner.style.display = 'none';
                 initializeMode();
+                initializeNavbarColor(); // Inicializa el color del navbar solo si se aceptan las cookies
             });
         }
     } else {
@@ -36,13 +41,24 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function initializeMode() {
-        const savedMode = getCookie('mode') || 'dark'; // Predeterminado en modo oscuro
+        const savedMode = getCookie('mode') || 'dark';
         applyMode(savedMode);
 
         toggleButton.addEventListener('click', function() {
             const currentMode = body.classList.contains('light-mode') ? 'dark' : 'light';
             applyMode(currentMode);
-            setCookie('mode', currentMode, 7); // Guardar el modo en cookies por 7 días
+            setCookie('mode', currentMode, 7);
+        });
+    }
+
+    function initializeNavbarColor() {
+        // Evento de desplazamiento para cambiar el color de fondo del navbar
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                navbar.style.backgroundColor = getScrollBgColor();
+            } else {
+                navbar.style.backgroundColor = initialBgColor;
+            }
         });
     }
 
@@ -66,6 +82,10 @@ document.addEventListener('DOMContentLoaded', function() {
             if (loginImage) loginImage.src = loginDarkImage;
             if (registerImage) registerImage.src = registerDarkImage;
         }
+    }
+
+    function getScrollBgColor() {
+        return document.body.classList.contains('dark-mode') ? scrollBgColorDarkMode : scrollBgColorLightMode;
     }
 
     function setCookie(name, value, days) {

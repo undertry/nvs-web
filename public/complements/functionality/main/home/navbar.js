@@ -1,26 +1,16 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var navbar = document.getElementById('navbar');
-    var initialBgColor = 'transparent'; // Color de fondo inicial
-    var scrollBgColorLightMode = '#FCFCFC'; // Color de fondo para el modo claro cuando se desplaza
-    var scrollBgColorDarkMode = '#151414'; // Color de fondo para el modo oscuro cuando se desplaza
 
-    // Función para obtener el color de fondo según el modo actual
+    const navbar = document.getElementById('navbar');
+    const initialBgColor = window.getComputedStyle(navbar).backgroundColor;
+
+    // Función para obtener el color del navbar según el scroll
     function getScrollBgColor() {
         if (document.body.classList.contains('dark-mode')) {
-            return scrollBgColorDarkMode;
+            return '#151414'; // Color para el modo oscuro
         } else {
-            return scrollBgColorLightMode;
+            return '#FCFCFC'; // Color para el modo claro
         }
     }
-
-    // Evento de desplazamiento para cambiar el color de fondo del navbar
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 50) { // Cambia el valor según el desplazamiento que desees
-            navbar.style.backgroundColor = getScrollBgColor();
-        } else {
-            navbar.style.backgroundColor = initialBgColor;
-        }
-    });
 
     // Toggle menú y clase close
     document.getElementById('menuToggle').addEventListener('click', function() {
@@ -32,7 +22,12 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('modeToggle').addEventListener('click', function() {
         document.body.classList.toggle('dark-mode'); // Cambia el modo
 
-        // Cambia el color del navbar inmediatamente
+        // Cambia el color del navbar inmediatamente sin importar el scroll
+        navbar.style.backgroundColor = getScrollBgColor();
+    });
+
+    // Cambiar el color del navbar al hacer scroll
+    window.addEventListener('scroll', function() {
         if (window.scrollY > 50) {
             navbar.style.backgroundColor = getScrollBgColor();
         } else {
