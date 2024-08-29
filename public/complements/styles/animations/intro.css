@@ -1,0 +1,111 @@
+:root {
+    --color-main     : #d60b0b;
+    --color-black    : #151414;
+    --color-semiblack: #202020;
+    --color-dark     : #0c0b0b;
+    --color-white    : #f3f2f2;
+    --color-grey     : #333;
+}
+
+@font-face {
+    font-family: "aero";
+    src        : url("../fonts/aeroxys/Aeroxys.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "schabo";
+    src        : url("../fonts/schabo/SCHABO-Condensed.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "neue";
+    src        : url("../fonts/neue/NeueMontreal-Regular.otf") format("truetype");
+}
+
+/* cursor styles */
+.cursor {
+    pointer-events  : none;
+    position        : absolute;
+    padding         : 0.5vw;
+    border-radius   : 50%;
+    z-index         : 9000;
+    transition      : transform 0.1s ease, width 0.3s ease, height 0.3s ease, background-color 0.5s ease;
+    background-color: var(--color-white);
+}
+
+.light-mode .cursor {
+    background-color: var(--color-black);
+}
+
+body {
+    margin          : 0;
+    overflow        : hidden;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    height          : 100vh;
+    background-color: #bb0f0f;
+    font-family     : Arial, sans-serif;
+}
+
+#intro-container {
+    text-align: center;
+    color     : var(--color-white);
+    position  : relative;
+    z-index   : 1;
+}
+
+h1 {
+    font-size  : 7.9rem;
+    opacity    : 0;
+    font-family: "aero";
+    font-weight: lighter;
+    color      : var(--color-white);
+    transition : color 0.5s ease;
+}
+
+.light-mode h1 {
+    color: var(--color-black);
+}
+
+#counter {
+    font-size  : 1em;
+    margin-top : 1rem;
+    opacity    : 0;
+    font-family: "neue";
+    color      : var(--color-white);
+}
+
+.light-mode #counter {
+    color: var(--color-black);
+}
+
+#square-container {
+    position: fixed;
+    top     : 0;
+    left    : 0;
+    width   : 100vw;
+    height  : 100vh;
+    z-index : 2;
+
+    display              : grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    /* Ajusta el tamaño de los cuadrados */
+    grid-template-rows   : repeat(auto-fill, minmax(100px, 1fr));
+    /* Ajusta el tamaño de los cuadrados */
+    gap                  : 0;
+    /* Asegúrate de que no haya espacio entre los cuadrados */
+    overflow             : hidden;
+    /* Evita el desbordamiento */
+}
+
+.square {
+    background-color: var(--color-black);
+    width           : 100%;
+    height          : 100%;
+    opacity         : 0;
+}
+
+.light-mode .square {
+    background-color: var(--color-white);
+}

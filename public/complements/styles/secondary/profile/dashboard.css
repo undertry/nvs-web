@@ -1,0 +1,104 @@
+:root {
+    --color-main     : #d60b0b;
+    --color-black    : #151414;
+    --color-semiblack: #202020;
+    --color-dark     : #0c0b0b;
+    --color-white    : #f3f2f2;
+    --color-grey     : #535151;
+    --color-semigrey : #565555;
+    --mode-light     : #FCFCFC;
+}
+
+/* fonts select */
+@font-face {
+    font-family: "aero";
+    src        : url("../../fonts/aeroxys/Aeroxys.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "schabo";
+    src        : url("../../fonts/schabo/SCHABO-Condensed.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "neue";
+    src        : url("../../fonts/neue/NeueMontreal-Regular.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "neue-medium";
+    src        : url("../../fonts/neue/NeueMontreal-Medium.otf") format("truetype");
+}
+
+* {
+    padding    : 0;
+    margin     : 0;
+    box-sizing : border-box;
+    font-family: 'neue', sans-serif;
+}
+
+body {
+    font-family: "neue";
+    margin     : 0;
+    padding    : 0;
+    box-sizing : border-box;
+    color      : var(--color-white);
+    width      : 100%;
+}
+
+.dashboard {
+    background-image : url("../../images/linnes.jpg");
+    background-size  : cover;
+    background-repeat: no-repeat;
+    transition       : background-image 0.5s ease;
+}
+
+.dashboard.light-mode {
+    background-image: url("../../images/mici.jpg");
+}
+
+/* cursor styles */
+.cursor {
+    pointer-events: none;
+    position      : absolute;
+    width         : 20px;
+    /* Tamaño del cursor */
+    height        : 20px;
+    /* Tamaño del cursor */
+    border-radius : 50%;
+    z-index       : 9000;
+    background    : var(--color-white);
+    transition    : width 0.3s ease, height 0.3s ease;
+    /* Transición de tamaño si es necesario */
+}
+
+.light-mode .cursor {
+    background: var(--color-black);
+}
+
+
+
+/* Dashboard Header */
+.dashboard-header {
+    position                 : fixed;
+    bottom                   : -60px;
+    /* Ajusta según el espacio deseado desde el borde inferior */
+    right                    : 20px;
+    /* Ajusta según el espacio deseado desde el borde derecho */
+    font-size                : 16.8em;
+    font-family              : "schabo";
+    font-weight              : lighter;
+    color                    : var(--color-main);
+    padding                  : 20px;
+    border-top-left-radius   : 20px;
+    border-bottom-left-radius: 20px;
+    margin                   : 0;
+    opacity                  : 1;
+    /* Asegúrate de que sea visible */
+}
+
+/* Opcional: Para animar la entrada */
+.dashboard-header.active {
+    transform : translateY(0);
+    transition: transform 0.5s ease;
+}

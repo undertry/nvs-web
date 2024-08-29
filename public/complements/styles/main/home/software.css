@@ -1,0 +1,104 @@
+/* software section starts here */
+
+.section-header {
+    text-align: center;
+    margin    : 50px;
+}
+
+.section-header h2 {
+    font-size  : 8.2em;
+    font-family: "schabo";
+    color      : #bb0f0f;
+    font-weight: lighter;
+}
+
+.section-content {
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+}
+
+.text-image-block {
+    display      : flex;
+    align-items  : center;
+    margin       : 50px 0;
+    padding      : 20px;
+    width        : 80%;
+    border-radius: 10px;
+}
+
+.text {
+    position: relative;
+    z-index : 1000;
+}
+
+.text h2 {
+    font-size  : 2.9em;
+    font-family: "aero";
+    font-weight: lighter;
+    margin     : 1rem 0;
+}
+
+
+.text h3 {
+    font-size    : 1.3em;
+    font-family  : "neue";
+    font-weight  : lighter;
+    margin-bottom: 20px;
+    color        : #575757;
+}
+
+.text h4 {
+    position      : relative;
+    display       : inline-block;
+    margin        : 0;
+    font-size     : 3.2em;
+    font-family   : "neue";
+    padding-bottom: 10px;
+    font-weight   : lighter;
+    opacity       : 0;
+    transform     : translateX(-200px);
+    transition    : opacity 0.9s ease-out, transform 0.9s ease-out;
+}
+
+.text.visible h4 {
+    opacity  : 1;
+    transform: translateX(0);
+}
+
+.text.visible h4::after {
+    transform: scaleX(1);
+}
+
+.text p {
+    font-size  : 2em;
+    font-family: "neue";
+    font-weight: lighter;
+    color      : #575757;
+}
+
+.text p span {
+    color      : var(--color-main);
+    font-family: "neue";
+}
+
+.text ul {
+    font-size  : 1.8em;
+    margin-top : 10px;
+    margin-left: 15px;
+}
+
+.text ul li {
+    margin-bottom: 10px;
+    font-family  : "neue";
+    font-weight  : lighter;
+    color        : #575757;
+}
+
+.text ul li span {
+    color      : var(--color-main);
+    font-family: "neue";
+    font-weight: lighter;
+}
+
+/* software section ends here */
