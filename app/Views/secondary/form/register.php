@@ -4,35 +4,6 @@
 
 <body>
 
-    <style>
-        /* Popup de Requisitos de Contraseña */
-        .password-popup {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 87%;
-            transform: translate(-50%, -50%);
-            padding: 20px;
-            background-color: #f8f9fa;
-            border: 1px solid #dee2e6;
-            border-radius: 5px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            z-index: 1001;
-            max-width: 300px;
-        }
-
-        .password-popup.active {
-            display: block;
-        }
-
-        .password-popup p {
-            margin: 0;
-            color: #343a40;
-            font-family: "neue";
-            font-size: 1.1em;
-        }
-    </style>
-
 
     <!-- Implementacion de Aviso de Mayuscula -->
     <div id="caps-lock-warning-password" class="caps-lock-warning">
@@ -86,7 +57,7 @@
 
             <!-- Popup de Requisitos de Contraseña -->
             <div id="passwordPopup" class="password-popup">
-                <p>Your password must be at least 8 characters long, contain 1 uppercase letter, and include a special character.</p>
+                <p>Your password must be at least <span>8 characters long</span>, contain <span>1 uppercase letter</span>, and include a <span>special character</span>.</p>
             </div>
         </div>
 

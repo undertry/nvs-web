@@ -118,15 +118,16 @@
     pointer-events: none;
 }
 
-#overlayNav .overlay-video .video-controls {
+#overlayNav .overlay-video .video-controls span {
     margin-top : 10px;
     margin-left: 15rem;
     color      : var(--color-white);
     font-family: "neue";
 }
 
-.light-mode #overlayNav .overlay-video .video-controls {
+.light-mode #overlayNav .overlay-video .video-controls span {
     color: var(--color-black);
+
     /* Color de los controles en modo claro */
 }
 
