@@ -29,7 +29,7 @@
   bottom     : 5%;
   right      : 2%;
   font-size  : 1.2em;
-  color      : #888787;
+  color      : var(--color-grey);
   font-family: "neue";
 }
 
@@ -39,7 +39,7 @@
   font-family: "schabo";
   text-align : center;
   margin     : 0 auto;
-  color      : #bb0f0f;
+  color      : var(--color-secondary);
   opacity    : 0;
   transition : opacity 1s ease-in-out;
   overflow   : hidden;

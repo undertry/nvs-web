@@ -1,12 +1,15 @@
 :root {
   --color-main     : #d60b0b;
+  --color-secondary: #bb0f0f;
   --color-black    : #151414;
   --color-semiblack: #202020;
   --color-dark     : #0c0b0b;
+  --color-light     : #FCFCFC;
   --color-white    : #f3f2f2;
-  --color-grey     : #535151;
+  --color-light-grey: #cfcfcf;
   --color-semigrey : #565555;
-  --mode-light     : #FCFCFC;
+  --color-grey     : #535151;
+
 }
 
 @font-face {
@@ -88,8 +91,8 @@ hr {
   right           : 20px;
   width           : 50px;
   height          : 50px;
-  background-color: #fff;
-  color           : #333;
+  background-color: var(--color-light);
+  color           : var(--color-black);
   display         : flex;
   align-items     : center;
   justify-content : center;
@@ -104,17 +107,17 @@ hr {
 }
 
 .light-mode .scroll-to-top {
-  background-color: #333;
-  color           : #fff;
+  background-color: var(--color-black);
+  color           : var(--color-light);
 }
 
 /* scroll hover */
 .scroll-to-top:hover {
-  background-color: #cfcfcf;
+  background-color: var(--color-light-grey);
 }
 
 .light-mode .scroll-to-top:hover {
-  background-color: #555;
+  background-color: var(--color-semigrey);
 }
 
 .cookie-banner {
@@ -153,7 +156,6 @@ hr {
   text-decoration: underline;
 }
 
-
 /* body styles */
 body {
   margin          : 0;
@@ -167,8 +169,6 @@ body {
   overflow-x      : hidden;
   transition      : background-color 0.5s ease, color 0.5s ease;
 }
-
-
 
 body.light-mode {
   background: var(--mode-light);

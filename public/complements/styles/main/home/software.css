@@ -8,7 +8,7 @@
 .section-header h2 {
     font-size  : 8.2em;
     font-family: "schabo";
-    color      : #bb0f0f;
+    color      : var(--color-secondary);
     font-weight: lighter;
 }
 
@@ -45,7 +45,7 @@
     font-family  : "neue";
     font-weight  : lighter;
     margin-bottom: 20px;
-    color        : #575757;
+    color        : var(--color-light-grey);
 }
 
 .text h4 {
@@ -74,11 +74,11 @@
     font-size  : 2em;
     font-family: "neue";
     font-weight: lighter;
-    color      : #575757;
+    color      : var(--color-semigrey);
 }
 
 .text p span {
-    color      : var(--color-main);
+    color      : var(--color-secondary);
     font-family: "neue";
 }
 
@@ -92,11 +92,11 @@
     margin-bottom: 10px;
     font-family  : "neue";
     font-weight  : lighter;
-    color        : #575757;
+    color        : var(--color-semigrey);
 }
 
 .text ul li span {
-    color      : var(--color-main);
+    color      : var(--color-secondary);
     font-family: "neue";
     font-weight: lighter;
 }

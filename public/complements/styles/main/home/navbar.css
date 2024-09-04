@@ -31,12 +31,12 @@
     width           : 33px;
     height          : 4px;
     margin-bottom   : 5px;
-    background-color: #fff;
+    background-color: var(--color-light);
     transition      : all 0.3s ease;
 }
 
 .light-mode #navbar .menu-icon-bar {
-    background-color: #000;
+    background-color: var(--color-dark);
     /* Color de las barras en modo claro */
 }
 
@@ -93,7 +93,7 @@
 }
 
 .light-mode #overlayNav {
-    background-color: var(--mode-light);
+    background-color: var(--color-light);
     /* Fondo blanco para modo claro */
 }
 
@@ -184,8 +184,8 @@
     margin-top: 20px;
     padding   : 10px 20px;
     background: transparent;
-    border    : 2px solid #fff;
-    color     : #fff;
+    border    : 2px solid var(--color-light);
+    color     : var(--color-light);
     font-size : 1.5em;
     cursor    : pointer;
     overflow  : hidden;
@@ -193,9 +193,9 @@
 }
 
 .light-mode #overlayNav .cta-button {
-    color : #000;
+    color : var(--color-dark);
     /* Color del botón en modo claro */
-    border: 2px solid #000;
+    border: 2px solid var(--color-dark);
 }
 
 #overlayNav .cta-button::after {
@@ -218,11 +218,11 @@
 }
 
 #overlayNav .cta-button:hover {
-    color: #fff;
+    color: var(--color-light);
 }
 
 .light-mode #overlayNav .cta-button:hover {
-    color: #000;
+    color: var(--color-dark);
     /* Color del botón en modo claro */
 }
 
