@@ -5,11 +5,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Función para obtener el color del navbar según el scroll
     function getScrollBgColor() {
-        if (document.body.classList.contains('dark-mode')) {
-            return '#151414'; // Color para el modo oscuro
-        } else {
-            return '#FCFCFC'; // Color para el modo claro
-        }
+        return document.body.classList.contains('dark-mode') ? '#151414' : '#FCFCFC';
+    }
+
+    // Función para actualizar el color del navbar según el modo
+    function updateNavbarColor() {
+        navbar.style.backgroundColor = window.scrollY > 50 ? getScrollBgColor() : initialBgColor;
     }
 
     // Toggle menú y clase close
@@ -23,15 +24,14 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.classList.toggle('dark-mode'); // Cambia el modo
 
         // Cambia el color del navbar inmediatamente sin importar el scroll
-        navbar.style.backgroundColor = getScrollBgColor();
+        updateNavbarColor();
     });
 
     // Cambiar el color del navbar al hacer scroll
     window.addEventListener('scroll', function() {
-        if (window.scrollY > 50) {
-            navbar.style.backgroundColor = getScrollBgColor();
-        } else {
-            navbar.style.backgroundColor = initialBgColor;
-        }
+        updateNavbarColor();
     });
+
+    // Inicializar el color del navbar según el modo actual al cargar la página
+    updateNavbarColor();
 });

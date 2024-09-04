@@ -4,6 +4,35 @@
 
 <body>
 
+    <style>
+        /* Popup de Requisitos de Contraseña */
+        .password-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 87%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1001;
+            max-width: 300px;
+        }
+
+        .password-popup.active {
+            display: block;
+        }
+
+        .password-popup p {
+            margin: 0;
+            color: #343a40;
+            font-family: "neue";
+            font-size: 1.1em;
+        }
+    </style>
+
 
     <!-- Implementacion de Aviso de Mayuscula -->
     <div id="caps-lock-warning-password" class="caps-lock-warning">
@@ -27,80 +56,93 @@
 
         <!-- Formulario de Registro -->
         <div class="right-section">
-
             <form id="registerForm" method="post" action="<?= base_url('register'); ?>" class="form">
                 <h2>Sign Up</h2>
                 <div class="form-inputs">
                     <div class="form-label">
-                        <input name="name" required type="text" id="name" placeholder="Your name"
-                            value="<?= old('name'); ?>">
+                        <input name="name" required type="text" id="name" placeholder="Your name" value="<?= old('name'); ?>">
                     </div>
                     <div class="form-label">
-                        <input name="email" required type="email" id="email" placeholder="name@example.com"
-                            value="<?= old('email'); ?>">
+                        <input name="email" required type="email" id="email" placeholder="name@example.com" value="<?= old('email'); ?>">
                     </div>
                     <div class="form-label password-container">
-                        <input name="password" required pattern=".{8,}" type="password" id="password"
-                            placeholder="Password">
+                        <input name="password" required pattern=".{8,}" type="password" id="password" placeholder="Password">
                         <div class="password-toggle">
-                            <span toggle="#password" class="field-icon toggle-password"><i
-                                    class="fa-solid fa-eye-slash"></i></span>
+                            <span toggle="#password" class="field-icon toggle-password"><i class="fa-solid fa-eye-slash"></i></span>
                         </div>
                     </div>
                     <div class="form-label password-container">
-                        <input name="confirm_password" required pattern=".{8,}" type="password" id="confirm_password"
-                            placeholder="Confirm Password">
+                        <input name="confirm_password" required pattern=".{8,}" type="password" id="confirm_password" placeholder="Confirm Password">
                         <div class="password-toggle">
-                            <span toggle="#confirm_password" class="field-icon toggle-password"><i
-                                    class="fa-solid fa-eye-slash"></i></span>
+                            <span toggle="#confirm_password" class="field-icon toggle-password"><i class="fa-solid fa-eye-slash"></i></span>
                         </div>
-                        <!-- Implementación de Aviso de Mayúscula -->
-                        <div id="caps-lock-warning-confirm-password" class="caps-lock-warning">Caps Lock is on</div>
                     </div>
                 </div>
                 <div class="links">
                     <a href="<?= base_url('login-animation'); ?>">Already have an account?</a>
                 </div>
-                <button type="submit" class="submit-button">
-                    Enter
-                </button>
+                <button type="submit" class="submit-button">Enter</button>
             </form>
+
+            <!-- Popup de Requisitos de Contraseña -->
+            <div id="passwordPopup" class="password-popup">
+                <p>Your password must be at least 8 characters long, contain 1 uppercase letter, and include a special character.</p>
+            </div>
         </div>
 
-    </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const cursor = document.querySelector(".cursor");
 
-            let targetX = 0;
-            let targetY = 0;
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const passwordField = document.getElementById('password');
+                const passwordPopup = document.getElementById('passwordPopup');
 
-            document.addEventListener("mousemove", function(e) {
-                targetX = e.pageX - cursor.offsetWidth / 2;
-                targetY = e.pageY - cursor.offsetHeight / 2;
+                // Muestra el popup cuando se hace clic en el campo de contraseña
+                passwordField.addEventListener('focus', function() {
+                    passwordPopup.classList.add('active');
+                });
+
+
+                // Cierra el popup cuando se hace clic fuera del popup
+                window.addEventListener('click', function(e) {
+                    if (e.target !== passwordPopup && e.target !== passwordField) {
+                        passwordPopup.classList.remove('active');
+                    }
+                });
             });
+        </script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const cursor = document.querySelector(".cursor");
 
-            function updateCursor() {
-                const currentX = parseFloat(cursor.style.left || 0);
-                const currentY = parseFloat(cursor.style.top || 0);
+                let targetX = 0;
+                let targetY = 0;
 
-                const dx = targetX - currentX;
-                const dy = targetY - currentY;
+                document.addEventListener("mousemove", function(e) {
+                    targetX = e.pageX - cursor.offsetWidth / 2;
+                    targetY = e.pageY - cursor.offsetHeight / 2;
+                });
 
-                cursor.style.left = `${currentX + dx * 0.1}px`; // Ajusta el factor de suavidad aquí
-                cursor.style.top = `${currentY + dy * 0.1}px`; // Ajusta el factor de suavidad aquí
+                function updateCursor() {
+                    const currentX = parseFloat(cursor.style.left || 0);
+                    const currentY = parseFloat(cursor.style.top || 0);
 
-                requestAnimationFrame(updateCursor);
-            }
+                    const dx = targetX - currentX;
+                    const dy = targetY - currentY;
 
-            updateCursor();
-        });
-    </script>
+                    cursor.style.left = `${currentX + dx * 0.1}px`; // Ajusta el factor de suavidad aquí
+                    cursor.style.top = `${currentY + dy * 0.1}px`; // Ajusta el factor de suavidad aquí
 
-    <script>
-        const registerLightImage = "<?= base_url('complements/styles/images/dots.png'); ?>";
-        const registerDarkImage = "<?= base_url('complements/styles/images/alone.jpg'); ?>";
-    </script>
+                    requestAnimationFrame(updateCursor);
+                }
 
-    <?= $this->include('modules/user/end.php'); ?>
+                updateCursor();
+            });
+        </script>
+
+        <script>
+            const registerLightImage = "<?= base_url('complements/styles/images/dots.png'); ?>";
+            const registerDarkImage = "<?= base_url('complements/styles/images/alone.jpg'); ?>";
+        </script>
+
+        <?= $this->include('modules/user/end.php'); ?>
 </body>
