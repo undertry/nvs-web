@@ -1,20 +1,49 @@
-// Funcion para verificar si la tecla de Bloq Mayus esta activada
+// Función para verificar si la tecla de Bloq Mayus está activada
 function checkCapsLock(event, warningElementId) {
   const warningElement = document.getElementById(warningElementId);
   const isCapsLockOn =
     event.getModifierState && event.getModifierState("CapsLock");
-  warningElement.classList.toggle("active", isCapsLockOn);
+  if (warningElement) {
+    // Nuevo: Verificamos si el elemento existe
+    warningElement.classList.toggle("active", isCapsLockOn);
+  }
 }
 
-document.getElementById("password").addEventListener("keyup", function (event) {
-  checkCapsLock(event, "caps-lock-warning-password");
-});
-// solucionar problema debido que funciona en register pero no en login
-document
-  .getElementById("confirm_password")
-  .addEventListener("keyup", function (event) {
-    checkCapsLock(event, "caps-lock-warning-password");
+// Verificamos si el campo 'password' existe antes de agregarle el event listener
+if (document.getElementById("password")) {
+  // Nuevo: Se asegura de que 'password' exista
+  document
+    .getElementById("password")
+    .addEventListener("keyup", function (event) {
+      checkCapsLock(event, "caps-lock-warning-password");
+    });
+}
+
+// Verificamos si el campo 'confirm_password' existe antes de agregarle el event listener
+if (document.getElementById("confirm_password")) {
+  // Nuevo: Se asegura de que 'confirm_password' exista
+  document
+    .getElementById("confirm_password")
+    .addEventListener("keyup", function (event) {
+      checkCapsLock(event, "caps-lock-warning-password");
+    });
+}
+
+// Función para mostrar/ocultar la contraseña
+$(document).ready(function () {
+  $(".toggle-password").click(function () {
+    $(this).toggleClass("show-password");
+    var input = $($(this).attr("toggle"));
+    if (input.attr("type") === "password") {
+      input.attr("type", "text");
+      $(this).html('<i class="fa-solid fa-eye"></i>');
+    } else {
+      input.attr("type", "password");
+      $(this).html('<i class="fa-solid fa-eye-slash"></i>');
+    }
   });
+});
+
 //   Funcion para validar la contraseña
 function validatePassword() {
   const password = document.getElementById("password").value;
@@ -37,21 +66,6 @@ function validatePassword() {
 
   return true;
 }
-
-// Funcion para mostrar la contraseña
-$(document).ready(function () {
-  $(".toggle-password").click(function () {
-    $(this).toggleClass("show-password");
-    var input = $($(this).attr("toggle"));
-    if (input.attr("type") === "password") {
-      input.attr("type", "text");
-      $(this).html('<i class="fa-solid fa-eye"></i>');
-    } else {
-      input.attr("type", "password");
-      $(this).html('<i class="fa-solid fa-eye-slash"></i>');
-    }
-  });
-});
 
 document.addEventListener("DOMContentLoaded", function () {
   const passwordField = document.getElementById("password");
