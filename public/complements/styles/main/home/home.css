@@ -4,7 +4,7 @@
   background-image : url("../../images/circle.jpg");
   background-size  : cover;
   background-repeat: no-repeat;
-  transition: background-image 0.5s ease;    /* transición de la imagen de fondo */
+  transition       : background-image 0.5s ease;
 }
 
 .home.light-mode {

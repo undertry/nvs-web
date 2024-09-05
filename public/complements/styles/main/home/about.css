@@ -29,7 +29,7 @@
 
 
 .comments-section .text h2 {
-    color      : #bb0f0f;
+    color      : var(--color-secondary);
     font-size  : 10.9em;
     font-family: "aero";
     font-weight: lighter;
@@ -77,11 +77,11 @@
 .comment-content p {
     font-size  : 1.5em;
     font-family: "neue";
-    color      : #f3f2f2d0;
+    color      : var(--color-white);
 }
 
 .light-mode .comment-content p {
-    color: #000000d0;
+    color: var(--color-black);
 }
 
 .comment-content h3 {

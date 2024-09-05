@@ -1,0 +1,182 @@
+/* section login starts here */
+
+.login-container {
+    display: flex;
+    width  : 100%;
+    height : 100vh;
+}
+
+.left-section {
+    width       : 33%;
+    position    : relative;
+    border-right: 2px solid var(--color-grey);
+    transition  : boder-right 0.5s ease;
+}
+
+.light-mode .left-section {
+    border-right: 2px solid var(--color-semigrey);
+}
+
+.left-section img {
+    width         : 100%;
+    height        : 100%;
+    object-fit    : cover;
+    display       : block;
+    pointer-events: none;
+}
+
+.right-section {
+    width           : 67%;
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+    padding         : 40px;
+    background-color: var(--color-black);
+    transition      : background-color 0.5s ease;
+}
+
+.light-mode .right-section {
+    background-color: var(--mode-light);
+}
+
+.form {
+    display       : flex;
+    flex-direction: column;
+    width         : 100%;
+    max-width     : 400px;
+    color         : var(--color-white);
+    transition    : color 0.5s ease;
+}
+
+.light-mode .form {
+    color: var(--color-black);
+}
+
+h2 {
+    font-size    : 2.9em;
+    margin-bottom: 20px;
+    text-align   : center;
+    font-family  : "neue";
+    font-weight  : lighter;
+}
+
+.form-label input {
+    width           : 100%;
+    padding         : 12px;
+    margin-bottom   : 20px;
+    background-color: var(--color-grey);
+    border-radius   : 50px;
+    border          : 1px solid var(--color-semigrey);
+    color           : var(--color-white);
+    font-size       : 1.2em;
+    font-family     : "neue";
+    font-weight     : lighter;
+    outline         : none;
+    transition      : background-color 0.5s ease, color 0.5s ease;
+}
+
+.light-mode .form-label input {
+    background-color: var(--color-white);
+    color           : var(--color-black);
+}
+
+.password-container {
+    position: relative;
+}
+
+.password-container .field-icon {
+    position : absolute;
+    right    : 12px;
+    top      : 37%;
+    transform: translateY(-50%);
+    cursor   : pointer;
+    color    : var(--color-semigrey);
+}
+
+.password-container input {
+    padding-right: 40px;
+}
+
+.toggle-password {
+    font-size: 1.2em;
+}
+
+.links {
+    display        : flex;
+    justify-content: space-between;
+    color          : var(--color-semigrey);
+    font-family    : "neue";
+    padding-bottom : 20px;
+}
+
+.links a {
+    text-decoration: none;
+    color          : inherit;
+    transition     : 0.5s;
+}
+
+.links a:hover {
+    text-decoration: none;
+    color          : var(--color-main);
+}
+
+.submit-button {
+    position        : relative;
+    display         : inline-block;
+    padding         : 12px 24px;
+    font-size       : 1.2em;
+    font-family     : "neue";
+    font-weight     : lighter;
+    color           : var(--color-white);
+    background-color: transparent;
+    border          : 2px solid var(--color-white);
+    border-radius   : 5px;
+    cursor          : pointer;
+    overflow        : hidden;
+    transition      : color 0.4s ease, background-color 0.4s ease, transform 0.4s ease;
+}
+
+.light-mode .submit-button {
+    color : var(--color-black);
+    border: 2px solid var(--color-black);
+}
+
+.submit-button::before {
+    content      : "";
+    position     : absolute;
+    top          : 50%;
+    left         : 50%;
+    width        : 300%;
+    height       : 300%;
+    background   : var(--color-white);
+    transition   : width 0.4s ease, height 0.4s ease, top 0.4s ease, left 0.4s ease;
+    border-radius: 50%;
+    z-index      : 0;
+    transform    : translate(-50%, -50%);
+}
+
+.light-mode .submit-button::before {
+    background: var(--color-black);
+}
+
+.submit-button:hover::before {
+    width : 0;
+    height: 0;
+    top   : 50%;
+    left  : 50%;
+}
+
+.submit-button:hover {
+    color: var(--color-white);
+}
+
+.light-mode .submit-button:hover {
+    color: var(--color-black);
+}
+
+.submit-button span {
+    position: relative;
+    z-index : 1;
+}
+
+/* section login ends here */

@@ -42,5 +42,4 @@
          </div>
      </div>
  </div>
-
  <!-- menu section ends here -->

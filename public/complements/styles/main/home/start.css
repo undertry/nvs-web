@@ -1,16 +1,19 @@
-:root {
-  --color-main     : #d60b0b;
-  --color-secondary: #bb0f0f;
-  --color-black    : #151414;
-  --color-semiblack: #202020;
-  --color-dark     : #0c0b0b;
-  --color-light     : #FCFCFC;
-  --color-white    : #f3f2f2;
-  --color-light-grey: #cfcfcf;
-  --color-semigrey : #565555;
-  --color-grey     : #535151;
+/* color palette */
 
+:root {
+  --color-main      : #d60b0b;
+  --color-secondary : #bb0f0f;
+  --color-black     : #151414;
+  --color-semiblack : #202020;
+  --color-dark      : #0c0b0b;
+  --color-light     : #FCFCFC;
+  --color-white     : #f3f2f2;
+  --color-light-grey: #cfcfcf;
+  --color-semigrey  : #565555;
+  --color-grey      : #535151;
 }
+
+/* Fonts */
 
 @font-face {
   font-family: "aero";
@@ -33,6 +36,7 @@
 }
 
 /* general styles */
+
 * {
   margin            : 0;
   padding           : 0;
@@ -46,6 +50,7 @@
 }
 
 /* cursor styles */
+
 .cursor {
   pointer-events  : none;
   position        : absolute;
@@ -61,6 +66,7 @@
 }
 
 /* line styles */
+
 hr {
   width : 80%;
   margin: 50px auto;
@@ -71,20 +77,23 @@ hr {
   border-color: var(--color-semigrey);
 }
 
-/* Clase para ocultar elementos por defecto */
+/* Class to hide elements by default */
+
 .hidden {
   opacity   : 0;
   transform : translateY(20px);
   transition: opacity 0.9s ease-out, transform 0.9s ease-out;
 }
 
-/* Clase para mostrar los elementos con animación */
+/* Class for displaying elements with animation */
+
 .visible {
   opacity  : 1;
   transform: translateY(0);
 }
 
 /* scroll icon styles */
+
 .scroll-to-top {
   position        : fixed;
   bottom          : 20px;
@@ -100,9 +109,7 @@ hr {
   text-decoration : none;
   transition      : background-color 0.5s, opacity 0.5s;
   opacity         : 0;
-  /* Oculta el botón inicialmente */
   pointer-events  : none;
-  /* Desactiva eventos de clic */
   z-index         : 1000;
 }
 
@@ -111,7 +118,6 @@ hr {
   color           : var(--color-light);
 }
 
-/* scroll hover */
 .scroll-to-top:hover {
   background-color: var(--color-light-grey);
 }
@@ -119,6 +125,8 @@ hr {
 .light-mode .scroll-to-top:hover {
   background-color: var(--color-semigrey);
 }
+
+/* banner cookie styles */
 
 .cookie-banner {
   position        : fixed;
@@ -157,6 +165,7 @@ hr {
 }
 
 /* body styles */
+
 body {
   margin          : 0;
   padding         : 0;

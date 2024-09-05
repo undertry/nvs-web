@@ -21,7 +21,6 @@
                  <ul>
                      <li><a href="#">User Manual</a></li>
                      <li><a href="#">Download</a></li>
-
                  </ul>
              </div>
              <div class="footer-column hidden">
@@ -43,7 +42,6 @@
                  <a href="#"><i class="fab fa-youtube"></i></a>
                  <a href="#"><i class="fab fa-discord"></i></a>
                  <a href="#"><i class="fab fa-github"></i></a>
-
              </div>
          </div>
      </div>

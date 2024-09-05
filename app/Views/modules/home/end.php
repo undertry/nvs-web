@@ -1,3 +1,4 @@
+<!-- scripts modules -->
 <script src="<?php echo base_url('complements/functionality/main/home/navbar.js'); ?>"></script>
 <script src="<?php echo base_url('complements/functionality/main/home/scroll-animation.js'); ?>"></script>
 <script src="<?php echo base_url('complements/functionality/main/home/encryption.js'); ?>"></script>

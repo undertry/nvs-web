@@ -9,7 +9,7 @@
     border-radius        : 10px;
     margin-top           : 10px;
     color                : var(--color-white);
-    transition: background-color 0.5s ease, color 0.5s ease;
+    transition           : background-color 0.5s ease, color 0.5s ease;
 }
 
 .light-mode .features-block {
@@ -44,21 +44,11 @@
     border-radius: 5px;
 }
 
-.feature-item .icon {
-    font-size    : 1.5em;
-    margin-right : 10px;
-    background   : linear-gradient(40deg, #333 45%, #151414 100%);
-    border       : 1px solid #454545;
-    padding      : 5px 10px;
-    border-radius: 5px;
-    display      : inline-block;
-}
-
 .feature-text h4 {
     margin     : 0;
     font-size  : 1.9em;
     font-family: "neue";
-    color      : var(--color-main);
+    color      : var(--color-secondary);
     font-weight: lighter;
 }
 
@@ -67,7 +57,7 @@
     font-size  : 1.5em;
     font-family: "neue";
     font-weight: lighter;
-    color      : #575757;
+    color      : var(--color-semigrey);
 }
 
 @media (max-width: 768px) {

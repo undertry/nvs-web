@@ -1,0 +1,64 @@
+CRITICAL - 2024-09-05 00:45:17 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "modules/user/start.php"
+[Method: GET, Route: login]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('modules/user/start.php')
+ 2 SYSTEMPATH\View\View.php(484): CodeIgniter\View\View->render('modules/user/start.php', null, true)
+ 3 APPPATH\Views\secondary\form\login.php(1): CodeIgniter\View\View->include('modules/user/start.php')
+ 4 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\NVS\\app\\Views\\secondary\\form\\login.php')
+ 5 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('secondary/form/login', [], true)
+ 7 APPPATH\Controllers\secondary\form\Login.php(22): view('secondary/form/login')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\secondary\form\Login->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\form\Login))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-05 00:45:18 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "modules/user/start.php"
+[Method: GET, Route: login]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('modules/user/start.php')
+ 2 SYSTEMPATH\View\View.php(484): CodeIgniter\View\View->render('modules/user/start.php', null, true)
+ 3 APPPATH\Views\secondary\form\login.php(1): CodeIgniter\View\View->include('modules/user/start.php')
+ 4 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\NVS\\app\\Views\\secondary\\form\\login.php')
+ 5 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('secondary/form/login', [], true)
+ 7 APPPATH\Controllers\secondary\form\Login.php(22): view('secondary/form/login')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\secondary\form\Login->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\form\Login))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-05 00:45:18 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "modules/user/start.php"
+[Method: GET, Route: login]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('modules/user/start.php')
+ 2 SYSTEMPATH\View\View.php(484): CodeIgniter\View\View->render('modules/user/start.php', null, true)
+ 3 APPPATH\Views\secondary\form\login.php(1): CodeIgniter\View\View->include('modules/user/start.php')
+ 4 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\NVS\\app\\Views\\secondary\\form\\login.php')
+ 5 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('secondary/form/login', [], true)
+ 7 APPPATH\Controllers\secondary\form\Login.php(22): view('secondary/form/login')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\secondary\form\Login->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\form\Login))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-05 00:45:18 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "modules/user/start.php"
+[Method: GET, Route: login]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('modules/user/start.php')
+ 2 SYSTEMPATH\View\View.php(484): CodeIgniter\View\View->render('modules/user/start.php', null, true)
+ 3 APPPATH\Views\secondary\form\login.php(1): CodeIgniter\View\View->include('modules/user/start.php')
+ 4 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\NVS\\app\\Views\\secondary\\form\\login.php')
+ 5 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('secondary/form/login', [], true)
+ 7 APPPATH\Controllers\secondary\form\Login.php(22): view('secondary/form/login')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\secondary\form\Login->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\form\Login))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

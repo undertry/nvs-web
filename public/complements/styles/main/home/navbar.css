@@ -16,7 +16,6 @@
 
 .light-mode #navbar {
     background-color: transparent;
-    /* Fondo blanco para modo claro */
 }
 
 #navbar .menu-icon {
@@ -37,7 +36,6 @@
 
 .light-mode #navbar .menu-icon-bar {
     background-color: var(--color-dark);
-    /* Color de las barras en modo claro */
 }
 
 #navbar .menu-icon.close .menu-icon-bar:nth-child(1) {
@@ -75,11 +73,10 @@
     margin    : 20px 0;
 }
 
-
-
 /* navbar section ends here */
 
 /* menu section starts here */
+
 #overlayNav {
     position        : fixed;
     top             : 0;
@@ -94,7 +91,6 @@
 
 .light-mode #overlayNav {
     background-color: var(--color-light);
-    /* Fondo blanco para modo claro */
 }
 
 #overlayNav .overlay-content {
@@ -127,8 +123,6 @@
 
 .light-mode #overlayNav .overlay-video .video-controls span {
     color: var(--color-black);
-
-    /* Color de los controles en modo claro */
 }
 
 #overlayNav .overlay-right ul {
@@ -152,7 +146,6 @@
 
 .light-mode #overlayNav .overlay-right ul li a {
     color: var(--color-black);
-    /* Color de los enlaces en modo claro */
 }
 
 #overlayNav .overlay-right ul li a::after {
@@ -171,7 +164,6 @@
 
 .light-mode #overlayNav .overlay-right ul li a::after {
     background-color: var(--color-black);
-    /* Color de la línea en modo claro */
 }
 
 #overlayNav .overlay-right ul li a:hover::after {
@@ -194,7 +186,6 @@
 
 .light-mode #overlayNav .cta-button {
     color : var(--color-dark);
-    /* Color del botón en modo claro */
     border: 2px solid var(--color-dark);
 }
 
@@ -223,7 +214,6 @@
 
 .light-mode #overlayNav .cta-button:hover {
     color: var(--color-dark);
-    /* Color del botón en modo claro */
 }
 
 #overlayNav.active {

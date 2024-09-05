@@ -59,6 +59,44 @@ $(document).ready(function() {
 <script src="<?php echo base_url('complements/functionality/main/home/cookies.js'); ?>"></script>
 <script src="<?php echo base_url('complements/functionality/main/home/navbar.js'); ?>"></script>
 
+<script>
+const lightImage = "<?= base_url('complements/styles/images/blacky.png'); ?>";
+const darkImage = "<?= base_url('complements/styles/images/corner.jpg'); ?>";
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const cursor = document.querySelector(".cursor");
+
+    let targetX = 0;
+    let targetY = 0;
+
+    document.addEventListener("mousemove", function(e) {
+        targetX = e.pageX - cursor.offsetWidth / 2;
+        targetY = e.pageY - cursor.offsetHeight / 2;
+    });
+
+    function updateCursor() {
+        const currentX = parseFloat(cursor.style.left || 0);
+        const currentY = parseFloat(cursor.style.top || 0);
+
+        const dx = targetX - currentX;
+        const dy = targetY - currentY;
+
+        cursor.style.left = `${currentX + dx * 0.1}px`; // Ajusta el factor de suavidad aquí
+        cursor.style.top = `${currentY + dy * 0.1}px`; // Ajusta el factor de suavidad aquí
+
+        requestAnimationFrame(updateCursor);
+    }
+
+    updateCursor();
+});
+</script>
+
+<script>
+const loginLightImage = "<?= base_url('complements/styles/images/trasparent.jpg'); ?>";
+const loginDarkImage = "<?= base_url('complements/styles/images/alone1.jpg'); ?>";
+</script>
 </body>
 
 </html>
