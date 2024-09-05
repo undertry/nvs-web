@@ -8,8 +8,8 @@
     const darkImage = "<?= base_url('complements/styles/images/corner.jpg'); ?>";
 </script>
 <script>
-    const loginLightImage = "<?= base_url('complements/styles/images/trasparent.jpg'); ?>";
-    const loginDarkImage = "<?= base_url('complements/styles/images/alone1.jpg'); ?>";
+    const registerLightImage = "<?= base_url('complements/styles/images/dots.png'); ?>";
+    const registerDarkImage = "<?= base_url('complements/styles/images/alone.jpg'); ?>";
 </script>
 </body>
 

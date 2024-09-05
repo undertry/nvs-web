@@ -23,9 +23,9 @@ $routes->get('verificationcode', 'secondary\form\Login::sendemailverification');
 $routes->POST('confirmcode', 'secondary\form\Login::verificationconfirm');
 
 // Seccion controlador User/Register
-$routes->get('signup-animation', 'secondary\form\Register::animation');
-$routes->get('register', 'secondary\form\Register::index');
-$routes->POST('register', 'secondary\form\Register::do_register');
+$routes->get('signup-animation', 'secondary\form\Signup::animation');
+$routes->get('signup', 'secondary\form\Signup::index');
+$routes->POST('signup', 'secondary\form\Signup::do_register');
 
 // get para la vista de cambio de contraseña y post para pasar los datos al controlador
 //solo para usuarios en sesion

@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="<?php echo base_url('complements/styles/secondary/form/start.css'); ?>">
     <link rel="stylesheet" href="<?php echo base_url('complements/styles/secondary/form/form.css'); ?>">
     <link rel="stylesheet" href="<?php echo base_url('complements/styles/main/home/navbar.css'); ?>">
-    <title>| Log In |</title>
+    <title>| Sign Up |</title>
 </head>
 
 <body>
@@ -24,8 +24,6 @@
         <div class="message success"><?= session()->getFlashdata('success'); ?></div>
     <?php endif; ?>
     <?php if (session()->getFlashdata('error') === 'The passwords do not match.') : ?>
-        document.getElementById('password').value = '';
-        document.getElementById('confirm_password').value = '';
     <?php endif; ?>
 
     <!-- cursor -->
@@ -34,6 +32,12 @@
     <!-- Implementation of Mayus Warning -->
     <div id="caps-lock-warning-password" class="caps-lock-warning">
         <i class="fas fa-lock"></i> Caps Lock is on
+    </div>
+
+    <!-- Password popup -->
+    <div id="passwordPopup" class="password-popup">
+        <p>Your password must be at least <span>8 characters long</span>, contain <span>1 uppercase letter</span>, and include a <span>special character</span>.</p>
+    </div>
     </div>
 
     <!-- navbar section starts here -->

@@ -7,7 +7,7 @@ use App\Controllers\main\BaseController;
 
 use \App\Models\secondary\form\UserModel;
 
-class Register extends BaseController
+class Signup extends BaseController
 {
     public function index()
     {
@@ -16,7 +16,7 @@ class Register extends BaseController
 
         if (!$user || $user->id_user < 1) {
             // Redirigir a la página de inicio de sesión si el usuario no está autenticado
-            return view('secondary/form/register');
+            return view('secondary/form/signup');
         } else {
             return redirect()->back();
         }
