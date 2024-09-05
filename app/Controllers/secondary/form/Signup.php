@@ -78,6 +78,6 @@ class Signup extends BaseController
 
     public function animation()
     {
-        return view('animations/user/signup-animation');
+        return view('animations/form/signup-animation');
     }
 }

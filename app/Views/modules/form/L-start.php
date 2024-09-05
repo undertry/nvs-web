@@ -24,8 +24,6 @@
         <div class="message success"><?= session()->getFlashdata('success'); ?></div>
     <?php endif; ?>
     <?php if (session()->getFlashdata('error') === 'The passwords do not match.') : ?>
-        document.getElementById('password').value = '';
-        document.getElementById('confirm_password').value = '';
     <?php endif; ?>
 
     <!-- cursor -->

@@ -9,6 +9,7 @@ function checkCapsLock(event, warningElementId) {
 document.getElementById("password").addEventListener("keyup", function (event) {
   checkCapsLock(event, "caps-lock-warning-password");
 });
+// solucionar problema debido que funciona en register pero no en login
 document
   .getElementById("confirm_password")
   .addEventListener("keyup", function (event) {

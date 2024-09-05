@@ -16,13 +16,17 @@
                 <div class="form-label password-container">
                     <input name="password" required pattern=".{8,}" type="password" id="password" placeholder="Password">
                     <div class="password-toggle">
-                        <span toggle="#password" class="field-icon toggle-password"><i class="fa-solid fa-eye-slash"></i></span>
+                        <span toggle="#password" class="field-icon toggle-password">
+                            <i class="fa-solid fa-eye-slash"></i>
+                        </span>
                     </div>
                 </div>
                 <div class="form-label password-container">
                     <input name="confirm_password" required pattern=".{8,}" type="password" id="confirm_password" placeholder="Confirm Password">
                     <div class="password-toggle">
-                        <span toggle="#confirm_password" class="field-icon toggle-password"><i class="fa-solid fa-eye-slash"></i></span>
+                        <span toggle="#confirm_password" class="field-icon toggle-password">
+                            <i class="fa-solid fa-eye-slash"></i>
+                        </span>
                     </div>
                 </div>
             </div>
@@ -31,4 +35,6 @@
             </div>
             <button type="submit" class="submit-button">Enter</button>
         </form>
-        <!-- sign up section ends here -->
+    </div>
+</div>
+<!-- sign up section ends here -->

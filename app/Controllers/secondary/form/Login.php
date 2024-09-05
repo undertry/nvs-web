@@ -166,6 +166,6 @@ class Login extends BaseController
 
     public function animation()
     {
-        return view('animations/user/login-animation');
+        return view('animations/form/login-animation');
     }
 }

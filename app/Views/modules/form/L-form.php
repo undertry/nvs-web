@@ -12,9 +12,11 @@
                 </div>
                 <div class="form-label password-container">
                     <input name="password" type="password" id="password" placeholder="Password" required>
-                    <span toggle="#password" class="field-icon toggle-password">
-                        <i class="fa-solid fa-eye-slash"></i>
-                    </span>
+                    <div class="password-toggle">
+                        <span toggle="#password" class="field-icon toggle-password">
+                            <i class="fa-solid fa-eye-slash"></i>
+                        </span>
+                    </div>
                 </div>
             </div>
             <div class="links">
