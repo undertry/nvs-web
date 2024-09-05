@@ -36,7 +36,7 @@
 }
 
 .light-mode .right-section {
-    background-color: var(--mode-light);
+    background-color: var(--color-light);
 }
 
 .form {
@@ -78,6 +78,7 @@ h2 {
 .light-mode .form-label input {
     background-color: var(--color-white);
     color           : var(--color-black);
+    border          : 1px solid var(--color-light-grey);
 }
 
 .password-container {
@@ -91,6 +92,15 @@ h2 {
     transform: translateY(-50%);
     cursor   : pointer;
     color    : var(--color-semigrey);
+}
+
+.light-mode .password-container .field-icon {
+    position : absolute;
+    right    : 12px;
+    top      : 37%;
+    transform: translateY(-50%);
+    cursor   : pointer;
+    color    : var(--color-light-grey);
 }
 
 .password-container input {
