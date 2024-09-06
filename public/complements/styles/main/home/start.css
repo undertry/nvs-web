@@ -6,7 +6,7 @@
   --color-black     : #151414;
   --color-semiblack : #202020;
   --color-dark      : #0c0b0b;
-  --color-light     : #FCFCFC;
+  --color-light     : #fcfcfc;
   --color-white     : #f3f2f2;
   --color-light-grey: #cfcfcf;
   --color-semigrey  : #565555;
@@ -35,6 +35,12 @@
   src        : url("../../fonts/neue/NeueMontreal-Medium.otf") format("truetype");
 }
 
+@font-face {
+  font-family: "ahsing";
+  src        : url("../../fonts/Ahsing/Ahsing-Regular.otf") format("truetype");
+}
+
+
 /* general styles */
 
 * {
@@ -52,12 +58,13 @@
 /* cursor styles */
 
 .cursor {
-  pointer-events  : none;
-  position        : absolute;
-  padding         : 0.5vw;
-  border-radius   : 50%;
-  z-index         : 9000;
-  transition      : transform 0.1s ease, width 0.3s ease, height 0.3s ease, background-color 0.5s ease;
+  pointer-events: none;
+  position      : absolute;
+  padding       : 0.5vw;
+  border-radius : 50%;
+  z-index       : 9000;
+  transition    : transform 0.1s ease, width 0.3s ease, height 0.3s ease,
+    background-color 0.5s ease;
   background-color: var(--color-white);
 }
 
@@ -170,7 +177,7 @@ body {
   margin          : 0;
   padding         : 0;
   font-family     : "neue";
-  background-color: var(--color-black);
+  background-color: var(--color-dark);
   color           : var(--color-white);
   display         : flex;
   flex-direction  : column;

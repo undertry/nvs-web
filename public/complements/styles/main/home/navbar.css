@@ -1,7 +1,7 @@
 /* General navbar styles */
 #navbar {
     width           : 100%;
-    background-color: var(--color-dark);
+    background-color: transparent;
     display         : flex;
     justify-content : space-between;
     align-items     : center;
@@ -9,29 +9,35 @@
     top             : 0;
     left            : 0;
     justify-content : space-between;
-    padding         : 60px 20px;
+    padding         : 60px 60px;
     z-index         : 2000;
     transition      : background-color 0.5s ease, color 0.5s ease;
     /* Para trabajar con el centrado */
 }
 
+.nav-left {
+    display    : flex;
+    align-items: center;
+}
+
 /* Left side logo */
 .nav-left .logo {
-    font-size      : 18px;
-    color          : white;
+    font-size      : 2.5em;
+    color          : var(--color-main);
     text-decoration: none;
-    font-family    : "aero";
+    pointer-events : none;
+    align-items    : center;
 }
 
 /* Center navigation items (centrado) */
 .nav-list {
     display      : flex;
     list-style   : none;
-    padding      : 13px 1px;
+    padding      : 18px 5px;
     margin       : 0;
     border-radius: 40px;
-    border       : 1px solid #555;
     position     : absolute;
+    border       : 1px solid var(--color-grey);
     /* Posición absoluta para centrado */
     left         : 50%;
     transform    : translateX(-50%);
@@ -40,7 +46,7 @@
 
 /* Nav items styling */
 .nav-item {
-    margin: 3px;
+    margin: 7px;
 }
 
 .nav-item a i {
@@ -55,7 +61,7 @@
     border-radius   : 25px;
     font-family     : "neue";
     font-size       : 1.2em;
-    color           : #fff;
+    color           : var(--color-light-grey);
     background-color: #333;
     transition      : background-color 0.3s ease, color 0.3s ease;
 }
@@ -78,32 +84,104 @@
 
 .signup-link {
     text-decoration : none;
-    padding         : 10px 20px;
+    padding         : 7px 18px;
     margin-left     : 15px;
     border-radius   : 25px;
-    font-family     : 'Arial', sans-serif;
-    color           : #fff;
-    background-color: #6a5acd;
+    background-color: transparent;
+    border          : 1px solid var(--color-grey);
     position        : relative;
+    color           : var(--color-light-grey);
+}
+
+.nav-right {
+    font-family: 'neue';
+    font-size  : 1.2em;
+}
+
+.nav-right i {
+    text-decoration: none;
+    color          : var(--color-light-grey);
+    margin-right   : 15px;
 }
 
 .signup-link .arrow {
-    display    : inline-block;
-    font-size  : 16px;
-    margin-left: 8px;
+    display         : inline-block;
+    font-size       : 1em;
+    margin-left     : 8px;
+    background-color: var(--color-main);
+    color           : var(--color-black);
+    border-radius   : 50%;
+    padding         : 7px 15px;
 }
 
 .login-link {
     text-decoration : none;
-    padding         : 10px 20px;
+    padding         : 14px 25px;
     border-radius   : 25px;
-    font-family     : 'Arial', sans-serif;
+    font-family     : 'neue', sans-serif;
+    font-size       : 1em;
     color           : #fff;
-    background-color: #333;
+    background-color: transparent;
+    border          : 1px solid var(--color-grey);
+    color           : var(--color-light-grey);
+    transition      : color 0.3s ease, background-color 0.3s ease;
 }
 
 .signup-link:hover,
 .login-link:hover {
-    background-color: #555;
-    color           : #fff;
+    background-color: transparent;
+    color           : var(--color-white);
+}
+
+.dropdown {
+    position: relative;
+    display : inline-block;
+}
+
+.globe {
+    display        : flex;
+    align-items    : center;
+    text-decoration: none;
+    color          : white;
+    font-family    : "neue";
+    /* Puedes cambiarlo según el color de tu navbar */
+}
+
+span.language-label {
+    margin-left: -6px;
+    font-size  : 13px;
+}
+
+.fa-chevron-down {
+    margin-left: 4px;
+    font-size  : 10px;
+}
+
+.dropdown-menu {
+    display         : none;
+    /* Oculto por defecto */
+    position        : absolute;
+    top             : 100%;
+    right           : 0;
+    background-color: transparent;
+    border          : 1px solid var(--color-grey);
+    list-style-type : none;
+    padding         : 10px;
+    margin-top      : 7px;
+    border-radius   : 4px;
+    z-index         : 1000;
+}
+
+.dropdown-menu li {
+    padding: 8px 12px;
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    color          : var(--color-light-grey);
+    display        : block;
+}
+
+.dropdown-menu li a:hover {
+    color: var(--color-main);
 }
