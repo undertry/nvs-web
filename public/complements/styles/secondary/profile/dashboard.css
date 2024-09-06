@@ -1,12 +1,16 @@
+/* color palette */
+
 :root {
-    --color-main     : #d60b0b;
-    --color-black    : #151414;
-    --color-semiblack: #202020;
-    --color-dark     : #0c0b0b;
-    --color-white    : #f3f2f2;
-    --color-grey     : #535151;
-    --color-semigrey : #565555;
-    --mode-light     : #FCFCFC;
+    --color-main      : #d60b0b;
+    --color-secondary : #bb0f0f;
+    --color-black     : #151414;
+    --color-semiblack : #202020;
+    --color-dark      : #0c0b0b;
+    --color-light     : #FCFCFC;
+    --color-white     : #f3f2f2;
+    --color-light-grey: #cfcfcf;
+    --color-semigrey  : #757575;
+    --color-grey      : #535151;
 }
 
 /* fonts select */
@@ -80,25 +84,18 @@ body {
 
 /* Dashboard Header */
 .dashboard-header {
-    position                 : fixed;
-    bottom                   : -60px;
+    position   : fixed;
+    top        : 50%;
     /* Ajusta según el espacio deseado desde el borde inferior */
-    right                    : 20px;
+    left       : 50%;
+    transform  : translate(-50%, -50%);
     /* Ajusta según el espacio deseado desde el borde derecho */
-    font-size                : 16.8em;
-    font-family              : "schabo";
-    font-weight              : lighter;
-    color                    : var(--color-main);
-    padding                  : 20px;
-    border-top-left-radius   : 20px;
-    border-bottom-left-radius: 20px;
-    margin                   : 0;
-    opacity                  : 1;
-    /* Asegúrate de que sea visible */
-}
+    font-size  : 11.8em;
+    font-family: "schabo";
+    font-weight: lighter;
+    color      : var(--color-secondary);
 
-/* Opcional: Para animar la entrada */
-.dashboard-header.active {
-    transform : translateY(0);
-    transition: transform 0.5s ease;
+    margin : 0;
+    opacity: 1;
+    /* Asegúrate de que sea visible */
 }

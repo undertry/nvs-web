@@ -1,7 +1,7 @@
 /* home section starts here */
 
 .home {
-  background-image : url("../../images/circle.jpg");
+  background-color : var(--color-dark);
   background-size  : cover;
   background-repeat: no-repeat;
   transition       : background-image 0.5s ease;

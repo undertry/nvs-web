@@ -146,3 +146,4 @@ in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
  7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-09-05 23:54:19 --> Excepción capturada al intentar conectarse a la API: 28 : Failed to connect to 192.168.0.164 port 5000 after 14021 ms: Couldn't connect to server

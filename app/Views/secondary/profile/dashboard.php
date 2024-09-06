@@ -45,7 +45,7 @@
 
 
 
-    <h1 class="dashboard-header title-animate">DASHBOARD</h1>
+    <h1 class="dashboard-header title-animate">Welcome <?= session('user')->name; ?></h1>
 
 
 
@@ -109,7 +109,7 @@
         };
 
         title.style.opacity = 1;
-        revealText(title, 'DASHBOARD', 85);
+        revealText(title, 'Welcome <?= session('user')->name; ?>', 85);
 
         // Aplicar la clase activa después de que el texto haya sido revelado
         setTimeout(() => {
