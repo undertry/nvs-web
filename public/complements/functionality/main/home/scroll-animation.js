@@ -39,15 +39,3 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(element); // Empieza a observar los elementos
   });
 });
-
-document.addEventListener("scroll", function () {
-  const scrollToTopBtn = document.querySelector(".scroll-to-top");
-  if (window.scrollY > 100) {
-    // Ajusta el valor según cuándo quieres que aparezca el botón
-    scrollToTopBtn.style.opacity = "1";
-    scrollToTopBtn.style.pointerEvents = "auto";
-  } else {
-    scrollToTopBtn.style.opacity = "0";
-    scrollToTopBtn.style.pointerEvents = "none";
-  }
-});

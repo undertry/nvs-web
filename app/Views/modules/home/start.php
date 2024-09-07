@@ -26,6 +26,4 @@
     <div class="cursor"></div>
 
     <!-- sroll button -->
-    <a href="#" class="scroll-to-top">
-        <i class="fa fa-arrow-up"></i>
-    </a>
+    <a href="#" class="scroll-to-top">↘</a>

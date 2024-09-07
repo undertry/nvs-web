@@ -15,35 +15,82 @@
   display        : flex;
   justify-content: center;
   align-items    : center;
-  height         : 100vh;
+  height         : 75vh;
   padding-top    : 0;
 }
 
+
 .intro-text {
-  text-align: left;
+  text-align: center;
+  position  : relative;
 }
 
 .intro-subtext {
-  position   : absolute;
-  width      : 50rem;
-  bottom     : 5%;
-  right      : 2%;
-  font-size  : 1.2em;
+  font-size  : 2rem;
   color      : var(--color-grey);
   font-family: "neue";
+  margin-top : 1rem;
+  overflow   : hidden;
+  position   : relative;
 }
 
+/* Animaciones */
+@keyframes slideIn {
+  from {
+    opacity  : 0;
+    transform: translateY(100%);
+  }
+
+  to {
+    opacity  : 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    opacity  : 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity  : 0;
+    transform: translateY(-100%);
+  }
+}
+
+/* Aplicar las animaciones */
+.word-slide {
+  display  : inline-block;
+  animation: slideIn 0.5s forwards;
+  opacity  : 0;
+  color    : var(--color-main);
+}
+
+.slide-in {
+  animation: slideIn 0.5s forwards;
+}
+
+.slide-out {
+  animation: slideOut 0.5s forwards;
+  opacity  : 0;
+}
+
+
 .intro-text h1 {
-  font-size  : 10em;
-  font-weight: lighter;
-  font-family: "schabo";
-  text-align : center;
-  margin     : 0 auto;
-  color      : var(--color-secondary);
-  opacity    : 0;
-  transition : opacity 1s ease-in-out;
-  overflow   : hidden;
-  white-space: nowrap;
+  font-size     : 8em;
+  font-weight   : lighter;
+  font-family   : "schabo";
+  text-align    : center;
+  margin        : 0 auto;
+  color         : var(--color-secondary);
+  opacity       : 0;
+  transition    : opacity 1s ease-in-out;
+  overflow      : hidden;
+  white-space   : nowrap;
+  pointer-events: none;
+  /* no permite el subrayado */
+  user-select   : none;
 }
 
 /* home sections ends here */
