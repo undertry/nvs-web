@@ -1,10 +1,19 @@
 /* home section starts here */
 
 .home {
-  background-color : var(--color-dark);
-  background-size  : cover;
-  background-repeat: no-repeat;
-  transition       : background-image 0.5s ease;
+  background-color: var(--color-dark);
+  display         : flex;
+  justify-content : center;
+  align-items     : center;
+  transition      : transform 1.5s ease, opacity 1.5s ease;
+
+  /* Ocupa toda la altura de la ventana */
+}
+
+/* Hidden and scrolled state */
+.home.shrink {
+  transform: scale(0.5);
+  opacity  : 0;
 }
 
 .home.light-mode {
@@ -15,7 +24,7 @@
   display        : flex;
   justify-content: center;
   align-items    : center;
-  height         : 75vh;
+  height         : 110vh;
   padding-top    : 0;
 }
 
@@ -38,7 +47,7 @@
 @keyframes slideIn {
   from {
     opacity  : 0;
-    transform: translateY(100%);
+    transform: translateY(20%);
   }
 
   to {
@@ -55,16 +64,18 @@
 
   to {
     opacity  : 0;
-    transform: translateY(-100%);
+    transform: translateY(-20%);
   }
 }
 
 /* Aplicar las animaciones */
 .word-slide {
-  display  : inline-block;
-  animation: slideIn 0.5s forwards;
-  opacity  : 0;
-  color    : var(--color-main);
+  display   : inline-block;
+  animation : slideIn 0.5s forwards;
+  opacity   : 0;
+  color     : var(--color-main);
+  transform : translateY(20%);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .slide-in {

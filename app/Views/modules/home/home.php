@@ -1,5 +1,5 @@
 <section class="home" id="home">
-    <div class="intro hidden">
+    <div class="intro">
         <div class="intro-text">
             <h1 class="title-animate">NETWORK VULNERABILITY SCAN</h1>
             <h3 class="intro-subtext">

@@ -1,5 +1,5 @@
 <!-- software section starts here -->
-<section id="software">
+<section class="next-section" id="next-section">
     <div class="section-header hidden">
         <h2>SOFTWARE</h2>
     </div>

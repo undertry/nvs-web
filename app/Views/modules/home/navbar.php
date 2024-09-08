@@ -9,9 +9,9 @@
                 <i class="fa-solid fa-circle-notch"></i> Home
             </a>
         </li>
-        <li class="nav-item"><a href="#services">Software</a></li>
-        <li class="nav-item"><a href="#about">About</a></li>
-        <li class="nav-item"><a href="#faq">Faq</a></li>
+        <li class="nav-item"><a href="#services"><i class="fa-brands fa-uncharted"></i> Software</a></li>
+        <li class="nav-item"><a href="#about"><i class="fa-solid fa-circle-info"></i> About</a></li>
+        <li class="nav-item"><a href="#faq"><i class="fa-solid fa-comments"></i> Faq</a></li>
     </ul>
 
     <div class="nav-right">

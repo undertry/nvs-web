@@ -72,6 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const dynamicWord = document.getElementById('dynamic-word');
 
     setInterval(() => {
+        // Añadimos la clase de salida
         dynamicWord.classList.add('slide-out');
 
         setTimeout(() => {
@@ -87,7 +88,31 @@ document.addEventListener('DOMContentLoaded', () => {
                 dynamicWord.classList.remove('slide-in');
             }, 500); // Tiempo de la animación de entrada
         }, 500); // Tiempo de la animación de salida
-    }, 1900); // Cambio de palabra cada 3 segundos
+    }, 3000); // Cambio de palabra cada 3 segundos
+});
+</script>
+<!-- scrooll animation -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const homeSection = document.querySelector(".home");
+    const nextSection = document.querySelector(".next-section");
+
+    const observerOptions = {
+        root: null, // Observa respecto al viewport
+        threshold: 0.1 // Se activa cuando el 10% de la siguiente sección esté visible
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                homeSection.classList.add("shrink");
+            } else {
+                homeSection.classList.remove("shrink");
+            }
+        });
+    }, observerOptions);
+
+    observer.observe(nextSection); // Observa la sección que sigue
 });
 </script>
 
