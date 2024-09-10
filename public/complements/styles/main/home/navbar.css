@@ -23,7 +23,6 @@
 
 /* Left side logo */
 .nav-left .logo {
-    position       : fixed;
     font-size      : 2.5em;
     color          : var(--color-main);
     text-decoration: none;
@@ -119,7 +118,6 @@
 .nav-right i {
     text-decoration: none;
     color          : var(--color-light-grey);
-    margin-right   : 15px;
 }
 
 .signup-link .arrow {
@@ -158,23 +156,77 @@
     color           : var(--color-white);
 }
 
+/* General styles */
+#toggle-dark-mode {
+    position  : fixed;
+    bottom    : 60px;
+    left      : 35px;
+    background: rgba(0, 0, 0, 0.2);
+    /* Color blanco con 20% de opacidad */
+
+    /* Efecto de difuminado */
+    backdrop-filter        : blur(10px);
+    /* Aplica el blur */
+    -webkit-backdrop-filter: blur(10px);
+    /* Soporte para Safari */
+    border                 : 1px solid var(--color-grey);
+    color                  : var(--color-light-grey);
+    border-radius          : 15px;
+    padding                : 10px 11px;
+    font-size              : 20px;
+    z-index                : 1000;
+    text-decoration        : none;
+    display                : flex;
+    align-items            : center;
+    justify-content        : center;
+    transition             : background-color 0.3s;
+}
+
+#toggle-dark-mode:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Efecto hover */
+}
+
 .dropdown {
-    position: relative;
-    display : inline-block;
+    background: rgba(0, 0, 0, 0.2);
+    /* Color blanco con 20% de opacidad */
+
+    /* Efecto de difuminado */
+    backdrop-filter        : blur(10px);
+    /* Aplica el blur */
+    -webkit-backdrop-filter: blur(10px);
+    /* Soporte para Safari */
+    border                 : 1px solid var(--color-grey);
+    color                  : var(--color-light-grey);
+    border-radius          : 15px;
+    position               : fixed;
+    bottom                 : 110px;
+    /* Justo encima del ícono de modo oscuro */
+    left                   : 35px;
+    display                : inline-block;
+    z-index                : 1000;
 }
 
 .globe {
     display        : flex;
     align-items    : center;
+    /* Fondo oscuro con transparencia */
+    padding        : 10px;
+    border-radius  : 50px;
     text-decoration: none;
     color          : white;
     font-family    : "neue";
-    /* Puedes cambiarlo según el color de tu navbar */
+    font-size      : 14px;
+    transition     : background-color 0.3s;
+}
+
+.globe:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Efecto hover */
 }
 
 span.language-label {
-    margin-left: -6px;
-    font-size  : 13px;
+    margin-left: 6px;
 }
 
 .fa-chevron-down {
@@ -183,18 +235,17 @@ span.language-label {
 }
 
 .dropdown-menu {
-    display         : none;
+    display        : none;
     /* Oculto por defecto */
-    position        : absolute;
-    top             : 100%;
-    right           : 0;
-    background-color: transparent;
-    border          : 1px solid var(--color-grey);
-    list-style-type : none;
-    padding         : 10px;
-    margin-top      : 7px;
-    border-radius   : 4px;
-    z-index         : 1000;
+    position       : absolute;
+    top            : 150%;
+    /* Para que aparezca encima del ícono del globo */
+    left           : 0;
+    /* Fondo oscuro con transparencia */
+    list-style-type: none;
+    padding        : 10px;
+    border-radius  : 4px;
+    z-index        : 1001;
 }
 
 .dropdown-menu li {
@@ -203,10 +254,14 @@ span.language-label {
 
 .dropdown-menu li a {
     text-decoration: none;
-    color          : var(--color-light-grey);
+    color          : white;
     display        : block;
 }
 
 .dropdown-menu li a:hover {
     color: var(--color-main);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
 }

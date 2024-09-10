@@ -27,6 +27,7 @@
                 <li><a href="#">Spanish</a></li>
             </ul>
         </div>
+
         <a href="<?= base_url('login-animation'); ?>" class="login-link">Log In</a>
         <a href="<?= base_url('signup-animation'); ?>" class="signup-link">Sign Up <span class="arrow">↗</span></a>
     </div>
