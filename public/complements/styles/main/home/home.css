@@ -10,6 +10,19 @@
   /* Ocupa toda la altura de la ventana */
 }
 
+#particles-js {
+  position  : absolute;
+  width     : 100%;
+  height    : 100%;
+  z-index   : 1;
+  /* Detrás del contenido */
+  top       : 0;
+  left      : 0;
+  background: var(--color-dark);
+  /* El mismo color de fondo de tu .home */
+}
+
+
 /* Hidden and scrolled state */
 .home.shrink {
   transform: scale(0.5);
@@ -26,6 +39,7 @@
   align-items    : center;
   height         : 110vh;
   padding-top    : 0;
+  z-index        : 10;
 }
 
 

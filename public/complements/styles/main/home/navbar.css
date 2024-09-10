@@ -39,18 +39,9 @@
     border-radius: 40px;
     position     : fixed;
     border       : 1px solid var(--color-grey);
-    /* Posición absoluta para centrado */
     left         : 50%;
     transform    : translateX(-50%);
-    /* Fondo con transparencia para permitir el blur */
-    background   : rgba(0, 0, 0, 0.2);
-    /* Color blanco con 20% de opacidad */
-
-    /* Efecto de difuminado */
-    backdrop-filter        : blur(10px);
-    /* Aplica el blur */
-    -webkit-backdrop-filter: blur(10px);
-    /* Soporte para Safari */
+    background   : var(--color-black);
 }
 
 /* Nav items styling */
@@ -100,14 +91,7 @@
     border         : 1px solid var(--color-grey);
     position       : relative;
     color          : var(--color-light-grey);
-    background     : rgba(0, 0, 0, 0.2);
-    /* Color blanco con 20% de opacidad */
-
-    /* Efecto de difuminado */
-    backdrop-filter        : blur(10px);
-    /* Aplica el blur */
-    -webkit-backdrop-filter: blur(10px);
-    /* Soporte para Safari */
+    background     : var(--color-black);
 }
 
 .nav-right {
@@ -136,50 +120,34 @@
     border-radius  : 25px;
     font-family    : 'neue', sans-serif;
     font-size      : 1em;
-    color          : #fff;
-    background     : rgba(0, 0, 0, 0.2);
-    /* Color blanco con 20% de opacidad */
-
-    /* Efecto de difuminado */
-    backdrop-filter        : blur(10px);
-    /* Aplica el blur */
-    -webkit-backdrop-filter: blur(10px);
-    /* Soporte para Safari */
-    border                 : 1px solid var(--color-grey);
-    color                  : var(--color-light-grey);
-    transition             : color 0.3s ease, background-color 0.3s ease;
+    background     : var(--color-black);
+    border         : 1px solid var(--color-grey);
+    color          : var(--color-light-grey);
+    transition     : color 0.3s ease, background-color 0.3s ease;
 }
 
 .signup-link:hover,
 .login-link:hover {
-    background-color: transparent;
-    color           : var(--color-white);
+    color: var(--color-white);
 }
 
 /* General styles */
 #toggle-dark-mode {
-    position  : fixed;
-    bottom    : 60px;
-    left      : 35px;
-    background: rgba(0, 0, 0, 0.2);
-    /* Color blanco con 20% de opacidad */
-
-    /* Efecto de difuminado */
-    backdrop-filter        : blur(10px);
-    /* Aplica el blur */
-    -webkit-backdrop-filter: blur(10px);
-    /* Soporte para Safari */
-    border                 : 1px solid var(--color-grey);
-    color                  : var(--color-light-grey);
-    border-radius          : 15px;
-    padding                : 10px 11px;
-    font-size              : 20px;
-    z-index                : 1000;
-    text-decoration        : none;
-    display                : flex;
-    align-items            : center;
-    justify-content        : center;
-    transition             : background-color 0.3s;
+    position       : fixed;
+    bottom         : 60px;
+    left           : 35px;
+    background     : var(--color-black);
+    border         : 1px solid var(--color-grey);
+    color          : var(--color-light-grey);
+    border-radius  : 15px;
+    padding        : 10px 11px;
+    font-size      : 20px;
+    z-index        : 1000;
+    text-decoration: none;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    transition     : background-color 0.3s;
 }
 
 #toggle-dark-mode:hover {
@@ -188,31 +156,28 @@
 }
 
 .dropdown {
-    background: rgba(0, 0, 0, 0.2);
-    /* Color blanco con 20% de opacidad */
+    border       : 1px solid var(--color-grey);
+    color        : var(--color-light-grey);
+    background   : var(--color-black);
+    border-radius: 15px;
+    position     : fixed;
+    bottom       : 110px;
+    left         : 35px;
+    display      : inline-block;
+    z-index      : 1000;
+    transition   : background-color 0.3s;
+}
 
-    /* Efecto de difuminado */
-    backdrop-filter        : blur(10px);
-    /* Aplica el blur */
-    -webkit-backdrop-filter: blur(10px);
-    /* Soporte para Safari */
-    border                 : 1px solid var(--color-grey);
-    color                  : var(--color-light-grey);
-    border-radius          : 15px;
-    position               : fixed;
-    bottom                 : 110px;
-    /* Justo encima del ícono de modo oscuro */
-    left                   : 35px;
-    display                : inline-block;
-    z-index                : 1000;
+.dropdown:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Efecto hover */
 }
 
 .globe {
     display        : flex;
     align-items    : center;
-    /* Fondo oscuro con transparencia */
     padding        : 10px;
-    border-radius  : 50px;
+    border-radius  : 15px;
     text-decoration: none;
     color          : white;
     font-family    : "neue";
@@ -220,10 +185,6 @@
     transition     : background-color 0.3s;
 }
 
-.globe:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    /* Efecto hover */
-}
 
 span.language-label {
     margin-left: 6px;
@@ -236,16 +197,15 @@ span.language-label {
 
 .dropdown-menu {
     display        : none;
-    /* Oculto por defecto */
     position       : absolute;
-    top            : 150%;
-    /* Para que aparezca encima del ícono del globo */
-    left           : 0;
-    /* Fondo oscuro con transparencia */
+    top            : 1px;
+    left           : 75px;
     list-style-type: none;
+    background     : var(--color-black);
     padding        : 10px;
-    border-radius  : 4px;
     z-index        : 1001;
+    border         : 1px solid var(--color-grey);
+    border-radius  : 15px;
 }
 
 .dropdown-menu li {
@@ -254,7 +214,7 @@ span.language-label {
 
 .dropdown-menu li a {
     text-decoration: none;
-    color          : white;
+    color          : var(--color-light-grey);
     display        : block;
 }
 
