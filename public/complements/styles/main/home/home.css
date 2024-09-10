@@ -24,7 +24,7 @@
 
 
 /* Hidden and scrolled state */
-.home.shrink {
+.intro.shrink {
   transform: scale(0.5);
   opacity  : 0;
 }
@@ -40,6 +40,7 @@
   height         : 110vh;
   padding-top    : 0;
   z-index        : 10;
+  transition     : transform 1.5s ease, opacity 1.5s ease;
 }
 
 

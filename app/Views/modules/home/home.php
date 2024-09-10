@@ -1,6 +1,6 @@
 <section class="home" id="home">
     <div id="particles-js"></div> <!-- Contenedor de partículas -->
-    <div class="intro">
+    <div class="intro" id="intro">
         <div class="intro-text hidden">
             <h1 class="title-animate">NETWORK VULNERABILITY SCAN</h1>
             <h3 class="intro-subtext">
