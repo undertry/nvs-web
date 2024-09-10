@@ -55,6 +55,7 @@
   margin-top : 1rem;
   overflow   : hidden;
   position   : relative;
+  user-select: none;
 }
 
 /* Animaciones */
