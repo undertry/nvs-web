@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-08-2024 a las 01:44:09
+-- Tiempo de generación: 12-09-2024 a las 00:14:05
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.1.17
 
@@ -175,9 +175,9 @@ CREATE TABLE `scan` (
 INSERT INTO `scan` (`id_scan`, `id_user`, `id_network`, `scan_date`) VALUES
 (1, 1, 1, '2024-06-11 13:05:03'),
 (2, 2, 2, '2024-06-02 14:02:34'),
-(3, 9, 3, '2024-07-24 13:36:37'),
-(4, 1, 4, '2024-06-26 00:05:01'),
-(5, 9, 2, '2024-07-24 13:34:53');
+(3, 24, 3, '2024-09-11 22:08:09'),
+(4, 5, 4, '2024-09-11 22:08:18'),
+(5, 24, 2, '2024-09-11 21:58:22');
 
 -- --------------------------------------------------------
 
@@ -232,7 +232,7 @@ INSERT INTO `security_type` (`id_security_type`, `type`) VALUES
 --
 
 CREATE TABLE `solution` (
-  `id_solucion` int(11) NOT NULL,
+  `id_solution` int(11) NOT NULL,
   `solution` varchar(255) DEFAULT NULL,
   `vulnerability_code` varchar(255) NOT NULL,
   `vuln_description` varchar(255) NOT NULL
@@ -242,7 +242,7 @@ CREATE TABLE `solution` (
 -- Volcado de datos para la tabla `solution`
 --
 
-INSERT INTO `solution` (`id_solucion`, `solution`, `vulnerability_code`, `vuln_description`) VALUES
+INSERT INTO `solution` (`id_solution`, `solution`, `vulnerability_code`, `vuln_description`) VALUES
 (1, 'Instalar las actualizaciones de seguridad proporcionadas por Microsoft. Esta vulnerabilidad fue parcheada con actualizaciones de seguridad de Microsoft Windows.', 'CVE-2017-0143 ', 'Vulnerabilidad en el protocolo SMB de Windows que permite ejecución remota de código.'),
 (2, 'Actualizar Microsoft Edge a la versión más reciente disponible. Microsoft lanzó parches para corregir esta vulnerabilidad.', 'CVE-2018-8174', 'Vulnerabilidad en el motor de scripting de Microsoft Edge que permite ejecución remota de código.'),
 (3, 'Aplicar los parches de seguridad disponibles para las versiones afectadas de Windows. Microsoft proporcionó parches incluso para sistemas operativos fuera de soporte estándar.', 'CVE-2019-0708', 'Vulnerabilidad en el servicio de Escritorio remoto de Windows (BlueKeep) que permite ejecución remota de código sin autenticación.'),
@@ -357,7 +357,7 @@ ALTER TABLE `security_type`
 -- Indices de la tabla `solution`
 --
 ALTER TABLE `solution`
-  ADD PRIMARY KEY (`id_solucion`);
+  ADD PRIMARY KEY (`id_solution`);
 
 --
 -- Indices de la tabla `users`
@@ -427,7 +427,7 @@ ALTER TABLE `security_type`
 -- AUTO_INCREMENT de la tabla `solution`
 --
 ALTER TABLE `solution`
-  MODIFY `id_solucion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_solution` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
@@ -477,7 +477,7 @@ ALTER TABLE `scan`
 ALTER TABLE `scan_details`
   ADD CONSTRAINT `scan_details_ibfk_1` FOREIGN KEY (`id_scan`) REFERENCES `scan` (`id_scan`),
   ADD CONSTRAINT `scan_details_ibfk_2` FOREIGN KEY (`id_devices`) REFERENCES `devices` (`id_devices`),
-  ADD CONSTRAINT `scan_details_ibfk_3` FOREIGN KEY (`id_solution`) REFERENCES `solution` (`id_solucion`);
+  ADD CONSTRAINT `scan_details_ibfk_3` FOREIGN KEY (`id_solution`) REFERENCES `solution` (`id_solution`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

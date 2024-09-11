@@ -14,7 +14,7 @@ class ScanModel extends Model
     {
         return $this->db->table('scan')
             ->select('scan.*, users.name AS user_name, network.signal, network.essid,
-            network.bssid, network.encryption AS security_type, devices.ip_address,
+            network.bssid, network.id_security_type AS security_type, devices.ip_address,
             devices.operating_system, devices.mac_address, ports.port_name, ports.service,
             ports.protocol, port_status.open, port_status.close, port_status.filtered,
             solution.solution, solution.vulnerability_code, solution.vuln_description, network.channel')
