@@ -45,18 +45,17 @@
 
 
 
-
     <div class="container">
         <h1>Available WiFi Networks</h1>
         <?php if (!empty($network)): ?>
         <ul>
-            <?php foreach ($network as $network): ?>
+            <?php foreach ($network as $net): ?>
             <li>
-                <strong>ESSID:</strong> <?= esc($network['essid']) ?><br>
-                <strong>BSSID:</strong> <?= esc($network['bssid']) ?><br>
-                <strong>Signal:</strong> <?= esc($network['signal']) ?><br>
-                <strong>Channel:</strong> <?= esc($network['channel']) ?><br>
-                <strong>Encryption:</strong> <?= esc($network['encryption']) ?><br>
+                <strong>ESSID:</strong> <?= esc($net['ESSID']) ?><br>
+                <strong>BSSID:</strong> <?= esc($net['BSSID']) ?><br>
+                <strong>Signal:</strong> <?= esc($net['Signal']) ?><br>
+                <strong>Channel:</strong> <?= esc($net['Channel']) ?><br>
+                <strong>Encryption:</strong> <?= esc($net['Encryption']) ?><br>
                 <hr>
             </li>
             <?php endforeach; ?>
@@ -65,6 +64,8 @@
         <p>No WiFi networks found.</p>
         <?php endif; ?>
     </div>
+
+
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         var navbar = document.getElementById('navbar');

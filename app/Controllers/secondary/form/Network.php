@@ -3,11 +3,7 @@
 namespace App\Controllers\secondary\form;
 
 use CodeIgniter\HTTP\CURLRequest;
-
-use App\Controllers\main\BaseController; // Asegúrate de importar la clase correcta , hay que importar el BseController de main
-use App\Models\tertiary\network\NetworkModel;
-
-
+use App\Controllers\main\BaseController;
 
 class Network extends BaseController
 {
@@ -15,20 +11,16 @@ class Network extends BaseController
     {
         $client = \Config\Services::curlrequest();
 
-        $NetworkModel = new NetworkModel();
-
         try {
-            $response = $client->get('http://192.168.0.164:5000/scan');
+            $response = $client->get('http://192.168.0.162:5000/scan');
             log_message('info', 'Solicitud realizada a la API.');
 
             if ($response->getStatusCode() == 200) {
                 $network = json_decode($response->getBody(), true);
                 log_message('info', 'Datos recibidos: ' . print_r($network, true));
-
-                log_message('info', 'Datos procesados: ' . print_r($network, true));
-
-                $NetworkModel->network($network);
-
+                echo "<pre>";
+                print_r($network);  // Para ver la estructura del array
+                echo "</pre>";
             } else {
                 log_message('error', 'Error en la respuesta de la API: ' . $response->getStatusCode());
                 $network = [];
@@ -40,7 +32,8 @@ class Network extends BaseController
 
         return view('tertiary/network/network', ['network' => $network]);
     }
-public function animation()
+
+    public function animation()
     {
         return view('animations/network/animation');
     }
