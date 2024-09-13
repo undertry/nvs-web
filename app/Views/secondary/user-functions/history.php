@@ -88,88 +88,126 @@
 
     <!-- Script para generar el PDF específico de cada escaneo -->
     <script>
-        document.querySelectorAll('.downloadPDF').forEach(button => {
-            button.addEventListener('click', function() {
-                const { jsPDF } = window.jspdf;
-                const doc = new jsPDF();
+    document.querySelectorAll('.downloadPDF').forEach(button => {
+        button.addEventListener('click', function() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF({
+                format: 'a4'
+            });
 
-                // Obtener datos específicos del botón seleccionado
-                const scanDate = this.getAttribute('data-scan-date');
-                const userName = this.getAttribute('data-user-name');
-                const signal = this.getAttribute('data-signal');
-                const essid = this.getAttribute('data-essid');
-                const bssid = this.getAttribute('data-bssid');
-                const channel = this.getAttribute('data-channel');
-                const securityType = this.getAttribute('data-security-type');
-                const ip = this.getAttribute('data-ip');
-                const os = this.getAttribute('data-os');
-                const mac = this.getAttribute('data-mac');
-                const port = this.getAttribute('data-port');
-                const service = this.getAttribute('data-service');
-                const protocol = this.getAttribute('data-protocol');
-                const status = this.getAttribute('data-status');
-                const vulnCode = this.getAttribute('data-vuln-code');
-                const vulnDesc = this.getAttribute('data-vuln-desc');
-                const solution = this.getAttribute('data-solution');
+            // Obtener datos específicos del botón seleccionado
+            const scanDate = this.getAttribute('data-scan-date');
+            const userName = this.getAttribute('data-user-name');
+            const signal = this.getAttribute('data-signal');
+            const essid = this.getAttribute('data-essid');
+            const bssid = this.getAttribute('data-bssid');
+            const channel = this.getAttribute('data-channel');
+            const securityType = this.getAttribute('data-security-type');
+            const ip = this.getAttribute('data-ip');
+            const os = this.getAttribute('data-os');
+            const mac = this.getAttribute('data-mac');
+            const port = this.getAttribute('data-port');
+            const service = this.getAttribute('data-service');
+            const protocol = this.getAttribute('data-protocol');
+            const status = this.getAttribute('data-status');
+            const vulnCode = this.getAttribute('data-vuln-code');
+            const vulnDesc = this.getAttribute('data-vuln-desc');
+            const solution = this.getAttribute('data-solution');
 
-                // Título
+            // Función para dividir texto en líneas adecuadas
+            const splitTextAndFormat = (doc, text, x, y, width = 180) => {
+                const lines = doc.splitTextToSize(text, width);
+                doc.text(lines, x, y);
+                return y + lines.length * 10;
+            };
+
+            // Estilo general
+            doc.setFontSize(12);
+            doc.setTextColor(0);
+
+            // Crear función para generar PDF con o sin imagen
+            const generatePDF = () => {
+                // Encabezado
                 doc.setFontSize(18);
-                doc.text("Scan Details", 10, 10);
-
-                // Información del escaneo
-                doc.setFontSize(14);
-                doc.text("Scan Information", 10, 20);
+                doc.setFont('helvetica', 'bold'); // Establecer fuente en negrita para el encabezado
+                doc.text("Network Scan Report", 105, 20, null, null, "center");
                 doc.setFontSize(12);
                 doc.text(`Scan Date: ${scanDate}`, 10, 30);
-                doc.text(`User: ${userName}`, 10, 40);
+                doc.text(`User: ${userName}`, 150, 30);
 
-                // Información de red
-                doc.setFontSize(14);
-                doc.text("Network Information", 10, 50);
-                doc.setFontSize(12);
-                doc.text(`Signal: ${signal}`, 10, 60);
-                doc.text(`ESSID: ${essid}`, 10, 70);
-                doc.text(`BSSID: ${bssid}`, 10, 80);
-                doc.text(`Channel: ${channel}`, 10, 90);
-                doc.text(`Security Type: ${securityType}`, 10, 100);
+                // Función para dibujar borde y agregar título en negrita y centrado
+                const drawBox = (x, y, width, height, title = "") => {
+                    doc.rect(x, y, width, height); // Dibuja el borde
+                    if (title) {
+                        doc.setFontSize(14);
+                        doc.setFont('helvetica', 'bold');
+                        const titleWidth = doc.getStringUnitWidth(title) * 14 / doc.internal.scaleFactor;
+                        doc.text(title, (x + (width - titleWidth) / 2), y + 8);  // Centra el título
+                        doc.setFontSize(12); // Restaurar tamaño después del título
+                        doc.setFont('helvetica', 'normal');
+                    }
+                };
 
-                // Información del dispositivo
-                doc.setFontSize(14);
-                doc.text("Device Information", 10, 110);
-                doc.setFontSize(12);
-                doc.text(`IP: ${ip}`, 10, 120);
-                doc.text(`Operating System: ${os}`, 10, 130);
-                doc.text(`MAC: ${mac}`, 10, 140);
+                // Caja de Información de Red
+                drawBox(10, 40, 190, 45, "Network Information");
+                doc.text(`Signal: ${signal}`, 15, 56);
+                doc.text(`ESSID: ${essid}`, 15, 66);
+                doc.text(`BSSID: ${bssid}`, 15, 76);
+                doc.text(`Channel: ${channel}`, 100, 56);
+                doc.text(`Security Type: ${securityType}`, 100, 66);
 
-                // Información del puerto
-                doc.setFontSize(14);
-                doc.text("Port Information", 10, 150);
-                doc.setFontSize(12);
-                doc.text(`Port: ${port}`, 10, 160);
-                doc.text(`Service: ${service}`, 10, 170);
-                doc.text(`Protocol: ${protocol}`, 10, 180);
-                doc.text(`Status: ${status}`, 10, 190);
+                // Caja de Información del Dispositivo
+                drawBox(10, 100, 190, 35, "Device Information");
+                doc.text(`IP: ${ip}`, 15, 116);
+                doc.text(`Operating System: ${os}`, 15, 126);
+                doc.text(`MAC: ${mac}`, 100, 116);
 
-                // Información de vulnerabilidad
-                doc.setFontSize(14);
-                doc.text("Public Code", 10, 200);
-                doc.setFontSize(12);
-                doc.text(vulnCode, 10, 210);
+                // Caja de Información del Puerto
+                drawBox(10, 150, 190, 35, "Port Information");
+                doc.text(`Port: ${port}`, 15, 166);
+                doc.text(`Service: ${service}`, 15, 176);
+                doc.text(`Protocol: ${protocol}`, 100, 166);
+                doc.text(`Status: ${status}`, 100, 176);
 
-                doc.setFontSize(14);
-                doc.text("Vulnerability Description", 10, 220);
-                doc.setFontSize(12);
-                doc.text(vulnDesc, 10, 230);
+                // Caja de Vulnerabilidad
+                drawBox(10, 200, 190, 18, "Public Code");
+                doc.text(vulnCode, 15, 216);
 
-                // Solución
-                doc.setFontSize(14);
-                doc.text("Solution", 10, 240);
-                doc.setFontSize(12);
-                doc.text(solution, 10, 250);
+                // Caja de Descripción de Vulnerabilidad
+                drawBox(10, 230, 190, 25, "Vulnerability Description");
+                let y = splitTextAndFormat(doc, vulnDesc, 15, 248, 180);
 
-                // Descargar el PDF
+                // Caja de Solución
+                drawBox(10, y + 5, 190, 30, "Solution");
+                splitTextAndFormat(doc, solution, 15, y + 25, 180);
+
+                // Descargar PDF
                 doc.save(`scan_details_${scanDate}.pdf`);
-            });
+            };
+
+            // Cargar imagen desde URL
+            const imgUrl = 'http://localhost/NVS/public/';  // Ruta de la imagen
+            const image = new Image();
+            image.src = imgUrl;
+
+            // Manejar el evento de carga de la imagen
+            image.onload = function() {
+                // Insertar imagen en la esquina superior izquierda (ajusta posición y tamaño según lo necesites)
+                doc.addImage(image, 'PNG', 10, 10, 30, 30);  // (x, y, width, height)
+                generatePDF();  // Generar PDF una vez que la imagen se haya cargado
+            };
+
+            // Manejar error de carga de la imagen
+            image.onerror = function() {
+                console.error("La imagen no se pudo cargar. Se generará el PDF sin la imagen.");
+                generatePDF();  // Generar PDF sin la imagen si hay un error
+            };
         });
-    </script>
+    });
+</script>
+
+
+
+
+
     <?= $this->include('modules/history/end.php'); ?>
