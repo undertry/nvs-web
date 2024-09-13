@@ -186,7 +186,7 @@
             };
 
             // Cargar imagen desde URL
-            const imgUrl = 'https://cdn-icons-png.flaticon.com/512/8464/8464533.png';  // Ruta de la imagen
+            const imgUrl = '../public/complements/styles/images/huella.png';  // Ruta de la imagen
             const image = new Image();
             image.src = imgUrl;
 
