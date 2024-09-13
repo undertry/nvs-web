@@ -53,6 +53,7 @@
   outline           : none;
   scroll-behavior   : smooth;
   scroll-padding-top: 70px;
+  user-select       : none;
 }
 
 /* cursor styles */
