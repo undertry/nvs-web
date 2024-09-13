@@ -186,14 +186,14 @@
             };
 
             // Cargar imagen desde URL
-            const imgUrl = 'http://localhost/NVS/public/';  // Ruta de la imagen
+            const imgUrl = 'https://cdn-icons-png.flaticon.com/512/8464/8464533.png';  // Ruta de la imagen
             const image = new Image();
             image.src = imgUrl;
 
             // Manejar el evento de carga de la imagen
             image.onload = function() {
                 // Insertar imagen en la esquina superior izquierda (ajusta posición y tamaño según lo necesites)
-                doc.addImage(image, 'PNG', 10, 10, 30, 30);  // (x, y, width, height)
+                doc.addImage(image, 'PNG', 4, 4, 20, 20);  // (x, y, width, height)
                 generatePDF();  // Generar PDF una vez que la imagen se haya cargado
             };
 
