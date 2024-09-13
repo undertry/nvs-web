@@ -6,7 +6,7 @@
 }
 
 .section-header h2 {
-    font-size  : 8.2em;
+    font-size  : 4.2em;
     font-family: "schabo";
     color      : var(--color-secondary);
     font-weight: lighter;
@@ -53,12 +53,13 @@
     display       : inline-block;
     margin        : 0;
     font-size     : 3.2em;
-    font-family   : "neue";
-    padding-bottom: 10px;
+    font-family   : "neue-medium";
     font-weight   : lighter;
+    padding-bottom: 10px;
     opacity       : 0;
     transform     : translateX(-200px);
     transition    : opacity 0.9s ease-out, transform 0.9s ease-out;
+    color         : var(--color-light-grey);
 }
 
 .text.visible h4 {
@@ -74,12 +75,22 @@
     font-size  : 2em;
     font-family: "neue";
     font-weight: lighter;
-    color      : var(--color-semigrey);
+    color      : var(--color-light-grey);
+    line-height: 1.5;
+    /* Ajusta este valor según sea necesario */
 }
 
 .text p span {
-    color      : var(--color-secondary);
-    font-family: "neue";
+    color           : var(--color-secondary);
+    font-family     : "neue";
+    transition      : color 0.5s ease-out;
+    background-color: var(--color-semiblack);
+    padding         : 1px 8px;
+    border-radius   : 25px;
+}
+
+.text p span:hover {
+    color: red !important;
 }
 
 .text ul {
@@ -92,13 +103,21 @@
     margin-bottom: 10px;
     font-family  : "neue";
     font-weight  : lighter;
-    color        : var(--color-semigrey);
+    color        : var(--color-light-grey);
 }
 
 .text ul li span {
-    color      : var(--color-secondary);
-    font-family: "neue";
-    font-weight: lighter;
+    color           : var(--color-secondary);
+    font-family     : "neue";
+    font-weight     : lighter;
+    transition      : color 0.5s ease-out;
+    background-color: var(--color-semiblack);
+    padding         : 1px 8px;
+    border-radius   : 25px;
+}
+
+.text ul li span:hover {
+    color: red !important;
 }
 
 /* software section ends here */

@@ -3,6 +3,7 @@
     <div class="section-header hidden">
         <h2>SOFTWARE</h2>
     </div>
+    <hr>
     <div class="section-content">
         <div class="text-image-block hidden" id="what-is">
             <div class="text hidden">
@@ -11,13 +12,14 @@
                 <p>It is a software designed to analyze available WiFi networks. Upon selecting a specific network,
                     the software can perform the following functions:</p>
                 <ul>
-                    <li>Scan the network to detect <span>connected devices.</span></li>
-                    <li>Identify the <span>operating system</span> of each device.</li>
-                    <li>Assess the <span>vulnerabilities</span> of connected devices, if possible.</li>
-                    <li>Use a <span>Raspberry Pi</span> for data collection.</li>
+                    <li><i class="fa-solid fa-magnifying-glass"></i> Scan the network to detect <span>connected devices.</span></li>
+                    <li><i class="fa-brands fa-windows"></i> Identify the <span>operating system</span> of each device.</li>
+                    <li><i class="fa-solid fa-virus"></i> Assess the <span>vulnerabilities</span> of connected devices, if possible.</li>
+                    <li><i class="fa-brands fa-raspberry-pi"></i> Use a <span>Raspberry Pi</span> for data collection.</li>
                 </ul>
             </div>
         </div>
+        <hr>
         <div class="text-image-block hidden" id="who-for">
             <div class="text hidden">
                 <h3>Who is it for?</h3>
@@ -27,6 +29,7 @@
                         diagnostics</span> to enhance the <span>safety</span> of their WiFi.</p>
             </div>
         </div>
+        <hr>
         <div class="text-image-block hidden" id="origin">
             <div class="text hidden">
                 <h3>How did it start?</h3>
