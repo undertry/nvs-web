@@ -1,6 +1,6 @@
 /* General navbar styles */
 #navbar {
-    width           : 100%;
+
     background-color: transparent;
     display         : flex;
     align-items     : center;
@@ -8,7 +8,7 @@
     top             : 0;
     left            : 0;
     justify-content : space-between;
-    padding         : 60px 60px;
+    padding         : 60px;
     z-index         : 2000;
     transition      : background-color 0.5s ease, color 0.5s ease;
     user-select     : none;
@@ -16,10 +16,6 @@
     /* Para trabajar con el centrado */
 }
 
-.nav-left {
-    display    : flex;
-    align-items: center;
-}
 
 /* Left side logo */
 .nav-item .logo i {
@@ -27,7 +23,7 @@
     text-decoration: none;
     user-select    : none;
     align-items    : center;
-    margin-left    : 5px;
+    font-size      : 1.3em;
 }
 
 
@@ -35,9 +31,9 @@
 .nav-list {
     display      : flex;
     list-style   : none;
-    padding      : 18px 0px;
+    padding      : 10px 8px;
     margin       : 0;
-    border-radius: 40px;
+    border-radius: 25px;
     position     : fixed;
     border       : 1px solid var(--color-grey);
     left         : 50%;
@@ -48,7 +44,7 @@
 
 /* Nav items styling */
 .nav-item {
-    margin: 7px;
+    margin: 10px;
 }
 
 .nav-item a i {
@@ -58,20 +54,19 @@
 
 
 .nav-list .nav-item a {
-    text-decoration : none;
-    padding         : 14px 15px;
-    border-radius   : 25px;
-    font-family     : "neue";
-    font-size       : 1.2em;
-    color           : var(--color-light-grey);
-    background-color: #333;
-    transition      : background-color 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+    padding        : 0px 10px;
+    border-radius  : 25px;
+    font-family    : "neue";
+    font-size      : 1.2em;
+    color          : var(--color-light-grey);
+    transition     : background-color 0.3s ease, color 0.3s ease;
 }
 
 .nav-list .nav-item .signup {
     text-decoration : none;
-    padding         : 14px 15px;
-    border-radius   : 25px;
+    padding         : 10px 15px;
+    border-radius   : 20px;
     font-family     : "neue";
     font-size       : 1.2em;
     color           : var(--color-light-grey);
@@ -79,43 +74,21 @@
     transition      : background-color 0.3s ease, color 0.3s ease;
 }
 
-.nav-item.active a {
-    background-color: #fff;
-    color           : #000;
-}
-
-.nav-item a:hover {
-    background-color: #555;
-    color           : #fff;
-}
-
-/* Right side login and signup */
-.nav-right {
-    display    : flex;
-    align-items: center;
-}
-
-.signup-link {
-    position       : fixed;
+.nav-list .nav-item .login {
     text-decoration: none;
-    padding        : 7px 18px;
-    margin-left    : 15px;
-    border-radius  : 25px;
+    padding        : 10px 15px;
+    border-radius  : 20px;
+    font-family    : "neue";
+    font-size      : 1.2em;
+    color          : var(--color-light-grey);
     border         : 1px solid var(--color-grey);
-    position       : relative;
-    color          : var(--color-light-grey);
-    background     : var(--color-black);
+    transition     : background-color 0.3s ease, color 0.3s ease;
 }
 
-.nav-right {
-    font-family: 'neue';
-    font-size  : 1.2em;
+.nav-item.active a {
+    color: var(--color-light-grey);
 }
 
-.nav-right i {
-    text-decoration: none;
-    color          : var(--color-light-grey);
-}
 
 .nav-item .arrow {
     font-size       : 1em;
@@ -123,25 +96,11 @@
     background-color: var(--color-white);
     color           : var(--color-black);
     border-radius   : 50%;
-    padding         : 7px 15px;
+    padding         : 5px 12px;
 }
 
-.login-link {
-    text-decoration: none;
-    padding        : 14px 25px;
-    border-radius  : 25px;
-    font-family    : 'neue', sans-serif;
-    font-size      : 1em;
-    background     : var(--color-black);
-    border         : 1px solid var(--color-grey);
-    color          : var(--color-light-grey);
-    transition     : color 0.3s ease, background-color 0.3s ease;
-}
 
-.signup-link:hover,
-.login-link:hover {
-    color: var(--color-white);
-}
+
 
 /* General styles */
 #toggle-dark-mode {
