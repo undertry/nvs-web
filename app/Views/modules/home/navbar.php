@@ -1,17 +1,19 @@
 <!-- navbar section starts here -->
 <nav id="navbar">
-    <div class="nav-left">
-        <a href="<?= base_url('/'); ?>" class="logo"><i class="fa-solid fa-fingerprint"></i></a>
-    </div>
+
     <ul class="nav-list">
+        <li class="nav-item"><a class="logo"><i class="fa-solid fa-fingerprint"></i></a></li>
         <li class="nav-item active">
             <a href="#home">
                 <i class="fa-solid fa-circle-notch"></i> Home
             </a>
         </li>
+
         <li class="nav-item"><a href="#software"><i class="fa-brands fa-uncharted"></i> Software</a></li>
         <li class="nav-item"><a href="#about"><i class="fa-solid fa-circle-info"></i> About</a></li>
         <li class="nav-item"><a href="#faq"><i class="fa-solid fa-comments"></i> Faq</a></li>
+        <li class="nav-item"><a href="<?= base_url('login-animation'); ?>"><i class="fa-solid fa-user-secret"></i> Log In</a></li>
+        <li class="nav-item signup"><a href="<?= base_url('signup-animation'); ?>" class="signup">Get Started <span class="arrow">↗</span></a></li>
     </ul>
 
     <div class="nav-right">
@@ -27,10 +29,6 @@
                 <li><a href="#">Spanish</a></li>
             </ul>
         </div>
-
-        <a href="<?= base_url('login-animation'); ?>" class="login-link">Log In</a>
-        <a href="<?= base_url('signup-animation'); ?>" class="signup-link">Get Started <span class="arrow">↗</span></a>
     </div>
-
 </nav>
 <!-- navbar section ends here -->

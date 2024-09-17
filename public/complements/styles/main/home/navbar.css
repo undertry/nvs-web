@@ -3,7 +3,6 @@
     width           : 100%;
     background-color: transparent;
     display         : flex;
-    justify-content : space-between;
     align-items     : center;
     position        : absolute;
     top             : 0;
@@ -23,19 +22,20 @@
 }
 
 /* Left side logo */
-.nav-left .logo {
-    font-size      : 2.5em;
+.nav-item .logo i {
     color          : var(--color-main);
     text-decoration: none;
     user-select    : none;
     align-items    : center;
+    margin-left    : 5px;
 }
+
 
 /* Center navigation items (centrado) */
 .nav-list {
     display      : flex;
     list-style   : none;
-    padding      : 18px 5px;
+    padding      : 18px 0px;
     margin       : 0;
     border-radius: 40px;
     position     : fixed;
@@ -59,12 +59,23 @@
 
 .nav-list .nav-item a {
     text-decoration : none;
-    padding         : 14px 25px;
+    padding         : 14px 15px;
     border-radius   : 25px;
     font-family     : "neue";
     font-size       : 1.2em;
     color           : var(--color-light-grey);
     background-color: #333;
+    transition      : background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-list .nav-item .signup {
+    text-decoration : none;
+    padding         : 14px 15px;
+    border-radius   : 25px;
+    font-family     : "neue";
+    font-size       : 1.2em;
+    color           : var(--color-light-grey);
+    background-color: #bc1919;
     transition      : background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -106,11 +117,10 @@
     color          : var(--color-light-grey);
 }
 
-.signup-link .arrow {
-    display         : inline-block;
+.nav-item .arrow {
     font-size       : 1em;
     margin-left     : 8px;
-    background-color: var(--color-main);
+    background-color: var(--color-white);
     color           : var(--color-black);
     border-radius   : 50%;
     padding         : 7px 15px;
