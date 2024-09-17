@@ -119,11 +119,31 @@
 <!-- modules/home/end.php -->
 <script src="https://cdn.jsdelivr.net/npm/smooth-scrollbar@8.5.2/dist/smooth-scrollbar.js"></script>
 
+
+
 <script>
-    // Inicialización de Smooth Scrollbar
     document.addEventListener("DOMContentLoaded", function() {
-        Scrollbar.init(document.body, {
-            damping: 0.03, // Ajusta este valor para cambiar la suavidad del scroll
+        const scrollbar = Scrollbar.init(document.querySelector('#scroll-container'), {
+            damping: 0.07, // Ajuste de suavidad
+        });
+
+        // Interceptar los clics en los enlaces del navbar
+        document.querySelectorAll('nav ul.nav-list a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                // Obtener el ID de la sección objetivo desde el atributo href
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    // Desplazar usando la API de smooth-scrollbar
+                    scrollbar.scrollIntoView(targetElement, {
+                        damping: 0.07,
+                        offsetTop: -100, // Ajustar este valor según la altura del navbar si es necesario
+                    });
+                }
+            });
         });
     });
 </script>

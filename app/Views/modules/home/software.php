@@ -1,5 +1,5 @@
 <!-- software section starts here -->
-<section class="next-section" id="next-section">
+<section class="next-section" id="software">
     <div class="section-header hidden">
         <h2>SOFTWARE</h2>
     </div>
@@ -14,7 +14,7 @@
                 <ul>
                     <li><i class="fa-solid fa-magnifying-glass"></i> Scan the network to detect <span>connected devices.</span></li>
                     <li><i class="fa-brands fa-windows"></i> Identify the <span>operating system</span> of each device.</li>
-                    <li><i class="fa-solid fa-virus"></i> Assess the <span>vulnerabilities</span> of connected devices, if possible.</li>
+                    <li><i class="fa-solid fa-circle-exclamation"></i> Assess the <span>vulnerabilities</span> of connected devices, if possible.</li>
                     <li><i class="fa-brands fa-raspberry-pi"></i> Use a <span>Raspberry Pi</span> for data collection.</li>
                 </ul>
             </div>

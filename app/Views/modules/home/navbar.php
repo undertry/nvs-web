@@ -9,7 +9,7 @@
                 <i class="fa-solid fa-circle-notch"></i> Home
             </a>
         </li>
-        <li class="nav-item"><a href="#services"><i class="fa-brands fa-uncharted"></i> Software</a></li>
+        <li class="nav-item"><a href="#software"><i class="fa-brands fa-uncharted"></i> Software</a></li>
         <li class="nav-item"><a href="#about"><i class="fa-solid fa-circle-info"></i> About</a></li>
         <li class="nav-item"><a href="#faq"><i class="fa-solid fa-comments"></i> Faq</a></li>
     </ul>
@@ -29,7 +29,7 @@
         </div>
 
         <a href="<?= base_url('login-animation'); ?>" class="login-link">Log In</a>
-        <a href="<?= base_url('signup-animation'); ?>" class="signup-link">Sign Up <span class="arrow">↗</span></a>
+        <a href="<?= base_url('signup-animation'); ?>" class="signup-link">Get Started <span class="arrow">↗</span></a>
     </div>
 
 </nav>
