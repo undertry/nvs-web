@@ -116,6 +116,18 @@
     });
 </script>
 
+<!-- modules/home/end.php -->
+<script src="https://cdn.jsdelivr.net/npm/smooth-scrollbar@8.5.2/dist/smooth-scrollbar.js"></script>
+
+<script>
+    // Inicialización de Smooth Scrollbar
+    document.addEventListener("DOMContentLoaded", function() {
+        Scrollbar.init(document.body, {
+            damping: 0.03, // Ajusta este valor para cambiar la suavidad del scroll
+        });
+    });
+</script>
+
 
 
 </body>
