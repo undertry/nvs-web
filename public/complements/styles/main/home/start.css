@@ -54,6 +54,7 @@
   scroll-behavior   : smooth;
   scroll-padding-top: 70px;
   user-select       : none;
+  overflow          : hidden;
 }
 
 /* cursor styles */
@@ -66,7 +67,7 @@
   z-index       : 9000;
   transition    : transform 0.1s ease, width 0.3s ease, height 0.3s ease,
     background-color 0.5s ease;
-  background-color: var(--color-white);
+  background-color: var(--color-semigrey);
 }
 
 .light-mode .cursor {
