@@ -4,7 +4,7 @@
         <img id="registerImage" alt="Gif Descripción" class="gif-rectangular">
     </div>
     <div class="right-section">
-        <form id="registerForm" method="post" action="<?= base_url('register'); ?>" class="form">
+        <form id="registerForm" method="post" action="<?= base_url('signup'); ?>" class="form">
             <h2>Sign Up</h2>
             <div class="form-inputs">
                 <div class="form-label">
