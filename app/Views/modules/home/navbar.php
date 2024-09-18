@@ -43,9 +43,9 @@
                 </span>
             </a>
         </li>
-        <li class="nav-item"><a href="<?= base_url('login-animation'); ?>" class="login"> Log
+        <li class="nav-item"><a href="<?= base_url('login-animation'); ?>" class="login link"> Log
                 In</a></li>
-        <li class="nav-item signup"><a href="<?= base_url('signup-animation'); ?>" class="signup">Get Started <span
+        <li class="nav-item signup"><a href="<?= base_url('signup-animation'); ?>" class="signup link">Get Started <span
                     class="arrow">↗</span></a></li>
     </ul>
 
