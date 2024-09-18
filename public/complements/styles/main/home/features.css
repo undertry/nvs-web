@@ -3,9 +3,8 @@
 .features-block {
     display              : grid;
     grid-template-columns: repeat(3, 1fr);
-    gap                  : 20px;
+    gap                  : 35px;
     padding              : 0 14.5rem;
-    border-radius        : 10px;
     margin-top           : 10px;
     color                : var(--color-white);
     transition           : background-color 0.5s ease, color 0.5s ease;
@@ -42,22 +41,37 @@
     align-items  : center;
     padding      : 15px;
     border-radius: 5px;
+    border       : 1px solid var(--color-grey);
+    transition   : background-color 0.5s ease, border 0.5s ease;
+}
+
+.feature-item:hover {
+    background-color: var(--color-semiblack);
+    border          : 1px solid var(--color-light-grey);
 }
 
 .feature-text h4 {
     margin     : 0;
     font-size  : 1.9em;
-    font-family: "neue";
+    font-family: "neue-medium";
     color      : var(--color-secondary);
     font-weight: lighter;
 }
 
+.feature-text i {
+    color        : var(--color-light-grey);
+    padding      : 5px 8px;
+    border-radius: 10px;
+    font-size    : 30px;
+}
+
+
 .feature-text p {
-    margin     : 5px 0 0;
+    margin     : 20px 0 0;
     font-size  : 1.5em;
     font-family: "neue";
     font-weight: lighter;
-    color      : var(--color-semigrey);
+    color      : var(--color-light-grey);
 }
 
 @media (max-width: 768px) {
