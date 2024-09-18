@@ -3,20 +3,52 @@
 
     <ul class="nav-list">
         <li class="nav-item"><a class="logo"><i class="fa-solid fa-fingerprint"></i></a></li>
-        <li class="nav-item active">
-            <a href="#home">
-                Home
+        <li class="nav-item">
+            <a href="#home" class="link">
+                <span class="mask">
+                    <div class="link-container">
+                        <span class="link-title1 title">Home</span>
+                        <span class="link-title2 title">Home</span>
+                    </div>
+                </span>
             </a>
         </li>
-
-        <li class="nav-item"><a href="#software">Software</a></li>
-        <li class="nav-item"><a href="#about">About</a></li>
-        <li class="nav-item"><a href="#faq"> Faq</a></li>
+        <li class="nav-item">
+            <a href="#software" class="link">
+                <span class="mask">
+                    <div class="link-container">
+                        <span class="link-title1 title">Software</span>
+                        <span class="link-title2 title">Software</span>
+                    </div>
+                </span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="#about" class="link">
+                <span class="mask">
+                    <div class="link-container">
+                        <span class="link-title1 title">About</span>
+                        <span class="link-title2 title">About</span>
+                    </div>
+                </span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="#faq" class="link">
+                <span class="mask">
+                    <div class="link-container">
+                        <span class="link-title1 title">Faq</span>
+                        <span class="link-title2 title">Faq</span>
+                    </div>
+                </span>
+            </a>
+        </li>
         <li class="nav-item"><a href="<?= base_url('login-animation'); ?>" class="login"> Log
                 In</a></li>
         <li class="nav-item signup"><a href="<?= base_url('signup-animation'); ?>" class="signup">Get Started <span
                     class="arrow">↗</span></a></li>
     </ul>
+
 
     <div class="nav-right">
         <a href="#" id="toggle-dark-mode"><i class="fa-solid fa-moon"></i></a>

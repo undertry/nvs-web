@@ -1,6 +1,5 @@
 /* General navbar styles */
 #navbar {
-
     background-color: transparent;
     display         : flex;
     align-items     : center;
@@ -24,6 +23,7 @@
     user-select    : none;
     align-items    : center;
     font-size      : 1.3em;
+    margin-top     : 8px;
 }
 
 
@@ -31,7 +31,7 @@
 .nav-list {
     display      : flex;
     list-style   : none;
-    padding      : 10px 8px;
+    padding      : 0px 8px;
     margin       : 0;
     border-radius: 25px;
     position     : fixed;
@@ -50,6 +50,49 @@
 .nav-item a i {
     margin-right: 5px;
     /* Espaciado entre el ícono y el texto */
+}
+
+/* Efecto ruleta en hover */
+.link {
+    height         : 40px;
+    align-items    : center;
+    color          : #fff;
+    text-decoration: none;
+    display        : flex;
+}
+
+/* Ocultar texto adicional */
+.mask {
+    position: relative;
+    padding : 0;
+    height  : 20px;
+    overflow: hidden;
+}
+
+.link-container {
+    transition: transform 0.4s ease;
+}
+
+.title {
+    display    : block;
+    font-size  : 20px;
+    line-height: 20px;
+    transition : transform 0.4s ease;
+}
+
+.link-title1 {
+    transform-origin: right center;
+    color           : var(--color-grey);
+}
+
+.link-title2 {
+    transform-origin: left center;
+    transform       : translateY(100%);
+}
+
+/* Cambiar las palabras en hover */
+.link:hover .link-container {
+    transform: translateY(-100%);
 }
 
 
