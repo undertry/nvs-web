@@ -1,6 +1,10 @@
  <!-- features section starts here -->
  <section id="features">
+     <div class="section-header hidden">
+         <h2><i class="fa-solid fa-shield"></i></h2>
+     </div>
      <div class="features-block hidden" id="security">
+
          <h3>FEATURES & SECURITY</h3>
          <div class="feature-item">
              <div class="feature-text hidden">

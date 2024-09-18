@@ -1,9 +1,9 @@
 <!-- software section starts here -->
 <section class="next-section" id="software">
     <div class="section-header hidden">
-        <h2>SOFTWARE</h2>
+        <h2><i class="fa-brands fa-uncharted"></i></h2>
     </div>
-    <hr>
+
     <div class="section-content">
         <div class="text-image-block hidden" id="what-is">
             <div class="text hidden">
@@ -43,5 +43,5 @@
         </div>
     </div>
 </section>
-<hr>
+
 <!-- software section ends here -->

@@ -41,16 +41,25 @@
 
 
 .text h3 {
-    font-size    : 1.3em;
-    font-family  : "neue";
-    font-weight  : lighter;
-    margin-bottom: 20px;
-    color        : var(--color-light-grey);
+    font-size       : 1.3em;
+    font-family     : "neue";
+    font-weight     : lighter;
+    margin-bottom   : 20px;
+    color           : var(--color-light-grey);
+    background-color: var(--color-semiblack);
+    padding         : 1px 8px;
+    border-radius   : 10px;
+    display         : inline-block;
+    transition      : color 0.5s ease-out;
+}
+
+.text h3:hover {
+    color: red !important;
 }
 
 .text h4 {
     position      : relative;
-    display       : inline-block;
+    display       : block;
     margin        : 0;
     font-size     : 3.2em;
     font-family   : "neue-medium";
@@ -86,7 +95,7 @@
     transition      : color 0.5s ease-out;
     background-color: var(--color-semiblack);
     padding         : 1px 8px;
-    border-radius   : 25px;
+    border-radius   : 10px;
 }
 
 .text p span:hover {
@@ -113,7 +122,7 @@
     transition      : color 0.5s ease-out;
     background-color: var(--color-semiblack);
     padding         : 1px 8px;
-    border-radius   : 25px;
+    border-radius   : 10px;
 }
 
 .text ul li span:hover {
