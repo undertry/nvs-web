@@ -141,13 +141,16 @@ document.addEventListener("DOMContentLoaded", function() {
                 scrollbar.scrollIntoView(targetElement, {
                     damping: 0.07,
                     offsetTop: -
-                    100, // Ajustar este valor según la altura del navbar si es necesario
+                        100, // Ajustar este valor según la altura del navbar si es necesario
                 });
             }
         });
     });
 });
 </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
 
 
 
