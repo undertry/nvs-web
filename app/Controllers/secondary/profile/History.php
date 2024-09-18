@@ -11,9 +11,8 @@ class History extends BaseController
     public function history()
     {
         $user = session('user');
-        $id_user = session('user')->id_user;
 
-        if (!$id_user) {
+        if (!$user || $user->id_user < 1) {
             // Si no hay id_user en sesión, redirigir a la página de inicio de sesión
             return redirect()->to('/login');
         } else {
