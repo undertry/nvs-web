@@ -1,9 +1,11 @@
-<div class="software" id="container"></div>
+<div id="container"></div>
 
-<!-- Incluimos three.js -->
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/18.6.4/tween.umd.js"></script>
+
 <script>
-// Configuramos la escena, la cámara y el renderizador
+// Configuración básica de la escena, cámara y renderizador
 let scene = new THREE.Scene();
 let camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 let renderer = new THREE.WebGLRenderer();
@@ -12,19 +14,19 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 document.getElementById('container').appendChild(renderer.domElement);
 
 // Configuramos el color de fondo desde CSS
-renderer.setClearColor(getComputedStyle(document.documentElement).getPropertyValue('--color-dark'));
+renderer.setClearColor('#0c0b0b');
 
 // Cargamos la textura para los puntos circulares
 let loader = new THREE.TextureLoader();
 let circleTexture = loader.load('https://threejs.org/examples/textures/sprites/disc.png');
 
 // Creamos una geometría de esfera
-let geometry = new THREE.SphereGeometry(5, 32, 32);
+let geometry = new THREE.SphereGeometry(4, 42, 32);
 
-// Configuramos el material para los puntos (color más claro)
+// Configuramos el material para los puntos
 let material = new THREE.PointsMaterial({
-    color: 0xcccccc, // Color más claro (gris claro)
-    size: 0.05, // Tamaño pequeño
+    color: 0xcccccc,
+    size: 0.1,
     map: circleTexture,
     transparent: true,
     alphaTest: 0.5
@@ -37,65 +39,39 @@ scene.add(sphere);
 // Posición de la cámara
 camera.position.z = 10;
 
-// Variables para control de rotación
-let isDragging = false;
-let previousMousePosition = {
-    x: 0
-};
-let rotationSpeed = 0.030; // Hacer la rotación más lenta para más "resistencia"
-let dampingFactor = 0.05; // Factor de amortiguación para ralentizar la rotación
+// Variable para controlar si la esfera ha sido agrandada
+let isExpanded = false;
 
-// Rotación automática lenta en el eje Y
-let autoRotateSpeed = 0.002; // Muy suave
-
-// Función para manejar el movimiento del ratón
-function onMouseMove(event) {
-    if (isDragging) {
-        let deltaMove = {
-            x: event.offsetX - previousMousePosition.x
+// Función para agrandar la esfera
+function expandSphere() {
+    if (!isExpanded) {
+        isExpanded = true;
+        let scaleFactor = {
+            value: 1
         };
-
-        // Controlamos la rotación en función de la distancia de movimiento, pero aplicando un factor de resistencia
-        let deltaRotationQuaternion = new THREE.Quaternion().setFromEuler(new THREE.Euler(
-            0, // Sin rotación en X
-            deltaMove.x * rotationSpeed * dampingFactor, // Rotación más lenta (resistencia)
-            0,
-            'XYZ'
-        ));
-
-        sphere.quaternion.multiplyQuaternions(deltaRotationQuaternion, sphere.quaternion);
-
-        previousMousePosition = {
-            x: event.offsetX
-        };
+        let tween = new TWEEN.Tween(scaleFactor)
+            .to({
+                value: 3
+            }, 2000)
+            .easing(TWEEN.Easing.Quadratic.Out)
+            .onUpdate(() => {
+                sphere.scale.set(scaleFactor.value, scaleFactor.value, scaleFactor.value);
+            })
+            .start();
     }
 }
 
-// Funciones para controlar el arrastre del ratón
-function onMouseDown(event) {
-    isDragging = true;
-    previousMousePosition = {
-        x: event.offsetX
-    };
-}
+// Añadimos el evento de clic para agrandar la esfera
+document.getElementById('container').addEventListener('click', expandSphere);
 
-function onMouseUp() {
-    isDragging = false;
-}
-
-// Eventos para detectar movimiento del ratón
-renderer.domElement.addEventListener('mousemove', onMouseMove);
-renderer.domElement.addEventListener('mousedown', onMouseDown);
-renderer.domElement.addEventListener('mouseup', onMouseUp);
-
-// Animación
+// Animación básica con rotación automática en el eje Y
 function animate() {
     requestAnimationFrame(animate);
 
     // Rotación automática en el eje Y
-    if (!isDragging) {
-        sphere.rotation.y += autoRotateSpeed;
-    }
+    sphere.rotation.y += 0.001;
+
+    TWEEN.update(); // Actualizamos las animaciones de TWEEN
 
     renderer.render(scene, camera);
 }

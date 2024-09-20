@@ -46,5 +46,4 @@
 
      </div>
  </section>
- <hr>
  <!-- features section ends here -->

@@ -1,4 +1,14 @@
 /* about section starts here */
+#container {
+    background-color: var(--color-dark);
+    width           : 100vw;
+    height          : 100vh;
+    position        : relative;
+    overflow        : hidden;
+}
+
+
+
 
 .about {
     background-image : url("../../images/blocks.jpg");
