@@ -56,6 +56,15 @@
                 <strong>Signal:</strong> <?= esc($net['Signal']) ?><br>
                 <strong>Channel:</strong> <?= esc($net['Channel']) ?><br>
                 <strong>Encryption:</strong> <?= esc($net['Encryption']) ?><br>
+                <!-- Botón para seleccionar la red -->
+                <form action="<?= base_url('select-network') ?>" method="post">
+                    <input type="hidden" name="essid" value="<?= esc($net['ESSID']) ?>">
+                    <input type="hidden" name="bssid" value="<?= esc($net['BSSID']) ?>">
+                    <input type="hidden" name="signal" value="<?= esc($net['Signal']) ?>">
+                    <input type="hidden" name="channel" value="<?= esc($net['Channel']) ?>">
+                    <input type="hidden" name="encryption" value="<?= esc($net['Encryption']) ?>">
+                    <button type="submit">Seleccionar</button>
+                </form>
                 <hr>
             </li>
             <?php endforeach; ?>

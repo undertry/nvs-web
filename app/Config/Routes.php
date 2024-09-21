@@ -51,5 +51,6 @@ $routes->get('/history', 'secondary\profile\History::history');
 $routes->get('history-animation', 'secondary\profile\History::animation');
 
 $routes->get('network', 'secondary\form\Network::index');
+$routes->post('select-network', 'secondary\form\Network::selectNetwork');
 
 $routes->get('network-animation', 'secondary\form\Network::animation');

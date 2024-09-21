@@ -33,8 +33,34 @@ class Network extends BaseController
         return view('tertiary/network/network', ['network' => $network]);
     }
 
-    public function animation()
+    // Nueva función para manejar la selección de red
+    public function selectNetwork()
     {
-        return view('animations/network/animation');
+        $selectedNetwork = [
+            'essid' => $this->request->getPost('essid'),
+            'bssid' => $this->request->getPost('bssid'),
+            'signal' => $this->request->getPost('signal'),
+            'channel' => $this->request->getPost('channel'),
+            'encryption' => $this->request->getPost('encryption'),
+        ];
+
+        // Enviar la red seleccionada a la Raspberry Pi
+        $client = \Config\Services::curlrequest();
+        try {
+            $response = $client->post('http://192.168.0.162:5000/save-network', [
+                'json' => $selectedNetwork
+            ]);
+
+            if ($response->getStatusCode() == 200) {
+                log_message('info', 'Red seleccionada enviada a la Raspberry Pi.');
+                return redirect()->back()->with('success', 'Red seleccionada correctamente.');
+            } else {
+                log_message('error', 'Error al enviar la red seleccionada a la Raspberry Pi.');
+                return redirect()->back()->with('error', 'Error al seleccionar la red.');
+            }
+        } catch (\Exception $e) {
+            log_message('error', 'Excepción capturada al intentar enviar la red a la Raspberry Pi: ' . $e->getMessage());
+            return redirect()->back()->with('error', 'Excepción al seleccionar la red.');
+        }
     }
 }
