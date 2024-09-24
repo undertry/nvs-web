@@ -4,12 +4,8 @@
 <script src="<?php echo base_url('complements/functionality/main/home/cursor.js'); ?>"></script>
 <script src="<?php echo base_url('complements/functionality/secondary/form/password.js'); ?>"></script>
 <script>
-    const lightImage = "<?= base_url('complements/styles/images/blacky.png'); ?>";
-    const darkImage = "<?= base_url('complements/styles/images/corner.jpg'); ?>";
-</script>
-<script>
-    const loginLightImage = "<?= base_url('complements/styles/images/trasparent.jpg'); ?>";
-    const loginDarkImage = "<?= base_url('complements/styles/images/alone1.jpg'); ?>";
+const loginLightImage = "<?= base_url('complements/styles/images/trasparent.jpg'); ?>";
+const loginDarkImage = "<?= base_url('complements/styles/images/alone1.jpg'); ?>";
 </script>
 </body>
 

@@ -1,5 +1,9 @@
-<div id="container"></div>
-
+<div id="container">
+    <div id="info">
+        <p class="click-text">Click me</p>
+        <p class="cyber-info">CVE: 254-323</p>
+    </div>
+</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/18.6.4/tween.umd.js"></script>
@@ -42,10 +46,14 @@ camera.position.z = 10;
 // Variable para controlar si la esfera ha sido agrandada
 let isExpanded = false;
 
-// Función para agrandar la esfera
+// Función para agrandar la esfera y ocultar el texto
 function expandSphere() {
     if (!isExpanded) {
         isExpanded = true;
+
+        // Oculta el texto
+        document.getElementById('info').style.display = 'none';
+
         let scaleFactor = {
             value: 1
         };
@@ -86,4 +94,29 @@ window.addEventListener('resize', () => {
     camera.aspect = width / height;
     camera.updateProjectionMatrix();
 });
+
+// Función para simular efecto de desencriptado en el texto
+function hackerEffect(element, text) {
+    let chars = '!<>-_\\/[]{}—=+*^?#________';
+    let iterations = 0;
+
+    let interval = setInterval(() => {
+        element.innerText = text.split('')
+            .map((letter, index) => {
+                if (index < iterations) {
+                    return letter;
+                }
+                return chars[Math.floor(Math.random() * chars.length)];
+            })
+            .join('');
+
+        if (iterations >= text.length) clearInterval(interval);
+
+        iterations += 1 / 3;
+    }, 30);
+}
+
+// Iniciamos el efecto hacker en el texto 'Click me'
+let clickText = document.querySelector('.click-text');
+hackerEffect(clickText, 'Click me');
 </script>
