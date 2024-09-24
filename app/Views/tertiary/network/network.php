@@ -4,68 +4,53 @@
 <head>
     <meta charset="UTF-8">
     <title>Available WiFi Networks</title>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/progressbar.js@1.1.0/dist/progressbar.min.js"></script>
     <link rel="stylesheet" href="<?php echo base_url('complements/styles/tertiary/network.css'); ?>">
 </head>
 
 <body>
-    <!-- Navbar Section -->
-    <nav id="navbar">
-        <div class="logo"><a href="<?= base_url('home-animation'); ?>">NVS</a></div>
-        <div id="menuToggle" class="menu-icon">
-            <span class="menu-icon-bar"></span>
-            <span class="menu-icon-bar"></span>
-            <span class="menu-icon-bar"></span>
-        </div>
-    </nav>
-
-    <!-- Overlay Menu -->
-    <div id="overlayNav">
-        <div class="overlay-content">
-            <div class="overlay-left">
-                <div class="overlay-video">
-                    <img src="<?= base_url('complements/styles/images/lines.jpg'); ?>" alt="Video">
-                    <div class="video-controls">
-                        <span>00: 13: 49: 12: 45: 02</span>
-                    </div>
-                </div>
-            </div>
-            <div class="overlay-right">
-                <ul>
-                    <li><a href="<?= base_url('home-animation'); ?>">Home</a></li>
-
-                    <?php if (session('user') && session('user')->id_user > 0 && session('user')->name) : ?>
-                    <li><a href="<?= base_url('dashboard-animation'); ?>"><?= session('user')->name; ?></a></li>
-                    <?php endif; ?>
-                </ul>
-
-            </div>
-        </div>
+    <!-- Div para mostrar mensajes de éxito -->
+    <div id="successMessage"
+        style="display:none; background-color: #4CAF50; color: white; padding: 15px; margin-bottom: 20px; border-radius: 5px;">
+        ¡Red seleccionada con éxito!
     </div>
-
-
 
     <div class="container">
         <h1>Available WiFi Networks</h1>
         <?php if (!empty($network)): ?>
-        <ul>
+        <ul class="wifi-list">
             <?php foreach ($network as $net): ?>
-            <li>
-                <strong>ESSID:</strong> <?= esc($net['ESSID']) ?><br>
-                <strong>BSSID:</strong> <?= esc($net['BSSID']) ?><br>
-                <strong>Signal:</strong> <?= esc($net['Signal']) ?><br>
-                <strong>Channel:</strong> <?= esc($net['Channel']) ?><br>
-                <strong>Encryption:</strong> <?= esc($net['Encryption']) ?><br>
+            <li class="wifi-card">
+                <strong class="essid"><i class="fa-solid fa-wifi"></i> ESSID:</strong> <?= esc($net['ESSID']) ?><br>
+                <strong class="bssid"><i class="fa-solid fa-tag"></i> BSSID:</strong>
+                <?= esc($net['BSSID']) ?><br>
+                <strong class="signal"><i class="fa-solid fa-signal"></i> Signal:</strong>
+                <?= esc($net['Signal']) ?><br>
+                <strong class="channel"><i class="fa-solid fa-list"></i> Channel:</strong>
+                <?= esc($net['Channel']) ?><br>
+                <strong class="encryption"><i class="fa-solid fa-lock"></i> Encryption:</strong>
+                <?= esc($net['Encryption']) ?>
+
+                <!-- Mostrar un icono de alerta si es OPN o WPA -->
+                <?php if (esc($net['Encryption']) == 'OPN'): ?>
+                <i class="fa-solid fa-exclamation-circle" style="color: orange;" title="Open Network - Unsecure"></i>
+                <?php elseif (strpos(esc($net['Encryption']), 'WPA') !== false): ?>
+                <i class="fa-solid fa-shield" style="color: green;" title="WPA Secured Network"></i>
+                <?php endif; ?>
+                <br>
+
                 <!-- Botón para seleccionar la red -->
-                <form action="<?= base_url('select-network') ?>" method="post">
+                <form id="networkForm-<?= esc($net['ESSID']) ?>" action="<?= base_url('select-network') ?>"
+                    method="post">
                     <input type="hidden" name="essid" value="<?= esc($net['ESSID']) ?>">
                     <input type="hidden" name="bssid" value="<?= esc($net['BSSID']) ?>">
                     <input type="hidden" name="signal" value="<?= esc($net['Signal']) ?>">
                     <input type="hidden" name="channel" value="<?= esc($net['Channel']) ?>">
                     <input type="hidden" name="encryption" value="<?= esc($net['Encryption']) ?>">
-                    <button type="submit">Seleccionar</button>
+                    <button type="submit" class="btn-select">Seleccionar</button>
                 </form>
-                <hr>
+
             </li>
             <?php endforeach; ?>
         </ul>
@@ -73,29 +58,31 @@
         <p>No WiFi networks found.</p>
         <?php endif; ?>
     </div>
-
-
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var navbar = document.getElementById('navbar');
-        var initialBgColor = 'transparent'; // Color de fondo inicial
-        var scrollBgColor = '#151414'; // Color de fondo cuando se desplaza
+    document.addEventListener("DOMContentLoaded", function() {
+        // Selecciona todos los formularios de selección de red
+        const forms = document.querySelectorAll("form[id^='networkForm']");
 
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 50) { // Cambia el valor según el desplazamiento que desees
-                navbar.style.backgroundColor = scrollBgColor;
-            } else {
-                navbar.style.backgroundColor = initialBgColor;
-            }
-        });
+        forms.forEach(function(form) {
+            form.addEventListener("submit", function(event) {
+                event.preventDefault(); // Evita que el formulario se envíe y recargue la página
 
-        // Toggle menu and close class
-        document.getElementById('menuToggle').addEventListener('click', function() {
-            this.classList.toggle('close');
-            document.getElementById('overlayNav').classList.toggle('active');
+                // Mostrar el mensaje de éxito
+                const successMessage = document.getElementById("successMessage");
+                successMessage.style.display = "block";
+
+                // Ocultar el mensaje después de unos segundos
+                setTimeout(function() {
+                    successMessage.style.display = "none";
+                }, 3000);
+
+                // Si prefieres enviar el formulario al servidor, descomenta la siguiente línea
+                // form.submit();
+            });
         });
-    })
+    });
     </script>
+
 </body>
 
 </html>

@@ -18,9 +18,6 @@ class Network extends BaseController
             if ($response->getStatusCode() == 200) {
                 $network = json_decode($response->getBody(), true);
                 log_message('info', 'Datos recibidos: ' . print_r($network, true));
-                echo "<pre>";
-                print_r($network);  // Para ver la estructura del array
-                echo "</pre>";
             } else {
                 log_message('error', 'Error en la respuesta de la API: ' . $response->getStatusCode());
                 $network = [];
@@ -62,5 +59,11 @@ class Network extends BaseController
             log_message('error', 'Excepción capturada al intentar enviar la red a la Raspberry Pi: ' . $e->getMessage());
             return redirect()->back()->with('error', 'Excepción al seleccionar la red.');
         }
+    }
+
+    // Nueva función para la animación de selección de red
+    public function animation()
+    {
+        return view('animations/network/animation');
     }
 }
