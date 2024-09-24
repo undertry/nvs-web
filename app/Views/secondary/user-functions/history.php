@@ -140,7 +140,13 @@ document.querySelectorAll('.downloadPDF').forEach(button => {
             }
         };
 
-        const generatePDF = () => {
+        // Cargar imagen desde URL
+        const imgUrl = 'https://cdn-icons-png.flaticon.com/512/8464/8464533.png';  // Ruta de la imagen
+        const image = new Image();
+        image.src = imgUrl;
+
+        // Manejar el evento de carga de la imagen
+        image.onload = function() {
             doc.setFontSize(18);
             doc.setFont('helvetica', 'bold');
             doc.text("Network Scan Report", 105, 20, null, null, "center");
@@ -148,11 +154,14 @@ document.querySelectorAll('.downloadPDF').forEach(button => {
             doc.text(`Scan Date: ${scanDate}`, 10, 30);
             doc.text(`User: ${userName}`, 150, 30);
 
+            // Insertar imagen en la esquina superior izquierda
+            doc.addImage(image, 'PNG', 4, 4, 20, 20);  // (x, y, width, height)
+
             let y = 40;
 
             // Información de Red
-            drawBox(doc, 10, y, 190, 50, "Network Information");
-            y += 5;
+            drawBox(doc, 10, y, 190, 60, "Network Information");
+            y += 15;
             y = splitTextAndFormat(doc, `Signal: ${signal}`, 15, y);
             y = splitTextAndFormat(doc, `ESSID: ${essid}`, 15, y);
             y = splitTextAndFormat(doc, `BSSID: ${bssid}`, 15, y);
@@ -161,13 +170,14 @@ document.querySelectorAll('.downloadPDF').forEach(button => {
             y += 10;
 
             // Información de Dispositivos
-            doc.setFontSize(14);
-            doc.text("Device Information", 10, y);
+            doc.setFontSize(18);
+            doc.setFont('helvetica', 'bold');
+            doc.text("Device Information", 78, y);
             y += 10;
 
             deviceInfo.forEach(device => {
-                drawBox(doc, 10, y, 190, 60, "Device");
-                y += 5;
+                drawBox(doc, 10, y, 190, 120, "Device");
+                y += 15;
                 y = splitTextAndFormat(doc, `IP: ${device.ip_address}`, 15, y);
                 y = splitTextAndFormat(doc, `Operating System: ${device.operating_system}`, 15, y);
                 y = splitTextAndFormat(doc, `MAC: ${device.mac_address}`, 15, y);
@@ -190,8 +200,6 @@ document.querySelectorAll('.downloadPDF').forEach(button => {
             // Descargar PDF
             doc.save(`scan_details_${scanDate}.pdf`);
         };
-
-        generatePDF();
     });
 });
 </script>
