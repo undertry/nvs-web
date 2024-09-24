@@ -25,9 +25,29 @@ class ScanModel extends Model
             ->join('port_analysis', 'port_analysis.id_devices = devices.id_devices')
             ->join('ports', 'ports.id_port = port_analysis.id_port')
             ->join('port_status', 'port_status.id_port_status = ports.id_port_status')
-            ->join('solution', 'solution.id_solution = scan_details.id_solution')
+            ->join('solution', 'solution.id_solution = port_analysis.id_solution')
             ->where('scan.id_user', $id_user)
             ->get()
             ->getResultArray();
     }
+
+    public function deleteScanDetails($id_scan)
+    {
+        return $this->db->table('scan_details')->where('id_scan', $id_scan)->delete();
+    }
+    public function deleteScanWithDetails($id_scan)
+{
+    $this->db->transStart();
+
+    // Eliminar detalles del escaneo
+    $this->deleteScanDetails($id_scan);
+
+    // Eliminar el escaneo
+    $this->delete($id_scan);
+
+    $this->db->transComplete();
+
+    return $this->db->transStatus(); // Devuelve true si la transacción fue exitosa
+}
+
 }

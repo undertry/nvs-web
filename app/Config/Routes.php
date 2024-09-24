@@ -54,3 +54,7 @@ $routes->get('network', 'secondary\form\Network::index');
 $routes->post('select-network', 'secondary\form\Network::selectNetwork');
 
 $routes->get('network-animation', 'secondary\form\Network::animation');
+
+$routes->post('history/deleteScan/(:num)', 'secondary\profile\History::deleteScan/$1');
+
+
