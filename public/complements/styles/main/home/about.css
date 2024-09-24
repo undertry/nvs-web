@@ -1,10 +1,13 @@
 .about-comments {
+    background: radial-gradient(circle, rgba(198, 21, 21, 0.109) 0%, #0c0b0b 35%);
     text-align: center;
     margin    : 50px 0;
 }
 
 .about-comments h2 {
-    font-size    : 2rem;
+    font-size    : 3.2rem;
+    font-family  : "neue-medium";
+    font-weight  : lighter;
     margin-bottom: 20px;
     color        : var(--color-light-grey);
 }
@@ -38,8 +41,7 @@
 }
 
 .comment-card:hover {
-    background-color: var(--color-semiblack);
-    border          : 1px solid var(--color-light-grey);
+    border: 1px solid var(--color-light-grey);
 }
 
 .comment-card h3 {
@@ -57,6 +59,19 @@
 .comment {
     font-size  : 1.2rem;
     line-height: 1.5;
+}
+
+.comment span {
+    color           : var(--color-secondary);
+    background-color: var(--color-semiblack);
+    padding         : 1px 5px;
+    border-radius   : 10px;
+    display         : inline-block;
+    transition      : color 0.5s ease-out;
+}
+
+.comment span:hover {
+    color: var(--color-main);
 }
 
 /* Centrar la tarjeta de Nahuel */
