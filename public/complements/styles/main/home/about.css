@@ -1,143 +1,69 @@
-#container {
-    background-color: var(--color-dark);
-    width           : 100vw;
-    height          : 100vh;
-    position        : relative;
-    overflow        : hidden;
+.about-comments {
+    text-align: center;
+    margin    : 50px 0;
 }
 
-#info {
-    position   : absolute;
-    top        : 50%;
-    right      : 30rem;
-    transform  : translateY(-50%);
-    color      : #cccccc;
-    text-align : right;
-    font-family: 'Courier New', monospace;
+.about-comments h2 {
+    font-size    : 2rem;
+    margin-bottom: 20px;
+    color        : var(--color-light-grey);
 }
 
-.click-text {
-    font-size  : 24px;
-    font-weight: bold;
-    cursor     : pointer;
-    animation  : glitch 3s infinite;
-}
-
-.cyber-info {
-    font-size : 18px;
-    margin-top: 10px;
-}
-
-@keyframes glitch {
-    0% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity  : 0.8;
-        transform: translateX(2px);
-    }
-
-    100% {
-        opacity  : 1;
-        transform: translateX(0);
-    }
-}
-
-.about {
-    background-image : url("../../images/blocks.jpg");
-    background-size  : cover;
-    background-repeat: no-repeat;
-    transition       : background-image 0.5s ease-in-out;
-}
-
-.light-mode .about {
-    background-image: url("../../images/whited.jpg");
-}
-
-.comments-section {
-    width   : 100%;
-    overflow: hidden;
-    position: relative;
-    height  : 120vh;
-}
-
-.comments-section h2 {
-    font-size     : 2.9em;
-    font-family   : "neue";
-    font-weight   : lighter;
-    text-align    : center;
-    margin-bottom : 1rem;
-    padding-bottom: 1rem;
-}
-
-
-.comments-section .text h2 {
-    color      : var(--color-secondary);
-    font-size  : 10.9em;
-    font-family: "aero";
-    font-weight: lighter;
-}
-
-.comments-carousel {
-    position       : relative;
-    width          : 100%;
-    height         : 500px;
-    display        : flex;
-    justify-content: center;
-    align-items    : center;
-    flex-wrap      : wrap;
+.comments-grid {
+    display              : grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap                  : 20px;
+    padding              : 20px;
+    max-width            : 1200px;
+    margin               : 0 auto;
+    /* Evitamos que las tarjetas tengan una altura fija */
+    align-items          : start;
 }
 
 .comment-card {
-    position        : absolute;
     background-color: var(--color-black);
-    color           : var(--color-white);
-    border-radius   : 8px;
-    padding         : 15px;
-    width           : 250px;
-    height          : 370px;
-    transition      : transform 0.2s ease-out, filter 0.2s ease-out, background-color 0.5s ease-out, color 0.5s ease-out;
-    will-change     : transform, filter;
-    filter          : blur(10px);
-}
-
-.light-mode .comment-card {
-    background-color: var(--color-white);
-    color           : var(--color-black);
+    border          : 1px solid var(--color-grey);
+    border-radius   : 10px;
+    padding         : 20px;
+    box-shadow      : 0 4px 6px rgba(0, 0, 0, 0.1);
+    color           : var(--color-light-grey);
+    display         : flex;
+    flex-direction  : column;
+    justify-content : space-between;
+    /* Añadimos flex-grow para que las tarjetas no se estiren innecesariamente */
+    flex-grow       : 1;
+    height          : auto;
+    transition      : background-color 0.5s ease, border 0.5s ease;
+    /* Permite que la altura se ajuste según el contenido */
 }
 
 .comment-card:hover {
-    filter: none;
+    background-color: var(--color-semiblack);
+    border          : 1px solid var(--color-light-grey);
 }
 
-.comment-content {
-    display        : flex;
-    flex-direction : column;
-    justify-content: space-between;
-    height         : 100%;
+.comment-card h3 {
+    margin-top: 15px;
+    font-size : 1.2rem;
+    color     : var(--color-secondary);
 }
 
-.comment-content p {
-    font-size  : 1.5em;
-    font-family: "neue";
-    color      : var(--color-white);
+.comment-card .occupation {
+    font-size : 0.9rem;
+    color     : gray;
+    margin-top: 5px;
 }
 
-.light-mode .comment-content p {
-    color: var(--color-black);
+.comment {
+    font-size  : 1.2rem;
+    line-height: 1.5;
 }
 
-.comment-content h3 {
-    font-size  : 1.2em;
-    margin     : 0;
-    padding    : 0;
-    font-family: "neue";
-    font-weight: lighter;
-    text-align : left;
-    position   : absolute;
-    bottom     : 5px;
-    right      : 15px;
+/* Centrar la tarjeta de Nahuel */
+.comments-grid .naahueel {
+    grid-column : 1 / -1;
+    justify-self: center;
+    max-width   : 375px;
+    margin-top  : -145px;
+    /* Ajusta este valor según lo necesites */
 }
-
-/* about section ends here */

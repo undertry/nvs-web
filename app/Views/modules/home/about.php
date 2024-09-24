@@ -1,122 +1,49 @@
-<div id="container">
-    <div id="info">
-        <p class="click-text">Click me</p>
-        <p class="cyber-info">CVE: 254-323</p>
-    </div>
+<div class="section-header hidden">
+    <h2><i class="fa-solid fa-comments"></i></h2>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/18.6.4/tween.umd.js"></script>
+<section class="about-comments">
+    <h2>An enterprise-ready app that's a joy to use</h2>
+    <div class="comments-grid">
+        <div class="comment-card">
+            <p class="comment">"The @NVS software has significantly enhanced my security by identifying network vulnerabilities. This has been particularly useful for protecting my extensive computer systems."</p>
+            <h3>schwgon</h3>
+            <p class="occupation">Engineer</p>
+        </div>
 
-<script>
-// Configuración básica de la escena, cámara y renderizador
-let scene = new THREE.Scene();
-let camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-let renderer = new THREE.WebGLRenderer();
+        <div class="comment-card">
+            <p class="comment">"I find this product to be excellent in fulfilling its promises. Despite still being in development, it is even better than some paid programs with the same purpose. Thank you @NVS!"</p>
+            <h3>Dr-Cristian</h3>
+            <p class="occupation">CEO @ Github</p>
+        </div>
 
-renderer.setSize(window.innerWidth, window.innerHeight);
-document.getElementById('container').appendChild(renderer.domElement);
+        <div class="comment-card">
+            <p class="comment">"A well-conceived idea from the initial @NVS design , it effectively meets its objectives and is free of defects. Its creators are visionary and proactive individuals."</p>
+            <h3>LaureanoCarlos</h3>
+            <p class="occupation">Developer Advocate @ supabase</p>
+        </div>
+        <div class="comment-card">
+            <p class="comment">"The website is very pleasant, easy to understand, and visually appealing. The interaction with it is logical and comprehensible. Regarding the @NVS, it is a very interesting idea that is well implemented."</p>
+            <h3>Craifran</h3>
+            <p class="occupation">Engineer</p>
+        </div>
 
-// Configuramos el color de fondo desde CSS
-renderer.setClearColor('#0c0b0b');
+        <div class="comment-card">
+            <p class="comment">"Very good service, very simple and practical. Thanks @NVS!</p>
+            <h3>Randalfd</h3>
+            <p class="occupation">CEO @ Github</p>
+        </div>
 
-// Cargamos la textura para los puntos circulares
-let loader = new THREE.TextureLoader();
-let circleTexture = loader.load('https://threejs.org/examples/textures/sprites/disc.png');
+        <div class="comment-card">
+            <p class="comment">"The tool appears to be very useful for addressing current security concerns and frequent attacks. With this device, vulnerabilities are mitigated, and its advanced technology effectively handles highly specific issues. A great idea @NVS!"</p>
+            <h3>TadeoBoglione</h3>
+            <p class="occupation">Developer Advocate @ supabase</p>
+        </div>
 
-// Creamos una geometría de esfera
-let geometry = new THREE.SphereGeometry(4, 42, 32);
-
-// Configuramos el material para los puntos
-let material = new THREE.PointsMaterial({
-    color: 0xcccccc,
-    size: 0.1,
-    map: circleTexture,
-    transparent: true,
-    alphaTest: 0.5
-});
-
-// Creamos la esfera con puntos
-let sphere = new THREE.Points(geometry, material);
-scene.add(sphere);
-
-// Posición de la cámara
-camera.position.z = 10;
-
-// Variable para controlar si la esfera ha sido agrandada
-let isExpanded = false;
-
-// Función para agrandar la esfera y ocultar el texto
-function expandSphere() {
-    if (!isExpanded) {
-        isExpanded = true;
-
-        // Oculta el texto
-        document.getElementById('info').style.display = 'none';
-
-        let scaleFactor = {
-            value: 1
-        };
-        let tween = new TWEEN.Tween(scaleFactor)
-            .to({
-                value: 3
-            }, 2000)
-            .easing(TWEEN.Easing.Quadratic.Out)
-            .onUpdate(() => {
-                sphere.scale.set(scaleFactor.value, scaleFactor.value, scaleFactor.value);
-            })
-            .start();
-    }
-}
-
-// Añadimos el evento de clic para agrandar la esfera
-document.getElementById('container').addEventListener('click', expandSphere);
-
-// Animación básica con rotación automática en el eje Y
-function animate() {
-    requestAnimationFrame(animate);
-
-    // Rotación automática en el eje Y
-    sphere.rotation.y += 0.001;
-
-    TWEEN.update(); // Actualizamos las animaciones de TWEEN
-
-    renderer.render(scene, camera);
-}
-
-animate();
-
-// Ajuste del renderizado en caso de cambiar el tamaño de la ventana
-window.addEventListener('resize', () => {
-    let width = window.innerWidth;
-    let height = window.innerHeight;
-    renderer.setSize(width, height);
-    camera.aspect = width / height;
-    camera.updateProjectionMatrix();
-});
-
-// Función para simular efecto de desencriptado en el texto
-function hackerEffect(element, text) {
-    let chars = '!<>-_\\/[]{}—=+*^?#________';
-    let iterations = 0;
-
-    let interval = setInterval(() => {
-        element.innerText = text.split('')
-            .map((letter, index) => {
-                if (index < iterations) {
-                    return letter;
-                }
-                return chars[Math.floor(Math.random() * chars.length)];
-            })
-            .join('');
-
-        if (iterations >= text.length) clearInterval(interval);
-
-        iterations += 1 / 3;
-    }, 30);
-}
-
-// Iniciamos el efecto hacker en el texto 'Click me'
-let clickText = document.querySelector('.click-text');
-hackerEffect(clickText, 'Click me');
-</script>
+        <div class="comment-card naahueel">
+            <p class="comment">"I found the site dynamic, interactive and with good navigation flow. Fantastic @NVS.</p>
+            <h3>Naahuuel</h3>
+            <p class="occupation">Developer Advocate @ supabase</p>
+        </div>
+    </div>
+</section>
