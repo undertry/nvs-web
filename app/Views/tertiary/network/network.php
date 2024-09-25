@@ -60,7 +60,6 @@
     </div>
     <script>
     document.addEventListener("DOMContentLoaded", function() {
-        // Selecciona todos los formularios de selección de red
         const forms = document.querySelectorAll("form[id^='networkForm']");
 
         forms.forEach(function(form) {
@@ -76,8 +75,8 @@
                     successMessage.style.display = "none";
                 }, 3000);
 
-                // Si prefieres enviar el formulario al servidor, descomenta la siguiente línea
-                // form.submit();
+                // Aquí es donde realmente envías el formulario después de mostrar el mensaje
+                form.submit();
             });
         });
     });
