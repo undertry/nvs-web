@@ -35,7 +35,7 @@
                 <a href="<?= base_url('signup-animation'); ?>">Sign up</a>
                 <a href="<?= base_url('forgot_password'); ?>">Forgot password?</a>
             </div>
-            <input type="submit" value="Login">
+            <input type="submit" value="Enter">
         </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.0.0/tsparticles.bundle.min.js"></script>
@@ -69,7 +69,7 @@
                 width: 1
             },
             move: {
-                speed: 2,
+                speed: 1,
                 random: true,
                 direction: 'none',
                 out_mode: 'out',

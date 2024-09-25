@@ -50,7 +50,7 @@
             <div class="links">
                 <a href="<?= base_url('login-animation'); ?>">Already have an account?</a>
             </div>
-            <input type="submit" value="Register">
+            <input type="submit" value="Continue">
         </form>
     </div>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
@@ -67,7 +67,7 @@
                 type: 'circle'
             },
             opacity: {
-                value: 0.9,
+                value: 0.5,
                 random: false
             },
             size: {
@@ -78,11 +78,11 @@
                 enable: true,
                 distance: 150,
                 color: '#ffffff',
-                opacity: 0.9,
+                opacity: 0.4,
                 width: 1
             },
             move: {
-                speed: 2,
+                speed: 1,
                 random: true,
                 direction: 'none',
                 out_mode: 'out',

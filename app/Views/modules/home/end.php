@@ -130,19 +130,27 @@ document.addEventListener("DOMContentLoaded", function() {
     // Interceptar los clics en los enlaces del navbar
     document.querySelectorAll('nav ul.nav-list a').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
-            e.preventDefault();
+            const href = this.getAttribute('href');
 
-            // Obtener el ID de la sección objetivo desde el atributo href
-            const targetId = this.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
+            // Comprobar si el enlace es a una sección interna (#)
+            if (href.startsWith('#')) {
+                e.preventDefault();
 
-            if (targetElement) {
-                // Desplazar usando la API de smooth-scrollbar
-                scrollbar.scrollIntoView(targetElement, {
-                    damping: 0.07,
-                    offsetTop: -
+                // Obtener el ID de la sección objetivo desde el atributo href
+                const targetId = href.substring(1); // Remover el '#'
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    // Desplazar usando la API de smooth-scrollbar
+                    scrollbar.scrollIntoView(targetElement, {
+                        damping: 0.07,
+                        offsetTop: -
                         100, // Ajustar este valor según la altura del navbar si es necesario
-                });
+                    });
+                }
+            } else {
+                // Enlaces externos como login-animation o signup-animation permiten la redirección normal
+                window.location.href = href;
             }
         });
     });
