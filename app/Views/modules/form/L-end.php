@@ -3,10 +3,6 @@
 <script src="<?php echo base_url('complements/functionality/main/home/navbar.js'); ?>"></script>
 <script src="<?php echo base_url('complements/functionality/main/home/cursor.js'); ?>"></script>
 <script src="<?php echo base_url('complements/functionality/secondary/form/password.js'); ?>"></script>
-<script>
-const loginLightImage = "<?= base_url('complements/styles/images/trasparent.jpg'); ?>";
-const loginDarkImage = "<?= base_url('complements/styles/images/alone1.jpg'); ?>";
-</script>
 </body>
 
 </html>

@@ -1,15 +1,13 @@
-/* color palette */
-
 :root {
     --color-main      : #d60b0b;
     --color-secondary : #bb0f0f;
     --color-black     : #151414;
     --color-semiblack : #202020;
     --color-dark      : #0c0b0b;
-    --color-light     : #FCFCFC;
+    --color-light     : #fcfcfc;
     --color-white     : #f3f2f2;
     --color-light-grey: #cfcfcf;
-    --color-semigrey  : #757575;
+    --color-semigrey  : #565555;
     --color-grey      : #535151;
 }
 
@@ -35,33 +33,19 @@
     src        : url("../../fonts/neue/NeueMontreal-Medium.otf") format("truetype");
 }
 
-/* general styles */
+@font-face {
+    font-family: "ahsing";
+    src        : url("../../fonts/Ahsing/Ahsing-Regular.otf") format("truetype");
+}
+
 
 * {
     padding    : 0;
     margin     : 0;
     box-sizing : border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'neue', sans-serif;
     font-weight: 400;
 }
-
-/* cursor styles */
-
-.cursor {
-    pointer-events  : none;
-    position        : absolute;
-    padding         : 0.5vw;
-    border-radius   : 50%;
-    z-index         : 9000;
-    transition      : transform 0.1s ease, width 0.3s ease, height 0.3s ease, background-color 0.5s ease;
-    background-color: var(--color-white);
-}
-
-.light-mode .cursor {
-    background-color: var(--color-black);
-}
-
-/* capitalization notice styles */
 
 .caps-lock-warning {
     display         : none;
@@ -78,38 +62,31 @@
     border          : 1px solid #ffa000;
     border-radius   : 5px;
     z-index         : 1000;
-    font-family     : "neue";
-    font-size       : 1.2em;
-    font-weight     : lighter;
+    /* Asegura que esté por encima del formulario */
 }
 
 .caps-lock-warning.active {
     display: block;
 }
 
-/* alert message styles */
-
+/* mensaje de alerta */
 .message {
     position     : fixed;
     top          : 0;
     margin-top   : 10px;
     left         : 43%;
     width        : 15%;
-    border-radius: 5px;
+    border-radius: 10px;
     padding      : 10px;
     text-align   : center;
     z-index      : 1000;
     box-sizing   : border-box;
-    font-family  : "neue";
-    font-size    : 1.2em;
-    font-weight  : lighter;
 }
 
 .error {
     background-color: #f8d7da;
     color           : #721c24;
     border          : 1px solid #f5c6cb;
-
 }
 
 .success {
@@ -118,50 +95,18 @@
     border          : 1px solid #c3e6cb;
 }
 
-/* Password popup styles */
-
-.password-popup {
-    display         : none;
-    position        : fixed;
-    top             : 50%;
-    left            : 87%;
-    transform       : translate(-50%, -50%);
-    padding         : 30px;
-    background-color: var(--color-black);
-    border          : 1px solid var(--color-grey);
-    border-radius   : 5px;
-    box-shadow      : 0 4px 8px rgba(255, 255, 255, 0.1);
-    z-index         : 1001;
-    width           : 300px;
-    transition      : background-color 0.5s ease, border 0.5s ease, box-shadow 0.5s ease;
+#particles-js {
+    position      : absolute;
+    width         : 100%;
+    z-index       : 1;
+    /* Detrás del contenido */
+    top           : 0;
+    left          : 0;
+    background    : var(--color-dark);
+    pointer-events: none;
+    /* El mismo color de fondo de tu .home */
 }
 
-.light-mode .password-popup {
-    background-color: var(--mode-light);
-    border          : 1px solid var(--color-white);
-    box-shadow      : 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.password-popup.active {
-    display: block;
-}
-
-.password-popup p {
-    margin     : 0;
-    color      : var(--color-white);
-    font-family: "neue";
-    font-size  : 1.3em;
-}
-
-.password-popup p span {
-    color: var(--color-main);
-}
-
-.light-mode .password-popup p {
-    color: var(--color-dark);
-}
-
-/* body styles */
 
 body {
     min-height      : 100vh;
@@ -170,5 +115,158 @@ body {
     display         : flex;
     align-items     : center;
     justify-content : center;
-    margin          : 0;
+    flex-wrap       : nowrap;
+    overflow        : hidden;
+}
+
+.box {
+    position        : relative;
+    width           : 380px;
+    height          : 500px;
+    /* Adjusted height to fit the form content */
+    background-color: var(--color-black);
+    border-radius   : 10px;
+    overflow        : hidden;
+}
+
+
+
+@keyframes animacion {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.form {
+    position       : absolute;
+    inset          : 2px;
+    background     : var(--color-black);
+    border         : 1px solid var(--color-grey);
+    border-radius  : 10px;
+    padding        : 30px;
+    display        : flex;
+    justify-content: space-evenly;
+    flex-direction : column;
+    z-index        : 10;
+}
+
+h2 {
+    font-size     : 2.2em;
+    font-weight   : 900;
+    color         : var(--color-main);
+    font-family   : "neue-medium";
+    font-weight   : lighter;
+    letter-spacing: 2.5px;
+    text-align    : center;
+}
+
+.form-inputs {
+    display       : flex;
+    flex-direction: column;
+    gap           : 30px;
+
+}
+
+.form-label {
+    width  : 100%;
+    height : 50px;
+    display: flex;
+
+}
+
+.form-label input {
+    width           : 100%;
+    height          : 100%;
+    padding         : 10px 30px;
+    outline         : none;
+    background-color: var(--color-semiblack);
+    border-radius   : 10px;
+    border          : 1px solid var(--color-grey);
+    color           : var(--color-light-grey);
+    font-family     : "neue";
+    font-size       : 1.2em;
+    font-weight     : lighter;
+    transition      : background-color 0.5s;
+}
+
+.form-label input:focus {
+    background-color: var(--color-dark);
+}
+
+.links {
+    display       : flex;
+    flex-direction: column;
+    gap           : 10px;
+}
+
+.links a {
+    text-decoration: none;
+    color          : var(--color-semigrey);
+    transition     : .5s;
+    font-family    : "neue";
+    font-weight    : lighter;
+    font-size      : 1.2em;
+}
+
+.links a:first-child:hover {
+    color: var(--color-main);
+}
+
+.links a:nth-child(2) {
+    color: var(--color-semigrey);
+}
+
+.links a:nth-child(2):hover {
+    color: var(--color-main);
+}
+
+input[type="submit"] {
+    background-color: var(--color-semiblack);
+    color           : var(--color-light-grey);
+    padding         : 15px;
+    border-radius   : 10px;
+    cursor          : pointer;
+    transition      : .5s;
+    border          : 1px solid var(--color-grey);
+    font-family     : "neue";
+    font-size       : 1.2em;
+    font-weight     : lighter;
+    transition      : background-color 0.5s, border 0.5s;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--color-secondary);
+    border          : 1px solid var(--color-light-grey);
+}
+
+.form-label {
+    position: relative;
+}
+
+.password-toggle {
+    position : absolute;
+    top      : 50%;
+    transform: translateY(-50%);
+    right    : 10px;
+    cursor   : pointer;
+}
+
+.field-icon {
+    color: #9B9A9A;
+    /* Color del icono por defecto */
+}
+
+/* Estilos adicionales cuando el usuario interactúa con el campo */
+.field-icon:hover {
+    color: var(--color-main);
+    /* Color del icono al hacer hover */
+}
+
+.show-password .field-icon {
+    color: var(--color-main);
+    /* Color del icono cuando la contraseña es visible */
 }
