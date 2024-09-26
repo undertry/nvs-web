@@ -8,7 +8,7 @@
         <div class="text-image-block hidden" id="what-is">
             <div class="text hidden">
                 <h3>What is it?</h3>
-                <h4>SOFTWARE | VULNERABILITY | SCAN | NETWORKS</h4>
+                <h4>Software | Vulnerability | Scan | Networks</h4>
                 <p>It is a software designed to analyze available WiFi networks. Upon selecting a specific network,
                     the software can perform the following functions:</p>
                 <ul>
@@ -27,7 +27,7 @@
         <div class="text-image-block hidden" id="who-for">
             <div class="text hidden">
                 <h3>Who is it for?</h3>
-                <h4>INDIVIDUALS PASSIONATE ABOUT CYBERSECURITY</h4>
+                <h4>Individuals passionate about cybersecurity</h4>
                 <p>It is for individuals who are <span>passionate</span> about <span>cybersecurity</span> and want
                     to add an extra layer of <span>security</span> to their networks by performing <span>daily
                         diagnostics</span> to enhance the <span>safety</span> of their WiFi.</p>
@@ -37,7 +37,7 @@
         <div class="text-image-block hidden" id="origin">
             <div class="text hidden">
                 <h3>How did it start?</h3>
-                <h4>FROM AN IDEA TO A PROJECT</h4>
+                <h4>From an idea to a project</h4>
                 <p>It began as a <span>mere idea</span>, but after giving it some thought, we realized it would be a
                     <span>great project</span> for the thesis we needed to present. We conducted research until we
                     could <span>solidify this fantastic concept.</span> The more we studied the topic, the more

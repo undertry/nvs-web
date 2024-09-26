@@ -1,8 +1,8 @@
-<div class="section-header hidden" id="about">
+<div class="section-header hidden">
     <h2><i class="fa-solid fa-comments"></i></h2>
 </div>
 
-<section class="about-comments">
+<section class="about-comments" id="about">
     <h2>What do they think about @NVS?</h2>
     <div class="comments-grid">
         <div class="comment-card">

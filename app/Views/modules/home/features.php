@@ -5,7 +5,7 @@
      </div>
      <div class="features-block hidden" id="security">
 
-         <h3>FEATURES & SECURITY</h3>
+         <h3>Features & Security</h3>
          <div class="feature-item">
              <div class="feature-text hidden">
                  <h4><i class="fa-solid fa-user-lock"></i> Highly Secure</h4>

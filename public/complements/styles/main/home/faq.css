@@ -1,10 +1,11 @@
 /* faq section starts here */
 
-#faq {
+.faq {
     background-color: var(--color-black);
+    border-top      : 1px solid var(--color-grey);
     color           : var(--color-white);
-    padding         : 2rem;
-    width           : 70%;
+    padding         : 1rem;
+    width           : 100%;
     margin          : 0 auto;
     transition      : background-color 0.5s;
 }
@@ -15,18 +16,25 @@
 }
 
 .faq h2 {
-    font-size    : 2.9em;
-    margin-bottom: 2rem;
+    font-size    : 3em;
+    margin-bottom: 3rem;
     text-align   : center;
     font-family  : "neue";
     font-weight  : lighter;
-    color        : var(--color-secondary);
+    color        : var(--color-light-grey);
+}
+
+h2 i {
+    color: var(--color-secondary);
 }
 
 .faq-item {
     border-bottom : 1px solid var(--color-grey);
-    margin-bottom : 1rem;
+    margin-bottom : 1.5rem;
     padding-bottom: 1rem;
+    width         : 50%;
+    right         : 50%;
+    transform     : translateX(50%);
 }
 
 .faq-question {
@@ -43,15 +51,23 @@
     font-size  : 1.9rem;
     font-family: "neue";
     font-weight: lighter;
+    color      : var(--color-light-grey);
+    transition : color 0.3s ease;
+}
+
+.faq-question h3:hover {
+    color: var(--color-secondary);
 }
 
 .faq-icon {
+    color     : var(--color-light-grey);
     font-size : 1.5rem;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .faq-item.active .faq-icon {
     transform: rotate(45deg);
+    color    : var(--color-secondary);
 }
 
 .faq-answer {
@@ -69,7 +85,20 @@
     font-family: "neue";
     font-weight: lighter;
     font-size  : 1.5em;
-    color      : var(--color-semigrey);
+    color      : var(--color-light-grey);
+    line-height: 2;
+}
+
+.faq-answer p span {
+    color           : var(--color-secondary);
+    background-color: var(--color-semiblack);
+    padding         : 1px 5px;
+    border-radius   : 10px;
+    transition      : color 0.3s ease;
+}
+
+.faq-answer p span:hover {
+    color: var(--color-main);
 }
 
 /* faq section ends here */

@@ -9,16 +9,16 @@
 <body>
     <!-- Mensaje de sesiones -->
     <?php if (session()->getFlashdata('error')) : ?>
-    <div class="message error"><?= session()->getFlashdata('error'); ?></div>
+        <div class="message error"><?= session()->getFlashdata('error'); ?></div>
     <?php endif; ?>
     <?php if (session()->getFlashdata('success')) : ?>
-    <div class="message success"><?= session()->getFlashdata('success'); ?></div>
+        <div class="message success"><?= session()->getFlashdata('success'); ?></div>
     <?php endif; ?>
     <!-- Formulario de Registro -->
     <div id="particles-js"></div> <!-- Contenedor de partículas -->
     <div class="box">
         <form id="registerForm" method="post" action="<?= base_url('register'); ?>" class="form">
-            <h2><i class="fa-solid fa-user-plus"></i></h2>
+            <h2><a href="<?= base_url("home-animation"); ?>"><i class="fa-solid fa-fingerprint"></i></a></h2>
             <div class="form-inputs">
                 <div class="form-label">
                     <input name="name" required type="text" id="name" placeholder="Your name"
@@ -55,52 +55,52 @@
     </div>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
-    particlesJS('particles-js', {
-        particles: {
-            number: {
-                value: 100
-            },
-            color: {
-                value: '#ffffff'
-            },
-            shape: {
-                type: 'circle'
-            },
-            opacity: {
-                value: 0.5,
-                random: false
-            },
-            size: {
-                value: 3,
-                random: true
-            },
-            line_linked: {
-                enable: true,
-                distance: 150,
-                color: '#ffffff',
-                opacity: 0.4,
-                width: 1
-            },
-            move: {
-                speed: 1,
-                random: true,
-                direction: 'none',
-                out_mode: 'out',
-            }
-        },
-        interactivity: {
-            events: {
-                onhover: {
-                    enable: true,
-                    mode: 'grab'
+        particlesJS('particles-js', {
+            particles: {
+                number: {
+                    value: 100
                 },
-                onclick: {
-                    enable: true,
-                    mode: 'push'
+                color: {
+                    value: '#ffffff'
                 },
-            }
-        },
-        retina_detect: true
-    });
+                shape: {
+                    type: 'circle'
+                },
+                opacity: {
+                    value: 0.5,
+                    random: false
+                },
+                size: {
+                    value: 3,
+                    random: true
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: '#ffffff',
+                    opacity: 0.4,
+                    width: 1
+                },
+                move: {
+                    speed: 1,
+                    random: true,
+                    direction: 'none',
+                    out_mode: 'out',
+                }
+            },
+            interactivity: {
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: 'grab'
+                    },
+                    onclick: {
+                        enable: true,
+                        mode: 'push'
+                    },
+                }
+            },
+            retina_detect: true
+        });
     </script>
     <?= $this->include('modules/form/L-end.php'); ?>
