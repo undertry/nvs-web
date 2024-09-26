@@ -1,0 +1,1589 @@
+INFO - 2024-09-26 16:27:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 16:27:25 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Login::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 16:27:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 16:27:25 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Login::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 16:27:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 16:27:30 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Login::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-09-26 16:27:30 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'nvs' in C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'nvs', 3306, '', 0)
+#1 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\NVS\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `id_user...', Array, false)
+#4 C:\xampp\htdocs\NVS\system\Model.php(319): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\NVS\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\NVS\app\Models\secondary\form\UserModel.php(41): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\NVS\app\Controllers\secondary\form\Login.php(34): App\Models\secondary\form\UserModel->getUserByEmail('cristianmonteve...')
+#8 C:\xampp\htdocs\NVS\system\CodeIgniter.php(933): App\Controllers\secondary\form\Login->do_login()
+#9 C:\xampp\htdocs\NVS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\form\Login))
+#10 C:\xampp\htdocs\NVS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\NVS\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\NVS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\NVS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'nvs' in C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\NVS\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `id_user...', Array, false)
+#3 C:\xampp\htdocs\NVS\system\Model.php(319): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\NVS\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\NVS\app\Models\secondary\form\UserModel.php(41): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\NVS\app\Controllers\secondary\form\Login.php(34): App\Models\secondary\form\UserModel->getUserByEmail('cristianmonteve...')
+#7 C:\xampp\htdocs\NVS\system\CodeIgniter.php(933): App\Controllers\secondary\form\Login->do_login()
+#8 C:\xampp\htdocs\NVS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\form\Login))
+#9 C:\xampp\htdocs\NVS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\NVS\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\NVS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\NVS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2024-09-26 16:27:30 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'nvs'
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `id_user`, `name`, `email`, `password`, `created_at`, `verification`
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\secondary\form\UserModel.php(41): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\secondary\form\Login.php(34): App\Models\secondary\form\UserModel->getUserByEmail('cristianmonteverde@alumnos.itr3.edu.ar')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\secondary\form\Login->do_login()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\form\Login))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 16:27:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 16:27:32 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Login::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 16:28:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 16:28:50 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Login::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 16:28:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 16:28:50 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\Dashboard::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 16:28:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 16:28:52 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\Dashboard::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 16:28:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 16:28:56 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 16:28:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 16:28:57 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 16:29:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 16:29:00 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-26 16:29:00 --> BadMethodCallException: Call to undefined method App\Models\secondary\form\ScanModel::deleteScanWithDetails
+[Method: POST, Route: history/deleteScan/1]
+in SYSTEMPATH\Model.php on line 921.
+ 1 APPPATH\Controllers\secondary\profile\History.php(34): CodeIgniter\Model->__call('deleteScanWithDetails', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\secondary\profile\History->deleteScan('1')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\profile\History))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 16:29:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 16:29:16 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 16:29:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 16:29:16 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 16:30:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 16:30:27 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 16:33:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 16:33:15 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 16:36:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 16:36:28 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 16:39:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 16:39:20 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 16:39:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 16:39:25 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 16:39:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 16:39:25 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 16:47:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 16:47:52 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 16:48:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 16:48:29 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 16:48:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 16:48:32 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-09-26 16:48:32 --> mysqli_sql_exception: Unknown column 'id_devices' in 'where clause' in C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `po...', 0)
+#1 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `po...')
+#2 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `po...')
+#3 C:\xampp\htdocs\NVS\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `po...', Array, false)
+#4 C:\xampp\htdocs\NVS\app\Models\secondary\form\ScanModel.php(54): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\NVS\app\Controllers\secondary\profile\History.php(34): App\Models\secondary\form\ScanModel->deleteScanWithDetails('1')
+#6 C:\xampp\htdocs\NVS\system\CodeIgniter.php(933): App\Controllers\secondary\profile\History->deleteScan('1')
+#7 C:\xampp\htdocs\NVS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\profile\History))
+#8 C:\xampp\htdocs\NVS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\NVS\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\NVS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\NVS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+ERROR - 2024-09-26 16:48:32 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`nvs`.`scan_details`, CONSTRAINT `scan_details_ibfk_2` FOREIGN KEY (`id_devices`) REFERENCES `devices` (`id_devices`)) in C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `de...', 0)
+#1 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `de...')
+#2 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `de...')
+#3 C:\xampp\htdocs\NVS\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `de...', Array, false)
+#4 C:\xampp\htdocs\NVS\app\Models\secondary\form\ScanModel.php(57): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\NVS\app\Controllers\secondary\profile\History.php(34): App\Models\secondary\form\ScanModel->deleteScanWithDetails('1')
+#6 C:\xampp\htdocs\NVS\system\CodeIgniter.php(933): App\Controllers\secondary\profile\History->deleteScan('1')
+#7 C:\xampp\htdocs\NVS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\profile\History))
+#8 C:\xampp\htdocs\NVS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\NVS\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\NVS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\NVS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+ERROR - 2024-09-26 16:48:32 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`nvs`.`scan`, CONSTRAINT `scan_ibfk_2` FOREIGN KEY (`id_network`) REFERENCES `network` (`id_network`)) in C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `ne...', 0)
+#1 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `ne...')
+#2 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `ne...')
+#3 C:\xampp\htdocs\NVS\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ne...', Array, false)
+#4 C:\xampp\htdocs\NVS\app\Models\secondary\form\ScanModel.php(71): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\NVS\app\Controllers\secondary\profile\History.php(34): App\Models\secondary\form\ScanModel->deleteScanWithDetails('1')
+#6 C:\xampp\htdocs\NVS\system\CodeIgniter.php(933): App\Controllers\secondary\profile\History->deleteScan('1')
+#7 C:\xampp\htdocs\NVS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\profile\History))
+#8 C:\xampp\htdocs\NVS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\NVS\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\NVS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\NVS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+INFO - 2024-09-26 16:48:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 16:48:32 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 16:48:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 16:48:35 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 16:49:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 16:49:37 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 16:49:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 16:49:39 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-09-26 16:49:39 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`nvs`.`scan`, CONSTRAINT `scan_ibfk_2` FOREIGN KEY (`id_network`) REFERENCES `network` (`id_network`)) in C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `ne...', 0)
+#1 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `ne...')
+#2 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `ne...')
+#3 C:\xampp\htdocs\NVS\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ne...', Array, false)
+#4 C:\xampp\htdocs\NVS\app\Models\secondary\form\ScanModel.php(71): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\NVS\app\Controllers\secondary\profile\History.php(34): App\Models\secondary\form\ScanModel->deleteScanWithDetails('1')
+#6 C:\xampp\htdocs\NVS\system\CodeIgniter.php(933): App\Controllers\secondary\profile\History->deleteScan('1')
+#7 C:\xampp\htdocs\NVS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\profile\History))
+#8 C:\xampp\htdocs\NVS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\NVS\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\NVS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\NVS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+INFO - 2024-09-26 16:49:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 16:49:39 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 17:05:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:05:37 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 17:05:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:05:38 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 17:05:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:05:40 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-09-26 17:05:40 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`nvs`.`scan`, CONSTRAINT `scan_ibfk_2` FOREIGN KEY (`id_network`) REFERENCES `network` (`id_network`)) in C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `ne...', 0)
+#1 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `ne...')
+#2 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `ne...')
+#3 C:\xampp\htdocs\NVS\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ne...', Array, false)
+#4 C:\xampp\htdocs\NVS\app\Models\secondary\form\ScanModel.php(71): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\NVS\app\Controllers\secondary\profile\History.php(34): App\Models\secondary\form\ScanModel->deleteScanWithDetails('1')
+#6 C:\xampp\htdocs\NVS\system\CodeIgniter.php(933): App\Controllers\secondary\profile\History->deleteScan('1')
+#7 C:\xampp\htdocs\NVS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\profile\History))
+#8 C:\xampp\htdocs\NVS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\NVS\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\NVS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\NVS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+INFO - 2024-09-26 17:05:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:05:40 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 17:07:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:07:16 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 17:07:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:07:19 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-09-26 17:07:19 --> mysqli_sql_exception: Unknown column 'id_devices' in 'where clause' in C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `po...', 0)
+#1 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `po...')
+#2 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `po...')
+#3 C:\xampp\htdocs\NVS\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `po...', Array, false)
+#4 C:\xampp\htdocs\NVS\app\Models\secondary\form\ScanModel.php(56): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\NVS\app\Controllers\secondary\profile\History.php(34): App\Models\secondary\form\ScanModel->deleteScanWithDetails('1')
+#6 C:\xampp\htdocs\NVS\system\CodeIgniter.php(933): App\Controllers\secondary\profile\History->deleteScan('1')
+#7 C:\xampp\htdocs\NVS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\profile\History))
+#8 C:\xampp\htdocs\NVS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\NVS\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\NVS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\NVS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+ERROR - 2024-09-26 17:07:19 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`nvs`.`scan_details`, CONSTRAINT `scan_details_ibfk_2` FOREIGN KEY (`id_devices`) REFERENCES `devices` (`id_devices`)) in C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `de...', 0)
+#1 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `de...')
+#2 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `de...')
+#3 C:\xampp\htdocs\NVS\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `de...', Array, false)
+#4 C:\xampp\htdocs\NVS\app\Models\secondary\form\ScanModel.php(59): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\NVS\app\Controllers\secondary\profile\History.php(34): App\Models\secondary\form\ScanModel->deleteScanWithDetails('1')
+#6 C:\xampp\htdocs\NVS\system\CodeIgniter.php(933): App\Controllers\secondary\profile\History->deleteScan('1')
+#7 C:\xampp\htdocs\NVS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\profile\History))
+#8 C:\xampp\htdocs\NVS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\NVS\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\NVS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\NVS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+ERROR - 2024-09-26 17:07:19 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`nvs`.`scan`, CONSTRAINT `scan_ibfk_2` FOREIGN KEY (`id_network`) REFERENCES `network` (`id_network`)) in C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `ne...', 0)
+#1 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `ne...')
+#2 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `ne...')
+#3 C:\xampp\htdocs\NVS\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ne...', Array, false)
+#4 C:\xampp\htdocs\NVS\app\Models\secondary\form\ScanModel.php(69): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\NVS\app\Controllers\secondary\profile\History.php(34): App\Models\secondary\form\ScanModel->deleteScanWithDetails('1')
+#6 C:\xampp\htdocs\NVS\system\CodeIgniter.php(933): App\Controllers\secondary\profile\History->deleteScan('1')
+#7 C:\xampp\htdocs\NVS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\profile\History))
+#8 C:\xampp\htdocs\NVS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\NVS\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\NVS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\NVS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+ERROR - 2024-09-26 17:07:19 --> Error al eliminar el escaneo con id_scan: 1
+INFO - 2024-09-26 17:07:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:07:19 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 17:09:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:09:20 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 17:09:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:09:22 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-09-26 17:09:22 --> mysqli_sql_exception: Unknown column 'id_devices' in 'where clause' in C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `po...', 0)
+#1 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `po...')
+#2 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `po...')
+#3 C:\xampp\htdocs\NVS\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `po...', Array, false)
+#4 C:\xampp\htdocs\NVS\app\Models\secondary\form\ScanModel.php(58): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\NVS\app\Controllers\secondary\profile\History.php(34): App\Models\secondary\form\ScanModel->deleteScanWithDetails('1')
+#6 C:\xampp\htdocs\NVS\system\CodeIgniter.php(933): App\Controllers\secondary\profile\History->deleteScan('1')
+#7 C:\xampp\htdocs\NVS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\profile\History))
+#8 C:\xampp\htdocs\NVS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\NVS\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\NVS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\NVS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+ERROR - 2024-09-26 17:09:22 --> Error al eliminar estado de puertos para dispositivos: 1,2,3
+ERROR - 2024-09-26 17:09:22 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`nvs`.`scan_details`, CONSTRAINT `scan_details_ibfk_2` FOREIGN KEY (`id_devices`) REFERENCES `devices` (`id_devices`)) in C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `de...', 0)
+#1 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `de...')
+#2 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `de...')
+#3 C:\xampp\htdocs\NVS\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `de...', Array, false)
+#4 C:\xampp\htdocs\NVS\app\Models\secondary\form\ScanModel.php(61): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\NVS\app\Controllers\secondary\profile\History.php(34): App\Models\secondary\form\ScanModel->deleteScanWithDetails('1')
+#6 C:\xampp\htdocs\NVS\system\CodeIgniter.php(933): App\Controllers\secondary\profile\History->deleteScan('1')
+#7 C:\xampp\htdocs\NVS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\profile\History))
+#8 C:\xampp\htdocs\NVS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\NVS\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\NVS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\NVS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+ERROR - 2024-09-26 17:09:22 --> Error al eliminar dispositivos: 1,2,3
+ERROR - 2024-09-26 17:09:22 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`nvs`.`scan`, CONSTRAINT `scan_ibfk_2` FOREIGN KEY (`id_network`) REFERENCES `network` (`id_network`)) in C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `ne...', 0)
+#1 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `ne...')
+#2 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `ne...')
+#3 C:\xampp\htdocs\NVS\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ne...', Array, false)
+#4 C:\xampp\htdocs\NVS\app\Models\secondary\form\ScanModel.php(72): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\NVS\app\Controllers\secondary\profile\History.php(34): App\Models\secondary\form\ScanModel->deleteScanWithDetails('1')
+#6 C:\xampp\htdocs\NVS\system\CodeIgniter.php(933): App\Controllers\secondary\profile\History->deleteScan('1')
+#7 C:\xampp\htdocs\NVS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\profile\History))
+#8 C:\xampp\htdocs\NVS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\NVS\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\NVS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\NVS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+ERROR - 2024-09-26 17:09:22 --> Error al eliminar la red asociada con id_scan: 1
+ERROR - 2024-09-26 17:09:22 --> Error al eliminar el escaneo con id_scan: 1
+INFO - 2024-09-26 17:09:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:09:22 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 17:10:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:10:41 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 17:10:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:10:43 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 17:10:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:10:45 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 17:10:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:10:47 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 17:10:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:10:49 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 17:10:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:10:51 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 17:11:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:11:07 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 17:11:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:11:09 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-26 17:11:09 --> ErrorException: Undefined property: App\Controllers\secondary\profile\History::$db
+[Method: POST, Route: history/deleteScan/1]
+in APPPATH\Controllers\secondary\profile\History.php on line 35.
+ 1 APPPATH\Controllers\secondary\profile\History.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\secondary\\profile\\History::$db', 'C:\\xampp\\htdocs\\NVS\\app\\Controllers\\secondary\\profile\\History.php', 35)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\secondary\profile\History->deleteScan('1')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\profile\History))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 17:12:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:12:28 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2024-09-26 17:12:28 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$db is deprecated in APPPATH\Controllers\secondary\profile\History.php on line 36.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\secondary\profile\History->deleteScan('1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\profile\History))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-09-26 17:12:28 --> mysqli_sql_exception: Unknown column 'id_devices' in 'where clause' in C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `po...', 0)
+#1 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `po...')
+#2 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `po...')
+#3 C:\xampp\htdocs\NVS\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `po...', Array, false)
+#4 C:\xampp\htdocs\NVS\app\Controllers\secondary\profile\History.php(56): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\NVS\system\CodeIgniter.php(933): App\Controllers\secondary\profile\History->deleteScan('1')
+#6 C:\xampp\htdocs\NVS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\profile\History))
+#7 C:\xampp\htdocs\NVS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\NVS\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\NVS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\NVS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+ERROR - 2024-09-26 17:12:28 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`nvs`.`scan_details`, CONSTRAINT `scan_details_ibfk_2` FOREIGN KEY (`id_devices`) REFERENCES `devices` (`id_devices`)) in C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `de...', 0)
+#1 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `de...')
+#2 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `de...')
+#3 C:\xampp\htdocs\NVS\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `de...', Array, false)
+#4 C:\xampp\htdocs\NVS\app\Controllers\secondary\profile\History.php(57): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\NVS\system\CodeIgniter.php(933): App\Controllers\secondary\profile\History->deleteScan('1')
+#6 C:\xampp\htdocs\NVS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\profile\History))
+#7 C:\xampp\htdocs\NVS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\NVS\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\NVS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\NVS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+ERROR - 2024-09-26 17:12:28 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`nvs`.`scan`, CONSTRAINT `scan_ibfk_2` FOREIGN KEY (`id_network`) REFERENCES `network` (`id_network`)) in C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `ne...', 0)
+#1 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `ne...')
+#2 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `ne...')
+#3 C:\xampp\htdocs\NVS\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ne...', Array, false)
+#4 C:\xampp\htdocs\NVS\app\Controllers\secondary\profile\History.php(66): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\NVS\system\CodeIgniter.php(933): App\Controllers\secondary\profile\History->deleteScan('1')
+#6 C:\xampp\htdocs\NVS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\profile\History))
+#7 C:\xampp\htdocs\NVS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\NVS\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\NVS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\NVS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+ERROR - 2024-09-26 17:12:28 --> Error al eliminar el escaneo con id_scan: 1
+INFO - 2024-09-26 17:12:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:12:28 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 17:12:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:12:30 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2024-09-26 17:12:30 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$db is deprecated in APPPATH\Controllers\secondary\profile\History.php on line 36.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\secondary\profile\History->deleteScan('1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\profile\History))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-09-26 17:12:30 --> mysqli_sql_exception: Unknown column 'id_devices' in 'where clause' in C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `po...', 0)
+#1 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `po...')
+#2 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `po...')
+#3 C:\xampp\htdocs\NVS\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `po...', Array, false)
+#4 C:\xampp\htdocs\NVS\app\Controllers\secondary\profile\History.php(56): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\NVS\system\CodeIgniter.php(933): App\Controllers\secondary\profile\History->deleteScan('1')
+#6 C:\xampp\htdocs\NVS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\profile\History))
+#7 C:\xampp\htdocs\NVS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\NVS\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\NVS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\NVS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+ERROR - 2024-09-26 17:12:30 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`nvs`.`scan_details`, CONSTRAINT `scan_details_ibfk_2` FOREIGN KEY (`id_devices`) REFERENCES `devices` (`id_devices`)) in C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `de...', 0)
+#1 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `de...')
+#2 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `de...')
+#3 C:\xampp\htdocs\NVS\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `de...', Array, false)
+#4 C:\xampp\htdocs\NVS\app\Controllers\secondary\profile\History.php(57): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\NVS\system\CodeIgniter.php(933): App\Controllers\secondary\profile\History->deleteScan('1')
+#6 C:\xampp\htdocs\NVS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\profile\History))
+#7 C:\xampp\htdocs\NVS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\NVS\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\NVS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\NVS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+ERROR - 2024-09-26 17:12:30 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`nvs`.`scan`, CONSTRAINT `scan_ibfk_2` FOREIGN KEY (`id_network`) REFERENCES `network` (`id_network`)) in C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `ne...', 0)
+#1 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `ne...')
+#2 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `ne...')
+#3 C:\xampp\htdocs\NVS\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ne...', Array, false)
+#4 C:\xampp\htdocs\NVS\app\Controllers\secondary\profile\History.php(66): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\NVS\system\CodeIgniter.php(933): App\Controllers\secondary\profile\History->deleteScan('1')
+#6 C:\xampp\htdocs\NVS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\profile\History))
+#7 C:\xampp\htdocs\NVS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\NVS\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\NVS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\NVS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+ERROR - 2024-09-26 17:12:30 --> Error al eliminar el escaneo con id_scan: 1
+INFO - 2024-09-26 17:12:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:12:30 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 17:13:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:13:28 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 17:13:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:13:31 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2024-09-26 17:13:31 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$db is deprecated in APPPATH\Controllers\secondary\profile\History.php on line 36.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\secondary\profile\History->deleteScan('1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\profile\History))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2024-09-26 17:13:31 --> Detalles del escaneo: Array
+(
+    [0] => Array
+        (
+            [id_scan_details] => 83
+            [id_scan] => 1
+            [id_devices] => 1
+        )
+
+    [1] => Array
+        (
+            [id_scan_details] => 84
+            [id_scan] => 1
+            [id_devices] => 2
+        )
+
+    [2] => Array
+        (
+            [id_scan_details] => 85
+            [id_scan] => 1
+            [id_devices] => 3
+        )
+
+)
+
+DEBUG - 2024-09-26 17:13:31 --> Resultado de eliminación de detalles: 1
+DEBUG - 2024-09-26 17:13:31 --> Resultado de eliminación de port_analysis: 1
+ERROR - 2024-09-26 17:13:31 --> mysqli_sql_exception: Unknown column 'id_devices' in 'where clause' in C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `po...', 0)
+#1 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `po...')
+#2 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `po...')
+#3 C:\xampp\htdocs\NVS\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `po...', Array, false)
+#4 C:\xampp\htdocs\NVS\app\Controllers\secondary\profile\History.php(60): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\NVS\system\CodeIgniter.php(933): App\Controllers\secondary\profile\History->deleteScan('1')
+#6 C:\xampp\htdocs\NVS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\profile\History))
+#7 C:\xampp\htdocs\NVS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\NVS\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\NVS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\NVS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+DEBUG - 2024-09-26 17:13:31 --> Resultado de eliminación de port_status: 
+ERROR - 2024-09-26 17:13:31 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`nvs`.`scan_details`, CONSTRAINT `scan_details_ibfk_2` FOREIGN KEY (`id_devices`) REFERENCES `devices` (`id_devices`)) in C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `de...', 0)
+#1 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `de...')
+#2 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `de...')
+#3 C:\xampp\htdocs\NVS\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `de...', Array, false)
+#4 C:\xampp\htdocs\NVS\app\Controllers\secondary\profile\History.php(63): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\NVS\system\CodeIgniter.php(933): App\Controllers\secondary\profile\History->deleteScan('1')
+#6 C:\xampp\htdocs\NVS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\profile\History))
+#7 C:\xampp\htdocs\NVS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\NVS\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\NVS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\NVS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+DEBUG - 2024-09-26 17:13:31 --> Resultado de eliminación de devices: 
+DEBUG - 2024-09-26 17:13:31 --> Red asociada al escaneo: Array
+(
+    [id_network] => 1
+)
+
+ERROR - 2024-09-26 17:13:31 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`nvs`.`scan`, CONSTRAINT `scan_ibfk_2` FOREIGN KEY (`id_network`) REFERENCES `network` (`id_network`)) in C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `ne...', 0)
+#1 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `ne...')
+#2 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `ne...')
+#3 C:\xampp\htdocs\NVS\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ne...', Array, false)
+#4 C:\xampp\htdocs\NVS\app\Controllers\secondary\profile\History.php(75): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\NVS\system\CodeIgniter.php(933): App\Controllers\secondary\profile\History->deleteScan('1')
+#6 C:\xampp\htdocs\NVS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\profile\History))
+#7 C:\xampp\htdocs\NVS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\NVS\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\NVS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\NVS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+DEBUG - 2024-09-26 17:13:31 --> Resultado de eliminación de red: 
+DEBUG - 2024-09-26 17:13:31 --> Resultado de eliminación del escaneo: 1
+ERROR - 2024-09-26 17:13:31 --> Error al eliminar el escaneo con id_scan: 1
+INFO - 2024-09-26 17:13:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:13:31 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 17:14:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:14:14 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 17:14:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:14:15 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 17:14:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:14:40 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2024-09-26 17:14:40 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$db is deprecated in APPPATH\Controllers\secondary\profile\History.php on line 35.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\secondary\profile\History->deleteScan('1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\profile\History))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2024-09-26 17:14:40 --> Detalles del escaneo: Array
+(
+    [0] => Array
+        (
+            [id_scan_details] => 83
+            [id_scan] => 1
+            [id_devices] => 1
+        )
+
+    [1] => Array
+        (
+            [id_scan_details] => 84
+            [id_scan] => 1
+            [id_devices] => 2
+        )
+
+    [2] => Array
+        (
+            [id_scan_details] => 85
+            [id_scan] => 1
+            [id_devices] => 3
+        )
+
+)
+
+DEBUG - 2024-09-26 17:14:40 --> Resultado de eliminación de detalles: 1
+DEBUG - 2024-09-26 17:14:40 --> Resultado de eliminación de port_analysis: 1
+ERROR - 2024-09-26 17:14:40 --> mysqli_sql_exception: Unknown column 'id_devices' in 'where clause' in C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `po...', 0)
+#1 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `po...')
+#2 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `po...')
+#3 C:\xampp\htdocs\NVS\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `po...', Array, false)
+#4 C:\xampp\htdocs\NVS\app\Controllers\secondary\profile\History.php(63): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\NVS\system\CodeIgniter.php(933): App\Controllers\secondary\profile\History->deleteScan('1')
+#6 C:\xampp\htdocs\NVS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\profile\History))
+#7 C:\xampp\htdocs\NVS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\NVS\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\NVS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\NVS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+DEBUG - 2024-09-26 17:14:40 --> Resultado de eliminación de port_status: 
+ERROR - 2024-09-26 17:14:40 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`nvs`.`scan_details`, CONSTRAINT `scan_details_ibfk_2` FOREIGN KEY (`id_devices`) REFERENCES `devices` (`id_devices`)) in C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `de...', 0)
+#1 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `de...')
+#2 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `de...')
+#3 C:\xampp\htdocs\NVS\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `de...', Array, false)
+#4 C:\xampp\htdocs\NVS\app\Controllers\secondary\profile\History.php(66): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\NVS\system\CodeIgniter.php(933): App\Controllers\secondary\profile\History->deleteScan('1')
+#6 C:\xampp\htdocs\NVS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\profile\History))
+#7 C:\xampp\htdocs\NVS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\NVS\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\NVS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\NVS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+DEBUG - 2024-09-26 17:14:40 --> Resultado de eliminación de devices: 
+DEBUG - 2024-09-26 17:14:40 --> Red asociada al escaneo: Array
+(
+    [id_network] => 1
+)
+
+ERROR - 2024-09-26 17:14:40 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`nvs`.`scan`, CONSTRAINT `scan_ibfk_2` FOREIGN KEY (`id_network`) REFERENCES `network` (`id_network`)) in C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `ne...', 0)
+#1 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `ne...')
+#2 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `ne...')
+#3 C:\xampp\htdocs\NVS\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ne...', Array, false)
+#4 C:\xampp\htdocs\NVS\app\Controllers\secondary\profile\History.php(77): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\NVS\system\CodeIgniter.php(933): App\Controllers\secondary\profile\History->deleteScan('1')
+#6 C:\xampp\htdocs\NVS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\profile\History))
+#7 C:\xampp\htdocs\NVS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\NVS\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\NVS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\NVS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+DEBUG - 2024-09-26 17:14:40 --> Resultado de eliminación de red: 
+DEBUG - 2024-09-26 17:14:40 --> Resultado de eliminación del escaneo: 1
+ERROR - 2024-09-26 17:14:40 --> Error al eliminar el escaneo con id_scan: 1
+INFO - 2024-09-26 17:14:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:14:41 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 17:14:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:14:43 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 17:14:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:14:44 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2024-09-26 17:14:44 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$db is deprecated in APPPATH\Controllers\secondary\profile\History.php on line 35.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\secondary\profile\History->deleteScan('1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\profile\History))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2024-09-26 17:14:44 --> Detalles del escaneo: Array
+(
+    [0] => Array
+        (
+            [id_scan_details] => 83
+            [id_scan] => 1
+            [id_devices] => 1
+        )
+
+    [1] => Array
+        (
+            [id_scan_details] => 84
+            [id_scan] => 1
+            [id_devices] => 2
+        )
+
+    [2] => Array
+        (
+            [id_scan_details] => 85
+            [id_scan] => 1
+            [id_devices] => 3
+        )
+
+)
+
+DEBUG - 2024-09-26 17:14:44 --> Resultado de eliminación de detalles: 1
+DEBUG - 2024-09-26 17:14:44 --> Resultado de eliminación de port_analysis: 1
+ERROR - 2024-09-26 17:14:44 --> mysqli_sql_exception: Unknown column 'id_devices' in 'where clause' in C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `po...', 0)
+#1 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `po...')
+#2 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `po...')
+#3 C:\xampp\htdocs\NVS\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `po...', Array, false)
+#4 C:\xampp\htdocs\NVS\app\Controllers\secondary\profile\History.php(63): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\NVS\system\CodeIgniter.php(933): App\Controllers\secondary\profile\History->deleteScan('1')
+#6 C:\xampp\htdocs\NVS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\profile\History))
+#7 C:\xampp\htdocs\NVS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\NVS\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\NVS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\NVS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+DEBUG - 2024-09-26 17:14:44 --> Resultado de eliminación de port_status: 
+ERROR - 2024-09-26 17:14:44 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`nvs`.`scan_details`, CONSTRAINT `scan_details_ibfk_2` FOREIGN KEY (`id_devices`) REFERENCES `devices` (`id_devices`)) in C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `de...', 0)
+#1 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `de...')
+#2 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `de...')
+#3 C:\xampp\htdocs\NVS\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `de...', Array, false)
+#4 C:\xampp\htdocs\NVS\app\Controllers\secondary\profile\History.php(66): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\NVS\system\CodeIgniter.php(933): App\Controllers\secondary\profile\History->deleteScan('1')
+#6 C:\xampp\htdocs\NVS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\profile\History))
+#7 C:\xampp\htdocs\NVS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\NVS\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\NVS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\NVS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+DEBUG - 2024-09-26 17:14:44 --> Resultado de eliminación de devices: 
+DEBUG - 2024-09-26 17:14:44 --> Red asociada al escaneo: Array
+(
+    [id_network] => 1
+)
+
+ERROR - 2024-09-26 17:14:44 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`nvs`.`scan`, CONSTRAINT `scan_ibfk_2` FOREIGN KEY (`id_network`) REFERENCES `network` (`id_network`)) in C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `ne...', 0)
+#1 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `ne...')
+#2 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `ne...')
+#3 C:\xampp\htdocs\NVS\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ne...', Array, false)
+#4 C:\xampp\htdocs\NVS\app\Controllers\secondary\profile\History.php(77): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\NVS\system\CodeIgniter.php(933): App\Controllers\secondary\profile\History->deleteScan('1')
+#6 C:\xampp\htdocs\NVS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\profile\History))
+#7 C:\xampp\htdocs\NVS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\NVS\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\NVS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\NVS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+DEBUG - 2024-09-26 17:14:44 --> Resultado de eliminación de red: 
+DEBUG - 2024-09-26 17:14:44 --> Resultado de eliminación del escaneo: 1
+ERROR - 2024-09-26 17:14:44 --> Error al eliminar el escaneo con id_scan: 1
+INFO - 2024-09-26 17:14:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:14:44 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 17:15:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:15:59 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 17:16:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:16:00 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2024-09-26 17:16:00 --> Detalles del escaneo: Array
+(
+    [0] => Array
+        (
+            [id_scan_details] => 83
+            [id_scan] => 1
+            [id_devices] => 1
+        )
+
+    [1] => Array
+        (
+            [id_scan_details] => 84
+            [id_scan] => 1
+            [id_devices] => 2
+        )
+
+    [2] => Array
+        (
+            [id_scan_details] => 85
+            [id_scan] => 1
+            [id_devices] => 3
+        )
+
+)
+
+DEBUG - 2024-09-26 17:16:00 --> Dispositivos asociados: Array
+(
+    [0] => 1
+    [1] => 2
+    [2] => 3
+)
+
+ERROR - 2024-09-26 17:16:00 --> mysqli_sql_exception: Unknown column 'id_devices' in 'where clause' in C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `po...', 0)
+#1 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `po...')
+#2 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `po...')
+#3 C:\xampp\htdocs\NVS\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `po...', Array, false)
+#4 C:\xampp\htdocs\NVS\app\Models\secondary\form\ScanModel.php(62): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\NVS\app\Controllers\secondary\profile\History.php(34): App\Models\secondary\form\ScanModel->deleteScanWithDetails('1')
+#6 C:\xampp\htdocs\NVS\system\CodeIgniter.php(933): App\Controllers\secondary\profile\History->deleteScan('1')
+#7 C:\xampp\htdocs\NVS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\profile\History))
+#8 C:\xampp\htdocs\NVS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\NVS\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\NVS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\NVS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+ERROR - 2024-09-26 17:16:00 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`nvs`.`scan_details`, CONSTRAINT `scan_details_ibfk_2` FOREIGN KEY (`id_devices`) REFERENCES `devices` (`id_devices`)) in C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `de...', 0)
+#1 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `de...')
+#2 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `de...')
+#3 C:\xampp\htdocs\NVS\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `de...', Array, false)
+#4 C:\xampp\htdocs\NVS\app\Models\secondary\form\ScanModel.php(65): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\NVS\app\Controllers\secondary\profile\History.php(34): App\Models\secondary\form\ScanModel->deleteScanWithDetails('1')
+#6 C:\xampp\htdocs\NVS\system\CodeIgniter.php(933): App\Controllers\secondary\profile\History->deleteScan('1')
+#7 C:\xampp\htdocs\NVS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\profile\History))
+#8 C:\xampp\htdocs\NVS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\NVS\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\NVS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\NVS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+DEBUG - 2024-09-26 17:16:00 --> Red asociada al escaneo: Array
+(
+    [id_network] => 1
+)
+
+ERROR - 2024-09-26 17:16:00 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`nvs`.`scan`, CONSTRAINT `scan_ibfk_2` FOREIGN KEY (`id_network`) REFERENCES `network` (`id_network`)) in C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `ne...', 0)
+#1 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `ne...')
+#2 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `ne...')
+#3 C:\xampp\htdocs\NVS\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ne...', Array, false)
+#4 C:\xampp\htdocs\NVS\app\Models\secondary\form\ScanModel.php(79): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\NVS\app\Controllers\secondary\profile\History.php(34): App\Models\secondary\form\ScanModel->deleteScanWithDetails('1')
+#6 C:\xampp\htdocs\NVS\system\CodeIgniter.php(933): App\Controllers\secondary\profile\History->deleteScan('1')
+#7 C:\xampp\htdocs\NVS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\profile\History))
+#8 C:\xampp\htdocs\NVS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\NVS\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\NVS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\NVS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+ERROR - 2024-09-26 17:16:00 --> Error al eliminar el escaneo con id_scan: 1
+INFO - 2024-09-26 17:16:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:16:00 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 17:19:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:19:44 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 17:19:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:19:45 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-09-26 17:19:45 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`nvs`.`port_analysis`, CONSTRAINT `port_analysis_ibfk_2` FOREIGN KEY (`id_devices`) REFERENCES `devices` (`id_devices`)) in C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `de...', 0)
+#1 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `de...')
+#2 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `de...')
+#3 C:\xampp\htdocs\NVS\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `de...', Array, false)
+#4 C:\xampp\htdocs\NVS\app\Models\secondary\form\ScanModel.php(49): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\NVS\app\Controllers\secondary\profile\History.php(34): App\Models\secondary\form\ScanModel->deleteScanWithDetails('1')
+#6 C:\xampp\htdocs\NVS\system\CodeIgniter.php(933): App\Controllers\secondary\profile\History->deleteScan('1')
+#7 C:\xampp\htdocs\NVS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\profile\History))
+#8 C:\xampp\htdocs\NVS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\NVS\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\NVS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\NVS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-09-26 17:19:45 --> ErrorException: Undefined array key "id_port"
+[Method: POST, Route: history/deleteScan/1]
+in APPPATH\Models\secondary\form\ScanModel.php on line 55.
+ 1 APPPATH\Models\secondary\form\ScanModel.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_port"', 'C:\\xampp\\htdocs\\NVS\\app\\Models\\secondary\\form\\ScanModel.php', 55)
+ 2 APPPATH\Controllers\secondary\profile\History.php(34): App\Models\secondary\form\ScanModel->deleteScanWithDetails('1')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\secondary\profile\History->deleteScan('1')
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\profile\History))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 17:20:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:20:37 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-09-26 17:20:37 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`nvs`.`port_analysis`, CONSTRAINT `port_analysis_ibfk_2` FOREIGN KEY (`id_devices`) REFERENCES `devices` (`id_devices`)) in C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `de...', 0)
+#1 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `de...')
+#2 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `de...')
+#3 C:\xampp\htdocs\NVS\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `de...', Array, false)
+#4 C:\xampp\htdocs\NVS\app\Models\secondary\form\ScanModel.php(48): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\NVS\app\Controllers\secondary\profile\History.php(34): App\Models\secondary\form\ScanModel->deleteScanWithDetails('1')
+#6 C:\xampp\htdocs\NVS\system\CodeIgniter.php(933): App\Controllers\secondary\profile\History->deleteScan('1')
+#7 C:\xampp\htdocs\NVS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\profile\History))
+#8 C:\xampp\htdocs\NVS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\NVS\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\NVS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\NVS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+ERROR - 2024-09-26 17:20:37 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`nvs`.`port_analysis`, CONSTRAINT `port_analysis_ibfk_2` FOREIGN KEY (`id_devices`) REFERENCES `devices` (`id_devices`)) in C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `de...', 0)
+#1 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `de...')
+#2 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `de...')
+#3 C:\xampp\htdocs\NVS\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `de...', Array, false)
+#4 C:\xampp\htdocs\NVS\app\Models\secondary\form\ScanModel.php(48): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\NVS\app\Controllers\secondary\profile\History.php(34): App\Models\secondary\form\ScanModel->deleteScanWithDetails('1')
+#6 C:\xampp\htdocs\NVS\system\CodeIgniter.php(933): App\Controllers\secondary\profile\History->deleteScan('1')
+#7 C:\xampp\htdocs\NVS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\profile\History))
+#8 C:\xampp\htdocs\NVS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\NVS\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\NVS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\NVS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+ERROR - 2024-09-26 17:20:37 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`nvs`.`port_analysis`, CONSTRAINT `port_analysis_ibfk_2` FOREIGN KEY (`id_devices`) REFERENCES `devices` (`id_devices`)) in C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `de...', 0)
+#1 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `de...')
+#2 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `de...')
+#3 C:\xampp\htdocs\NVS\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `de...', Array, false)
+#4 C:\xampp\htdocs\NVS\app\Models\secondary\form\ScanModel.php(48): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\NVS\app\Controllers\secondary\profile\History.php(34): App\Models\secondary\form\ScanModel->deleteScanWithDetails('1')
+#6 C:\xampp\htdocs\NVS\system\CodeIgniter.php(933): App\Controllers\secondary\profile\History->deleteScan('1')
+#7 C:\xampp\htdocs\NVS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\profile\History))
+#8 C:\xampp\htdocs\NVS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\NVS\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\NVS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\NVS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+INFO - 2024-09-26 17:20:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:20:37 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 17:20:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:20:38 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-09-26 17:20:38 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`nvs`.`port_analysis`, CONSTRAINT `port_analysis_ibfk_2` FOREIGN KEY (`id_devices`) REFERENCES `devices` (`id_devices`)) in C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `de...', 0)
+#1 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `de...')
+#2 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `de...')
+#3 C:\xampp\htdocs\NVS\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `de...', Array, false)
+#4 C:\xampp\htdocs\NVS\app\Models\secondary\form\ScanModel.php(48): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\NVS\app\Controllers\secondary\profile\History.php(34): App\Models\secondary\form\ScanModel->deleteScanWithDetails('1')
+#6 C:\xampp\htdocs\NVS\system\CodeIgniter.php(933): App\Controllers\secondary\profile\History->deleteScan('1')
+#7 C:\xampp\htdocs\NVS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\profile\History))
+#8 C:\xampp\htdocs\NVS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\NVS\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\NVS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\NVS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+ERROR - 2024-09-26 17:20:38 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`nvs`.`port_analysis`, CONSTRAINT `port_analysis_ibfk_2` FOREIGN KEY (`id_devices`) REFERENCES `devices` (`id_devices`)) in C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `de...', 0)
+#1 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `de...')
+#2 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `de...')
+#3 C:\xampp\htdocs\NVS\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `de...', Array, false)
+#4 C:\xampp\htdocs\NVS\app\Models\secondary\form\ScanModel.php(48): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\NVS\app\Controllers\secondary\profile\History.php(34): App\Models\secondary\form\ScanModel->deleteScanWithDetails('1')
+#6 C:\xampp\htdocs\NVS\system\CodeIgniter.php(933): App\Controllers\secondary\profile\History->deleteScan('1')
+#7 C:\xampp\htdocs\NVS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\profile\History))
+#8 C:\xampp\htdocs\NVS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\NVS\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\NVS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\NVS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+ERROR - 2024-09-26 17:20:38 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`nvs`.`port_analysis`, CONSTRAINT `port_analysis_ibfk_2` FOREIGN KEY (`id_devices`) REFERENCES `devices` (`id_devices`)) in C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `de...', 0)
+#1 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `de...')
+#2 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `de...')
+#3 C:\xampp\htdocs\NVS\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `de...', Array, false)
+#4 C:\xampp\htdocs\NVS\app\Models\secondary\form\ScanModel.php(48): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\NVS\app\Controllers\secondary\profile\History.php(34): App\Models\secondary\form\ScanModel->deleteScanWithDetails('1')
+#6 C:\xampp\htdocs\NVS\system\CodeIgniter.php(933): App\Controllers\secondary\profile\History->deleteScan('1')
+#7 C:\xampp\htdocs\NVS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\profile\History))
+#8 C:\xampp\htdocs\NVS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\NVS\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\NVS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\NVS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+INFO - 2024-09-26 17:20:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:20:39 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 17:21:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:21:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 17:21:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:21:35 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-09-26 17:21:35 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`nvs`.`scan_details`, CONSTRAINT `scan_details_ibfk_2` FOREIGN KEY (`id_devices`) REFERENCES `devices` (`id_devices`)) in C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `de...', 0)
+#1 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `de...')
+#2 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `de...')
+#3 C:\xampp\htdocs\NVS\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `de...', Array, false)
+#4 C:\xampp\htdocs\NVS\app\Models\secondary\form\ScanModel.php(52): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\NVS\app\Controllers\secondary\profile\History.php(34): App\Models\secondary\form\ScanModel->deleteScanWithDetails('1')
+#6 C:\xampp\htdocs\NVS\system\CodeIgniter.php(933): App\Controllers\secondary\profile\History->deleteScan('1')
+#7 C:\xampp\htdocs\NVS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\profile\History))
+#8 C:\xampp\htdocs\NVS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\NVS\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\NVS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\NVS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+ERROR - 2024-09-26 17:21:35 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`nvs`.`scan_details`, CONSTRAINT `scan_details_ibfk_2` FOREIGN KEY (`id_devices`) REFERENCES `devices` (`id_devices`)) in C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `de...', 0)
+#1 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `de...')
+#2 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `de...')
+#3 C:\xampp\htdocs\NVS\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `de...', Array, false)
+#4 C:\xampp\htdocs\NVS\app\Models\secondary\form\ScanModel.php(52): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\NVS\app\Controllers\secondary\profile\History.php(34): App\Models\secondary\form\ScanModel->deleteScanWithDetails('1')
+#6 C:\xampp\htdocs\NVS\system\CodeIgniter.php(933): App\Controllers\secondary\profile\History->deleteScan('1')
+#7 C:\xampp\htdocs\NVS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\profile\History))
+#8 C:\xampp\htdocs\NVS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\NVS\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\NVS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\NVS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+ERROR - 2024-09-26 17:21:35 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`nvs`.`scan_details`, CONSTRAINT `scan_details_ibfk_2` FOREIGN KEY (`id_devices`) REFERENCES `devices` (`id_devices`)) in C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `de...', 0)
+#1 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `de...')
+#2 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `de...')
+#3 C:\xampp\htdocs\NVS\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `de...', Array, false)
+#4 C:\xampp\htdocs\NVS\app\Models\secondary\form\ScanModel.php(52): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\NVS\app\Controllers\secondary\profile\History.php(34): App\Models\secondary\form\ScanModel->deleteScanWithDetails('1')
+#6 C:\xampp\htdocs\NVS\system\CodeIgniter.php(933): App\Controllers\secondary\profile\History->deleteScan('1')
+#7 C:\xampp\htdocs\NVS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\profile\History))
+#8 C:\xampp\htdocs\NVS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\NVS\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\NVS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\NVS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+INFO - 2024-09-26 17:21:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:21:35 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 17:28:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:28:47 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 17:31:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:31:50 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 17:31:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:31:53 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 17:31:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:31:53 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 17:32:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:32:36 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 17:36:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:36:09 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 17:37:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:37:48 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 17:38:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:38:12 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 17:38:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:38:14 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-26 17:38:14 --> ErrorException: Undefined array key "id_network"
+[Method: POST, Route: history/deleteScan/1]
+in APPPATH\Models\secondary\form\ScanModel.php on line 66.
+ 1 APPPATH\Models\secondary\form\ScanModel.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_network"', 'C:\\xampp\\htdocs\\NVS\\app\\Models\\secondary\\form\\ScanModel.php', 66)
+ 2 APPPATH\Controllers\secondary\profile\History.php(34): App\Models\secondary\form\ScanModel->deleteScanWithDetails('1')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\secondary\profile\History->deleteScan('1')
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\profile\History))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 17:39:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:39:13 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 17:39:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:39:14 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 17:39:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:39:17 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 17:39:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:39:17 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 17:41:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:41:09 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-09-26 17:41:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:41:11 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-09-26 17:41:11 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`nvs`.`scan_details`, CONSTRAINT `scan_details_ibfk_2` FOREIGN KEY (`id_devices`) REFERENCES `devices` (`id_devices`)) in C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `de...', 0)
+#1 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `de...')
+#2 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `de...')
+#3 C:\xampp\htdocs\NVS\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `de...', Array, false)
+#4 C:\xampp\htdocs\NVS\app\Models\secondary\form\ScanModel.php(52): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\NVS\app\Controllers\secondary\profile\History.php(34): App\Models\secondary\form\ScanModel->deleteScanWithDetails('1')
+#6 C:\xampp\htdocs\NVS\system\CodeIgniter.php(933): App\Controllers\secondary\profile\History->deleteScan('1')
+#7 C:\xampp\htdocs\NVS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\profile\History))
+#8 C:\xampp\htdocs\NVS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\NVS\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\NVS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\NVS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+ERROR - 2024-09-26 17:41:11 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`nvs`.`scan_details`, CONSTRAINT `scan_details_ibfk_2` FOREIGN KEY (`id_devices`) REFERENCES `devices` (`id_devices`)) in C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `de...', 0)
+#1 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `de...')
+#2 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `de...')
+#3 C:\xampp\htdocs\NVS\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `de...', Array, false)
+#4 C:\xampp\htdocs\NVS\app\Models\secondary\form\ScanModel.php(52): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\NVS\app\Controllers\secondary\profile\History.php(34): App\Models\secondary\form\ScanModel->deleteScanWithDetails('1')
+#6 C:\xampp\htdocs\NVS\system\CodeIgniter.php(933): App\Controllers\secondary\profile\History->deleteScan('1')
+#7 C:\xampp\htdocs\NVS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\profile\History))
+#8 C:\xampp\htdocs\NVS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\NVS\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\NVS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\NVS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+ERROR - 2024-09-26 17:41:11 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`nvs`.`scan_details`, CONSTRAINT `scan_details_ibfk_2` FOREIGN KEY (`id_devices`) REFERENCES `devices` (`id_devices`)) in C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php(308): mysqli->query('DELETE FROM `de...', 0)
+#1 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `de...')
+#2 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `de...')
+#3 C:\xampp\htdocs\NVS\system\Database\BaseBuilder.php(2823): CodeIgniter\Database\BaseConnection->query('DELETE FROM `de...', Array, false)
+#4 C:\xampp\htdocs\NVS\app\Models\secondary\form\ScanModel.php(52): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\NVS\app\Controllers\secondary\profile\History.php(34): App\Models\secondary\form\ScanModel->deleteScanWithDetails('1')
+#6 C:\xampp\htdocs\NVS\system\CodeIgniter.php(933): App\Controllers\secondary\profile\History->deleteScan('1')
+#7 C:\xampp\htdocs\NVS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\profile\History))
+#8 C:\xampp\htdocs\NVS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\NVS\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\NVS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\NVS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+INFO - 2024-09-26 17:41:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-09-26 17:41:11 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\History::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

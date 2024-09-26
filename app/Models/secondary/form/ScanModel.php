@@ -36,18 +36,53 @@ class ScanModel extends Model
         return $this->db->table('scan_details')->where('id_scan', $id_scan)->delete();
     }
     public function deleteScanWithDetails($id_scan)
-{
-    $this->db->transStart();
-
-    // Eliminar detalles del escaneo
-    $this->deleteScanDetails($id_scan);
-
-    // Eliminar el escaneo
-    $this->delete($id_scan);
-
-    $this->db->transComplete();
-
-    return $this->db->transStatus(); // Devuelve true si la transacción fue exitosa
-}
+    {
+        // Iniciar la transacción
+        $this->db->transStart();
+    
+        // Obtener los detalles de escaneo para eliminar datos relacionados
+        $scanDetails = $this->db->table('scan_details')->where('id_scan', $id_scan)->get()->getResultArray();
+    
+        if ($scanDetails) {
+            foreach ($scanDetails as $detail) {
+                // Eliminar puertos relacionados
+                $this->db->table('port_analysis')->where('id_devices', $detail['id_devices'])->delete();
+    
+                // Eliminar dispositivos relacionados
+                $this->db->table('devices')->where('id_devices', $detail['id_devices'])->delete();
+    
+                // Verificar si existen y eliminar de 'ports' y 'port_status'
+                if (isset($detail['id_port'])) {
+                    $this->db->table('ports')->where('id_port', $detail['id_port'])->delete();
+                }
+    
+                if (isset($detail['id_port_status'])) {
+                    $this->db->table('port_status')->where('id_port_status', $detail['id_port_status'])->delete();
+                }
+            }
+            
+            // Eliminar también la red asociada si existe
+            // Comprobar que haya al menos un detalle y que contenga id_network
+            if (isset($scanDetails[0]['id_network'])) {
+                $this->db->table('network')->where('id_network', $scanDetails[0]['id_network'])->delete();
+            }
+        }
+    
+        // Eliminar los detalles del escaneo
+        $this->deleteScanDetails($id_scan);
+    
+        // Eliminar el escaneo
+        $this->delete($id_scan);
+    
+        // Completar la transacción
+        $this->db->transComplete();
+    
+        // Retornar el estado de la transacción
+        return $this->db->transStatus(); // Devuelve true si la transacción fue exitosa
+    }
+    
+    
+    
+    
 
 }
