@@ -1,124 +1,102 @@
-/* footer section starts here */
-
-footer {
-    color      : var(--color-white);
-    background : var(--color-semiblack);
-    padding    : 40px 0;
-    font-family: "neue";
-    border-top : 1px solid var(--color-grey);
+/* Footer container */
+.footer {
+    background-color: var(--color-semiblack);
+    color           : var(--color-light-grey);
+    border-top      : 1px solid var(--color-grey);
+    height          : 400px;
+    padding         : 50px;
+    font-family     : 'neue';
+    position        : relative;
+    z-index         : 1;
+    overflow        : hidden;
+    /* Aquí se ocultará solo la parte inferior */
 }
 
-.light-mode footer {
-    color     : var(--color-black);
-    background: var(--color-white);
-}
-
-.footer-container {
-    display       : flex;
-    flex-direction: column;
-    align-items   : center;
-    max-width     : 1200px;
-    margin        : 0 auto;
-    padding       : 0 20px;
-}
-
-.footer-top {
+.footer-content {
+    max-width      : 1200px;
+    margin         : 0 auto;
     display        : flex;
     justify-content: space-between;
     align-items    : flex-start;
-    width          : 100%;
+    position       : relative;
+    z-index        : 2;
+}
+
+.logo-section p {
+    margin-top: 15px;
+    font-size : 1.4em;
+    color     : var(--color-light-grey);
+}
+
+.logo-section .logo {
+    font-size  : 2em;
+    font-weight: lighter;
+    color      : var(--color-secondary);
+}
+
+.links-section {
+    display: flex;
+}
+
+.column {
+    margin-right: 5px;
+    padding-left: 90px;
+}
+
+.column h3 {
+    font-size      : 1.2em;
+    font-weight    : lighter;
     margin-bottom  : 20px;
+    color          : var(--color-light-grey);
+    text-decoration: underline;
 }
 
-.footer-logo {
-    margin-right: auto;
-    margin-top  : 10px;
-}
-
-.footer-logo a {
-    max-width    : 50px;
-    margin-bottom: 20px;
-    font-family  : "aero";
-    font-size    : 2.6em;
-}
-
-.footer-columns {
-    display        : flex;
-    justify-content: flex-end;
-    gap            : 50px;
-    flex-wrap      : wrap;
-    width          : 100%;
-    margin-bottom  : 10px;
-}
-
-.footer-column {
-    padding: 0 40px;
-}
-
-.footer-column h4 {
-    margin-bottom: 15px;
-    font-size    : 1.9em;
-    font-family  : "neue";
-    font-weight  : lighter;
-}
-
-.footer-column ul {
+.column ul {
     list-style: none;
     padding   : 0;
 }
 
-.footer-column ul li {
+.column ul li {
     margin-bottom: 20px;
 }
 
-.footer-column ul li a {
-    color          : #575757;
+.column ul li a {
+    color          : var(--color-light-grey);
+    font-size      : 1.2em;
+    font-weight    : lighter;
     text-decoration: none;
-    transition     : color 0.3s;
-    font-family    : "neue";
-    font-size      : 1.5em;
+    transition     : color 0.3s ease;
 }
 
-.footer-column ul li a:hover {
-    color      : var(--color-main);
-    font-weight: lighter;
+.column ul li a:hover {
+    color: var(--color-secondary);
 }
 
+/* Large "Network Vulnerability Scan" text styling */
 .footer-bottom {
-    display        : flex;
-    justify-content: space-between;
-    align-items    : center;
-    width          : 100%;
-    border-top     : 1px solid var(--color-grey);
-    padding-top    : 20px;
-    flex-wrap      : wrap;
+    position      : relative;
+    text-align    : center;
+    padding-bottom: 0;
 }
 
-.footer-bottom p {
-    margin     : 0;
-    font-family: "neue";
-    font-weight: lighter;
-    font-size  : 1.9em;
+/* Styling for the large text at the bottom */
+.footer-logo {
+    font-size     : 16em;
+    font-family   : "neue-medium";
+    color         : var(--color-semigrey);
+    font-weight   : lighter;
+    text-transform: uppercase;
+    margin        : 0;
+    letter-spacing: 5px;
+    position      : absolute;
+    bottom        : -310px;
+    /* Ajustar para que solo la parte superior se vea */
+    left          : 43%;
+    transform     : translateX(-50%);
+    z-index       : 1;
+    white-space   : nowrap;
+    width         : 100%;
+    text-align    : center;
+    overflow      : visible;
+    /* Permitir que se vea la parte superior */
 }
-
-.social-icons {
-    text-align: right;
-}
-
-.social-icons a {
-    color          : var(--color-white);
-    text-decoration: none;
-    margin         : 0 5px;
-    font-size      : 18px;
-    transition     : color 0.3s;
-}
-
-.light-mode .social-icons a {
-    color: var(--color-black);
-}
-
-.social-icons a:hover {
-    color: var(--color-main);
-}
-
-/* footer section ends here */
