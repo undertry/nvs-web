@@ -3,12 +3,12 @@
     background-color: var(--color-semiblack);
     color           : var(--color-light-grey);
     border-top      : 1px solid var(--color-grey);
-    height          : 400px;
-    padding         : 50px;
-    font-family     : 'neue';
-    position        : relative;
-    z-index         : 1;
-    overflow        : hidden;
+
+    padding    : 50px;
+    font-family: 'neue';
+    position   : relative;
+    z-index    : 1;
+    overflow   : hidden;
     /* Aquí se ocultará solo la parte inferior */
 }
 
@@ -26,11 +26,13 @@
     margin-top: 15px;
     font-size : 1.4em;
     color     : var(--color-light-grey);
+    text-align: center;
 }
 
 .logo-section .logo {
     font-size  : 2em;
     font-weight: lighter;
+    margin-left: 45%;
     color      : var(--color-secondary);
 }
 
@@ -46,7 +48,7 @@
 .column h3 {
     font-size      : 1.2em;
     font-weight    : lighter;
-    margin-bottom  : 20px;
+    margin-bottom  : 30px;
     color          : var(--color-light-grey);
     text-decoration: underline;
 }
@@ -72,31 +74,28 @@
     color: var(--color-secondary);
 }
 
-/* Large "Network Vulnerability Scan" text styling */
+
+
 .footer-bottom {
-    position      : relative;
-    text-align    : center;
-    padding-bottom: 0;
+    text-align: center;
+
+    background-color: var(--color-semiblack);
+    /* Para asegurarte que tenga el mismo color de fondo */
+    color           : var(--color-light-grey);
+    font-size       : 1em;
 }
 
-/* Styling for the large text at the bottom */
-.footer-logo {
-    font-size     : 16em;
-    font-family   : "neue-medium";
-    color         : var(--color-semigrey);
-    font-weight   : lighter;
-    text-transform: uppercase;
-    margin        : 0;
-    letter-spacing: 5px;
-    position      : absolute;
-    bottom        : -310px;
-    /* Ajustar para que solo la parte superior se vea */
-    left          : 43%;
-    transform     : translateX(-50%);
-    z-index       : 1;
-    white-space   : nowrap;
-    width         : 100%;
-    text-align    : center;
-    overflow      : visible;
-    /* Permitir que se vea la parte superior */
+.footer-bottom hr {
+    border       : none;
+    border-top   : 1px solid var(--color-grey);
+    /* Línea del separador */
+    margin-bottom: 10px;
+}
+
+.footer-bottom p {
+    margin     : 0;
+    font-size  : 0.9em;
+    font-family: "neue";
+    font-weight: lighter;
+    color      : var(--color-light-grey);
 }

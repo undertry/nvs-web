@@ -29,8 +29,8 @@
             </div>
         </div>
     </div>
-    <!-- Large "Cosmos" text at the bottom -->
     <div class="footer-bottom">
-        <h1 class="footer-logo">Network Vulnerability Scan</h1>
+        <hr>
+        <p>&copy; 2024 NVS. All rights reserved.</p>
     </div>
 </footer>
