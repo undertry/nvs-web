@@ -1,16 +1,14 @@
 /* General navbar styles */
 #navbar {
-    background-color: transparent;
-    display         : flex;
-    align-items     : center;
-    position        : absolute;
-    top             : 0;
-    left            : 0;
-    justify-content : space-between;
-    padding         : 60px;
-    z-index         : 2000;
-    transition      : background-color 0.5s ease, color 0.5s ease;
-    user-select     : none;
+    display        : flex;
+    align-items    : center;
+    position       : absolute;
+    top            : 0;
+    left           : 0;
+    justify-content: space-between;
+    padding        : 60px;
+    z-index        : 2000;
+    user-select    : none;
 
     /* Para trabajar con el centrado */
 }

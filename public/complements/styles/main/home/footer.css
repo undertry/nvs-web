@@ -1,6 +1,6 @@
 /* Footer container */
 .footer {
-    background-color: var(--color-semiblack);
+    background-color: var(--color-black);
     color           : var(--color-light-grey);
     border-top      : 1px solid var(--color-grey);
 
@@ -78,11 +78,9 @@
 
 .footer-bottom {
     text-align: center;
-
-    background-color: var(--color-semiblack);
     /* Para asegurarte que tenga el mismo color de fondo */
-    color           : var(--color-light-grey);
-    font-size       : 1em;
+    color     : var(--color-light-grey);
+    font-size : 1em;
 }
 
 .footer-bottom hr {
