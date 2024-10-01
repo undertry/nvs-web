@@ -51,7 +51,7 @@
 
 
     <div class="nav-right">
-        <a href="#" id="toggle-dark-mode"><i class="fa-solid fa-moon"></i></a>
+        <a href="#" id="toggle-dark-mode"><i class="fa-solid fa-moon" id="mode-icon"></i></a>
         <div class="dropdown">
             <a href="#" class="globe">
                 <i class="fa-solid fa-globe"></i>
@@ -64,5 +64,6 @@
             </ul>
         </div>
     </div>
+
 </nav>
 <!-- navbar section ends here -->
