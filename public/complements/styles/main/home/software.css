@@ -4,6 +4,7 @@
 }
 
 .section-header h2 {
+    margin-top : 2em;
     font-size  : 4.2em;
     font-family: "schabo";
     color      : var(--color-secondary);

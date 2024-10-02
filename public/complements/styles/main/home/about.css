@@ -1,8 +1,13 @@
 .about-comments {
     width     : 100%;
-    background: radial-gradient(circle, rgba(198, 21, 21, 0.109) 0%, #0c0b0b 35%);
+    background: radial-gradient(circle, rgba(198, 21, 21, 0.245) 0%, #0c0b0b 35%);
     text-align: center;
     margin    : 50px 0;
+    transition: background 0.3s ease;
+}
+
+.light-mode .about-comments {
+    background: radial-gradient(circle, rgba(198, 21, 21, 0.245) 0%, #f5f5f5 35%);
 }
 
 .about-comments h2 {
@@ -11,6 +16,10 @@
     font-weight  : lighter;
     margin-bottom: 20px;
     color        : var(--color-light-grey);
+}
+
+.light-mode .about-comments h2 {
+    color: var(--color-black);
 }
 
 .comments-grid {
@@ -29,7 +38,6 @@
     border          : 1px solid var(--color-grey);
     border-radius   : 10px;
     padding         : 20px;
-    box-shadow      : 0 4px 6px rgba(0, 0, 0, 0.1);
     color           : var(--color-light-grey);
     display         : flex;
     flex-direction  : column;
@@ -37,12 +45,22 @@
     /* Añadimos flex-grow para que las tarjetas no se estiren innecesariamente */
     flex-grow       : 1;
     height          : auto;
-    transition      : background-color 0.5s ease, border 0.5s ease;
+    transition      : background-color 0.3s ease, border 0.3s ease, color 0.3s ease;
     /* Permite que la altura se ajuste según el contenido */
+}
+
+.light-mode .comment-card {
+    background-color: var(--color-light);
+    color           : var(--color-black);
+    border          : 1px solid var(--color-grey);
 }
 
 .comment-card:hover {
     border: 1px solid var(--color-light-grey);
+}
+
+.light-mode .comment-card:hover {
+    border: 1px solid var(--color-dark);
 }
 
 .comment-card h3 {
@@ -69,6 +87,11 @@
     border-radius   : 10px;
     display         : inline-block;
     transition      : color 0.5s ease-out;
+}
+
+.light-mode .comment span {
+    color           : var(--color-secondary);
+    background-color: var(--color-light-grey);
 }
 
 .comment span:hover {
