@@ -103,7 +103,7 @@
 .text p span {
     color           : var(--color-secondary);
     font-family     : "neue";
-    transition      : color 0.5s ease-out;
+    transition      : color 0.3s ease-out;
     background-color: var(--color-semiblack);
     padding         : 1px 8px;
     border-radius   : 10px;
@@ -139,7 +139,7 @@
     color           : var(--color-secondary);
     font-family     : "neue";
     font-weight     : lighter;
-    transition      : color 0.5s ease-out;
+    transition      : color 0.3s ease-out;
     background-color: var(--color-semiblack);
     padding         : 1px 8px;
     border-radius   : 10px;

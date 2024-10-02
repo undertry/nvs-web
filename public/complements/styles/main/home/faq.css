@@ -20,6 +20,11 @@
     font-family  : "neue";
     font-weight  : lighter;
     color        : var(--color-light-grey);
+    transition   : color 0.3s ease;
+}
+
+.light-mode .faq h2 {
+    color: var(--color-black);
 }
 
 h2 i {
@@ -51,6 +56,10 @@ h2 i {
     font-weight: lighter;
     color      : var(--color-light-grey);
     transition : color 0.3s ease;
+}
+
+.light-mode .faq-question h3 {
+    color: var(--color-black);
 }
 
 .faq-question h3:hover {
@@ -87,12 +96,21 @@ h2 i {
     line-height: 2;
 }
 
+.light-mode .faq-answer p {
+    color: var(--color-black);
+}
+
 .faq-answer p span {
     color           : var(--color-secondary);
     background-color: var(--color-semiblack);
     padding         : 1px 5px;
     border-radius   : 10px;
     transition      : color 0.3s ease;
+}
+
+.light-mode .faq-answer p span {
+    color           : var(--color-secondary);
+    background-color: var(--color-light-grey);
 }
 
 .faq-answer p span:hover {
