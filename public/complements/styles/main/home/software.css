@@ -48,7 +48,12 @@
     padding         : 1px 8px;
     border-radius   : 10px;
     display         : inline-block;
-    transition      : color 0.5s ease-out;
+    transition      : background-color 0.3s ease-out, color 0.3s ease-out;
+}
+
+.light-mode .text h3 {
+    color           : var(--color-black);
+    background-color: var(--color-light-grey);
 }
 
 .text h3:hover {
@@ -65,8 +70,12 @@
     padding-bottom: 10px;
     opacity       : 0;
     transform     : translateX(-200px);
-    transition    : opacity 0.9s ease-out, transform 0.9s ease-out;
+    transition    : opacity 0.9s ease-out, transform 0.9s ease-out, color 0.3s ease-out;
     color         : var(--color-light-grey);
+}
+
+.light-mode .text h4 {
+    color: var(--color-black);
 }
 
 .text.visible h4 {
@@ -84,7 +93,10 @@
     font-weight: lighter;
     color      : var(--color-light-grey);
     line-height: 1.5;
-    /* Ajusta este valor según sea necesario */
+}
+
+.light-mode .text p {
+    color: var(--color-black);
 }
 
 .text p span {
@@ -94,6 +106,11 @@
     background-color: var(--color-semiblack);
     padding         : 1px 8px;
     border-radius   : 10px;
+}
+
+.light-mode .text p span {
+    color           : var(--color-secondary);
+    background-color: var(--color-light-grey);
 }
 
 .text p span:hover {
@@ -113,6 +130,10 @@
     color        : var(--color-light-grey);
 }
 
+.light-mode .text ul li {
+    color: var(--color-black);
+}
+
 .text ul li span {
     color           : var(--color-secondary);
     font-family     : "neue";
@@ -121,6 +142,11 @@
     background-color: var(--color-semiblack);
     padding         : 1px 8px;
     border-radius   : 10px;
+}
+
+.light-mode .text ul li span {
+    color           : var(--color-secondary);
+    background-color: var(--color-light-grey);
 }
 
 .text ul li span:hover {

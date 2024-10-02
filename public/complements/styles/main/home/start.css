@@ -137,8 +137,9 @@ hr {
 }
 
 .light-mode .scroll-to-top {
-  background-color: var(--color-black);
-  color           : var(--color-light);
+  background-color: transparent;
+  color           : var(--color-black);
+  border          : 2px solid var(--color-black);
 }
 
 
@@ -192,11 +193,11 @@ body {
   display         : flex;
   flex-direction  : column;
   height          : 100vh;
-  transition      : background-color 0.5s ease, color 0.5s ease;
+  transition      : background-color 0.3s ease, color 0.3s ease;
   overflow        : hidden;
 }
 
 body.light-mode {
-  background: var(--mode-light);
+  background: var(--color-white);
   color     : var(--color-black);
 }
