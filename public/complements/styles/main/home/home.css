@@ -18,8 +18,13 @@
   left          : 0;
   background    : var(--color-dark);
   pointer-events: none;
-  /* El mismo color de fondo de tu .home */
+  transition    : background .3s ease;
 }
+
+.light-mode #particles-js {
+  background: var(--color-white);
+}
+
 
 
 /* Hidden and scrolled state */

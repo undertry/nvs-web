@@ -137,8 +137,9 @@ hr {
 }
 
 .light-mode .scroll-to-top {
-  background-color: var(--color-black);
-  color           : var(--color-light);
+  background-color: transparent;
+  color           : var(--color-black);
+  border          : 2px solid var(--color-black);
 }
 
 

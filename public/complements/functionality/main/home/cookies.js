@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
       body.classList.remove("light-mode");
       modeIcon.classList.replace("fa-sun", "fa-moon"); // Cambia el ícono de sol a luna
     }
+    updateParticlesColor(mode); // Actualiza el color de las partículas según el modo
   }
 
   function setCookie(name, value, days) {
