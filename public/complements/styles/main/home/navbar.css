@@ -9,7 +9,6 @@
     padding        : 60px;
     z-index        : 2000;
     user-select    : none;
-
     /* Para trabajar con el centrado */
 }
 
@@ -38,6 +37,12 @@
     transform    : translateX(-50%);
     background   : var(--color-black);
     user-select  : none;
+    transition   : background-color 0.3s ease, color 0.3s ease;
+}
+
+.light-mode .nav-list {
+    background: var(--color-white);
+    color     : var(--color-black);
 }
 
 /* Nav items styling */
@@ -83,9 +88,18 @@
     color           : gray;
 }
 
+.light-mode .link-title1 {
+    color: gray;
+}
+
 .link-title2 {
     transform-origin: left center;
     transform       : translateY(100%);
+    color           : var(--color-light-grey);
+}
+
+.light-mode .link-title2 {
+    color: var(--color-black);
 }
 
 /* Cambiar las palabras en hover */
@@ -111,13 +125,23 @@
     font-family     : "neue";
     font-size       : 1.2em;
     color           : var(--color-light-grey);
-    background-color: #bc1919;
+    background-color: var(--color-secondary);
     transition      : background-color 0.3s ease, color 0.3s ease;
 }
 
+.light-mode .nav-list .nav-item .signup {
+    background-color: var(--color-secondary);
+    color           : var(--color-black);
+}
+
 .nav-list .nav-item .signup:hover {
-    background-color: rgb(223, 19, 19);
+    background-color: var(--color-main);
     color           : var(--color-light-grey);
+}
+
+.light-mode .nav-list .nav-item .signup:hover {
+    background-color: var(--color-main);
+    color           : var(--color-black);
 }
 
 .nav-list .nav-item .login {
@@ -131,8 +155,16 @@
     transition     : background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
 }
 
+.light-mode .nav-list .nav-item .login {
+    color: var(--color-black);
+}
+
 .nav-list .nav-item .login:hover {
     border: 1px solid var(--color-light-grey);
+}
+
+.light-mode .nav-list .nav-item .login:hover {
+    border: 1px solid var(--color-dark);
 }
 
 .nav-item .arrow {
@@ -142,9 +174,13 @@
     color           : var(--color-black);
     border-radius   : 50%;
     padding         : 5px 12px;
+    transition      : background-color 0.3s ease, color 0.3s ease;
 }
 
-
+.light-mode .nav-item .arrow {
+    background-color: var(--color-black);
+    color           : var(--color-white);
+}
 
 
 /* General styles */
@@ -163,12 +199,22 @@
     display        : flex;
     align-items    : center;
     justify-content: center;
-    transition     : background-color 0.3s;
+    transition     : background-color 0.3s, border 0.3s ease, color 0.3s ease;
+}
+
+.light-mode #toggle-dark-mode {
+    background: var(--color-white);
+    color     : var(--color-grey);
 }
 
 #toggle-dark-mode:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    /* Efecto hover */
+    background-color: var(--color-semigrey);
+    border          : 1px solid var(--color-light-grey);
+}
+
+.light-mode #toggle-dark-mode:hover {
+    background-color: var(--color-light-grey);
+    border          : 1px solid var(--color-dark);
 }
 
 .dropdown {
@@ -181,13 +227,23 @@
     left         : 35px;
     display      : inline-block;
     z-index      : 1000;
-    transition   : background-color 0.3s;
+    transition   : background-color 0.3s, color 0.3s ease;
     user-select  : none;
 }
 
+.light-mode .dropdown {
+    background: var(--color-white);
+    color     : var(--color-black);
+}
+
 .dropdown:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    /* Efecto hover */
+    background-color: var(--color-semigrey);
+    border          : 1px solid var(--color-light-grey);
+}
+
+.light-mode .dropdown:hover {
+    background-color: var(--color-light-grey);
+    border          : 1px solid var(--color-dark);
 }
 
 .globe {
@@ -196,10 +252,14 @@
     padding        : 10px;
     border-radius  : 15px;
     text-decoration: none;
-    color          : white;
+    color          : var(--color-light-grey);
     font-family    : "neue";
     font-size      : 14px;
     transition     : background-color 0.3s;
+}
+
+.light-mode .globe {
+    color: var(--color-grey);
 }
 
 
@@ -225,6 +285,10 @@ span.language-label {
     border-radius  : 15px;
 }
 
+.light-mode .dropdown-menu {
+    background: var(--color-white);
+}
+
 .dropdown-menu li {
     padding: 8px 12px;
 }
@@ -233,6 +297,11 @@ span.language-label {
     text-decoration: none;
     color          : var(--color-light-grey);
     display        : block;
+    transition     : color 0.3s ease;
+}
+
+.light-mode .dropdown-menu li a {
+    color: var(--color-grey);
 }
 
 .dropdown-menu li a:hover {
