@@ -5,9 +5,12 @@
   display         : flex;
   justify-content : center;
   align-items     : center;
-  transition      : transform 1.5s ease, opacity 1.5s ease;
+  transition      : transform 1.5s ease, opacity 1.5s ease, background-color 0.3s ease;
 }
 
+.light-mode .home {
+  background-color: var(--color-white);
+}
 
 #particles-js {
   position      : absolute;
@@ -18,14 +21,12 @@
   left          : 0;
   background    : var(--color-dark);
   pointer-events: none;
-  transition    : background .3s ease;
+  transition    : background 0.3s ease;
 }
 
 .light-mode #particles-js {
   background: var(--color-white);
 }
-
-
 
 /* Hidden and scrolled state */
 .intro.shrink {
@@ -33,9 +34,6 @@
   opacity  : 0;
 }
 
-.home.light-mode {
-  background-image: url("../../images/white.jpg");
-}
 
 .intro {
   display        : flex;
@@ -45,7 +43,10 @@
   padding-top    : 0;
   z-index        : 10;
   transition     : transform 1.5s ease, opacity 1.5s ease;
+
 }
+
+
 
 
 .intro-text {
