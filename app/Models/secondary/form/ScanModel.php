@@ -14,10 +14,10 @@ class ScanModel extends Model
     {
         return $this->db->table('scan')
             ->select('scan.*, users.name AS user_name, network.signal, network.essid,
-            network.bssid, network.id_security_type AS security_type, devices.ip_address,
+            network.bssid, security_type.type AS security_type, devices.ip_address,
             devices.operating_system, devices.mac_address, ports.port_name, ports.service,
-            ports.protocol, port_status.open, port_status.close, port_status.filtered,
-            solution.solution, solution.vulnerability_code, solution.vuln_description, network.channel')
+            ports.protocol, port_status.status,solution.solution, solution.vulnerability_code, 
+            solution.vuln_description, network.channel')
             ->join('users', 'users.id_user = scan.id_user')
             ->join('network', 'network.id_network = scan.id_network')
             ->join('scan_details', 'scan_details.id_scan = scan.id_scan')
@@ -26,6 +26,7 @@ class ScanModel extends Model
             ->join('ports', 'ports.id_port = port_analysis.id_port')
             ->join('port_status', 'port_status.id_port_status = ports.id_port_status')
             ->join('solution', 'solution.id_solution = port_analysis.id_solution')
+            ->join('security_type', 'security_type.id_security_type = network.id_security_type')
             ->where('scan.id_user', $id_user)
             ->get()
             ->getResultArray();
@@ -33,8 +34,10 @@ class ScanModel extends Model
 
     public function deleteScanDetails($id_scan)
     {
+        // Eliminar los detalles del escaneo primero para evitar bloqueos o dependencias
         return $this->db->table('scan_details')->where('id_scan', $id_scan)->delete();
     }
+    
     public function deleteScanWithDetails($id_scan)
     {
         // Iniciar la transacción
@@ -45,34 +48,41 @@ class ScanModel extends Model
     
         if ($scanDetails) {
             foreach ($scanDetails as $detail) {
-                // Eliminar puertos relacionados
-                $this->db->table('port_analysis')->where('id_devices', $detail['id_devices'])->delete();
+                // Eliminar puertos relacionados desde la tabla port_analysis
+                if (isset($detail['id_devices'])) {
+                    $portAnalysisRecords = $this->db->table('port_analysis')->where('id_devices', $detail['id_devices'])->get()->getResultArray();
+                    
+                    foreach ($portAnalysisRecords as $portAnalysis) {
+                        if (isset($portAnalysis['id_port'])) {
+                            $this->db->table('ports')->where('id_port', $portAnalysis['id_port'])->delete();
+                        }
+    
+                        if (isset($portAnalysis['id_port_status'])) {
+                            $this->db->table('port_status')->where('id_port_status', $portAnalysis['id_port_status'])->delete();
+                        }
+                    }
+    
+                    // Eliminar los análisis de puertos relacionados
+                    $this->db->table('port_analysis')->where('id_devices', $detail['id_devices'])->delete();
+                }
     
                 // Eliminar dispositivos relacionados
                 $this->db->table('devices')->where('id_devices', $detail['id_devices'])->delete();
-    
-                // Verificar si existen y eliminar de 'ports' y 'port_status'
-                if (isset($detail['id_port'])) {
-                    $this->db->table('ports')->where('id_port', $detail['id_port'])->delete();
-                }
-    
-                if (isset($detail['id_port_status'])) {
-                    $this->db->table('port_status')->where('id_port_status', $detail['id_port_status'])->delete();
-                }
-            }
-            
-            // Eliminar también la red asociada si existe
-            // Comprobar que haya al menos un detalle y que contenga id_network
-            if (isset($scanDetails[0]['id_network'])) {
-                $this->db->table('network')->where('id_network', $scanDetails[0]['id_network'])->delete();
             }
         }
     
         // Eliminar los detalles del escaneo
         $this->deleteScanDetails($id_scan);
     
+        // Obtener el id_network desde la tabla scan
+        $scan = $this->db->table('scan')->where('id_scan', $id_scan)->get()->getRowArray();
+        
+        if ($scan && isset($scan['id_network'])) {
+            $this->db->table('network')->where('id_network', $scan['id_network'])->delete();
+        }
+    
         // Eliminar el escaneo
-        $this->delete($id_scan);
+        $this->db->table('scan')->where('id_scan', $id_scan)->delete();
     
         // Completar la transacción
         $this->db->transComplete();
@@ -80,9 +90,6 @@ class ScanModel extends Model
         // Retornar el estado de la transacción
         return $this->db->transStatus(); // Devuelve true si la transacción fue exitosa
     }
-    
-    
-    
     
 
 }

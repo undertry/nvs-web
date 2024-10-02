@@ -4,6 +4,8 @@ namespace App\Controllers\secondary\form;
 
 use CodeIgniter\HTTP\CURLRequest;
 use App\Controllers\main\BaseController;
+use \App\Models\tertiary\network\NetworkModel;
+use \App\Models\tertiary\network\SecurityModel;
 
 class Network extends BaseController
 {
@@ -33,6 +35,9 @@ class Network extends BaseController
     // Nueva función para manejar la selección de red
     public function selectNetwork()
     {
+        $networkmodel = new NetworkModel();
+        $securitymodel = new SecurityModel();
+
         $selectedNetwork = [
             'essid' => $this->request->getPost('essid'),
             'bssid' => $this->request->getPost('bssid'),
@@ -40,6 +45,7 @@ class Network extends BaseController
             'channel' => $this->request->getPost('channel'),
             'encryption' => $this->request->getPost('encryption'),
         ];
+
 
         // Enviar la red seleccionada a la Raspberry Pi
         $client = \Config\Services::curlrequest();
@@ -49,6 +55,18 @@ class Network extends BaseController
             ]);
 
             if ($response->getStatusCode() == 200) {
+
+                $encryption= $selectedNetwork->encryption;
+                $id_security_type= $securitymodel->IdSecurityType($encryption);
+                $selnet= [
+                    'essid' => $this->request->getPost('essid'),
+                    'bssid' => $this->request->getPost('bssid'),
+                    'signal' => $this->request->getPost('signal'),
+                    'channel' => $this->request->getPost('channel'),
+                    'id_security_type' => $id_security_type
+                ];
+                $network = $networkmodel->networkinsert($selnet);
+
                 log_message('info', 'Red seleccionada enviada a la Raspberry Pi.');
                 return redirect()->back()->with('success', 'Red seleccionada correctamente.');
             } else {

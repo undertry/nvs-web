@@ -50,13 +50,7 @@
                             <li><strong>Port:</strong> <?= $detail['port_name'] ?></li>
                             <li><strong>Service:</strong> <?= $detail['service'] ?></li>
                             <li><strong>Protocol:</strong> <?= $detail['protocol'] ?></li>
-                            <li><strong>Status:</strong>
-                                <?php
-                                if ($detail['open']) echo 'open';
-                                elseif ($detail['close']) echo 'close';
-                                else echo 'filtered';
-                                ?>
-                            </li>
+                            <li><strong>Status:</strong> <?= $detail['status'] ?></li>
                         </ul>
                         <h3>Public Code</h3>
                         <ul>

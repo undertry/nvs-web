@@ -17,7 +17,7 @@
     <!-- Formulario de Registro -->
     <div id="particles-js"></div> <!-- Contenedor de partículas -->
     <div class="box">
-        <form id="registerForm" method="post" action="<?= base_url('register'); ?>" class="form">
+        <form id="registerForm" method="post" action="<?= base_url('signup'); ?>" class="form">
             <h2><a href="<?= base_url("home-animation"); ?>"><i class="fa-solid fa-fingerprint"></i></a></h2>
             <div class="form-inputs">
                 <div class="form-label">
