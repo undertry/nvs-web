@@ -216,14 +216,13 @@ ln_description'] ?></li><div class="container">
 </div>
 
 
-    <!-- Script para generar el PDF específico de cada escaneo -->
-     <script>
+    <!-- Script para generar el PDF específico de cada escaneo -->  
+<script>
 document.querySelectorAll('.downloadPDF').forEach(button => {
     button.addEventListener('click', function() {
         const { jsPDF } = window.jspdf;
         const doc = new jsPDF({ format: 'a4' });
 
-        // Obtener datos específicos del botón seleccionado
         const scanDate = this.getAttribute('data-scan-date');
         const userName = this.getAttribute('data-user-name');
         const signal = this.getAttribute('data-signal');
@@ -240,7 +239,7 @@ document.querySelectorAll('.downloadPDF').forEach(button => {
                 doc.text(line, x, y);
                 y += 10; // Ajustar espacio entre líneas
             });
-            return y;
+            return y;   
         };
 
         const drawBox = (doc, x, y, width, height, title = "") => {
@@ -255,8 +254,32 @@ document.querySelectorAll('.downloadPDF').forEach(button => {
             }
         };
 
+        // Agrupar dispositivos por IP
+        const groupedDevices = deviceInfo.reduce((acc, device) => {
+            if (!acc[device.ip_address]) {
+                acc[device.ip_address] = {
+                    generalInfo: {
+                        ip_address: device.ip_address,
+                        operating_system: device.operating_system,
+                        mac_address: device.mac_address
+                    },
+                    details: []
+                };
+            }
+            acc[device.ip_address].details.push({
+                port_name: device.port_name,
+                service: device.service,
+                protocol: device.protocol,
+                status: device.status,
+                vulnerability_code: device.vulnerability_code,
+                vuln_description: device.vuln_description,
+                solution: device.solution
+            });
+            return acc;
+        }, {});
+
         // Cargar imagen desde URL
-        const imgUrl = 'https://cdn-icons-png.flaticon.com/512/8464/8464533.png';  // Ruta de la imagen
+        const imgUrl = 'https://cdn-icons-png.flaticon.com/512/8464/8464533.png';
         const image = new Image();
         image.src = imgUrl;
 
@@ -282,7 +305,7 @@ document.querySelectorAll('.downloadPDF').forEach(button => {
             y = splitTextAndFormat(doc, `BSSID: ${bssid}`, 15, y);
             y = splitTextAndFormat(doc, `Channel: ${channel}`, 15, y);
             y = splitTextAndFormat(doc, `Security Type: ${securityType}`, 15, y);
-            y += 10;
+            y += 20; // Aumentar el espacio entre secciones
 
             // Información de Dispositivos
             doc.setFontSize(18);
@@ -290,26 +313,40 @@ document.querySelectorAll('.downloadPDF').forEach(button => {
             doc.text("Device Information", 78, y);
             y += 10;
 
-            deviceInfo.forEach(device => {
-                drawBox(doc, 10, y, 190, 120, "Device");
+            // Recorrer los dispositivos agrupados por IP
+            Object.keys(groupedDevices).forEach(ip => {
+                const device = groupedDevices[ip];
+                const generalInfoHeight = 45; // Establecer la altura mínima de la caja
+                drawBox(doc, 10, y, 190, generalInfoHeight, "Device General Info");
                 y += 15;
-                y = splitTextAndFormat(doc, `IP: ${device.ip_address}`, 15, y);
-                y = splitTextAndFormat(doc, `Operating System: ${device.operating_system}`, 15, y);
-                y = splitTextAndFormat(doc, `MAC: ${device.mac_address}`, 15, y);
-                y = splitTextAndFormat(doc, `Port: ${device.port_name}`, 15, y);
-                y = splitTextAndFormat(doc, `Service: ${device.service}`, 15, y);
-                y = splitTextAndFormat(doc, `Protocol: ${device.protocol}`, 15, y);
-                y = splitTextAndFormat(doc, `Status: ${device.open ? 'open' : (device.close ? 'close' : 'filtered')}`, 15, y);
-                y = splitTextAndFormat(doc, `Public Code: ${device.vulnerability_code}`, 15, y);
-                y = splitTextAndFormat(doc, `Vulnerability Description: ${device.vuln_description}`, 15, y);
-                y = splitTextAndFormat(doc, `Solution: ${device.solution}`, 15, y);
-                y += 10; // Espacio extra entre dispositivos
+                y = splitTextAndFormat(doc, `IP: ${device.generalInfo.ip_address}`, 15, y);
+                y = splitTextAndFormat(doc, `Operating System: ${device.generalInfo.operating_system}`, 15, y);
+                y = splitTextAndFormat(doc, `MAC: ${device.generalInfo.mac_address}`, 15, y);
+                y += 10;
 
-                // Verificar si se necesita nueva página
-                if (y > 250) {
-                    doc.addPage();
-                    y = 10; // Reiniciar posición vertical
-                }
+                // Agregar detalles adicionales (puertos, servicios, etc.)
+                device.details.forEach(detail => {
+                    let detailHeight = 0;
+                    const linesCount = doc.splitTextToSize(`Solution: ${detail.solution}`, 180).length + 6; // Ajustar el número de líneas
+                    detailHeight = linesCount * 10 + 10; // Calcular altura en función de las líneas
+
+                    drawBox(doc, 10, y, 190, detailHeight, "Port Details");
+                    y += 15;
+                    y = splitTextAndFormat(doc, `Port: ${detail.port_name}`, 15, y);
+                    y = splitTextAndFormat(doc, `Service: ${detail.service}`, 15, y);
+                    y = splitTextAndFormat(doc, `Protocol: ${detail.protocol}`, 15, y);
+                    y = splitTextAndFormat(doc, `Status: ${detail.status}`, 15, y);
+                    y = splitTextAndFormat(doc, `Public Code: ${detail.vulnerability_code}`, 15, y);
+                    y = splitTextAndFormat(doc, `Vulnerability Description: ${detail.vuln_description}`, 15, y);
+                    y = splitTextAndFormat(doc, `Solution: ${detail.solution}`, 15, y);
+                    y += 20; // Espacio entre dispositivos
+
+                    // Verificar si se necesita nueva página
+                    if (y > 250) { // Ajusta este valor según el contenido máximo que quieras en una página
+                        doc.addPage();
+                        y = 10; // Reiniciar la posición vertical
+                    }
+                });
             });
 
             // Descargar PDF
@@ -318,6 +355,10 @@ document.querySelectorAll('.downloadPDF').forEach(button => {
     });
 });
 </script>
+
+
+
+
 
 
 
