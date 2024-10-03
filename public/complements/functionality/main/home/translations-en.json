@@ -3,5 +3,38 @@
       "title": "NETWORK VULNERABILITY SCAN",
       "subtext": "For <span id='dynamic-word' class='word-slide hidden'>passionate</span> people.",
       "dynamicWord": "passionate"
-    }
+    },
+
+    "navbar": {
+      "logo": "NETWORK SECURITY",
+      "home": {
+        "link": "Home"
+      },
+      "software": {
+        "link": "Software"
+      },
+      "about": {
+        "link": "About"
+      },
+      "faq": {
+        "link": "Faq"
+      },
+      "login": {
+        "link": "Log In"
+      },
+      "signup": {
+        "link": "Get Started"
+      },
+      "languageDropdown": {
+        "label": "EN",
+        "options": {
+          "en": "English",
+          "es": "Spanish"
+        }
+      },
+      "darkModeToggle": {
+        "icon": "fa-moon"
+      }
   }
+}
+

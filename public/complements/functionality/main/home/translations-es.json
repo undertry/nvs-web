@@ -3,5 +3,39 @@
       "title": "ESCANEO DE VULNERABILIDAD DE RED",
       "subtext": "Para personas <span id='dynamic-word' class='word-slide hidden'>apasionadas</span>.",
       "dynamicWord": "apasionadas"
-    }
+    },
+
+
+      "navbar": {
+        "logo": "SEGURIDAD DE RED",
+        "home": {
+          "link": "Inicio"
+        },
+        "software": {
+          "link": "Software"
+        },
+        "about": {
+          "link": "Acerca de"
+        },
+        "faq": {
+          "link": "Preguntas Frecuentes"
+        },
+        "login": {
+          "link": "Iniciar Sesión"
+        },
+        "signup": {
+          "link": "Comenzar"
+        },
+        "languageDropdown": {
+          "label": "ES",
+          "options": {
+            "en": "Inglés",
+            "es": "Español"
+          }
+        },
+        "darkModeToggle": {
+          "icon": "fa-moon"
+        }
+      }
   }
+

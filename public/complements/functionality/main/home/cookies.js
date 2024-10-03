@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Inicializa el modo claro/oscuro
   function initializeMode() {
-    const savedMode = getCookie("mode") || "dark";
+    const savedMode = getCookie("mode") || "dark"; // Modo por defecto "dark"
     applyMode(savedMode);
 
     toggleButton.addEventListener("click", function () {
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ? "dark"
         : "light";
       applyMode(currentMode);
-      setCookie("mode", currentMode, 7);
+      setCookie("mode", currentMode, 7); // Guarda el modo en una cookie
     });
   }
 
@@ -38,12 +38,12 @@ document.addEventListener("DOMContentLoaded", function () {
       body.classList.remove("light-mode");
       modeIcon.classList.replace("fa-sun", "fa-moon"); // Cambia el ícono de sol a luna
     }
-    updateParticlesColor(mode); // Actualiza el color de las partículas si tienes partículas en el fondo
+    updateParticlesColor(mode); // Actualiza el color de las partículas si es necesario
   }
 
   // Inicializa el idioma
   function initializeLanguage() {
-    const savedLanguage = getCookie("language") || "es"; // Si no hay cookie, por defecto "en"
+    const savedLanguage = getCookie("language") || "en"; // Idioma por defecto "en"
     applyLanguage(savedLanguage);
 
     // Cambia el texto del botón según el idioma guardado
@@ -53,10 +53,9 @@ document.addEventListener("DOMContentLoaded", function () {
     languageLinks.forEach((link) => {
       link.addEventListener("click", function (e) {
         e.preventDefault();
-        const selectedLanguage =
-          this.textContent.toLowerCase() === "english" ? "en" : "es";
-        applyLanguage(selectedLanguage);
+        const selectedLanguage = this.getAttribute("data-lang");
         setCookie("language", selectedLanguage, 7); // Guarda el idioma seleccionado en una cookie
+        location.reload(); // Recarga la página para aplicar el nuevo idioma
       });
     });
   }
@@ -74,8 +73,6 @@ document.addEventListener("DOMContentLoaded", function () {
         return response.json();
       })
       .then((translations) => {
-        console.log("Traducciones cargadas:", translations);
-
         // Aplica las traducciones a los elementos con data-i18n
         document.querySelectorAll("[data-i18n]").forEach((element) => {
           const keys = element.getAttribute("data-i18n").split(".");
@@ -84,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
             translation = translation[key] || translation; // Evita que se quiebre si no encuentra la traducción
           });
 
-          // Si la traducción existe, la aplica, de lo contrario advierte
+          // Si la traducción existe, la aplica
           if (translation) {
             element.innerHTML = translation;
           } else {
