@@ -21,7 +21,7 @@ class Login extends BaseController
             // Redirigir a la página de inicio de sesión si el usuario no está autenticado
             return view('secondary/form/login');
         } else {
-            return redirect()->back();
+            return redirect()->to('dashboard');
         }
     }
     public function do_login()
