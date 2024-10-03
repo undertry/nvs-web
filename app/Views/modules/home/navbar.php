@@ -59,11 +59,12 @@
                 <i class="fa-solid fa-chevron-down"></i>
             </a>
             <ul class="dropdown-menu">
-                <li><a href="#">English</a></li>
-                <li><a href="#">Spanish</a></li>
+                <li><a href="#" data-lang="en">English</a></li>
+                <li><a href="#" data-lang="es">Spanish</a></li>
             </ul>
         </div>
     </div>
+
 
 </nav>
 <!-- navbar section ends here -->

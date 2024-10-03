@@ -24,6 +24,23 @@ document.addEventListener("DOMContentLoaded", function () {
     }, speed);
   };
 
-  title.style.opacity = 1;
-  revealText(title, "NETWORK VULNERABILITY SCAN", 85);
+  // Obtener el idioma guardado en cookies
+  const savedLanguage = getCookie("language") || "en"; // "en" es el idioma por defecto
+
+  // Mostrar el título según el idioma
+  if (savedLanguage === "es") {
+    title.style.opacity = 1;
+    revealText(title, "ESCANEO DE VULNERABILIDAD DE RED", 85);
+  } else {
+    title.style.opacity = 1;
+    revealText(title, "NETWORK VULNERABILITY SCAN", 85);
+  }
+
+  // Función para obtener cookies
+  function getCookie(name) {
+    return document.cookie
+      .split("; ")
+      .find((row) => row.startsWith(name + "="))
+      ?.split("=")[1];
+  }
 });
