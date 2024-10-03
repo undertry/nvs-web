@@ -5,98 +5,219 @@
 
 <body>
     <div class="container">
-        <h1 class="header"><a href="<?= base_url('dashboard'); ?>">NVS</a></h1>
-        <h1>Scan Details</h1>
-        <div class="columns">
-            <?php if (!empty($scanDetails) && is_array($scanDetails)) : ?>
-            <?php
-                // Agrupar los detalles del scan por cada scan
-                $scansGrouped = [];
-                foreach ($scanDetails as $detail) {
-                    $scansGrouped[$detail['scan_date']][] = $detail;
-                }
-            ?>
-            <?php foreach ($scansGrouped as $scan_date => $details) : ?>
-            <div class="scan-group">
-                <div class="scan-summary" onclick="toggleDetails(this)">
-                    <h2>Scan Information</h2>
+    <h1 class="header"><a href="<?= base_url('dashboard'); ?>">NVS</a></h1>
+    <h1>Scan Details</h1>
+    <div class="columns">
+        <?php if (!empty($scanDetails) && is_array($scanDetails)) : ?>
+        <?php
+            // Agrupar los detalles del scan por cada scan
+            $scansGrouped = [];
+            foreach ($scanDetails as $detail) {
+                $scansGrouped[$detail['id_scan']][] = $detail;
+            }
+        ?>
+        <?php foreach ($scansGrouped as $details) : ?>
+        <div class="scan-group">
+            <div class="scan-summary" onclick="toggleDetails(this)">
+                <h2>Scan Information</h2>
+                <ul>
+                    <li><strong>Scan Date:</strong> <?=  $details[0]['scan_date'] ?></li>
+                    <li><strong>User:</strong> <?= $details[0]['user_name'] ?></li>
+                </ul>
+            </div>
+            <div class="scan-details">
+                <div class="left-column">
+                    <h2>Network Information</h2>
                     <ul>
-                        <li><strong>Scan Date:</strong> <?= $scan_date ?></li>
-                        <li><strong>User:</strong> <?= $details[0]['user_name'] ?></li>
+                        <li><strong>Signal:</strong> <?= $details[0]['signal'] ?></li>
+                        <li><strong>ESSID:</strong> <?= $details[0]['essid'] ?></li>
+                        <li><strong>BSSID:</strong> <?= $details[0]['bssid'] ?></li>
+                        <li><strong>Channel:</strong> <?= $details[0]['channel'] ?></li>
+                        <li><strong>Security Type:</strong> <?= $details[0]['security_type'] ?></li>
                     </ul>
                 </div>
-                <div class="scan-details">
-                    <div class="left-column">
-                        <h2>Network Information</h2>
-                        <ul>
-                            <li><strong>Signal:</strong> <?= $details[0]['signal'] ?></li>
-                            <li><strong>ESSID:</strong> <?= $details[0]['essid'] ?></li>
-                            <li><strong>BSSID:</strong> <?= $details[0]['bssid'] ?></li>
-                            <li><strong>Channel:</strong> <?= $details[0]['channel'] ?></li>
-                            <li><strong>Security Type:</strong> <?= $details[0]['security_type'] ?></li>
-                        </ul>
-                    </div>
-                    <div class="right-column">
-                        <h2>Device Information</h2>
-                        <?php foreach ($details as $detail) : ?>
+                <div class="right-column">
+                    <h2>Device Information</h2>
+
+                    <?php 
+                    // Agrupar por dispositivos para mostrar los puertos consecutivos
+                    $devicesGrouped = [];
+                    foreach ($details as $detail) {
+                        $devicesGrouped[$detail['ip_address']][] = $detail;
+                    }
+
+                    foreach ($devicesGrouped as $deviceDetails) : ?>
                         <h3>Device</h3>
                         <ul>
-                            <li><strong>IP:</strong> <?= $detail['ip_address'] ?></li>
-                            <li><strong>Operating System:</strong> <?= $detail['operating_system'] ?></li>
-                            <li><strong>MAC:</strong> <?= $detail['mac_address'] ?></li>
+                            <li><strong>IP:</strong> <?= $deviceDetails[0]['ip_address'] ?></li>
+                            <li><strong>Operating System:</strong> <?= $deviceDetails[0]['operating_system'] ?></li>
+                            <li><strong>MAC:</strong> <?= $deviceDetails[0]['mac_address'] ?></li>
                         </ul>
-                        <h3>Port Information</h3>
-                        <ul>
-                            <li><strong>Port:</strong> <?= $detail['port_name'] ?></li>
-                            <li><strong>Service:</strong> <?= $detail['service'] ?></li>
-                            <li><strong>Protocol:</strong> <?= $detail['protocol'] ?></li>
-                            <li><strong>Status:</strong> <?= $detail['status'] ?></li>
-                        </ul>
-                        <h3>Public Code</h3>
-                        <ul>
-                            <li><?= $detail['vulnerability_code'] ?></li>
-                        </ul>
-                        <h3 id="description">Vulnerability Description</h3>
-                        <ul>
-                            <li><?= $detail['vuln_description'] ?></li>
-                        </ul>
-                        <h3 id="solution">Solution</h3>
-                        <ul>
-                            <li><?= $detail['solution'] ?></li>
-                        </ul>
+
+                        <?php foreach ($deviceDetails as $device) : ?>
+                            <h3>Port Information</h3>
+                            <ul>
+                                <li><strong>Port:</strong> <?= $device['port_name'] ?></li>
+                                <li><strong>Service:</strong> <?= $device['service'] ?></li>
+                                <li><strong>Protocol:</strong> <?= $device['protocol'] ?></li>
+                                <li><strong>Status:</strong> <?= $device['status'] ?></li>
+                            </ul>
+
+                            <h3>Public Code</h3>
+                            <ul>
+                                <li><?= $device['vulnerability_code'] ?></li>
+                            </ul>
+
+                            <h3>Vulnerability Description</h3>
+                            <ul>
+                                <li><?= $device['vuln_description'] ?></li>
+                            </ul>
+
+                            <h3>Solution</h3>
+                            <ul>
+                                <li><?= $device['solution'] ?></li>
+                            </ul>
                         <?php endforeach; ?>
-                    </div>
+                    <?php endforeach; ?>
+
                 </div>
-                
-                <!-- Botón para descargar el PDF específico de este escaneo -->
-<!-- Botón para descargar el PDF específico de este escaneo -->
-<button class="downloadPDF btn btn-primary" 
-    data-scan-date="<?= $scan_date ?>" 
-    data-user-name="<?= $details[0]['user_name'] ?>" 
-    data-signal="<?= $details[0]['signal'] ?>" 
-    data-essid="<?= $details[0]['essid'] ?>" 
-    data-bssid="<?= $details[0]['bssid'] ?>" 
-    data-channel="<?= $details[0]['channel'] ?>" 
-    data-security-type="<?= $details[0]['security_type'] ?>" 
-    data-devices='<?= json_encode($details) ?>'><!-- Aquí se pasa la información completa de los detalles -->
->Download Scan PDF</button>
-
-                <!-- Botón para eliminar el escaneo -->
-<form action="<?= base_url('history/deleteScan/' . $detail['id_scan']) ?>" method="post" onsubmit="return confirm('¿Estás seguro de que deseas eliminar este escaneo?');">
-    <button type="submit" class="btn btn-danger">Eliminar Scan</button>
-</form>
-
             </div>
-            <?php endforeach; ?>
-            
-            <?php else : ?>
-            <p>No details found for this scan</p>
-            <?php endif; ?>
+
+            <!-- Botón para descargar el PDF específico de este escaneo -->
+            <button class="downloadPDF btn btn-primary" 
+                data-scan-date="<?= $details[0]['scan_date'] ?>" 
+                data-user-name="<?= $details[0]['user_name'] ?>" 
+                data-signal="<?= $details[0]['signal'] ?>" 
+                data-essid="<?= $details[0]['essid'] ?>" 
+                data-bssid="<?= $details[0]['bssid'] ?>" 
+                data-channel="<?= $details[0]['channel'] ?>" 
+                data-security-type="<?= $details[0]['security_type'] ?>" 
+                data-devices='<?= json_encode($details) ?>'>
+                Download Scan PDF
+            </button>
+
+            <!-- Botón para eliminar el escaneo -->
+            <form action="<?= base_url('history/deleteScan/' . $detail['id_scan']) ?>" method="post" onsubmit="return confirm('¿Estás seguro de que deseas eliminar este escaneo?');">
+                <button type="submit" class="btn btn-danger">Eliminar Scan</button>
+            </form>
+
         </div>
+        <?php endforeach; ?>
+
+        <?php else : ?>
+        <p>No details found for this scan</p>
+        <?php endif; ?>
     </div>
+</div>
+ln_description'] ?></li><div class="container">
+    <h1 class="header"><a href="<?= base_url('dashboard'); ?>">NVS</a></h1>
+    <h1>Scan Details</h1>
+    <div class="columns">
+        <?php if (!empty($scanDetails) && is_array($scanDetails)) : ?>
+        <?php
+            // Agrupar los detalles del scan por cada scan
+            $scansGrouped = [];
+            foreach ($scanDetails as $detail) {
+                $scansGrouped[$detail['id_scan']][] = $detail;
+            }
+        ?>
+        <?php foreach ($scansGrouped as $details) : ?>
+        <div class="scan-group">
+            <div class="scan-summary" onclick="toggleDetails(this)">
+                <h2>Scan Information</h2>
+                <ul>
+                    <li><strong>Scan Date:</strong> <?=  $details[0]['scan_date'] ?></li>
+                    <li><strong>User:</strong> <?= $details[0]['user_name'] ?></li>
+                </ul>
+            </div>
+            <div class="scan-details">
+                <div class="left-column">
+                    <h2>Network Information</h2>
+                    <ul>
+                        <li><strong>Signal:</strong> <?= $details[0]['signal'] ?></li>
+                        <li><strong>ESSID:</strong> <?= $details[0]['essid'] ?></li>
+                        <li><strong>BSSID:</strong> <?= $details[0]['bssid'] ?></li>
+                        <li><strong>Channel:</strong> <?= $details[0]['channel'] ?></li>
+                        <li><strong>Security Type:</strong> <?= $details[0]['security_type'] ?></li>
+                    </ul>
+                </div>
+                <div class="right-column">
+                    <h2>Device Information</h2>
+
+                    <?php 
+                    // Agrupar por dispositivos para mostrar los puertos consecutivos
+                    $devicesGrouped = [];
+                    foreach ($details as $detail) {
+                        $devicesGrouped[$detail['ip_address']][] = $detail;
+                    }
+
+                    foreach ($devicesGrouped as $deviceDetails) : ?>
+                        <h3>Device</h3>
+                        <ul>
+                            <li><strong>IP:</strong> <?= $deviceDetails[0]['ip_address'] ?></li>
+                            <li><strong>Operating System:</strong> <?= $deviceDetails[0]['operating_system'] ?></li>
+                            <li><strong>MAC:</strong> <?= $deviceDetails[0]['mac_address'] ?></li>
+                        </ul>
+
+                        <?php foreach ($deviceDetails as $device) : ?>
+                            <h3>Port Information</h3>
+                            <ul>
+                                <li><strong>Port:</strong> <?= $device['port_name'] ?></li>
+                                <li><strong>Service:</strong> <?= $device['service'] ?></li>
+                                <li><strong>Protocol:</strong> <?= $device['protocol'] ?></li>
+                                <li><strong>Status:</strong> <?= $device['status'] ?></li>
+                            </ul>
+
+                            <h3>Public Code</h3>
+                            <ul>
+                                <li><?= $device['vulnerability_code'] ?></li>
+                            </ul>
+
+                            <h3>Vulnerability Description</h3>
+                            <ul>
+                                <li><?= $device['vuln_description'] ?></li>
+                            </ul>
+
+                            <h3>Solution</h3>
+                            <ul>
+                                <li><?= $device['solution'] ?></li>
+                            </ul>
+                        <?php endforeach; ?>
+                    <?php endforeach; ?>
+
+                </div>
+            </div>
+
+            <!-- Botón para descargar el PDF específico de este escaneo -->
+            <button class="downloadPDF btn btn-primary" 
+                data-scan-date="<?= $details[0]['scan_date'] ?>" 
+                data-user-name="<?= $details[0]['user_name'] ?>" 
+                data-signal="<?= $details[0]['signal'] ?>" 
+                data-essid="<?= $details[0]['essid'] ?>" 
+                data-bssid="<?= $details[0]['bssid'] ?>" 
+                data-channel="<?= $details[0]['channel'] ?>" 
+                data-security-type="<?= $details[0]['security_type'] ?>" 
+                data-devices='<?= json_encode($details) ?>'>
+                Download Scan PDF
+            </button>
+
+            <!-- Botón para eliminar el escaneo -->
+            <form action="<?= base_url('history/deleteScan/' . $detail['id_scan']) ?>" method="post" onsubmit="return confirm('¿Estás seguro de que deseas eliminar este escaneo?');">
+                <button type="submit" class="btn btn-danger">Eliminar Scan</button>
+            </form>
+
+        </div>
+        <?php endforeach; ?>
+
+        <?php else : ?>
+        <p>No details found for this scan</p>
+        <?php endif; ?>
+    </div>
+</div>
+
 
     <!-- Script para generar el PDF específico de cada escaneo -->
-    <script>
+     <script>
 document.querySelectorAll('.downloadPDF').forEach(button => {
     button.addEventListener('click', function() {
         const { jsPDF } = window.jspdf;
@@ -197,7 +318,6 @@ document.querySelectorAll('.downloadPDF').forEach(button => {
     });
 });
 </script>
-
 
 
 
