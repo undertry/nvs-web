@@ -58,5 +58,35 @@
       "subtitle": "From an idea to a project",
       "description": "It began as a <span>mere idea</span>, but after giving it some thought, we realized it would be a <span>great project</span> for the thesis we needed to present. We conducted research until we could <span>solidify this fantastic concept</span>. The more we studied the topic, the more passionate we became about developing <span>this project for the community</span>."
     }
+  },
+
+
+    "features": {
+      "title": "Features & Security",
+      "feature1": {
+        "title": "Highly Secure",
+        "description": "Passwords are hashed using Bcrypt."
+      },
+      "feature2": {
+        "title": "Local Deployment",
+        "description": "Runs locally for enhanced security."
+      },
+      "feature3": {
+        "title": "Downloadable Reports",
+        "description": "Delete and download scan history in PDF format."
+      },
+      "feature4": {
+        "title": "Advanced Security Features",
+        "description": "Supports two-factor authentication, password recovery, and change password functionality."
+      },
+      "feature5": {
+        "title": "Compatibility",
+        "description": "Compatible with Raspberry Pi 3 B+ and later versions."
+      },
+      "feature6": {
+        "title": "Highly Configurable",
+        "description": "Customize and adjust settings according to your specific needs in network auditing."
+      }
+    }
   }
-}
+

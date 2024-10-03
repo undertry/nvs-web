@@ -66,5 +66,36 @@
       "subtitle": "De una idea a un proyecto",
       "description": "Comenzó como una <span>simple idea</span>, pero después de pensar en ello, nos dimos cuenta de que sería un <br><span>gran proyecto</span> para la tesis que necesitábamos presentar. Investigamos hasta <br><span>solidificar este concepto fantástico</span>. Cuanto más estudiábamos el tema, más nos apasionaba desarrollar <br><span>este proyecto para la comunidad</span>."
     }
+  },
+
+
+    "features": {
+      "title": "Características y Seguridad",
+      "feature1": {
+        "title": "Altamente Seguro",
+        "description": "Las contraseñas se encriptan usando Bcrypt."
+      },
+      "feature2": {
+        "title": "Despliegue Local",
+        "description": "Funciona localmente para una mayor seguridad."
+      },
+      "feature3": {
+        "title": "Informes Descargables",
+        "description": "Elimina y descarga el historial de escaneos en formato PDF."
+      },
+      "feature4": {
+        "title": "Funciones Avanzadas de Seguridad",
+        "description": "Soporta autenticación de dos factores, recuperación de contraseña y cambio de contraseña."
+      },
+      "feature5": {
+        "title": "Compatibilidad",
+        "description": "Compatible con Raspberry Pi 3 B+ y versiones posteriores."
+      },
+      "feature6": {
+        "title": "Altamente Configurable",
+        "description": "Personaliza y ajusta la configuración según tus necesidades específicas en auditoría de redes."
+      }
+    }
   }
-}
+
+
