@@ -1,40 +1,92 @@
 {
+  "home": {
+    "title": "NETWORK VULNERABILITY SCANNER",
+    "subtext": "For <span id='dynamic-word' class='word-slide hidden'>passionate</span> people.",
+    "dynamicWord": "passionate"
+  },
+  "navbar": {
+    "logo": "NETWORK SECURITY",
     "home": {
-      "title": "NETWORK VULNERABILITY SCAN",
-      "subtext": "For <span id='dynamic-word' class='word-slide hidden'>passionate</span> people.",
-      "dynamicWord": "passionate"
+      "link": "Home"
     },
-
-    "navbar": {
-      "logo": "NETWORK SECURITY",
-      "home": {
-        "link": "Home"
-      },
-      "software": {
-        "link": "Software"
-      },
-      "about": {
-        "link": "About"
-      },
-      "faq": {
-        "link": "Faq"
-      },
-      "login": {
-        "link": "Log In"
-      },
-      "signup": {
-        "link": "Get Started"
-      },
-      "languageDropdown": {
-        "label": "EN",
-        "options": {
-          "en": "English",
-          "es": "Spanish"
-        }
-      },
-      "darkModeToggle": {
-        "icon": "fa-moon"
+    "software": {
+      "link": "Software"
+    },
+    "about": {
+      "link": "About"
+    },
+    "faq": {
+      "link": "Faq"
+    },
+    "login": {
+      "link": "Log In"
+    },
+    "signup": {
+      "link": "Get Started"
+    },
+    "languageDropdown": {
+      "label": "EN",
+      "options": {
+        "en": "English",
+        "es": "Spanish"
       }
+    },
+    "darkModeToggle": {
+      "icon": "fa-moon"
+    }
+  },
+  "software": {
+    "header": {
+      "icon": "<i class='fa-brands fa-uncharted'></i>"
+    },
+    "whatIs": {
+      "title": "What is it?",
+      "subtitle": "Software | Vulnerability | Scan | Networks",
+      "description": "It is a software designed to analyze available WiFi networks. Upon selecting a specific network, the software can perform the following functions:",
+      "feature1": "Scan the network to detect <span>connected devices</span>.",
+      "feature2": "Identify the <span>operating system</span> of each device.",
+      "feature3": "Assess the <span>vulnerabilities</span> of connected devices, if possible.",
+      "feature4": "Use a <span>Raspberry Pi</span> for data collection."
+    },
+    "whoFor": {
+      "title": "Who is it for?",
+      "subtitle": "Individuals passionate about cybersecurity",
+      "description": "It is for individuals who are <span>passionate</span> about <span>cybersecurity</span> and want to add an extra layer of <span>security</span> to their networks by performing <span>daily diagnostics</span> to enhance the <span>safety</span> of their WiFi."
+    },
+    "origin": {
+      "title": "How did it start?",
+      "subtitle": "From an idea to a project",
+      "description": "It began as a <span>mere idea</span>, but after giving it some thought, we realized it would be a <span>great project</span> for the thesis we needed to present. We conducted research until we could <span>solidify this fantastic concept</span>. The more we studied the topic, the more passionate we became about developing <span>this project for the community</span>."
+    }
+  },
+
+
+    "features": {
+      "title": "Features & Security",
+      "feature1": {
+        "title": "Highly Secure",
+        "description": "Passwords are hashed using Bcrypt."
+      },
+      "feature2": {
+        "title": "Local Deployment",
+        "description": "Runs locally for enhanced security."
+      },
+      "feature3": {
+        "title": "Downloadable Reports",
+        "description": "Delete and download scan history in PDF format."
+      },
+      "feature4": {
+        "title": "Advanced Security Features",
+        "description": "Supports two-factor authentication, password recovery, and change password functionality."
+      },
+      "feature5": {
+        "title": "Compatibility",
+        "description": "Compatible with Raspberry Pi 3 B+ and later versions."
+      },
+      "feature6": {
+        "title": "Highly Configurable",
+        "description": "Customize and adjust settings according to your specific needs in network auditing."
+      }
+    }
   }
-}
 

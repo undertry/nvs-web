@@ -30,10 +30,10 @@ document.addEventListener("DOMContentLoaded", function () {
   // Mostrar el título según el idioma
   if (savedLanguage === "es") {
     title.style.opacity = 1;
-    revealText(title, "ESCANEO DE VULNERABILIDAD DE RED", 85);
+    revealText(title, "ESCANER DE VULNERABILIDAD DE RED", 85);
   } else {
     title.style.opacity = 1;
-    revealText(title, "NETWORK VULNERABILITY SCAN", 85);
+    revealText(title, "NETWORK VULNERABILITY SCANNER", 85);
   }
 
   // Función para obtener cookies
