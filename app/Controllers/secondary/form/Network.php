@@ -79,6 +79,49 @@ class Network extends BaseController
         }
     }
 
+       // Función para mostrar las vulnerabilidades
+       public function showVulnerabilities()
+       {
+           $client = \Config\Services::curlrequest();
+           try {
+               $response = $client->get('http://192.168.0.162:5000/vulnerabilities/basic');  // Cambiado para obtener solo datos básicos
+
+               if ($response->getStatusCode() == 200) {
+                   $vulnerabilities = json_decode($response->getBody(), true);
+                   log_message('info', 'Datos de vulnerabilidades recibidos: ' . print_r($vulnerabilities, true));
+               } else {
+                   log_message('error', 'Error en la respuesta de la API: ' . $response->getStatusCode());
+                   $vulnerabilities = [];
+               }
+           } catch (\Exception $e) {
+               log_message('error', 'Excepción capturada al intentar conectarse a la API: ' . $e->getMessage());
+               $vulnerabilities = [];
+           }
+
+           // Pasamos los datos básicos de vulnerabilidades a la vista
+           return view('tertiary/network/vulnerabilities', ['vulnerabilities' => $vulnerabilities]);
+       }
+
+       public function getVulnerabilityDetails($ip)
+       {
+           $client = \Config\Services::curlrequest();
+
+           try {
+               $response = $client->get("http://192.168.0.162:5000/vulnerabilities/details/{$ip}");
+
+               if ($response->getStatusCode() == 200) {
+                   $cveDetails = json_decode($response->getBody(), true);
+                   return $this->response->setJSON($cveDetails);
+               } else {
+                   return $this->response->setJSON(['error' => 'Error en la respuesta de la API.'], 404);
+               }
+           } catch (\Exception $e) {
+               return $this->response->setJSON(['error' => 'Error de conexión con la API: ' . $e->getMessage()], 500);
+           }
+       }
+
+
+
     // Nueva función para la animación de selección de red
     public function animation()
     {

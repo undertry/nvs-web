@@ -1430,3 +1430,429 @@ WARNING - 2024-10-03 17:27:05 --> [DEPRECATED] Creation of dynamic property App\
  4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-03 23:09:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-03 23:09:37 --> [DEPRECATED] Creation of dynamic property App\Controllers\main\Home::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-03 23:09:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-03 23:09:42 --> [DEPRECATED] Creation of dynamic property App\Controllers\main\Home::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-03 23:09:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-03 23:09:44 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Login::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-03 23:09:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-03 23:09:45 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Login::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-03 23:09:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-03 23:09:49 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Login::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-03 23:09:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-03 23:09:56 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Login::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-03 23:09:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-03 23:09:57 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\Dashboard::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-03 23:09:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-03 23:09:58 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\Dashboard::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-03 23:09:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-03 23:09:59 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Network::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-03 23:10:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-03 23:10:00 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Network::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-03 23:10:00 --> Solicitud realizada a la API.
+INFO - 2024-10-03 23:10:00 --> Datos recibidos: Array
+(
+    [0] => Array
+        (
+            [BSSID] => E8:AD:A6:0B:08:06
+            [Channel] => 11
+            [ESSID] => Zeballos -2.4GHz
+            [Encryption] => WPA2
+            [Signal] => -63
+        )
+
+    [1] => Array
+        (
+            [BSSID] => 48:4B:D4:3E:B5:E0
+            [Channel] => 1
+            [ESSID] => Personal-5DC
+            [Encryption] => WPA2
+            [Signal] => -71
+        )
+
+    [2] => Array
+        (
+            [BSSID] => 4A:4B:D4:3E:B5:E4
+            [Channel] => 1
+            [ESSID] => Personal Wifi Zone
+            [Encryption] => OPN
+            [Signal] => -71
+        )
+
+    [3] => Array
+        (
+            [BSSID] => B8:26:D4:0A:95:C2
+            [Channel] => 6
+            [ESSID] => RioTel_CUAGLIA_597
+            [Encryption] => WPA2
+            [Signal] => -56
+        )
+
+    [4] => Array
+        (
+            [BSSID] => 78:45:61:DA:B9:C0
+            [Channel] => 6
+            [ESSID] => Fibertel Comba 2.4GHz
+            [Encryption] => WPA2
+            [Signal] => -32
+        )
+
+    [5] => Array
+        (
+            [BSSID] => EA:AD:A6:0B:09:0A
+            [Channel] => 11
+            [ESSID] => Personal Wifi Zone
+            [Encryption] => OPN
+            [Signal] => -62
+        )
+
+    [6] => Array
+        (
+            [BSSID] => B8:26:D4:08:47:B2
+            [Channel] => 11
+            [ESSID] => RioTel_MARTIN_10348
+            [Encryption] => WPA2
+            [Signal] => -68
+        )
+
+    [7] => Array
+        (
+            [BSSID] => 46:AD:B1:2E:6F:91
+            [Channel] => 1
+            [ESSID] => 
+            [Encryption] => 
+            [Signal] => -1
+        )
+
+    [8] => Array
+        (
+            [BSSID] => B8:26:D4:0A:97:82
+            [Channel] => 11
+            [ESSID] => RioTel_BERNARDI_599
+            [Encryption] => WPA2
+            [Signal] => -80
+        )
+
+    [9] => Array
+        (
+            [BSSID] => B8:26:D4:08:54:B2
+            [Channel] => 11
+            [ESSID] => RioTel_VEGA
+            [Encryption] => WPA2
+            [Signal] => -78
+        )
+
+    [10] => Array
+        (
+            [BSSID] => B8:26:D4:0A:6A:42
+            [Channel] => 1
+            [ESSID] => RioTel-VILLAFANE
+            [Encryption] => WPA2
+            [Signal] => -74
+        )
+
+)
+
+INFO - 2024-10-03 23:12:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-03 23:12:40 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Network::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-03 23:12:40 --> Solicitud realizada a la API.
+INFO - 2024-10-03 23:12:40 --> Datos recibidos: Array
+(
+    [0] => Array
+        (
+            [BSSID] => E8:AD:A6:0B:08:06
+            [Channel] => 11
+            [ESSID] => Zeballos -2.4GHz
+            [Encryption] => WPA2
+            [Signal] => -63
+        )
+
+    [1] => Array
+        (
+            [BSSID] => 48:4B:D4:3E:B5:E0
+            [Channel] => 1
+            [ESSID] => Personal-5DC
+            [Encryption] => WPA2
+            [Signal] => -71
+        )
+
+    [2] => Array
+        (
+            [BSSID] => 4A:4B:D4:3E:B5:E4
+            [Channel] => 1
+            [ESSID] => Personal Wifi Zone
+            [Encryption] => OPN
+            [Signal] => -71
+        )
+
+    [3] => Array
+        (
+            [BSSID] => B8:26:D4:0A:95:C2
+            [Channel] => 6
+            [ESSID] => RioTel_CUAGLIA_597
+            [Encryption] => WPA2
+            [Signal] => -56
+        )
+
+    [4] => Array
+        (
+            [BSSID] => 78:45:61:DA:B9:C0
+            [Channel] => 6
+            [ESSID] => Fibertel Comba 2.4GHz
+            [Encryption] => WPA2
+            [Signal] => -32
+        )
+
+    [5] => Array
+        (
+            [BSSID] => EA:AD:A6:0B:09:0A
+            [Channel] => 11
+            [ESSID] => Personal Wifi Zone
+            [Encryption] => OPN
+            [Signal] => -62
+        )
+
+    [6] => Array
+        (
+            [BSSID] => B8:26:D4:08:47:B2
+            [Channel] => 11
+            [ESSID] => RioTel_MARTIN_10348
+            [Encryption] => WPA2
+            [Signal] => -68
+        )
+
+    [7] => Array
+        (
+            [BSSID] => 46:AD:B1:2E:6F:91
+            [Channel] => 1
+            [ESSID] => 
+            [Encryption] => 
+            [Signal] => -1
+        )
+
+    [8] => Array
+        (
+            [BSSID] => B8:26:D4:0A:97:82
+            [Channel] => 11
+            [ESSID] => RioTel_BERNARDI_599
+            [Encryption] => WPA2
+            [Signal] => -80
+        )
+
+    [9] => Array
+        (
+            [BSSID] => B8:26:D4:08:54:B2
+            [Channel] => 11
+            [ESSID] => RioTel_VEGA
+            [Encryption] => WPA2
+            [Signal] => -78
+        )
+
+    [10] => Array
+        (
+            [BSSID] => B8:26:D4:0A:6A:42
+            [Channel] => 1
+            [ESSID] => RioTel-VILLAFANE
+            [Encryption] => WPA2
+            [Signal] => -74
+        )
+
+)
+
+INFO - 2024-10-03 23:12:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-03 23:12:43 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Network::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-10-03 23:12:43 --> Excepción capturada al intentar enviar la red a la Raspberry Pi: Attempt to read property "encryption" on array
+INFO - 2024-10-03 23:12:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-03 23:12:43 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Network::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-03 23:12:43 --> Solicitud realizada a la API.
+INFO - 2024-10-03 23:12:43 --> Datos recibidos: Array
+(
+    [0] => Array
+        (
+            [BSSID] => E8:AD:A6:0B:08:06
+            [Channel] => 11
+            [ESSID] => Zeballos -2.4GHz
+            [Encryption] => WPA2
+            [Signal] => -63
+        )
+
+    [1] => Array
+        (
+            [BSSID] => 48:4B:D4:3E:B5:E0
+            [Channel] => 1
+            [ESSID] => Personal-5DC
+            [Encryption] => WPA2
+            [Signal] => -71
+        )
+
+    [2] => Array
+        (
+            [BSSID] => 4A:4B:D4:3E:B5:E4
+            [Channel] => 1
+            [ESSID] => Personal Wifi Zone
+            [Encryption] => OPN
+            [Signal] => -71
+        )
+
+    [3] => Array
+        (
+            [BSSID] => B8:26:D4:0A:95:C2
+            [Channel] => 6
+            [ESSID] => RioTel_CUAGLIA_597
+            [Encryption] => WPA2
+            [Signal] => -56
+        )
+
+    [4] => Array
+        (
+            [BSSID] => 78:45:61:DA:B9:C0
+            [Channel] => 6
+            [ESSID] => Fibertel Comba 2.4GHz
+            [Encryption] => WPA2
+            [Signal] => -32
+        )
+
+    [5] => Array
+        (
+            [BSSID] => EA:AD:A6:0B:09:0A
+            [Channel] => 11
+            [ESSID] => Personal Wifi Zone
+            [Encryption] => OPN
+            [Signal] => -62
+        )
+
+    [6] => Array
+        (
+            [BSSID] => B8:26:D4:08:47:B2
+            [Channel] => 11
+            [ESSID] => RioTel_MARTIN_10348
+            [Encryption] => WPA2
+            [Signal] => -68
+        )
+
+    [7] => Array
+        (
+            [BSSID] => 46:AD:B1:2E:6F:91
+            [Channel] => 1
+            [ESSID] => 
+            [Encryption] => 
+            [Signal] => -1
+        )
+
+    [8] => Array
+        (
+            [BSSID] => B8:26:D4:0A:97:82
+            [Channel] => 11
+            [ESSID] => RioTel_BERNARDI_599
+            [Encryption] => WPA2
+            [Signal] => -80
+        )
+
+    [9] => Array
+        (
+            [BSSID] => B8:26:D4:08:54:B2
+            [Channel] => 11
+            [ESSID] => RioTel_VEGA
+            [Encryption] => WPA2
+            [Signal] => -78
+        )
+
+    [10] => Array
+        (
+            [BSSID] => B8:26:D4:0A:6A:42
+            [Channel] => 1
+            [ESSID] => RioTel-VILLAFANE
+            [Encryption] => WPA2
+            [Signal] => -74
+        )
+
+)
+
+INFO - 2024-10-03 23:49:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-03 23:49:58 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Network::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-10-03 23:49:59 --> Excepción capturada al intentar conectarse a la API: 7 : Failed to connect to 192.168.0.162 port 5000 after 1151 ms: Couldn't connect to server

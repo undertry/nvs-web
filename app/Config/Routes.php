@@ -52,9 +52,9 @@ $routes->get('history-animation', 'secondary\profile\History::animation');
 
 $routes->get('network', 'secondary\form\Network::index');
 $routes->post('select-network', 'secondary\form\Network::selectNetwork');
+$routes->get('vulnerabilities', 'secondary\form\Network::showVulnerabilities');
+$routes->get('vulnerabilities/details/(:segment)', 'secondary\form\Network::getVulnerabilityDetails/$1');
 
 $routes->get('network-animation', 'secondary\form\Network::animation');
 
 $routes->post('history/deleteScan/(:num)', 'secondary\profile\History::deleteScan/$1');
-
-
