@@ -54,6 +54,7 @@ $routes->get('network', 'secondary\form\Network::index');
 $routes->post('select-network', 'secondary\form\Network::selectNetwork');
 $routes->get('vulnerabilities', 'secondary\form\Network::showVulnerabilities');
 $routes->get('vulnerabilities/details/(:segment)', 'secondary\form\Network::getVulnerabilityDetails/$1');
+$routes->get('nmap-results', 'secondary\form\Network::nmapResults');
 
 $routes->get('network-animation', 'secondary\form\Network::animation');
 
