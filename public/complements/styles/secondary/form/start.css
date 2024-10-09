@@ -95,23 +95,11 @@
     border          : 1px solid #c3e6cb;
 }
 
-#particles-js {
-    position      : absolute;
-    width         : 115%;
-    z-index       : 1;
-    /* Detrás del contenido */
-    top           : 0;
-    left          : 0;
-    background    : var(--color-dark);
-    pointer-events: none;
-    /* El mismo color de fondo de tu .home */
-}
-
 
 body {
     min-height      : 100vh;
     width           : 100%;
-    background-color: var(--color-black);
+    background-color: var(--color-dark);
     display         : flex;
     align-items     : center;
     justify-content : center;
@@ -121,37 +109,108 @@ body {
 
 .box {
     position        : relative;
-    width           : 380px;
+    width           : 900px;
+    /* Aumentamos el ancho para acomodar la imagen */
     height          : 550px;
     background-color: var(--color-black);
+    border          : 1px solid var(--color-grey);
     border-radius   : 10px;
     overflow        : hidden;
 }
 
-
-
-@keyframes animacion {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
+.box-content {
+    display: flex;
+    width  : 100%;
+    height : 100%;
 }
+
+.image-container {
+    width           : 49%;
+    background-color: var(--color-black);
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+    position        : relative;
+
+    /* Para posicionar elementos dentro del contenedor */
+}
+
+.icon-top-left {
+    position : absolute;
+    top      : 20px;
+    /* Ajusta la distancia desde la parte superior */
+    left     : 30px;
+    /* Ajusta la distancia desde la parte izquierda */
+    font-size: 2.5em;
+    z-index  : 10;
+    /* Asegura que esté por encima de la imagen */
+}
+
+.image-container img {
+    padding      : 10px;
+    width        : 100%;
+    height       : 100%;
+    object-fit   : cover;
+    border-radius: 20px;
+}
+
+.back-to-website {
+    position        : absolute;
+    top             : 30px;
+    right           : 20px;
+    font-size       : 1.2em;
+    color           : var(--color-light-grey);
+    z-index         : 10;
+    font-family     : "neue";
+    background-color: var(--color-semiblack);
+    border-radius   : 10px;
+    display         : inline-block;
+    padding         : 1px 10px;
+}
+
+.back-to-website a {
+    text-decoration: none;
+    color          : var(--color-light-grey);
+    transition     : color 0.5s;
+}
+
+.back-to-website a:hover {
+    color: var(--color-main);
+}
+
+.security-message {
+    position  : absolute;
+    bottom    : 30px;
+    /* Distancia desde el fondo de la imagen */
+    left      : 50%;
+    /* Centrar horizontalmente */
+    transform : translateX(-50%);
+    /* Ajustar el centro */
+    font-size : 1.5em;
+    color     : var(--color-light-grey);
+    text-align: center;
+    z-index   : 10;
+    width     : 13em;
+    /* Asegurarse de que esté por encima de la imagen */
+}
+
+.security-message i {
+    margin-top: 25px;
+    font-size : 0.8em;
+}
+
 
 .form {
-    position       : absolute;
-    inset          : 2px;
-    background     : var(--color-black);
-    border         : 1px solid var(--color-grey);
-    border-radius  : 10px;
-    padding        : 30px;
-    display        : flex;
-    justify-content: space-evenly;
-    flex-direction : column;
-    z-index        : 10;
+    width           : 51%;
+    /* Tamaño del formulario */
+    padding         : 30px;
+    display         : flex;
+    justify-content : space-evenly;
+    flex-direction  : column;
+    background-color: var(--color-black);
+    border-radius   : 0 10px 10px 0;
 }
+
 
 h2 {
     font-size     : 3em;
@@ -163,9 +222,18 @@ h2 {
     text-align    : center;
 }
 
+.intro {
+    font-size  : 1.5em;
+    font-weight: lighter;
+    color      : var(--color-light-grey);
+    font-family: "neue";
+    text-align : center;
+}
+
 a {
     text-decoration: none;
-    color          : var(--color-main);
+    color          : var(--color-secondary);
+    font-size      : 0.9em;
 }
 
 .form-inputs {

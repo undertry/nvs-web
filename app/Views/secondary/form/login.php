@@ -15,29 +15,51 @@
         <div class="message success"><?= session()->getFlashdata('success'); ?></div>
     <?php endif; ?>
     <!-- Formulario de Inicio de Sesion -->
-    <div id="particles-js"></div> <!-- Contenedor de partículas -->
+
     <div class="box">
-        <form method="post" action="<?= base_url('login'); ?>" class="form">
-            <h2><a href="<?= base_url("home-animation"); ?>"><i class="fa-solid fa-fingerprint"></i></a></h2>
-            <div class="form-inputs">
-                <div class="form-label">
-                    <input name="email" type="email" id="email" placeholder="Email" required>
+        <div class="box-content">
+            <div class="image-container">
+                <h2 class="icon-top-left">
+                    <a href="<?= base_url("home-animation"); ?>">
+                        <i class="fa-solid fa-fingerprint"></i>
+                    </a>
+                </h2>
+
+                <div class="back-to-website">
+                    <a href="<?= base_url("home-animation"); ?>">Back to website →</a>
                 </div>
-                <div class="form-label">
-                    <input name="password" type="password" id="password" placeholder="Password" required>
-                    <div class="password-toggle">
-                        <span toggle="#password" class="field-icon toggle-password"><i
-                                class="fa-solid fa-eye-slash"></i></span>
+                <img src="<?php echo base_url("complements/styles/images/blocks.jpg"); ?>" alt="Imagen de Login">
+                <div class="security-message">
+                    Stay safe online. Your security is our priority!
+                    <br>
+                    <i class="fa-solid fa-users"></i>
+                </div>
+            </div>
+            <form method="post" action="<?= base_url('login'); ?>" class="form">
+                <h3 class="intro">Welcome Back!</h3>
+                <div class="form-inputs">
+                    <div class="form-label">
+                        <input name="email" type="email" id="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-label">
+                        <input name="password" type="password" id="password" placeholder="Password" required>
+                        <div class="password-toggle">
+                            <span toggle="#password" class="field-icon toggle-password">
+                                <i class="fa-solid fa-eye-slash"></i>
+                            </span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="links">
-                <a href="<?= base_url('signup-animation'); ?>">Sign up</a>
-                <a href="<?= base_url('forgot_password'); ?>">Forgot password?</a>
-            </div>
-            <input type="submit" value="Enter">
-        </form>
+                <div class="links">
+                    <a href="<?= base_url('signup-animation'); ?>">Sign up</a>
+                    <a href="<?= base_url('forgot_password'); ?>">Forgot password?</a>
+                </div>
+                <input type="submit" value="Enter">
+            </form>
+        </div>
     </div>
+
+
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.0.0/tsparticles.bundle.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
