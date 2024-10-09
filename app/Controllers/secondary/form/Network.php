@@ -117,11 +117,13 @@ class Network extends BaseController
            log_message('error', 'Excepción capturada al intentar conectarse a la API: ' . $e->getMessage());
            $nmap_vulnerabilities = [];
        }
-
-       // Pasar los datos a las vistas
-       return view('tertiary/network/nmap_results', [
-           'nmap_ports_services' => $nmap_ports_services,
-           'nmap_vulnerabilities' => $nmap_vulnerabilities
-       ]);
+       var_dump($nmap_ports_services);
+       echo "<br>";
+       var_dump($nmap_vulnerabilities);
+    //    // Pasar los datos a las vistas
+    //    return view('tertiary/network/nmap_results', [
+    //        'nmap_ports_services' => $nmap_ports_services,
+    //        'nmap_vulnerabilities' => $nmap_vulnerabilities
+    //    ]);
    }
 }
