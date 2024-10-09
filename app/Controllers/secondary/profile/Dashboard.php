@@ -79,7 +79,7 @@ class Dashboard extends BaseController
                 $this->session->setFlashdata('success', 'Password changed successfully.');
                 return redirect()->to('dashboard');
             } else {
-                $this->session->setFlashdata('error', 'Check the form data.');
+                $this->session->setFlashdata('error', 'Invalid current password.');
                 return redirect()->to('change_password');
             }
         }
