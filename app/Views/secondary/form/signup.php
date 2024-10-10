@@ -2,7 +2,7 @@
 <title>Sign Up</title>
 </head>
 <!-- Implementacion de Aviso de Mayuscula -->
-<div id="caps-lock-warning-password" class="caps-lock-warning">
+<div id="caps-lock-warning-password" class="caps-lock-warning signup">
     <i class="fas fa-lock"></i> Caps Lock is on
 </div>
 

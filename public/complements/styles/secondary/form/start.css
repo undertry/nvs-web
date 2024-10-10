@@ -50,20 +50,32 @@
 .caps-lock-warning {
     display         : none;
     position        : absolute;
-    top             : 0;
     left            : 50%;
     transform       : translateX(-50%);
-    margin-top      : 10px;
     padding         : 10px;
-    background-color: #ffc107;
-    color           : #000;
+    background-color: var(--color-secondary);
+    color           : var(--color-black);
     text-align      : center;
     font-size       : 14px;
-    border          : 1px solid #ffa000;
+    border          : 1px solid var(--color-light-grey);
     border-radius   : 5px;
     z-index         : 1000;
+    user-select     : none;
     /* Asegura que esté por encima del formulario */
 }
+
+/* Ajuste para el formulario de login */
+.caps-lock-warning.login {
+    top: 160px;
+    /* Top ajustado para el login */
+}
+
+/* Ajuste para el formulario de registro */
+.caps-lock-warning.signup {
+    top: 130px;
+    /* Top ajustado para el registro */
+}
+
 
 .caps-lock-warning.active {
     display: block;
@@ -249,6 +261,7 @@ h2 {
     color      : var(--color-light-grey);
     font-family: "neue";
     text-align : center;
+    user-select: none;
 }
 
 p {
@@ -305,6 +318,7 @@ a {
     font-size       : 1.2em;
     font-weight     : lighter;
     transition      : background-color 0.5s;
+
 }
 
 .form-label input:focus {
