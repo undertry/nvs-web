@@ -14,7 +14,8 @@
 
 #particles-js {
   position      : absolute;
-  width         : 110%;
+  width         : 100%;
+  height        : 110vh;
   z-index       : 1;
   /* Detrás del contenido */
   top           : 0;
