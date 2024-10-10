@@ -13,5 +13,7 @@ class NetworkModel extends Model
     public function networkinsert($selnet)
     {
         $this->insert($selnet);
+        return $this->insertID(); // Retorna la id de la inserción
+
     }
 }

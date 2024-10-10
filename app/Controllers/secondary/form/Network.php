@@ -16,7 +16,7 @@ class Network extends BaseController
 
        try {
            // Solicitar los resultados del escaneo de redes WiFi a la API
-           $response = $client->get('http://192.168.0.162:5000/scan');
+           $response = $client->get('http://10.81.11.135:5000/scan');
            log_message('info', 'Solicitud realizada a la API.');
 
            if ($response->getStatusCode() == 200) {
@@ -51,7 +51,7 @@ class Network extends BaseController
        // Enviar la red seleccionada a la Raspberry Pi
        $client = \Config\Services::curlrequest();
        try {
-           $response = $client->post('http://192.168.0.162:5000/save-network', [
+           $response = $client->post('http://10.81.11.135:5000/save-network', [
                'json' => $selectedNetwork
            ]);
 
@@ -67,8 +67,48 @@ class Network extends BaseController
                ];
                $networkmodel->networkinsert($selnet);
 
-               log_message('info', 'Red seleccionada enviada a la Raspberry Pi.');
-               return redirect()->back()->with('success', 'Red seleccionada correctamente.');
+               
+               // Obtener los datos de puertos, IP, MAC, servicios, OS
+       try {
+        $response = $client->get('http://192.168.0.162:5000/nmap/ports-services');
+        log_message('info', 'Solicitud realizada a la API para puertos y servicios.');
+
+        if ($response->getStatusCode() == 200) {
+            $nmap_ports_services = json_decode($response->getBody(), true);
+            log_message('info', 'Datos de puertos y servicios recibidos: ' . print_r($nmap_ports_services, true));
+        } else {
+            log_message('error', 'Error en la respuesta de la API: ' . $response->getStatusCode());
+            $nmap_ports_services = [];
+        }
+    } catch (\Exception $e) {
+        log_message('error', 'Excepción capturada al intentar conectarse a la API: ' . $e->getMessage());
+        $nmap_ports_services = [];
+    }
+
+    // Obtener las vulnerabilidades
+    try {
+        $response = $client->get('http://192.168.0.162:5000/nmap/vulnerabilities');
+        log_message('info', 'Solicitud realizada a la API para vulnerabilidades.');
+
+        if ($response->getStatusCode() == 200) {
+            $nmap_vulnerabilities = json_decode($response->getBody(), true);
+            log_message('info', 'Datos de vulnerabilidades recibidos: ' . print_r($nmap_vulnerabilities, true));
+        } else {
+            log_message('error', 'Error en la respuesta de la API: ' . $response->getStatusCode());
+            $nmap_vulnerabilities = [];
+        }
+    } catch (\Exception $e) {
+        log_message('error', 'Excepción capturada al intentar conectarse a la API: ' . $e->getMessage());
+        $nmap_vulnerabilities = [];
+    }
+    var_dump($nmap_ports_services);
+    echo "<br>";
+    var_dump($nmap_vulnerabilities);
+     // Pasar los datos a las vistas
+    //  return view('tertiary/network/nmap_results', [
+    //      'nmap_ports_services' => $nmap_ports_services,
+    //      'nmap_vulnerabilities' => $nmap_vulnerabilities
+    //  ]);
            } else {
                log_message('error', 'Error al enviar la red seleccionada a la Raspberry Pi.');
                return redirect()->back()->with('error', 'Error al seleccionar la red.');
@@ -80,50 +120,50 @@ class Network extends BaseController
    }
 
    // Nueva función para manejar los resultados de Nmap
-   public function nmapResults()
-   {
-       $client = \Config\Services::curlrequest();
+//    public function nmapResults()
+//    {
+//        $client = \Config\Services::curlrequest();
 
-       // Obtener los datos de puertos, IP, MAC, servicios, OS
-       try {
-           $response = $client->get('http://192.168.0.162:5000/nmap/ports-services');
-           log_message('info', 'Solicitud realizada a la API para puertos y servicios.');
+//        // Obtener los datos de puertos, IP, MAC, servicios, OS
+//        try {
+//            $response = $client->get('http://192.168.0.162:5000/nmap/ports-services');
+//            log_message('info', 'Solicitud realizada a la API para puertos y servicios.');
 
-           if ($response->getStatusCode() == 200) {
-               $nmap_ports_services = json_decode($response->getBody(), true);
-               log_message('info', 'Datos de puertos y servicios recibidos: ' . print_r($nmap_ports_services, true));
-           } else {
-               log_message('error', 'Error en la respuesta de la API: ' . $response->getStatusCode());
-               $nmap_ports_services = [];
-           }
-       } catch (\Exception $e) {
-           log_message('error', 'Excepción capturada al intentar conectarse a la API: ' . $e->getMessage());
-           $nmap_ports_services = [];
-       }
+//            if ($response->getStatusCode() == 200) {
+//                $nmap_ports_services = json_decode($response->getBody(), true);
+//                log_message('info', 'Datos de puertos y servicios recibidos: ' . print_r($nmap_ports_services, true));
+//            } else {
+//                log_message('error', 'Error en la respuesta de la API: ' . $response->getStatusCode());
+//                $nmap_ports_services = [];
+//            }
+//        } catch (\Exception $e) {
+//            log_message('error', 'Excepción capturada al intentar conectarse a la API: ' . $e->getMessage());
+//            $nmap_ports_services = [];
+//        }
 
-       // Obtener las vulnerabilidades
-       try {
-           $response = $client->get('http://192.168.0.162:5000/nmap/vulnerabilities');
-           log_message('info', 'Solicitud realizada a la API para vulnerabilidades.');
+//        // Obtener las vulnerabilidades
+//        try {
+//            $response = $client->get('http://192.168.0.162:5000/nmap/vulnerabilities');
+//            log_message('info', 'Solicitud realizada a la API para vulnerabilidades.');
 
-           if ($response->getStatusCode() == 200) {
-               $nmap_vulnerabilities = json_decode($response->getBody(), true);
-               log_message('info', 'Datos de vulnerabilidades recibidos: ' . print_r($nmap_vulnerabilities, true));
-           } else {
-               log_message('error', 'Error en la respuesta de la API: ' . $response->getStatusCode());
-               $nmap_vulnerabilities = [];
-           }
-       } catch (\Exception $e) {
-           log_message('error', 'Excepción capturada al intentar conectarse a la API: ' . $e->getMessage());
-           $nmap_vulnerabilities = [];
-       }
-       var_dump($nmap_ports_services);
-       echo "<br>";
-       var_dump($nmap_vulnerabilities);
-    //    // Pasar los datos a las vistas
-    //    return view('tertiary/network/nmap_results', [
-    //        'nmap_ports_services' => $nmap_ports_services,
-    //        'nmap_vulnerabilities' => $nmap_vulnerabilities
-    //    ]);
-   }
+//            if ($response->getStatusCode() == 200) {
+//                $nmap_vulnerabilities = json_decode($response->getBody(), true);
+//                log_message('info', 'Datos de vulnerabilidades recibidos: ' . print_r($nmap_vulnerabilities, true));
+//            } else {
+//                log_message('error', 'Error en la respuesta de la API: ' . $response->getStatusCode());
+//                $nmap_vulnerabilities = [];
+//            }
+//        } catch (\Exception $e) {
+//            log_message('error', 'Excepción capturada al intentar conectarse a la API: ' . $e->getMessage());
+//            $nmap_vulnerabilities = [];
+//        }
+//        var_dump($nmap_ports_services);
+//        echo "<br>";
+//        var_dump($nmap_vulnerabilities);
+//         // Pasar los datos a las vistas
+//         return view('tertiary/network/nmap_results', [
+//             'nmap_ports_services' => $nmap_ports_services,
+//             'nmap_vulnerabilities' => $nmap_vulnerabilities
+//         ]);
+//    }
 }
