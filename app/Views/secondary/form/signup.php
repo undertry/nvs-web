@@ -9,7 +9,7 @@
 <body>
     <!-- Mensaje de sesiones -->
     <?php if (session()->getFlashdata('error')) : ?>
-        <div class="message error"><?= session()->getFlashdata('error'); ?></div>
+        <div class="message error signup"><?= session()->getFlashdata('error'); ?></div>
     <?php endif; ?>
     <?php if (session()->getFlashdata('success')) : ?>
         <div class="message success"><?= session()->getFlashdata('success'); ?></div>
@@ -49,6 +49,15 @@
                             <span toggle="#password" class="field-icon toggle-password"><i
                                     class="fa-solid fa-eye-slash"></i></span>
                         </div>
+                        <!-- Popup de validación de contraseña -->
+                        <div id="password-requirements" class="password-popup">
+                            <p>Your password must contain:</p>
+                            <ul>
+                                <li id="length">At least 8 characters</li>
+                                <li id="uppercase">1 uppercase letter</li>
+                                <li id="special">1 special character (!@#$&*)</li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="form-label">
                         <input name="confirm_password" required pattern=".{8,}" type="password" id="confirm_password"
@@ -73,6 +82,41 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        document.getElementById('password').addEventListener('input', function() {
+            const password = this.value;
+            const lengthRequirement = document.getElementById('length');
+            const uppercaseRequirement = document.getElementById('uppercase');
+            const specialRequirement = document.getElementById('special');
+
+            // Verificar longitud mínima
+            if (password.length >= 8) {
+                lengthRequirement.classList.add('valid');
+                lengthRequirement.classList.remove('invalid');
+            } else {
+                lengthRequirement.classList.add('invalid');
+                lengthRequirement.classList.remove('valid');
+            }
+
+            // Verificar una letra mayúscula
+            if (/[A-Z]/.test(password)) {
+                uppercaseRequirement.classList.add('valid');
+                uppercaseRequirement.classList.remove('invalid');
+            } else {
+                uppercaseRequirement.classList.add('invalid');
+                uppercaseRequirement.classList.remove('valid');
+            }
+
+            // Verificar un carácter especial
+            if (/[!@#$&*]/.test(password)) {
+                specialRequirement.classList.add('valid');
+                specialRequirement.classList.remove('invalid');
+            } else {
+                specialRequirement.classList.add('invalid');
+                specialRequirement.classList.remove('valid');
+            }
+        });
+    </script>
     <script>
         particlesJS('particles-js', {
             particles: {

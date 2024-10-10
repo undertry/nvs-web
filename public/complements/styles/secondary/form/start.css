@@ -38,6 +38,11 @@
     src        : url("../../fonts/Ahsing/Ahsing-Regular.otf") format("truetype");
 }
 
+@font-face {
+    font-family: "matter";
+    src        : url("../../fonts/matter-font/Matter-Regular.ttf") format("truetype");
+}
+
 
 * {
     padding    : 0;
@@ -96,9 +101,17 @@
 }
 
 .error {
-    background-color: #f8d7da;
-    color           : #721c24;
-    border          : 1px solid #f5c6cb;
+    background-color: var(--color-black);
+    color           : var(--color-secondary);
+    border          : 1px solid var(--color-grey);
+}
+
+.error.signup {
+    top: 100px;
+}
+
+.error.login {
+    top: 155px;
 }
 
 .success {
@@ -113,6 +126,57 @@
     height  : 100%;
     z-index : -1;
 }
+
+/* Estilos generales */
+.password-popup {
+    display         : none;
+    position        : absolute;
+    background-color: var(--color-black);
+    color           : var(--color-light-grey);
+    padding         : 10px;
+    border          : 1px solid var(--color-grey);
+    border-radius   : 5px;
+    z-index         : 1000;
+    font-size       : 12px;
+    width           : 250px;
+    top             : 100%;
+    /* Justo debajo del campo de la contraseña */
+    left            : 0;
+    margin-top      : 5px;
+}
+
+.password-popup p {
+    margin         : 0 0 5px;
+    font-weight    : lighter;
+    color          : var(--color-light-grey);
+    text-decoration: underline;
+    font-family    : "neue";
+    font-size      : 14px;
+}
+
+.password-popup ul {
+    list-style  : none;
+    padding-left: 10px;
+    margin      : 0;
+}
+
+.password-popup ul li {
+    margin: 5px 0;
+}
+
+.password-popup ul li.invalid {
+    color: var(--color-secondary);
+}
+
+.password-popup ul li.valid {
+    color: rgb(26, 174, 26);
+}
+
+/* Mostrar el popup cuando el campo de contraseña esté activo */
+input:focus+.password-toggle+.password-popup {
+    display: block;
+}
+
 
 
 body {

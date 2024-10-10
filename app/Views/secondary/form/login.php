@@ -9,7 +9,7 @@
 <body>
     <!-- Mensaje de sesiones -->
     <?php if (session()->getFlashdata('error')) : ?>
-        <div class="message error"><?= session()->getFlashdata('error'); ?></div>
+        <div class="message error login"><?= session()->getFlashdata('error'); ?></div>
     <?php endif; ?>
     <?php if (session()->getFlashdata('success')) : ?>
         <div class="message success"><?= session()->getFlashdata('success'); ?></div>
