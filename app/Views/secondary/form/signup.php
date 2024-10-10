@@ -16,43 +16,62 @@
     <?php endif; ?>
     <!-- Formulario de Registro -->
     <div id="particles-js"></div> <!-- Contenedor de partículas -->
-    <div class="box">
-        <form id="registerForm" method="post" action="<?= base_url('signup'); ?>" class="form">
-            <h2><a href="<?= base_url("home-animation"); ?>"><i class="fa-solid fa-fingerprint"></i></a></h2>
-            <div class="form-inputs">
-                <div class="form-label">
-                    <input name="name" required type="text" id="name" placeholder="Your name"
-                        value="<?= old('name'); ?>">
+    <div class="box-signup">
+        <div class="box-content">
+            <div class="image-container">
+                <h2 class="icon-top-left">
+                    <a>
+                        <i class="fa-solid fa-fingerprint"></i>
+                    </a>
+                </h2>
+
+                <div class="back-to-website">
+                    <a href="<?= base_url("home-animation"); ?>"><i class="fa-solid fa-arrow-left"></i></a>
                 </div>
-                <div class="form-label">
-                    <input name="email" required type="email" id="email" placeholder="Email"
-                        value="<?= old('email'); ?>">
-                </div>
-                <div class="form-label">
-                    <input name="password" required pattern=".{8,}" type="password" id="password"
-                        placeholder="Password">
-                    <div class="password-toggle">
-                        <span toggle="#password" class="field-icon toggle-password"><i
-                                class="fa-solid fa-eye-slash"></i></span>
+                <img src="<?php echo base_url("complements/styles/images/blocks.jpg"); ?>" alt="Imagen de Login">
+            </div>
+            <form id="registerForm" method="post" action="<?= base_url('signup'); ?>" class="form">
+                <h3 class="intro">Create an account</h3>
+                <p>Already have an account? <a href="<?= base_url('login-animation'); ?>"> Log In</a></p>
+                <div class="form-inputs">
+                    <div class="form-label">
+                        <input name="name" required type="text" id="name" placeholder="Your name"
+                            value="<?= old('name'); ?>">
+                    </div>
+                    <div class="form-label">
+                        <input name="email" required type="email" id="email" placeholder="Email"
+                            value="<?= old('email'); ?>">
+                    </div>
+                    <div class="form-label">
+                        <input name="password" required pattern=".{8,}" type="password" id="password"
+                            placeholder="Password">
+                        <div class="password-toggle">
+                            <span toggle="#password" class="field-icon toggle-password"><i
+                                    class="fa-solid fa-eye-slash"></i></span>
+                        </div>
+                    </div>
+                    <div class="form-label">
+                        <input name="confirm_password" required pattern=".{8,}" type="password" id="confirm_password"
+                            placeholder="Confirm Password">
+                        <div class="password-toggle">
+                            <span toggle="#confirm_password" class="field-icon toggle-password"><i
+                                    class="fa-solid fa-eye-slash"></i></span>
+                        </div>
+                        <!-- Implementacion de Aviso de Mayuscula -->
+                        <div id="caps-lock-warning-confirm-password" class="caps-lock-warning">Caps Lock is on</div>
                     </div>
                 </div>
+                <!-- Checkbox de aceptación de términos y condiciones -->
                 <div class="form-label">
-                    <input name="confirm_password" required pattern=".{8,}" type="password" id="confirm_password"
-                        placeholder="Confirm Password">
-                    <div class="password-toggle">
-                        <span toggle="#confirm_password" class="field-icon toggle-password"><i
-                                class="fa-solid fa-eye-slash"></i></span>
-                    </div>
-                    <!-- Implementacion de Aviso de Mayuscula -->
-                    <div id="caps-lock-warning-confirm-password" class="caps-lock-warning">Caps Lock is on</div>
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I accept the <a href="<?= base_url('terms-and-conditions'); ?>" target="_blank">terms and conditions</a></label>
                 </div>
-            </div>
-            <div class="links">
-                <a href="<?= base_url('login-animation'); ?>">Already have an account?</a>
-            </div>
-            <input type="submit" value="Continue">
-        </form>
+                <input type="submit" value="Continue">
+            </form>
+        </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
         particlesJS('particles-js', {

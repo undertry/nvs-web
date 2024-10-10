@@ -15,28 +15,24 @@
         <div class="message success"><?= session()->getFlashdata('success'); ?></div>
     <?php endif; ?>
     <!-- Formulario de Inicio de Sesion -->
-
+    <div id="particles-js"></div>
     <div class="box">
         <div class="box-content">
             <div class="image-container">
                 <h2 class="icon-top-left">
-                    <a href="<?= base_url("home-animation"); ?>">
+                    <a>
                         <i class="fa-solid fa-fingerprint"></i>
                     </a>
                 </h2>
 
                 <div class="back-to-website">
-                    <a href="<?= base_url("home-animation"); ?>">Back to website →</a>
+                    <a href="<?= base_url("home-animation"); ?>"><i class="fa-solid fa-arrow-left"></i></a>
                 </div>
                 <img src="<?php echo base_url("complements/styles/images/blocks.jpg"); ?>" alt="Imagen de Login">
-                <div class="security-message">
-                    Stay safe online. Your security is our priority!
-                    <br>
-                    <i class="fa-solid fa-users"></i>
-                </div>
             </div>
             <form method="post" action="<?= base_url('login'); ?>" class="form">
                 <h3 class="intro">Welcome Back!</h3>
+                <p>New here? <a href="<?= base_url('signup-animation'); ?>"> Create your account</a></p>
                 <div class="form-inputs">
                     <div class="form-label">
                         <input name="email" type="email" id="email" placeholder="Email" required>
@@ -51,7 +47,7 @@
                     </div>
                 </div>
                 <div class="links">
-                    <a href="<?= base_url('signup-animation'); ?>">Sign up</a>
+
                     <a href="<?= base_url('forgot_password'); ?>">Forgot password?</a>
                 </div>
                 <input type="submit" value="Enter">
@@ -59,6 +55,7 @@
         </div>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.0.0/tsparticles.bundle.min.js"></script>
 
