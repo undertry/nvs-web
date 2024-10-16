@@ -23,6 +23,10 @@
     margin-top     : 8px;
 }
 
+.light-mode .nav-item .logo i {
+    color: var(--color-tertiary);
+}
+
 
 /* Center navigation items (centrado) */
 .nav-list {
@@ -130,8 +134,8 @@
 }
 
 .light-mode .nav-list .nav-item .signup {
-    background-color: var(--color-secondary);
-    color           : var(--color-black);
+    background-color: var(--color-tertiary);
+    color           : var(--color-white);
 }
 
 .nav-list .nav-item .signup:hover {
@@ -140,8 +144,8 @@
 }
 
 .light-mode .nav-list .nav-item .signup:hover {
-    background-color: var(--color-main);
-    color           : var(--color-black);
+    background-color: var(--color-quaternary);
+    color           : var(--color-white);
 }
 
 .nav-list .nav-item .login {

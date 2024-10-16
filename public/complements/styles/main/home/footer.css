@@ -46,6 +46,10 @@
     color      : var(--color-secondary);
 }
 
+.light-mode .logo-section .logo {
+    color: var(--color-quaternary);
+}
+
 .links-section {
     display: flex;
 }
@@ -90,6 +94,10 @@
 
 .column ul li a:hover {
     color: var(--color-secondary);
+}
+
+.light-mode .column ul li a:hover {
+    color: var(--color-quaternary);
 }
 
 

@@ -95,9 +95,13 @@
   display   : inline-block;
   animation : slideIn 0.5s forwards;
   opacity   : 0;
-  color     : var(--color-main);
+  color     : var(--color-secondary);
   transform : translateY(20%);
   transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.light-mode .word-slide {
+  color: var(--color-quaternary);
 }
 
 .slide-in {
@@ -125,5 +129,11 @@
   /* no permite el subrayado */
   user-select   : none;
 }
+
+
+.light-mode .intro-text h1 {
+  color: var(--color-tertiary);
+}
+
 
 /* home sections ends here */

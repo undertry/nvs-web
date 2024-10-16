@@ -7,7 +7,7 @@
 }
 
 .light-mode .about-comments {
-    background: radial-gradient(circle, rgba(198, 21, 21, 0.245) 0%, #f3f2f2 35%);
+    background: radial-gradient(circle, rgba(26, 85, 234, 0.245) 0%, #f3f2f2 35%);
 }
 
 .about-comments h2 {
@@ -69,6 +69,10 @@
     color     : var(--color-secondary);
 }
 
+.light-mode .comment-card h3 {
+    color: var(--color-quaternary);
+}
+
 .comment-card .occupation {
     font-size : 0.9rem;
     color     : gray;
@@ -90,12 +94,16 @@
 }
 
 .light-mode .comment span {
-    color           : var(--color-secondary);
+    color           : var(--color-quaternary);
     background-color: var(--color-light-grey);
 }
 
 .comment span:hover {
     color: var(--color-main);
+}
+
+.light-mode .comment span:hover {
+    color: var(--color-tertiary);
 }
 
 /* Centrar la tarjeta de Nahuel */

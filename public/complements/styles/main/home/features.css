@@ -68,6 +68,10 @@
     font-weight: lighter;
 }
 
+.light-mode .feature-text h4 {
+    color: var(--color-quaternary);
+}
+
 .feature-text i {
     color        : var(--color-light-grey);
     padding      : 5px 8px;
