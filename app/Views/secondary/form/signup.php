@@ -15,7 +15,7 @@
         <div class="message success"><?= session()->getFlashdata('success'); ?></div>
     <?php endif; ?>
     <!-- Formulario de Registro -->
-    <div id="particles-js"></div> <!-- Contenedor de partículas -->
+
     <div class="box-signup">
         <div class="box-content">
             <div class="image-container">
@@ -28,7 +28,7 @@
                 <div class="back-to-website">
                     <a href="<?= base_url("home-animation"); ?>"><i class="fa-solid fa-arrow-left"></i></a>
                 </div>
-                <img src="<?php echo base_url("complements/styles/images/blocks.jpg"); ?>" alt="Imagen de Login">
+                <div id="particles-js"></div> <!-- Contenedor de partículas -->
             </div>
             <form id="registerForm" method="post" action="<?= base_url('signup'); ?>" class="form">
                 <h3 class="intro">Create an account</h3>
@@ -121,7 +121,7 @@
         particlesJS('particles-js', {
             particles: {
                 number: {
-                    value: 100
+                    value: 200
                 },
                 color: {
                     value: '#ffffff'
@@ -130,7 +130,7 @@
                     type: 'circle'
                 },
                 opacity: {
-                    value: 0.5,
+                    value: 0.1,
                     random: false
                 },
                 size: {
@@ -154,11 +154,11 @@
             interactivity: {
                 events: {
                     onhover: {
-                        enable: true,
+                        enable: false,
                         mode: 'grab'
                     },
                     onclick: {
-                        enable: true,
+                        enable: false,
                         mode: 'push'
                     },
                 }
