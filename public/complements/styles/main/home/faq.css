@@ -66,6 +66,10 @@ h2 i {
     color: var(--color-secondary);
 }
 
+.light-mode .faq-question h3:hover {
+    color: var(--color-quaternary);
+}
+
 .faq-icon {
     color     : var(--color-light-grey);
     font-size : 1.5rem;
@@ -75,6 +79,10 @@ h2 i {
 .faq-item.active .faq-icon {
     transform: rotate(45deg);
     color    : var(--color-secondary);
+}
+
+.light-mode .faq-item.active .faq-icon {
+    color: var(--color-quaternary);
 }
 
 .faq-answer {
@@ -109,12 +117,16 @@ h2 i {
 }
 
 .light-mode .faq-answer p span {
-    color           : var(--color-secondary);
+    color           : var(--color-quaternary);
     background-color: var(--color-light-grey);
 }
 
 .faq-answer p span:hover {
     color: var(--color-main);
+}
+
+.light-mode .faq-answer p span:hover {
+    color: var(--color-tertiary);
 }
 
 /* faq section ends here */
