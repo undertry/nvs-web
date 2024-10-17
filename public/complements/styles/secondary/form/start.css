@@ -121,12 +121,18 @@
 }
 
 #particles-js {
+    position      : absolute;
+    width         : 100%;
+    z-index       : -1;
+    top           : 0;
+    left          : 0;
+    background    : var(--color-dark);
+    pointer-events: none;
+    transition    : background 0.3s ease;
+}
 
-    position     : relative;
-    width        : 80%;
-    height       : 80%;
-    border-radius: 10px;
-
+#sphere-js {
+    user-select: none;
 }
 
 /* Estilos generales */
@@ -308,6 +314,7 @@ body {
     flex-direction  : column;
     background-color: var(--color-black);
     border-radius   : 0 10px 10px 0;
+    z-index         : 100;
 }
 
 

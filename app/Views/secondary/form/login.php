@@ -15,10 +15,13 @@
         <div class="message success"><?= session()->getFlashdata('success'); ?></div>
     <?php endif; ?>
     <!-- Formulario de Inicio de Sesion -->
+    <div id="particles-js"></div>
 
     <div class="box">
         <div class="box-content">
             <div class="image-container">
+                <div id="sphere-js"></div>
+
                 <h2 class="icon-top-left">
                     <a>
                         <i class="fa-solid fa-fingerprint"></i>
@@ -28,7 +31,7 @@
                 <div class="back-to-website">
                     <a href="<?= base_url("home-animation"); ?>"><i class="fa-solid fa-arrow-left"></i></a>
                 </div>
-                <div id="particles-js"></div>
+
             </div>
             <form method="post" action="<?= base_url('login'); ?>" class="form">
                 <h3 class="intro">Welcome Back!</h3>
@@ -56,15 +59,82 @@
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.0.0/tsparticles.bundle.min.js"></script>
-
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.0.0/tsparticles.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        // Configuramos la escena, la cámara y el renderizador
+        let scene = new THREE.Scene();
+        let camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        let renderer = new THREE.WebGLRenderer({
+            alpha: true
+        }); // Hacemos el fondo transparente para combinar con el diseño
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.getElementById('sphere-js').appendChild(renderer.domElement);
+
+        // Configuramos el color de fondo desde CSS
+        renderer.setClearColor(0x000000, 0); // Transparente
+
+        // Cargamos la textura circular para los puntos
+        let loader = new THREE.TextureLoader();
+        let circleTexture = loader.load('https://threejs.org/examples/textures/sprites/disc.png');
+
+        // Creamos una geometría de icosaedro para los nodos y conexiones
+        let geometry = new THREE.IcosahedronGeometry(2, 1);
+        let material = new THREE.PointsMaterial({
+            color: 0xffffff, // Color blanco para los puntos
+            size: 0.1, // Ajusta el tamaño de los puntos
+            map: circleTexture, // Aplica la textura circular cargada
+            alphaTest: 0.5 // Para evitar problemas de transparencia en los bordes
+        });
+
+        // Creamos la geometría de líneas conectando los puntos
+        let wireframeMaterial = new THREE.LineBasicMaterial({
+            color: 0x555555 // Color gris tenue para las conexiones
+        });
+        let wireframe = new THREE.WireframeGeometry(geometry);
+
+        // Creamos los puntos y las conexiones
+        let points = new THREE.Points(geometry, material);
+        let line = new THREE.LineSegments(wireframe, wireframeMaterial);
+
+        // Añadimos ambos a la escena
+        scene.add(points);
+        scene.add(line);
+
+        // Posicionamos la cámara
+        camera.position.z = 10;
+
+        // Rotación automática
+        let autoRotateSpeed = 0.002;
+
+        // Animación
+        function animate() {
+            requestAnimationFrame(animate);
+
+            // Rotación automática
+            points.rotation.y += autoRotateSpeed;
+            line.rotation.y += autoRotateSpeed;
+
+            renderer.render(scene, camera);
+        }
+        animate();
+
+        // Ajuste de la ventana
+        window.addEventListener('resize', () => {
+            let width = window.innerWidth;
+            let height = window.innerHeight;
+            renderer.setSize(width, height);
+            camera.aspect = width / height;
+            camera.updateProjectionMatrix();
+        });
+    </script>
+
     <script>
         particlesJS('particles-js', {
             particles: {
                 number: {
-                    value: 200
+                    value: 120
                 },
                 color: {
                     value: '#ffffff'
@@ -82,7 +152,7 @@
                 },
                 line_linked: {
                     enable: true,
-                    distance: 150,
+                    distance: 0,
                     color: '#ffffff',
                     opacity: 0.4,
                     width: 1
@@ -109,4 +179,5 @@
             retina_detect: true
         });
     </script>
+
     <?= $this->include('modules/form/L-end.php'); ?>
