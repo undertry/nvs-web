@@ -25,11 +25,11 @@ document.addEventListener("DOMContentLoaded", function () {
     if (mode === "light") {
       body.classList.add("light-mode");
       body.classList.remove("dark-mode");
-      modeIcon.classList.replace("fa-moon", "fa-sun"); // Cambia el ícono de luna a sol
+      modeIcon.classList.replace("fa-sun", "fa-moon"); // Cambia el ícono de luna a sol
     } else {
       body.classList.add("dark-mode");
       body.classList.remove("light-mode");
-      modeIcon.classList.replace("fa-sun", "fa-moon"); // Cambia el ícono de sol a luna
+      modeIcon.classList.replace("fa-moon", "fa-sun"); // Cambia el ícono de sol a luna
     }
     updateParticlesColor(mode); // Actualiza el color de las partículas si es necesario
   }

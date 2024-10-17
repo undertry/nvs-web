@@ -131,52 +131,40 @@
     </script>
 
     <script>
-        particlesJS('particles-js', {
+        // Inicializa las partículas
+        particlesJS("particles-js", {
             particles: {
                 number: {
-                    value: 120
+                    value: 100,
                 },
                 color: {
-                    value: '#ffffff'
+                    value: "#565555", // Color inicial, será actualizado dinámicamente
                 },
                 shape: {
-                    type: 'circle'
+                    type: "circle",
                 },
                 opacity: {
-                    value: 0.1,
-                    random: false
+                    value: 0.3,
+                    random: false,
                 },
                 size: {
                     value: 3,
-                    random: true
+                    random: true,
                 },
                 line_linked: {
                     enable: true,
                     distance: 0,
-                    color: '#ffffff',
+                    color: "#ffffff", // Color inicial, será actualizado dinámicamente
                     opacity: 0.4,
-                    width: 1
+                    width: 1,
                 },
                 move: {
                     speed: 1,
                     random: true,
-                    direction: 'none',
-                    out_mode: 'out',
-                }
+                    direction: "none",
+                    out_mode: "out",
+                },
             },
-            interactivity: {
-                events: {
-                    onhover: {
-                        enable: false,
-                        mode: 'grab'
-                    },
-                    onclick: {
-                        enable: false,
-                        mode: 'push'
-                    },
-                }
-            },
-            retina_detect: true
         });
     </script>
 

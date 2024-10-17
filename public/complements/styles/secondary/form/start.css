@@ -1,6 +1,8 @@
 :root {
     --color-main      : #d60b0b;
     --color-secondary : #bb0f0f;
+    --color-tertiary  : #0046FE;
+    --color-quaternary: #3b6ff2;
     --color-black     : #151414;
     --color-semiblack : #202020;
     --color-dark      : #0c0b0b;
@@ -123,6 +125,7 @@
 #particles-js {
     position      : absolute;
     width         : 100%;
+    height        : 110vh;
     z-index       : -1;
     top           : 0;
     left          : 0;
@@ -130,6 +133,11 @@
     pointer-events: none;
     transition    : background 0.3s ease;
 }
+
+.light-mode #particles-js {
+    background: var(--color-white);
+}
+
 
 #sphere-js {
     user-select: none;
@@ -148,7 +156,6 @@
     font-size       : 12px;
     width           : 250px;
     top             : 100%;
-    /* Justo debajo del campo de la contraseña */
     left            : 0;
     margin-top      : 5px;
 }
@@ -209,6 +216,7 @@ body {
     overflow        : hidden;
 }
 
+
 .box-signup {
     position        : relative;
     width           : 900px;
@@ -233,8 +241,10 @@ body {
     align-items     : center;
     justify-content : center;
     position        : relative;
+}
 
-    /* Para posicionar elementos dentro del contenedor */
+.light-mode .image-container {
+    background-color: var(--color-light);
 }
 
 .icon-top-left {
@@ -271,38 +281,30 @@ body {
     padding         : 5px 10px;
 }
 
+.light-mode .back-to-website {
+    background-color: var(--color-light);
+    color           : var(--color-black);
+}
+
 .back-to-website a {
     text-decoration: none;
     color          : var(--color-light-grey);
     transition     : color 0.5s;
 }
 
+.light-mode .back-to-website a {
+    color: var(--color-black);
+}
+
 .back-to-website a:hover {
     color: var(--color-main);
 }
 
-.security-message {
-    position        : absolute;
-    bottom          : 30px;
-    /* Distancia desde el fondo de la imagen */
-    left            : 50%;
-    /* Centrar horizontalmente */
-    transform       : translateX(-50%);
-    /* Ajustar el centro */
-    font-size       : 1.5em;
-    color           : var(--color-light-grey);
-    background-color: #0c0b0b74;
-    border-radius   : 20px;
-    text-align      : center;
-    z-index         : 10;
-    width           : 13em;
-    /* Asegurarse de que esté por encima de la imagen */
+.light-mode .back-to-website a:hover {
+    color: var(--color-tertiary);
 }
 
-.security-message i {
-    margin-top: 25px;
-    font-size : 0.8em;
-}
+
 
 
 .form {
@@ -317,6 +319,9 @@ body {
     z-index         : 100;
 }
 
+.light-mode .form {
+    background-color: var(--color-light);
+}
 
 h2 {
     font-size     : 3em;
@@ -328,6 +333,11 @@ h2 {
     text-align    : center;
 }
 
+
+.light-mode h2 {
+    color: var(--color-tertiary);
+}
+
 .intro {
     font-size  : 1.8em;
     font-weight: lighter;
@@ -335,6 +345,10 @@ h2 {
     font-family: "neue";
     text-align : center;
     user-select: none;
+}
+
+.light-mode .intro {
+    color: var(--color-black);
 }
 
 p {
@@ -354,14 +368,26 @@ p a {
     user-select: none;
 }
 
+.light-mode p a {
+    color: var(--color-quaternary);
+}
+
 p a:hover {
     color: var(--color-main);
+}
+
+.light-mode p a:hover {
+    color: var(--color-tertiary);
 }
 
 a {
     text-decoration: none;
     color          : var(--color-secondary);
     font-size      : 0.9em;
+}
+
+.light-mode a {
+    color: var(--color-quaternary);
 }
 
 .form-inputs {
@@ -391,11 +417,20 @@ a {
     font-size       : 1.2em;
     font-weight     : lighter;
     transition      : background-color 0.5s;
+}
 
+.light-mode .form-label input {
+    background-color: var(--color-light-grey);
+    color           : var(--color-black);
+    border          : 1px solid var(--color-grey);
 }
 
 .form-label input:focus {
     background-color: var(--color-dark);
+}
+
+.light-mode .form-label input:focus {
+    background-color: var(--color-white);
 }
 
 .links {
@@ -418,6 +453,14 @@ a {
     color: var(--color-main);
 }
 
+.light-mode .links a {
+    color: var(--color-semigrey);
+}
+
+.light-mode .links a:first-child:hover {
+    color: var(--color-tertiary);
+}
+
 .links a:nth-child(2) {
     color: var(--color-semigrey);
 }
@@ -425,6 +468,7 @@ a {
 .links a:nth-child(2):hover {
     color: var(--color-main);
 }
+
 
 input[type="submit"] {
     background-color: var(--color-semiblack);
@@ -440,9 +484,20 @@ input[type="submit"] {
     transition      : background-color 0.5s, border 0.5s;
 }
 
+.light-mode input[type="submit"] {
+    background-color: var(--color-light-grey);
+    color           : var(--color-black);
+    border          : 1px solid var(--color-grey);
+}
+
 input[type="submit"]:hover {
     background-color: var(--color-secondary);
     border          : 1px solid var(--color-light-grey);
+}
+
+.light-mode input[type="submit"]:hover {
+    background-color: var(--color-quaternary);
+    border          : 1px solid var(--color-grey);
 }
 
 .form-label {
@@ -458,7 +513,8 @@ input[type="submit"]:hover {
 }
 
 .field-icon {
-    color: #9B9A9A;
+    color     : #9B9A9A;
+    transition: color 0.5s;
     /* Color del icono por defecto */
 }
 
@@ -466,6 +522,11 @@ input[type="submit"]:hover {
 .field-icon:hover {
     color: var(--color-main);
     /* Color del icono al hacer hover */
+}
+
+.light-mode .field-icon:hover {
+    color: var(--color-tertiary);
+    /* Color del icono en modo claro */
 }
 
 .show-password .field-icon {
