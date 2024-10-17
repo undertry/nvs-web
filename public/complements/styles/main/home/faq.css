@@ -6,6 +6,7 @@
     width     : 100%;
     margin    : 0 auto;
     transition: background-color 0.5s;
+    text-align: center;
 }
 
 .light-mode #faq {
@@ -13,19 +14,7 @@
     color           : var(--color-black);
 }
 
-.faq h2 {
-    font-size    : 3em;
-    margin-bottom: 3rem;
-    text-align   : center;
-    font-family  : "neue";
-    font-weight  : lighter;
-    color        : var(--color-light-grey);
-    transition   : color 0.3s ease;
-}
 
-.light-mode .faq h2 {
-    color: var(--color-black);
-}
 
 h2 i {
     color: var(--color-secondary);
@@ -38,6 +27,7 @@ h2 i {
     width         : 50%;
     right         : 50%;
     transform     : translateX(50%);
+    text-align    : left;
 }
 
 .faq-question {

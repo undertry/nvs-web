@@ -1,73 +1,91 @@
   <!-- faq section starts here -->
-  <section class="faq hidden" id="faq">
+
+  <section class="faq" id="faq">
+
       <div class="section-header hidden">
           <h2><i class="fa-solid fa-circle-question"></i></h2>
       </div>
-      <h2>Frequently asked questions</h2>
-      <div class="faq-item hidden">
-          <div class="faq-question">
-              <h3>How do I perform a scan?</h3>
-              <span class="faq-icon">+</span>
-          </div>
-          <div class="faq-answer">
-              <p>To <span>perform a scan</span>, you just need to be logged into our software, go to your profile in the
-                  <span>Network
-                      Scan</span> section, and ensure your <span>Raspberry Pi</span> is properly configured.
-              </p>
+      <div class="text hidden">
+          <h4>Frequently asked questions</h4>
+      </div>
+      <div class="hidden">
+
+
+          <div class="faq-item">
+              <div class="faq-question">
+                  <h3>How do I perform a scan?</h3>
+                  <span class="faq-icon">+</span>
+              </div>
+              <div class="faq-answer">
+                  <p>To <span>perform a scan</span>, you just need to be logged into our software, go to your profile in the
+                      <span>Network
+                          Scan</span> section, and ensure your <span>Raspberry Pi</span> is properly configured.
+                  </p>
+              </div>
           </div>
       </div>
-      <div class="faq-item hidden">
-          <div class="faq-question">
-              <h3>Is it open source?</h3>
-              <span class="faq-icon">+</span>
-          </div>
-          <div class="faq-answer">
-              <p>Yes, our project is <span>open source</span> and community-oriented. If you'd like, you can fork our
-                  repository
-                  and help us improve this <span>great tool</span>.</p>
-          </div>
-      </div>
-      <div class="faq-item hidden">
-          <div class="faq-question">
-              <h3>If I don’t have a Raspberry Pi, can I still use the software?</h3>
-              <span class="faq-icon">+</span>
-          </div>
-          <div class="faq-answer">
-              <p>The software is optimized for use with a <span>Raspberry Pi</span> due to its portability, but there are no
-                  <span>issues</span>
-                  with using it on another device.
-              </p>
+      <div class="hidden">
+          <div class="faq-item">
+              <div class="faq-question">
+                  <h3>Is it open source?</h3>
+                  <span class="faq-icon">+</span>
+              </div>
+              <div class="faq-answer">
+                  <p>Yes, our project is <span>open source</span> and community-oriented. If you'd like, you can fork our
+                      repository
+                      and help us improve this <span>great tool</span>.</p>
+              </div>
           </div>
       </div>
-      <div class="faq-item hidden">
-          <div class="faq-question">
-              <h3>If I have no knowledge of configuring the Raspberry Pi, how can I use the software?</h3>
-              <span class="faq-icon">+</span>
-          </div>
-          <div class="faq-answer">
-              <p>You can contact us via <span>email</span>, and we will respond to your <span>questions or concerns</span>. Additionally, if
-                  you
-                  are in our area, we can <span>visit you</span> in person to help with the setup.</p>
-          </div>
-      </div>
-      <div class="faq-item hidden">
-          <div class="faq-question">
-              <h3>Does it run locally?</h3>
-              <span class="faq-icon">+</span>
-          </div>
-          <div class="faq-answer">
-              <p>Yes, the software is designed to <span>run locally</span>, enhancing user <span>privacy and security</span> by keeping
-                  everything off the cloud.</p>
+      <div class="hidden">
+          <div class="faq-item">
+              <div class="faq-question">
+                  <h3>If I don’t have a Raspberry Pi, can I still use the software?</h3>
+                  <span class="faq-icon">+</span>
+              </div>
+              <div class="faq-answer">
+                  <p>The software is optimized for use with a <span>Raspberry Pi</span> due to its portability, but there are no
+                      <span>issues</span>
+                      with using it on another device.
+                  </p>
+              </div>
           </div>
       </div>
-      <div class="faq-item hidden">
-          <div class="faq-question">
-              <h3>Will there be a mobile version?</h3>
-              <span class="faq-icon">+</span>
+      <div class="hidden">
+          <div class="faq-item">
+              <div class="faq-question">
+                  <h3>If I have no knowledge of configuring the Raspberry Pi, how can I use the software?</h3>
+                  <span class="faq-icon">+</span>
+              </div>
+              <div class="faq-answer">
+                  <p>You can contact us via <span>email</span>, and we will respond to your <span>questions or concerns</span>. Additionally, if
+                      you
+                      are in our area, we can <span>visit you</span> in person to help with the setup.</p>
+              </div>
           </div>
-          <div class="faq-answer">
-              <p>We are considering <span>developing</span> a mobile app to make scanning <span>easier</span> without relying on a computer.
-              </p>
+      </div>
+      <div class="hidden">
+          <div class="faq-item">
+              <div class="faq-question">
+                  <h3>Does it run locally?</h3>
+                  <span class="faq-icon">+</span>
+              </div>
+              <div class="faq-answer">
+                  <p>Yes, the software is designed to <span>run locally</span>, enhancing user <span>privacy and security</span> by keeping
+                      everything off the cloud.</p>
+              </div>
+          </div>
+      </div>
+      <div class="hidden">
+          <div class="faq-item">
+              <div class="faq-question">
+                  <h3>Will there be a mobile version?</h3>
+                  <span class="faq-icon">+</span>
+              </div>
+              <div class="faq-answer">
+                  <p>We are considering <span>developing</span> a mobile app to make scanning <span>easier</span> without relying on a computer.
+                  </p>
+              </div>
           </div>
       </div>
   </section>

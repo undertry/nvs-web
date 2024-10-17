@@ -76,7 +76,7 @@
     font-size     : 3.2em;
     font-family   : "neue-medium";
     font-weight   : lighter;
-    padding-bottom: 10px;
+    padding-bottom: 40px;
     opacity       : 0;
     transform     : translateX(-200px);
     transition    : opacity 0.9s ease-out, transform 0.9s ease-out, color 0.3s ease-out;
