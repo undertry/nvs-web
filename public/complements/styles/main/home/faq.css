@@ -1,5 +1,3 @@
-/* faq section starts here */
-
 .faq {
     color     : var(--color-white);
     padding   : 1rem;
@@ -13,8 +11,6 @@
     background-color: var(--mode-light);
     color           : var(--color-black);
 }
-
-
 
 h2 i {
     color: var(--color-secondary);
@@ -118,5 +114,3 @@ h2 i {
 .light-mode .faq-answer p span:hover {
     color: var(--color-tertiary);
 }
-
-/* faq section ends here */

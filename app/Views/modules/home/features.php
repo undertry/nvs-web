@@ -1,10 +1,8 @@
- <!-- features section starts here -->
  <section id="features">
      <div class="section-header hidden">
          <h2><i class="fa-solid fa-shield"></i></h2>
      </div>
      <div class="features-block hidden" id="security">
-
          <h3>Features & Security</h3>
          <div class="feature-item">
              <div class="feature-text hidden">
@@ -36,14 +34,11 @@
                  <p>Compatible with Raspberry Pi 3 B+ and later versions.</p>
              </div>
          </div>
-
          <div class="feature-item">
              <div class="feature-text hidden">
                  <h4><i class="fa-solid fa-gear"></i> Highly Configurable</h4>
                  <p>Customize and adjust settings according to your specific needs in network auditing.</p>
              </div>
          </div>
-
      </div>
  </section>
- <!-- features section ends here -->

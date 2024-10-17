@@ -1,5 +1,3 @@
-/* home section starts here */
-
 .home {
   background-color: var(--color-dark);
   display         : flex;
@@ -17,7 +15,6 @@
   width         : 100%;
   height        : 110vh;
   z-index       : 1;
-  /* Detrás del contenido */
   top           : 0;
   left          : 0;
   background    : var(--color-dark);
@@ -29,12 +26,10 @@
   background: var(--color-white);
 }
 
-/* Hidden and scrolled state */
 .intro.shrink {
   transform: scale(0.5);
   opacity  : 0;
 }
-
 
 .intro {
   display        : flex;
@@ -44,11 +39,7 @@
   padding-top    : 0;
   z-index        : 10;
   transition     : transform 1.5s ease, opacity 1.5s ease;
-
 }
-
-
-
 
 .intro-text {
   text-align: center;
@@ -65,7 +56,6 @@
   user-select: none;
 }
 
-/* Animaciones */
 @keyframes slideIn {
   from {
     opacity  : 0;
@@ -90,7 +80,6 @@
   }
 }
 
-/* Aplicar las animaciones */
 .word-slide {
   display   : inline-block;
   animation : slideIn 0.5s forwards;
@@ -113,7 +102,6 @@
   opacity  : 0;
 }
 
-
 .intro-text h1 {
   font-size     : 8em;
   font-weight   : lighter;
@@ -126,14 +114,9 @@
   overflow      : hidden;
   white-space   : nowrap;
   pointer-events: none;
-  /* no permite el subrayado */
   user-select   : none;
 }
-
 
 .light-mode .intro-text h1 {
   color: var(--color-tertiary);
 }
-
-
-/* home sections ends here */

@@ -1,39 +1,34 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const navbar = document.getElementById("navbar");
-  const initialBgColor = window.getComputedStyle(navbar).backgroundColor;
+  const scrollbar = Scrollbar.init(
+    document.querySelector("#scroll-container"),
+    {
+      damping: 0.03, // Ajuste de suavidad
+    }
+  );
 
-  // Función para obtener el color del navbar según el scroll
-  function getScrollBgColor() {
-    return document.body.classList.contains("dark-mode")
-      ? "#151414"
-      : "#FCFCFC";
-  }
+  // Interceptar los clics en los enlaces del navbar
+  document.querySelectorAll("nav ul.nav-list a").forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      const href = this.getAttribute("href");
 
-  // Función para actualizar el color del navbar según el modo
-  function updateNavbarColor() {
-    navbar.style.backgroundColor =
-      window.scrollY > 50 ? getScrollBgColor() : initialBgColor;
-  }
+      // Comprobar si el enlace es a una sección interna (#)
+      if (href.startsWith("#")) {
+        e.preventDefault();
 
-  // Toggle menú y clase close
-  document.getElementById("menuToggle").addEventListener("click", function () {
-    this.classList.toggle("close");
-    document.getElementById("overlayNav").classList.toggle("active");
+        // Obtener el ID de la sección objetivo desde el atributo href
+        const targetId = href.substring(1); // Remover el '#'
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+          // Desplazar usando la API de smooth-scrollbar
+          scrollbar.scrollIntoView(targetElement, {
+            damping: 0.07,
+          });
+        }
+      } else {
+        // Enlaces externos como login-animation o signup-animation permiten la redirección normal
+        window.location.href = href;
+      }
+    });
   });
-
-  // Cambiar el color del navbar instantáneamente al cambiar de modo
-  document.getElementById("modeToggle").addEventListener("click", function () {
-    document.body.classList.toggle("dark-mode"); // Cambia el modo
-
-    // Cambia el color del navbar inmediatamente sin importar el scroll
-    updateNavbarColor();
-  });
-
-  // Cambiar el color del navbar al hacer scroll
-  window.addEventListener("scroll", function () {
-    updateNavbarColor();
-  });
-
-  // Inicializar el color del navbar según el modo actual al cargar la página
-  updateNavbarColor();
 });

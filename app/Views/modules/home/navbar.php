@@ -1,6 +1,4 @@
-<!-- navbar section starts here -->
 <nav id="navbar">
-
     <ul class="nav-list">
         <li class="nav-item"><a class="logo"><i class="fa-solid fa-fingerprint"></i></a></li>
         <li class="nav-item">
@@ -43,15 +41,14 @@
                 </span>
             </a>
         </li>
-        <li class="nav-item"><a href="<?= base_url('login-animation'); ?>" class="login link"> Log
-                In</a></li>
-        <li class="nav-item signup"><a href="<?= base_url('signup-animation'); ?>" class="signup link">Get Started <span
-                    class="arrow">↗</span></a></li>
+        <li class="nav-item">
+            <a href="<?= base_url('login-animation'); ?>" class="login link"> Log In</a>
+        </li>
+        <li class="nav-item signup">
+            <a href="<?= base_url('signup-animation'); ?>" class="signup link">Get Started <span class="arrow">↗</span></a>
+        </li>
     </ul>
-
-
     <div class="nav-right">
         <a href="#" id="toggle-dark-mode"><i class="fa-solid fa-moon" id="mode-icon"></i></a>
     </div>
 </nav>
-<!-- navbar section ends here -->

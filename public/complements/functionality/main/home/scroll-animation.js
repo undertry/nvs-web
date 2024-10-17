@@ -1,3 +1,26 @@
+// Scroll animation
+document.addEventListener("DOMContentLoaded", function () {
+  const homeSection = document.querySelector(".intro");
+  const nextSection = document.querySelector(".next-section");
+
+  const observerOptions = {
+    root: null, // Observa respecto al viewport
+    threshold: 0.1, // Se activa cuando el 10% de la siguiente sección esté visible
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        homeSection.classList.add("shrink");
+      } else {
+        homeSection.classList.remove("shrink");
+      }
+    });
+  }, observerOptions);
+
+  observer.observe(nextSection); // Observa la sección que sigue
+});
+// animation intro text
 document.addEventListener("DOMContentLoaded", function () {
   const elements = document.querySelectorAll(".hidden");
 

@@ -42,7 +42,6 @@
     margin     : 1rem 0;
 }
 
-
 .text h3 {
     font-size       : 1.3em;
     font-family     : "neue";
@@ -62,7 +61,7 @@
 }
 
 .text h3:hover {
-    color: red !important;
+    color: var(--color-main) !important;
 }
 
 .light-mode .text h3:hover {
@@ -123,7 +122,7 @@
 }
 
 .text p span:hover {
-    color: red !important;
+    color: var(--color-main) !important;
 }
 
 .light-mode .text p span:hover {
@@ -163,11 +162,9 @@
 }
 
 .text ul li span:hover {
-    color: red !important;
+    color: var(--color-main) !important;
 }
 
 .light-mode .text ul li span:hover {
     color: var(--color-tertiary) !important;
 }
-
-/* software section ends here */

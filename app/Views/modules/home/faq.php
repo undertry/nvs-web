@@ -1,7 +1,4 @@
-  <!-- faq section starts here -->
-
   <section class="faq" id="faq">
-
       <div class="section-header hidden">
           <h2><i class="fa-solid fa-circle-question"></i></h2>
       </div>
@@ -9,17 +6,15 @@
           <h4>Frequently asked questions</h4>
       </div>
       <div class="hidden">
-
-
           <div class="faq-item">
               <div class="faq-question">
                   <h3>How do I perform a scan?</h3>
                   <span class="faq-icon">+</span>
               </div>
               <div class="faq-answer">
-                  <p>To <span>perform a scan</span>, you just need to be logged into our software, go to your profile in the
-                      <span>Network
-                          Scan</span> section, and ensure your <span>Raspberry Pi</span> is properly configured.
+                  <p>
+                      To <span>perform a scan</span>, you just need to be logged into our software, go to your profile in the
+                      <span>Network Scan</span> section, and ensure your <span>Raspberry Pi</span> is properly configured.
                   </p>
               </div>
           </div>
@@ -31,9 +26,10 @@
                   <span class="faq-icon">+</span>
               </div>
               <div class="faq-answer">
-                  <p>Yes, our project is <span>open source</span> and community-oriented. If you'd like, you can fork our
-                      repository
-                      and help us improve this <span>great tool</span>.</p>
+                  <p>
+                      Yes, our project is <span>open source</span> and community-oriented. If you'd like, you can fork our repository
+                      and help us improve this <span>great tool</span>.
+                  </p>
               </div>
           </div>
       </div>
@@ -44,9 +40,9 @@
                   <span class="faq-icon">+</span>
               </div>
               <div class="faq-answer">
-                  <p>The software is optimized for use with a <span>Raspberry Pi</span> due to its portability, but there are no
-                      <span>issues</span>
-                      with using it on another device.
+                  <p>
+                      The software is optimized for use with a <span>Raspberry Pi</span> due to its portability, but there are no
+                      <span>issues</span> with using it on another device.
                   </p>
               </div>
           </div>
@@ -58,9 +54,10 @@
                   <span class="faq-icon">+</span>
               </div>
               <div class="faq-answer">
-                  <p>You can contact us via <span>email</span>, and we will respond to your <span>questions or concerns</span>. Additionally, if
-                      you
-                      are in our area, we can <span>visit you</span> in person to help with the setup.</p>
+                  <p>
+                      You can contact us via <span>email</span>, and we will respond to your <span>questions or concerns</span>. Additionally, if
+                      you are in our area, we can <span>visit you</span> in person to help with the setup.
+                  </p>
               </div>
           </div>
       </div>
@@ -71,8 +68,10 @@
                   <span class="faq-icon">+</span>
               </div>
               <div class="faq-answer">
-                  <p>Yes, the software is designed to <span>run locally</span>, enhancing user <span>privacy and security</span> by keeping
-                      everything off the cloud.</p>
+                  <p>
+                      Yes, the software is designed to <span>run locally</span>, enhancing user <span>privacy and security</span> by keeping
+                      everything off the cloud.
+                  </p>
               </div>
           </div>
       </div>
@@ -83,10 +82,10 @@
                   <span class="faq-icon">+</span>
               </div>
               <div class="faq-answer">
-                  <p>We are considering <span>developing</span> a mobile app to make scanning <span>easier</span> without relying on a computer.
+                  <p>
+                      We are considering <span>developing</span> a mobile app to make scanning <span>easier</span> without relying on a computer.
                   </p>
               </div>
           </div>
       </div>
   </section>
-  <!-- faq section ends here -->
