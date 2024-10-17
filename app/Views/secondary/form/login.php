@@ -15,9 +15,13 @@
         <div class="message success"><?= session()->getFlashdata('success'); ?></div>
     <?php endif; ?>
     <!-- Formulario de Inicio de Sesion -->
+
+    <a href="#" id="toggle-dark-mode"><i class="fa-solid fa-moon" id="mode-icon"></i></a>
+
     <div id="particles-js"></div>
 
     <div class="box">
+
         <div class="box-content">
             <div class="image-container">
                 <div id="sphere-js"></div>
@@ -131,6 +135,22 @@
     </script>
 
     <script>
+        // Función optimizada para actualizar los colores sin reiniciar las partículas
+        function updateParticlesColor(mode) {
+            const particlesColor = mode === "light" ? "#000000" : "#ffffff";
+            const lineLinkedColor = mode === "light" ? "#000000" : "#ffffff";
+
+            // Acceder directamente al objeto global de particles.js para cambiar los colores
+            const particles = window.pJSDom[0].pJS.particles;
+
+            // Cambiar color de las partículas y las líneas
+            particles.color.value = particlesColor;
+            particles.line_linked.color = lineLinkedColor;
+
+            // Aplicar los cambios visuales inmediatamente
+            window.pJSDom[0].pJS.fn.particlesRefresh();
+        }
+
         // Inicializa las partículas
         particlesJS("particles-js", {
             particles: {
@@ -138,13 +158,13 @@
                     value: 100,
                 },
                 color: {
-                    value: "#565555", // Color inicial, será actualizado dinámicamente
+                    value: "#ffffff", // Color inicial, será actualizado dinámicamente
                 },
                 shape: {
                     type: "circle",
                 },
                 opacity: {
-                    value: 0.3,
+                    value: 0.5,
                     random: false,
                 },
                 size: {
@@ -165,7 +185,22 @@
                     out_mode: "out",
                 },
             },
+            interactivity: {
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: "grab",
+                    },
+                    onclick: {
+                        enable: true,
+                        mode: "push",
+                    },
+                },
+            },
+            retina_detect: true,
         });
     </script>
+
+
 
     <?= $this->include('modules/form/L-end.php'); ?>

@@ -59,7 +59,5 @@
             </li>
         <?php endif; ?>
     </ul>
-    <div class="nav-right">
-        <a href="#" id="toggle-dark-mode"><i class="fa-solid fa-moon" id="mode-icon"></i></a>
-    </div>
 </nav>
+<a href="#" id="toggle-dark-mode"><i class="fa-solid fa-moon" id="mode-icon"></i></a>
