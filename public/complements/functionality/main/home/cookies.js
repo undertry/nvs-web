@@ -31,8 +31,16 @@ document.addEventListener("DOMContentLoaded", function () {
       body.classList.remove("light-mode");
       modeIcon.classList.replace("fa-moon", "fa-sun"); // Cambia el ícono de sol a luna
     }
-    updateParticlesColor(mode); // Actualiza el color de las partículas si es necesario
-    updateSphereColor(mode); //  Actualiza los colores de la esfera
+
+    // Verifica si `updateParticlesColor` está disponible antes de llamarlo
+    if (typeof updateParticlesColor === "function") {
+      updateParticlesColor(mode); // Actualiza el color de las partículas si está disponible
+    }
+
+    // Verifica si `updateSphereColor` está disponible antes de llamarlo
+    if (typeof updateSphereColor === "function") {
+      updateSphereColor(mode); // Actualiza los colores de la esfera si está disponible
+    }
   }
 
   // Función para crear cookies

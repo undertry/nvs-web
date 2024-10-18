@@ -1,11 +1,76 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>403 Forbidden</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.error-container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 10rem;
+    margin-bottom: 10px;
+    color: #ffcccc;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.back-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #f75c03;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.back-btn:hover {
+    background-color: #ff6a3d;
+}
+
+    </style>
 </head>
 <body>
-
-<p>Directory access is forbidden.</p>
-
+    <div class="error-container">
+        <h1>403</h1>
+        <h2>Acceso prohibido</h2>
+        <p>Lo sentimos, no tienes permiso para acceder a esta página.</p>
+        <a href="/" class="back-btn">Regresar a Inicio</a>
+    </div>
 </body>
 </html>
