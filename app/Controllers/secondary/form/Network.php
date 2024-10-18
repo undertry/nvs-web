@@ -10,7 +10,6 @@ use \App\Models\tertiary\network\DeviceModel;
 use \App\Models\tertiary\network\Port_analysisModel;
 use \App\Models\tertiary\network\Port_detailsModel;
 use \App\Models\tertiary\network\PortsModel;
-use \App\Models\tertiary\network\SecurityModel;
 use \App\Models\tertiary\network\SolutionModel;
 use \App\Models\tertiary\network\Port_statusModel;
 use \App\Models\secondary\form\scanModel;
