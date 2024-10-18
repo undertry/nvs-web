@@ -67,6 +67,18 @@
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.0.0/tsparticles.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script>
+        // Función para actualizar los colores de la esfera según el modo
+        function updateSphereColor(mode) {
+            const pointColor = mode === "light" ? 0x151414 : 0xcfcfcf; // Negro para modo claro, blanco para modo oscuro
+            const lineColor = mode === "light" ? 0xcfcfcf : 0x535151; // Negro para modo claro, gris para modo oscuro
+
+            // Cambiamos el color de los puntos
+            points.material.color.set(pointColor);
+
+            // Cambiamos el color de las líneas
+            line.material.color.set(lineColor);
+        }
+
         // Configuramos la escena, la cámara y el renderizador
         let scene = new THREE.Scene();
         let camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -86,7 +98,7 @@
         // Creamos una geometría de icosaedro para los nodos y conexiones
         let geometry = new THREE.IcosahedronGeometry(2, 1);
         let material = new THREE.PointsMaterial({
-            color: 0xffffff, // Color blanco para los puntos
+            color: 0xffffff, // Color blanco inicial para los puntos
             size: 0.1, // Ajusta el tamaño de los puntos
             map: circleTexture, // Aplica la textura circular cargada
             alphaTest: 0.5 // Para evitar problemas de transparencia en los bordes
@@ -94,7 +106,7 @@
 
         // Creamos la geometría de líneas conectando los puntos
         let wireframeMaterial = new THREE.LineBasicMaterial({
-            color: 0x555555 // Color gris tenue para las conexiones
+            color: 0x555555 // Color gris tenue inicial para las conexiones
         });
         let wireframe = new THREE.WireframeGeometry(geometry);
 
@@ -131,6 +143,26 @@
             renderer.setSize(width, height);
             camera.aspect = width / height;
             camera.updateProjectionMatrix();
+        });
+
+        // Detecta el tema del sistema operativo (claro/oscuro) automáticamente
+        function detectColorScheme() {
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                // Modo oscuro
+                updateSphereColor('dark');
+            } else {
+                // Modo claro
+                updateSphereColor('light');
+            }
+        }
+
+        // Llama a la función inicialmente
+        detectColorScheme();
+
+        // Escucha los cambios en el tema del sistema operativo
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+            const newColorScheme = e.matches ? "dark" : "light";
+            updateSphereColor(newColorScheme);
         });
     </script>
 

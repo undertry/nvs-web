@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
       modeIcon.classList.replace("fa-moon", "fa-sun"); // Cambia el ícono de sol a luna
     }
     updateParticlesColor(mode); // Actualiza el color de las partículas si es necesario
+    updateSphereColor(mode); //  Actualiza los colores de la esfera
   }
 
   // Función para crear cookies
