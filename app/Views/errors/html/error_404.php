@@ -50,6 +50,7 @@
             border-radius: 15px;
             border: 1px solid var(--color-grey);
             z-index: 100;
+            user-select: none;
         }
 
         .light-mode .wrap {
@@ -63,6 +64,7 @@
             font-size: 5rem;
             margin-bottom: 20px;
             color: var(--color-main);
+            user-select: none;
             user-select: none;
         }
 
@@ -85,6 +87,7 @@
             border-radius: 15px;
             text-decoration: none;
             transition: background-color 0.3s ease;
+            user-select: none;
         }
 
         .light-mode .back-btn {
