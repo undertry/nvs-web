@@ -4,7 +4,7 @@ namespace App\Models\tertiary\network;
 
 use CodeIgniter\Model;
 
-class Port_analisysModel extends Model
+class Port_analysisModel extends Model
 {
     protected $table = 'port_analysis';
     protected $primaryKey = 'id_analysis';
