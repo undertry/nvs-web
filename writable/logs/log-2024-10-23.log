@@ -12274,3 +12274,3136 @@ WARNING - 2024-10-23 02:45:31 --> [DEPRECATED] Creation of dynamic property App\
  4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 11:34:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 11:34:27 --> [DEPRECATED] Creation of dynamic property App\Controllers\main\Home::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 11:34:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 11:34:31 --> [DEPRECATED] Creation of dynamic property App\Controllers\main\Home::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 11:34:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 11:34:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Login::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 11:34:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 11:34:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Login::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 11:34:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 11:34:34 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Login::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 11:34:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 11:34:39 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Login::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 11:34:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 11:34:39 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\Dashboard::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 11:34:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 11:34:41 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\Dashboard::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 11:34:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 11:34:44 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Login::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 11:34:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 11:34:44 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\Dashboard::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 11:34:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 11:34:46 --> [DEPRECATED] Creation of dynamic property App\Controllers\main\Home::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 11:34:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 11:34:48 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Login::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 11:34:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 11:34:48 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Login::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 11:34:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 11:34:48 --> [DEPRECATED] Creation of dynamic property App\Controllers\main\Home::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 11:34:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 11:34:49 --> [DEPRECATED] Creation of dynamic property App\Controllers\main\Home::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 11:34:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 11:34:51 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Login::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 11:34:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 11:34:51 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Login::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 11:34:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 11:34:52 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Login::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 11:35:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 11:35:21 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Login::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 11:35:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 11:35:21 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\Dashboard::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 11:35:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 11:35:22 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\Dashboard::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 11:35:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 11:35:35 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Network::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 11:35:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 11:35:42 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Network::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-10-23 11:36:03 --> Excepción capturada al intentar conectarse a la API: 28 : Failed to connect to 192.168.0.162 port 5000 after 21015 ms: Couldn't connect to server
+ERROR - 2024-10-23 11:36:25 --> Excepción capturada al intentar conectarse a la API: 28 : Failed to connect to 192.168.0.162 port 5000 after 21044 ms: Couldn't connect to server
+INFO - 2024-10-23 11:37:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 11:37:31 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Network::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 11:37:31 --> Solicitud realizada a la API para puertos y servicios.
+INFO - 2024-10-23 11:37:31 --> Datos de puertos y servicios recibidos: Array
+(
+    [ip] => 192.168.0.23
+    [mac] => 6c:fd:b9:a8:1b:2c
+    [os_info] => Microsoft Windows XP|2019 (89%)
+    [ports_services] => Array
+        (
+            [0] => Array
+                (
+                    [port] => Discovered
+                    [service] => port 3306/tcp on 192.168.0.23
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [port] => Discovered
+                    [service] => port 80/tcp on 192.168.0.23
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [port] => Discovered
+                    [service] => port 443/tcp on 192.168.0.23
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                        )
+
+                )
+
+            [3] => Array
+                (
+                    [port] => Discovered
+                    [service] => port 7680/tcp on 192.168.0.23
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [port] => 80/tcp
+                    [service] => http syn-ack ttl 128 Apache httpd 2.4.58 ((Win64) OpenSSL/3.1.3 PHP/8.2.12)
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [cve] => 
+                                    [description] => |   VULNERABLE:
+                                )
+
+                            [1] => Array
+                                (
+                                    [cve] => 
+                                    [description] => |     State: LIKELY VULNERABLE
+                                )
+
+                            [2] => Array
+                                (
+                                    [cve] => CVE-2007-6750
+                                    [description] => CVE:CVE-2007-6750
+                                )
+
+                            [3] => Array
+                                (
+                                    [cve] => CVE-2007-6750
+                                    [description] => //cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6750
+                                )
+
+                            [4] => Array
+                                (
+                                    [cve] => CVE-2024-38476
+                                    [description] => //vulners.com/cve/CVE-2024-38476
+                                )
+
+                            [5] => Array
+                                (
+                                    [cve] => CVE-2024-38474
+                                    [description] => //vulners.com/cve/CVE-2024-38474
+                                )
+
+                            [6] => Array
+                                (
+                                    [cve] => CVE-2024-38475
+                                    [description] => //vulners.com/cve/CVE-2024-38475
+                                )
+
+                            [7] => Array
+                                (
+                                    [cve] => CVE-2024-38473
+                                    [description] => //vulners.com/cve/CVE-2024-38473
+                                )
+
+                            [8] => Array
+                                (
+                                    [cve] => CVE-2024-40898
+                                    [description] => //vulners.com/cve/CVE-2024-40898
+                                )
+
+                            [9] => Array
+                                (
+                                    [cve] => CVE-2024-39573
+                                    [description] => //vulners.com/cve/CVE-2024-39573
+                                )
+
+                            [10] => Array
+                                (
+                                    [cve] => CVE-2024-38477
+                                    [description] => //vulners.com/cve/CVE-2024-38477
+                                )
+
+                            [11] => Array
+                                (
+                                    [cve] => CVE-2024-38472
+                                    [description] => //vulners.com/cve/CVE-2024-38472
+                                )
+
+                            [12] => Array
+                                (
+                                    [cve] => CVE-2024-27316
+                                    [description] => //vulners.com/cve/CVE-2024-27316
+                                )
+
+                            [13] => Array
+                                (
+                                    [cve] => CVE-2024-39884
+                                    [description] => //vulners.com/cve/CVE-2024-39884
+                                )
+
+                            [14] => Array
+                                (
+                                    [cve] => CVE-2024-36387
+                                    [description] => //vulners.com/cve/CVE-2024-36387
+                                )
+
+                            [15] => Array
+                                (
+                                    [cve] => CVE-2024-24795
+                                    [description] => //vulners.com/cve/CVE-2024-24795
+                                )
+
+                            [16] => Array
+                                (
+                                    [cve] => CVE-2023-38709
+                                    [description] => //vulners.com/cve/CVE-2023-38709
+                                )
+
+                        )
+
+                )
+
+            [5] => Array
+                (
+                    [port] => 443/tcp
+                    [service] => ssl/http syn-ack ttl 128 Apache httpd 2.4.58 ((Win64) OpenSSL/3.1.3 PHP/8.2.12)
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [cve] => 
+                                    [description] => |   VULNERABLE:
+                                )
+
+                            [1] => Array
+                                (
+                                    [cve] => 
+                                    [description] => |     State: VULNERABLE
+                                )
+
+                            [2] => Array
+                                (
+                                    [cve] => CVE-2024-38476
+                                    [description] => //vulners.com/cve/CVE-2024-38476
+                                )
+
+                            [3] => Array
+                                (
+                                    [cve] => CVE-2024-38474
+                                    [description] => //vulners.com/cve/CVE-2024-38474
+                                )
+
+                            [4] => Array
+                                (
+                                    [cve] => CVE-2024-38475
+                                    [description] => //vulners.com/cve/CVE-2024-38475
+                                )
+
+                            [5] => Array
+                                (
+                                    [cve] => CVE-2024-38473
+                                    [description] => //vulners.com/cve/CVE-2024-38473
+                                )
+
+                            [6] => Array
+                                (
+                                    [cve] => CVE-2024-40898
+                                    [description] => //vulners.com/cve/CVE-2024-40898
+                                )
+
+                            [7] => Array
+                                (
+                                    [cve] => CVE-2024-39573
+                                    [description] => //vulners.com/cve/CVE-2024-39573
+                                )
+
+                            [8] => Array
+                                (
+                                    [cve] => CVE-2024-38477
+                                    [description] => //vulners.com/cve/CVE-2024-38477
+                                )
+
+                            [9] => Array
+                                (
+                                    [cve] => CVE-2024-38472
+                                    [description] => //vulners.com/cve/CVE-2024-38472
+                                )
+
+                            [10] => Array
+                                (
+                                    [cve] => CVE-2024-27316
+                                    [description] => //vulners.com/cve/CVE-2024-27316
+                                )
+
+                            [11] => Array
+                                (
+                                    [cve] => CVE-2024-39884
+                                    [description] => //vulners.com/cve/CVE-2024-39884
+                                )
+
+                            [12] => Array
+                                (
+                                    [cve] => CVE-2024-36387
+                                    [description] => //vulners.com/cve/CVE-2024-36387
+                                )
+
+                            [13] => Array
+                                (
+                                    [cve] => CVE-2024-24795
+                                    [description] => //vulners.com/cve/CVE-2024-24795
+                                )
+
+                            [14] => Array
+                                (
+                                    [cve] => CVE-2023-38709
+                                    [description] => //vulners.com/cve/CVE-2023-38709
+                                )
+
+                        )
+
+                )
+
+            [6] => Array
+                (
+                    [port] => 3306/tcp
+                    [service] => mysql syn-ack ttl 128 MariaDB (unauthorized)
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                        )
+
+                )
+
+            [7] => Array
+                (
+                    [port] => 7680/tcp
+                    [service] => pando-pub? syn-ack ttl 128
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+)
+
+INFO - 2024-10-23 11:37:31 --> Solicitud realizada a la API para vulnerabilidades.
+INFO - 2024-10-23 11:37:31 --> Datos de vulnerabilidades recibidos: Array
+(
+    [vulnerabilities] => Array
+        (
+            [0] => Array
+                (
+                    [cve] => 
+                    [description] => |   VULNERABLE:
+                )
+
+            [1] => Array
+                (
+                    [cve] => 
+                    [description] => |     State: LIKELY VULNERABLE
+                )
+
+            [2] => Array
+                (
+                    [cve] => CVE-2007-6750
+                    [description] => CVE:CVE-2007-6750
+                )
+
+            [3] => Array
+                (
+                    [cve] => CVE-2007-6750
+                    [description] => //cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6750
+                )
+
+            [4] => Array
+                (
+                    [cve] => CVE-2024-38476
+                    [description] => //vulners.com/cve/CVE-2024-38476
+                )
+
+            [5] => Array
+                (
+                    [cve] => CVE-2024-38474
+                    [description] => //vulners.com/cve/CVE-2024-38474
+                )
+
+            [6] => Array
+                (
+                    [cve] => CVE-2024-38475
+                    [description] => //vulners.com/cve/CVE-2024-38475
+                )
+
+            [7] => Array
+                (
+                    [cve] => CVE-2024-38473
+                    [description] => //vulners.com/cve/CVE-2024-38473
+                )
+
+            [8] => Array
+                (
+                    [cve] => CVE-2024-40898
+                    [description] => //vulners.com/cve/CVE-2024-40898
+                )
+
+            [9] => Array
+                (
+                    [cve] => CVE-2024-39573
+                    [description] => //vulners.com/cve/CVE-2024-39573
+                )
+
+            [10] => Array
+                (
+                    [cve] => CVE-2024-38477
+                    [description] => //vulners.com/cve/CVE-2024-38477
+                )
+
+            [11] => Array
+                (
+                    [cve] => CVE-2024-38472
+                    [description] => //vulners.com/cve/CVE-2024-38472
+                )
+
+            [12] => Array
+                (
+                    [cve] => CVE-2024-27316
+                    [description] => //vulners.com/cve/CVE-2024-27316
+                )
+
+            [13] => Array
+                (
+                    [cve] => CVE-2024-39884
+                    [description] => //vulners.com/cve/CVE-2024-39884
+                )
+
+            [14] => Array
+                (
+                    [cve] => CVE-2024-36387
+                    [description] => //vulners.com/cve/CVE-2024-36387
+                )
+
+            [15] => Array
+                (
+                    [cve] => CVE-2024-24795
+                    [description] => //vulners.com/cve/CVE-2024-24795
+                )
+
+            [16] => Array
+                (
+                    [cve] => CVE-2023-38709
+                    [description] => //vulners.com/cve/CVE-2023-38709
+                )
+
+            [17] => Array
+                (
+                    [cve] => 
+                    [description] => |   VULNERABLE:
+                )
+
+            [18] => Array
+                (
+                    [cve] => 
+                    [description] => |     State: VULNERABLE
+                )
+
+            [19] => Array
+                (
+                    [cve] => CVE-2024-38476
+                    [description] => //vulners.com/cve/CVE-2024-38476
+                )
+
+            [20] => Array
+                (
+                    [cve] => CVE-2024-38474
+                    [description] => //vulners.com/cve/CVE-2024-38474
+                )
+
+            [21] => Array
+                (
+                    [cve] => CVE-2024-38475
+                    [description] => //vulners.com/cve/CVE-2024-38475
+                )
+
+            [22] => Array
+                (
+                    [cve] => CVE-2024-38473
+                    [description] => //vulners.com/cve/CVE-2024-38473
+                )
+
+            [23] => Array
+                (
+                    [cve] => CVE-2024-40898
+                    [description] => //vulners.com/cve/CVE-2024-40898
+                )
+
+            [24] => Array
+                (
+                    [cve] => CVE-2024-39573
+                    [description] => //vulners.com/cve/CVE-2024-39573
+                )
+
+            [25] => Array
+                (
+                    [cve] => CVE-2024-38477
+                    [description] => //vulners.com/cve/CVE-2024-38477
+                )
+
+            [26] => Array
+                (
+                    [cve] => CVE-2024-38472
+                    [description] => //vulners.com/cve/CVE-2024-38472
+                )
+
+            [27] => Array
+                (
+                    [cve] => CVE-2024-27316
+                    [description] => //vulners.com/cve/CVE-2024-27316
+                )
+
+            [28] => Array
+                (
+                    [cve] => CVE-2024-39884
+                    [description] => //vulners.com/cve/CVE-2024-39884
+                )
+
+            [29] => Array
+                (
+                    [cve] => CVE-2024-36387
+                    [description] => //vulners.com/cve/CVE-2024-36387
+                )
+
+            [30] => Array
+                (
+                    [cve] => CVE-2024-24795
+                    [description] => //vulners.com/cve/CVE-2024-24795
+                )
+
+            [31] => Array
+                (
+                    [cve] => CVE-2023-38709
+                    [description] => //vulners.com/cve/CVE-2023-38709
+                )
+
+        )
+
+)
+
+INFO - 2024-10-23 11:47:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 11:47:50 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Network::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 11:47:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 11:47:51 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\Dashboard::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 11:47:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 11:47:53 --> [DEPRECATED] Creation of dynamic property App\Controllers\main\Home::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 11:47:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 11:47:54 --> [DEPRECATED] Creation of dynamic property App\Controllers\main\Home::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 11:47:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 11:47:55 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\Dashboard::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 11:47:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 11:47:56 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\Dashboard::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 11:48:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 11:48:02 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\Dashboard::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 11:57:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 11:57:48 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\Dashboard::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 11:57:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 11:57:51 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\Dashboard::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 11:58:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 11:58:49 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\Dashboard::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 11:58:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 11:58:50 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Network::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 11:58:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 11:58:50 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\Dashboard::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 11:58:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 11:58:51 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Network::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 11:58:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 11:58:51 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\Dashboard::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 11:58:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 11:58:52 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Network::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 11:58:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 11:58:52 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\Dashboard::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 12:00:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 12:00:26 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\Dashboard::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 12:00:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 12:00:27 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Network::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-23 12:00:27 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "dashboard.php"
+[Method: GET, Route: ip]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashboard.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('dashboard', [], true)
+ 3 APPPATH\Controllers\secondary\form\Network.php(224): view('dashboard')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\secondary\form\Network->ipview()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\form\Network))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 12:00:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 12:00:28 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\Dashboard::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 12:01:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 12:01:04 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\Dashboard::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 12:01:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 12:01:05 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Network::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-23 12:01:05 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "tertiary/network/networkin.php"
+[Method: GET, Route: ip]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('tertiary/network/networkin.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('tertiary/network/networkin', [], true)
+ 3 APPPATH\Controllers\secondary\form\Network.php(224): view('tertiary/network/networkin')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\secondary\form\Network->ipview()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\form\Network))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 12:01:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 12:01:10 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\Dashboard::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 12:02:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 12:02:18 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\Dashboard::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 12:02:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 12:02:18 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Network::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 12:02:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 12:02:28 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Network::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 12:03:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 12:03:10 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Network::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 12:03:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 12:03:47 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Network::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 12:03:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 12:03:47 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Network::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 12:03:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 12:03:51 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Network::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 12:03:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 12:03:51 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\Dashboard::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 12:04:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 12:04:04 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Network::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 12:04:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 12:04:22 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Network::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 12:04:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 12:04:22 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\Dashboard::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 12:24:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 12:24:50 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Network::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 12:24:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 12:24:53 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\Dashboard::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 12:24:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 12:24:56 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Network::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-10-23 12:25:17 --> Excepción capturada al intentar conectarse a la API: 28 : Failed to connect to 192.168.2.152 port 5000 after 21052 ms: Couldn't connect to server
+ERROR - 2024-10-23 12:25:38 --> Excepción capturada al intentar conectarse a la API: 28 : Failed to connect to 192.168.2.152 port 5000 after 21051 ms: Couldn't connect to server
+INFO - 2024-10-23 12:25:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 12:25:40 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Network::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 12:25:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 12:25:43 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\Dashboard::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 12:25:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 12:25:44 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Network::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 12:25:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 12:25:52 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Network::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 12:25:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 12:25:52 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\Dashboard::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 12:25:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 12:25:58 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Network::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 12:25:58 --> Solicitud realizada a la API para puertos y servicios.
+INFO - 2024-10-23 12:25:58 --> Datos de puertos y servicios recibidos: Array
+(
+    [ip] => 192.168.0.23
+    [mac] => 6c:fd:b9:a8:1b:2c
+    [os_info] => Microsoft Windows XP|2019 (89%)
+    [ports_services] => Array
+        (
+            [0] => Array
+                (
+                    [port] => Discovered
+                    [service] => port 3306/tcp on 192.168.0.23
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [port] => Discovered
+                    [service] => port 80/tcp on 192.168.0.23
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [port] => Discovered
+                    [service] => port 443/tcp on 192.168.0.23
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                        )
+
+                )
+
+            [3] => Array
+                (
+                    [port] => Discovered
+                    [service] => port 7680/tcp on 192.168.0.23
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [port] => 80/tcp
+                    [service] => http syn-ack ttl 128 Apache httpd 2.4.58 ((Win64) OpenSSL/3.1.3 PHP/8.2.12)
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [cve] => 
+                                    [description] => |   VULNERABLE:
+                                )
+
+                            [1] => Array
+                                (
+                                    [cve] => 
+                                    [description] => |     State: LIKELY VULNERABLE
+                                )
+
+                            [2] => Array
+                                (
+                                    [cve] => CVE-2007-6750
+                                    [description] => CVE:CVE-2007-6750
+                                )
+
+                            [3] => Array
+                                (
+                                    [cve] => CVE-2007-6750
+                                    [description] => //cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6750
+                                )
+
+                            [4] => Array
+                                (
+                                    [cve] => CVE-2024-38476
+                                    [description] => //vulners.com/cve/CVE-2024-38476
+                                )
+
+                            [5] => Array
+                                (
+                                    [cve] => CVE-2024-38474
+                                    [description] => //vulners.com/cve/CVE-2024-38474
+                                )
+
+                            [6] => Array
+                                (
+                                    [cve] => CVE-2024-38475
+                                    [description] => //vulners.com/cve/CVE-2024-38475
+                                )
+
+                            [7] => Array
+                                (
+                                    [cve] => CVE-2024-38473
+                                    [description] => //vulners.com/cve/CVE-2024-38473
+                                )
+
+                            [8] => Array
+                                (
+                                    [cve] => CVE-2024-40898
+                                    [description] => //vulners.com/cve/CVE-2024-40898
+                                )
+
+                            [9] => Array
+                                (
+                                    [cve] => CVE-2024-39573
+                                    [description] => //vulners.com/cve/CVE-2024-39573
+                                )
+
+                            [10] => Array
+                                (
+                                    [cve] => CVE-2024-38477
+                                    [description] => //vulners.com/cve/CVE-2024-38477
+                                )
+
+                            [11] => Array
+                                (
+                                    [cve] => CVE-2024-38472
+                                    [description] => //vulners.com/cve/CVE-2024-38472
+                                )
+
+                            [12] => Array
+                                (
+                                    [cve] => CVE-2024-27316
+                                    [description] => //vulners.com/cve/CVE-2024-27316
+                                )
+
+                            [13] => Array
+                                (
+                                    [cve] => CVE-2024-39884
+                                    [description] => //vulners.com/cve/CVE-2024-39884
+                                )
+
+                            [14] => Array
+                                (
+                                    [cve] => CVE-2024-36387
+                                    [description] => //vulners.com/cve/CVE-2024-36387
+                                )
+
+                            [15] => Array
+                                (
+                                    [cve] => CVE-2024-24795
+                                    [description] => //vulners.com/cve/CVE-2024-24795
+                                )
+
+                            [16] => Array
+                                (
+                                    [cve] => CVE-2023-38709
+                                    [description] => //vulners.com/cve/CVE-2023-38709
+                                )
+
+                        )
+
+                )
+
+            [5] => Array
+                (
+                    [port] => 443/tcp
+                    [service] => ssl/http syn-ack ttl 128 Apache httpd 2.4.58 ((Win64) OpenSSL/3.1.3 PHP/8.2.12)
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [cve] => 
+                                    [description] => |   VULNERABLE:
+                                )
+
+                            [1] => Array
+                                (
+                                    [cve] => 
+                                    [description] => |     State: VULNERABLE
+                                )
+
+                            [2] => Array
+                                (
+                                    [cve] => CVE-2024-38476
+                                    [description] => //vulners.com/cve/CVE-2024-38476
+                                )
+
+                            [3] => Array
+                                (
+                                    [cve] => CVE-2024-38474
+                                    [description] => //vulners.com/cve/CVE-2024-38474
+                                )
+
+                            [4] => Array
+                                (
+                                    [cve] => CVE-2024-38475
+                                    [description] => //vulners.com/cve/CVE-2024-38475
+                                )
+
+                            [5] => Array
+                                (
+                                    [cve] => CVE-2024-38473
+                                    [description] => //vulners.com/cve/CVE-2024-38473
+                                )
+
+                            [6] => Array
+                                (
+                                    [cve] => CVE-2024-40898
+                                    [description] => //vulners.com/cve/CVE-2024-40898
+                                )
+
+                            [7] => Array
+                                (
+                                    [cve] => CVE-2024-39573
+                                    [description] => //vulners.com/cve/CVE-2024-39573
+                                )
+
+                            [8] => Array
+                                (
+                                    [cve] => CVE-2024-38477
+                                    [description] => //vulners.com/cve/CVE-2024-38477
+                                )
+
+                            [9] => Array
+                                (
+                                    [cve] => CVE-2024-38472
+                                    [description] => //vulners.com/cve/CVE-2024-38472
+                                )
+
+                            [10] => Array
+                                (
+                                    [cve] => CVE-2024-27316
+                                    [description] => //vulners.com/cve/CVE-2024-27316
+                                )
+
+                            [11] => Array
+                                (
+                                    [cve] => CVE-2024-39884
+                                    [description] => //vulners.com/cve/CVE-2024-39884
+                                )
+
+                            [12] => Array
+                                (
+                                    [cve] => CVE-2024-36387
+                                    [description] => //vulners.com/cve/CVE-2024-36387
+                                )
+
+                            [13] => Array
+                                (
+                                    [cve] => CVE-2024-24795
+                                    [description] => //vulners.com/cve/CVE-2024-24795
+                                )
+
+                            [14] => Array
+                                (
+                                    [cve] => CVE-2023-38709
+                                    [description] => //vulners.com/cve/CVE-2023-38709
+                                )
+
+                        )
+
+                )
+
+            [6] => Array
+                (
+                    [port] => 3306/tcp
+                    [service] => mysql syn-ack ttl 128 MariaDB (unauthorized)
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                        )
+
+                )
+
+            [7] => Array
+                (
+                    [port] => 7680/tcp
+                    [service] => pando-pub? syn-ack ttl 128
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+)
+
+INFO - 2024-10-23 12:25:58 --> Solicitud realizada a la API para vulnerabilidades.
+INFO - 2024-10-23 12:25:58 --> Datos de vulnerabilidades recibidos: Array
+(
+    [vulnerabilities] => Array
+        (
+            [0] => Array
+                (
+                    [cve] => 
+                    [description] => |   VULNERABLE:
+                )
+
+            [1] => Array
+                (
+                    [cve] => 
+                    [description] => |     State: LIKELY VULNERABLE
+                )
+
+            [2] => Array
+                (
+                    [cve] => CVE-2007-6750
+                    [description] => CVE:CVE-2007-6750
+                )
+
+            [3] => Array
+                (
+                    [cve] => CVE-2007-6750
+                    [description] => //cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6750
+                )
+
+            [4] => Array
+                (
+                    [cve] => CVE-2024-38476
+                    [description] => //vulners.com/cve/CVE-2024-38476
+                )
+
+            [5] => Array
+                (
+                    [cve] => CVE-2024-38474
+                    [description] => //vulners.com/cve/CVE-2024-38474
+                )
+
+            [6] => Array
+                (
+                    [cve] => CVE-2024-38475
+                    [description] => //vulners.com/cve/CVE-2024-38475
+                )
+
+            [7] => Array
+                (
+                    [cve] => CVE-2024-38473
+                    [description] => //vulners.com/cve/CVE-2024-38473
+                )
+
+            [8] => Array
+                (
+                    [cve] => CVE-2024-40898
+                    [description] => //vulners.com/cve/CVE-2024-40898
+                )
+
+            [9] => Array
+                (
+                    [cve] => CVE-2024-39573
+                    [description] => //vulners.com/cve/CVE-2024-39573
+                )
+
+            [10] => Array
+                (
+                    [cve] => CVE-2024-38477
+                    [description] => //vulners.com/cve/CVE-2024-38477
+                )
+
+            [11] => Array
+                (
+                    [cve] => CVE-2024-38472
+                    [description] => //vulners.com/cve/CVE-2024-38472
+                )
+
+            [12] => Array
+                (
+                    [cve] => CVE-2024-27316
+                    [description] => //vulners.com/cve/CVE-2024-27316
+                )
+
+            [13] => Array
+                (
+                    [cve] => CVE-2024-39884
+                    [description] => //vulners.com/cve/CVE-2024-39884
+                )
+
+            [14] => Array
+                (
+                    [cve] => CVE-2024-36387
+                    [description] => //vulners.com/cve/CVE-2024-36387
+                )
+
+            [15] => Array
+                (
+                    [cve] => CVE-2024-24795
+                    [description] => //vulners.com/cve/CVE-2024-24795
+                )
+
+            [16] => Array
+                (
+                    [cve] => CVE-2023-38709
+                    [description] => //vulners.com/cve/CVE-2023-38709
+                )
+
+            [17] => Array
+                (
+                    [cve] => 
+                    [description] => |   VULNERABLE:
+                )
+
+            [18] => Array
+                (
+                    [cve] => 
+                    [description] => |     State: VULNERABLE
+                )
+
+            [19] => Array
+                (
+                    [cve] => CVE-2024-38476
+                    [description] => //vulners.com/cve/CVE-2024-38476
+                )
+
+            [20] => Array
+                (
+                    [cve] => CVE-2024-38474
+                    [description] => //vulners.com/cve/CVE-2024-38474
+                )
+
+            [21] => Array
+                (
+                    [cve] => CVE-2024-38475
+                    [description] => //vulners.com/cve/CVE-2024-38475
+                )
+
+            [22] => Array
+                (
+                    [cve] => CVE-2024-38473
+                    [description] => //vulners.com/cve/CVE-2024-38473
+                )
+
+            [23] => Array
+                (
+                    [cve] => CVE-2024-40898
+                    [description] => //vulners.com/cve/CVE-2024-40898
+                )
+
+            [24] => Array
+                (
+                    [cve] => CVE-2024-39573
+                    [description] => //vulners.com/cve/CVE-2024-39573
+                )
+
+            [25] => Array
+                (
+                    [cve] => CVE-2024-38477
+                    [description] => //vulners.com/cve/CVE-2024-38477
+                )
+
+            [26] => Array
+                (
+                    [cve] => CVE-2024-38472
+                    [description] => //vulners.com/cve/CVE-2024-38472
+                )
+
+            [27] => Array
+                (
+                    [cve] => CVE-2024-27316
+                    [description] => //vulners.com/cve/CVE-2024-27316
+                )
+
+            [28] => Array
+                (
+                    [cve] => CVE-2024-39884
+                    [description] => //vulners.com/cve/CVE-2024-39884
+                )
+
+            [29] => Array
+                (
+                    [cve] => CVE-2024-36387
+                    [description] => //vulners.com/cve/CVE-2024-36387
+                )
+
+            [30] => Array
+                (
+                    [cve] => CVE-2024-24795
+                    [description] => //vulners.com/cve/CVE-2024-24795
+                )
+
+            [31] => Array
+                (
+                    [cve] => CVE-2023-38709
+                    [description] => //vulners.com/cve/CVE-2023-38709
+                )
+
+        )
+
+)
+
+INFO - 2024-10-23 12:28:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 12:28:16 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Network::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-10-23 12:28:18 --> Excepción capturada al intentar conectarse a la API: 7 : Failed to connect to 192.168.2.132 port 5000 after 2042 ms: Couldn't connect to server
+ERROR - 2024-10-23 12:28:20 --> Excepción capturada al intentar conectarse a la API: 7 : Failed to connect to 192.168.2.132 port 5000 after 2065 ms: Couldn't connect to server
+ERROR - 2024-10-23 12:28:20 --> mysqli_sql_exception: Unknown column 'operating_system' in 'field list' in C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO `de...', 0)
+#1 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `de...')
+#2 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `de...')
+#3 C:\xampp\htdocs\NVS\system\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `de...', Array, false)
+#4 C:\xampp\htdocs\NVS\system\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\NVS\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\NVS\system\Model.php(791): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\NVS\app\Controllers\secondary\form\Network.php(154): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\NVS\system\CodeIgniter.php(933): App\Controllers\secondary\form\Network->nmapResults()
+#9 C:\xampp\htdocs\NVS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\form\Network))
+#10 C:\xampp\htdocs\NVS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\NVS\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\NVS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\NVS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2024-10-23 12:28:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'operating_system' in 'field list'
+[Method: GET, Route: nmap-results]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `devices` (`mac_address`, `operating_system`) VALUES (:mac_address:, :operating_system:)', [...], false)
+ 2 SYSTEMPATH\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\secondary\form\Network.php(154): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\secondary\form\Network->nmapResults()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\form\Network))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-23 12:28:20 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'operating_system' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `devices` (`mac_address`, `operating_system`) VALUES (\'N/A\', \'N/A\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `devices` (`mac_address`, `operating_system`) VALUES (\'N/A\', \'N/A\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `devices` (`mac_address`, `operating_system`) VALUES (:mac_address:, :operating_system:)', [...], false)
+ 4 SYSTEMPATH\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\secondary\form\Network.php(154): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\secondary\form\Network->nmapResults()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\form\Network))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-23 12:28:20 --> [Caused by] mysqli_sql_exception: Unknown column 'operating_system' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO `devices` (`mac_address`, `operating_system`) VALUES (\'N/A\', \'N/A\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `devices` (`mac_address`, `operating_system`) VALUES (\'N/A\', \'N/A\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `devices` (`mac_address`, `operating_system`) VALUES (\'N/A\', \'N/A\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `devices` (`mac_address`, `operating_system`) VALUES (:mac_address:, :operating_system:)', [...], false)
+ 5 SYSTEMPATH\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\secondary\form\Network.php(154): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\secondary\form\Network->nmapResults()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\form\Network))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 12:29:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 12:29:32 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\Dashboard::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 12:30:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 12:30:43 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\Dashboard::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 12:30:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 12:30:46 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Network::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 12:30:46 --> Solicitud realizada a la API para puertos y servicios.
+INFO - 2024-10-23 12:30:46 --> Datos de puertos y servicios recibidos: Array
+(
+    [ip] => 192.168.0.23
+    [mac] => 6c:fd:b9:a8:1b:2c
+    [os_info] => Microsoft Windows XP|2019 (89%)
+    [ports_services] => Array
+        (
+            [0] => Array
+                (
+                    [port] => Discovered
+                    [service] => port 3306/tcp on 192.168.0.23
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [port] => Discovered
+                    [service] => port 80/tcp on 192.168.0.23
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [port] => Discovered
+                    [service] => port 443/tcp on 192.168.0.23
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                        )
+
+                )
+
+            [3] => Array
+                (
+                    [port] => Discovered
+                    [service] => port 7680/tcp on 192.168.0.23
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [port] => 80/tcp
+                    [service] => http syn-ack ttl 128 Apache httpd 2.4.58 ((Win64) OpenSSL/3.1.3 PHP/8.2.12)
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [cve] => 
+                                    [description] => |   VULNERABLE:
+                                )
+
+                            [1] => Array
+                                (
+                                    [cve] => 
+                                    [description] => |     State: LIKELY VULNERABLE
+                                )
+
+                            [2] => Array
+                                (
+                                    [cve] => CVE-2007-6750
+                                    [description] => CVE:CVE-2007-6750
+                                )
+
+                            [3] => Array
+                                (
+                                    [cve] => CVE-2007-6750
+                                    [description] => //cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6750
+                                )
+
+                            [4] => Array
+                                (
+                                    [cve] => CVE-2024-38476
+                                    [description] => //vulners.com/cve/CVE-2024-38476
+                                )
+
+                            [5] => Array
+                                (
+                                    [cve] => CVE-2024-38474
+                                    [description] => //vulners.com/cve/CVE-2024-38474
+                                )
+
+                            [6] => Array
+                                (
+                                    [cve] => CVE-2024-38475
+                                    [description] => //vulners.com/cve/CVE-2024-38475
+                                )
+
+                            [7] => Array
+                                (
+                                    [cve] => CVE-2024-38473
+                                    [description] => //vulners.com/cve/CVE-2024-38473
+                                )
+
+                            [8] => Array
+                                (
+                                    [cve] => CVE-2024-40898
+                                    [description] => //vulners.com/cve/CVE-2024-40898
+                                )
+
+                            [9] => Array
+                                (
+                                    [cve] => CVE-2024-39573
+                                    [description] => //vulners.com/cve/CVE-2024-39573
+                                )
+
+                            [10] => Array
+                                (
+                                    [cve] => CVE-2024-38477
+                                    [description] => //vulners.com/cve/CVE-2024-38477
+                                )
+
+                            [11] => Array
+                                (
+                                    [cve] => CVE-2024-38472
+                                    [description] => //vulners.com/cve/CVE-2024-38472
+                                )
+
+                            [12] => Array
+                                (
+                                    [cve] => CVE-2024-27316
+                                    [description] => //vulners.com/cve/CVE-2024-27316
+                                )
+
+                            [13] => Array
+                                (
+                                    [cve] => CVE-2024-39884
+                                    [description] => //vulners.com/cve/CVE-2024-39884
+                                )
+
+                            [14] => Array
+                                (
+                                    [cve] => CVE-2024-36387
+                                    [description] => //vulners.com/cve/CVE-2024-36387
+                                )
+
+                            [15] => Array
+                                (
+                                    [cve] => CVE-2024-24795
+                                    [description] => //vulners.com/cve/CVE-2024-24795
+                                )
+
+                            [16] => Array
+                                (
+                                    [cve] => CVE-2023-38709
+                                    [description] => //vulners.com/cve/CVE-2023-38709
+                                )
+
+                        )
+
+                )
+
+            [5] => Array
+                (
+                    [port] => 443/tcp
+                    [service] => ssl/http syn-ack ttl 128 Apache httpd 2.4.58 ((Win64) OpenSSL/3.1.3 PHP/8.2.12)
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [cve] => 
+                                    [description] => |   VULNERABLE:
+                                )
+
+                            [1] => Array
+                                (
+                                    [cve] => 
+                                    [description] => |     State: VULNERABLE
+                                )
+
+                            [2] => Array
+                                (
+                                    [cve] => CVE-2024-38476
+                                    [description] => //vulners.com/cve/CVE-2024-38476
+                                )
+
+                            [3] => Array
+                                (
+                                    [cve] => CVE-2024-38474
+                                    [description] => //vulners.com/cve/CVE-2024-38474
+                                )
+
+                            [4] => Array
+                                (
+                                    [cve] => CVE-2024-38475
+                                    [description] => //vulners.com/cve/CVE-2024-38475
+                                )
+
+                            [5] => Array
+                                (
+                                    [cve] => CVE-2024-38473
+                                    [description] => //vulners.com/cve/CVE-2024-38473
+                                )
+
+                            [6] => Array
+                                (
+                                    [cve] => CVE-2024-40898
+                                    [description] => //vulners.com/cve/CVE-2024-40898
+                                )
+
+                            [7] => Array
+                                (
+                                    [cve] => CVE-2024-39573
+                                    [description] => //vulners.com/cve/CVE-2024-39573
+                                )
+
+                            [8] => Array
+                                (
+                                    [cve] => CVE-2024-38477
+                                    [description] => //vulners.com/cve/CVE-2024-38477
+                                )
+
+                            [9] => Array
+                                (
+                                    [cve] => CVE-2024-38472
+                                    [description] => //vulners.com/cve/CVE-2024-38472
+                                )
+
+                            [10] => Array
+                                (
+                                    [cve] => CVE-2024-27316
+                                    [description] => //vulners.com/cve/CVE-2024-27316
+                                )
+
+                            [11] => Array
+                                (
+                                    [cve] => CVE-2024-39884
+                                    [description] => //vulners.com/cve/CVE-2024-39884
+                                )
+
+                            [12] => Array
+                                (
+                                    [cve] => CVE-2024-36387
+                                    [description] => //vulners.com/cve/CVE-2024-36387
+                                )
+
+                            [13] => Array
+                                (
+                                    [cve] => CVE-2024-24795
+                                    [description] => //vulners.com/cve/CVE-2024-24795
+                                )
+
+                            [14] => Array
+                                (
+                                    [cve] => CVE-2023-38709
+                                    [description] => //vulners.com/cve/CVE-2023-38709
+                                )
+
+                        )
+
+                )
+
+            [6] => Array
+                (
+                    [port] => 3306/tcp
+                    [service] => mysql syn-ack ttl 128 MariaDB (unauthorized)
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                        )
+
+                )
+
+            [7] => Array
+                (
+                    [port] => 7680/tcp
+                    [service] => pando-pub? syn-ack ttl 128
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+)
+
+INFO - 2024-10-23 12:30:46 --> Solicitud realizada a la API para vulnerabilidades.
+INFO - 2024-10-23 12:30:46 --> Datos de vulnerabilidades recibidos: Array
+(
+    [vulnerabilities] => Array
+        (
+            [0] => Array
+                (
+                    [cve] => 
+                    [description] => |   VULNERABLE:
+                )
+
+            [1] => Array
+                (
+                    [cve] => 
+                    [description] => |     State: LIKELY VULNERABLE
+                )
+
+            [2] => Array
+                (
+                    [cve] => CVE-2007-6750
+                    [description] => CVE:CVE-2007-6750
+                )
+
+            [3] => Array
+                (
+                    [cve] => CVE-2007-6750
+                    [description] => //cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6750
+                )
+
+            [4] => Array
+                (
+                    [cve] => CVE-2024-38476
+                    [description] => //vulners.com/cve/CVE-2024-38476
+                )
+
+            [5] => Array
+                (
+                    [cve] => CVE-2024-38474
+                    [description] => //vulners.com/cve/CVE-2024-38474
+                )
+
+            [6] => Array
+                (
+                    [cve] => CVE-2024-38475
+                    [description] => //vulners.com/cve/CVE-2024-38475
+                )
+
+            [7] => Array
+                (
+                    [cve] => CVE-2024-38473
+                    [description] => //vulners.com/cve/CVE-2024-38473
+                )
+
+            [8] => Array
+                (
+                    [cve] => CVE-2024-40898
+                    [description] => //vulners.com/cve/CVE-2024-40898
+                )
+
+            [9] => Array
+                (
+                    [cve] => CVE-2024-39573
+                    [description] => //vulners.com/cve/CVE-2024-39573
+                )
+
+            [10] => Array
+                (
+                    [cve] => CVE-2024-38477
+                    [description] => //vulners.com/cve/CVE-2024-38477
+                )
+
+            [11] => Array
+                (
+                    [cve] => CVE-2024-38472
+                    [description] => //vulners.com/cve/CVE-2024-38472
+                )
+
+            [12] => Array
+                (
+                    [cve] => CVE-2024-27316
+                    [description] => //vulners.com/cve/CVE-2024-27316
+                )
+
+            [13] => Array
+                (
+                    [cve] => CVE-2024-39884
+                    [description] => //vulners.com/cve/CVE-2024-39884
+                )
+
+            [14] => Array
+                (
+                    [cve] => CVE-2024-36387
+                    [description] => //vulners.com/cve/CVE-2024-36387
+                )
+
+            [15] => Array
+                (
+                    [cve] => CVE-2024-24795
+                    [description] => //vulners.com/cve/CVE-2024-24795
+                )
+
+            [16] => Array
+                (
+                    [cve] => CVE-2023-38709
+                    [description] => //vulners.com/cve/CVE-2023-38709
+                )
+
+            [17] => Array
+                (
+                    [cve] => 
+                    [description] => |   VULNERABLE:
+                )
+
+            [18] => Array
+                (
+                    [cve] => 
+                    [description] => |     State: VULNERABLE
+                )
+
+            [19] => Array
+                (
+                    [cve] => CVE-2024-38476
+                    [description] => //vulners.com/cve/CVE-2024-38476
+                )
+
+            [20] => Array
+                (
+                    [cve] => CVE-2024-38474
+                    [description] => //vulners.com/cve/CVE-2024-38474
+                )
+
+            [21] => Array
+                (
+                    [cve] => CVE-2024-38475
+                    [description] => //vulners.com/cve/CVE-2024-38475
+                )
+
+            [22] => Array
+                (
+                    [cve] => CVE-2024-38473
+                    [description] => //vulners.com/cve/CVE-2024-38473
+                )
+
+            [23] => Array
+                (
+                    [cve] => CVE-2024-40898
+                    [description] => //vulners.com/cve/CVE-2024-40898
+                )
+
+            [24] => Array
+                (
+                    [cve] => CVE-2024-39573
+                    [description] => //vulners.com/cve/CVE-2024-39573
+                )
+
+            [25] => Array
+                (
+                    [cve] => CVE-2024-38477
+                    [description] => //vulners.com/cve/CVE-2024-38477
+                )
+
+            [26] => Array
+                (
+                    [cve] => CVE-2024-38472
+                    [description] => //vulners.com/cve/CVE-2024-38472
+                )
+
+            [27] => Array
+                (
+                    [cve] => CVE-2024-27316
+                    [description] => //vulners.com/cve/CVE-2024-27316
+                )
+
+            [28] => Array
+                (
+                    [cve] => CVE-2024-39884
+                    [description] => //vulners.com/cve/CVE-2024-39884
+                )
+
+            [29] => Array
+                (
+                    [cve] => CVE-2024-36387
+                    [description] => //vulners.com/cve/CVE-2024-36387
+                )
+
+            [30] => Array
+                (
+                    [cve] => CVE-2024-24795
+                    [description] => //vulners.com/cve/CVE-2024-24795
+                )
+
+            [31] => Array
+                (
+                    [cve] => CVE-2023-38709
+                    [description] => //vulners.com/cve/CVE-2023-38709
+                )
+
+        )
+
+)
+
+INFO - 2024-10-23 12:32:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 12:32:19 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Network::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 12:32:19 --> Solicitud realizada a la API para puertos y servicios.
+INFO - 2024-10-23 12:32:19 --> Datos de puertos y servicios recibidos: Array
+(
+    [ip] => 192.168.0.23
+    [mac] => 6c:fd:b9:a8:1b:2c
+    [os_info] => Microsoft Windows XP|2019 (89%)
+    [ports_services] => Array
+        (
+            [0] => Array
+                (
+                    [port] => Discovered
+                    [service] => port 3306/tcp on 192.168.0.23
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [port] => Discovered
+                    [service] => port 80/tcp on 192.168.0.23
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [port] => Discovered
+                    [service] => port 443/tcp on 192.168.0.23
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                        )
+
+                )
+
+            [3] => Array
+                (
+                    [port] => Discovered
+                    [service] => port 7680/tcp on 192.168.0.23
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [port] => 80/tcp
+                    [service] => http syn-ack ttl 128 Apache httpd 2.4.58 ((Win64) OpenSSL/3.1.3 PHP/8.2.12)
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [cve] => 
+                                    [description] => |   VULNERABLE:
+                                )
+
+                            [1] => Array
+                                (
+                                    [cve] => 
+                                    [description] => |     State: LIKELY VULNERABLE
+                                )
+
+                            [2] => Array
+                                (
+                                    [cve] => CVE-2007-6750
+                                    [description] => CVE:CVE-2007-6750
+                                )
+
+                            [3] => Array
+                                (
+                                    [cve] => CVE-2007-6750
+                                    [description] => //cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6750
+                                )
+
+                            [4] => Array
+                                (
+                                    [cve] => CVE-2024-38476
+                                    [description] => //vulners.com/cve/CVE-2024-38476
+                                )
+
+                            [5] => Array
+                                (
+                                    [cve] => CVE-2024-38474
+                                    [description] => //vulners.com/cve/CVE-2024-38474
+                                )
+
+                            [6] => Array
+                                (
+                                    [cve] => CVE-2024-38475
+                                    [description] => //vulners.com/cve/CVE-2024-38475
+                                )
+
+                            [7] => Array
+                                (
+                                    [cve] => CVE-2024-38473
+                                    [description] => //vulners.com/cve/CVE-2024-38473
+                                )
+
+                            [8] => Array
+                                (
+                                    [cve] => CVE-2024-40898
+                                    [description] => //vulners.com/cve/CVE-2024-40898
+                                )
+
+                            [9] => Array
+                                (
+                                    [cve] => CVE-2024-39573
+                                    [description] => //vulners.com/cve/CVE-2024-39573
+                                )
+
+                            [10] => Array
+                                (
+                                    [cve] => CVE-2024-38477
+                                    [description] => //vulners.com/cve/CVE-2024-38477
+                                )
+
+                            [11] => Array
+                                (
+                                    [cve] => CVE-2024-38472
+                                    [description] => //vulners.com/cve/CVE-2024-38472
+                                )
+
+                            [12] => Array
+                                (
+                                    [cve] => CVE-2024-27316
+                                    [description] => //vulners.com/cve/CVE-2024-27316
+                                )
+
+                            [13] => Array
+                                (
+                                    [cve] => CVE-2024-39884
+                                    [description] => //vulners.com/cve/CVE-2024-39884
+                                )
+
+                            [14] => Array
+                                (
+                                    [cve] => CVE-2024-36387
+                                    [description] => //vulners.com/cve/CVE-2024-36387
+                                )
+
+                            [15] => Array
+                                (
+                                    [cve] => CVE-2024-24795
+                                    [description] => //vulners.com/cve/CVE-2024-24795
+                                )
+
+                            [16] => Array
+                                (
+                                    [cve] => CVE-2023-38709
+                                    [description] => //vulners.com/cve/CVE-2023-38709
+                                )
+
+                        )
+
+                )
+
+            [5] => Array
+                (
+                    [port] => 443/tcp
+                    [service] => ssl/http syn-ack ttl 128 Apache httpd 2.4.58 ((Win64) OpenSSL/3.1.3 PHP/8.2.12)
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [cve] => 
+                                    [description] => |   VULNERABLE:
+                                )
+
+                            [1] => Array
+                                (
+                                    [cve] => 
+                                    [description] => |     State: VULNERABLE
+                                )
+
+                            [2] => Array
+                                (
+                                    [cve] => CVE-2024-38476
+                                    [description] => //vulners.com/cve/CVE-2024-38476
+                                )
+
+                            [3] => Array
+                                (
+                                    [cve] => CVE-2024-38474
+                                    [description] => //vulners.com/cve/CVE-2024-38474
+                                )
+
+                            [4] => Array
+                                (
+                                    [cve] => CVE-2024-38475
+                                    [description] => //vulners.com/cve/CVE-2024-38475
+                                )
+
+                            [5] => Array
+                                (
+                                    [cve] => CVE-2024-38473
+                                    [description] => //vulners.com/cve/CVE-2024-38473
+                                )
+
+                            [6] => Array
+                                (
+                                    [cve] => CVE-2024-40898
+                                    [description] => //vulners.com/cve/CVE-2024-40898
+                                )
+
+                            [7] => Array
+                                (
+                                    [cve] => CVE-2024-39573
+                                    [description] => //vulners.com/cve/CVE-2024-39573
+                                )
+
+                            [8] => Array
+                                (
+                                    [cve] => CVE-2024-38477
+                                    [description] => //vulners.com/cve/CVE-2024-38477
+                                )
+
+                            [9] => Array
+                                (
+                                    [cve] => CVE-2024-38472
+                                    [description] => //vulners.com/cve/CVE-2024-38472
+                                )
+
+                            [10] => Array
+                                (
+                                    [cve] => CVE-2024-27316
+                                    [description] => //vulners.com/cve/CVE-2024-27316
+                                )
+
+                            [11] => Array
+                                (
+                                    [cve] => CVE-2024-39884
+                                    [description] => //vulners.com/cve/CVE-2024-39884
+                                )
+
+                            [12] => Array
+                                (
+                                    [cve] => CVE-2024-36387
+                                    [description] => //vulners.com/cve/CVE-2024-36387
+                                )
+
+                            [13] => Array
+                                (
+                                    [cve] => CVE-2024-24795
+                                    [description] => //vulners.com/cve/CVE-2024-24795
+                                )
+
+                            [14] => Array
+                                (
+                                    [cve] => CVE-2023-38709
+                                    [description] => //vulners.com/cve/CVE-2023-38709
+                                )
+
+                        )
+
+                )
+
+            [6] => Array
+                (
+                    [port] => 3306/tcp
+                    [service] => mysql syn-ack ttl 128 MariaDB (unauthorized)
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                        )
+
+                )
+
+            [7] => Array
+                (
+                    [port] => 7680/tcp
+                    [service] => pando-pub? syn-ack ttl 128
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+)
+
+INFO - 2024-10-23 12:32:19 --> Solicitud realizada a la API para vulnerabilidades.
+INFO - 2024-10-23 12:32:19 --> Datos de vulnerabilidades recibidos: Array
+(
+    [vulnerabilities] => Array
+        (
+            [0] => Array
+                (
+                    [cve] => 
+                    [description] => |   VULNERABLE:
+                )
+
+            [1] => Array
+                (
+                    [cve] => 
+                    [description] => |     State: LIKELY VULNERABLE
+                )
+
+            [2] => Array
+                (
+                    [cve] => CVE-2007-6750
+                    [description] => CVE:CVE-2007-6750
+                )
+
+            [3] => Array
+                (
+                    [cve] => CVE-2007-6750
+                    [description] => //cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6750
+                )
+
+            [4] => Array
+                (
+                    [cve] => CVE-2024-38476
+                    [description] => //vulners.com/cve/CVE-2024-38476
+                )
+
+            [5] => Array
+                (
+                    [cve] => CVE-2024-38474
+                    [description] => //vulners.com/cve/CVE-2024-38474
+                )
+
+            [6] => Array
+                (
+                    [cve] => CVE-2024-38475
+                    [description] => //vulners.com/cve/CVE-2024-38475
+                )
+
+            [7] => Array
+                (
+                    [cve] => CVE-2024-38473
+                    [description] => //vulners.com/cve/CVE-2024-38473
+                )
+
+            [8] => Array
+                (
+                    [cve] => CVE-2024-40898
+                    [description] => //vulners.com/cve/CVE-2024-40898
+                )
+
+            [9] => Array
+                (
+                    [cve] => CVE-2024-39573
+                    [description] => //vulners.com/cve/CVE-2024-39573
+                )
+
+            [10] => Array
+                (
+                    [cve] => CVE-2024-38477
+                    [description] => //vulners.com/cve/CVE-2024-38477
+                )
+
+            [11] => Array
+                (
+                    [cve] => CVE-2024-38472
+                    [description] => //vulners.com/cve/CVE-2024-38472
+                )
+
+            [12] => Array
+                (
+                    [cve] => CVE-2024-27316
+                    [description] => //vulners.com/cve/CVE-2024-27316
+                )
+
+            [13] => Array
+                (
+                    [cve] => CVE-2024-39884
+                    [description] => //vulners.com/cve/CVE-2024-39884
+                )
+
+            [14] => Array
+                (
+                    [cve] => CVE-2024-36387
+                    [description] => //vulners.com/cve/CVE-2024-36387
+                )
+
+            [15] => Array
+                (
+                    [cve] => CVE-2024-24795
+                    [description] => //vulners.com/cve/CVE-2024-24795
+                )
+
+            [16] => Array
+                (
+                    [cve] => CVE-2023-38709
+                    [description] => //vulners.com/cve/CVE-2023-38709
+                )
+
+            [17] => Array
+                (
+                    [cve] => 
+                    [description] => |   VULNERABLE:
+                )
+
+            [18] => Array
+                (
+                    [cve] => 
+                    [description] => |     State: VULNERABLE
+                )
+
+            [19] => Array
+                (
+                    [cve] => CVE-2024-38476
+                    [description] => //vulners.com/cve/CVE-2024-38476
+                )
+
+            [20] => Array
+                (
+                    [cve] => CVE-2024-38474
+                    [description] => //vulners.com/cve/CVE-2024-38474
+                )
+
+            [21] => Array
+                (
+                    [cve] => CVE-2024-38475
+                    [description] => //vulners.com/cve/CVE-2024-38475
+                )
+
+            [22] => Array
+                (
+                    [cve] => CVE-2024-38473
+                    [description] => //vulners.com/cve/CVE-2024-38473
+                )
+
+            [23] => Array
+                (
+                    [cve] => CVE-2024-40898
+                    [description] => //vulners.com/cve/CVE-2024-40898
+                )
+
+            [24] => Array
+                (
+                    [cve] => CVE-2024-39573
+                    [description] => //vulners.com/cve/CVE-2024-39573
+                )
+
+            [25] => Array
+                (
+                    [cve] => CVE-2024-38477
+                    [description] => //vulners.com/cve/CVE-2024-38477
+                )
+
+            [26] => Array
+                (
+                    [cve] => CVE-2024-38472
+                    [description] => //vulners.com/cve/CVE-2024-38472
+                )
+
+            [27] => Array
+                (
+                    [cve] => CVE-2024-27316
+                    [description] => //vulners.com/cve/CVE-2024-27316
+                )
+
+            [28] => Array
+                (
+                    [cve] => CVE-2024-39884
+                    [description] => //vulners.com/cve/CVE-2024-39884
+                )
+
+            [29] => Array
+                (
+                    [cve] => CVE-2024-36387
+                    [description] => //vulners.com/cve/CVE-2024-36387
+                )
+
+            [30] => Array
+                (
+                    [cve] => CVE-2024-24795
+                    [description] => //vulners.com/cve/CVE-2024-24795
+                )
+
+            [31] => Array
+                (
+                    [cve] => CVE-2023-38709
+                    [description] => //vulners.com/cve/CVE-2023-38709
+                )
+
+        )
+
+)
+
+INFO - 2024-10-23 12:36:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-23 12:36:38 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Network::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-23 12:36:38 --> Solicitud realizada a la API para puertos y servicios.
+INFO - 2024-10-23 12:36:38 --> Datos de puertos y servicios recibidos: Array
+(
+    [ip] => 192.168.0.23
+    [mac] => 6c:fd:b9:a8:1b:2c
+    [os_info] => Microsoft Windows XP|2019 (89%)
+    [ports_services] => Array
+        (
+            [0] => Array
+                (
+                    [port] => Discovered
+                    [service] => port 3306/tcp on 192.168.0.23
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [port] => Discovered
+                    [service] => port 80/tcp on 192.168.0.23
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [port] => Discovered
+                    [service] => port 443/tcp on 192.168.0.23
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                        )
+
+                )
+
+            [3] => Array
+                (
+                    [port] => Discovered
+                    [service] => port 7680/tcp on 192.168.0.23
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [port] => 80/tcp
+                    [service] => http syn-ack ttl 128 Apache httpd 2.4.58 ((Win64) OpenSSL/3.1.3 PHP/8.2.12)
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [cve] => 
+                                    [description] => |   VULNERABLE:
+                                )
+
+                            [1] => Array
+                                (
+                                    [cve] => 
+                                    [description] => |     State: LIKELY VULNERABLE
+                                )
+
+                            [2] => Array
+                                (
+                                    [cve] => CVE-2007-6750
+                                    [description] => CVE:CVE-2007-6750
+                                )
+
+                            [3] => Array
+                                (
+                                    [cve] => CVE-2007-6750
+                                    [description] => //cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6750
+                                )
+
+                            [4] => Array
+                                (
+                                    [cve] => CVE-2024-38476
+                                    [description] => //vulners.com/cve/CVE-2024-38476
+                                )
+
+                            [5] => Array
+                                (
+                                    [cve] => CVE-2024-38474
+                                    [description] => //vulners.com/cve/CVE-2024-38474
+                                )
+
+                            [6] => Array
+                                (
+                                    [cve] => CVE-2024-38475
+                                    [description] => //vulners.com/cve/CVE-2024-38475
+                                )
+
+                            [7] => Array
+                                (
+                                    [cve] => CVE-2024-38473
+                                    [description] => //vulners.com/cve/CVE-2024-38473
+                                )
+
+                            [8] => Array
+                                (
+                                    [cve] => CVE-2024-40898
+                                    [description] => //vulners.com/cve/CVE-2024-40898
+                                )
+
+                            [9] => Array
+                                (
+                                    [cve] => CVE-2024-39573
+                                    [description] => //vulners.com/cve/CVE-2024-39573
+                                )
+
+                            [10] => Array
+                                (
+                                    [cve] => CVE-2024-38477
+                                    [description] => //vulners.com/cve/CVE-2024-38477
+                                )
+
+                            [11] => Array
+                                (
+                                    [cve] => CVE-2024-38472
+                                    [description] => //vulners.com/cve/CVE-2024-38472
+                                )
+
+                            [12] => Array
+                                (
+                                    [cve] => CVE-2024-27316
+                                    [description] => //vulners.com/cve/CVE-2024-27316
+                                )
+
+                            [13] => Array
+                                (
+                                    [cve] => CVE-2024-39884
+                                    [description] => //vulners.com/cve/CVE-2024-39884
+                                )
+
+                            [14] => Array
+                                (
+                                    [cve] => CVE-2024-36387
+                                    [description] => //vulners.com/cve/CVE-2024-36387
+                                )
+
+                            [15] => Array
+                                (
+                                    [cve] => CVE-2024-24795
+                                    [description] => //vulners.com/cve/CVE-2024-24795
+                                )
+
+                            [16] => Array
+                                (
+                                    [cve] => CVE-2023-38709
+                                    [description] => //vulners.com/cve/CVE-2023-38709
+                                )
+
+                        )
+
+                )
+
+            [5] => Array
+                (
+                    [port] => 443/tcp
+                    [service] => ssl/http syn-ack ttl 128 Apache httpd 2.4.58 ((Win64) OpenSSL/3.1.3 PHP/8.2.12)
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [cve] => 
+                                    [description] => |   VULNERABLE:
+                                )
+
+                            [1] => Array
+                                (
+                                    [cve] => 
+                                    [description] => |     State: VULNERABLE
+                                )
+
+                            [2] => Array
+                                (
+                                    [cve] => CVE-2024-38476
+                                    [description] => //vulners.com/cve/CVE-2024-38476
+                                )
+
+                            [3] => Array
+                                (
+                                    [cve] => CVE-2024-38474
+                                    [description] => //vulners.com/cve/CVE-2024-38474
+                                )
+
+                            [4] => Array
+                                (
+                                    [cve] => CVE-2024-38475
+                                    [description] => //vulners.com/cve/CVE-2024-38475
+                                )
+
+                            [5] => Array
+                                (
+                                    [cve] => CVE-2024-38473
+                                    [description] => //vulners.com/cve/CVE-2024-38473
+                                )
+
+                            [6] => Array
+                                (
+                                    [cve] => CVE-2024-40898
+                                    [description] => //vulners.com/cve/CVE-2024-40898
+                                )
+
+                            [7] => Array
+                                (
+                                    [cve] => CVE-2024-39573
+                                    [description] => //vulners.com/cve/CVE-2024-39573
+                                )
+
+                            [8] => Array
+                                (
+                                    [cve] => CVE-2024-38477
+                                    [description] => //vulners.com/cve/CVE-2024-38477
+                                )
+
+                            [9] => Array
+                                (
+                                    [cve] => CVE-2024-38472
+                                    [description] => //vulners.com/cve/CVE-2024-38472
+                                )
+
+                            [10] => Array
+                                (
+                                    [cve] => CVE-2024-27316
+                                    [description] => //vulners.com/cve/CVE-2024-27316
+                                )
+
+                            [11] => Array
+                                (
+                                    [cve] => CVE-2024-39884
+                                    [description] => //vulners.com/cve/CVE-2024-39884
+                                )
+
+                            [12] => Array
+                                (
+                                    [cve] => CVE-2024-36387
+                                    [description] => //vulners.com/cve/CVE-2024-36387
+                                )
+
+                            [13] => Array
+                                (
+                                    [cve] => CVE-2024-24795
+                                    [description] => //vulners.com/cve/CVE-2024-24795
+                                )
+
+                            [14] => Array
+                                (
+                                    [cve] => CVE-2023-38709
+                                    [description] => //vulners.com/cve/CVE-2023-38709
+                                )
+
+                        )
+
+                )
+
+            [6] => Array
+                (
+                    [port] => 3306/tcp
+                    [service] => mysql syn-ack ttl 128 MariaDB (unauthorized)
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                        )
+
+                )
+
+            [7] => Array
+                (
+                    [port] => 7680/tcp
+                    [service] => pando-pub? syn-ack ttl 128
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+)
+
+INFO - 2024-10-23 12:36:38 --> Solicitud realizada a la API para vulnerabilidades.
+INFO - 2024-10-23 12:36:38 --> Datos de vulnerabilidades recibidos: Array
+(
+    [vulnerabilities] => Array
+        (
+            [0] => Array
+                (
+                    [cve] => 
+                    [description] => |   VULNERABLE:
+                )
+
+            [1] => Array
+                (
+                    [cve] => 
+                    [description] => |     State: LIKELY VULNERABLE
+                )
+
+            [2] => Array
+                (
+                    [cve] => CVE-2007-6750
+                    [description] => CVE:CVE-2007-6750
+                )
+
+            [3] => Array
+                (
+                    [cve] => CVE-2007-6750
+                    [description] => //cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6750
+                )
+
+            [4] => Array
+                (
+                    [cve] => CVE-2024-38476
+                    [description] => //vulners.com/cve/CVE-2024-38476
+                )
+
+            [5] => Array
+                (
+                    [cve] => CVE-2024-38474
+                    [description] => //vulners.com/cve/CVE-2024-38474
+                )
+
+            [6] => Array
+                (
+                    [cve] => CVE-2024-38475
+                    [description] => //vulners.com/cve/CVE-2024-38475
+                )
+
+            [7] => Array
+                (
+                    [cve] => CVE-2024-38473
+                    [description] => //vulners.com/cve/CVE-2024-38473
+                )
+
+            [8] => Array
+                (
+                    [cve] => CVE-2024-40898
+                    [description] => //vulners.com/cve/CVE-2024-40898
+                )
+
+            [9] => Array
+                (
+                    [cve] => CVE-2024-39573
+                    [description] => //vulners.com/cve/CVE-2024-39573
+                )
+
+            [10] => Array
+                (
+                    [cve] => CVE-2024-38477
+                    [description] => //vulners.com/cve/CVE-2024-38477
+                )
+
+            [11] => Array
+                (
+                    [cve] => CVE-2024-38472
+                    [description] => //vulners.com/cve/CVE-2024-38472
+                )
+
+            [12] => Array
+                (
+                    [cve] => CVE-2024-27316
+                    [description] => //vulners.com/cve/CVE-2024-27316
+                )
+
+            [13] => Array
+                (
+                    [cve] => CVE-2024-39884
+                    [description] => //vulners.com/cve/CVE-2024-39884
+                )
+
+            [14] => Array
+                (
+                    [cve] => CVE-2024-36387
+                    [description] => //vulners.com/cve/CVE-2024-36387
+                )
+
+            [15] => Array
+                (
+                    [cve] => CVE-2024-24795
+                    [description] => //vulners.com/cve/CVE-2024-24795
+                )
+
+            [16] => Array
+                (
+                    [cve] => CVE-2023-38709
+                    [description] => //vulners.com/cve/CVE-2023-38709
+                )
+
+            [17] => Array
+                (
+                    [cve] => 
+                    [description] => |   VULNERABLE:
+                )
+
+            [18] => Array
+                (
+                    [cve] => 
+                    [description] => |     State: VULNERABLE
+                )
+
+            [19] => Array
+                (
+                    [cve] => CVE-2024-38476
+                    [description] => //vulners.com/cve/CVE-2024-38476
+                )
+
+            [20] => Array
+                (
+                    [cve] => CVE-2024-38474
+                    [description] => //vulners.com/cve/CVE-2024-38474
+                )
+
+            [21] => Array
+                (
+                    [cve] => CVE-2024-38475
+                    [description] => //vulners.com/cve/CVE-2024-38475
+                )
+
+            [22] => Array
+                (
+                    [cve] => CVE-2024-38473
+                    [description] => //vulners.com/cve/CVE-2024-38473
+                )
+
+            [23] => Array
+                (
+                    [cve] => CVE-2024-40898
+                    [description] => //vulners.com/cve/CVE-2024-40898
+                )
+
+            [24] => Array
+                (
+                    [cve] => CVE-2024-39573
+                    [description] => //vulners.com/cve/CVE-2024-39573
+                )
+
+            [25] => Array
+                (
+                    [cve] => CVE-2024-38477
+                    [description] => //vulners.com/cve/CVE-2024-38477
+                )
+
+            [26] => Array
+                (
+                    [cve] => CVE-2024-38472
+                    [description] => //vulners.com/cve/CVE-2024-38472
+                )
+
+            [27] => Array
+                (
+                    [cve] => CVE-2024-27316
+                    [description] => //vulners.com/cve/CVE-2024-27316
+                )
+
+            [28] => Array
+                (
+                    [cve] => CVE-2024-39884
+                    [description] => //vulners.com/cve/CVE-2024-39884
+                )
+
+            [29] => Array
+                (
+                    [cve] => CVE-2024-36387
+                    [description] => //vulners.com/cve/CVE-2024-36387
+                )
+
+            [30] => Array
+                (
+                    [cve] => CVE-2024-24795
+                    [description] => //vulners.com/cve/CVE-2024-24795
+                )
+
+            [31] => Array
+                (
+                    [cve] => CVE-2023-38709
+                    [description] => //vulners.com/cve/CVE-2023-38709
+                )
+
+        )
+
+)
+

@@ -8,7 +8,7 @@ class DeviceModel extends Model
 {
     protected $table = 'devices';
     protected $primaryKey = 'id_devices';
-    protected $allowedFields = ['ip _address', 'operating_system', 'mac_address'];
+    protected $allowedFields = ['ip_address', 'operating_system', 'mac_address'];
 
     
 }

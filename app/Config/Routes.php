@@ -59,3 +59,9 @@ $routes->get('nmap-results', 'secondary\form\Network::nmapResults');
 $routes->get('network-animation', 'secondary\form\Network::animation');
 
 $routes->post('history/deleteScan/(:num)', 'secondary\profile\History::deleteScan/$1');
+
+
+
+//TESTING
+$routes->get('ip', 'secondary\form\Network::ipview');
+$routes->POST('ipset', 'secondary\form\Network::ipset');

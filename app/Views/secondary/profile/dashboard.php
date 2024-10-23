@@ -24,6 +24,8 @@
         <header class="main-header">
             <h1>Welcome, <?= session('user')->name; ?></h1>
             <p>Overview of your activities</p>
+            <li><a href="<?= base_url('ip'); ?>">ip<i class="fa-solid fa-arrow-right-from-bracket"></i></a></li>
+
         </header>
 
         <section class="dashboard-sections">

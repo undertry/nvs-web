@@ -89,10 +89,12 @@ class Network extends BaseController
     public function nmapResults()
     {
         $client = \Config\Services::curlrequest();
-    
+        $ip = session('ip'); 
         // Obtener los datos de puertos, IP, MAC, servicios, OS
         try {
-            $response = $client->get('http://192.168.0.162:5000/nmap/ports-services');
+           
+            $response = $client->get('http://' . $ip . ':5000/nmap/ports-services');
+
             log_message('info', 'Solicitud realizada a la API para puertos y servicios.');
     
             if ($response->getStatusCode() == 200) {
@@ -109,7 +111,7 @@ class Network extends BaseController
     
         // Obtener las vulnerabilidades
         try {
-            $response = $client->get('http://192.168.0.162:5000/nmap/vulnerabilities');
+            $response = $client->get('http://' . $ip . ':5000/nmap/vulnerabilities');
             log_message('info', 'Solicitud realizada a la API para vulnerabilidades.');
     
             if ($response->getStatusCode() == 200) {
@@ -219,6 +221,16 @@ class Network extends BaseController
         ]);
     }
     
+    public function ipview()
+    {
+        return view('tertiary/network/networkin');
+    }
+    public function ipset()
+    {
+        $ip = $this->request->getPost('ip');
+        $this->session->set("ip", $ip);
+        return redirect()->to('dashboard');
+    }
 
     public function animation()
     {
