@@ -148,15 +148,19 @@ button:hover {
         <h2>Vulnerabilidades</h2>
         <button id="toggle-vulnerabilities">Ver Vulnerabilidades</button>
         <div id="vulnerabilities-list" style="display: none;"> <!-- Inicialmente oculto -->
-            <?php if (!empty($nmap_vulnerabilities['vulnerabilities'])): ?>
-                <ul>
-                    <?php foreach ($nmap_vulnerabilities['vulnerabilities'] as $vuln): ?>
-                        <li><strong>CVE:</strong> <?= $vuln['cve'] ?> - <?= $vuln['description'] ?></li>
-                    <?php endforeach; ?>
-                </ul>
-            <?php else: ?>
-                <p>No se encontraron vulnerabilidades.</p>
-            <?php endif; ?>
+        <?php if (!empty($nmap_vulnerabilities['vulnerabilities'])): ?>
+    <ul>
+        <?php foreach ($nmap_vulnerabilities['vulnerabilities'] as $vuln): ?>
+            <li>
+                <strong>CVE:</strong> <?= $vuln['cve'] ?? 'No CVE disponible' ?> 
+                - <?= $vuln['description'] ?>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+<?php else: ?>
+    <p>No se encontraron vulnerabilidades.</p>
+<?php endif; ?>
+
         </div>
     </section>
 </div>

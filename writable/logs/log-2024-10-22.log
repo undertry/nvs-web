@@ -1,0 +1,1615 @@
+INFO - 2024-10-22 23:46:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-22 23:46:35 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Network::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-10-22 23:46:37 --> Excepción capturada al intentar conectarse a la API: 7 : Failed to connect to 192.168.0.162 port 5000 after 2070 ms: Couldn't connect to server
+ERROR - 2024-10-22 23:46:39 --> Excepción capturada al intentar conectarse a la API: 7 : Failed to connect to 192.168.0.162 port 5000 after 2047 ms: Couldn't connect to server
+CRITICAL - 2024-10-22 23:46:39 --> ErrorException: Attempt to read property "id_user" on null
+[Method: GET, Route: nmap-results]
+in APPPATH\Controllers\secondary\form\Network.php on line 128.
+ 1 APPPATH\Controllers\secondary\form\Network.php(128): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_user" on null', 'C:\\xampp\\htdocs\\NVS\\app\\Controllers\\secondary\\form\\Network.php', 128)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\secondary\form\Network->nmapResults()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\form\Network))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-22 23:46:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-22 23:46:47 --> [DEPRECATED] Creation of dynamic property App\Controllers\main\Home::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-22 23:46:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-22 23:46:51 --> [DEPRECATED] Creation of dynamic property App\Controllers\main\Home::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-22 23:46:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-22 23:46:52 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Login::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-22 23:46:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-22 23:46:53 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Login::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-22 23:47:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-22 23:47:05 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Login::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-22 23:47:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-22 23:47:05 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\Dashboard::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-22 23:47:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-22 23:47:06 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\profile\Dashboard::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-22 23:47:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-22 23:47:13 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Network::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-10-22 23:47:15 --> Excepción capturada al intentar conectarse a la API: 7 : Failed to connect to 192.168.0.162 port 5000 after 2090 ms: Couldn't connect to server
+ERROR - 2024-10-22 23:47:17 --> Excepción capturada al intentar conectarse a la API: 7 : Failed to connect to 192.168.0.162 port 5000 after 2028 ms: Couldn't connect to server
+CRITICAL - 2024-10-22 23:47:17 --> Error: Class "App\Models\tertiary\network\Port_analysisModel" not found
+[Method: GET, Route: nmap-results]
+in APPPATH\Controllers\secondary\form\Network.php on line 136.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\secondary\form\Network->nmapResults()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\form\Network))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-22 23:50:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-22 23:50:45 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Network::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-10-22 23:50:47 --> Excepción capturada al intentar conectarse a la API: 7 : Failed to connect to 192.168.0.162 port 5000 after 2149 ms: Couldn't connect to server
+ERROR - 2024-10-22 23:50:49 --> Excepción capturada al intentar conectarse a la API: 7 : Failed to connect to 192.168.0.162 port 5000 after 2048 ms: Couldn't connect to server
+INFO - 2024-10-22 23:53:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-22 23:53:17 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Network::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-22 23:53:17 --> Solicitud realizada a la API para puertos y servicios.
+INFO - 2024-10-22 23:53:17 --> Datos de puertos y servicios recibidos: Array
+(
+    [ip] => 192.168.0.23
+    [mac] => 6c:fd:b9:a8:1b:2c
+    [os_info] => Microsoft Windows XP|2019 (89%)
+    [ports_services] => Array
+        (
+            [0] => Array
+                (
+                    [port] => Discovered
+                    [service] => port 3306/tcp on 192.168.0.23
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [port] => Discovered
+                    [service] => port 80/tcp on 192.168.0.23
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [port] => Discovered
+                    [service] => port 443/tcp on 192.168.0.23
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                        )
+
+                )
+
+            [3] => Array
+                (
+                    [port] => Discovered
+                    [service] => port 7680/tcp on 192.168.0.23
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [port] => 80/tcp
+                    [service] => http syn-ack ttl 128 Apache httpd 2.4.58 ((Win64) OpenSSL/3.1.3 PHP/8.2.12)
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [cve] => 
+                                    [description] => |   VULNERABLE:
+                                )
+
+                            [1] => Array
+                                (
+                                    [cve] => 
+                                    [description] => |     State: LIKELY VULNERABLE
+                                )
+
+                            [2] => Array
+                                (
+                                    [cve] => CVE-2007-6750
+                                    [description] => CVE:CVE-2007-6750
+                                )
+
+                            [3] => Array
+                                (
+                                    [cve] => CVE-2007-6750
+                                    [description] => //cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6750
+                                )
+
+                            [4] => Array
+                                (
+                                    [cve] => CVE-2024-38476
+                                    [description] => //vulners.com/cve/CVE-2024-38476
+                                )
+
+                            [5] => Array
+                                (
+                                    [cve] => CVE-2024-38474
+                                    [description] => //vulners.com/cve/CVE-2024-38474
+                                )
+
+                            [6] => Array
+                                (
+                                    [cve] => CVE-2024-38475
+                                    [description] => //vulners.com/cve/CVE-2024-38475
+                                )
+
+                            [7] => Array
+                                (
+                                    [cve] => CVE-2024-38473
+                                    [description] => //vulners.com/cve/CVE-2024-38473
+                                )
+
+                            [8] => Array
+                                (
+                                    [cve] => CVE-2024-40898
+                                    [description] => //vulners.com/cve/CVE-2024-40898
+                                )
+
+                            [9] => Array
+                                (
+                                    [cve] => CVE-2024-39573
+                                    [description] => //vulners.com/cve/CVE-2024-39573
+                                )
+
+                            [10] => Array
+                                (
+                                    [cve] => CVE-2024-38477
+                                    [description] => //vulners.com/cve/CVE-2024-38477
+                                )
+
+                            [11] => Array
+                                (
+                                    [cve] => CVE-2024-38472
+                                    [description] => //vulners.com/cve/CVE-2024-38472
+                                )
+
+                            [12] => Array
+                                (
+                                    [cve] => CVE-2024-27316
+                                    [description] => //vulners.com/cve/CVE-2024-27316
+                                )
+
+                            [13] => Array
+                                (
+                                    [cve] => CVE-2024-39884
+                                    [description] => //vulners.com/cve/CVE-2024-39884
+                                )
+
+                            [14] => Array
+                                (
+                                    [cve] => CVE-2024-36387
+                                    [description] => //vulners.com/cve/CVE-2024-36387
+                                )
+
+                            [15] => Array
+                                (
+                                    [cve] => CVE-2024-24795
+                                    [description] => //vulners.com/cve/CVE-2024-24795
+                                )
+
+                            [16] => Array
+                                (
+                                    [cve] => CVE-2023-38709
+                                    [description] => //vulners.com/cve/CVE-2023-38709
+                                )
+
+                        )
+
+                )
+
+            [5] => Array
+                (
+                    [port] => 443/tcp
+                    [service] => ssl/http syn-ack ttl 128 Apache httpd 2.4.58 ((Win64) OpenSSL/3.1.3 PHP/8.2.12)
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [cve] => 
+                                    [description] => |   VULNERABLE:
+                                )
+
+                            [1] => Array
+                                (
+                                    [cve] => 
+                                    [description] => |     State: VULNERABLE
+                                )
+
+                            [2] => Array
+                                (
+                                    [cve] => CVE-2024-38476
+                                    [description] => //vulners.com/cve/CVE-2024-38476
+                                )
+
+                            [3] => Array
+                                (
+                                    [cve] => CVE-2024-38474
+                                    [description] => //vulners.com/cve/CVE-2024-38474
+                                )
+
+                            [4] => Array
+                                (
+                                    [cve] => CVE-2024-38475
+                                    [description] => //vulners.com/cve/CVE-2024-38475
+                                )
+
+                            [5] => Array
+                                (
+                                    [cve] => CVE-2024-38473
+                                    [description] => //vulners.com/cve/CVE-2024-38473
+                                )
+
+                            [6] => Array
+                                (
+                                    [cve] => CVE-2024-40898
+                                    [description] => //vulners.com/cve/CVE-2024-40898
+                                )
+
+                            [7] => Array
+                                (
+                                    [cve] => CVE-2024-39573
+                                    [description] => //vulners.com/cve/CVE-2024-39573
+                                )
+
+                            [8] => Array
+                                (
+                                    [cve] => CVE-2024-38477
+                                    [description] => //vulners.com/cve/CVE-2024-38477
+                                )
+
+                            [9] => Array
+                                (
+                                    [cve] => CVE-2024-38472
+                                    [description] => //vulners.com/cve/CVE-2024-38472
+                                )
+
+                            [10] => Array
+                                (
+                                    [cve] => CVE-2024-27316
+                                    [description] => //vulners.com/cve/CVE-2024-27316
+                                )
+
+                            [11] => Array
+                                (
+                                    [cve] => CVE-2024-39884
+                                    [description] => //vulners.com/cve/CVE-2024-39884
+                                )
+
+                            [12] => Array
+                                (
+                                    [cve] => CVE-2024-36387
+                                    [description] => //vulners.com/cve/CVE-2024-36387
+                                )
+
+                            [13] => Array
+                                (
+                                    [cve] => CVE-2024-24795
+                                    [description] => //vulners.com/cve/CVE-2024-24795
+                                )
+
+                            [14] => Array
+                                (
+                                    [cve] => CVE-2023-38709
+                                    [description] => //vulners.com/cve/CVE-2023-38709
+                                )
+
+                        )
+
+                )
+
+            [6] => Array
+                (
+                    [port] => 3306/tcp
+                    [service] => mysql syn-ack ttl 128 MariaDB (unauthorized)
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                        )
+
+                )
+
+            [7] => Array
+                (
+                    [port] => 7680/tcp
+                    [service] => pando-pub? syn-ack ttl 128
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+)
+
+INFO - 2024-10-22 23:53:17 --> Solicitud realizada a la API para vulnerabilidades.
+INFO - 2024-10-22 23:53:17 --> Datos de vulnerabilidades recibidos: Array
+(
+    [vulnerabilities] => Array
+        (
+        )
+
+)
+
+CRITICAL - 2024-10-22 23:53:17 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: nmap-results]
+in APPPATH\Controllers\secondary\form\Network.php on line 152.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\secondary\form\Network->nmapResults()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\form\Network))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-22 23:54:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-22 23:54:14 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Network::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-22 23:54:14 --> Solicitud realizada a la API para puertos y servicios.
+INFO - 2024-10-22 23:54:14 --> Datos de puertos y servicios recibidos: Array
+(
+    [ip] => 192.168.0.23
+    [mac] => 6c:fd:b9:a8:1b:2c
+    [os_info] => Microsoft Windows XP|2019 (89%)
+    [ports_services] => Array
+        (
+            [0] => Array
+                (
+                    [port] => Discovered
+                    [service] => port 3306/tcp on 192.168.0.23
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [port] => Discovered
+                    [service] => port 80/tcp on 192.168.0.23
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [port] => Discovered
+                    [service] => port 443/tcp on 192.168.0.23
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                        )
+
+                )
+
+            [3] => Array
+                (
+                    [port] => Discovered
+                    [service] => port 7680/tcp on 192.168.0.23
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [port] => 80/tcp
+                    [service] => http syn-ack ttl 128 Apache httpd 2.4.58 ((Win64) OpenSSL/3.1.3 PHP/8.2.12)
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [cve] => 
+                                    [description] => |   VULNERABLE:
+                                )
+
+                            [1] => Array
+                                (
+                                    [cve] => 
+                                    [description] => |     State: LIKELY VULNERABLE
+                                )
+
+                            [2] => Array
+                                (
+                                    [cve] => CVE-2007-6750
+                                    [description] => CVE:CVE-2007-6750
+                                )
+
+                            [3] => Array
+                                (
+                                    [cve] => CVE-2007-6750
+                                    [description] => //cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6750
+                                )
+
+                            [4] => Array
+                                (
+                                    [cve] => CVE-2024-38476
+                                    [description] => //vulners.com/cve/CVE-2024-38476
+                                )
+
+                            [5] => Array
+                                (
+                                    [cve] => CVE-2024-38474
+                                    [description] => //vulners.com/cve/CVE-2024-38474
+                                )
+
+                            [6] => Array
+                                (
+                                    [cve] => CVE-2024-38475
+                                    [description] => //vulners.com/cve/CVE-2024-38475
+                                )
+
+                            [7] => Array
+                                (
+                                    [cve] => CVE-2024-38473
+                                    [description] => //vulners.com/cve/CVE-2024-38473
+                                )
+
+                            [8] => Array
+                                (
+                                    [cve] => CVE-2024-40898
+                                    [description] => //vulners.com/cve/CVE-2024-40898
+                                )
+
+                            [9] => Array
+                                (
+                                    [cve] => CVE-2024-39573
+                                    [description] => //vulners.com/cve/CVE-2024-39573
+                                )
+
+                            [10] => Array
+                                (
+                                    [cve] => CVE-2024-38477
+                                    [description] => //vulners.com/cve/CVE-2024-38477
+                                )
+
+                            [11] => Array
+                                (
+                                    [cve] => CVE-2024-38472
+                                    [description] => //vulners.com/cve/CVE-2024-38472
+                                )
+
+                            [12] => Array
+                                (
+                                    [cve] => CVE-2024-27316
+                                    [description] => //vulners.com/cve/CVE-2024-27316
+                                )
+
+                            [13] => Array
+                                (
+                                    [cve] => CVE-2024-39884
+                                    [description] => //vulners.com/cve/CVE-2024-39884
+                                )
+
+                            [14] => Array
+                                (
+                                    [cve] => CVE-2024-36387
+                                    [description] => //vulners.com/cve/CVE-2024-36387
+                                )
+
+                            [15] => Array
+                                (
+                                    [cve] => CVE-2024-24795
+                                    [description] => //vulners.com/cve/CVE-2024-24795
+                                )
+
+                            [16] => Array
+                                (
+                                    [cve] => CVE-2023-38709
+                                    [description] => //vulners.com/cve/CVE-2023-38709
+                                )
+
+                        )
+
+                )
+
+            [5] => Array
+                (
+                    [port] => 443/tcp
+                    [service] => ssl/http syn-ack ttl 128 Apache httpd 2.4.58 ((Win64) OpenSSL/3.1.3 PHP/8.2.12)
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [cve] => 
+                                    [description] => |   VULNERABLE:
+                                )
+
+                            [1] => Array
+                                (
+                                    [cve] => 
+                                    [description] => |     State: VULNERABLE
+                                )
+
+                            [2] => Array
+                                (
+                                    [cve] => CVE-2024-38476
+                                    [description] => //vulners.com/cve/CVE-2024-38476
+                                )
+
+                            [3] => Array
+                                (
+                                    [cve] => CVE-2024-38474
+                                    [description] => //vulners.com/cve/CVE-2024-38474
+                                )
+
+                            [4] => Array
+                                (
+                                    [cve] => CVE-2024-38475
+                                    [description] => //vulners.com/cve/CVE-2024-38475
+                                )
+
+                            [5] => Array
+                                (
+                                    [cve] => CVE-2024-38473
+                                    [description] => //vulners.com/cve/CVE-2024-38473
+                                )
+
+                            [6] => Array
+                                (
+                                    [cve] => CVE-2024-40898
+                                    [description] => //vulners.com/cve/CVE-2024-40898
+                                )
+
+                            [7] => Array
+                                (
+                                    [cve] => CVE-2024-39573
+                                    [description] => //vulners.com/cve/CVE-2024-39573
+                                )
+
+                            [8] => Array
+                                (
+                                    [cve] => CVE-2024-38477
+                                    [description] => //vulners.com/cve/CVE-2024-38477
+                                )
+
+                            [9] => Array
+                                (
+                                    [cve] => CVE-2024-38472
+                                    [description] => //vulners.com/cve/CVE-2024-38472
+                                )
+
+                            [10] => Array
+                                (
+                                    [cve] => CVE-2024-27316
+                                    [description] => //vulners.com/cve/CVE-2024-27316
+                                )
+
+                            [11] => Array
+                                (
+                                    [cve] => CVE-2024-39884
+                                    [description] => //vulners.com/cve/CVE-2024-39884
+                                )
+
+                            [12] => Array
+                                (
+                                    [cve] => CVE-2024-36387
+                                    [description] => //vulners.com/cve/CVE-2024-36387
+                                )
+
+                            [13] => Array
+                                (
+                                    [cve] => CVE-2024-24795
+                                    [description] => //vulners.com/cve/CVE-2024-24795
+                                )
+
+                            [14] => Array
+                                (
+                                    [cve] => CVE-2023-38709
+                                    [description] => //vulners.com/cve/CVE-2023-38709
+                                )
+
+                        )
+
+                )
+
+            [6] => Array
+                (
+                    [port] => 3306/tcp
+                    [service] => mysql syn-ack ttl 128 MariaDB (unauthorized)
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                        )
+
+                )
+
+            [7] => Array
+                (
+                    [port] => 7680/tcp
+                    [service] => pando-pub? syn-ack ttl 128
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+)
+
+INFO - 2024-10-22 23:54:14 --> Solicitud realizada a la API para vulnerabilidades.
+INFO - 2024-10-22 23:54:14 --> Datos de vulnerabilidades recibidos: Array
+(
+    [vulnerabilities] => Array
+        (
+        )
+
+)
+
+ERROR - 2024-10-22 23:54:14 --> Datos del dispositivo incompletos o incorrectos: 192.168.0.23
+ERROR - 2024-10-22 23:54:14 --> Datos del dispositivo incompletos o incorrectos: 6c:fd:b9:a8:1b:2c
+ERROR - 2024-10-22 23:54:14 --> Datos del dispositivo incompletos o incorrectos: Microsoft Windows XP|2019 (89%)
+ERROR - 2024-10-22 23:54:14 --> Datos del dispositivo incompletos o incorrectos: Array
+(
+    [0] => Array
+        (
+            [port] => Discovered
+            [service] => port 3306/tcp on 192.168.0.23
+            [state] => open
+            [vulnerabilities] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [port] => Discovered
+            [service] => port 80/tcp on 192.168.0.23
+            [state] => open
+            [vulnerabilities] => Array
+                (
+                )
+
+        )
+
+    [2] => Array
+        (
+            [port] => Discovered
+            [service] => port 443/tcp on 192.168.0.23
+            [state] => open
+            [vulnerabilities] => Array
+                (
+                )
+
+        )
+
+    [3] => Array
+        (
+            [port] => Discovered
+            [service] => port 7680/tcp on 192.168.0.23
+            [state] => open
+            [vulnerabilities] => Array
+                (
+                )
+
+        )
+
+    [4] => Array
+        (
+            [port] => 80/tcp
+            [service] => http syn-ack ttl 128 Apache httpd 2.4.58 ((Win64) OpenSSL/3.1.3 PHP/8.2.12)
+            [state] => open
+            [vulnerabilities] => Array
+                (
+                    [0] => Array
+                        (
+                            [cve] => 
+                            [description] => |   VULNERABLE:
+                        )
+
+                    [1] => Array
+                        (
+                            [cve] => 
+                            [description] => |     State: LIKELY VULNERABLE
+                        )
+
+                    [2] => Array
+                        (
+                            [cve] => CVE-2007-6750
+                            [description] => CVE:CVE-2007-6750
+                        )
+
+                    [3] => Array
+                        (
+                            [cve] => CVE-2007-6750
+                            [description] => //cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6750
+                        )
+
+                    [4] => Array
+                        (
+                            [cve] => CVE-2024-38476
+                            [description] => //vulners.com/cve/CVE-2024-38476
+                        )
+
+                    [5] => Array
+                        (
+                            [cve] => CVE-2024-38474
+                            [description] => //vulners.com/cve/CVE-2024-38474
+                        )
+
+                    [6] => Array
+                        (
+                            [cve] => CVE-2024-38475
+                            [description] => //vulners.com/cve/CVE-2024-38475
+                        )
+
+                    [7] => Array
+                        (
+                            [cve] => CVE-2024-38473
+                            [description] => //vulners.com/cve/CVE-2024-38473
+                        )
+
+                    [8] => Array
+                        (
+                            [cve] => CVE-2024-40898
+                            [description] => //vulners.com/cve/CVE-2024-40898
+                        )
+
+                    [9] => Array
+                        (
+                            [cve] => CVE-2024-39573
+                            [description] => //vulners.com/cve/CVE-2024-39573
+                        )
+
+                    [10] => Array
+                        (
+                            [cve] => CVE-2024-38477
+                            [description] => //vulners.com/cve/CVE-2024-38477
+                        )
+
+                    [11] => Array
+                        (
+                            [cve] => CVE-2024-38472
+                            [description] => //vulners.com/cve/CVE-2024-38472
+                        )
+
+                    [12] => Array
+                        (
+                            [cve] => CVE-2024-27316
+                            [description] => //vulners.com/cve/CVE-2024-27316
+                        )
+
+                    [13] => Array
+                        (
+                            [cve] => CVE-2024-39884
+                            [description] => //vulners.com/cve/CVE-2024-39884
+                        )
+
+                    [14] => Array
+                        (
+                            [cve] => CVE-2024-36387
+                            [description] => //vulners.com/cve/CVE-2024-36387
+                        )
+
+                    [15] => Array
+                        (
+                            [cve] => CVE-2024-24795
+                            [description] => //vulners.com/cve/CVE-2024-24795
+                        )
+
+                    [16] => Array
+                        (
+                            [cve] => CVE-2023-38709
+                            [description] => //vulners.com/cve/CVE-2023-38709
+                        )
+
+                )
+
+        )
+
+    [5] => Array
+        (
+            [port] => 443/tcp
+            [service] => ssl/http syn-ack ttl 128 Apache httpd 2.4.58 ((Win64) OpenSSL/3.1.3 PHP/8.2.12)
+            [state] => open
+            [vulnerabilities] => Array
+                (
+                    [0] => Array
+                        (
+                            [cve] => 
+                            [description] => |   VULNERABLE:
+                        )
+
+                    [1] => Array
+                        (
+                            [cve] => 
+                            [description] => |     State: VULNERABLE
+                        )
+
+                    [2] => Array
+                        (
+                            [cve] => CVE-2024-38476
+                            [description] => //vulners.com/cve/CVE-2024-38476
+                        )
+
+                    [3] => Array
+                        (
+                            [cve] => CVE-2024-38474
+                            [description] => //vulners.com/cve/CVE-2024-38474
+                        )
+
+                    [4] => Array
+                        (
+                            [cve] => CVE-2024-38475
+                            [description] => //vulners.com/cve/CVE-2024-38475
+                        )
+
+                    [5] => Array
+                        (
+                            [cve] => CVE-2024-38473
+                            [description] => //vulners.com/cve/CVE-2024-38473
+                        )
+
+                    [6] => Array
+                        (
+                            [cve] => CVE-2024-40898
+                            [description] => //vulners.com/cve/CVE-2024-40898
+                        )
+
+                    [7] => Array
+                        (
+                            [cve] => CVE-2024-39573
+                            [description] => //vulners.com/cve/CVE-2024-39573
+                        )
+
+                    [8] => Array
+                        (
+                            [cve] => CVE-2024-38477
+                            [description] => //vulners.com/cve/CVE-2024-38477
+                        )
+
+                    [9] => Array
+                        (
+                            [cve] => CVE-2024-38472
+                            [description] => //vulners.com/cve/CVE-2024-38472
+                        )
+
+                    [10] => Array
+                        (
+                            [cve] => CVE-2024-27316
+                            [description] => //vulners.com/cve/CVE-2024-27316
+                        )
+
+                    [11] => Array
+                        (
+                            [cve] => CVE-2024-39884
+                            [description] => //vulners.com/cve/CVE-2024-39884
+                        )
+
+                    [12] => Array
+                        (
+                            [cve] => CVE-2024-36387
+                            [description] => //vulners.com/cve/CVE-2024-36387
+                        )
+
+                    [13] => Array
+                        (
+                            [cve] => CVE-2024-24795
+                            [description] => //vulners.com/cve/CVE-2024-24795
+                        )
+
+                    [14] => Array
+                        (
+                            [cve] => CVE-2023-38709
+                            [description] => //vulners.com/cve/CVE-2023-38709
+                        )
+
+                )
+
+        )
+
+    [6] => Array
+        (
+            [port] => 3306/tcp
+            [service] => mysql syn-ack ttl 128 MariaDB (unauthorized)
+            [state] => open
+            [vulnerabilities] => Array
+                (
+                )
+
+        )
+
+    [7] => Array
+        (
+            [port] => 7680/tcp
+            [service] => pando-pub? syn-ack ttl 128
+            [state] => open
+            [vulnerabilities] => Array
+                (
+                )
+
+        )
+
+)
+
+INFO - 2024-10-22 23:55:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-10-22 23:55:15 --> [DEPRECATED] Creation of dynamic property App\Controllers\secondary\form\Network::$session is deprecated in APPPATH\Controllers\main\BaseController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\main\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-22 23:55:15 --> Solicitud realizada a la API para puertos y servicios.
+INFO - 2024-10-22 23:55:15 --> Datos de puertos y servicios recibidos: Array
+(
+    [ip] => 192.168.0.23
+    [mac] => 6c:fd:b9:a8:1b:2c
+    [os_info] => Microsoft Windows XP|2019 (89%)
+    [ports_services] => Array
+        (
+            [0] => Array
+                (
+                    [port] => Discovered
+                    [service] => port 3306/tcp on 192.168.0.23
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [port] => Discovered
+                    [service] => port 80/tcp on 192.168.0.23
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [port] => Discovered
+                    [service] => port 443/tcp on 192.168.0.23
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                        )
+
+                )
+
+            [3] => Array
+                (
+                    [port] => Discovered
+                    [service] => port 7680/tcp on 192.168.0.23
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [port] => 80/tcp
+                    [service] => http syn-ack ttl 128 Apache httpd 2.4.58 ((Win64) OpenSSL/3.1.3 PHP/8.2.12)
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [cve] => 
+                                    [description] => |   VULNERABLE:
+                                )
+
+                            [1] => Array
+                                (
+                                    [cve] => 
+                                    [description] => |     State: LIKELY VULNERABLE
+                                )
+
+                            [2] => Array
+                                (
+                                    [cve] => CVE-2007-6750
+                                    [description] => CVE:CVE-2007-6750
+                                )
+
+                            [3] => Array
+                                (
+                                    [cve] => CVE-2007-6750
+                                    [description] => //cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6750
+                                )
+
+                            [4] => Array
+                                (
+                                    [cve] => CVE-2024-38476
+                                    [description] => //vulners.com/cve/CVE-2024-38476
+                                )
+
+                            [5] => Array
+                                (
+                                    [cve] => CVE-2024-38474
+                                    [description] => //vulners.com/cve/CVE-2024-38474
+                                )
+
+                            [6] => Array
+                                (
+                                    [cve] => CVE-2024-38475
+                                    [description] => //vulners.com/cve/CVE-2024-38475
+                                )
+
+                            [7] => Array
+                                (
+                                    [cve] => CVE-2024-38473
+                                    [description] => //vulners.com/cve/CVE-2024-38473
+                                )
+
+                            [8] => Array
+                                (
+                                    [cve] => CVE-2024-40898
+                                    [description] => //vulners.com/cve/CVE-2024-40898
+                                )
+
+                            [9] => Array
+                                (
+                                    [cve] => CVE-2024-39573
+                                    [description] => //vulners.com/cve/CVE-2024-39573
+                                )
+
+                            [10] => Array
+                                (
+                                    [cve] => CVE-2024-38477
+                                    [description] => //vulners.com/cve/CVE-2024-38477
+                                )
+
+                            [11] => Array
+                                (
+                                    [cve] => CVE-2024-38472
+                                    [description] => //vulners.com/cve/CVE-2024-38472
+                                )
+
+                            [12] => Array
+                                (
+                                    [cve] => CVE-2024-27316
+                                    [description] => //vulners.com/cve/CVE-2024-27316
+                                )
+
+                            [13] => Array
+                                (
+                                    [cve] => CVE-2024-39884
+                                    [description] => //vulners.com/cve/CVE-2024-39884
+                                )
+
+                            [14] => Array
+                                (
+                                    [cve] => CVE-2024-36387
+                                    [description] => //vulners.com/cve/CVE-2024-36387
+                                )
+
+                            [15] => Array
+                                (
+                                    [cve] => CVE-2024-24795
+                                    [description] => //vulners.com/cve/CVE-2024-24795
+                                )
+
+                            [16] => Array
+                                (
+                                    [cve] => CVE-2023-38709
+                                    [description] => //vulners.com/cve/CVE-2023-38709
+                                )
+
+                        )
+
+                )
+
+            [5] => Array
+                (
+                    [port] => 443/tcp
+                    [service] => ssl/http syn-ack ttl 128 Apache httpd 2.4.58 ((Win64) OpenSSL/3.1.3 PHP/8.2.12)
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [cve] => 
+                                    [description] => |   VULNERABLE:
+                                )
+
+                            [1] => Array
+                                (
+                                    [cve] => 
+                                    [description] => |     State: VULNERABLE
+                                )
+
+                            [2] => Array
+                                (
+                                    [cve] => CVE-2024-38476
+                                    [description] => //vulners.com/cve/CVE-2024-38476
+                                )
+
+                            [3] => Array
+                                (
+                                    [cve] => CVE-2024-38474
+                                    [description] => //vulners.com/cve/CVE-2024-38474
+                                )
+
+                            [4] => Array
+                                (
+                                    [cve] => CVE-2024-38475
+                                    [description] => //vulners.com/cve/CVE-2024-38475
+                                )
+
+                            [5] => Array
+                                (
+                                    [cve] => CVE-2024-38473
+                                    [description] => //vulners.com/cve/CVE-2024-38473
+                                )
+
+                            [6] => Array
+                                (
+                                    [cve] => CVE-2024-40898
+                                    [description] => //vulners.com/cve/CVE-2024-40898
+                                )
+
+                            [7] => Array
+                                (
+                                    [cve] => CVE-2024-39573
+                                    [description] => //vulners.com/cve/CVE-2024-39573
+                                )
+
+                            [8] => Array
+                                (
+                                    [cve] => CVE-2024-38477
+                                    [description] => //vulners.com/cve/CVE-2024-38477
+                                )
+
+                            [9] => Array
+                                (
+                                    [cve] => CVE-2024-38472
+                                    [description] => //vulners.com/cve/CVE-2024-38472
+                                )
+
+                            [10] => Array
+                                (
+                                    [cve] => CVE-2024-27316
+                                    [description] => //vulners.com/cve/CVE-2024-27316
+                                )
+
+                            [11] => Array
+                                (
+                                    [cve] => CVE-2024-39884
+                                    [description] => //vulners.com/cve/CVE-2024-39884
+                                )
+
+                            [12] => Array
+                                (
+                                    [cve] => CVE-2024-36387
+                                    [description] => //vulners.com/cve/CVE-2024-36387
+                                )
+
+                            [13] => Array
+                                (
+                                    [cve] => CVE-2024-24795
+                                    [description] => //vulners.com/cve/CVE-2024-24795
+                                )
+
+                            [14] => Array
+                                (
+                                    [cve] => CVE-2023-38709
+                                    [description] => //vulners.com/cve/CVE-2023-38709
+                                )
+
+                        )
+
+                )
+
+            [6] => Array
+                (
+                    [port] => 3306/tcp
+                    [service] => mysql syn-ack ttl 128 MariaDB (unauthorized)
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                        )
+
+                )
+
+            [7] => Array
+                (
+                    [port] => 7680/tcp
+                    [service] => pando-pub? syn-ack ttl 128
+                    [state] => open
+                    [vulnerabilities] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+)
+
+INFO - 2024-10-22 23:55:15 --> Solicitud realizada a la API para vulnerabilidades.
+INFO - 2024-10-22 23:55:15 --> Datos de vulnerabilidades recibidos: Array
+(
+    [vulnerabilities] => Array
+        (
+        )
+
+)
+
+ERROR - 2024-10-22 23:55:15 --> Datos del dispositivo incompletos o incorrectos: 192.168.0.23
+ERROR - 2024-10-22 23:55:15 --> Datos del dispositivo incompletos o incorrectos: 6c:fd:b9:a8:1b:2c
+ERROR - 2024-10-22 23:55:15 --> Datos del dispositivo incompletos o incorrectos: Microsoft Windows XP|2019 (89%)
+ERROR - 2024-10-22 23:55:15 --> Datos del dispositivo incompletos o incorrectos: Array
+(
+    [0] => Array
+        (
+            [port] => Discovered
+            [service] => port 3306/tcp on 192.168.0.23
+            [state] => open
+            [vulnerabilities] => Array
+                (
+                )
+
+        )
+
+    [1] => Array
+        (
+            [port] => Discovered
+            [service] => port 80/tcp on 192.168.0.23
+            [state] => open
+            [vulnerabilities] => Array
+                (
+                )
+
+        )
+
+    [2] => Array
+        (
+            [port] => Discovered
+            [service] => port 443/tcp on 192.168.0.23
+            [state] => open
+            [vulnerabilities] => Array
+                (
+                )
+
+        )
+
+    [3] => Array
+        (
+            [port] => Discovered
+            [service] => port 7680/tcp on 192.168.0.23
+            [state] => open
+            [vulnerabilities] => Array
+                (
+                )
+
+        )
+
+    [4] => Array
+        (
+            [port] => 80/tcp
+            [service] => http syn-ack ttl 128 Apache httpd 2.4.58 ((Win64) OpenSSL/3.1.3 PHP/8.2.12)
+            [state] => open
+            [vulnerabilities] => Array
+                (
+                    [0] => Array
+                        (
+                            [cve] => 
+                            [description] => |   VULNERABLE:
+                        )
+
+                    [1] => Array
+                        (
+                            [cve] => 
+                            [description] => |     State: LIKELY VULNERABLE
+                        )
+
+                    [2] => Array
+                        (
+                            [cve] => CVE-2007-6750
+                            [description] => CVE:CVE-2007-6750
+                        )
+
+                    [3] => Array
+                        (
+                            [cve] => CVE-2007-6750
+                            [description] => //cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6750
+                        )
+
+                    [4] => Array
+                        (
+                            [cve] => CVE-2024-38476
+                            [description] => //vulners.com/cve/CVE-2024-38476
+                        )
+
+                    [5] => Array
+                        (
+                            [cve] => CVE-2024-38474
+                            [description] => //vulners.com/cve/CVE-2024-38474
+                        )
+
+                    [6] => Array
+                        (
+                            [cve] => CVE-2024-38475
+                            [description] => //vulners.com/cve/CVE-2024-38475
+                        )
+
+                    [7] => Array
+                        (
+                            [cve] => CVE-2024-38473
+                            [description] => //vulners.com/cve/CVE-2024-38473
+                        )
+
+                    [8] => Array
+                        (
+                            [cve] => CVE-2024-40898
+                            [description] => //vulners.com/cve/CVE-2024-40898
+                        )
+
+                    [9] => Array
+                        (
+                            [cve] => CVE-2024-39573
+                            [description] => //vulners.com/cve/CVE-2024-39573
+                        )
+
+                    [10] => Array
+                        (
+                            [cve] => CVE-2024-38477
+                            [description] => //vulners.com/cve/CVE-2024-38477
+                        )
+
+                    [11] => Array
+                        (
+                            [cve] => CVE-2024-38472
+                            [description] => //vulners.com/cve/CVE-2024-38472
+                        )
+
+                    [12] => Array
+                        (
+                            [cve] => CVE-2024-27316
+                            [description] => //vulners.com/cve/CVE-2024-27316
+                        )
+
+                    [13] => Array
+                        (
+                            [cve] => CVE-2024-39884
+                            [description] => //vulners.com/cve/CVE-2024-39884
+                        )
+
+                    [14] => Array
+                        (
+                            [cve] => CVE-2024-36387
+                            [description] => //vulners.com/cve/CVE-2024-36387
+                        )
+
+                    [15] => Array
+                        (
+                            [cve] => CVE-2024-24795
+                            [description] => //vulners.com/cve/CVE-2024-24795
+                        )
+
+                    [16] => Array
+                        (
+                            [cve] => CVE-2023-38709
+                            [description] => //vulners.com/cve/CVE-2023-38709
+                        )
+
+                )
+
+        )
+
+    [5] => Array
+        (
+            [port] => 443/tcp
+            [service] => ssl/http syn-ack ttl 128 Apache httpd 2.4.58 ((Win64) OpenSSL/3.1.3 PHP/8.2.12)
+            [state] => open
+            [vulnerabilities] => Array
+                (
+                    [0] => Array
+                        (
+                            [cve] => 
+                            [description] => |   VULNERABLE:
+                        )
+
+                    [1] => Array
+                        (
+                            [cve] => 
+                            [description] => |     State: VULNERABLE
+                        )
+
+                    [2] => Array
+                        (
+                            [cve] => CVE-2024-38476
+                            [description] => //vulners.com/cve/CVE-2024-38476
+                        )
+
+                    [3] => Array
+                        (
+                            [cve] => CVE-2024-38474
+                            [description] => //vulners.com/cve/CVE-2024-38474
+                        )
+
+                    [4] => Array
+                        (
+                            [cve] => CVE-2024-38475
+                            [description] => //vulners.com/cve/CVE-2024-38475
+                        )
+
+                    [5] => Array
+                        (
+                            [cve] => CVE-2024-38473
+                            [description] => //vulners.com/cve/CVE-2024-38473
+                        )
+
+                    [6] => Array
+                        (
+                            [cve] => CVE-2024-40898
+                            [description] => //vulners.com/cve/CVE-2024-40898
+                        )
+
+                    [7] => Array
+                        (
+                            [cve] => CVE-2024-39573
+                            [description] => //vulners.com/cve/CVE-2024-39573
+                        )
+
+                    [8] => Array
+                        (
+                            [cve] => CVE-2024-38477
+                            [description] => //vulners.com/cve/CVE-2024-38477
+                        )
+
+                    [9] => Array
+                        (
+                            [cve] => CVE-2024-38472
+                            [description] => //vulners.com/cve/CVE-2024-38472
+                        )
+
+                    [10] => Array
+                        (
+                            [cve] => CVE-2024-27316
+                            [description] => //vulners.com/cve/CVE-2024-27316
+                        )
+
+                    [11] => Array
+                        (
+                            [cve] => CVE-2024-39884
+                            [description] => //vulners.com/cve/CVE-2024-39884
+                        )
+
+                    [12] => Array
+                        (
+                            [cve] => CVE-2024-36387
+                            [description] => //vulners.com/cve/CVE-2024-36387
+                        )
+
+                    [13] => Array
+                        (
+                            [cve] => CVE-2024-24795
+                            [description] => //vulners.com/cve/CVE-2024-24795
+                        )
+
+                    [14] => Array
+                        (
+                            [cve] => CVE-2023-38709
+                            [description] => //vulners.com/cve/CVE-2023-38709
+                        )
+
+                )
+
+        )
+
+    [6] => Array
+        (
+            [port] => 3306/tcp
+            [service] => mysql syn-ack ttl 128 MariaDB (unauthorized)
+            [state] => open
+            [vulnerabilities] => Array
+                (
+                )
+
+        )
+
+    [7] => Array
+        (
+            [port] => 7680/tcp
+            [service] => pando-pub? syn-ack ttl 128
+            [state] => open
+            [vulnerabilities] => Array
+                (
+                )
+
+        )
+
+)
+

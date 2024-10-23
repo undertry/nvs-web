@@ -87,81 +87,99 @@ class Network extends BaseController
 
     // Nueva función para manejar los resultados de Nmap
     public function nmapResults()
-    {
-        $client = \Config\Services::curlrequest();
+{
+    $client = \Config\Services::curlrequest();
 
-        // Obtener los datos de puertos, IP, MAC, servicios, OS
-        try {
-            $response = $client->get('http://192.168.0.162:5000/nmap/ports-services');
-            log_message('info', 'Solicitud realizada a la API para puertos y servicios.');
+    // Obtener los datos de puertos, IP, MAC, servicios, OS
+    try {
+        $response = $client->get('http://192.168.0.162:5000/nmap/ports-services');
+        log_message('info', 'Solicitud realizada a la API para puertos y servicios.');
 
-            if ($response->getStatusCode() == 200) {
-                $nmap_ports_services = json_decode($response->getBody(), true);
-                log_message('info', 'Datos de puertos y servicios recibidos: ' . print_r($nmap_ports_services, true));
-            } else {
-                log_message('error', 'Error en la respuesta de la API: ' . $response->getStatusCode());
-                $nmap_ports_services = [];
-            }
-        } catch (\Exception $e) {
-            log_message('error', 'Excepción capturada al intentar conectarse a la API: ' . $e->getMessage());
+        if ($response->getStatusCode() == 200) {
+            $nmap_ports_services = json_decode($response->getBody(), true);
+            log_message('info', 'Datos de puertos y servicios recibidos: ' . print_r($nmap_ports_services, true));
+        } else {
+            log_message('error', 'Error en la respuesta de la API: ' . $response->getStatusCode());
             $nmap_ports_services = [];
         }
+    } catch (\Exception $e) {
+        log_message('error', 'Excepción capturada al intentar conectarse a la API: ' . $e->getMessage());
+        $nmap_ports_services = [];
+    }
 
-        // Obtener las vulnerabilidades
-        try {
-            $response = $client->get('http://192.168.0.162:5000/nmap/vulnerabilities');
-            log_message('info', 'Solicitud realizada a la API para vulnerabilidades.');
+    // Obtener las vulnerabilidades
+    try {
+        $response = $client->get('http://192.168.0.162:5000/nmap/vulnerabilities');
+        log_message('info', 'Solicitud realizada a la API para vulnerabilidades.');
 
-            if ($response->getStatusCode() == 200) {
-                $nmap_vulnerabilities = json_decode($response->getBody(), true);
-                log_message('info', 'Datos de vulnerabilidades recibidos: ' . print_r($nmap_vulnerabilities, true));
-            } else {
-                log_message('error', 'Error en la respuesta de la API: ' . $response->getStatusCode());
-                $nmap_vulnerabilities = [];
-            }
-        } catch (\Exception $e) {
-            log_message('error', 'Excepción capturada al intentar conectarse a la API: ' . $e->getMessage());
+        if ($response->getStatusCode() == 200) {
+            $nmap_vulnerabilities = json_decode($response->getBody(), true);
+            log_message('info', 'Datos de vulnerabilidades recibidos: ' . print_r($nmap_vulnerabilities, true));
+        } else {
+            log_message('error', 'Error en la respuesta de la API: ' . $response->getStatusCode());
             $nmap_vulnerabilities = [];
         }
+    } catch (\Exception $e) {
+        log_message('error', 'Excepción capturada al intentar conectarse a la API: ' . $e->getMessage());
+        $nmap_vulnerabilities = [];
+    }
 
-        // Obtener el id_user y id_network desde la sesión
-        $id_user = session('user')->id_user;
-        $id_network = session('id_network');  // Verifica que esté correctamente almacenado en la sesión
+    // Obtener el id_user y id_network desde la sesión
+    $id_user = session('user')->id_user;
+    $id_network = session('id_network');  // Verifica que esté correctamente almacenado en la sesión
 
-        // Modelos
-        $scanModel = new ScanModel();
-        $deviceModel = new DeviceModel();
-        $scanDetailsModel = new Scan_detailsModel();
-        $portsModel = new PortsModel();
-        $portAnalysisModel = new Port_analysisModel();
-        $portDetailsModel = new Port_detailsModel();
-        $solutionModel = new SolutionModel();
-        $portStatusModel = new Port_statusModel();  // Agrega este modelo si no está definido
+    // Modelos
+    $scanModel = new ScanModel();
+    $deviceModel = new DeviceModel();
+    $scanDetailsModel = new Scan_detailsModel();
+    $portsModel = new PortsModel();
+    $portAnalysisModel = new Port_analysisModel();
+    $portDetailsModel = new Port_detailsModel();
+    $solutionModel = new SolutionModel();
+    $portStatusModel = new Port_statusModel();  // Agrega este modelo si no está definido
 
-        // Insertar un nuevo escaneo
-        $scan_id = $scanModel->insert([
-            'id_user' => $id_user,
-            'id_network' => $id_network,
-        ]);
+    // Insertar un nuevo escaneo
+    $scan_id = $scanModel->insert([
+        'id_user' => $id_user,
+        'id_network' => $id_network,
+    ]);
 
-        // Datos del dispositivo
-        if (!empty($nmap_ports_services)) {
-            foreach ($nmap_ports_services as $device_data) {
-                // Insertar dispositivo
-                $device_id = $deviceModel->insert([
-                    'ip_address' => $device_data['ip'],
-                    'mac_address' => $device_data['mac'],
-                    'operating_system' => $device_data['os_info']
-                ]);
+    // Datos del dispositivo
+    if (!empty($nmap_ports_services) && is_array($nmap_ports_services)) {
+        foreach ($nmap_ports_services as $device_data) {
+            $device_id = $deviceModel->insert([
+                'ip_address' => "192.168.0.23",
+                'mac_address' =>  "6c:fd:b9:a8:1b:2c"  ,
+                'operating_system' => "Microsoft Windows XP|2019 (89%)"
+            ]);
+            // Verificar si $device_data es un array antes de intentar acceder a sus índices
+            if (!is_array($device_data) || !isset($device_data['ip'], $device_data['mac'], $device_data['os_info'])) {
+                log_message('error', 'Datos del dispositivo incompletos o incorrectos: ' . print_r($device_data, true));
+                continue;  // Saltar a la siguiente iteración si los datos son incorrectos
+            }
 
-                // Insertar detalles del escaneo (asociación entre escaneo y dispositivo)
-                $scanDetailsModel->insert([
-                    'id_scan' => $scan_id,
-                    'id_devices' => $device_id
-                ]);
+            // Insertar dispositivo
+            $device_id = $deviceModel->insert([
+                'ip_address' => $device_data['ip'],
+                'mac_address' => $device_data['mac'],
+                'operating_system' => $device_data['os_info']
+            ]);
 
-                // Insertar puertos asociados a los dispositivos
+            // Insertar detalles del escaneo (asociación entre escaneo y dispositivo)
+            $scanDetailsModel->insert([
+                'id_scan' => $scan_id,
+                'id_devices' => $device_id
+            ]);
+
+            // Insertar puertos asociados a los dispositivos
+            if (isset($device_data['ports']) && is_array($device_data['ports'])) {
                 foreach ($device_data['ports'] as $port) {
+                    // Verificar que $port sea un array y que contenga las claves necesarias
+                    if (!is_array($port) || !isset($port['port'], $port['service'], $port['protocol'], $port['state'])) {
+                        log_message('error', 'Datos del puerto incompletos o incorrectos: ' . print_r($port, true));
+                        continue;  // Saltar a la siguiente iteración si los datos son incorrectos
+                    }
+
                     // Obtener el estado del puerto desde la tabla port_status según el estado recibido ('open', 'closed', etc.)
                     $port_status = $portStatusModel->where('status', $port['state'])->first();
 
@@ -180,8 +198,13 @@ class Network extends BaseController
                     ]);
 
                     // Insertar detalles de las vulnerabilidades para ese puerto
-                    if (!empty($port['vulnerabilities'])) {
+                    if (isset($port['vulnerabilities']) && is_array($port['vulnerabilities'])) {
                         foreach ($port['vulnerabilities'] as $vulnerability) {
+                            if (!isset($vulnerability['description'], $vulnerability['cve'], $vulnerability['details'])) {
+                                log_message('error', 'Datos de la vulnerabilidad incompletos: ' . print_r($vulnerability, true));
+                                continue;
+                            }
+
                             // Insertar solución (vulnerabilidad)
                             $solution_id = $solutionModel->insert([
                                 'solution' => $vulnerability['description'],  // Descripción de la solución
@@ -199,13 +222,14 @@ class Network extends BaseController
                 }
             }
         }
-
-        // Pasar los datos a la vista (opcional)
-        return view('tertiary/network/nmap_results', [
-            'nmap_ports_services' => $nmap_ports_services,
-            'nmap_vulnerabilities' => $nmap_vulnerabilities
-        ]);
     }
+
+    // Pasar los datos a la vista (opcional)
+    return view('tertiary/network/nmap_results', [
+        'nmap_ports_services' => $nmap_ports_services,
+        'nmap_vulnerabilities' => $nmap_vulnerabilities
+    ]);
+}
 
     public function animation()
     {
