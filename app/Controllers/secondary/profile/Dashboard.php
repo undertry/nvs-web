@@ -3,7 +3,7 @@
 namespace App\Controllers\secondary\profile;
 
 use App\Controllers\main\BaseController;
-
+use App\Models\tertiary\network\NetworkModel;
 use \App\Models\secondary\form\UserModel;
 
 
@@ -12,21 +12,33 @@ class Dashboard extends BaseController
 {
     public function index()
     {
-        // Verificar si el usuario está autenticado y tiene un ID de usuario válido
         $user = session('user');
 
+        $id_user = $user->id_user;
+
+        // Crear instancia del modelo de la red
+        $networkmodel = new NetworkModel();
+
+        // Obtener la última red insertada para el usuario
+        $last_network = $networkmodel->getLastNetwork($id_user);
+
+        // Preparar los datos para enviarlos a la vista
+        $data = [
+            'last_network' => $last_network,
+        ];
+
+
         if (!$user || $user->id_user < 1) {
-            // Redirigir a la página de inicio de sesión si el usuario no está autenticado
+            //  Redirigir a la página de inicio de sesión si el usuario no está autenticado
             return redirect()->to('login');
         } else {
-            // Cargar la vista del panel de control si el usuario está autenticado
-            return view('secondary/profile/dashboard.php');
+            //      Cargar la vista del panel de control si el usuario está autenticado
+            return view('secondary/profile/dashboard.php', $data);
         }
     }
 
     public function change_password()
-    {
-        {
+    { {
             // Verificar si el usuario está autenticado y tiene un ID de usuario válido
             $user = session('user');
             if (!$user) {
@@ -101,7 +113,7 @@ class Dashboard extends BaseController
             $user->verification = $verificationstatus;
             unset($user->password);
             // Actualizar la sesión con el nuevo estado de verificacion
-            $session->set('user',$user);
+            $session->set('user', $user);
         }
 
         return redirect()->back();
@@ -116,5 +128,4 @@ class Dashboard extends BaseController
     {
         return view('secondary/profile/configuration');
     }
-
 }

@@ -55,8 +55,8 @@ $routes->post('select-network', 'secondary\form\Network::selectNetwork');
 $routes->get('vulnerabilities', 'secondary\form\Network::showVulnerabilities');
 $routes->get('vulnerabilities/details/(:segment)', 'secondary\form\Network::getVulnerabilityDetails/$1');
 $routes->get('nmap-results', 'secondary\form\Network::nmapResults');
-
-$routes->get('network-animation', 'secondary\form\Network::animation');
+$routes->get('nmap-animation', 'secondary\form\Network::animation');
+$routes->get('network-animation', 'secondary\form\Network::nmap_animation');
 
 $routes->post('history/deleteScan/(:num)', 'secondary\profile\History::deleteScan/$1');
 

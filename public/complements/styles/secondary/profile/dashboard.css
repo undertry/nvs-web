@@ -12,6 +12,31 @@
     --color-grey      : #535151;
 }
 
+@font-face {
+    font-family: "aero";
+    src        : url("../../fonts/aeroxys/Aeroxys.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "schabo";
+    src        : url("../../fonts/schabo/SCHABO-Condensed.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "neue";
+    src        : url("../../fonts/neue/NeueMontreal-Regular.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "neue-medium";
+    src        : url("../../fonts/neue/NeueMontreal-Medium.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "ahsing";
+    src        : url("../../fonts/Ahsing/Ahsing-Regular.otf") format("truetype");
+}
+
 * {
     margin    : 0;
     padding   : 0;
@@ -19,7 +44,7 @@
 }
 
 body {
-    font-family     : 'Roboto', sans-serif;
+    font-family     : 'neue', sans-serif;
     background-color: var(--color-dark);
     color           : var(--color-light-grey);
     width           : 100%;
@@ -82,8 +107,9 @@ body {
 }
 
 .main-header p {
-    font-size: 1.2rem;
-    color    : #666;
+    font-size  : 1.2rem;
+    color      : #666;
+    font-family: "neue";
 }
 
 /* Dashboard Sections */
