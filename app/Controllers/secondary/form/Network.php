@@ -20,11 +20,12 @@ class Network extends BaseController
     // Función para mostrar las redes WiFi escaneadas
     public function index()
     {
+        $ip = session('ip');
         $client = \Config\Services::curlrequest();
 
         try {
             // Solicitar los resultados del escaneo de redes WiFi a la API
-            $response = $client->get('http://10.81.11.135:5000/scan');
+            $response = $client->get('http://' . $ip . ':5000/scan');
             log_message('info', 'Solicitud realizada a la API.');
 
             if ($response->getStatusCode() == 200) {
@@ -57,9 +58,10 @@ class Network extends BaseController
         ];
 
         // Enviar la red seleccionada a la Raspberry Pi
+        $ip = session('ip');
         $client = \Config\Services::curlrequest();
         try {
-            $response = $client->post('http://10.81.11.135:5000/save-network', [
+            $response = $client->post('http://' . $ip . ':5000/save-network', [
                 'json' => $selectedNetwork
             ]);
 

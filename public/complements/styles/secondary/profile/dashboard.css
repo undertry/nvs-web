@@ -54,17 +54,17 @@ body {
 /* Sidebar Navigation */
 .sidebar {
     position        : fixed;
-    top             : 50%;
+    top             : 0;
     left            : 0;
-    transform       : translateY(-50%);
-    margin-left     : 50px;
-    width           : 60px;
-    height          : auto;
-    border-radius   : 25px;
+    width           : 250px;
+    height          : 100vh;
+    /* Ocupar toda la altura de la pantalla */
     background-color: var(--color-semiblack);
-    border          : 1px solid var(--color-grey);
-    text-align      : center;
-    padding         : 10px 0;
+    display         : flex;
+    flex-direction  : column;
+    padding         : 20px 0;
+    border-right    : 1px solid var(--color-grey);
+    z-index         : 1000;
 }
 
 .sidebar-nav ul {
@@ -74,31 +74,49 @@ body {
 }
 
 .sidebar-nav ul li {
-    margin: 20px 0;
+    margin    : 30px 0;
+    text-align: left;
 }
 
 .sidebar-nav ul li a {
     text-decoration: none;
     color          : var(--color-light-grey);
-    display        : block;
-    padding        : 10px;
+    display        : flex;
+    align-items    : center;
+    padding        : 10px 20px;
     transition     : background-color 0.3s ease;
+    font-size      : 18px;
+}
+
+.sidebar-nav ul li a i {
+    margin-right: 15px;
+    font-size   : 24px;
 }
 
 .sidebar-nav ul li a:hover {
-    color: var(--color-semigrey);
+    background-color: var(--color-black);
+    color           : var(--color-light);
+}
+
+.sidebar-nav ul li a span {
+    display: inline-block;
 }
 
 .logo i {
-    color: var(--color-main);
+    color      : var(--color-main);
+    font-size  : 32px;
+    margin-left: 20px;
 }
 
-/* Main Content */
+
+
+/* Ajuste del contenido principal */
 .main-content {
-    margin-left: 100px;
-    /* Para dejar espacio para la barra lateral */
-    padding    : 20px;
-    flex-grow  : 1;
+    margin-left   : 250px;
+    /* El margen izquierdo corresponde al ancho del sidebar */
+    padding       : 40px;
+    display       : flex;
+    flex-direction: column;
 }
 
 .main-header h1 {
@@ -114,10 +132,15 @@ body {
 
 /* Dashboard Sections */
 .dashboard-sections {
-    display        : flex;
-    justify-content: space-around;
-    gap            : 20px;
-    flex-wrap      : wrap;
+    display          : grid;
+    grid-auto-flow   : column;
+    /* Organiza los elementos en fila */
+    grid-auto-columns: min-content;
+    /* Ajusta el tamaño de cada tarjeta según su contenido */
+    gap              : 20px;
+    overflow-x       : hidden;
+    /* Permite el scroll horizontal si es necesario */
+    padding          : 10px;
 }
 
 .dashboard-card {
@@ -125,7 +148,34 @@ body {
     border-radius   : 10px;
     border          : 1px solid var(--color-grey);
     padding         : 20px;
-    flex            : 1;
-    min-width       : 280px;
-    max-width       : 400px;
+    display         : flex;
+    flex-direction  : column;
+    justify-content : space-between;
+    min-height      : 250px;
+    /* Mantén una altura mínima */
+    box-sizing      : border-box;
+    width           : 400px;
+    /* Ajusta el ancho automáticamente al contenido */
+    max-width       : 900px;
+    /* Tamaño máximo opcional para evitar que una tarjeta sea demasiado ancha */
+}
+
+.dashboard-small {
+    width           : 15em;
+    height          : 6.5em;
+    background-color: var(--color-black);
+    border-radius   : 10px;
+    border          : 1px solid var(--color-grey);
+    padding         : 20px;
+    gap             : 10px;
+}
+
+
+
+
+
+/* Gráficos responsivos */
+canvas {
+    width : 100% !important;
+    height: auto !important;
 }
