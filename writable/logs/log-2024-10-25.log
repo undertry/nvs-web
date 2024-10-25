@@ -1,0 +1,154 @@
+INFO - 2024-10-25 01:02:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-25 01:10:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-10-25 01:10:50 --> mysqli_sql_exception: Table 'nvs.users' doesn't exist in C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\NVS\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT `scan`.*...', 0)
+#1 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `scan`.*...')
+#2 C:\xampp\htdocs\NVS\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `scan`.*...')
+#3 C:\xampp\htdocs\NVS\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `scan`.*...', Array, false)
+#4 C:\xampp\htdocs\NVS\app\Models\secondary\form\ScanModel.php(32): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\NVS\app\Controllers\secondary\profile\History.php(21): App\Models\secondary\form\ScanModel->getScanDetailsByUser('1')
+#6 C:\xampp\htdocs\NVS\system\CodeIgniter.php(933): App\Controllers\secondary\profile\History->history()
+#7 C:\xampp\htdocs\NVS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\profile\History))
+#8 C:\xampp\htdocs\NVS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\NVS\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\NVS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\NVS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-10-25 01:10:50 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'nvs.users' doesn't exist
+[Method: GET, Route: history]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `scan`.*, `users`.`name` AS `user_name`, `network`.`signal`, `network`.`essid`, `network`.`bssid`, `security_type`.`type` AS `security_type`, `devices`.`ip_address`, `devices`.`operating_system`, `devices`.`mac_address`, `ports`.`port_name`, `ports`.`service`, `ports`.`protocol`, `port_status`.`status`, `solution`.`solution`, `solution`.`vulnerability_code`, `solution`.`vuln_description`, `network`.`channel`
+FROM `scan`
+JOIN `users` ON `users`.`id_user` = `scan`.`id_user`
+JOIN `network` ON `network`.`id_network` = `scan`.`id_network`
+JOIN `scan_details` ON `scan_details`.`id_scan` = `scan`.`id_scan`
+JOIN `devices` ON `devices`.`id_devices` = `scan_details`.`id_devices`
+JOIN `port_analysis` ON `port_analysis`.`id_devices` = `devices`.`id_devices`
+JOIN `ports` ON `ports`.`id_port` = `port_analysis`.`id_port`
+JOIN `port_status` ON `port_status`.`id_port_status` = `ports`.`id_port_status`
+JOIN `port_details` ON `port_details`.`id_analysis` = `port_analysis`.`id_analysis`
+JOIN `solution` ON `solution`.`id_solution` = `port_details`.`id_solution`
+JOIN `security_type` ON `security_type`.`id_security_type` = `network`.`id_security_type`
+WHERE `scan`.`id_user` = :scan.id_user:', [...], false)
+ 2 APPPATH\Models\secondary\form\ScanModel.php(32): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\secondary\profile\History.php(21): App\Models\secondary\form\ScanModel->getScanDetailsByUser('1')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\secondary\profile\History->history()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\profile\History))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-25 01:10:50 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'nvs.users' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `scan`.*, `users`.`name` AS `user_name`, `network`.`signal`, `network`.`essid`, `network`.`bssid`, `security_type`.`type` AS `security_type`, `devices`.`ip_address`, `devices`.`operating_system`, `devices`.`mac_address`, `ports`.`port_name`, `ports`.`service`, `ports`.`protocol`, `port_status`.`status`, `solution`.`solution`, `solution`.`vulnerability_code`, `solution`.`vuln_description`, `network`.`channel`
+FROM `scan`
+JOIN `users` ON `users`.`id_user` = `scan`.`id_user`
+JOIN `network` ON `network`.`id_network` = `scan`.`id_network`
+JOIN `scan_details` ON `scan_details`.`id_scan` = `scan`.`id_scan`
+JOIN `devices` ON `devices`.`id_devices` = `scan_details`.`id_devices`
+JOIN `port_analysis` ON `port_analysis`.`id_devices` = `devices`.`id_devices`
+JOIN `ports` ON `ports`.`id_port` = `port_analysis`.`id_port`
+JOIN `port_status` ON `port_status`.`id_port_status` = `ports`.`id_port_status`
+JOIN `port_details` ON `port_details`.`id_analysis` = `port_analysis`.`id_analysis`
+JOIN `solution` ON `solution`.`id_solution` = `port_details`.`id_solution`
+JOIN `security_type` ON `security_type`.`id_security_type` = `network`.`id_security_type`
+WHERE `scan`.`id_user` = \'1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `scan`.*, `users`.`name` AS `user_name`, `network`.`signal`, `network`.`essid`, `network`.`bssid`, `security_type`.`type` AS `security_type`, `devices`.`ip_address`, `devices`.`operating_system`, `devices`.`mac_address`, `ports`.`port_name`, `ports`.`service`, `ports`.`protocol`, `port_status`.`status`, `solution`.`solution`, `solution`.`vulnerability_code`, `solution`.`vuln_description`, `network`.`channel`
+FROM `scan`
+JOIN `users` ON `users`.`id_user` = `scan`.`id_user`
+JOIN `network` ON `network`.`id_network` = `scan`.`id_network`
+JOIN `scan_details` ON `scan_details`.`id_scan` = `scan`.`id_scan`
+JOIN `devices` ON `devices`.`id_devices` = `scan_details`.`id_devices`
+JOIN `port_analysis` ON `port_analysis`.`id_devices` = `devices`.`id_devices`
+JOIN `ports` ON `ports`.`id_port` = `port_analysis`.`id_port`
+JOIN `port_status` ON `port_status`.`id_port_status` = `ports`.`id_port_status`
+JOIN `port_details` ON `port_details`.`id_analysis` = `port_analysis`.`id_analysis`
+JOIN `solution` ON `solution`.`id_solution` = `port_details`.`id_solution`
+JOIN `security_type` ON `security_type`.`id_security_type` = `network`.`id_security_type`
+WHERE `scan`.`id_user` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `scan`.*, `users`.`name` AS `user_name`, `network`.`signal`, `network`.`essid`, `network`.`bssid`, `security_type`.`type` AS `security_type`, `devices`.`ip_address`, `devices`.`operating_system`, `devices`.`mac_address`, `ports`.`port_name`, `ports`.`service`, `ports`.`protocol`, `port_status`.`status`, `solution`.`solution`, `solution`.`vulnerability_code`, `solution`.`vuln_description`, `network`.`channel`
+FROM `scan`
+JOIN `users` ON `users`.`id_user` = `scan`.`id_user`
+JOIN `network` ON `network`.`id_network` = `scan`.`id_network`
+JOIN `scan_details` ON `scan_details`.`id_scan` = `scan`.`id_scan`
+JOIN `devices` ON `devices`.`id_devices` = `scan_details`.`id_devices`
+JOIN `port_analysis` ON `port_analysis`.`id_devices` = `devices`.`id_devices`
+JOIN `ports` ON `ports`.`id_port` = `port_analysis`.`id_port`
+JOIN `port_status` ON `port_status`.`id_port_status` = `ports`.`id_port_status`
+JOIN `port_details` ON `port_details`.`id_analysis` = `port_analysis`.`id_analysis`
+JOIN `solution` ON `solution`.`id_solution` = `port_details`.`id_solution`
+JOIN `security_type` ON `security_type`.`id_security_type` = `network`.`id_security_type`
+WHERE `scan`.`id_user` = :scan.id_user:', [...], false)
+ 4 APPPATH\Models\secondary\form\ScanModel.php(32): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\secondary\profile\History.php(21): App\Models\secondary\form\ScanModel->getScanDetailsByUser('1')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\secondary\profile\History->history()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\profile\History))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-25 01:10:50 --> [Caused by] mysqli_sql_exception: Table 'nvs.users' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT `scan`.*, `users`.`name` AS `user_name`, `network`.`signal`, `network`.`essid`, `network`.`bssid`, `security_type`.`type` AS `security_type`, `devices`.`ip_address`, `devices`.`operating_system`, `devices`.`mac_address`, `ports`.`port_name`, `ports`.`service`, `ports`.`protocol`, `port_status`.`status`, `solution`.`solution`, `solution`.`vulnerability_code`, `solution`.`vuln_description`, `network`.`channel`
+FROM `scan`
+JOIN `users` ON `users`.`id_user` = `scan`.`id_user`
+JOIN `network` ON `network`.`id_network` = `scan`.`id_network`
+JOIN `scan_details` ON `scan_details`.`id_scan` = `scan`.`id_scan`
+JOIN `devices` ON `devices`.`id_devices` = `scan_details`.`id_devices`
+JOIN `port_analysis` ON `port_analysis`.`id_devices` = `devices`.`id_devices`
+JOIN `ports` ON `ports`.`id_port` = `port_analysis`.`id_port`
+JOIN `port_status` ON `port_status`.`id_port_status` = `ports`.`id_port_status`
+JOIN `port_details` ON `port_details`.`id_analysis` = `port_analysis`.`id_analysis`
+JOIN `solution` ON `solution`.`id_solution` = `port_details`.`id_solution`
+JOIN `security_type` ON `security_type`.`id_security_type` = `network`.`id_security_type`
+WHERE `scan`.`id_user` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `scan`.*, `users`.`name` AS `user_name`, `network`.`signal`, `network`.`essid`, `network`.`bssid`, `security_type`.`type` AS `security_type`, `devices`.`ip_address`, `devices`.`operating_system`, `devices`.`mac_address`, `ports`.`port_name`, `ports`.`service`, `ports`.`protocol`, `port_status`.`status`, `solution`.`solution`, `solution`.`vulnerability_code`, `solution`.`vuln_description`, `network`.`channel`
+FROM `scan`
+JOIN `users` ON `users`.`id_user` = `scan`.`id_user`
+JOIN `network` ON `network`.`id_network` = `scan`.`id_network`
+JOIN `scan_details` ON `scan_details`.`id_scan` = `scan`.`id_scan`
+JOIN `devices` ON `devices`.`id_devices` = `scan_details`.`id_devices`
+JOIN `port_analysis` ON `port_analysis`.`id_devices` = `devices`.`id_devices`
+JOIN `ports` ON `ports`.`id_port` = `port_analysis`.`id_port`
+JOIN `port_status` ON `port_status`.`id_port_status` = `ports`.`id_port_status`
+JOIN `port_details` ON `port_details`.`id_analysis` = `port_analysis`.`id_analysis`
+JOIN `solution` ON `solution`.`id_solution` = `port_details`.`id_solution`
+JOIN `security_type` ON `security_type`.`id_security_type` = `network`.`id_security_type`
+WHERE `scan`.`id_user` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `scan`.*, `users`.`name` AS `user_name`, `network`.`signal`, `network`.`essid`, `network`.`bssid`, `security_type`.`type` AS `security_type`, `devices`.`ip_address`, `devices`.`operating_system`, `devices`.`mac_address`, `ports`.`port_name`, `ports`.`service`, `ports`.`protocol`, `port_status`.`status`, `solution`.`solution`, `solution`.`vulnerability_code`, `solution`.`vuln_description`, `network`.`channel`
+FROM `scan`
+JOIN `users` ON `users`.`id_user` = `scan`.`id_user`
+JOIN `network` ON `network`.`id_network` = `scan`.`id_network`
+JOIN `scan_details` ON `scan_details`.`id_scan` = `scan`.`id_scan`
+JOIN `devices` ON `devices`.`id_devices` = `scan_details`.`id_devices`
+JOIN `port_analysis` ON `port_analysis`.`id_devices` = `devices`.`id_devices`
+JOIN `ports` ON `ports`.`id_port` = `port_analysis`.`id_port`
+JOIN `port_status` ON `port_status`.`id_port_status` = `ports`.`id_port_status`
+JOIN `port_details` ON `port_details`.`id_analysis` = `port_analysis`.`id_analysis`
+JOIN `solution` ON `solution`.`id_solution` = `port_details`.`id_solution`
+JOIN `security_type` ON `security_type`.`id_security_type` = `network`.`id_security_type`
+WHERE `scan`.`id_user` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `scan`.*, `users`.`name` AS `user_name`, `network`.`signal`, `network`.`essid`, `network`.`bssid`, `security_type`.`type` AS `security_type`, `devices`.`ip_address`, `devices`.`operating_system`, `devices`.`mac_address`, `ports`.`port_name`, `ports`.`service`, `ports`.`protocol`, `port_status`.`status`, `solution`.`solution`, `solution`.`vulnerability_code`, `solution`.`vuln_description`, `network`.`channel`
+FROM `scan`
+JOIN `users` ON `users`.`id_user` = `scan`.`id_user`
+JOIN `network` ON `network`.`id_network` = `scan`.`id_network`
+JOIN `scan_details` ON `scan_details`.`id_scan` = `scan`.`id_scan`
+JOIN `devices` ON `devices`.`id_devices` = `scan_details`.`id_devices`
+JOIN `port_analysis` ON `port_analysis`.`id_devices` = `devices`.`id_devices`
+JOIN `ports` ON `ports`.`id_port` = `port_analysis`.`id_port`
+JOIN `port_status` ON `port_status`.`id_port_status` = `ports`.`id_port_status`
+JOIN `port_details` ON `port_details`.`id_analysis` = `port_analysis`.`id_analysis`
+JOIN `solution` ON `solution`.`id_solution` = `port_details`.`id_solution`
+JOIN `security_type` ON `security_type`.`id_security_type` = `network`.`id_security_type`
+WHERE `scan`.`id_user` = :scan.id_user:', [...], false)
+ 5 APPPATH\Models\secondary\form\ScanModel.php(32): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\secondary\profile\History.php(21): App\Models\secondary\form\ScanModel->getScanDetailsByUser('1')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\secondary\profile\History->history()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\secondary\profile\History))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-25 01:11:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-25 01:15:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
