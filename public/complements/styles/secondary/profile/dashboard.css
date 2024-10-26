@@ -44,138 +44,220 @@
 }
 
 body {
-    font-family     : 'neue', sans-serif;
-    background-color: var(--color-dark);
-    color           : var(--color-light-grey);
-    width           : 100%;
-    display         : flex;
-}
-
-/* Sidebar Navigation */
-.sidebar {
-    position        : fixed;
-    top             : 0;
-    left            : 0;
-    width           : 250px;
-    height          : 100vh;
-    /* Ocupar toda la altura de la pantalla */
-    background-color: var(--color-semiblack);
-    display         : flex;
-    flex-direction  : column;
-    padding         : 20px 0;
-    border-right    : 1px solid var(--color-grey);
-    z-index         : 1000;
-}
-
-.sidebar-nav ul {
-    list-style: none;
-    padding   : 0;
-    margin    : 0;
-}
-
-.sidebar-nav ul li {
-    margin    : 30px 0;
-    text-align: left;
-}
-
-.sidebar-nav ul li a {
+    display: flex;
+    font-family: Arial, sans-serif;
+    background-color: #1c1c24;
+    color: #d4d4dc;
+    margin: 0;
+  }
+  
+  .sidebar {
+    width: 250px;
+    background-color: #2a2a37;
+    padding: 20px;
+    position: relative;
+    transition: width 0.3s;
+  }
+  
+  .sidebar h2 {
+    color: #fff;
+  }
+  
+  .sidebar nav a {
+    display: block;
+    padding: 15px;
+    color: #bdbdbd;
     text-decoration: none;
-    color          : var(--color-light-grey);
-    display        : flex;
-    align-items    : center;
-    padding        : 10px 20px;
-    transition     : background-color 0.3s ease;
-    font-size      : 18px;
-}
+  }
+  
+  .sidebar nav a.active, .sidebar nav a:hover {
+    background-color: #3a3a4f;
+    color: #fff;
+  }
+  
+  #toggleSidebar {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+  }
+  
+  .main-content {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  header {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 20px;
+  }
+  
+  .user-profile {
+    display: flex;
+    align-items: center;
+  }
+  
+  .user-profile img {
+    border-radius: 50%;
+    width: 40px;
+    margin-right: 10px;
+  }
+  
+  .cards {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  
+  .card {
+    background-color: #333348;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .large {
+    grid-column: span 2;
+  }
+  
+  .medium {
+    grid-column: span 1;
+  }
+  
+  .small {
+    grid-column: span 1;
+  }
+  
+  #activityList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #activityList li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #444;
+  }
+  
+  .username {
+    color: #ffffff;
+    font-weight: bold;
+  }
+  
+  .action, .timestamp {
+    color: #bdbdbd;
+  }
 
-.sidebar-nav ul li a i {
-    margin-right: 15px;
-    font-size   : 24px;
-}
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table, th, td {
+    border: 1px solid #444;
+    padding: 8px;
+    color: #d4d4dc;
+  }
+  
+  thead {
+    background-color: #3a3a4f;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #2a2a37;
+  }
+  
 
-.sidebar-nav ul li a:hover {
-    background-color: var(--color-black);
-    color           : var(--color-light);
-}
-
-.sidebar-nav ul li a span {
-    display: inline-block;
-}
-
-.logo i {
-    color      : var(--color-main);
-    font-size  : 32px;
-    margin-left: 20px;
-}
-
-
-
-/* Ajuste del contenido principal */
-.main-content {
-    margin-left   : 250px;
-    /* El margen izquierdo corresponde al ancho del sidebar */
-    padding       : 40px;
-    display       : flex;
+  /* Contenedor Principal */
+.dashboard-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  
+  /* Columna Izquierda y Derecha */
+  .column {
+    display: flex;
     flex-direction: column;
-}
+    gap: 10px;
+  }
+  
+  /* Tamaños de las columnas */
+  .izquierda {
+    width: 45%; /* Ajusta según tus preferencias */
+  }
+  
+  .derecha {
+    width: 25%;
+  }
+  
+  /* Estilos de las cards */
+  .card {
+    background-color: #1f1f2e;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Estilos para tablas y listas */
+  #activityList, #incidentTable {
+    width: 100%;
+  }
+  
+  #incidentTable th, #incidentTable td {
+    text-align: left;
+    padding: 10px;
+  }
+  
 
-.main-header h1 {
-    font-size    : 2.5rem;
-    margin-bottom: 10px;
-}
+  /* Sección de Configuración Rápida */
+.quick-config {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Tamaños de las Cards */
+  .card.small {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    background-color: #1f1f2e;
+    border-radius: 8px;
+  }
 
-.main-header p {
-    font-size  : 1.2rem;
-    color      : #666;
-    font-family: "neue";
-}
-
-/* Dashboard Sections */
-.dashboard-sections {
-    display          : grid;
-    grid-auto-flow   : column;
-    /* Organiza los elementos en fila */
-    grid-auto-columns: min-content;
-    /* Ajusta el tamaño de cada tarjeta según su contenido */
-    gap              : 20px;
-    overflow-x       : hidden;
-    /* Permite el scroll horizontal si es necesario */
-    padding          : 10px;
-}
-
-.dashboard-card {
-    background-color: var(--color-black);
-    border-radius   : 10px;
-    border          : 1px solid var(--color-grey);
-    padding         : 20px;
-    display         : flex;
-    flex-direction  : column;
-    justify-content : space-between;
-    min-height      : 250px;
-    /* Mantén una altura mínima */
-    box-sizing      : border-box;
-    width           : 400px;
-    /* Ajusta el ancho automáticamente al contenido */
-    max-width       : 900px;
-    /* Tamaño máximo opcional para evitar que una tarjeta sea demasiado ancha */
-}
-
-.dashboard-small {
-    width           : 15em;
-    height          : 6.5em;
-    background-color: var(--color-black);
-    border-radius   : 10px;
-    border          : 1px solid var(--color-grey);
-    padding         : 20px;
-    gap             : 10px;
-}
-
-
-
-
-
-/* Gráficos responsivos */
-canvas {
-    width : 100% !important;
-    height: auto !important;
-}
+  /* Estilos para Formulario */
+.form-inputs {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  #lastNetwork,
+  #lastIP {
+    font-weight: bold;
+  }
+  
+  input[type="text"] {
+    padding: 5px;
+    border-radius: 4px;
+    border: none;
+  }
+  
+  .btn-submit {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Alineación de texto y elementos */
+  label {
+    font-size: 12px;
+  }

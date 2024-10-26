@@ -225,7 +225,7 @@ class Network extends BaseController
 
     public function ipview()
     {
-        return view('tertiary/network/networkin');
+        return view('secondary/profile/dashboard.php');
     }
     public function ipset()
     {

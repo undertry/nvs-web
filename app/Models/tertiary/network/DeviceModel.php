@@ -10,5 +10,6 @@ class DeviceModel extends Model
     protected $primaryKey = 'id_devices';
     protected $allowedFields = ['ip_address', 'operating_system', 'mac_address'];
 
+ 
     
 }

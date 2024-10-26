@@ -5,7 +5,7 @@ namespace App\Controllers\secondary\profile;
 use App\Controllers\main\BaseController;
 use App\Models\tertiary\network\NetworkModel;
 use \App\Models\secondary\form\UserModel;
-
+use \App\Models\tertiary\network\DeviceModel;
 
 // El nombre de la clase tiene que coincidir con el nomnbre del controlador
 class Dashboard extends BaseController
@@ -13,18 +13,19 @@ class Dashboard extends BaseController
     public function index()
     {
         $user = session('user');
-
+    
         $id_user = $user->id_user;
 
         // Crear instancia del modelo de la red
         $networkmodel = new NetworkModel();
-
         // Obtener la última red insertada para el usuario
         $last_network = $networkmodel->getLastNetwork($id_user);
+        $last_ip = session('ip'); // Obtén la IP de la sesión
 
         // Preparar los datos para enviarlos a la vista
         $data = [
             'last_network' => $last_network,
+            'last_ip' => $last_ip // Incluye la IP en los datos
         ];
 
 
