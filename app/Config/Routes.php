@@ -49,7 +49,8 @@ $routes->get('configuration', 'secondary\profile\Dashboard::configuration');
 // vista para el historial de escaneos del usuario
 $routes->get('/history', 'secondary\profile\History::history');
 $routes->get('history-animation', 'secondary\profile\History::animation');
-
+$routes->get('setScanMode', 'secondary\form\Network::showSetScanMode'); // Ruta para mostrar la vista
+$routes->post('setScanMode', 'secondary\form\Network::setScanMode'); // ruta para mandar los datos
 $routes->get('network', 'secondary\form\Network::index');
 $routes->post('select-network', 'secondary\form\Network::selectNetwork');
 $routes->get('vulnerabilities', 'secondary\form\Network::showVulnerabilities');

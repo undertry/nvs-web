@@ -51,28 +51,89 @@ body {
     margin: 0;
   }
   
+
   .sidebar {
     width: 250px;
     background-color: #2a2a37;
     padding: 20px;
     position: relative;
-    transition: width 0.3s;
+    transition: width 0.3s ease;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .sidebar.collapsed {
+    width: 60px;
+  }
+  
+  .sidebar-title,
+  .sidebar-select,
+  .sidebar nav a .text,
+  .sidebar nav a .notification {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  .sidebar.collapsed .sidebar-title,
+  .sidebar.collapsed .sidebar-select,
+  .sidebar.collapsed nav a .text,
+  .sidebar.collapsed nav a .notification {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-100%); /* Oculta el contenido al colapsar */
   }
   
   .sidebar h2 {
     color: #fff;
+    margin-bottom: 10px;
+  }
+  
+  #storeSelect {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #3a3a4f;
+    color: #d4d4dc;
+    border: none;
+    border-radius: 5px;
   }
   
   .sidebar nav a {
-    display: block;
-    padding: 15px;
+    display: flex;
+    align-items: center;
+    padding: 12px;
     color: #bdbdbd;
     text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: background 0.3s, justify-content 0.3s;
   }
   
-  .sidebar nav a.active, .sidebar nav a:hover {
+  .sidebar.collapsed nav a {
+    justify-content: center;
+  }
+  
+  .sidebar nav a .icon {
+    margin-right: 10px;
+    transition: margin 0.3s;
+  }
+  
+  .sidebar.collapsed nav a .icon {
+    margin-right: 0; /* Centra el icono cuando está colapsado */
+  }
+  
+  .sidebar nav a.active,
+  .sidebar nav a:hover {
     background-color: #3a3a4f;
     color: #fff;
+  }
+  
+  .notification {
+    background-color: #ff5252;
+    color: #fff;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 10px;
+    margin-left: auto;
   }
   
   #toggleSidebar {
@@ -81,7 +142,9 @@ body {
     color: #fff;
     position: absolute;
     bottom: 20px;
-    left: 20px;
+    left: 10px;
+    font-size: 18px;
+    cursor: pointer;
   }
   
   .main-content {

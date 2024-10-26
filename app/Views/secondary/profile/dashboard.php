@@ -4,15 +4,35 @@
 <title>Dashboard</title>
 </head>
 
-<div class="sidebar">
-    <h2>CyberDashboard</h2>
-    <nav>
-      <a href="#dashboard" class="active">Dashboard</a>
-      <a href="#analytics">Analytics</a>
-      <a href="#settings">Settings</a>
-    </nav>
-    <button id="toggleSidebar">↔️</button>
-  </div>
+<div class="sidebar" id="sidebar">
+  <h2 class="sidebar-title">CyberDashboard</h2>
+  <select id="storeSelect" class="sidebar-select">
+    <option value="main">Main Dashboard</option>
+    <option value="network">Network Security</option>
+    <option value="devices">Device Monitoring</option>
+  </select>
+  <nav>
+    <a href="#dashboard" class="active">
+      <span class="icon">🏠</span> <span class="text">Dashboard</span>
+    </a>
+    <a href="#analytics">
+      <span class="icon">📊</span> <span class="text">Analytics</span>
+      <span class="notification">3</span>
+    </a>
+    <a href="#campaigns">
+      <span class="icon">📋</span> <span class="text">Campaigns</span>
+      <span class="notification">1</span>
+    </a>
+    <a href="#settings">
+      <span class="icon">⚙️</span> <span class="text">Settings</span>
+    </a>
+    <a href="#help">
+      <span class="icon">❓</span> <span class="text">Help Center</span>
+    </a>
+  </nav>
+  <button id="toggleSidebar">↔️</button>
+</div>
+
 
   <div class="main-content">
     <header>
@@ -75,7 +95,27 @@
           </div>
         </form>
       </div>
-    </div>
+  
+
+    <div class="card small">
+    <?php if (session()->getFlashdata('error')): ?>
+    <div class="alert alert-danger"><?= session()->getFlashdata('error') ?></div>
+<?php endif; ?>
+<?php if (session()->getFlashdata('success')): ?>
+    <div class="alert alert-success"><?= session()->getFlashdata('success') ?></div>
+<?php endif; ?>
+        <h4>Modo de escaneo:</h4>
+        <form action="<?= site_url('setScanMode') ?>" method="post">
+    <label for="mode">Modo de escaneo:</label>
+    <select name="mode" id="mode" required>
+        <option value="rapido">Rápido</option>
+        <option value="intermedio">Intermedio</option>
+        <option value="profundo">Profundo</option>
+    </select>
+    <button type="submit">Establecer Modo</button>
+</form>
+      </div>
+        </div>
 
   <!-- Columna Derecha: Gráficos -->
   <div class="column derecha">
@@ -101,10 +141,10 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script>
-  document.getElementById('toggleSidebar').addEventListener('click', function () {
-    const sidebar = document.querySelector('.sidebar');
-    sidebar.style.width = sidebar.style.width === '60px' ? '250px' : '60px';
-  });
+document.getElementById('toggleSidebar').addEventListener('click', function () {
+  const sidebar = document.getElementById('sidebar');
+  sidebar.classList.toggle('collapsed');
+});
 </script>
 
 <script>

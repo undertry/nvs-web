@@ -42,7 +42,53 @@ class Network extends BaseController
 
         return view('tertiary/network/network', ['network' => $network]);
     }
+// Función para manejar la selección del modo de escaneo
+public function setScanMode()
+{
+    $ip = session('ip');
+    $client = \Config\Services::curlrequest();
+    $mode = $this->request->getPost('mode'); // Obtener el modo seleccionado desde la vista
 
+    // Validar que el modo sea uno de los aceptados y asignar el tiempo en segundos
+    $scanDurations = [
+        'rapido' => 10,
+        'intermedio' => 30,
+        'profundo' => 60
+    ];
+
+    if (!isset($scanDurations[$mode])) {
+        return redirect()->back()->with('error', 'Modo de escaneo inválido.');
+    }
+
+    // Enviar el modo seleccionado y la duración a la API de la Raspberry Pi
+    try {
+        $response = $client->post('http://' . $ip . ':5000/set-scan-mode', [
+            'json' => [
+                'mode' => $mode,
+                'duration' => $scanDurations[$mode]
+            ]
+        ]);
+
+        if ($response->getStatusCode() == 200) {
+            return redirect()->back()->with('success', 'Modo de escaneo establecido correctamente.');
+        } else {
+            log_message('error', 'Error al establecer el modo de escaneo en la Raspberry Pi.');
+            return redirect()->back()->with('error', 'Error al establecer el modo de escaneo.');
+        }
+    } catch (\Exception $e) {
+        log_message('error', 'Excepción capturada al intentar establecer el modo de escaneo: ' . $e->getMessage());
+        return redirect()->back()->with('error', 'Excepción al establecer el modo de escaneo.');
+    }
+}
+
+
+public function showSetScanMode()
+{
+    return view('tertiary/network/scan'); // Cargar la vista del formulario
+}
+
+
+ 
     // Función para manejar la selección de red WiFi
     public function selectNetwork()
     {
