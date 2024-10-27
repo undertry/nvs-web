@@ -12,31 +12,42 @@ class Dashboard extends BaseController
 {
     public function index()
     {
+        // Verificar sesión y obtener usuario
         $user = session('user');
-    
-        $id_user = $user->id_user;
-
-        // Crear instancia del modelo de la red
-        $networkmodel = new NetworkModel();
-        // Obtener la última red insertada para el usuario
-        $last_network = $networkmodel->getLastNetwork($id_user);
-        $last_ip = session('ip'); // Obtén la IP de la sesión
-
-        // Preparar los datos para enviarlos a la vista
-        $data = [
-            'last_network' => $last_network,
-            'last_ip' => $last_ip // Incluye la IP en los datos
-        ];
-
-
         if (!$user || $user->id_user < 1) {
-            //  Redirigir a la página de inicio de sesión si el usuario no está autenticado
             return redirect()->to('login');
-        } else {
-            //      Cargar la vista del panel de control si el usuario está autenticado
-            return view('secondary/profile/dashboard.php', $data);
         }
+    
+        // Preparar los datos para la vista sin la lista de redes WiFi
+        $data = [
+            'network' => [],  // Vacío inicialmente
+            'last_network' => null,
+            'last_ip' => session('ip')
+        ];
+    
+        return view('secondary/profile/dashboard', $data);
     }
+    
+    public function fetchNetworks()
+    {
+        $ip = session('ip');
+        $client = \Config\Services::curlrequest();
+        $network = [];
+    
+        try {
+            $response = $client->get('http://' . $ip . ':5000/scan');
+            if ($response->getStatusCode() == 200) {
+                $network = json_decode($response->getBody(), true);
+            }
+        } catch (\Exception $e) {
+            log_message('error', 'Error al intentar conectarse a la API: ' . $e->getMessage());
+        }
+    
+        return $this->response->setJSON($network);
+    }
+    
+    
+    
 
     public function change_password()
     { {

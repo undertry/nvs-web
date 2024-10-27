@@ -92,46 +92,50 @@ public function showSetScanMode()
     // Función para manejar la selección de red WiFi
     public function selectNetwork()
     {
-        $networkmodel = new NetworkModel();
-        $securitymodel = new SecurityModel();
-
-        $selectedNetwork = [
-            'essid' => $this->request->getPost('essid'),
-            'bssid' => $this->request->getPost('bssid'),
-            'signal' => $this->request->getPost('signal'),
-            'channel' => $this->request->getPost('channel'),
-            'encryption' => $this->request->getPost('encryption'),
-        ];
-
-        // Enviar la red seleccionada a la Raspberry Pi
+        $networkModel = new NetworkModel();
+        $securityModel = new SecurityModel();
+    
+        // Usa getJSON() para obtener los datos del JSON enviado en la solicitud POST
+        $selectedNetwork = $this->request->getJSON(true);
+    
+        // Verifica si los datos se recibieron correctamente
+        if (!$selectedNetwork) {
+            return $this->response->setJSON(['success' => false, 'message' => 'Datos de red no recibidos correctamente.']);
+        }
+    
         $ip = session('ip');
         $client = \Config\Services::curlrequest();
+    
         try {
             $response = $client->post('http://' . $ip . ':5000/save-network', [
                 'json' => $selectedNetwork
             ]);
-
+    
             if ($response->getStatusCode() == 200) {
                 $encryption = $selectedNetwork['encryption'];
-                $id_security_type = $securitymodel->IdSecurityType($encryption);
+                $id_security_type = $securityModel->IdSecurityType($encryption);
                 $selnet = [
-                    'essid' => $this->request->getPost('essid'),
-                    'bssid' => $this->request->getPost('bssid'),
-                    'signal' => $this->request->getPost('signal'),
-                    'channel' => $this->request->getPost('channel'),
+                    'essid' => $selectedNetwork['essid'],
+                    'bssid' => $selectedNetwork['bssid'],
+                    'signal' => $selectedNetwork['signal'],
+                    'channel' => $selectedNetwork['channel'],
                     'id_security_type' => $id_security_type
                 ];
-                $id_network = $networkmodel->networkinsert($selnet);
+                $id_network = $networkModel->networkinsert($selnet);
                 $this->session->set("id_network", $id_network);
+    
+                return $this->response->setJSON(['success' => true]);
             } else {
                 log_message('error', 'Error al enviar la red seleccionada a la Raspberry Pi.');
-                return redirect()->back()->with('error', 'Error al seleccionar la red.');
+                return $this->response->setJSON(['success' => false, 'message' => 'Error al seleccionar la red.']);
             }
         } catch (\Exception $e) {
             log_message('error', 'Excepción capturada al intentar enviar la red a la Raspberry Pi: ' . $e->getMessage());
-            return redirect()->back()->with('error', 'Excepción al seleccionar la red.');
+            return $this->response->setJSON(['success' => false, 'message' => 'Excepción al seleccionar la red.']);
         }
     }
+    
+    
 
     // Nueva función para manejar los resultados de Nmap
     public function nmapResults()

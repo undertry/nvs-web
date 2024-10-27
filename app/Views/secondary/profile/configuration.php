@@ -66,6 +66,16 @@
                         <a href="<?= base_url('change_password'); ?>">Change password</a>
                     </button>
                 </div>
+                <div class="card small">
+        <h4>Cambiar IP de Interfaz</h4>
+        <form method="post" action="<?= base_url('ipset'); ?>" class="form">
+        <label for="ip">Última IP: <span id="lastIP"><?= esc($last_ip) ?: 'N/A' ?></span></label>
+          <div class="form-inputs">
+            <input name="ip" type="text" id="ip" placeholder="e.g. 192.168.2.170" required>
+            <input type="submit" value="Enter" class="btn-submit">
+          </div>
+        </form>
+      </div>
             </div>
         </div>
     </div>

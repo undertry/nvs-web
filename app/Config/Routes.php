@@ -43,6 +43,7 @@ $routes->post('sendemail', 'secondary\user_functions\Change_Password::sendemail'
 
 // Seccion controlador User/Dashboard
 $routes->get('dashboard', 'secondary\profile\Dashboard::index');
+$routes->get('fetchNetworks', 'secondary\profile\Dashboard::fetchNetworks');
 $routes->get('dashboard-animation', 'secondary\profile\Dashboard::animation');
 $routes->get('configuration', 'secondary\profile\Dashboard::configuration');
 
@@ -62,6 +63,7 @@ $routes->get('network-animation', 'secondary\form\Network::animation');
 $routes->post('history/deleteScan/(:num)', 'secondary\profile\History::deleteScan/$1');
 
 
+$routes->get('prueba', 'secondary\form\Network::index');
 
 //TESTING
 $routes->get('ip', 'secondary\form\Network::ipview');
