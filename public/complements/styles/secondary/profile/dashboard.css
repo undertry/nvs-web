@@ -138,3 +138,14 @@ h2 {
   background-color: #f1f1f1;
   border-radius: 5px;
 }
+
+#loading-spinner .spinner-border {
+  width: 3rem;
+  height: 3rem;
+}
+
+#loading-spinner p {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  color: #007bff; /* Color azul primario de Bootstrap */
+}

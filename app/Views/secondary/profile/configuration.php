@@ -76,6 +76,34 @@
           </div>
         </form>
       </div>
+      <div class="quick-config">
+      <!-- Card: Última Red Escaneada -->
+      <div class="card small">
+        <h4>Última Red Escaneada</h4>
+        <?php if (!empty($last_network)): ?>
+        <p id="lastNetwork"><?= esc($last_network[0]['essid']) ?></p>
+        <?php else: ?>
+                    <p>No selected network found.</p>
+                <?php endif; ?>
+      </div>
+      <div class="card small">
+    <?php if (session()->getFlashdata('error')): ?>
+    <div class="alert alert-danger"><?= session()->getFlashdata('error') ?></div>
+<?php endif; ?>
+<?php if (session()->getFlashdata('success')): ?>
+    <div class="alert alert-success"><?= session()->getFlashdata('success') ?></div>
+<?php endif; ?>
+        <h4>Modo de escaneo:</h4>
+        <form action="<?= site_url('setScanMode') ?>" method="post">
+    <label for="mode">Modo de escaneo:</label>
+    <select name="mode" id="mode" required>
+        <option value="rapido">Rápido</option>
+        <option value="intermedio">Intermedio</option>
+        <option value="profundo">Profundo</option>
+    </select>
+    <button type="submit">Establecer Modo</button>
+</form>
+      </div>
             </div>
         </div>
     </div>

@@ -14,7 +14,7 @@
         <nav>
             <a href="#dashboard" class="active"><span class="icon">🏠</span> <span class="text">Dashboard</span></a>
             <a href="#analytics"><span class="icon">📊</span> <span class="text">Analytics</span></a>
-            <a href="#settings"><span class="icon">⚙️</span> <span class="text">Settings</span></a>
+            <a href="<?= base_url('configuration')?>"><span class="icon">⚙️</span> <span class="text">Settings</span></a>
             <a href="#help"><span class="icon">❓</span> <span class="text">Help Center</span></a>
         </nav>
         <button id="toggleSidebar">↔️</button>
@@ -31,6 +31,15 @@
         <div class="container">
         <h2>Redes WiFi Disponibles</h2>
         <button id="fetch-networks" class="btn btn-primary">Buscar Redes WiFi</button>
+         <!-- Spinner de carga -->
+   <!-- Spinner de carga -->
+<div id="loading-spinner" style="display: none; margin-top: 10px; text-align: center;">
+    <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;">
+        <span class="sr-only">Cargando...</span>
+    </div>
+    <p style="margin-top: 10px;">Buscando redes disponibles...</p>
+</div>
+
         <ul id="wifi-list" class="list-group mt-3">
             <!-- Aquí se mostrarán los ESSID de las redes -->
         </ul>
@@ -38,13 +47,25 @@
 
     <script>
 document.getElementById('fetch-networks').addEventListener('click', function() {
+    const wifiList = document.getElementById('wifi-list');
+    const loadingSpinner = document.getElementById('loading-spinner');
+
+    // Mostrar el spinner y limpiar la lista de redes
+    loadingSpinner.style.display = 'block';
+    wifiList.innerHTML = '';
+
     fetch('fetchNetworks')
         .then(response => response.json())
         .then(data => {
-            const wifiList = document.getElementById('wifi-list');
-            wifiList.innerHTML = '';
+            loadingSpinner.style.display = 'none'; // Ocultar el spinner
 
-            data.forEach(network => {
+            if (!data.success) {
+                alert(data.message);
+                return;
+            }
+
+            // Mostrar redes en la lista si la respuesta es exitosa
+            data.data.forEach(network => {
                 const listItem = document.createElement('li');
                 listItem.className = 'list-group-item';
                 listItem.textContent = network.ESSID;
@@ -54,17 +75,16 @@ document.getElementById('fetch-networks').addEventListener('click', function() {
                 detailsDiv.innerHTML = `
                     <p><strong>BSSID:</strong> ${network.BSSID}</p>
                     <p><strong>Canal:</strong> ${network.Channel}</p>
-                    <p><strong>Frecuencia:</strong> ${network.Frequency}</p>
+                    <p><strong>Frecuencia:</strong> ${network.Signal}</p>
+                       <p><strong>Encryption:</strong> ${network.Encryption}</p>
                     <button class="btn btn-primary select-network-btn">Seleccionar Red WiFi</button>
                 `;
 
-                // Añadir evento de clic para desplegar los detalles
                 listItem.addEventListener('click', function() {
                     const isVisible = detailsDiv.style.display === 'block';
                     detailsDiv.style.display = isVisible ? 'none' : 'block';
                 });
 
-                // Agregar evento al botón de selección de red
                 detailsDiv.querySelector('.select-network-btn').addEventListener('click', function() {
                     selectNetwork(network);
                 });
@@ -73,8 +93,13 @@ document.getElementById('fetch-networks').addEventListener('click', function() {
                 wifiList.appendChild(listItem);
             });
         })
-        .catch(error => console.error('Error al obtener las redes:', error));
+        .catch(error => {
+            loadingSpinner.style.display = 'none'; // Ocultar el spinner si ocurre un error
+            console.error('Error al obtener las redes:', error);
+            alert('Error al conectar con la API. Por favor, asegúrate de que está inicializada.');
+        });
 });
+
 
 // Función para enviar la red seleccionada al controlador
 function selectNetwork(network) {

@@ -31,19 +31,36 @@ class Dashboard extends BaseController
     public function fetchNetworks()
     {
         $ip = session('ip');
+    
+        // Verificar si la IP está en la sesión
+        if (empty($ip)) {
+            return $this->response->setJSON([
+                'success' => false,
+                'message' => 'Error: IP no asignada en la sesión.'
+            ]);
+        }
+    
         $client = \Config\Services::curlrequest();
         $network = [];
     
         try {
+            // Realizar solicitud GET para verificar si la API está disponible
             $response = $client->get('http://' . $ip . ':5000/scan');
             if ($response->getStatusCode() == 200) {
                 $network = json_decode($response->getBody(), true);
+                return $this->response->setJSON([
+                    'success' => true,
+                    'data' => $network
+                ]);
             }
         } catch (\Exception $e) {
+            // Si falla la conexión con la API, retornar un mensaje de error
             log_message('error', 'Error al intentar conectarse a la API: ' . $e->getMessage());
+            return $this->response->setJSON([
+                'success' => false,
+                'message' => 'Error: API no inicializada o inaccesible.'
+            ]);
         }
-    
-        return $this->response->setJSON($network);
     }
     
     
@@ -138,6 +155,19 @@ class Dashboard extends BaseController
 
     public function configuration()
     {
-        return view('secondary/profile/configuration');
+        $ip = session('ip');
+         // Verificar sesión y obtener usuario
+         $user = session('user');
+         if (!$user || $user->id_user < 1) {
+             return redirect()->to('login');
+         }
+     
+         // Preparar los datos para la vista sin la lista de redes WiFi
+         $data = [
+             'network' => [],  // Vacío inicialmente
+             'last_network' => null,
+             'last_ip' => session('ip')
+         ];
+        return view('secondary/profile/configuration', $data);
     }
 }
