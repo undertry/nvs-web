@@ -46,6 +46,9 @@ $routes->get('dashboard', 'secondary\profile\Dashboard::index');
 $routes->get('fetchNetworks', 'secondary\profile\Dashboard::fetchNetworks');
 $routes->get('dashboard-animation', 'secondary\profile\Dashboard::animation');
 $routes->get('configuration', 'secondary\profile\Dashboard::configuration');
+$routes->post('setCredentials', 'secondary\profile\Dashboard::setCredentials');
+$routes->post('startApi', 'secondary\profile\Dashboard::startApi');
+$routes->post('stopApi', 'secondary\profile\Dashboard::stopApi');
 
 // vista para el historial de escaneos del usuario
 $routes->get('/history', 'secondary\profile\History::history');

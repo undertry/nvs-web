@@ -1,7 +1,9 @@
 <?php
 // Se cambia user dependiendo en que carpeta este situado los controladores
 namespace App\Controllers\secondary\profile;
+require_once __DIR__ . '/../../../../vendor/autoload.php';
 
+use phpseclib3\Net\SSH2;
 use App\Controllers\main\BaseController;
 use App\Models\tertiary\network\NetworkModel;
 use \App\Models\secondary\form\UserModel;
@@ -170,4 +172,100 @@ class Dashboard extends BaseController
          ];
         return view('secondary/profile/configuration', $data);
     }
+
+    public function setCredentials()
+{
+    // Validar que el usuario esté logueado
+    $user = session('user');
+    if (!$user || $user->id_user < 1) {
+        return redirect()->to('login');
+    }
+
+    // Obtener credenciales del formulario
+    $raspberry_user = $this->request->getPost('raspberry_user');
+    $raspberry_password = $this->request->getPost('raspberry_password');
+    
+    if ($raspberry_user && $raspberry_password) {
+        // Guardar las credenciales en la sesión
+        session()->set('raspberry_user', $raspberry_user);
+        session()->set('raspberry_password', $raspberry_password);
+        
+        return redirect()->back()->with('success', 'Credenciales guardadas exitosamente.');
+    } else {
+        return redirect()->back()->with('error', 'Debe ingresar el usuario y la contraseña.');
+    }
+}
+
+public function startApi()
+{
+    // Obtener IP, usuario y contraseña desde la sesión
+    $ip = session('ip');
+    $user = session('raspberry_user');
+    $password = session('raspberry_password');
+
+    // Verificar que IP, usuario y contraseña estén presentes
+    if (!$ip || !$user || !$password) {
+        return redirect()->back()->with('api_message', 'Error: IP o credenciales no asignadas.');
+    }
+
+    // Crear instancia de SSH
+    $ssh = new SSH2($ip);
+
+    // Intentar la conexión usando el usuario y la contraseña
+    if (!$ssh->login($user, $password)) {
+        return redirect()->back()->with('api_message', 'Error: No se pudo establecer conexión SSH.');
+    }
+
+    // Ejecutar el comando para iniciar el servicio
+    $output = $ssh->exec('echo ' . escapeshellarg($password) . ' | sudo -S systemctl start api_server.service');
+
+    // Verificar si el servicio se inició correctamente
+    if (strpos($output, 'Failed') === false) {
+        return redirect()->back()->with('api_message', 'El servicio API se inició correctamente.');
+    } else {
+        return redirect()->back()->with('api_message', 'Error: No se pudo iniciar el servicio API.');
+    }
+}
+
+
+    
+public function stopApi()
+{
+    // Obtener IP, usuario y contraseña desde la sesión
+    $ip = session('ip');
+    $user = session('raspberry_user');
+    $password = session('raspberry_password');
+
+    // Verificar que IP, usuario y contraseña estén presentes
+    if (!$ip || !$user || !$password) {
+        return redirect()->back()->with('api_message', 'Error: IP o credenciales no asignadas.');
+    }
+
+    // Crear instancia de SSH
+    $ssh = new SSH2($ip);
+
+    // Intentar la conexión usando el usuario y la contraseña
+    if (!$ssh->login($user, $password)) {
+        return redirect()->back()->with('api_message', 'Error: No se pudo establecer conexión SSH.');
+    }
+
+    // Ejecutar el comando para detener el servicio
+    $output = $ssh->exec('echo ' . escapeshellarg($password) . ' | sudo -S systemctl stop api_server.service');
+
+    // Verificar el estado del servicio para confirmar si se detuvo
+    $status = $ssh->exec('systemctl is-active api_server.service');
+
+    if (trim($status) != "active") {
+        return redirect()->back()->with('api_message', 'API detenida correctamente.');
+    } else {
+        return redirect()->back()->with('api_message', 'No se pudo detener la API.');
+    }
+}
+
+
+
+
+
+
+
 }

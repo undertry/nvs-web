@@ -58,6 +58,35 @@
             <!-- Funcionalidades -->
             <div class="functionalities">
                 <h2>Functionalities</h2>
+                <div class="card small">
+    <h4>Credenciales Raspberry Pi</h4>
+    <form method="post" action="<?= base_url('setCredentials'); ?>">
+        <div class="form-inputs">
+            <label for="raspberry_user">Usuario:</label>
+            <input name="raspberry_user" type="text" id="raspberry_user" placeholder="Usuario de Raspberry" required>
+            
+            <label for="raspberry_password">Contraseña:</label>
+            <input name="raspberry_password" type="password" id="raspberry_password" placeholder="Contraseña" required>
+            
+            <input type="submit" value="Guardar" class="btn-submit">
+        </div>
+    </form>
+</div>
+<div class="card small">
+    <h4>Iniciar/Detener API</h4>
+    <form method="post" action="<?= base_url('startApi'); ?>" style="display: inline;">
+        <input type="submit" value="Prender API" class="btn-submit">
+    </form>
+    <form method="post" action="<?= base_url('stopApi'); ?>" style="display: inline;">
+        <input type="submit" value="Apagar API" class="btn-submit">
+    </form>
+</div>
+<?php if (session()->getFlashdata('api_message')): ?>
+    <div class="alert alert-info"><?= session()->getFlashdata('api_message') ?></div>
+<?php endif; ?>
+
+
+
                 <div class="settings-info">
                     <button>
                         <a href="<?= base_url('verification'); ?>">2 steps verification</a>
