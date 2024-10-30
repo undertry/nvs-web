@@ -1,11 +1,19 @@
 :root {
-    --color-main     : #d60b0b;
-    --color-black    : #151414;
-    --color-semiblack: #202020;
-    --color-dark     : #0c0b0b;
-    --color-white    : #f3f2f2;
-    --color-grey     : #333;
+    --color-main      : #d60b0b;
+    --color-secondary : #bb0f0f;
+    --color-tertiary  : #0046FE;
+    --color-quaternary: #3b6ff2;
+    --color-black     : #151414;
+    --color-semiblack : #202020;
+    --color-dark      : #0c0b0b;
+    --color-light     : #fcfcfc;
+    --color-white     : #f3f2f2;
+    --color-light-grey: #cfcfcf;
+    --color-semigrey  : #565555;
+    --color-grey      : #535151;
 }
+
+/* Fonts */
 
 @font-face {
     font-family: "aero";
@@ -14,7 +22,7 @@
 
 @font-face {
     font-family: "schabo";
-    src        : url("../fonts/schabo/SCHABO-Condensed.otf") format("truetype");
+    src        : url("/../fonts/schabo/SCHABO-Condensed.otf") format("truetype");
 }
 
 @font-face {
@@ -22,15 +30,31 @@
     src        : url("../fonts/neue/NeueMontreal-Regular.otf") format("truetype");
 }
 
+@font-face {
+    font-family: "neue-medium";
+    src        : url("../../fonts/neue/NeueMontreal-Medium.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "ahsing";
+    src        : url("../../fonts/Ahsing/Ahsing-Regular.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "matter";
+    src        : url("../../fonts/matter-font/Matter-Regular.ttf") format("truetype");
+}
+
+
 /* cursor styles */
 .cursor {
     pointer-events  : none;
     position        : absolute;
-    padding         : 0.5vw;
+    padding         : 0.3vw;
     border-radius   : 50%;
     z-index         : 9000;
     transition      : transform 0.1s ease, width 0.3s ease, height 0.3s ease, background-color 0.5s ease;
-    background-color: var(--color-white);
+    background-color: var(--color-semigrey);
 }
 
 .light-mode .cursor {
@@ -44,8 +68,12 @@ body {
     justify-content : center;
     align-items     : center;
     height          : 100vh;
-    background-color: #bb0f0f;
+    background-color: var(--color-dark);
     font-family     : Arial, sans-serif;
+}
+
+body.light-mode {
+    background-color: var(--color-white);
 }
 
 #intro-container {
@@ -56,16 +84,16 @@ body {
 }
 
 h1 {
-    font-size  : 7.9rem;
+    font-size  : 4.9rem;
     opacity    : 0;
     font-family: "aero";
     font-weight: lighter;
-    color      : var(--color-white);
+    color      : var(--color-main);
     transition : color 0.5s ease;
 }
 
 .light-mode h1 {
-    color: var(--color-black);
+    color: var(--color-tertiary);
 }
 
 #counter {
@@ -100,12 +128,12 @@ h1 {
 }
 
 .square {
-    background-color: var(--color-black);
+    background-color: var(--color-secondary);
     width           : 100%;
     height          : 100%;
     opacity         : 0;
 }
 
 .light-mode .square {
-    background-color: var(--color-white);
+    background-color: var(--color-quaternary);
 }
