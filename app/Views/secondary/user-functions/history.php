@@ -73,10 +73,7 @@
                                 <li><?= $device['vuln_description'] ?></li>
                             </ul>
 
-                            <h3>Solution</h3>
-                            <ul>
-                                <li><?= $device['solution'] ?></li>
-                            </ul>
+                            
                         <?php endforeach; ?>
                     <?php endforeach; ?>
 
@@ -168,7 +165,6 @@ document.querySelectorAll('.downloadPDF').forEach(button => {
                 status: device.status,
                 vulnerability_code: device.vulnerability_code,
                 vuln_description: device.vuln_description,
-                solution: device.solution
             });
             return acc;
         }, {});
@@ -222,7 +218,7 @@ document.querySelectorAll('.downloadPDF').forEach(button => {
                 // Agregar detalles adicionales (puertos, servicios, etc.)
                 device.details.forEach(detail => {
                     let detailHeight = 0;
-                    const linesCount = doc.splitTextToSize(`Solution: ${detail.solution}`, 180).length + 6; // Ajustar el número de líneas
+                    const linesCount = doc.splitTextToSize(`vulnerability description: ${detail.vulnerability_code}`, 180).length + 6; // Ajustar el número de líneas
                     detailHeight = linesCount * 10 + 10; // Calcular altura en función de las líneas
 
                     drawBox(doc, 10, y, 190, detailHeight, "Port Details");
@@ -233,7 +229,6 @@ document.querySelectorAll('.downloadPDF').forEach(button => {
                     y = splitTextAndFormat(doc, `Status: ${detail.status}`, 15, y);
                     y = splitTextAndFormat(doc, `Public Code: ${detail.vulnerability_code}`, 15, y);
                     y = splitTextAndFormat(doc, `Vulnerability Description: ${detail.vuln_description}`, 15, y);
-                    y = splitTextAndFormat(doc, `Solution: ${detail.solution}`, 15, y);
                     y += 20; // Espacio entre dispositivos
 
                     // Verificar si se necesita nueva página
