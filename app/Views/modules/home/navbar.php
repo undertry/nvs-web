@@ -55,7 +55,7 @@
                 <a href="<?= base_url('login-animation'); ?>" class="login link">Log In</a>
             </li>
             <li class="nav-item signup">
-                <a href="<?= base_url('signup-animation'); ?>" class="signup link">Sign Up <span class="arrow">↗</span></a>
+                <a href="<?= base_url('signup-animation'); ?>" class="signup link">Get Started <span class="arrow">↗</span></a>
             </li>
         <?php endif; ?>
     </ul>

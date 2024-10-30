@@ -560,6 +560,10 @@ input[type="submit"]:hover {
     transition     : color 0.5s;
 }
 
+.light-mode .form-label a {
+    color: var(--color-quaternary);
+}
+
 .form-label a:hover {
     text-decoration: underline;
     color          : var(--color-main);
