@@ -16,7 +16,7 @@ class ScanModel extends Model
     ->select('scan.*, users.name AS user_name, network.signal, network.essid,
         network.bssid, security_type.type AS security_type, devices.ip_address,
         devices.operating_system, devices.mac_address, ports.port_name, ports.service,
-        ports.protocol, port_status.status, solution.solution, solution.vulnerability_code, 
+        ports.protocol, port_status.status, solution.vulnerability_code, 
         solution.vuln_description, network.channel')
     ->join('users', 'users.id_user = scan.id_user')
     ->join('network', 'network.id_network = scan.id_network')

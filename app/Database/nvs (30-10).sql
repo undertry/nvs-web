@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-10-2024 a las 13:26:59
+-- Tiempo de generación: 30-10-2024 a las 13:48:18
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -221,7 +221,6 @@ INSERT INTO `security_type` (`id_security_type`, `type`) VALUES
 
 CREATE TABLE `solution` (
   `id_solution` int(11) NOT NULL,
-  `solution` varchar(255) NOT NULL,
   `vulnerability_code` varchar(100) NOT NULL,
   `vuln_description` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -230,9 +229,9 @@ CREATE TABLE `solution` (
 -- Volcado de datos para la tabla `solution`
 --
 
-INSERT INTO `solution` (`id_solution`, `solution`, `vulnerability_code`, `vuln_description`) VALUES
-(1, 'solution', 'cve12222', 'vuln desc'),
-(2, 'solution', 'cve', 'vuln descr');
+INSERT INTO `solution` (`id_solution`, `vulnerability_code`, `vuln_description`) VALUES
+(1, 'cve12222', 'vuln desc'),
+(2, 'cve', 'vuln descr');
 
 -- --------------------------------------------------------
 
