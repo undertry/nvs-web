@@ -15,21 +15,18 @@ class Dashboard extends BaseController
 {
     public function index()
     {
+
+
+
         // Verificar sesión y obtener usuario
         $user = session('user');
         if (!$user || $user->id_user < 1) {
             return redirect()->to('login');
         }
 
-        // Preparar los datos para la vista sin la lista de redes WiFi
-        $data = [
-            'network' => [],  // Vacío inicialmente
-            'last_network' => null,
-            'last_ip' => session('ip'),
-            'mode' => session('mode')
-        ];
 
-        return view('secondary/profile/dashboard', $data);
+
+        return view('secondary/profile/dashboard');
     }
 
     public function fetchNetworks()

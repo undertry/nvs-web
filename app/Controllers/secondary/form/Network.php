@@ -42,75 +42,75 @@ class Network extends BaseController
 
         return view('tertiary/network/network', ['network' => $network]);
     }
-// Función para manejar la selección del modo de escaneo
-public function setScanMode()
-{
-    $ip = session('ip');
-    $client = \Config\Services::curlrequest();
-    $mode = $this->request->getPost('mode'); // Obtener el modo seleccionado desde la vista
+    // Función para manejar la selección del modo de escaneo
+    public function setScanMode()
+    {
+        $ip = session('ip');
+        $client = \Config\Services::curlrequest();
+        $mode = $this->request->getPost('mode'); // Obtener el modo seleccionado desde la vista
+        $this->session->set("mode", $mode);
+        // Validar que el modo sea uno de los aceptados y asignar el tiempo en segundos
+        $scanDurations = [
+            'rapido' => 10,
+            'intermedio' => 30,
+            'profundo' => 60
+        ];
 
-    // Validar que el modo sea uno de los aceptados y asignar el tiempo en segundos
-    $scanDurations = [
-        'rapido' => 10,
-        'intermedio' => 30,
-        'profundo' => 60
-    ];
-
-    if (!isset($scanDurations[$mode])) {
-        return redirect()->back()->with('error', 'Modo de escaneo inválido.');
-    }
-
-    // Enviar el modo seleccionado y la duración a la API de la Raspberry Pi
-    try {
-        $response = $client->post('http://' . $ip . ':5000/set-scan-mode', [
-            'json' => [
-                'mode' => $mode,
-                'duration' => $scanDurations[$mode]
-            ]
-        ]);
-
-        if ($response->getStatusCode() == 200) {
-            return redirect()->back()->with('success', 'Modo de escaneo establecido correctamente.');
-        } else {
-            log_message('error', 'Error al establecer el modo de escaneo en la Raspberry Pi.');
-            return redirect()->back()->with('error', 'Error al establecer el modo de escaneo.');
+        if (!isset($scanDurations[$mode])) {
+            return redirect()->back()->with('error', 'Modo de escaneo inválido.');
         }
-    } catch (\Exception $e) {
-        log_message('error', 'Excepción capturada al intentar establecer el modo de escaneo: ' . $e->getMessage());
-        return redirect()->back()->with('error', 'Excepción al establecer el modo de escaneo.');
+
+        // Enviar el modo seleccionado y la duración a la API de la Raspberry Pi
+        try {
+            $response = $client->post('http://' . $ip . ':5000/set-scan-mode', [
+                'json' => [
+                    'mode' => $mode,
+                    'duration' => $scanDurations[$mode]
+                ]
+            ]);
+
+            if ($response->getStatusCode() == 200) {
+                return redirect()->back()->with('success', 'Modo de escaneo establecido correctamente.');
+            } else {
+                log_message('error', 'Error al establecer el modo de escaneo en la Raspberry Pi.');
+                return redirect()->back()->with('error', 'Error al establecer el modo de escaneo.');
+            }
+        } catch (\Exception $e) {
+            log_message('error', 'Excepción capturada al intentar establecer el modo de escaneo: ' . $e->getMessage());
+            return redirect()->back()->with('error', 'Excepción al establecer el modo de escaneo.');
+        }
     }
-}
 
 
-public function showSetScanMode()
-{
-    return view('tertiary/network/scan'); // Cargar la vista del formulario
-}
+    public function showSetScanMode()
+    {
+        return view('tertiary/network/scan'); // Cargar la vista del formulario
+    }
 
 
- 
+
     // Función para manejar la selección de red WiFi
     public function selectNetwork()
     {
         $networkModel = new NetworkModel();
         $securityModel = new SecurityModel();
-    
+
         // Usa getJSON() para obtener los datos del JSON enviado en la solicitud POST
         $selectedNetwork = $this->request->getJSON(true);
-    
+
         // Verifica si los datos se recibieron correctamente
         if (!$selectedNetwork) {
             return $this->response->setJSON(['success' => false, 'message' => 'Datos de red no recibidos correctamente.']);
         }
-    
+
         $ip = session('ip');
         $client = \Config\Services::curlrequest();
-    
+
         try {
             $response = $client->post('http://' . $ip . ':5000/save-network', [
                 'json' => $selectedNetwork
             ]);
-    
+
             if ($response->getStatusCode() == 200) {
                 $encryption = $selectedNetwork['encryption'];
                 $id_security_type = $securityModel->IdSecurityType($encryption);
@@ -123,7 +123,7 @@ public function showSetScanMode()
                 ];
                 $id_network = $networkModel->networkinsert($selnet);
                 $this->session->set("id_network", $id_network);
-    
+
                 return $this->response->setJSON(['success' => true]);
             } else {
                 log_message('error', 'Error al enviar la red seleccionada a la Raspberry Pi.');
@@ -134,8 +134,8 @@ public function showSetScanMode()
             return $this->response->setJSON(['success' => false, 'message' => 'Excepción al seleccionar la red.']);
         }
     }
-    
-    
+
+
 
     // Nueva función para manejar los resultados de Nmap
     public function nmapResults()
