@@ -7,9 +7,9 @@
 <div class="sidebar" id="sidebar">
     <h2 class="sidebar-title">CyberDashboard</h2>
     <nav>
-        <a href="#dashboard" class="active"><span class="icon"><i class="fa-solid fa-inbox"></i></span> <span class="text">Dashboard</span></a>
-        <a href="#analytics"><span class="icon">📊</span> <span class="text">Analytics</span></a>
-        <a href="<?= base_url('configuration') ?>"><span class="icon">⚙️</span> <span class="text">Settings</span></a>
+        <a class="active"><span class="icon"><i class="fa-solid fa-inbox"></i></span> <span class="text">Dashboard</span></a>
+        <a href="<?= base_url('history-animation'); ?>"><span class="icon"><i class="fa-solid fa-clock-rotate-left"></i></span> <span class="text">History</span></a>
+
         <a href="#help"><span class="icon">❓</span> <span class="text">Help Center</span></a>
     </nav>
 </div>
@@ -17,15 +17,35 @@
 <div class="main-content">
     <header>
         <div class="user-profile">
-            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn0.iconfinder.com%2Fdata%2Ficons%2Fcyber-crime-or-threats%2F120%2Fhacker_cyber_crime-1024.png&f=1&nofb=1" alt="Profile Picture">
-            <span><?= session('user')->name; ?></span>
+            <i class="fa-solid fa-user-secret user" id="user-icon"></i>
+            <a href="<?= base_url('configuration') ?>" class="settings"><i class="fa-solid fa-gear"></i></a>
         </div>
+
+        <!-- Modal de Perfil de Usuario -->
+        <div id="userModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>User Information</h2>
+                <p><strong>Name:</strong> <?= session('user')->name; ?></p>
+                <p><strong>Email:</strong> <?= session('user')->email; ?></p>
+                <p><strong>Account created at:</strong> <?= session('user')->created_at; ?></p>
+                <p><strong>Verification:</strong>
+                    <?= session('user')->verification == 1 ? 'Enabled' : 'Disabled'; ?></p>
+                <!-- Puedes agregar más datos del usuario aquí -->
+            </div>
+        </div>
+
+
     </header>
 
     <div class="content-wrapper">
         <!-- Sección de Redes WiFi -->
+        <div class="section-header hidden">
+            <h2><i class="fa-brands fa-uncharted"></i></h2>
+        </div>
         <div class="wifi-section">
-            <h2><i class="fa-solid fa-wifi"></i> Available WiFi Networks</h2>
+
+            <h2> Available WiFi Networks</h2>
             <button id="fetch-networks" class="btn btn-primary">Start Scan</button>
             <div id="loading-spinner" style="display: none; text-align: center;">
                 <div class="spinner-border text-primary" role="status"></div>
@@ -34,40 +54,75 @@
             <ul id="wifi-list" class="list-group mt-3"></ul>
         </div>
 
-        <!-- Sección de Detalles de la Red -->
-        <div class="details-section">
-        <?php if (session('scan_message')): ?>
-    <div class="alert alert-info">
-        <?= session('scan_message'); ?>
-    </div>
-<?php endif; ?>
+        <div class="accordion-section">
+            <div class="accordion-item">
+                <h2 class="accordion-title" onclick="toggleAccordion('info-content')">
+                    <i class="fa-solid fa-database icon"></i> Information
+                </h2>
+                <div id="info-content" class="accordion-content">
+                    <?php if (session('scan_message')): ?>
+                        <div class="alert alert-info">
+                            <?= session('scan_message'); ?>
+                        </div>
+                    <?php endif; ?>
 
-        <form method="post" action="<?= base_url('startDeviceScan'); ?>" style="display: inline;">
-    <input type="submit" value="Start scan" class="btn-submit">
-</form>
+                    <form method="post" action="<?= base_url('startDeviceScan'); ?>" style="display: inline;">
+                        <input type="submit" value="Start scan" class="btn-submit">
+                    </form>
 
-            <h2><i class="fa-solid fa-database"></i> Network Data</h2>
-            <p><strong>Current IP:</strong><?= session('ip'); ?></p>
-            <p><strong>Last Network Selected:</strong> <?= session('network'); ?></p>
-            <p><strong>Chosen Mode:</strong><?= session('mode'); ?></p>
-               
-   <h2><i class="fa-solid fa-server"></i>  Last Network</h2>
-            <?php if (session()->has('last_scan_data')): ?>
+                    <p><strong>Current IP:</strong> <?= session('ip'); ?></p>
+                    <p><strong>Chosen Mode:</strong> <?= session('mode'); ?></p>
+                </div>
+            </div>
 
-   <p><strong>IP:</strong> <?= session('last_scan_data')['ip']; ?></p>
-   <p><strong>MAC:</strong> <?= session('last_scan_data')['mac']; ?></p>
-   <p><strong>Sistema Operativo:</strong> <?= session('last_scan_data')['os_info']; ?></p>
-
-   <?php else: ?>
-    <p>No previous scan results were found.</p>
-
-<?php endif; ?>
-
+            <div class="accordion-item">
+                <h2 class="accordion-title" onclick="toggleAccordion('last-network-content')">
+                    <i class="fa-solid fa-server icon"></i> Last Network
+                </h2>
+                <div id="last-network-content" class="accordion-content">
+                    <?php if (session()->has('last_scan_data')): ?>
+                        <p><strong>Last Network Selected:</strong> <?= session('network'); ?></p>
+                        <p><strong>IP:</strong> <?= session('last_scan_data')['ip']; ?></p>
+                        <p><strong>MAC:</strong> <?= session('last_scan_data')['mac']; ?></p>
+                        <p><strong>Sistema Operativo:</strong> <?= session('last_scan_data')['os_info']; ?></p>
+                    <?php else: ?>
+                        <p>No previous scan results were found.</p>
+                    <?php endif; ?>
+                </div>
+            </div>
         </div>
-   
+
+
 
     </div>
 </div>
+
+<script>
+    function toggleAccordion(contentId) {
+        const content = document.getElementById(contentId);
+        content.style.display = (content.style.display === "none" || content.style.display === "") ? "block" : "none";
+    }
+</script>
+
+
+<script>
+    document.getElementById('user-icon').onclick = function() {
+        // Muestra el modal
+        document.getElementById('userModal').style.display = "block";
+    }
+
+    document.querySelector('.close').onclick = function() {
+        // Oculta el modal
+        document.getElementById('userModal').style.display = "none";
+    }
+
+    // Cierra el modal si el usuario hace clic fuera de él
+    window.onclick = function(event) {
+        if (event.target == document.getElementById('userModal')) {
+            document.getElementById('userModal').style.display = "none";
+        }
+    }
+</script>
 
 
 <script>
