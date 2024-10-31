@@ -56,7 +56,9 @@ body {
 
 /* Sidebar */
 .sidebar {
-  width           : 250px;
+  border-right    : 1px solid var(--color-grey);
+  width           : 200px;
+  height          : 100vh;
   background-color: var(--color-black);
   color           : var(--color-white);
   padding         : 20px;
@@ -69,30 +71,44 @@ body {
   width: 80px;
 }
 
-.sidebar h2 {
-  font-size    : 18px;
+.sidebar h2 i {
+  color        : var(--color-secondary);
+  font-size    : 1.2em;
   margin-bottom: 20px;
+  margin-top   : 30px;
   text-align   : center;
+  transition   : color 0.3s ease;
 }
 
+.sidebar h2 i:hover {
+  color: var(--color-main);
+}
+
+.sidebar nav {
+  margin-top: 150%;
+}
 
 .sidebar nav a {
   display        : flex;
   align-items    : center;
   padding        : 10px;
   color          : var(--color-white);
+  border         : 1px solid var(--color-grey);
   text-decoration: none;
   font-size      : 16px;
-  margin-bottom  : 5px;
+  margin-bottom  : 20px;
   border-radius  : 4px;
-  transition     : background-color 0.2s;
+  transition     : background-color 0.5s, border 0.5s ease;
+  user-select    : none;
 }
 
 .sidebar nav a.active {
+  border          : 1px solid var(--color-light-grey);
   background-color: var(--color-secondary);
 }
 
 .sidebar nav a:hover {
+  border          : 1px solid var(--color-light-grey);
   background-color: var(--color-semigrey);
 }
 
@@ -121,7 +137,6 @@ body {
   margin-bottom : 20px;
   padding-bottom: 10px;
   margin-left   : auto;
-  /* Mueve el perfil al lado derecho */
 }
 
 .user-profile .user {
@@ -164,6 +179,7 @@ body {
   width           : 80%;
   max-width       : 400px;
   text-align      : center;
+  user-select     : none;
 }
 
 .close {
@@ -191,12 +207,14 @@ body {
 h2 {
   text-align   : center;
   margin-bottom: 20px;
+  user-select  : none;
 }
 
 .section-header h2 {
   font-size  : 4.2em;
   color      : var(--color-secondary);
   font-weight: lighter;
+  user-select: none;
 }
 
 #fetch-networks {
@@ -213,6 +231,7 @@ h2 {
   cursor          : pointer;
   background-color: var(--color-black);
   transition      : background-color 0.5s ease;
+  user-select     : none;
 }
 
 .list-group-item:hover {
@@ -268,6 +287,21 @@ h2 {
   border: 1px solid var(--color-light-grey);
 }
 
+.wifi-section button {
+  padding         : 10px;
+  background-color: var(--color-semiblack);
+  color           : var(--color-white);
+  border          : 1px solid var(--color-grey);
+  border-radius   : 5px;
+  cursor          : pointer;
+  transition      : background-color 0.5s ease, border 0.5s ease;
+}
+
+.wifi-section button:hover {
+  background-color: var(--color-semigrey);
+  border          : 1px solid var(--color-light-grey);
+}
+
 .wifi-section h2 {
   text-align : center;
   font-family: "neue-medium";
@@ -279,6 +313,7 @@ h2 {
   font-size : 2em;
   text-align: center;
 }
+
 
 .accordion-section {
   width         : 50em;
@@ -317,6 +352,7 @@ h2 {
   color           : #fff;
   border-top      : 1px solid #555;
   max-height      : 150px;
+  user-select     : none;
   /* Altura máxima del acordeón desplegado */
   overflow-y      : auto;
   /* Agrega una barra de desplazamiento si el contenido es demasiado largo */

@@ -5,12 +5,14 @@
 </head>
 
 <div class="sidebar" id="sidebar">
-    <h2 class="sidebar-title">CyberDashboard</h2>
+    <h2 class="sidebar-title"><i class="fa-solid fa-fingerprint"></i></h2>
     <nav>
         <a class="active"><span class="icon"><i class="fa-solid fa-inbox"></i></span> <span class="text">Dashboard</span></a>
+        <a href="<?= base_url('nmap-animation'); ?>"><span class="icon"><i class="fa-solid fa-shield-virus"></i></span> <span class="text">Scan Results</span></a>
         <a href="<?= base_url('history-animation'); ?>"><span class="icon"><i class="fa-solid fa-clock-rotate-left"></i></span> <span class="text">History</span></a>
 
-        <a href="#help"><span class="icon">❓</span> <span class="text">Help Center</span></a>
+
+        <a href="#help"><span class="icon"><i class="fa-solid fa-circle-info"></i></span> <span class="text">Help Center</span></a>
     </nav>
 </div>
 
@@ -37,14 +39,13 @@
 
 
     </header>
-
+    <div class="section-header hidden">
+        <h2><i class="fa-brands fa-uncharted"></i></h2>
+    </div>
     <div class="content-wrapper">
         <!-- Sección de Redes WiFi -->
-        <div class="section-header hidden">
-            <h2><i class="fa-brands fa-uncharted"></i></h2>
-        </div>
-        <div class="wifi-section">
 
+        <div class="wifi-section">
             <h2> Available WiFi Networks</h2>
             <button id="fetch-networks" class="btn btn-primary">Start Scan</button>
             <div id="loading-spinner" style="display: none; text-align: center;">
@@ -60,16 +61,6 @@
                     <i class="fa-solid fa-database icon"></i> Information
                 </h2>
                 <div id="info-content" class="accordion-content">
-                    <?php if (session('scan_message')): ?>
-                        <div class="alert alert-info">
-                            <?= session('scan_message'); ?>
-                        </div>
-                    <?php endif; ?>
-
-                    <form method="post" action="<?= base_url('startDeviceScan'); ?>" style="display: inline;">
-                        <input type="submit" value="Start scan" class="btn-submit">
-                    </form>
-
                     <p><strong>Current IP:</strong> <?= session('ip'); ?></p>
                     <p><strong>Chosen Mode:</strong> <?= session('mode'); ?></p>
                 </div>
@@ -77,7 +68,7 @@
 
             <div class="accordion-item">
                 <h2 class="accordion-title" onclick="toggleAccordion('last-network-content')">
-                    <i class="fa-solid fa-server icon"></i> Last Network
+                    <i class="fa-solid fa-wifi icon"></i> Last Network
                 </h2>
                 <div id="last-network-content" class="accordion-content">
                     <?php if (session()->has('last_scan_data')): ?>
@@ -90,6 +81,25 @@
                     <?php endif; ?>
                 </div>
             </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-title" onclick="toggleAccordion('scan-content')">
+                    <i class="fas fa-list-check icon"></i> Scan Manager
+                </h2>
+                <div id="scan-content" class="accordion-content">
+                    <?php if (session('scan_message')): ?>
+                        <div class="alert alert-info">
+                            <?= session('scan_message'); ?>
+                        </div>
+                    <?php endif; ?>
+
+                    <form method="post" action="<?= base_url('startDeviceScan'); ?>" style="display: inline;">
+                        <input type="submit" value="Device" class="btn-submit">
+                    </form>
+
+                </div>
+            </div>
+
         </div>
 
 
