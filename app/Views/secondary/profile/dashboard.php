@@ -29,7 +29,7 @@
             <button id="fetch-networks" class="btn btn-primary">Start Scan</button>
             <div id="loading-spinner" style="display: none; text-align: center;">
                 <div class="spinner-border text-primary" role="status"></div>
-                <p>Buscando redes disponibles...</p>
+                <p><i class="fa-solid fa-spinner"></i></p>
             </div>
             <ul id="wifi-list" class="list-group mt-3"></ul>
         </div>
@@ -40,9 +40,25 @@
             <p><strong>Current IP:</strong><?= session('ip'); ?></p>
             <p><strong>Last Network Selected:</strong> <?= session('network'); ?></p>
             <p><strong>Chosen Mode:</strong><?= session('mode'); ?></p>
+               
+   <h2><i class="fa-solid fa-server"></i>  Last Network</h2>
+            <?php if (session()->has('last_scan_data')): ?>
+
+   <p><strong>IP:</strong> <?= session('last_scan_data')['ip']; ?></p>
+   <p><strong>MAC:</strong> <?= session('last_scan_data')['mac']; ?></p>
+   <p><strong>Sistema Operativo:</strong> <?= session('last_scan_data')['os_info']; ?></p>
+
+   <?php else: ?>
+    <p>No previous scan results were found.</p>
+
+<?php endif; ?>
+
         </div>
+   
+
     </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script>
     document.getElementById('fetch-networks').addEventListener('click', function() {

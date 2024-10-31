@@ -182,6 +182,16 @@ class Network extends BaseController
         $id_user = session('user')->id_user;
         $id_network = session('id_network');  // Verifica que esté correctamente almacenado en la sesión
 
+         // Datos a guardar en la sesión
+    $scanData = [
+        'ip' => $nmap_ports_services['ip'] ?? 'N/A',
+        'mac' => $nmap_ports_services['mac'] ?? 'N/A',
+        'os_info' => $nmap_ports_services['os_info'] ?? 'N/A',
+    ];
+
+    // Guardar los datos en la sesión
+    session()->set('last_scan_data', $scanData);
+
         // Modelos
         $scanModel = new ScanModel();
         $deviceModel = new DeviceModel();
