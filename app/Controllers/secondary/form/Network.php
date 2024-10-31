@@ -52,8 +52,8 @@ class Network extends BaseController
         // Validar que el modo sea uno de los aceptados y asignar el tiempo en segundos
         $scanDurations = [
             'rapido' => 10,
-            'intermedio' => 30,
-            'profundo' => 60
+            'intermedio' => 120,
+            'profundo' => 320
         ];
 
         if (!isset($scanDurations[$mode])) {
@@ -135,6 +135,31 @@ class Network extends BaseController
         }
     }
 
+
+    public function startDeviceScan()
+    {
+        $ip = session('ip');
+        $client = \Config\Services::curlrequest([
+            'timeout' => 340  // Tiempo en segundos
+        ]);
+    
+        try {
+            $response = $client->post("http://$ip:5000/start-device-scan");
+            $body = json_decode($response->getBody(), true);
+    
+            if ($response->getStatusCode() == 200) {
+                $message = $body['message'] ?? 'El escaneo se inició correctamente.';
+                return redirect()->back()->with('scan_message', $message);
+            } else {
+                $message = $body['message'] ?? 'Error al iniciar el escaneo.';
+                return redirect()->back()->with('scan_message', $message);
+            }
+        } catch (\Exception $e) {
+            log_message('error', 'Error al conectar con el API server: ' . $e->getMessage());
+            return redirect()->back()->with('scan_message', 'Error: No se pudo conectar con el API server.');
+        }
+    }
+    
 
 
     // Nueva función para manejar los resultados de Nmap

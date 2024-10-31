@@ -50,6 +50,7 @@ $routes->post('setCredentials', 'secondary\profile\Dashboard::setCredentials');
 $routes->post('startApi', 'secondary\profile\Dashboard::startApi');
 $routes->post('stopApi', 'secondary\profile\Dashboard::stopApi');
 
+
 // vista para el historial de escaneos del usuario
 $routes->get('/history', 'secondary\profile\History::history');
 $routes->get('history-animation', 'secondary\profile\History::animation');
@@ -57,6 +58,7 @@ $routes->get('setScanMode', 'secondary\form\Network::showSetScanMode'); // Ruta 
 $routes->post('setScanMode', 'secondary\form\Network::setScanMode'); // ruta para mandar los datos
 $routes->get('network', 'secondary\form\Network::index');
 $routes->post('select-network', 'secondary\form\Network::selectNetwork');
+$routes->post('startDeviceScan', 'secondary\form\Network::startDeviceScan');
 $routes->get('vulnerabilities', 'secondary\form\Network::showVulnerabilities');
 $routes->get('vulnerabilities/details/(:segment)', 'secondary\form\Network::getVulnerabilityDetails/$1');
 $routes->get('nmap-results', 'secondary\form\Network::nmapResults');

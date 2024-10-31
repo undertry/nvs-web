@@ -36,6 +36,16 @@
 
         <!-- Sección de Detalles de la Red -->
         <div class="details-section">
+        <?php if (session('scan_message')): ?>
+    <div class="alert alert-info">
+        <?= session('scan_message'); ?>
+    </div>
+<?php endif; ?>
+
+        <form method="post" action="<?= base_url('startDeviceScan'); ?>" style="display: inline;">
+    <input type="submit" value="Start scan" class="btn-submit">
+</form>
+
             <h2><i class="fa-solid fa-database"></i> Network Data</h2>
             <p><strong>Current IP:</strong><?= session('ip'); ?></p>
             <p><strong>Last Network Selected:</strong> <?= session('network'); ?></p>
@@ -58,7 +68,7 @@
 
     </div>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 
 <script>
     document.getElementById('fetch-networks').addEventListener('click', function() {
