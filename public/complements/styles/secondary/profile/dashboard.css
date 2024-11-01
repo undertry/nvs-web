@@ -56,9 +56,12 @@ body {
 
 /* Sidebar */
 .sidebar {
-  border-right    : 1px solid var(--color-grey);
+  border          : 1px solid var(--color-grey);
   width           : 200px;
-  height          : 100vh;
+  height          : 90vh;
+  margin-left     : 20px;
+  margin-top      : 3%;
+  border-radius   : 20px;
   background-color: var(--color-black);
   color           : var(--color-white);
   padding         : 20px;
@@ -217,6 +220,28 @@ h2 {
   user-select: none;
 }
 
+.text {
+  position  : relative;
+  text-align: center;
+}
+
+.text h3 {
+  font-size       : 1.3em;
+  font-family     : "neue";
+  font-weight     : lighter;
+  margin-bottom   : 20px;
+  color           : var(--color-light-grey);
+  background-color: var(--color-semiblack);
+  padding         : 1px 8px;
+  border-radius   : 10px;
+  display         : inline-block;
+  transition      : background-color 0.3s ease-out, color 0.3s ease-out;
+}
+
+.text h3:hover {
+  color: var(--color-main) !important;
+}
+
 #fetch-networks {
   display: block;
   margin : auto;
@@ -316,10 +341,13 @@ h2 {
 
 
 .accordion-section {
-  width         : 50em;
-  display       : flex;
-  flex-direction: column;
-  gap           : 10px;
+  background-color: var(--color-semiblack);
+  padding         : 10px;
+  border-radius   : 5px;
+  width           : 50em;
+  display         : flex;
+  flex-direction  : column;
+  gap             : 10px;
 }
 
 .accordion-item {

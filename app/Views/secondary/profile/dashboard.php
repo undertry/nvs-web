@@ -39,13 +39,14 @@
 
 
     </header>
-    <div class="section-header hidden">
-        <h2><i class="fa-brands fa-uncharted"></i></h2>
-    </div>
+
     <div class="content-wrapper">
         <!-- Sección de Redes WiFi -->
 
         <div class="wifi-section">
+            <div class="section-header hidden">
+                <h2><i class="fa-brands fa-uncharted"></i></h2>
+            </div>
             <h2> Available WiFi Networks</h2>
             <button id="fetch-networks" class="btn btn-primary">Start Scan</button>
             <div id="loading-spinner" style="display: none; text-align: center;">
@@ -56,6 +57,9 @@
         </div>
 
         <div class="accordion-section">
+            <div class="text">
+                <h3>Menu</h3>
+            </div>
             <div class="accordion-item">
                 <h2 class="accordion-title" onclick="toggleAccordion('info-content')">
                     <i class="fa-solid fa-database icon"></i> Information
