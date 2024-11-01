@@ -114,6 +114,7 @@ class Network extends BaseController
             if ($response->getStatusCode() == 200) {
                 $encryption = $selectedNetwork['encryption'];
                 $id_security_type = $securityModel->IdSecurityType($encryption);
+                //insercion para bd
                 $selnet = [
                     'essid' => $selectedNetwork['essid'],
                     'bssid' => $selectedNetwork['bssid'],
@@ -122,6 +123,15 @@ class Network extends BaseController
                     'id_security_type' => $id_security_type
                 ];
                 $id_network = $networkModel->networkinsert($selnet);
+                //para la session
+                $network = [
+                    'essid' => $selectedNetwork['essid'],
+                    'bssid' => $selectedNetwork['bssid'],
+                    'signal' => $selectedNetwork['signal'],
+                    'channel' => $selectedNetwork['channel'],
+                    'security' => $selectedNetwork['encryption']
+                ];
+                $this->session->set("current_network", $network);
                 $this->session->set("id_network", $id_network);
 
                 return $this->response->setJSON(['success' => true]);
@@ -137,18 +147,18 @@ class Network extends BaseController
 
 
 
-    
+
     public function startWifiScan()
     {
         $ip = session('ip');
         $client = \Config\Services::curlrequest([
             'timeout' => 340  // Tiempo en segundos
         ]);
-    
+
         try {
-            $response = $client->post("http://".$ip.":5000/start-wifi-scan");
+            $response = $client->post("http://" . $ip . ":5000/start-wifi-scan");
             $body = json_decode($response->getBody(), true);
-    
+
             if ($response->getStatusCode() == 200) {
                 $message = $body['message'] ?? 'El escaneo se completó correctamente.';
                 return redirect()->back()->with('scan_message', $message);
@@ -156,7 +166,6 @@ class Network extends BaseController
                 $message = $body['message'] ?? 'Error al iniciar el escaneo.';
                 return redirect()->back()->with('scan_message', $message);
             }
-            
         } catch (\Exception $e) {
             log_message('error', 'Error al conectar con el API server: ' . $e->getMessage());
             return redirect()->back()->with('scan_message', 'Error: No se pudo conectar con el API server.');
@@ -169,11 +178,11 @@ class Network extends BaseController
         $client = \Config\Services::curlrequest([
             'timeout' => 340  // Tiempo en segundos
         ]);
-    
+
         try {
             $response = $client->post("http://$ip:5000/start-device-scan");
             $body = json_decode($response->getBody(), true);
-    
+
             if ($response->getStatusCode() == 200) {
                 $message = $body['message'] ?? 'El escaneo se inició correctamente.';
                 return redirect()->back()->with('scan_message', $message);
@@ -186,7 +195,7 @@ class Network extends BaseController
             return redirect()->back()->with('scan_message', 'Error: No se pudo conectar con el API server.');
         }
     }
-    
+
 
 
     // Nueva función para manejar los resultados de Nmap
@@ -234,15 +243,15 @@ class Network extends BaseController
         $id_user = session('user')->id_user;
         $id_network = session('id_network');  // Verifica que esté correctamente almacenado en la sesión
 
-         // Datos a guardar en la sesión
-    $scanData = [
-        'ip' => $nmap_ports_services['ip'] ?? 'N/A',
-        'mac' => $nmap_ports_services['mac'] ?? 'N/A',
-        'os_info' => $nmap_ports_services['os_info'] ?? 'N/A',
-    ];
+        // Datos a guardar en la sesión
+        $scanData = [
+            'ip' => $nmap_ports_services['ip'] ?? 'N/A',
+            'mac' => $nmap_ports_services['mac'] ?? 'N/A',
+            'os_info' => $nmap_ports_services['os_info'] ?? 'N/A',
+        ];
 
-    // Guardar los datos en la sesión
-    session()->set('last_scan_data', $scanData);
+        // Guardar los datos en la sesión
+        session()->set('last_scan_data', $scanData);
 
         // Modelos
         $scanModel = new ScanModel();
@@ -266,9 +275,9 @@ class Network extends BaseController
 
         // Insertar dispositivo en la base de datos
         $device_id = $deviceModel->insert([
-            'ip_address' => $ip,
-            'mac_address' => $mac,
-            'operating_system' => $os_info,
+            'ip_address' => $ip ?? 'N/A',
+            'mac_address' => $mac ?? 'N/A',
+            'operating_system' => $os_info ?? 'N/A',
         ]);
 
         // Insertar detalles del escaneo

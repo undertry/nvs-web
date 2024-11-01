@@ -8,7 +8,5 @@ class SolutionModel extends Model
 {
     protected $table = 'Solution';
     protected $primaryKey = 'id_solution';
-    protected $allowedFields = ['Solution', 'vulnerability_code', 'vuln_description'];
-
-    
+    protected $allowedFields = ['vulnerability_code', 'vuln_description'];
 }

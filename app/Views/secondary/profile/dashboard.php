@@ -68,14 +68,18 @@
 
             <div class="accordion-item">
                 <h2 class="accordion-title" onclick="toggleAccordion('last-network-content')">
-                    <i class="fa-solid fa-wifi icon"></i> Last Network
+                    <i class="fa-solid fa-wifi icon"></i> Current Network
                 </h2>
                 <div id="last-network-content" class="accordion-content">
-                    <?php if (session()->has('last_scan_data')): ?>
-                        <p><strong>Last Network Selected:</strong> <?= session('network'); ?></p>
-                        <p><strong>IP:</strong> <?= session('last_scan_data')['ip']; ?></p>
-                        <p><strong>MAC:</strong> <?= session('last_scan_data')['mac']; ?></p>
-                        <p><strong>Sistema Operativo:</strong> <?= session('last_scan_data')['os_info']; ?></p>
+                    <?php if (session()->has('current_network')): ?>
+                        <p><strong>Current Network Selected:
+
+                            </strong><?= session('current_network')['essid']; ?></p>
+                        <p><strong>BSSID: </strong> <?= session('current_network')['bssid']; ?></p>
+                        <p><strong>Signal: </strong> <?= session('current_network')['signal']; ?></p>
+                        <p><strong>channel: </strong> <?= session('current_network')['channel']; ?></p>
+                        <p><strong>Encryption: </strong> <?= session('current_network')['security']; ?></p>
+
                     <?php else: ?>
                         <p>No previous scan results were found.</p>
                     <?php endif; ?>
@@ -93,7 +97,7 @@
                         </div>
                     <?php endif; ?>
                     <form method="post" action="<?= base_url('startWifiScan'); ?>" style="display: inline;">
-                            <input type="submit" value="Wifi" class="btn-submit">
+                        <input type="submit" value="Wifi" class="btn-submit">
                     </form>
                     <form method="post" action="<?= base_url('startDeviceScan'); ?>" style="display: inline;">
                         <input type="submit" value="Device" class="btn-submit">

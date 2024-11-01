@@ -28,13 +28,13 @@ class History extends BaseController
         return view('animations/history/animation');
     }
     public function deleteScan($id_scan)
-{
-    $scanModel = new ScanModel();
+    {
+        $scanModel = new ScanModel();
 
-    if ($scanModel->deleteScanWithDetails($id_scan)) {
-        return redirect()->back()->with('success', 'Escaneo eliminado exitosamente.');
-    } else {
-        return redirect()->back()->with('error', 'Error al eliminar el escaneo.');
+        if ($scanModel->deleteScanWithDetails($id_scan)) {
+            return redirect()->back()->with('success', 'Escaneo eliminado exitosamente.');
+        } else {
+            return redirect()->back()->with('error', 'Error al eliminar el escaneo.');
+        }
     }
-}
 }
