@@ -194,72 +194,91 @@ class Dashboard extends BaseController
             return redirect()->back()->with('error', 'Debe ingresar el usuario y la contraseña.');
         }
     }
-
     public function startApi()
     {
         // Obtener IP, usuario y contraseña desde la sesión
         $ip = session('ip');
         $user = session('raspberry_user');
         $password = session('raspberry_password');
-
+    
         // Verificar que IP, usuario y contraseña estén presentes
         if (!$ip || !$user || !$password) {
             return redirect()->back()->with('api_message', 'Error: IP o credenciales no asignadas.');
         }
+    
+        try {
+            // Crear instancia de SSH
+            $ssh = new SSH2($ip, 22, 10); // 10 segundos de espera
 
-        // Crear instancia de SSH
-        $ssh = new SSH2($ip);
-
-        // Intentar la conexión usando el usuario y la contraseña
-        if (!$ssh->login($user, $password)) {
-            return redirect()->back()->with('api_message', 'Error: No se pudo establecer conexión SSH.');
+        
+            if (!$ssh->login($user, $password)) {
+                throw new \Exception('Error: No se pudo establecer conexión SSH.');
+            }
+        
+            // Ejecutar el comando para iniciar el servidor de API
+            $output = $ssh->exec('cd ~/nvs_project && python3 api_server.py');
+        
+            // Verificar si el proceso api_server.py está en ejecución
+            $status = $ssh->exec('pgrep -f api_server.py');
+            $ssh->disconnect();
+        
+            if (trim($status) != "") {
+                return redirect()->back()->with('api_message', 'La API se inició correctamente.');
+            } else {
+                throw new \Exception('Error: No se pudo iniciar correctamente la API.');
+            }
+        } catch (\Exception $e) {
+            // Asegurarse de cerrar la conexión en caso de error
+            if (isset($ssh)) {
+                $ssh->disconnect();
+            }
+            return redirect()->back()->with('api_message', $e->getMessage());
         }
-
-        // Ejecutar el comando para iniciar el servicio
-        $output = $ssh->exec('echo ' . escapeshellarg($password) . ' | sudo -S systemctl start api_server.service');
-
-        // Verificar si el servicio se inició correctamente
-        if (strpos($output, 'Failed') === false) {
-            return redirect()->back()->with('api_message', 'El servicio API se inició correctamente.');
-        } else {
-            return redirect()->back()->with('api_message', 'Error: No se pudo iniciar el servicio API.');
-        }
+        
     }
-
- 
-
-
-
+    
+    
     public function stopApi()
-    {
-        // Obtener IP, usuario y contraseña desde la sesión
-        $ip = session('ip');
-        $user = session('raspberry_user');
-        $password = session('raspberry_password');
+{
+    // Obtener IP, usuario y contraseña desde la sesión
+    $ip = session('ip');
+    $user = session('raspberry_user');
+    $password = session('raspberry_password');
 
-        // Verificar que IP, usuario y contraseña estén presentes
-        if (!$ip || !$user || !$password) {
-            return redirect()->back()->with('api_message', 'Error: IP o credenciales no asignadas.');
-        }
+    // Verificar que IP, usuario y contraseña estén presentes
+    if (!$ip || !$user || !$password) {
+        return redirect()->back()->with('api_message', 'Error: IP o credenciales no asignadas.');
+    }
 
+    try {
         // Crear instancia de SSH
-        $ssh = new SSH2($ip);
+        $ssh = new SSH2($ip, 22, 10); // 10 segundos de espera
+
 
         // Intentar la conexión usando el usuario y la contraseña
         if (!$ssh->login($user, $password)) {
-            return redirect()->back()->with('api_message', 'Error: No se pudo establecer conexión SSH.');
+            throw new \Exception('Error: No se pudo establecer conexión SSH.');
         }
 
-        // Ejecutar el comando para detener el servicio
-        $output = $ssh->exec('echo ' . escapeshellarg($password) . ' | sudo -S systemctl stop api_server.service');
+        // Ejecutar el comando para detener el servidor de API
+        $ssh->exec('pkill -f api_server.py');
 
-        // Verificar el estado del servicio para confirmar si se detuvo
-        $status = $ssh->exec('systemctl is-active api_server.service');
+        // Verificar si el proceso api_server.py sigue en ejecución
+        $status = $ssh->exec('pgrep -f api_server.py');
+        $ssh->disconnect();
 
-        if (trim($status) != "active") {
-            return redirect()->back()->with('api_message', 'API detenida correctamente.');
+        if (trim($status) == "") {
+            return redirect()->back()->with('api_message', 'La API se detuvo correctamente.');
         } else {
-            return redirect()->back()->with('api_message', 'No se pudo detener la API.');
+            throw new \Exception('Error: No se pudo detener correctamente la API.');
         }
+    } catch (\Exception $e) {
+        // Asegurarse de cerrar la conexión en caso de error
+        if (isset($ssh)) {
+            $ssh->disconnect();
+        }
+        return redirect()->back()->with('api_message', $e->getMessage());
     }
+}
+
 }

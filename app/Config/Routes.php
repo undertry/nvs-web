@@ -59,6 +59,7 @@ $routes->post('setScanMode', 'secondary\form\Network::setScanMode'); // ruta par
 $routes->get('network', 'secondary\form\Network::index');
 $routes->post('select-network', 'secondary\form\Network::selectNetwork');
 $routes->post('startDeviceScan', 'secondary\form\Network::startDeviceScan');
+$routes->post('startWifiScan', 'secondary\form\Network::startWifiScan');
 $routes->get('vulnerabilities', 'secondary\form\Network::showVulnerabilities');
 $routes->get('vulnerabilities/details/(:segment)', 'secondary\form\Network::getVulnerabilityDetails/$1');
 $routes->get('nmap-results', 'secondary\form\Network::nmapResults');

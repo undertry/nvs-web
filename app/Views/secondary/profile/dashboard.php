@@ -92,7 +92,9 @@
                             <?= session('scan_message'); ?>
                         </div>
                     <?php endif; ?>
-
+                    <form method="post" action="<?= base_url('startWifiScan'); ?>" style="display: inline;">
+                            <input type="submit" value="Wifi" class="btn-submit">
+                    </form>
                     <form method="post" action="<?= base_url('startDeviceScan'); ?>" style="display: inline;">
                         <input type="submit" value="Device" class="btn-submit">
                     </form>

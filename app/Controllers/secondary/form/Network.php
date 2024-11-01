@@ -136,6 +136,33 @@ class Network extends BaseController
     }
 
 
+
+    
+    public function startWifiScan()
+    {
+        $ip = session('ip');
+        $client = \Config\Services::curlrequest([
+            'timeout' => 340  // Tiempo en segundos
+        ]);
+    
+        try {
+            $response = $client->post("http://".$ip.":5000/start-wifi-scan");
+            $body = json_decode($response->getBody(), true);
+    
+            if ($response->getStatusCode() == 200) {
+                $message = $body['message'] ?? 'El escaneo se completó correctamente.';
+                return redirect()->back()->with('scan_message', $message);
+            } else {
+                $message = $body['message'] ?? 'Error al iniciar el escaneo.';
+                return redirect()->back()->with('scan_message', $message);
+            }
+            
+        } catch (\Exception $e) {
+            log_message('error', 'Error al conectar con el API server: ' . $e->getMessage());
+            return redirect()->back()->with('scan_message', 'Error: No se pudo conectar con el API server.');
+        }
+    }
+
     public function startDeviceScan()
     {
         $ip = session('ip');
