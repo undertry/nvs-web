@@ -300,10 +300,10 @@ class Network extends BaseController
 
                 // Insertar información del puerto en la base de datos
                 $port_id = $portsModel->insert([
-                    'port_name' => $port_name,
-                    'service' => $service_name,
+                    'port_name' => $port_name ?? 'N/A',
+                    'service' => $service_name ?? 'N/A',
                     'protocol' => 'tcp', // o extraer del servicio si está disponible
-                    'id_port_status' => $port_status['id_port_status'] ?? null,
+                    'id_port_status' => $port_status['id_port_status'] ?? '1',
                 ]);
 
                 // Insertar en port_analysis para asociar el puerto al dispositivo
@@ -322,9 +322,8 @@ class Network extends BaseController
 
                         // Insertar la solución (vulnerabilidad) en la base de datos
                         $solution_id = $solutionModel->insert([
-                            'solution' => $description,
-                            'vulnerability_code' => $cve,
-                            'vuln_description' => $description,
+                            'vulnerability_code' => $cve ?? 'N/A',
+                            'vuln_description' => $description ?? 'N/A',
                         ]);
 
                         // Asociar la vulnerabilidad con el análisis de puerto
@@ -333,6 +332,20 @@ class Network extends BaseController
                             'id_solution' => $solution_id,
                         ]);
                     }
+                } else {
+
+
+                    // Insertar la solución (vulnerabilidad) en la base de datos
+                    $solution_id = $solutionModel->insert([
+                        'vulnerability_code' => 'N/A',
+                        'vuln_description' => 'N/A',
+                    ]);
+
+                    // Asociar la vulnerabilidad con el análisis de puerto
+                    $portDetailsModel->insert([
+                        'id_analysis' => $port_analysis_id,
+                        'id_solution' => $solution_id,
+                    ]);
                 }
             }
         }

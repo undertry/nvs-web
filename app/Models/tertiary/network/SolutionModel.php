@@ -6,7 +6,7 @@ use CodeIgniter\Model;
 
 class SolutionModel extends Model
 {
-    protected $table = 'Solution';
+    protected $table = 'solution';
     protected $primaryKey = 'id_solution';
     protected $allowedFields = ['vulnerability_code', 'vuln_description'];
 }
