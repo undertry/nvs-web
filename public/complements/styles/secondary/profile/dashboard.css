@@ -56,68 +56,108 @@ body {
 
 /* Sidebar */
 .sidebar {
-  border          : 1px solid var(--color-grey);
-  width           : 200px;
-  height          : 90vh;
-  margin-left     : 20px;
-  margin-top      : 3%;
-  border-radius   : 20px;
-  background-color: var(--color-black);
-  color           : var(--color-white);
-  padding         : 20px;
-  display         : flex;
-  flex-direction  : column;
-  transition      : width 0.3s;
-}
-
-.sidebar.collapsed {
+  border: 1px solid var(--color-grey);
   width: 80px;
+  height: 90vh;
+  margin-left: 20px;
+  margin-top: 2.5%;
+  border-radius: 20px;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: width 0.3s;
 }
 
-.sidebar h2 i {
-  color        : var(--color-secondary);
-  font-size    : 1.2em;
+.sidebar nav {
+  border-bottom: 1px solid var(--color-grey);
+}
+
+.sidebar h2 {
+  font-size: 0.8em;
   margin-bottom: 20px;
-  margin-top   : 30px;
-  text-align   : center;
-  transition   : color 0.3s ease;
+  text-align: center;
+}
+
+
+/* Iconos con tooltip personalizado */
+.sidebar a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--color-grey);
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: 1em;
+  transition: color 0.3s ease;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.sidebar a.active {
+  color: var(--color-main);
+  background-color: var(--color-semiblack);
+}
+
+.sidebar a:hover {
+  color: var(--color-main);
+}
+
+/* Tooltip personalizado */
+.sidebar a:hover::after {
+  content: attr(title);
+  position: absolute;
+  left: 100%; /* Para que aparezca a la derecha del icono */
+  margin-left: 10px;
+  padding: 5px 10px;
+  white-space: nowrap;
+  background-color: var(--color-light-grey);
+  color: var(--color-black);
+  border-radius: 4px;
+  font-size: 14px;
+  z-index: 1;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.sidebar a::after {
+  opacity: 0;
+  pointer-events: none; /* Evita problemas de hover */
+}
+
+/* Iconos principales del sidebar */
+.sidebar h2 i {
+  color: var(--color-secondary);
+  font-size: 1.8em;
+  margin-bottom: 30px;
+  transition: color 0.3s ease;
 }
 
 .sidebar h2 i:hover {
   color: var(--color-main);
 }
 
-.sidebar nav {
-  margin-top: 150%;
+/* Espaciado de la sección de comandos */
+.command-section {
+  padding-top: 50px;
 }
 
-.sidebar nav a {
-  display        : flex;
-  align-items    : center;
-  padding        : 10px;
-  color          : var(--color-white);
-  border         : 1px solid var(--color-grey);
-  text-decoration: none;
-  font-size      : 16px;
-  margin-bottom  : 20px;
-  border-radius  : 4px;
-  transition     : background-color 0.5s, border 0.5s ease;
-  user-select    : none;
+.command-section a {
+font-size: 0.9em;
+padding: 10px;
 }
 
-.sidebar nav a.active {
-  border          : 1px solid var(--color-light-grey);
-  background-color: var(--color-secondary);
+.profile-section {
+  margin-top: auto;
+  border-top: 1px solid var(--color-grey);
+  padding-top: 20px;
 }
 
-.sidebar nav a:hover {
-  border          : 1px solid var(--color-light-grey);
-  background-color: var(--color-semigrey);
-}
-
-.sidebar nav a .icon {
-  margin-right: 10px;
-}
 
 
 /* Main Content */

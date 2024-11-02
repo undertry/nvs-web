@@ -44,11 +44,14 @@ $routes->post('sendemail', 'secondary\user_functions\Change_Password::sendemail'
 // Seccion controlador User/Dashboard
 $routes->get('dashboard', 'secondary\profile\Dashboard::index');
 $routes->get('fetchNetworks', 'secondary\profile\Dashboard::fetchNetworks');
+$routes->get('fetchDevices', 'secondary\profile\Dashboard::fetchDevices');
 $routes->get('dashboard-animation', 'secondary\profile\Dashboard::animation');
 $routes->get('configuration', 'secondary\profile\Dashboard::configuration');
 $routes->post('setCredentials', 'secondary\profile\Dashboard::setCredentials');
 $routes->post('startApi', 'secondary\profile\Dashboard::startApi');
 $routes->post('stopApi', 'secondary\profile\Dashboard::stopApi');
+$routes->post('enableMonitor', 'secondary\profile\Dashboard::enableMonitor');
+$routes->post('desactiveMonitor', 'secondary\profile\Dashboard::desactiveMonitor');
 
 
 // vista para el historial de escaneos del usuario

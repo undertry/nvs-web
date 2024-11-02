@@ -155,7 +155,7 @@ class Network extends BaseController
         $password = session('raspberry_password');
     
         if (!$ip || !$user || !$password) {
-            return redirect()->back()->with('scan_message', 'Error: IP o credenciales no asignadas.');
+            return redirect()->back()->with('wifi_message', 'Error: IP o credenciales no asignadas.');
         }
     
         try {
@@ -172,7 +172,7 @@ class Network extends BaseController
     
             // Evaluar el resultado para confirmar el éxito o el error
             if (strpos($output, 'Error') === false) {
-                return redirect()->back()->with('scan_message', 'El escaneo de WiFi se inició correctamente.');
+                return redirect()->back()->with('wifi_message', 'El escaneo de WiFi se inició correctamente.');
             } else {
                 throw new \Exception('Error durante la ejecución del escaneo de WiFi.');
             }
@@ -180,7 +180,7 @@ class Network extends BaseController
             if (isset($ssh)) {
                 $ssh->disconnect();
             }
-            return redirect()->back()->with('scan_message', $e->getMessage());
+            return redirect()->back()->with('wifi_message', $e->getMessage());
         }
     }
     
@@ -194,7 +194,7 @@ class Network extends BaseController
         $password = session('raspberry_password');
     
         if (!$ip || !$user || !$password) {
-            return redirect()->back()->with('scan_message', 'Error: IP o credenciales no asignadas.');
+            return redirect()->back()->with('device_message', 'Error: IP o credenciales no asignadas.');
         }
     
         try {
@@ -211,15 +211,15 @@ class Network extends BaseController
     
             // Evaluar el resultado para confirmar el éxito o el error
             if (strpos($output, 'Error') === false) {
-                return redirect()->back()->with('scan_message', 'El escaneo de WiFi se inició correctamente.');
+                return redirect()->back()->with('device_message', 'El escaneo de Dispositivo se realizo correctamente.');
             } else {
-                throw new \Exception('Error durante la ejecución del escaneo de WiFi.');
+                throw new \Exception('Error durante la ejecución del escaneo de Dispositivos.');
             }
         } catch (\Exception $e) {
             if (isset($ssh)) {
                 $ssh->disconnect();
             }
-            return redirect()->back()->with('scan_message', $e->getMessage());
+            return redirect()->back()->with('device_message', $e->getMessage());
         }
     }
 
@@ -231,7 +231,7 @@ class Network extends BaseController
         $password = session('raspberry_password');
     
         if (!$ip || !$user || !$password) {
-            return redirect()->back()->with('scan_message', 'Error: IP o credenciales no asignadas.');
+            return redirect()->back()->with('nmap_message', 'Error: IP o credenciales no asignadas.');
         }
     
         try {
@@ -248,15 +248,15 @@ class Network extends BaseController
     
             // Evaluar el resultado para confirmar el éxito o el error
             if (strpos($output, 'Error') === false) {
-                return redirect()->back()->with('scan_message', 'El escaneo de WiFi se inició correctamente.');
+                return redirect()->back()->with('nmap_message', 'El escaneo de Nmap se inició correctamente.');
             } else {
-                throw new \Exception('Error durante la ejecución del escaneo de WiFi.');
+                throw new \Exception('Error durante la ejecución del escaneo de Nmap.');
             }
         } catch (\Exception $e) {
             if (isset($ssh)) {
                 $ssh->disconnect();
             }
-            return redirect()->back()->with('scan_message', $e->getMessage());
+            return redirect()->back()->with('nmap_message', $e->getMessage());
         }
     }
 
@@ -267,7 +267,7 @@ class Network extends BaseController
         $password = session('raspberry_password');
     
         if (!$ip || !$user || !$password) {
-            return redirect()->back()->with('scan_message', 'Error: IP o credenciales no asignadas.');
+            return redirect()->back()->with('csv_message', 'Error: IP o credenciales no asignadas.');
         }
     
         try {
@@ -284,15 +284,15 @@ class Network extends BaseController
     
             // Evaluar el resultado para confirmar el éxito o el error
             if (strpos($output, 'Error') === false) {
-                return redirect()->back()->with('scan_message', 'El escaneo de WiFi se inició correctamente.');
+                return redirect()->back()->with('csv_message', 'Se realizo correctamente el pasajo.');
             } else {
-                throw new \Exception('Error durante la ejecución del escaneo de WiFi.');
+                throw new \Exception('Error durante la ejecución del pasaje a json.');
             }
         } catch (\Exception $e) {
             if (isset($ssh)) {
                 $ssh->disconnect();
             }
-            return redirect()->back()->with('scan_message', $e->getMessage());
+            return redirect()->back()->with('csv_message', $e->getMessage());
         }
     }
 
@@ -304,7 +304,7 @@ class Network extends BaseController
         $password = session('raspberry_password');
     
         if (!$ip || !$user || !$password) {
-            return redirect()->back()->with('scan_message', 'Error: IP o credenciales no asignadas.');
+            return redirect()->back()->with('mac_message', 'Error: IP o credenciales no asignadas.');
         }
     
         try {
@@ -321,15 +321,15 @@ class Network extends BaseController
     
             // Evaluar el resultado para confirmar el éxito o el error
             if (strpos($output, 'Error') === false) {
-                return redirect()->back()->with('scan_message', 'El escaneo de WiFi se inició correctamente.');
+                return redirect()->back()->with('mac_message', 'Se encontraron dispositivos.');
             } else {
-                throw new \Exception('Error durante la ejecución del escaneo de WiFi.');
+                throw new \Exception('Error durante la ejecución del escaneo de ips.');
             }
         } catch (\Exception $e) {
             if (isset($ssh)) {
                 $ssh->disconnect();
             }
-            return redirect()->back()->with('scan_message', $e->getMessage());
+            return redirect()->back()->with('mac_message', $e->getMessage());
         }
     }
 

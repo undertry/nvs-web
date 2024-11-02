@@ -63,6 +63,43 @@ class Dashboard extends BaseController
         }
     }
 
+  
+    public function fetchDevices()
+    {
+        $ip = session('ip');
+
+        // Verificar si la IP está en la sesión
+        if (empty($ip)) {
+            return $this->response->setJSON([
+                'success' => false,
+                'message' => 'Error: IP no asignada en la sesión.'
+            ]);
+        }
+
+        $client = \Config\Services::curlrequest();
+        $network = [];
+
+        try {
+            // Realizar solicitud GET para verificar si la API está disponible
+            $response = $client->get('http://' . $ip . ':5000/devices');
+            if ($response->getStatusCode() == 200) {
+                $network = json_decode($response->getBody(), true);
+                return $this->response->setJSON([
+                    'success' => true,
+                    'data' => $network
+                ]);
+            }
+        } catch (\Exception $e) {
+            // Si falla la conexión con la API, retornar un mensaje de error
+            log_message('error', 'Error al intentar conectarse a la API: ' . $e->getMessage());
+            return $this->response->setJSON([
+                'success' => false,
+                'message' => 'Error: API no inicializada o inaccesible.'
+            ]);
+        }
+    }
+
+
 
 
 
@@ -281,5 +318,93 @@ class Dashboard extends BaseController
         return redirect()->back()->with('api_message', $e->getMessage());
     }
 }
+public function enableMonitor()
+{
+    $ip = session('ip');
+    $user = session('raspberry_user');
+    $password = session('raspberry_password');
+
+    if (!$ip || !$user || !$password) {
+        return redirect()->back()->with('monitor_message', 'Error: IP o credenciales no asignadas.');
+    }
+
+    try {
+        // Crear instancia de SSH
+        $ssh = new SSH2($ip, 22, 10); // 10 segundos de espera
+        if (!$ssh->login($user, $password)) {
+            throw new \Exception('Error: No se pudo establecer conexión SSH.');
+        }
+
+        // Ejecutar el comando para iniciar el escaneo de WiFi en segundo plano con nohup y disown
+        $output = $ssh->exec('sudo airmon-ng start wlan0');
+
+          // Verificar si el modo monitor se activó correctamente
+          if (strpos($output, 'monitor mode enabled') !== false || strpos($output, 'wlan0mon') !== false) {
+            // El modo monitor se activó correctamente
+            $monitor_message = 'Modo monitor activado correctamente.';
+        } else {
+            throw new \Exception('Error: No se pudo activar el modo monitor.');
+        }
+
+        $ssh->disconnect();
+
+        // Evaluar el resultado para confirmar el éxito o el error
+        if (strpos($output, 'Error') === false) {
+            return redirect()->back()->with('monitor_message', 'Se establecio correctamente el modo monitor.');
+        } else {
+            throw new \Exception('Error durante la ejecución del escaneo de WiFi.');
+        }
+    } catch (\Exception $e) {
+        if (isset($ssh)) {
+            $ssh->disconnect();
+        }
+        return redirect()->back()->with('monitor_message', $e->getMessage());
+    }
+}
+
+public function desactiveMonitor()
+{
+    $ip = session('ip');
+    $user = session('raspberry_user');
+    $password = session('raspberry_password');
+
+    if (!$ip || !$user || !$password) {
+        return redirect()->back()->with('monitor_message', 'Error: IP o credenciales no asignadas.');
+    }
+
+    try {
+        // Crear instancia de SSH
+        $ssh = new SSH2($ip, 22, 10); // 10 segundos de espera
+        if (!$ssh->login($user, $password)) {
+            throw new \Exception('Error: No se pudo establecer conexión SSH.');
+        }
+
+        // Ejecutar el comando para iniciar el escaneo de WiFi en segundo plano con nohup y disown
+        $output = $ssh->exec('sudo airmon-ng stop wlan0mon');
+        
+          // Verificar si el modo monitor se activó correctamente
+          if (strpos($output, 'monitor mode disabled') !== false || strpos($output, 'wlan0') !== false) {
+            // El modo monitor se activó correctamente
+            $monitor_message = 'Modo monitor desactivado correctamente.';
+        } else {
+            throw new \Exception('Error: No se pudo desactivar el modo monitor.');
+        }
+
+        $ssh->disconnect();
+
+        // Evaluar el resultado para confirmar el éxito o el error
+        if (strpos($output, 'Error') === false) {
+            return redirect()->back()->with('monitor_message', 'El escaneo de WiFi se inició correctamente.');
+        } else {
+            throw new \Exception('Error durante la ejecución del escaneo de WiFi.');
+        }
+    } catch (\Exception $e) {
+        if (isset($ssh)) {
+            $ssh->disconnect();
+        }
+        return redirect()->back()->with('monitor_message', $e->getMessage());
+    }
+}
 
 }
+
