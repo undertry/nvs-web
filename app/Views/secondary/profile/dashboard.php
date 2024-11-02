@@ -4,7 +4,7 @@
 </head>
 
 <div class="sidebar" id="sidebar">
-  <h2 class="sidebar-title"><i class="fa-solid fa-fingerprint"></i></h2>
+  <a href="<?= base_url('home-animation');?>" class="sidebar-icon" title="Home"><i class="fa-solid fa-fingerprint"></i></a>
   <nav>
     <a class="active" title="Dashboard">
    <i class="fa-solid fa-inbox"></i>
@@ -21,42 +21,52 @@
   </nav>
 
   <div class="command-section">
-    <a href="<?= base_url('startWifiScan'); ?>" title="Wifi">
+      <!-- Formulario wifi -->
+  <div class="sidebar-item">
+    <form id="wifiForm" method="post" action="<?= base_url('startWifiScan'); ?>"></form>
+    <a href="javascript:void(0);"  onclick="submitWifiForm()" title="Wifi">
       <i class="fa-solid fa-wifi"></i>
     </a>
-    <a href="<?= base_url('startDeviceScan'); ?>" title="Device">
+  </div>
+  
+  <!-- Formulario Device -->
+    <div class="sidebar-item">
+    <form id="deviceForm" method="post" action="<?= base_url('startDeviceScan'); ?>"></form>
+    <a href="javascript:void(0);"  onclick="submitDeviceForm()" title="Device">
       <i class="fa-solid fa-tablet-alt"></i>
     </a>
-    <a href="<?= base_url('startNmapScan'); ?>" title="Nmap">
+  </div>
+ 
+
+     <!-- Formulario NMAP -->
+  <div class="sidebar-item">
+    <form id="nmapForm" method="post" action="<?= base_url('startNmapScan'); ?>"></form>
+    <a href="javascript:void(0);" onclick="submitNmapForm()" title="Nmap">
       <i class="fa-solid fa-network-wired"></i>
     </a>
-    <a href="<?= base_url('csv'); ?>" title="CSV">
+  </div>
+   
+  <!-- Formulario CSV -->
+  <div class="sidebar-item">
+    <form id="csvForm" method="post" action="<?= base_url('csv'); ?>"></form>
+    <a href="javascript:void(0);" onclick="submitCsvForm()" title="CSV">
       <i class="fa-solid fa-file-csv"></i>
-    </a>
-    <a href="<?= base_url('mac'); ?>" title="MAC">
-      <i class="fa-solid fa-microchip"></i>
     </a>
   </div>
 
-    <div class="profile-section">
-       <a title="Profile"><i class="fa-solid fa-user-secret user" id="user-icon"></i></a>
-        <a href="<?= base_url('configuration') ?>" class="settings" title="Settings"><i class="fa-solid fa-gear"></i></a>
-        <a href="<?= base_url('logout'); ?>" title="Logout">
-        <i class="fa-solid fa-sign-out"></i>
-        </a>
-
-    </div>
+  <!-- Formulario MAC -->
+  <div class="sidebar-item">
+    <form id="macForm" method="post" action="<?= base_url('mac'); ?>"></form>
+    <a href="javascript:void(0);" onclick="submitMacForm()" title="MAC">
+      <i class="fa-solid fa-microchip"></i>
+    </a>
+  </div>
 </div>
 
 
-
-<div class="main-content">
-  <header>
-    <div class="user-profile">
-      <i class="fa-solid fa-user-secret user" id="user-icon"></i>
-      <a href="<?= base_url('configuration') ?>" class="settings"><i class="fa-solid fa-gear"></i></a>
-    </div>
-    <!-- Modal de Perfil de Usuario -->
+    <div class="profile-section">
+       <a title="Profile"><i class="fa-solid fa-user-secret user" id="user-icon"></i></a>
+          <!-- Modal de Perfil de Usuario -->
     <div id="userModal" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
@@ -70,7 +80,18 @@
         <!-- Puedes agregar más datos del usuario aquí -->
       </div>
     </div>
-  </header>
+        <a href="<?= base_url('configuration') ?>" class="settings" title="Settings"><i class="fa-solid fa-gear"></i></a>
+        <a href="<?= base_url('logout'); ?>" title="Logout">
+        <i class="fa-solid fa-sign-out"></i>
+        </a>
+
+    </div>
+</div>
+
+
+
+<div class="main-content">
+ 
   <div class="content-wrapper">
     <!-- Sección de Redes WiFi -->
     <div class="wifi-section">
@@ -103,7 +124,7 @@
         <h3>Menu</h3>
       </div>
       <div class="accordion-item">
-        <h2 class="accordion-title" onclick="toggleAccordion('info-content')">
+        <h2 class="accordion-title">
           <i class="fa-solid fa-database icon"></i> Information
         </h2>
         <div id="info-content" class="accordion-content">
@@ -112,7 +133,7 @@
         </div>
       </div>
       <div class="accordion-item">
-        <h2 class="accordion-title" onclick="toggleAccordion('last-network-content')">
+        <h2 class="accordion-title">
           <i class="fa-solid fa-wifi icon"></i> Current Network
         </h2>
         <div id="last-network-content" class="accordion-content">
@@ -129,52 +150,73 @@
           <?php endif; ?>
         </div>
       </div>
-      <div class="accordion-item">
-        <h2 class="accordion-title" onclick="toggleAccordion('scan-content')">
-          <i class="fas fa-list-check icon"></i> Scan Manager
+      <div id="scan-content" class="accordion-content">
+      <h2 class="accordion-title">
+          <i class="fa-solid fa-wifi icon"></i> Alerts
         </h2>
-        <div id="scan-content" class="accordion-content">
-        <?php if (session()->getFlashdata('wifi_message')): ?>
-          <div class="alert alert-info"><?= session()->getFlashdata('wifi_message') ?></div>
-          <?php endif; ?>
-          <form method="post" action="<?= base_url('startWifiScan'); ?>" style="display: inline;">
-            <input type="submit" value="Wifi" class="btn-submit">
-          </form>
-          <?php if (session()->getFlashdata('device_message')): ?>
-          <div class="alert alert-info"><?= session()->getFlashdata('device_message') ?></div>
-          <?php endif; ?>
-          <form method="post" action="<?= base_url('startDeviceScan'); ?>" style="display: inline;">
-            <input type="submit" value="Device" class="btn-submit">
-          </form>
-          <?php if (session()->getFlashdata('nmap_message')): ?>
-          <div class="alert alert-info"><?= session()->getFlashdata('nmap_message') ?></div>
-          <?php endif; ?>
-          <form method="post" action="<?= base_url('startNmapScan'); ?>" style="display: inline;">
-            <input type="submit" value="Nmap" class="btn-submit">
-          </form>
-          <?php if (session()->getFlashdata('csv_message')): ?>
-          <div class="alert alert-info"><?= session()->getFlashdata('csv_message') ?></div>
-          <?php endif; ?>
-          <form method="post" action="<?= base_url('csv'); ?>" style="display: inline;">
-            <input type="submit" value="csv" class="btn-submit">
-          </form>
-          <?php if (session()->getFlashdata('mac_message')): ?>
-          <div class="alert alert-info"><?= session()->getFlashdata('mac_message') ?></div>
-          <?php endif; ?>
-          <form method="post" action="<?= base_url('mac'); ?>" style="display: inline;">
-            <input type="submit" value="mac" class="btn-submit">
-          </form>
-        </div>
-      </div>
+  <!-- Mensaje de alerta para WiFi -->
+  <?php if (session()->getFlashdata('wifi_message')): ?>
+    <div class="alert <?= strpos(session()->getFlashdata('wifi_message'), 'Error') !== false ? 'alert-error' : 'alert-success' ?>">
+      <?= session()->getFlashdata('wifi_message') ?>
+    </div>
+  <?php endif; ?>
+
+  <!-- Mensaje de alerta para Device -->
+  <?php if (session()->getFlashdata('device_message')): ?>
+    <div class="alert <?= strpos(session()->getFlashdata('device_message'), 'Error') !== false ? 'alert-error' : 'alert-success' ?>">
+      <?= session()->getFlashdata('device_message') ?>
+    </div>
+  <?php endif; ?>
+
+
+  <!-- Mensaje de alerta para Nmap -->
+  <?php if (session()->getFlashdata('nmap_message')): ?>
+    <div class="alert <?= strpos(session()->getFlashdata('nmap_message'), 'Error') !== false ? 'alert-error' : 'alert-success' ?>">
+      <?= session()->getFlashdata('nmap_message') ?>
+    </div>
+  <?php endif; ?>
+ 
+
+  <!-- Mensaje de alerta para CSV -->
+  <?php if (session()->getFlashdata('csv_message')): ?>
+    <div class="alert <?= strpos(session()->getFlashdata('csv_message'), 'Error') !== false ? 'alert-error' : 'alert-success' ?>">
+      <?= session()->getFlashdata('csv_message') ?>
+    </div>
+  <?php endif; ?>
+ 
+
+  <!-- Mensaje de alerta para MAC -->
+  <?php if (session()->getFlashdata('mac_message')): ?>
+    <div class="alert <?= strpos(session()->getFlashdata('mac_message'), 'Error') !== false ? 'alert-error' : 'alert-success' ?>">
+      <?= session()->getFlashdata('mac_message') ?>
+    </div>
+  <?php endif; ?>
+ 
+</div>
+
     </div>
   </div>
 </div>
+</div>
+
 <script>
-  function toggleAccordion(contentId) {
-      const content = document.getElementById(contentId);
-      content.style.display = (content.style.display === "none" || content.style.display === "") ? "block" : "none";
+  function submitWifiForm() {
+    document.getElementById("wifiForm").submit();
+  }
+  function submitDeviceForm() {
+    document.getElementById("deviceForm").submit();
+  }
+  function submitNmapForm() {
+    document.getElementById("nmapForm").submit();
+  }
+  function submitCsvForm() {
+    document.getElementById("csvForm").submit();
+  }
+  function submitMacForm() {
+    document.getElementById("macForm").submit();
   }
 </script>
+
 <script>
   document.getElementById('user-icon').onclick = function() {
       // Muestra el modal
