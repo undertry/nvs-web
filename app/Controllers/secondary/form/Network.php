@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Controllers\secondary\form;
-
+require_once __DIR__ . '/../../../../vendor/autoload.php';
+use phpseclib3\Net\SSH2;
 use CodeIgniter\HTTP\CURLRequest;
 use App\Controllers\main\BaseController;
 use \App\Models\tertiary\network\NetworkModel;
@@ -147,52 +148,188 @@ class Network extends BaseController
 
 
 
-
     public function startWifiScan()
     {
         $ip = session('ip');
-        $client = \Config\Services::curlrequest([
-            'timeout' => 340  // Tiempo en segundos
-        ]);
-
+        $user = session('raspberry_user');
+        $password = session('raspberry_password');
+    
+        if (!$ip || !$user || !$password) {
+            return redirect()->back()->with('scan_message', 'Error: IP o credenciales no asignadas.');
+        }
+    
         try {
-            $response = $client->post("http://" . $ip . ":5000/start-wifi-scan");
-            $body = json_decode($response->getBody(), true);
+            // Crear instancia de SSH
+            $ssh = new SSH2($ip, 22, 10); // 10 segundos de espera
+            if (!$ssh->login($user, $password)) {
+                throw new \Exception('Error: No se pudo establecer conexión SSH.');
+            }
+    
+            // Ejecutar el comando para iniciar el escaneo de WiFi en segundo plano con nohup y disown
+            $output = $ssh->exec('cd ~/nvs_project && python3 wifi_scan.py');
 
-            if ($response->getStatusCode() == 200) {
-                $message = $body['message'] ?? 'El escaneo se completó correctamente.';
-                return redirect()->back()->with('scan_message', $message);
+            $ssh->disconnect();
+    
+            // Evaluar el resultado para confirmar el éxito o el error
+            if (strpos($output, 'Error') === false) {
+                return redirect()->back()->with('scan_message', 'El escaneo de WiFi se inició correctamente.');
             } else {
-                $message = $body['message'] ?? 'Error al iniciar el escaneo.';
-                return redirect()->back()->with('scan_message', $message);
+                throw new \Exception('Error durante la ejecución del escaneo de WiFi.');
             }
         } catch (\Exception $e) {
-            log_message('error', 'Error al conectar con el API server: ' . $e->getMessage());
-            return redirect()->back()->with('scan_message', 'Error: No se pudo conectar con el API server.');
+            if (isset($ssh)) {
+                $ssh->disconnect();
+            }
+            return redirect()->back()->with('scan_message', $e->getMessage());
         }
     }
+    
+    
+    
 
     public function startDeviceScan()
     {
         $ip = session('ip');
-        $client = \Config\Services::curlrequest([
-            'timeout' => 340  // Tiempo en segundos
-        ]);
-
+        $user = session('raspberry_user');
+        $password = session('raspberry_password');
+    
+        if (!$ip || !$user || !$password) {
+            return redirect()->back()->with('scan_message', 'Error: IP o credenciales no asignadas.');
+        }
+    
         try {
-            $response = $client->post("http://$ip:5000/start-device-scan");
-            $body = json_decode($response->getBody(), true);
+            // Crear instancia de SSH
+            $ssh = new SSH2($ip, 22, 10); // 10 segundos de espera
+            if (!$ssh->login($user, $password)) {
+                throw new \Exception('Error: No se pudo establecer conexión SSH.');
+            }
+    
+            // Ejecutar el comando para iniciar el escaneo de WiFi en segundo plano con nohup y disown
+            $output = $ssh->exec('cd ~/nvs_project && python3 device_scan.py');
 
-            if ($response->getStatusCode() == 200) {
-                $message = $body['message'] ?? 'El escaneo se inició correctamente.';
-                return redirect()->back()->with('scan_message', $message);
+            $ssh->disconnect();
+    
+            // Evaluar el resultado para confirmar el éxito o el error
+            if (strpos($output, 'Error') === false) {
+                return redirect()->back()->with('scan_message', 'El escaneo de WiFi se inició correctamente.');
             } else {
-                $message = $body['message'] ?? 'Error al iniciar el escaneo.';
-                return redirect()->back()->with('scan_message', $message);
+                throw new \Exception('Error durante la ejecución del escaneo de WiFi.');
             }
         } catch (\Exception $e) {
-            log_message('error', 'Error al conectar con el API server: ' . $e->getMessage());
-            return redirect()->back()->with('scan_message', 'Error: No se pudo conectar con el API server.');
+            if (isset($ssh)) {
+                $ssh->disconnect();
+            }
+            return redirect()->back()->with('scan_message', $e->getMessage());
+        }
+    }
+
+
+    public function startNmapScan()
+    {
+        $ip = session('ip');
+        $user = session('raspberry_user');
+        $password = session('raspberry_password');
+    
+        if (!$ip || !$user || !$password) {
+            return redirect()->back()->with('scan_message', 'Error: IP o credenciales no asignadas.');
+        }
+    
+        try {
+            // Crear instancia de SSH
+            $ssh = new SSH2($ip, 22, 10); // 10 segundos de espera
+            if (!$ssh->login($user, $password)) {
+                throw new \Exception('Error: No se pudo establecer conexión SSH.');
+            }
+    
+            // Ejecutar el comando para iniciar el escaneo de WiFi en segundo plano con nohup y disown
+            $output = $ssh->exec('cd ~/nvs_project && python3 nmap_scanner.py');
+
+            $ssh->disconnect();
+    
+            // Evaluar el resultado para confirmar el éxito o el error
+            if (strpos($output, 'Error') === false) {
+                return redirect()->back()->with('scan_message', 'El escaneo de WiFi se inició correctamente.');
+            } else {
+                throw new \Exception('Error durante la ejecución del escaneo de WiFi.');
+            }
+        } catch (\Exception $e) {
+            if (isset($ssh)) {
+                $ssh->disconnect();
+            }
+            return redirect()->back()->with('scan_message', $e->getMessage());
+        }
+    }
+
+    public function csv()
+    {
+        $ip = session('ip');
+        $user = session('raspberry_user');
+        $password = session('raspberry_password');
+    
+        if (!$ip || !$user || !$password) {
+            return redirect()->back()->with('scan_message', 'Error: IP o credenciales no asignadas.');
+        }
+    
+        try {
+            // Crear instancia de SSH
+            $ssh = new SSH2($ip, 22, 10); // 10 segundos de espera
+            if (!$ssh->login($user, $password)) {
+                throw new \Exception('Error: No se pudo establecer conexión SSH.');
+            }
+    
+            // Ejecutar el comando para iniciar el escaneo de WiFi en segundo plano con nohup y disown
+            $output = $ssh->exec('cd ~/nvs_project && python3 csv_to_json.py');
+
+            $ssh->disconnect();
+    
+            // Evaluar el resultado para confirmar el éxito o el error
+            if (strpos($output, 'Error') === false) {
+                return redirect()->back()->with('scan_message', 'El escaneo de WiFi se inició correctamente.');
+            } else {
+                throw new \Exception('Error durante la ejecución del escaneo de WiFi.');
+            }
+        } catch (\Exception $e) {
+            if (isset($ssh)) {
+                $ssh->disconnect();
+            }
+            return redirect()->back()->with('scan_message', $e->getMessage());
+        }
+    }
+
+    
+    public function mac()
+    {
+        $ip = session('ip');
+        $user = session('raspberry_user');
+        $password = session('raspberry_password');
+    
+        if (!$ip || !$user || !$password) {
+            return redirect()->back()->with('scan_message', 'Error: IP o credenciales no asignadas.');
+        }
+    
+        try {
+            // Crear instancia de SSH
+            $ssh = new SSH2($ip, 22, 10); // 10 segundos de espera
+            if (!$ssh->login($user, $password)) {
+                throw new \Exception('Error: No se pudo establecer conexión SSH.');
+            }
+    
+            // Ejecutar el comando para iniciar el escaneo de WiFi en segundo plano con nohup y disown
+            $output = $ssh->exec('cd ~/nvs_project && python3 mac_ip_matcher.py');
+
+            $ssh->disconnect();
+    
+            // Evaluar el resultado para confirmar el éxito o el error
+            if (strpos($output, 'Error') === false) {
+                return redirect()->back()->with('scan_message', 'El escaneo de WiFi se inició correctamente.');
+            } else {
+                throw new \Exception('Error durante la ejecución del escaneo de WiFi.');
+            }
+        } catch (\Exception $e) {
+            if (isset($ssh)) {
+                $ssh->disconnect();
+            }
+            return redirect()->back()->with('scan_message', $e->getMessage());
         }
     }
 

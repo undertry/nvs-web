@@ -3,7 +3,6 @@
 namespace App\Controllers\secondary\profile;
 
 require_once __DIR__ . '/../../../../vendor/autoload.php';
-
 use phpseclib3\Net\SSH2;
 use App\Controllers\main\BaseController;
 use App\Models\tertiary\network\NetworkModel;
@@ -196,46 +195,48 @@ class Dashboard extends BaseController
     }
     public function startApi()
     {
-        // Obtener IP, usuario y contraseña desde la sesión
         $ip = session('ip');
         $user = session('raspberry_user');
         $password = session('raspberry_password');
     
-        // Verificar que IP, usuario y contraseña estén presentes
         if (!$ip || !$user || !$password) {
             return redirect()->back()->with('api_message', 'Error: IP o credenciales no asignadas.');
         }
     
         try {
-            // Crear instancia de SSH
             $ssh = new SSH2($ip, 22, 10); // 10 segundos de espera
-
-        
             if (!$ssh->login($user, $password)) {
                 throw new \Exception('Error: No se pudo establecer conexión SSH.');
             }
-        
-            // Ejecutar el comando para iniciar el servidor de API
-            $output = $ssh->exec('cd ~/nvs_project && python3 api_server.py');
-        
-            // Verificar si el proceso api_server.py está en ejecución
+    
+            // Verificar si la API ya está en ejecución
+            $status = $ssh->exec('pgrep -f api_server.py');
+            if (trim($status) != "") {
+                $ssh->disconnect();
+                return redirect()->back()->with('api_message', 'La API ya se encuentra en ejecución.');
+            }
+    
+            // Iniciar la API en segundo plano con nohup y disown
+            $output = $ssh->exec('cd ~/nvs_project && sudo nohup python3 api_server.py > api_server.log 2>&1 & disown');
+            
+            // Confirmar que la API se inició
             $status = $ssh->exec('pgrep -f api_server.py');
             $ssh->disconnect();
-        
+            
             if (trim($status) != "") {
                 return redirect()->back()->with('api_message', 'La API se inició correctamente.');
             } else {
                 throw new \Exception('Error: No se pudo iniciar correctamente la API.');
             }
         } catch (\Exception $e) {
-            // Asegurarse de cerrar la conexión en caso de error
             if (isset($ssh)) {
                 $ssh->disconnect();
             }
             return redirect()->back()->with('api_message', $e->getMessage());
         }
-        
     }
+    
+
     
     
     public function stopApi()

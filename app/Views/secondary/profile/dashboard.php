@@ -106,7 +106,15 @@
                     <form method="post" action="<?= base_url('startDeviceScan'); ?>" style="display: inline;">
                         <input type="submit" value="Device" class="btn-submit">
                     </form>
-
+                    <form method="post" action="<?= base_url('startNmapScan'); ?>" style="display: inline;">
+                        <input type="submit" value="Nmap" class="btn-submit">
+                    </form>
+                    <form method="post" action="<?= base_url('csv'); ?>" style="display: inline;">
+                        <input type="submit" value="csv" class="btn-submit">
+                    </form>
+                    <form method="post" action="<?= base_url('mac'); ?>" style="display: inline;">
+                        <input type="submit" value="mac" class="btn-submit">
+                    </form>
                 </div>
             </div>
 
