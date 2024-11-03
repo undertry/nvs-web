@@ -2,7 +2,7 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <title>Dashboard</title>
 </head>
-
+<div id="particles-js"></div>
 <div class="sidebar" id="sidebar">
   <a href="<?= base_url('home-animation');?>" class="sidebar-icon" title="Home"><i class="fa-solid fa-fingerprint"></i></a>
   <nav>
@@ -118,43 +118,54 @@
   </div>
   <ul id="device-list" class="list-group mt-3"></ul>
 </div>
+</div>
 
-    <div class="accordion-section">
-      <div class="text">
-        <h3>Menu</h3>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-title">
-          <i class="fa-solid fa-database icon"></i> Information
-        </h2>
-        <div id="info-content" class="accordion-content">
-          <p><strong>Current IP:</strong> <?= session('ip'); ?></p>
-          <p><strong>Chosen Mode:</strong> <?= session('mode'); ?></p>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-title">
-          <i class="fa-solid fa-wifi icon"></i> Current Network
-        </h2>
-        <div id="last-network-content" class="accordion-content">
-          <?php if (session()->has('current_network')): ?>
-          <p><strong>Current Network Selected:
-            </strong><?= session('current_network')['essid']; ?>
-          </p>
-          <p><strong>BSSID: </strong> <?= session('current_network')['bssid']; ?></p>
-          <p><strong>Signal: </strong> <?= session('current_network')['signal']; ?></p>
-          <p><strong>channel: </strong> <?= session('current_network')['channel']; ?></p>
-          <p><strong>Encryption: </strong> <?= session('current_network')['security']; ?></p>
-          <?php else: ?>
-          <p>No previous scan results were found.</p>
-          <?php endif; ?>
-        </div>
-      </div>
-      <div id="scan-content" class="accordion-content">
+
+
+</div>
+
+
+  <div class="accordion-section">
+    <div class="text">
+      <h3>Menu</h3>
+    </div>
+    
+    <!-- Información -->
+    <div class="accordion-item">
       <h2 class="accordion-title">
-          <i class="fa-solid fa-wifi icon"></i> Alerts
-        </h2>
-  <!-- Mensaje de alerta para WiFi -->
+        <i class="fa-solid fa-database icon"></i> Information
+      </h2>
+      <div id="info-content" class="accordion-content">
+        <p><strong>Current IP:</strong> <?= session('ip'); ?></p>
+        <p><strong>Chosen Mode:</strong> <?= session('mode'); ?></p>
+      </div>
+    </div>
+
+    <!-- Red actual -->
+    <div class="accordion-item">
+      <h2 class="accordion-title">
+        <i class="fa-solid fa-wifi icon"></i> Current Network
+      </h2>
+      <div id="last-network-content" class="accordion-content">
+        <?php if (session()->has('current_network')): ?>
+          <p><strong>Current Network Selected:</strong> <?= session('current_network')['essid']; ?></p>
+          <p><strong>BSSID:</strong> <?= session('current_network')['bssid']; ?></p>
+          <p><strong>Signal:</strong> <?= session('current_network')['signal']; ?></p>
+          <p><strong>Channel:</strong> <?= session('current_network')['channel']; ?></p>
+          <p><strong>Encryption:</strong> <?= session('current_network')['security']; ?></p>
+        <?php else: ?>
+          <p>No previous scan results were found.</p>
+        <?php endif; ?>
+      </div>
+    </div>
+
+    <!-- Alertas -->
+    <div class="accordion-item">
+      <h2 class="accordion-title">
+        <i class="fa-solid fa-bell icon"></i> Alerts
+      </h2>
+      <div id="scan-content" class="accordion-content">
+        <!-- Mensaje de alerta para WiFi -->
   <?php if (session()->getFlashdata('wifi_message')): ?>
     <div class="alert <?= strpos(session()->getFlashdata('wifi_message'), 'Error') !== false ? 'alert-error' : 'alert-success' ?>">
       <?= session()->getFlashdata('wifi_message') ?>
@@ -191,13 +202,13 @@
       <?= session()->getFlashdata('mac_message') ?>
     </div>
   <?php endif; ?>
- 
-</div>
-
+      </div>
     </div>
   </div>
-</div>
-</div>
+
+
+
+
 
 <script>
   function submitWifiForm() {
@@ -269,6 +280,7 @@
                      <p><strong>Encryption:</strong> ${network.Encryption}</p>
                   <button class="btn btn-primary select-network-btn">Seleccionar Red WiFi</button>
               `;
+              
   
                   listItem.addEventListener('click', function() {
                       const isVisible = detailsDiv.style.display === 'block';
@@ -317,7 +329,7 @@
           .catch(error => console.error('Error al seleccionar la red:', error));
   }
 </script>
-
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script>
 // Evento para el botón de dispositivos
 document.getElementById('fetch-devices').addEventListener('click', function() {
@@ -342,11 +354,12 @@ document.getElementById('fetch-devices').addEventListener('click', function() {
             data.data.forEach(device => {
                 const listItem = document.createElement('li');
                 listItem.className = 'list-group-item';
-                listItem.textContent = `MAC: ${device.mac_address}`;
+         
 
                 const detailsDiv = document.createElement('div');
                 detailsDiv.className = 'device-details';
                 detailsDiv.innerHTML = `
+                 <p><strong>MAC Address:</strong> ${device.mac_address}</p>
                     <p><strong>IP Address:</strong> ${device.ip_address}</p>
                 `;
 
@@ -366,6 +379,74 @@ document.getElementById('fetch-devices').addEventListener('click', function() {
             alert('Error al conectar con la API de dispositivos. Por favor, asegúrate de que está inicializada.');
         });
 });
+</script>
+
+<script>
+    // Función optimizada para actualizar los colores sin reiniciar las partículas
+function updateParticlesColor(mode) {
+  const particlesColor = mode === "light" ? "#000000" : "#ffffff";
+  const lineLinkedColor = mode === "light" ? "#000000" : "#ffffff";
+
+  // Acceder directamente al objeto global de particles.js para cambiar los colores
+  const particles = window.pJSDom[0].pJS.particles;
+
+  // Cambiar color de las partículas y las líneas
+  particles.color.value = particlesColor;
+  particles.line_linked.color = lineLinkedColor;
+
+  // Aplicar los cambios visuales inmediatamente
+  window.pJSDom[0].pJS.fn.particlesRefresh();
+}
+
+// Inicializa las partículas
+particlesJS("particles-js", {
+  particles: {
+    number: {
+      value: 100,
+    },
+    color: {
+      value: "#ffffff", // Color inicial, será actualizado dinámicamente
+    },
+    shape: {
+      type: "circle",
+    },
+    opacity: {
+      value: 0.3,
+      random: false,
+    },
+    size: {
+      value: 3,
+      random: true,
+    },
+    line_linked: {
+      enable: true,
+      distance: 150,
+      color: "#222222", // Color inicial, será actualizado dinámicamente
+      opacity: 0.4,
+      width: 1,
+    },
+    move: {
+      speed: 1,
+      random: true,
+      direction: "none",
+      out_mode: "out",
+    },
+  },
+  interactivity: {
+    events: {
+      onhover: {
+        enable: true,
+        mode: "grab",
+      },
+      onclick: {
+        enable: true,
+        mode: "push",
+      },
+    },
+  },
+  retina_detect: true,
+});
+
 </script>
 </body>
 </html>

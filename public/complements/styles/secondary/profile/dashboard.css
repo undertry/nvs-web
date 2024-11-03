@@ -38,6 +38,19 @@
   src        : url("../../fonts/Ahsing/Ahsing-Regular.otf") format("truetype");
 }
 
+#particles-js {
+  position      : absolute;
+  width         : 100%;
+  height        : 110vh;
+  z-index       : -1;
+  top           : 0;
+  left          : 0;
+  background    : var(--color-dark);
+  pointer-events: none;
+  transition    : background 0.3s ease;
+}
+
+
 /* Estilos generales para las alertas */
 .alert {
   margin-top: 10px;
@@ -178,7 +191,7 @@ padding: 10px;
 .main-content {
   flex      : 1;
   padding   : 20px;
-  overflow-y: auto;
+  margin-top: 2.5%;
 }
 
 
@@ -209,27 +222,9 @@ padding: 10px;
   user-select     : none;
 }
 
-.close {
-  color      : #aaa;
-  float      : right;
-  font-size  : 28px;
-  font-weight: bold;
-  cursor     : pointer;
-}
-
-.close:hover,
-.close:focus {
-  color          : #fff;
-  text-decoration: none;
-  cursor         : pointer;
-}
 
 
 
-.container {
-  max-width: 600px;
-  margin   : auto;
-}
 
 h2 {
   text-align   : center;
@@ -272,20 +267,27 @@ h2 {
 }
 
 .list-group-item {
+  font-family: "neue";
+  font-size: 1.2em;
   margin-top: 10px;
   list-style      : none;
   border          : 1px solid var(--color-grey);
-  border-radius   : 8px;
+  border-radius   : 10px;
   padding         : 10px;
   margin-bottom   : 10px;
   cursor          : pointer;
   background-color: var(--color-black);
-  transition      : background-color 0.5s ease;
+  transition      : background-color 0.3s ease, color 0.3s ease;
   user-select     : none;
+  justify-content: center;
+  align-items: center;
+  margin-left: 25%;
+  width: 50%;
 }
 
 .list-group-item:hover {
-  background-color: var(--color-semigrey);
+  background-color: var(--color-semiblack);
+  color: var(--color-main);
 }
 
 .network-details {
@@ -294,8 +296,16 @@ h2 {
   margin-top      : 10px;
   padding         : 10px;
   background-color: var(--color-black);
-  border          : 1px solid var(--color-light-grey);
   border-radius   : 5px;
+  color: var(--color-white);
+}
+
+.device-details {
+color: var(--color-white);
+}
+
+.network-details button {
+margin-top: 10px;
 }
 
 #loading-spinner .spinner-border {
@@ -312,19 +322,19 @@ h2 {
 
 
 .content-wrapper {
-  display: flex;
+  display         : flex;
+  flex-direction  : column;
   gap    : 20px;
-  width: 100%;
+  width: 70%;
+left: 0;
+transform: translate(30%);
 }
 
-.relative-container {
-  position: relative;
-  width   : 100%;
-}
 
 /* Sección de WiFi */
 .wifi-section,
 .device-section {
+  max-height: 25em;
   width: 100%;
   background-color: var(--color-black);
   border: 1px solid var(--color-grey);
@@ -375,21 +385,30 @@ h2 {
 
 
 .accordion-section {
-  background-color: var(--color-semiblack);
-  padding         : 10px;
-  border-radius   : 5px;
-  width           : 50em;
+  background-color: var(--color-black);
+  padding         : 15px;
+  width           : 20em;
+  margin-top: 2.5%;
+  margin-right: 20px;
+  height: 90%;
   display         : flex;
   flex-direction  : column;
-  gap             : 10px;
+  gap             : 30px;
+  transition: width 0.5s ease;
+  border-radius: 20px;
+  border: 1px solid var(--color-grey);
 }
 
+
 .accordion-item {
+  margin-top: 2em;
   border       : 1px solid var(--color-grey);
   padding      : 10px;
-  border-radius: 8px;
+  border-radius: 10px;
   transition   : background-color 0.5s ease, border 0.5s ease;
 }
+
+
 
 .accordion-item:hover {
   background-color: var(--color-semiblack);
@@ -408,6 +427,7 @@ h2 {
 
 .accordion-content {
   margin-top      : 10px;
+  border-radius: 10px;
   display         : block;
   padding         : 10px;
   background-color: #444;
@@ -416,6 +436,7 @@ h2 {
   max-height      : 150px;
   user-select     : none;
 }
+
 
 
 .accordion-content p {
