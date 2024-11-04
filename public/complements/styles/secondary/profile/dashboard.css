@@ -204,6 +204,7 @@ padding: 10px;
 
 h2 {
   margin: 0; /* Eliminar margen por defecto */
+  margin-top: 1em;
   margin-bottom: 15px; /* Espacio debajo del encabezado */
   font-family: "neue";
   font-size: 2.6em;
@@ -224,15 +225,47 @@ h2 {
   transition: border 0.5s ease, background-color 0.5s ease;
 }
 
+.btn-secondary {
+  margin-top: 15px;
+  padding: 8px 10px;
+  border: 1px solid var(--color-grey);
+  border-radius: 50%;
+  background-color: var(--color-semiblack);
+  color: var(--color-white);
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: border 0.5s ease, background-color 0.5s ease;
+}
+
+
 .btn-primary:hover {
   background-color: var(--color-semigrey);
   border: 1px solid var(--color-light-grey);
 }
 
+.btn-secondary:hover {
+  background-color: var(--color-semigrey);
+  border: 1px solid var(--color-light-grey);
+}
+
+.arrow-icon {
+  transition: transform 0.3s ease;
+}
+
+.arrow-icon.rotate {
+  transform: rotate(180deg);
+}
+
 /* Estilo para el listado de redes WiFi */
 .list-group {
   width: 100%;
-  max-height: 50%; /* Limita la altura al 50% de la tarjeta */
+  max-height: 40%; /* Limita la altura al 50% de la tarjeta */
+  overflow-y: auto; /* Permite el scroll si el contenido supera el 50% */
+}
+
+.list-group2 {
+  width: 100%;
+  max-height: 20%; /* Limita la altura al 50% de la tarjeta */
   overflow-y: auto; /* Permite el scroll si el contenido supera el 50% */
 }
 
@@ -245,7 +278,7 @@ h2 {
   color: var(--color-white);
 }
 
-.network-details {
+.network-details, .device-details {
   margin-top      : 10px;
   padding         : 10px;
   background-color: var(--color-black);
@@ -254,11 +287,11 @@ h2 {
   user-select: none;
 }
 
-.network-details p {
+.network-details p, .device-details p {
 padding: 5px;
 }
 
-.network-details strong {
+.network-details strong, .device-details strong {
   color           : var(--color-secondary);
   background-color: var(--color-semiblack);
   padding         : 1px 8px;
@@ -266,13 +299,13 @@ padding: 5px;
   transition: color 0.3s ease-out;
   }
 
-  .network-details i {
+  .network-details i, .device-details i {
   color: var(--color-white);
   padding-right: 5px;
   
-     }
+}
 
-.network-details strong:hover {
+.network-details strong:hover, .device-details strong:hover {
   color: var(--color-main);
 }
 
@@ -298,8 +331,11 @@ padding: 5px;
 .extra-section {
   padding-top: 1em;
   width: 100%;
-  color: var(--color-light-grey);
-  font-size: 0.9em;
+  color: var(--color-white);
+  font-family: "neue";
+  font-size: 1em;
+  font-weight: lighter;
+  align-items: flex-start;
 }
 
 
