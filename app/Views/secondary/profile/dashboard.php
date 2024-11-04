@@ -94,7 +94,9 @@
 
   <!-- Tarjeta grande a la derecha -->
   <div class="card-large">
-    <h2>View your Wifi Networks</h2>
+    <div class="text-network">Network Dashboard</div>
+    <div class="wifi-section">
+    <h2 class="network">Available WiFi Networks</h2>
     <div id="loading-spinner" style="display: none; text-align: center;">
       <div class="spinner-border text-primary" role="status"></div>
       <p><i class="fa-solid fa-spinner"></i></p>
@@ -103,9 +105,11 @@
     <button id="fetch-networks" class="btn btn-primary toggle-btn">
       <i class="fa-solid fa-chevron-down arrow-icon"></i>
     </button>
-    <hr class="hr">
+    </div>
 
-    <h2>View your Devices</h2>
+  
+    <div class="device-section">
+    <h2 class="network">Connected Devices</h2>
     <div id="loading-spinner-device" style="display: none; text-align: center;">
       <div class="spinner-border text-primary" role="status"></div>
       <p><i class="fa-solid fa-spinner"></i></p>
@@ -115,12 +119,12 @@
       <i class="fa-solid fa-chevron-down arrow-icon"></i>
     </button>
   </div>
-
+  </div>
 
 
 
   <!-- Tarjetas pequeñas a la izquierda -->
-  <div class="card-small card-top"><div class="text">Cybersecurity in real-time: Monitor - detect - respond</div>
+  <div class="card-small card-top"><div class="text">Cybersecurity in real-time: <br> Monitor - detect - respond</div>
   <div class="hr"></div>
 <div class="subtext">Access a comprehensive set of tools to ensure your data's security. Scan your network for vulnerabilities, download detailed reports, and stay informed about potential threats. If you have any questions, click the help icon  <i class="fa-solid fa-circle-info"></i> for more information and support .</div></div>
   <div class="card-small card-bottom-left">Contenido de la tarjeta inferior izquierda 1</div>

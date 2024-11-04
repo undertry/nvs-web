@@ -177,7 +177,7 @@ padding: 10px;
 }
 
 .dashboard {
-  margin-left: 5em;
+  margin-left: 1em;
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 1fr 1fr;
@@ -189,6 +189,8 @@ padding: 10px;
 
 /* Estilos para las tarjetas */
 .card-large {
+  max-height: 100vh; /* Ajusta esto según tus necesidades */
+
   width: 35em;
   grid-row: 1 / 3; /* Ocupa ambas filas */
   grid-column: 3; /* Colocada en la segunda columna */
@@ -202,12 +204,50 @@ padding: 10px;
   align-items: center; /* Alinear elementos al inicio */
 }
 
-h2 {
+
+.wifi-section {
+  margin-top: 1em;
+  max-height: 45%; /* Limita la altura a la mitad de la ventana */
+  overflow-y: auto; /* Permite el scroll si el contenido supera el límite */
+  width: 32em;
+  background-color: var(--color-light);
+  color: var(--color-black);
+  border-radius: 50px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column; /* Cambiar a dirección de columna */
+  align-items: center; /* Alinear elementos al inicio */
+}
+
+.device-section {
+  margin-top: 1em;
+  max-height: 45%; /* Limita la altura a la mitad de la ventana */
+  overflow-y: auto; /* Permite el scroll si el contenido supera el límite */
+  width: 32em;
+  background-color: var(--color-light);
+  color: var(--color-black);
+  border-radius: 50px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column; /* Cambiar a dirección de columna */
+  align-items: center; /* Alinear elementos al inicio */
+}
+
+
+.text-network {
+  font-family: "neue-medium";
+  font-size: 2.8em;
+  font-weight: lighter;
+  margin-top: 1em;
+  margin-bottom: 10px;
+}
+
+.network {
   margin: 0; /* Eliminar margen por defecto */
   margin-top: 1em;
   margin-bottom: 15px; /* Espacio debajo del encabezado */
   font-family: "neue";
-  font-size: 2.6em;
+  font-size: 2em;
   font-weight: lighter;
   text-align: center;
   justify-content: center;
@@ -216,10 +256,10 @@ h2 {
  .btn-primary {
   margin-top: 15px;
   padding: 8px 10px;
-  border: 1px solid var(--color-grey);
+  border: 1px solid var(--color-black);
   border-radius: 50%;
-  background-color: var(--color-semiblack);
-  color: var(--color-white);
+  background-color: var(--color-light);
+  color: var(--color-black);
   font-size: 1.1em;
   cursor: pointer;
   transition: border 0.5s ease, background-color 0.5s ease;
@@ -228,10 +268,10 @@ h2 {
 .btn-secondary {
   margin-top: 15px;
   padding: 8px 10px;
-  border: 1px solid var(--color-grey);
+  border: 1px solid var(--color-black);
   border-radius: 50%;
-  background-color: var(--color-semiblack);
-  color: var(--color-white);
+  background-color: var(--color-light);
+  color: var(--color-black);
   font-size: 1.1em;
   cursor: pointer;
   transition: border 0.5s ease, background-color 0.5s ease;
@@ -239,13 +279,13 @@ h2 {
 
 
 .btn-primary:hover {
-  background-color: var(--color-semigrey);
-  border: 1px solid var(--color-light-grey);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-dark);
 }
 
 .btn-secondary:hover {
-  background-color: var(--color-semigrey);
-  border: 1px solid var(--color-light-grey);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-dark);
 }
 
 .arrow-icon {
@@ -259,13 +299,13 @@ h2 {
 /* Estilo para el listado de redes WiFi */
 .list-group {
   width: 100%;
-  max-height: 40%; /* Limita la altura al 50% de la tarjeta */
-  overflow-y: auto; /* Permite el scroll si el contenido supera el 50% */
+  height: 100%; /* Limita la altura al 50% de la tarjeta */
+  overflow-y: auto;
 }
 
 .list-group2 {
   width: 100%;
-  max-height: 20%; /* Limita la altura al 50% de la tarjeta */
+  height: 100%; /* Limita la altura al 50% de la tarjeta */
   overflow-y: auto; /* Permite el scroll si el contenido supera el 50% */
 }
 
@@ -274,17 +314,23 @@ h2 {
   font-family: "neue";
   font-size: 1.1em;
   font-weight: lighter;
-  border-bottom: 1px solid var(--color-grey);
   color: var(--color-white);
+
 }
 
 .network-details, .device-details {
   margin-top      : 10px;
   padding         : 10px;
-  background-color: var(--color-black);
   border-radius   : 5px;
-  color: var(--color-white);
+  color: var(--color-black);
   user-select: none;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-light-grey);
+  transition: border 0.5s ease;
+}
+
+.network-details:hover, .device-details:hover {
+  border: 1px solid var(--color-dark);
 }
 
 .network-details p, .device-details p {
@@ -293,16 +339,16 @@ padding: 5px;
 
 .network-details strong, .device-details strong {
   color           : var(--color-secondary);
-  background-color: var(--color-semiblack);
-  padding         : 1px 8px;
+  background-color: var(--color-light);
+  padding         : 4px 8px;
   border-radius   : 10px;
   transition: color 0.3s ease-out;
   }
 
   .network-details i, .device-details i {
-  color: var(--color-white);
+  color: var(--color-black);
   padding-right: 5px;
-  
+
 }
 
 .network-details strong:hover, .device-details strong:hover {
@@ -314,29 +360,19 @@ padding: 5px;
   margin-top: 10px;
   color: var(--color-white);
   background-color: var(--color-semiblack);
-  border: 1px solid var(--color-grey);
+
   border-radius: 30px;
   padding: 5px 10px;
   transition: background-color 0.5s ease, border 0.5s ease;
 }
 
 .select-network-btn:hover {
-  background-color: var(--color-semigrey);
+  background-color: var(--color-black);
   color: var(--color-white);
-  border: 1px solid var(--color-light-grey);
 }
 
 
-/* Sección extra debajo de la lista */
-.extra-section {
-  padding-top: 1em;
-  width: 100%;
-  color: var(--color-white);
-  font-family: "neue";
-  font-size: 1em;
-  font-weight: lighter;
-  align-items: flex-start;
-}
+
 
 
 .card-small {
