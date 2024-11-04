@@ -2,7 +2,7 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <title>Dashboard</title>
 </head>
-<div id="particles-js"></div>
+
 <div class="sidebar" id="sidebar">
   <a href="<?= base_url('home-animation');?>" class="sidebar-icon" title="Home"><i class="fa-solid fa-fingerprint"></i></a>
   <nav>
@@ -89,123 +89,31 @@
 </div>
 
 
-
-<div class="main-content">
- 
-  <div class="content-wrapper">
-    <!-- Sección de Redes WiFi -->
-    <div class="wifi-section">
-      <div class="section-header hidden">
-        <h2><i class="fa-brands fa-uncharted"></i></h2>
-      </div>
-      <h2> Available WiFi Networks</h2>
-      <button id="fetch-networks" class="btn btn-primary">Start Scan</button>
-      <div id="loading-spinner" style="display: none; text-align: center;">
-        <div class="spinner-border text-primary" role="status"></div>
-        <p><i class="fa-solid fa-spinner"></i></p>
-      </div>
-      <ul id="wifi-list" class="list-group mt-3"></ul>
-    </div>
-    <div class="device-section">
-  <div class="section-header hidden">
-    <h2><i class="fa-brands fa-uncharted"></i></h2>
-  </div>
-  <h2>Available Devices</h2>
-  <button id="fetch-devices" class="btn btn-primary">Start Scan</button>
-  <div id="loading-spinner-device" style="display: none; text-align: center;">
+<div class="dashboard">
+  <!-- Tarjeta grande a la derecha -->
+  <div class="card-large">
+  <h2>View your Wifi Networks</h2>
+  <div id="loading-spinner" style="display: none; text-align: center;">
     <div class="spinner-border text-primary" role="status"></div>
     <p><i class="fa-solid fa-spinner"></i></p>
   </div>
-  <ul id="device-list" class="list-group mt-3"></ul>
-</div>
-</div>
-
-
-
-</div>
-
-
-  <div class="accordion-section">
-    <div class="text">
-      <h3>Menu</h3>
-    </div>
-    
-    <!-- Información -->
-    <div class="accordion-item">
-      <h2 class="accordion-title">
-        <i class="fa-solid fa-database icon"></i> Information
-      </h2>
-      <div id="info-content" class="accordion-content">
-        <p><strong>Current IP:</strong> <?= session('ip'); ?></p>
-        <p><strong>Chosen Mode:</strong> <?= session('mode'); ?></p>
-      </div>
-    </div>
-
-    <!-- Red actual -->
-    <div class="accordion-item">
-      <h2 class="accordion-title">
-        <i class="fa-solid fa-wifi icon"></i> Current Network
-      </h2>
-      <div id="last-network-content" class="accordion-content">
-        <?php if (session()->has('current_network')): ?>
-          <p><strong>Current Network Selected:</strong> <?= session('current_network')['essid']; ?></p>
-          <p><strong>BSSID:</strong> <?= session('current_network')['bssid']; ?></p>
-          <p><strong>Signal:</strong> <?= session('current_network')['signal']; ?></p>
-          <p><strong>Channel:</strong> <?= session('current_network')['channel']; ?></p>
-          <p><strong>Encryption:</strong> <?= session('current_network')['security']; ?></p>
-        <?php else: ?>
-          <p>No previous scan results were found.</p>
-        <?php endif; ?>
-      </div>
-    </div>
-
-    <!-- Alertas -->
-    <div class="accordion-item">
-      <h2 class="accordion-title">
-        <i class="fa-solid fa-bell icon"></i> Alerts
-      </h2>
-      <div id="scan-content" class="accordion-content">
-        <!-- Mensaje de alerta para WiFi -->
-  <?php if (session()->getFlashdata('wifi_message')): ?>
-    <div class="alert <?= strpos(session()->getFlashdata('wifi_message'), 'Error') !== false ? 'alert-error' : 'alert-success' ?>">
-      <?= session()->getFlashdata('wifi_message') ?>
-    </div>
-  <?php endif; ?>
-
-  <!-- Mensaje de alerta para Device -->
-  <?php if (session()->getFlashdata('device_message')): ?>
-    <div class="alert <?= strpos(session()->getFlashdata('device_message'), 'Error') !== false ? 'alert-error' : 'alert-success' ?>">
-      <?= session()->getFlashdata('device_message') ?>
-    </div>
-  <?php endif; ?>
-
-
-  <!-- Mensaje de alerta para Nmap -->
-  <?php if (session()->getFlashdata('nmap_message')): ?>
-    <div class="alert <?= strpos(session()->getFlashdata('nmap_message'), 'Error') !== false ? 'alert-error' : 'alert-success' ?>">
-      <?= session()->getFlashdata('nmap_message') ?>
-    </div>
-  <?php endif; ?>
- 
-
-  <!-- Mensaje de alerta para CSV -->
-  <?php if (session()->getFlashdata('csv_message')): ?>
-    <div class="alert <?= strpos(session()->getFlashdata('csv_message'), 'Error') !== false ? 'alert-error' : 'alert-success' ?>">
-      <?= session()->getFlashdata('csv_message') ?>
-    </div>
-  <?php endif; ?>
- 
-
-  <!-- Mensaje de alerta para MAC -->
-  <?php if (session()->getFlashdata('mac_message')): ?>
-    <div class="alert <?= strpos(session()->getFlashdata('mac_message'), 'Error') !== false ? 'alert-error' : 'alert-success' ?>">
-      <?= session()->getFlashdata('mac_message') ?>
-    </div>
-  <?php endif; ?>
-      </div>
-    </div>
+  <ul id="wifi-list" class="list-group mt-3"></ul>
+  <button id="fetch-networks" class="btn btn-primary"><i class="fa-solid fa-magnifying-glass"></i></button>
+  <hr class="hr">
+  <div class="extra-section">
+    <!-- Aquí puedes añadir el contenido adicional debajo de la lista de redes -->
+    <p>Información adicional o una sección extra.</p>
   </div>
+</div>
 
+
+  <!-- Tarjetas pequeñas a la izquierda -->
+  <div class="card-small card-top"><div class="text">Cybersecurity in real-time: Monitor - detect - respond</div>
+  <div class="hr"></div>
+<div class="subtext">Access a comprehensive set of tools to ensure your data's security. Scan your network for vulnerabilities, download detailed reports, and stay informed about potential threats. If you have any questions, click the help icon  <i class="fa-solid fa-circle-info"></i> for more information and support .</div></div>
+  <div class="card-small card-bottom-left">Contenido de la tarjeta inferior izquierda 1</div>
+  <div class="card-small card-bottom-right">Contenido de la tarjeta inferior izquierda 2</div>
+</div>
 
 
 
@@ -246,8 +154,9 @@
       }
   }
 </script>
+
 <script>
-  document.getElementById('fetch-networks').addEventListener('click', function() {
+    document.getElementById('fetch-networks').addEventListener('click', function() {
       const wifiList = document.getElementById('wifi-list');
       const loadingSpinner = document.getElementById('loading-spinner');
   
@@ -269,23 +178,18 @@
               data.data.forEach(network => {
                   const listItem = document.createElement('li');
                   listItem.className = 'list-group-item';
-                  listItem.textContent = network.ESSID;
+              
   
                   const detailsDiv = document.createElement('div');
                   detailsDiv.className = 'network-details';
                   detailsDiv.innerHTML = `
-                  <p><strong>BSSID:</strong> ${network.BSSID}</p>
-                  <p><strong>Canal:</strong> ${network.Channel}</p>
-                  <p><strong>Frecuencia:</strong> ${network.Signal}</p>
-                     <p><strong>Encryption:</strong> ${network.Encryption}</p>
+                  <p><strong><i class="fa-solid fa-wifi"></i> ESSID:</strong> ${network.ESSID}</p>
+                  <p><strong><i class="fa-solid fa-tag"></i> BSSID:</strong> ${network.BSSID}</p>
+                  <p><strong><i class="fa-solid fa-list"></i> Canal:</strong> ${network.Channel}</p>
+                  <p><strong><i class="fa-solid fa-signal"></i> Frecuencia:</strong> ${network.Signal}</p>
+                  <p><strong><i class="fa-solid fa-lock"></i> Encryption:</strong> ${network.Encryption}</p>
                   <button class="btn btn-primary select-network-btn">Seleccionar Red WiFi</button>
               `;
-              
-  
-                  listItem.addEventListener('click', function() {
-                      const isVisible = detailsDiv.style.display === 'block';
-                      detailsDiv.style.display = isVisible ? 'none' : 'block';
-                  });
   
                   detailsDiv.querySelector('.select-network-btn').addEventListener('click', function() {
                       selectNetwork(network);
@@ -329,124 +233,3 @@
           .catch(error => console.error('Error al seleccionar la red:', error));
   }
 </script>
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script>
-// Evento para el botón de dispositivos
-document.getElementById('fetch-devices').addEventListener('click', function() {
-    const deviceList = document.getElementById('device-list');
-    const loadingSpinnerDevice = document.getElementById('loading-spinner-device');
-
-    // Mostrar el spinner y limpiar la lista de dispositivos
-    loadingSpinnerDevice.style.display = 'block';
-    deviceList.innerHTML = '';
-
-    fetch('fetchDevices')
-        .then(response => response.json())
-        .then(data => {
-            loadingSpinnerDevice.style.display = 'none'; // Ocultar el spinner
-
-            if (!data.success) {
-                alert(data.message);
-                return;
-            }
-
-            // Mostrar dispositivos en la lista si la respuesta es exitosa
-            data.data.forEach(device => {
-                const listItem = document.createElement('li');
-                listItem.className = 'list-group-item';
-         
-
-                const detailsDiv = document.createElement('div');
-                detailsDiv.className = 'device-details';
-                detailsDiv.innerHTML = `
-                 <p><strong>MAC Address:</strong> ${device.mac_address}</p>
-                    <p><strong>IP Address:</strong> ${device.ip_address}</p>
-                `;
-
-                // Mostrar/ocultar detalles al hacer clic en el elemento de la lista
-                listItem.addEventListener('click', function() {
-                    const isVisible = detailsDiv.style.display === 'block';
-                    detailsDiv.style.display = isVisible ? 'none' : 'block';
-                });
-
-                listItem.appendChild(detailsDiv);
-                deviceList.appendChild(listItem);
-            });
-        })
-        .catch(error => {
-            loadingSpinnerDevice.style.display = 'none'; // Ocultar el spinner si ocurre un error
-            console.error('Error al obtener los dispositivos:', error);
-            alert('Error al conectar con la API de dispositivos. Por favor, asegúrate de que está inicializada.');
-        });
-});
-</script>
-
-<script>
-    // Función optimizada para actualizar los colores sin reiniciar las partículas
-function updateParticlesColor(mode) {
-  const particlesColor = mode === "light" ? "#000000" : "#ffffff";
-  const lineLinkedColor = mode === "light" ? "#000000" : "#ffffff";
-
-  // Acceder directamente al objeto global de particles.js para cambiar los colores
-  const particles = window.pJSDom[0].pJS.particles;
-
-  // Cambiar color de las partículas y las líneas
-  particles.color.value = particlesColor;
-  particles.line_linked.color = lineLinkedColor;
-
-  // Aplicar los cambios visuales inmediatamente
-  window.pJSDom[0].pJS.fn.particlesRefresh();
-}
-
-// Inicializa las partículas
-particlesJS("particles-js", {
-  particles: {
-    number: {
-      value: 100,
-    },
-    color: {
-      value: "#ffffff", // Color inicial, será actualizado dinámicamente
-    },
-    shape: {
-      type: "circle",
-    },
-    opacity: {
-      value: 0.3,
-      random: false,
-    },
-    size: {
-      value: 3,
-      random: true,
-    },
-    line_linked: {
-      enable: true,
-      distance: 150,
-      color: "#222222", // Color inicial, será actualizado dinámicamente
-      opacity: 0.4,
-      width: 1,
-    },
-    move: {
-      speed: 1,
-      random: true,
-      direction: "none",
-      out_mode: "out",
-    },
-  },
-  interactivity: {
-    events: {
-      onhover: {
-        enable: true,
-        mode: "grab",
-      },
-      onclick: {
-        enable: true,
-        mode: "push",
-      },
-    },
-  },
-  retina_detect: true,
-});
-
-</script>
-</body>
-</html>
