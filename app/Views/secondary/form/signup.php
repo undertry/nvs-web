@@ -75,7 +75,7 @@
                 <!-- Checkbox de aceptación de términos y condiciones -->
                 <div class="form-label">
                     <input type="checkbox" id="terms" name="terms" required>
-                    <label for="terms">I accept the <a href="<?= base_url('terms-and-conditions'); ?>" target="_blank">terms and conditions</a></label>
+                    <label for="terms">I accept the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.en" target="_blank">terms and conditions</a></label>
                 </div>
                 <input type="submit" value="Continue">
             </form>

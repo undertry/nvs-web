@@ -480,6 +480,10 @@ a {
     color: var(--color-main);
 }
 
+.light-mode .links a:nth-child(2) {
+    color: var(--color-tertiary);
+}
+
 
 input[type="submit"] {
     background-color: var(--color-semiblack);
@@ -578,6 +582,10 @@ input[type="submit"]:hover {
 .form-label a:hover {
     text-decoration: underline;
     color          : var(--color-main);
+}
+
+.light-mode .form-label a:hover {
+    color: var(--color-tertiary);
 }
 
 #toggle-dark-mode {
