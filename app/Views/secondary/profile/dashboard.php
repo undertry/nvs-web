@@ -205,7 +205,7 @@
 
 </div>
 
-
+<script src="<?php echo base_url('complements/functionality/main/home/cursor.js'); ?>"></script>
 <script src="<?php echo base_url('complements/functionality/main/home/cookies.js'); ?>"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

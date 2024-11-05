@@ -39,6 +39,16 @@
 }
 
 
+.cursor {
+  pointer-events  : none;
+  position        : absolute;
+  padding         : 0.3vw;
+  border-radius   : 50%;
+  z-index         : 9000;
+  transition      : transform 0.1s ease, width 0.3s ease, height 0.3s ease, background-color 0.5s ease;
+  background-color: var(--color-semigrey);
+}
+
 
 /* General */
 * {
@@ -227,6 +237,7 @@ body.light-mode {
   padding              : 20px;
   background-color     : var(--color-dark);
   transition           : background-color 0.3s ease;
+  user-select          : none;
 }
 
 .light-mode .dashboard {
