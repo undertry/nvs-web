@@ -63,8 +63,8 @@
     <a href="#" id="toggle-dark-mode" title="Mode"><i class="fa-solid fa-moon" id="mode-icon"></i></a>
     <!-- Modal de Perfil de Usuario -->
     <div id="userModal" class="modal">
+      <span class="close">&times;</span>
       <div class="modal-content">
-        <span class="close">&times;</span>
         <h2>User Information</h2>
         <p><strong>Name:</strong> <?= session('user')->name; ?></p>
         <p><strong>Email:</strong> <?= session('user')->email; ?></p>
@@ -72,7 +72,6 @@
         <p><strong>Verification:</strong>
           <?= session('user')->verification == 1 ? 'Enabled' : 'Disabled'; ?>
         </p>
-        <!-- Puedes agregar más datos del usuario aquí -->
       </div>
     </div>
     <a href="<?= base_url('configuration') ?>" class="settings" title="Settings"><i class="fa-solid fa-gear"></i></a>
@@ -145,43 +144,7 @@
         </div>
         <div class="alerts">
           <h3 class="information">Alerts</h3>
-          <!-- Mensaje de alerta para WiFi -->
-          <?php if (session()->getFlashdata('wifi_message')): ?>
-            <div class="alert <?= strpos(session()->getFlashdata('wifi_message'), 'Error') !== false ? 'alert-error' : 'alert-success' ?>">
-              <?= session()->getFlashdata('wifi_message') ?>
-            </div>
-          <?php endif; ?>
 
-          <!-- Mensaje de alerta para Device -->
-          <?php if (session()->getFlashdata('device_message')): ?>
-            <div class="alert <?= strpos(session()->getFlashdata('device_message'), 'Error') !== false ? 'alert-error' : 'alert-success' ?>">
-              <?= session()->getFlashdata('device_message') ?>
-            </div>
-          <?php endif; ?>
-
-
-          <!-- Mensaje de alerta para Nmap -->
-          <?php if (session()->getFlashdata('nmap_message')): ?>
-            <div class="alert <?= strpos(session()->getFlashdata('nmap_message'), 'Error') !== false ? 'alert-error' : 'alert-success' ?>">
-              <?= session()->getFlashdata('nmap_message') ?>
-            </div>
-          <?php endif; ?>
-
-
-          <!-- Mensaje de alerta para CSV -->
-          <?php if (session()->getFlashdata('csv_message')): ?>
-            <div class="alert <?= strpos(session()->getFlashdata('csv_message'), 'Error') !== false ? 'alert-error' : 'alert-success' ?>">
-              <?= session()->getFlashdata('csv_message') ?>
-            </div>
-          <?php endif; ?>
-
-
-          <!-- Mensaje de alerta para MAC -->
-          <?php if (session()->getFlashdata('mac_message')): ?>
-            <div class="alert <?= strpos(session()->getFlashdata('mac_message'), 'Error') !== false ? 'alert-error' : 'alert-success' ?>">
-              <?= session()->getFlashdata('mac_message') ?>
-            </div>
-          <?php endif; ?>
         </div>
 
       </div>

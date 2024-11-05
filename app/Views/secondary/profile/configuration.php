@@ -6,7 +6,7 @@
   <div class="sidebar" id="sidebar">
     <a href="<?= base_url('home-animation'); ?>" class="sidebar-icon" title="Home"><i class="fa-solid fa-fingerprint"></i></a>
     <nav>
-      <a class="active" title="Dashboard">
+      <a href="<?= base_url('dashboard'); ?>" title="Dashboard">
         <i class="fa-solid fa-inbox"></i>
       </a>
       <a href="<?= base_url('nmap-animation'); ?>" title="Scan Results">
@@ -63,8 +63,9 @@
       <a href="#" id="toggle-dark-mode" title="Mode"><i class="fa-solid fa-moon" id="mode-icon"></i></a>
       <!-- Modal de Perfil de Usuario -->
       <div id="userModal" class="modal">
+        <span class="close">&times;</span>
         <div class="modal-content">
-          <span class="close">&times;</span>
+
           <h2>User Information</h2>
           <p><strong>Name:</strong> <?= session('user')->name; ?></p>
           <p><strong>Email:</strong> <?= session('user')->email; ?></p>
@@ -75,7 +76,7 @@
           <!-- Puedes agregar más datos del usuario aquí -->
         </div>
       </div>
-      <a href="<?= base_url('configuration') ?>" class="settings" title="Settings"><i class="fa-solid fa-gear"></i></a>
+      <a href="<?= base_url('configuration') ?>" class="active settings" title="Settings"><i class="fa-solid fa-gear"></i></a>
       <a href="<?= base_url('logout'); ?>" title="Logout">
         <i class="fa-solid fa-sign-out"></i>
       </a>
