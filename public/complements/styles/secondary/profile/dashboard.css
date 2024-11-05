@@ -194,9 +194,8 @@ padding: 10px;
   width: 35em;
   grid-row: 1 / 3; /* Ocupa ambas filas */
   grid-column: 3; /* Colocada en la segunda columna */
-  background-color: var(--color-black);
+  background-color: var(--color-semiblack);
   color: var(--color-white);
-  border: 1px solid var(--color-grey);
   border-radius: 50px;
   padding: 20px;
   display: flex;
@@ -240,6 +239,10 @@ padding: 10px;
   font-weight: lighter;
   margin-top: 1em;
   margin-bottom: 10px;
+background-color: var(--color-light);
+color: var(--color-black);
+  padding: 10px;
+  border-radius: 50px;
 }
 
 .network {
@@ -251,6 +254,7 @@ padding: 10px;
   font-weight: lighter;
   text-align: center;
   justify-content: center;
+  
 }
 
  .btn-primary {
@@ -416,18 +420,174 @@ padding: 5px;
 }
 
 .card-bottom-left {
-  background-color: var(--color-secondary);
+  background-color: var(--color-semiblack);
   color: var(--color-white);
   grid-row: 2; /* Segunda fila */
   grid-column: 1; /* Primera columna */
+  width: 100%;
+  position: relative; /* Importante para posicionamiento absoluto de la imagen */
+  overflow: hidden; /* Oculta cualquier desbordamiento */
+  border: 10px solid transparent;
+}
+
+.wallpaper {
+  width: 100%;
+  height: 100%;
+  position: absolute; /* Hace que la imagen ocupe toda la card */
+  top: 0;
+  left: 0;
+
+}
+
+.wallpaper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que la imagen cubra todo el contenedor sin deformarse */
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .card-bottom-right {
-  background-color: var(--color-semiblack);
-  border: 1px solid var(--color-grey);
-  grid-row: 2; /* Segunda fila */
+  background-color: var(--color-secondary);
+  grid-row: 2; /* Segunda fila */ 
   grid-column: 2; /* Primera columna también, pero se acomoda como una segunda tarjeta en el mismo espacio horizontal */
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Espacio entre las secciones */
+}
 
+.text-information {
+  font-family: "neue-medium";
+  font-size: 2.5em;
+  font-weight: lighter;
+  margin-bottom: 10px;
+
+background-color: var(--color-semiblack);
+  padding: 10px;
+  border-radius: 50px;
 }
 
 
+
+.section-container {
+  display: flex;
+  flex-direction: row; /* Coloca las secciones en fila */
+  gap: 15px; /* Espacio entre las secciones */
+  width: 100%; /* Asegura que ocupen toda la anchura */
+}
+
+
+.left-column {
+  overflow-y: auto; /* Habilita el scroll vertical */
+  height: 22em;
+  display: flex;
+  flex-direction: column; /* Coloca las secciones internas en columna */
+  gap: 10px;
+  flex: 1; /* Ajusta el espacio de esta columna */
+}
+
+.configuration
+{
+  height: 10em;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border-radius: 30px;
+  padding: 20px;
+  font-family: "neue";
+  font-weight: lighter;
+  font-size: 1.2em;
+}
+
+.configuration p {
+  margin-bottom: 20px; /* Añade un margen inferior para espaciar los párrafos */
+}
+
+.configuration strong, .last-network strong {
+  font-family: "neue-medium";
+  font-weight: lighter;
+  color: var(--color-black);
+  background-color: var(--color-light);
+  padding: 4px 8px;
+  border-radius: 10px;
+  transition: color 0.3s ease-out;
+}
+
+.configuration strong:hover {
+  color: var(--color-main);
+}
+
+.last-network {
+  height: 17em;
+  padding: 20px;
+background-color: var(--color-black);
+color: var(--color-white);
+  border-radius: 30px;
+  font-family: "neue";
+  font-weight: lighter;
+  font-size: 1.2em;
+  
+}
+
+
+
+
+.last-network strong:hover {
+  color: var(--color-main);
+}
+
+.last-network p {
+  margin-bottom: 20px; /* Añade un margen inferior para espaciar los párrafos */
+}
+
+.information {
+  margin-top: 0.5em;
+  margin-bottom: 35px;
+  font-family: "neue";
+  font-size: 1.5em;
+  font-weight: lighter;
+  border-bottom: 1px solid var(--color-grey);
+}
+
+/* Ajuste del ancho de cada sección para que no ocupen todo el espacio */
+.configuration, .last-network {
+  flex: 1; /* Para que cada sección ocupe la mitad del espacio */
+}
+
+.configuration, .alerts {
+  flex: 1; /* Cada sección ocupa el mismo ancho */
+}
+
+.alerts {
+  height: 100%; /* Ajusta la altura a la columna */
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border-radius: 30px; /* Asegura el borde redondeado */
+  padding: 15px;
+  box-sizing: border-box; /* Incluye el padding dentro del tamaño total */
+  font-family: "neue";
+  font-weight: lighter;
+  font-size: 1.2em;
+}
+/* Opcional: Ajusta el estilo de los mensajes de alerta */
+.alert {
+  width: 100%;
+  font-family: "neue";
+  font-size: 0.9em;
+  font-weight: lighter;
+  background-color: var(--color-light);
+}
+
+/* Estilo para alertas de éxito */
+.alert-success {
+  color: #28d24f;
+  border-radius: 30px;
+  padding: 10px;
+}
+
+/* Estilo para alertas de error */
+.alert-error {
+  color: #c72334;
+  border-radius: 30px;
+  padding: 10px;
+}

@@ -284,7 +284,7 @@ class Network extends BaseController
     
             // Evaluar el resultado para confirmar el éxito o el error
             if (strpos($output, 'Error') === false) {
-                return redirect()->back()->with('csv_message', 'Se realizo correctamente el pasajo.');
+                return redirect()->back()->with('csv_message', 'Se realizo correctamente el pasaje.');
             } else {
                 throw new \Exception('Error durante la ejecución del pasaje a json.');
             }
@@ -350,6 +350,8 @@ class Network extends BaseController
             if ($response->getStatusCode() == 200) {
                 $nmap_ports_services = json_decode($response->getBody(), true);
                 log_message('info', 'Datos de puertos y servicios recibidos: ' . print_r($nmap_ports_services, true));
+            
+            
             } else {
                 log_message('error', 'Error en la respuesta de la API: ' . $response->getStatusCode());
                 $nmap_ports_services = [];

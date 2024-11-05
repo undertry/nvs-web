@@ -127,13 +127,91 @@
   <div class="card-small card-top"><div class="text">Cybersecurity in real-time: <br> Monitor - detect - respond</div>
   <div class="hr"></div>
 <div class="subtext">Access a comprehensive set of tools to ensure your data's security. Scan your network for vulnerabilities, download detailed reports, and stay informed about potential threats. If you have any questions, click the help icon  <i class="fa-solid fa-circle-info"></i> for more information and support .</div></div>
-  <div class="card-small card-bottom-left">Contenido de la tarjeta inferior izquierda 1</div>
-  <div class="card-small card-bottom-right">Contenido de la tarjeta inferior izquierda 2</div>
+  
+<div class="card-small card-bottom-left">
+<div class="wallpaper">
+  <img src="<?= base_url('complements/styles/images/wallhaven-kxgdxq.jpg');?>" alt="">
+</div>
+</div>
+
+<div class="card-small card-bottom-right">
+  <div class="text-information">Information</div>
+  <div class="section-container">
+    <div class="left-column">
+
+  
+    <div class="configuration">
+      <h3 class="information">Your Configuration</h3>
+      
+      <p><strong><i class="fa-solid fa-map-pin"></i> Current IP:</strong> <?= session('ip'); ?></p>
+      <p><strong><i class="fas fa-sliders-h"></i> Chosen Mode:</strong> <?= session('mode'); ?></p>
+    </div>
+    <div class="alerts">
+      <h3 class="information">Alerts</h3>
+        <!-- Mensaje de alerta para WiFi -->
+  <?php if (session()->getFlashdata('wifi_message')): ?>
+    <div class="alert <?= strpos(session()->getFlashdata('wifi_message'), 'Error') !== false ? 'alert-error' : 'alert-success' ?>">
+      <?= session()->getFlashdata('wifi_message') ?>
+    </div>
+  <?php endif; ?>
+
+  <!-- Mensaje de alerta para Device -->
+  <?php if (session()->getFlashdata('device_message')): ?>
+    <div class="alert <?= strpos(session()->getFlashdata('device_message'), 'Error') !== false ? 'alert-error' : 'alert-success' ?>">
+      <?= session()->getFlashdata('device_message') ?>
+    </div>
+  <?php endif; ?>
+
+
+  <!-- Mensaje de alerta para Nmap -->
+  <?php if (session()->getFlashdata('nmap_message')): ?>
+    <div class="alert <?= strpos(session()->getFlashdata('nmap_message'), 'Error') !== false ? 'alert-error' : 'alert-success' ?>">
+      <?= session()->getFlashdata('nmap_message') ?>
+    </div>
+  <?php endif; ?>
+ 
+
+  <!-- Mensaje de alerta para CSV -->
+  <?php if (session()->getFlashdata('csv_message')): ?>
+    <div class="alert <?= strpos(session()->getFlashdata('csv_message'), 'Error') !== false ? 'alert-error' : 'alert-success' ?>">
+      <?= session()->getFlashdata('csv_message') ?>
+    </div>
+  <?php endif; ?>
+ 
+
+  <!-- Mensaje de alerta para MAC -->
+  <?php if (session()->getFlashdata('mac_message')): ?>
+    <div class="alert <?= strpos(session()->getFlashdata('mac_message'), 'Error') !== false ? 'alert-error' : 'alert-success' ?>">
+      <?= session()->getFlashdata('mac_message') ?>
+    </div>
+  <?php endif; ?>
+    </div>
+
+    </div>
+
+    <div class="last-network">
+      <h3 class="information">Current Network</h3>
+      <?php if (session()->has('current_network')): ?>
+        <p><strong><i class="fa-solid fa-wifi"></i> ESSID:</strong> <?= session('current_network')['essid']; ?></p>
+        <p><strong><i class="fa-solid fa-tag"></i> BSSID:</strong> <?= session('current_network')['bssid']; ?></p>
+        <p><strong><i class="fa-solid fa-signal"></i> Signal:</strong> <?= session('current_network')['signal']; ?></p>
+        <p><strong><i class="fa-solid fa-list"></i> Channel:</strong> <?= session('current_network')['channel']; ?></p>
+        <p><strong><i class="fa-solid fa-lock"></i> Encryption:</strong> <?= session('current_network')['security']; ?></p>
+      <?php else: ?>
+        <p>No previous scan results were found.</p>
+      <?php endif; ?>
+    </div>
+  
+  
+  </div>
+</div>
+
 </div>
 
 
 
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
   function submitWifiForm() {
     document.getElementById("wifiForm").submit();
@@ -305,3 +383,5 @@ document.getElementById('fetch-devices').addEventListener('click', function() {
     }
 });
 </script>
+
+

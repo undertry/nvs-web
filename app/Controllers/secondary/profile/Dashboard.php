@@ -15,7 +15,7 @@ class Dashboard extends BaseController
     public function index()
     {
 
-
+        
 
         // Verificar sesión y obtener usuario
         $user = session('user');
