@@ -591,3 +591,20 @@ color: var(--color-white);
   border-radius: 30px;
   padding: 10px;
 }
+
+/* Definimos la animación de escala más lenta y con un inicio más pequeño */
+@keyframes scaleUp {
+  0% {
+    transform: scale(0.2); /* Comienza con un tamaño aún más pequeño */
+    opacity: 0; /* Transparente al inicio */
+  }
+  100% {
+    transform: scale(1); /* Tamaño completo */
+    opacity: 1; /* Totalmente visible */
+  }
+}
+
+/* Aplica la animación a todas las tarjetas */
+.card-large, .card-small {
+  animation: scaleUp 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
