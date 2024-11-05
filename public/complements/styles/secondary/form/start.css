@@ -54,6 +54,17 @@
     font-weight: 400;
 }
 
+.cursor {
+    pointer-events  : none;
+    position        : absolute;
+    padding         : 0.3vw;
+    border-radius   : 50%;
+    z-index         : 9000;
+    transition      : transform 0.1s ease, width 0.3s ease, height 0.3s ease, background-color 0.5s ease;
+    background-color: var(--color-semigrey);
+}
+
+
 .caps-lock-warning {
     display         : none;
     position        : absolute;
@@ -600,4 +611,26 @@ input[type="submit"]:hover {
 .light-mode #toggle-dark-mode:hover {
     background-color: var(--color-light-grey);
     border          : 1px solid var(--color-dark);
+}
+
+/* Definimos la animación de escala más lenta y con un inicio más pequeño */
+@keyframes scaleUp {
+    0% {
+        transform: scale(0.2);
+        /* Comienza con un tamaño aún más pequeño */
+        opacity  : 0;
+        /* Transparente al inicio */
+    }
+
+    100% {
+        transform: scale(1);
+        /* Tamaño completo */
+        opacity  : 1;
+        /* Totalmente visible */
+    }
+}
+
+.box {
+    animation: scaleUp 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    /* Aplicamos la animación */
 }

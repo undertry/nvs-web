@@ -39,39 +39,3 @@
         <p>Your password must be at least <span>8 characters long</span>, contain <span>1 uppercase letter</span>, and include a <span>special character</span>.</p>
     </div>
     </div>
-
-    <!-- navbar section starts here -->
-    <nav id="navbar">
-        <div class="logo"><a href="<?= base_url('/'); ?>">NVS</a></div>
-        <div id="menuToggle" class="menu-icon">
-            <span class="menu-icon-bar"></span>
-            <span class="menu-icon-bar"></span>
-            <span class="menu-icon-bar"></span>
-        </div>
-    </nav>
-    <!-- navbar section ends here -->
-
-    <!-- menu section starts here -->
-    <div id="overlayNav">
-        <div class="overlay-content">
-            <div class="overlay-left">
-                <div class="overlay-video">
-                    <img id="modeImage" alt="Video">
-                    <div class="video-controls">
-                        <span>00: 13: 49: 12: 45: 02</span>
-                    </div>
-                </div>
-            </div>
-            <div class="overlay-right">
-                <ul>
-                    <li><a href="<?= base_url('home-animation'); ?>">Home</a></li>
-                </ul>
-                <button class="cta-button">Download</button>
-                <hr class="line">
-                <ul>
-                    <li><a id="modeToggle" href="javascript:void(0);">Dark</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- menu section ends here -->

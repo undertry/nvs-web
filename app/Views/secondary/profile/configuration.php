@@ -1,122 +1,189 @@
-<?= $this->include('modules/dashboard/configuration.php'); ?>
+<?= $this->include('modules/dashboard/start.php'); ?>
 <title>Settings</title>
 </head>
+
 <body>
-  <!-- Navbar Section -->
-  <nav id="navbar">
-    <div class="logo"><a href="<?= base_url('home-animation'); ?>">NVS</a></div>
-    <div id="menuToggle" class="menu-icon">
-      <span class="menu-icon-bar"></span>
-      <span class="menu-icon-bar"></span>
-      <span class="menu-icon-bar"></span>
+  <div class="sidebar" id="sidebar">
+    <a href="<?= base_url('home-animation'); ?>" class="sidebar-icon" title="Home"><i class="fa-solid fa-fingerprint"></i></a>
+    <nav>
+      <a class="active" title="Dashboard">
+        <i class="fa-solid fa-inbox"></i>
+      </a>
+      <a href="<?= base_url('nmap-animation'); ?>" title="Scan Results">
+        <i class="fa-solid fa-shield-virus"></i>
+      </a>
+      <a href="<?= base_url('history-animation'); ?>" title="History">
+        <i class="fa-solid fa-clock-rotate-left"></i>
+      </a>
+      <a href="#help" title="Help Center">
+        <i class="fa-solid fa-circle-info"></i>
+      </a>
+    </nav>
+
+    <div class="command-section">
+      <!-- Formulario wifi -->
+      <div class="sidebar-item">
+        <form id="wifiForm" method="post" action="<?= base_url('startWifiScan'); ?>"></form>
+        <a href="javascript:void(0);" onclick="submitWifiForm()" title="Wifi">
+          <i class="fa-solid fa-wifi"></i>
+        </a>
+      </div>
+
+      <!-- Formulario Device -->
+      <div class="sidebar-item">
+        <form id="deviceForm" method="post" action="<?= base_url('startDeviceScan'); ?>"></form>
+        <a href="javascript:void(0);" onclick="submitDeviceForm()" title="Device">
+          <i class="fa-solid fa-tablet-alt"></i>
+        </a>
+      </div>
+
+
+      <!-- Formulario NMAP -->
+      <div class="sidebar-item">
+        <form id="nmapForm" method="post" action="<?= base_url('startNmapScan'); ?>"></form>
+        <a href="javascript:void(0);" onclick="submitNmapForm()" title="Nmap">
+          <i class="fa-solid fa-network-wired"></i>
+        </a>
+      </div>
+
+
+
+      <!-- Formulario MAC -->
+      <div class="sidebar-item">
+        <form id="macForm" method="post" action="<?= base_url('mac'); ?>"></form>
+        <a href="javascript:void(0);" onclick="submitMacForm()" title="MAC">
+          <i class="fa-solid fa-microchip"></i>
+        </a>
+      </div>
     </div>
-  </nav>
-  <!-- Overlay Menu -->
-  <div id="overlayNav">
-    <div class="overlay-content">
-      <div class="overlay-left">
-        <div class="overlay-video">
-          <img src="<?= base_url('complements/styles/images/lines.jpg'); ?>" alt="Video">
-          <div class="video-controls">
-            <span>00: 13: 49: 12: 45: 02</span>
-          </div>
+
+
+    <div class="profile-section">
+      <a title="Profile"><i class="fa-solid fa-user-secret user" id="user-icon"></i></a>
+      <a href="#" id="toggle-dark-mode" title="Mode"><i class="fa-solid fa-moon" id="mode-icon"></i></a>
+      <!-- Modal de Perfil de Usuario -->
+      <div id="userModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>User Information</h2>
+          <p><strong>Name:</strong> <?= session('user')->name; ?></p>
+          <p><strong>Email:</strong> <?= session('user')->email; ?></p>
+          <p><strong>Account created at:</strong> <?= session('user')->created_at; ?></p>
+          <p><strong>Verification:</strong>
+            <?= session('user')->verification == 1 ? 'Enabled' : 'Disabled'; ?>
+          </p>
+          <!-- Puedes agregar más datos del usuario aquí -->
         </div>
       </div>
-      <div class="overlay-right">
-        <ul>
-          <li><a href="<?= base_url('home-animation'); ?>">Home</a></li>
-          <?php if (session('user') && session('user')->id_user > 0 && session('user')->name) : ?>
-          <li><a href="<?= base_url('dashboard-animation'); ?>"><?= session('user')->name; ?></a></li>
-          <?php endif; ?>
-        </ul>
-        <button class="cta-button">Download</button>
-      </div>
+      <a href="<?= base_url('configuration') ?>" class="settings" title="Settings"><i class="fa-solid fa-gear"></i></a>
+      <a href="<?= base_url('logout'); ?>" title="Logout">
+        <i class="fa-solid fa-sign-out"></i>
+      </a>
+
     </div>
   </div>
 
-  <div class="settings-container">
-  <h1>Settings</h1>
-  <div class="under-development">
-    <p>This section is under development.</p>
-  </div>
-  <div class="settings-sections">
-    <!-- Datos Personales -->
-    <div class="personal-info">
-      <h2>Personal Information</h2>
-      <div class="settings-info">
-        <p><strong>Name:</strong> <?= session('user')->name; ?></p>
-        <p><strong>Email:</strong> <?= session('user')->email; ?></p>
-        <p><strong>Account created at:</strong> <?= session('user')->created_at; ?></p>
-        <p><strong>Verification:</strong>
-          <?= session('user')->verification == 1 ? 'Enabled' : 'Disabled'; ?>
-        </p>
+
+  <div class="dashboard">
+    <!-- Tarjeta grande a la derecha -->
+
+    <!-- Tarjeta grande a la derecha -->
+    <div class="card-large">
+      <div class="text-network">Functionalities</div>
+
+      <div class="credentials-section">
+        <h2 class="network toggle-title">
+          Credentials
+          <i class="fa-solid fa-chevron-down arrow-icon"></i>
+        </h2>
+        <div class="content">
+          <form method="post" action="<?= base_url('setCredentials'); ?>">
+            <div class="form-inputs">
+              <label for="raspberry_user">Usuario:</label>
+              <input name="raspberry_user" type="text" id="raspberry_user" placeholder="Usuario de Raspberry" required>
+              <label for="raspberry_password">Contraseña:</label>
+              <input name="raspberry_password" type="password" id="raspberry_password" placeholder="Contraseña" required>
+              <input type="submit" value="Guardar" class="btn-submit">
+            </div>
+          </form>
+        </div>
       </div>
-    </div>
-    <!-- Funcionalidades -->
-    <div class="functionalities">
-      <h2>Functionalities</h2>
-      <div class="card small">
-        <h4>Credenciales Raspberry Pi</h4>
-        <form method="post" action="<?= base_url('setCredentials'); ?>">
-          <div class="form-inputs">
-            <label for="raspberry_user">Usuario:</label>
-            <input name="raspberry_user" type="text" id="raspberry_user" placeholder="Usuario de Raspberry" required>
-            <label for="raspberry_password">Contraseña:</label>
-            <input name="raspberry_password" type="password" id="raspberry_password" placeholder="Contraseña" required>
-            <input type="submit" value="Guardar" class="btn-submit">
-          </div>
-        </form>
-      </div>
-      <div class="card small">
-        <h4>Iniciar/Detener API</h4>
+
+
+      <div class="api-section">
+        <h2 class="network toggle-title">API
+          <i class="fa-solid fa-chevron-down arrow-icon"></i>
+        </h2>
         <?php if (session()->getFlashdata('api_message')): ?>
-      <div class="alert alert-info"><?= session()->getFlashdata('api_message') ?></div>
-      <?php endif; ?>
-        <form method="post" action="<?= base_url('startApi'); ?>" style="display: inline;">
-          <input type="submit" value="Prender API" class="btn-submit">
-        </form>
-        <form method="post" action="<?= base_url('stopApi'); ?>" style="display: inline;">
-          <input type="submit" value="Apagar API" class="btn-submit">
-        </form>
-        <h4>Monitor</h4>
+          <div class="alert alert-info"><?= session()->getFlashdata('api_message') ?></div>
+        <?php endif; ?>
+        <div class="content">
+          <form method="post" action="<?= base_url('startApi'); ?>" style="display: inline;">
+            <input type="submit" value="Prender API" class="btn-submit">
+          </form>
+          <form method="post" action="<?= base_url('stopApi'); ?>" style="display: inline;">
+            <input type="submit" value="Apagar API" class="btn-submit">
+          </form>
+        </div>
+      </div>
+
+
+      <div class="monitor-section">
+        <h2 class="network toggle-title">Monitor
+          <i class="fa-solid fa-chevron-down arrow-icon"></i>
+        </h2>
         <?php if (session()->getFlashdata('monitor_message')): ?>
-      <div class="alert alert-info"><?= session()->getFlashdata('monitor_message') ?></div>
-      <?php endif; ?>
-        <form method="post" action="<?= base_url('enableMonitor'); ?>" style="display: inline;">
-          <input type="submit" value="Enable Monitor" class="btn-submit">
-        </form>
-        <form method="post" action="<?= base_url('desactiveMonitor'); ?>" style="display: inline;">
-          <input type="submit" value="Desactive Monitor" class="btn-submit">
-        </form>
+          <div class="alert alert-info"><?= session()->getFlashdata('monitor_message') ?></div>
+        <?php endif; ?>
+        <div class="content">
+          <form method="post" action="<?= base_url('enableMonitor'); ?>" style="display: inline;">
+            <input type="submit" value="Enable Monitor" class="btn-submit">
+          </form>
+          <form method="post" action="<?= base_url('desactiveMonitor'); ?>" style="display: inline;">
+            <input type="submit" value="Desactive Monitor" class="btn-submit">
+          </form>
+        </div>
       </div>
-      <div class="settings-info">
-        <button>
-        <a href="<?= base_url('verification'); ?>">2 steps verification</a>
-        </button>
-        <button>
-        <a href="<?= base_url('change_password'); ?>">Change password</a>
-        </button>
+
+      <div class="password-section">
+        <h2 class="network toggle-title">Password
+          <i class="fa-solid fa-chevron-down arrow-icon"></i>
+        </h2>
+        <div class="content">
+
+
+          <button>
+            <a href="<?= base_url('verification'); ?>">2 steps verification</a>
+          </button>
+          <button>
+            <a href="<?= base_url('change_password'); ?>">Change password</a>
+          </button>
+        </div>
       </div>
-      <div class="card small">
-        <h4>Cambiar IP de Interfaz</h4>
-        <form method="post" action="<?= base_url('ipset'); ?>" class="form">
-          <label for="ip">Última IP: <span id="lastIP"><?= esc($last_ip) ?: 'N/A' ?></span></label>
-          <div class="form-inputs">
-            <input name="ip" type="text" id="ip" placeholder="e.g. 192.168.2.170" required>
-            <input type="submit" value="Enter" class="btn-submit">
-          </div>
-        </form>
+      <div class="ip-section">
+        <h2 class="network toggle-title">IP
+          <i class="fa-solid fa-chevron-down arrow-icon"></i>
+        </h2>
+        <div class="content">
+
+
+          <form method="post" action="<?= base_url('ipset'); ?>" class="form">
+            <label for="ip">Última IP: <span id="lastIP"><?= esc($last_ip) ?: 'N/A' ?></span></label>
+            <div class="form-inputs">
+              <input name="ip" type="text" id="ip" placeholder="e.g. 192.168.2.170" required>
+              <input type="submit" value="Enter" class="btn-submit">
+            </div>
+          </form>
+        </div>
       </div>
-      <div class="quick-config">
-        <!-- Card: Última Red Escaneada -->
-        <div class="card small">
-          <?php if (session()->getFlashdata('error')): ?>
-          <div class="alert alert-danger"><?= session()->getFlashdata('error') ?></div>
-          <?php endif; ?>
-          <?php if (session()->getFlashdata('success')): ?>
-          <div class="alert alert-success"><?= session()->getFlashdata('success') ?></div>
-          <?php endif; ?>
-          <h4>Modo de escaneo:</h4>
+
+      <div class="scan-section">
+        <h2 class="network toggle-title">Scan Mode
+          <i class="fa-solid fa-chevron-down arrow-icon"></i>
+        </h2>
+        <div class="content">
+
+
           <form action="<?= site_url('setScanMode') ?>" method="post">
             <label for="mode">Modo de escaneo:</label>
             <select name="mode" id="mode" required>
@@ -129,28 +196,293 @@
         </div>
       </div>
     </div>
+
+
+
+    <!-- Tarjetas pequeñas a la izquierda -->
+    <div class="card-small card-top">
+      <div class="text">Cybersecurity in real-time: <br> Monitor - detect - respond</div>
+      <div class="hr"></div>
+      <div class="subtext">Access a comprehensive set of tools to ensure your data's security. Scan your network for vulnerabilities, download detailed reports, and stay informed about potential threats. If you have any questions, click the help icon <i class="fa-solid fa-circle-info"></i> for more information and support .</div>
+    </div>
+
+    <div class="card-small card-bottom-left">
+      <div class="wallpaper">
+        <img src="<?= base_url('complements/styles/images/wallhaven-kxgdxq.jpg'); ?>" alt="">
+      </div>
+    </div>
+
+    <div class="card-small card-bottom-right">
+      <div class="text-information">Information</div>
+      <div class="section-container">
+        <div class="left-column">
+
+
+          <div class="configuration">
+            <h3 class="information">Your Configuration</h3>
+
+            <p><strong><i class="fa-solid fa-map-pin"></i> Current IP:</strong> <?= session('ip'); ?></p>
+            <p><strong><i class="fas fa-sliders-h"></i> Chosen Mode:</strong> <?= session('mode'); ?></p>
+          </div>
+          <div class="alerts">
+            <h3 class="information">Alerts</h3>
+            <!-- Mensaje de alerta para WiFi -->
+            <?php if (session()->getFlashdata('wifi_message')): ?>
+              <div class="alert <?= strpos(session()->getFlashdata('wifi_message'), 'Error') !== false ? 'alert-error' : 'alert-success' ?>">
+                <?= session()->getFlashdata('wifi_message') ?>
+              </div>
+            <?php endif; ?>
+
+            <!-- Mensaje de alerta para Device -->
+            <?php if (session()->getFlashdata('device_message')): ?>
+              <div class="alert <?= strpos(session()->getFlashdata('device_message'), 'Error') !== false ? 'alert-error' : 'alert-success' ?>">
+                <?= session()->getFlashdata('device_message') ?>
+              </div>
+            <?php endif; ?>
+
+
+            <!-- Mensaje de alerta para Nmap -->
+            <?php if (session()->getFlashdata('nmap_message')): ?>
+              <div class="alert <?= strpos(session()->getFlashdata('nmap_message'), 'Error') !== false ? 'alert-error' : 'alert-success' ?>">
+                <?= session()->getFlashdata('nmap_message') ?>
+              </div>
+            <?php endif; ?>
+
+
+            <!-- Mensaje de alerta para CSV -->
+            <?php if (session()->getFlashdata('csv_message')): ?>
+              <div class="alert <?= strpos(session()->getFlashdata('csv_message'), 'Error') !== false ? 'alert-error' : 'alert-success' ?>">
+                <?= session()->getFlashdata('csv_message') ?>
+              </div>
+            <?php endif; ?>
+
+
+            <!-- Mensaje de alerta para MAC -->
+            <?php if (session()->getFlashdata('mac_message')): ?>
+              <div class="alert <?= strpos(session()->getFlashdata('mac_message'), 'Error') !== false ? 'alert-error' : 'alert-success' ?>">
+                <?= session()->getFlashdata('mac_message') ?>
+              </div>
+            <?php endif; ?>
+          </div>
+
+        </div>
+
+        <div class="last-network">
+          <h3 class="information">Current Network</h3>
+          <?php if (session()->has('current_network')): ?>
+            <p><strong><i class="fa-solid fa-wifi"></i> ESSID:</strong> <?= session('current_network')['essid']; ?></p>
+            <p><strong><i class="fa-solid fa-tag"></i> BSSID:</strong> <?= session('current_network')['bssid']; ?></p>
+            <p><strong><i class="fa-solid fa-signal"></i> Signal:</strong> <?= session('current_network')['signal']; ?></p>
+            <p><strong><i class="fa-solid fa-list"></i> Channel:</strong> <?= session('current_network')['channel']; ?></p>
+            <p><strong><i class="fa-solid fa-lock"></i> Encryption:</strong> <?= session('current_network')['security']; ?></p>
+          <?php else: ?>
+            <p>No previous scan results were found.</p>
+          <?php endif; ?>
+        </div>
+
+
+      </div>
+    </div>
+
   </div>
-  <!-- JS for Menu Toggle -->
+  <script src="<?php echo base_url('complements/functionality/main/home/cursor.js'); ?>"></script>
+  <script src="<?php echo base_url('complements/functionality/main/home/cookies.js'); ?>"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var navbar = document.getElementById('navbar');
-        var initialBgColor = 'transparent'; // Color de fondo inicial
-        var scrollBgColor = '#151414'; // Color de fondo cuando se desplaza
-    
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 50) { // Cambia el valor según el desplazamiento que desees
-                navbar.style.backgroundColor = scrollBgColor;
-            } else {
-                navbar.style.backgroundColor = initialBgColor;
-            }
+    document.addEventListener("DOMContentLoaded", function() {
+      // Select all toggle titles (headers with arrow icons)
+      const toggleTitles = document.querySelectorAll(".toggle-title");
+
+      toggleTitles.forEach((title) => {
+        title.addEventListener("click", function() {
+          // Toggle the expanded class on the section
+          const section = this.parentElement;
+          section.classList.toggle("expanded");
+
+          // Toggle the rotation of the arrow icon
+          const arrowIcon = this.querySelector(".arrow-icon");
+          arrowIcon.classList.toggle("rotate");
         });
-    
-        // Toggle menu and close class
-        document.getElementById('menuToggle').addEventListener('click', function() {
-            this.classList.toggle('close');
-            document.getElementById('overlayNav').classList.toggle('active');
-        });
-    })
+      });
+    });
   </script>
+  <script>
+    function submitWifiForm() {
+      document.getElementById("wifiForm").submit();
+    }
+
+    function submitDeviceForm() {
+      document.getElementById("deviceForm").submit();
+    }
+
+    function submitNmapForm() {
+      document.getElementById("nmapForm").submit();
+    }
+
+    function submitCsvForm() {
+      document.getElementById("csvForm").submit();
+    }
+
+    function submitMacForm() {
+      document.getElementById("macForm").submit();
+    }
+  </script>
+
+  <script>
+    document.getElementById('user-icon').onclick = function() {
+      // Muestra el modal
+      document.getElementById('userModal').style.display = "block";
+    }
+
+    document.querySelector('.close').onclick = function() {
+      // Oculta el modal
+      document.getElementById('userModal').style.display = "none";
+    }
+
+    // Cierra el modal si el usuario hace clic fuera de él
+    window.onclick = function(event) {
+      if (event.target == document.getElementById('userModal')) {
+        document.getElementById('userModal').style.display = "none";
+      }
+    }
+  </script>
+
+  <script>
+    document.getElementById('fetch-networks').addEventListener('click', function() {
+      const wifiList = document.getElementById('wifi-list');
+      const loadingSpinner = document.getElementById('loading-spinner');
+      const arrowIcon = this.querySelector('.arrow-icon');
+
+      // Mostrar u ocultar la lista de redes y rotar la flecha
+      if (wifiList.style.display === 'none') {
+        wifiList.style.display = 'block';
+        arrowIcon.classList.add('rotate');
+        loadingSpinner.style.display = 'block';
+        wifiList.innerHTML = '';
+
+        fetch('fetchNetworks')
+          .then(response => response.json())
+          .then(data => {
+            loadingSpinner.style.display = 'none';
+
+            if (!data.success) {
+              alert(data.message);
+              return;
+            }
+
+            data.data.forEach(network => {
+              const listItem = document.createElement('li');
+              listItem.className = 'list-group-item';
+
+              const detailsDiv = document.createElement('div');
+              detailsDiv.className = 'network-details';
+              detailsDiv.innerHTML = `
+                      <p><strong><i class="fa-solid fa-wifi"></i> ESSID:</strong> ${network.ESSID}</p>
+                      <p><strong><i class="fa-solid fa-tag"></i> BSSID:</strong> ${network.BSSID}</p>
+                      <p><strong><i class="fa-solid fa-list"></i> Canal:</strong> ${network.Channel}</p>
+                      <p><strong><i class="fa-solid fa-signal"></i> Frecuencia:</strong> ${network.Signal}</p>
+                      <p><strong><i class="fa-solid fa-lock"></i> Encryption:</strong> ${network.Encryption}</p>
+                      <button class="btn btn-primary select-network-btn">Seleccionar Red WiFi</button>
+                    `;
+
+              detailsDiv.querySelector('.select-network-btn').addEventListener('click', function() {
+                selectNetwork(network);
+              });
+
+              listItem.appendChild(detailsDiv);
+              wifiList.appendChild(listItem);
+            });
+          })
+          .catch(error => {
+            loadingSpinner.style.display = 'none';
+            console.error('Error al obtener las redes:', error);
+            alert('Error al conectar con la API. Por favor, asegúrate de que está inicializada.');
+          });
+      } else {
+        wifiList.style.display = 'none';
+        arrowIcon.classList.remove('rotate');
+      }
+    });
+
+
+    // Función para enviar la red seleccionada al controlador
+    function selectNetwork(network) {
+      fetch('select-network', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            essid: network.ESSID,
+            bssid: network.BSSID,
+            signal: network.Signal,
+            channel: network.Channel,
+            encryption: network.Encryption
+          })
+        })
+        .then(response => response.json())
+        .then(data => {
+          if (data.success) {
+            alert('Red WiFi seleccionada con éxito');
+          } else {
+            alert('Error al seleccionar la red WiFi');
+          }
+        })
+        .catch(error => console.error('Error al seleccionar la red:', error));
+    }
+  </script>
+
+  <script>
+    // Función para alternar la visualización de la lista de dispositivos y la rotación de la flecha
+    document.getElementById('fetch-devices').addEventListener('click', function() {
+      const deviceList = document.getElementById('device-list');
+      const loadingSpinnerDevice = document.getElementById('loading-spinner-device');
+      const arrowIcon = this.querySelector('.arrow-icon');
+
+      // Mostrar u ocultar la lista de dispositivos y rotar la flecha
+      if (deviceList.style.display === 'none') {
+        deviceList.style.display = 'block';
+        arrowIcon.classList.add('rotate');
+        loadingSpinnerDevice.style.display = 'block';
+        deviceList.innerHTML = '';
+
+        fetch('fetchDevices')
+          .then(response => response.json())
+          .then(data => {
+            loadingSpinnerDevice.style.display = 'none';
+
+            if (!data.success) {
+              alert(data.message);
+              return;
+            }
+
+            data.data.forEach(device => {
+              const listItem = document.createElement('li');
+              listItem.className = 'list-group-item';
+
+              const detailsDiv = document.createElement('div');
+              detailsDiv.className = 'device-details';
+              detailsDiv.innerHTML = `
+                      <p><strong><i class="fa-solid fa-tag"></i> MAC Address:</strong> ${device.mac_address}</p>
+                      <p><strong><i class="fa-solid fa-map-pin"></i> IP Address:</strong> ${device.ip_address}</p>
+                    `;
+              listItem.appendChild(detailsDiv);
+              deviceList.appendChild(listItem);
+            });
+          })
+          .catch(error => {
+            loadingSpinnerDevice.style.display = 'none';
+            console.error('Error al obtener los dispositivos:', error);
+            alert('Error al conectar con la API de dispositivos. Por favor, asegúrate de que está inicializada.');
+          });
+      } else {
+        deviceList.style.display = 'none';
+        arrowIcon.classList.remove('rotate');
+      }
+    });
+  </script>
+
 </body>
+
 </html>

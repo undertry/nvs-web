@@ -840,3 +840,40 @@ body.light-mode {
 .card-small {
   animation: scaleUp 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
+
+
+
+.credentials-section,
+.api-section,
+.monitor-section,
+.password-section,
+.ip-section,
+.scan-section {
+  margin-top      : 1em;
+  max-height      : 45%;
+  /* Limita la altura a la mitad de la ventana */
+  overflow-y      : auto;
+  /* Permite el scroll si el contenido supera el límite */
+  width           : 32em;
+  background-color: var(--color-light);
+  color           : var(--color-black);
+  border-radius   : 50px;
+  padding         : 20px;
+  display         : flex;
+  flex-direction  : column;
+  /* Cambiar a dirección de columna */
+  align-items     : center;
+  /* Alinear elementos al inicio */
+  transition      : background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Content initially hidden */
+.content {
+  display   : none;
+  margin-top: 10px;
+}
+
+/* Show content when section is expanded */
+.expanded .content {
+  display: block;
+}
