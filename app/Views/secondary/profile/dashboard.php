@@ -129,7 +129,7 @@
 
   <div class="card-small card-bottom-left">
     <div class="wallpaper">
-      <img src="<?= base_url('complements/styles/images/wallhaven-p9p59j.png'); ?>" alt="">
+      <img src="<?= base_url('complements/styles/images/dots.png'); ?>" alt="">
     </div>
   </div>
 
