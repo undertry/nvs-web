@@ -626,13 +626,13 @@ body.light-mode {
 }
 
 .wallpaper {
-  width   : 100%;
-  height  : 100%;
-  position: absolute;
+  width     : 100%;
+  height    : 100%;
+  position  : absolute;
   /* Hace que la imagen ocupe toda la card */
-  top     : 0;
-  left    : 0;
-
+  top       : 0;
+  left      : 0;
+  transition: background-color 0.3s ease;
 }
 
 .wallpaper img {

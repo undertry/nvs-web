@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const toggleButton = document.getElementById("toggle-dark-mode");
   const body = document.body;
   const modeIcon = document.getElementById("mode-icon");
+  const wallpaperImage = document.querySelector(".wallpaper img"); // Selecciona la imagen del wallpaper
 
   // Cargar el modo guardado en cookies antes de inicializar
   initializeMode();
@@ -20,16 +21,22 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Aplica el modo claro/oscuro
+  // Aplica el modo claro/oscuro y cambia la imagen del wallpaper
   function applyMode(mode) {
     if (mode === "light") {
       body.classList.add("light-mode");
       body.classList.remove("dark-mode");
       modeIcon.classList.replace("fa-sun", "fa-moon"); // Cambia el ícono de luna a sol
+
+      // Cambia la imagen de fondo para el modo claro
+      wallpaperImage.src = "complements/styles/images/wallhaven-1kjr83.jpg"; // Imagen para el modo claro
     } else {
       body.classList.add("dark-mode");
       body.classList.remove("light-mode");
       modeIcon.classList.replace("fa-moon", "fa-sun"); // Cambia el ícono de sol a luna
+
+      // Cambia la imagen de fondo para el modo oscuro
+      wallpaperImage.src = "complements/styles/images/wallhaven-p9p59j.png"; // Imagen para el modo oscuro
     }
 
     // Verifica si `updateParticlesColor` está disponible antes de llamarlo
