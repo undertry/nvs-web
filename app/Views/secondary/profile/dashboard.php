@@ -121,12 +121,15 @@
   <div class="card-small card-top">
     <div class="text">Cybersecurity in real-time: <br> Monitor - detect - respond</div>
     <div class="hr"></div>
-    <div class="subtext">Access a comprehensive set of tools to ensure your data's security. Scan your network for vulnerabilities, download detailed reports, and stay informed about potential threats. If you have any questions, click the help icon <i class="fa-solid fa-circle-info"></i> for more information and support .</div>
+    <div class="subtext">
+      <p>Access a comprehensive set of tools to ensure your data's security. Scan your network for vulnerabilities, download detailed reports, and stay informed about potential threats. If you have any questions, click the help icon <i class="fa-solid fa-circle-info"></i> for more information and support . </p>
+    </div>
+
   </div>
 
   <div class="card-small card-bottom-left">
     <div class="wallpaper">
-      <img src="<?= base_url('complements/styles/images/wallhaven-kxgdxq.jpg'); ?>" alt="">
+      <img src="<?= base_url('complements/styles/images/wallhaven-p9p59j.png'); ?>" alt="">
     </div>
   </div>
 
