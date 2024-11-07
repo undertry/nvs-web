@@ -45,41 +45,22 @@ $routes->group('user', function ($routes) {
     $routes->post('stopApi', 'User\Dashboard::stopApi');
     $routes->post('enableMonitor', 'User\Dashboard::enableMonitor');
     $routes->post('desactiveMonitor', 'User\Dashboard::desactiveMonitor');
+    $routes->get('h-animation', 'User\History::animation');
+    $routes->get('history', 'User\History::history');
+    $routes->post('history/deleteScan/(:num)', 'User\History::deleteScan/$1');
+});
+
+$routes->group('scan', function ($routes) {
+    $routes->get('network', 'Scan\Network::index');
+    $routes->post('select-network', 'Scan\Network::selectNetwork');
+    $routes->post('setScanMode', 'Scan\Network::setScanMode'); 
+    $routes->post('startWifiScan', 'Scan\Network::startWifiScan');
+    $routes->post('startDeviceScan', 'Scan\Network::startDeviceScan');
+    $routes->post('startNmapScan', 'Scan\Network::startNmapScan');
+    $routes->post('mac', 'Scan\Network::mac');
+    $routes->get('nmap-results', 'Scan\Network::nmapResults');
+    $routes->POST('ipset', 'Scan\Network::ipset');
 });
 
 
 
-
-
-
-
-
-
-
-
-// vista para el historial de escaneos del usuario
-$routes->get('/history', 'secondary\profile\History::history');
-$routes->get('history-animation', 'secondary\profile\History::animation');
-$routes->get('setScanMode', 'secondary\form\Network::showSetScanMode'); // Ruta para mostrar la vista
-$routes->post('setScanMode', 'secondary\form\Network::setScanMode'); // ruta para mandar los datos
-$routes->get('network', 'secondary\form\Network::index');
-$routes->post('select-network', 'secondary\form\Network::selectNetwork');
-$routes->post('startDeviceScan', 'secondary\form\Network::startDeviceScan');
-$routes->post('startWifiScan', 'secondary\form\Network::startWifiScan');
-$routes->post('startNmapScan', 'secondary\form\Network::startNmapScan');
-$routes->post('csv', 'secondary\form\Network::csv');
-$routes->post('mac', 'secondary\form\Network::mac');
-$routes->get('vulnerabilities', 'secondary\form\Network::showVulnerabilities');
-$routes->get('vulnerabilities/details/(:segment)', 'secondary\form\Network::getVulnerabilityDetails/$1');
-$routes->get('nmap-results', 'secondary\form\Network::nmapResults');
-$routes->get('nmap-animation', 'secondary\form\Network::nmap_animation');
-$routes->get('network-animation', 'secondary\form\Network::animation');
-
-$routes->post('history/deleteScan/(:num)', 'secondary\profile\History::deleteScan/$1');
-
-
-$routes->get('prueba', 'secondary\form\Network::index');
-
-//TESTING
-$routes->get('ip', 'secondary\form\Network::ipview');
-$routes->POST('ipset', 'secondary\form\Network::ipset');

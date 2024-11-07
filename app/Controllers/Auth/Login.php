@@ -163,10 +163,8 @@ class Login extends BaseController
 
     public function logout()
     {
-        // Destruir la sesión
         session()->destroy();
 
-        // Redirigir a la página de inicio de sesión
         return redirect()->to("home/animation");
     }
 

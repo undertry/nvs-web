@@ -4,10 +4,10 @@
     <a class="active" title="Dashboard">
     <i class="fa-solid fa-inbox"></i>
     </a>
-    <a href="<?= base_url('nmap-animation'); ?>" title="Scan Results">
+    <a href="<?= base_url('scan/nmap-results'); ?>" title="Scan Results">
     <i class="fa-solid fa-shield-virus"></i>
     </a>
-    <a href="<?= base_url('history-animation'); ?>" title="History">
+    <a href="<?= base_url('user/history'); ?>" title="History">
     <i class="fa-solid fa-clock-rotate-left"></i>
     </a>
     <a href="#help" title="Help Center">
@@ -16,25 +16,25 @@
   </nav>
   <div class="command-section">
     <div class="sidebar-item">
-      <form id="wifiForm" method="post" action="<?= base_url('startWifiScan'); ?>"></form>
+      <form id="wifiForm" method="post" action="<?= base_url('scan/startWifiScan'); ?>"></form>
       <a href="javascript:void(0);" onclick="submitWifiForm()" title="Wifi">
       <i class="fa-solid fa-wifi"></i>
       </a>
     </div>
     <div class="sidebar-item">
-      <form id="deviceForm" method="post" action="<?= base_url('startDeviceScan'); ?>"></form>
+      <form id="deviceForm" method="post" action="<?= base_url('scan/startDeviceScan'); ?>"></form>
       <a href="javascript:void(0);" onclick="submitDeviceForm()" title="Device">
       <i class="fa-solid fa-tablet-alt"></i>
       </a>
     </div>
     <div class="sidebar-item">
-      <form id="nmapForm" method="post" action="<?= base_url('startNmapScan'); ?>"></form>
+      <form id="nmapForm" method="post" action="<?= base_url('scan/startNmapScan'); ?>"></form>
       <a href="javascript:void(0);" onclick="submitNmapForm()" title="Nmap">
       <i class="fa-solid fa-network-wired"></i>
       </a>
     </div>
     <div class="sidebar-item">
-      <form id="macForm" method="post" action="<?= base_url('mac'); ?>"></form>
+      <form id="macForm" method="post" action="<?= base_url('scan/mac'); ?>"></form>
       <a href="javascript:void(0);" onclick="submitMacForm()" title="MAC">
       <i class="fa-solid fa-microchip"></i>
       </a>

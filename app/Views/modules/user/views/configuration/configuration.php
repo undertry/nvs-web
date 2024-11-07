@@ -4,10 +4,10 @@
       <a href="<?= base_url('user/dashboard'); ?>" title="Dashboard">
       <i class="fa-solid fa-inbox"></i>
       </a>
-      <a href="<?= base_url('nmap-animation'); ?>" title="Scan Results">
+      <a href="<?= base_url('scan/nmap-results'); ?>" title="Scan Results">
       <i class="fa-solid fa-shield-virus"></i>
       </a>
-      <a href="<?= base_url('history-animation'); ?>" title="History">
+      <a href="<?= base_url('user/history'); ?>" title="History">
       <i class="fa-solid fa-clock-rotate-left"></i>
       </a>
       <a href="#help" title="Help Center">
@@ -17,28 +17,28 @@
     <div class="command-section">
       <!-- Formulario wifi -->
       <div class="sidebar-item">
-        <form id="wifiForm" method="post" action="<?= base_url('startWifiScan'); ?>"></form>
+        <form id="wifiForm" method="post" action="<?= base_url('scan/startWifiScan'); ?>"></form>
         <a href="javascript:void(0);" onclick="submitWifiForm()" title="Wifi">
         <i class="fa-solid fa-wifi"></i>
         </a>
       </div>
       <!-- Formulario Device -->
       <div class="sidebar-item">
-        <form id="deviceForm" method="post" action="<?= base_url('startDeviceScan'); ?>"></form>
+        <form id="deviceForm" method="post" action="<?= base_url('scan/startDeviceScan'); ?>"></form>
         <a href="javascript:void(0);" onclick="submitDeviceForm()" title="Device">
         <i class="fa-solid fa-tablet-alt"></i>
         </a>
       </div>
       <!-- Formulario NMAP -->
       <div class="sidebar-item">
-        <form id="nmapForm" method="post" action="<?= base_url('startNmapScan'); ?>"></form>
+        <form id="nmapForm" method="post" action="<?= base_url('scan/startNmapScan'); ?>"></form>
         <a href="javascript:void(0);" onclick="submitNmapForm()" title="Nmap">
         <i class="fa-solid fa-network-wired"></i>
         </a>
       </div>
       <!-- Formulario MAC -->
       <div class="sidebar-item">
-        <form id="macForm" method="post" action="<?= base_url('mac'); ?>"></form>
+        <form id="macForm" method="post" action="<?= base_url('scan/mac'); ?>"></form>
         <a href="javascript:void(0);" onclick="submitMacForm()" title="MAC">
         <i class="fa-solid fa-microchip"></i>
         </a>
@@ -60,7 +60,7 @@
           </p>
         </div>
       </div>
-      <a href="#" class="active settings" title="Settings"><i class="fa-solid fa-gear"></i></a>
+      <a class="active settings" title="Settings"><i class="fa-solid fa-gear"></i></a>
       <a href="<?= base_url('auth/logout'); ?>" title="Logout">
       <i class="fa-solid fa-sign-out"></i>
       </a>
@@ -75,7 +75,7 @@
         </h2>
         <span class="toggle-title"><i class="fa-solid fa-chevron-up arrow-icon"></i></span>
         <div class="content">
-          <form method="post" action="<?= base_url('setCredentials'); ?>">
+          <form method="post" action="<?= base_url('user/setCredentials'); ?>">
             <div class="form-inputs">
               <label for="raspberry_user">Usuario:</label>
               <input name="raspberry_user" type="text" id="raspberry_user" placeholder="Usuario de Raspberry" required>
@@ -94,10 +94,10 @@
         <div class="alert alert-info"><?= session()->getFlashdata('api_message') ?></div>
         <?php endif; ?>
         <div class="content">
-          <form method="post" action="<?= base_url('startApi'); ?>" style="display: inline;">
+          <form method="post" action="<?= base_url('user/startApi'); ?>" style="display: inline;">
             <input type="submit" value="Prender API" class="btn-submit">
           </form>
-          <form method="post" action="<?= base_url('stopApi'); ?>" style="display: inline;">
+          <form method="post" action="<?= base_url('user/stopApi'); ?>" style="display: inline;">
             <input type="submit" value="Apagar API" class="btn-submit">
           </form>
         </div>
@@ -110,10 +110,10 @@
         <div class="alert alert-info"><?= session()->getFlashdata('monitor_message') ?></div>
         <?php endif; ?>
         <div class="content">
-          <form method="post" action="<?= base_url('enableMonitor'); ?>" style="display: inline;">
+          <form method="post" action="<?= base_url('user/enableMonitor'); ?>" style="display: inline;">
             <input type="submit" value="Enable Monitor" class="btn-submit">
           </form>
-          <form method="post" action="<?= base_url('desactiveMonitor'); ?>" style="display: inline;">
+          <form method="post" action="<?= base_url('scan/desactiveMonitor'); ?>" style="display: inline;">
             <input type="submit" value="Desactive Monitor" class="btn-submit">
           </form>
         </div>
@@ -124,7 +124,7 @@
         </h2>
         <span class="toggle-title"><i class="fa-solid fa-chevron-up arrow-icon"></i></span>
         <div class="content">
-          <form method="post" action="<?= base_url('ipset'); ?>" class="form">
+          <form method="post" action="<?= base_url('scan/ipset'); ?>" class="form">
             <label for="ip">Última IP: <span id="lastIP"><?= esc($last_ip) ?: 'N/A' ?></span></label>
             <div class="form-inputs">
               <input name="ip" type="text" id="ip" placeholder="e.g. 192.168.2.170" required>
@@ -138,7 +138,7 @@
         </h2>
         <span class="toggle-title"><i class="fa-solid fa-chevron-up arrow-icon"></i></span>
         <div class="content">
-          <form action="<?= site_url('setScanMode') ?>" method="post">
+          <form action="<?= site_url('scan/setScanMode') ?>" method="post">
             <label for="mode">Modo de escaneo:</label>
             <select name="mode" id="mode" required>
               <option value="rapido">Rápido</option>
@@ -164,7 +164,7 @@
         <span class="toggle-title"><i class="fa-solid fa-chevron-up arrow-icon"></i></span>
         <div class="content">
           <button>
-          <a href="<?= base_url('change_password'); ?>">Change password</a>
+          <a href="<?= base_url('user/change_password'); ?>">Change password</a>
           </button>
         </div>
         </div>
@@ -174,7 +174,7 @@
         <span class="toggle-title"><i class="fa-solid fa-chevron-up arrow-icon"></i></span>
         <div class="content">
           <button>
-          <a href="<?= base_url('verification'); ?>">verification</a>
+          <a href="<?= base_url('user/verification'); ?>">verification</a>
           </button>
         </div>
         </div>

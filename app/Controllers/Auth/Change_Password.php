@@ -39,7 +39,7 @@ class Change_Password extends BaseController
 
         if (!$UserModel->isEmailTaken($emailU)) {
             $this->session->setFlashdata("error", "Check your email");
-            return redirect()->to("forgot_password");
+            return redirect()->to("auth/forgot_password");
         }
 
         // Generar código único de recuperación
