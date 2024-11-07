@@ -231,6 +231,12 @@ body.light-mode {
   user-select     : none;
 }
 
+.light-mode .modal-content {
+  background-color: var(--color-light);
+  color           : var(--color-black);
+  border          : 1px solid var(--color-dark);
+}
+
 .modal-content h2 {
   font-family  : "neue-medium";
   font-size    : 1.5em;
@@ -480,15 +486,25 @@ body.light-mode {
   margin-top      : 10px;
   padding         : 10px;
   border-radius   : 5px;
-  color           : var(--color-black);
+  color           : var(--color-white);
   user-select     : none;
-  background-color: var(--color-white);
-  border          : 1px solid var(--color-light-grey);
+  background-color: var(--color-black);
+  border          : 1px solid var(--color-grey);
   transition      : border 0.5s ease;
+}
+
+.light-mode .network-details, .light-mode .device-details {
+  background-color: var(--color-light);
+  color           : var(--color-black);
+  border          : 1px solid var(--color-light-grey);
 }
 
 .network-details:hover,
 .device-details:hover {
+  border: 1px solid var(--color-light-grey);
+}
+
+.light-mode .network-details:hover, .light-mode .device-details:hover {
   border: 1px solid var(--color-dark);
 }
 
@@ -500,17 +516,26 @@ body.light-mode {
 .network-details strong,
 .device-details strong {
   color           : var(--color-secondary);
-  background-color: var(--color-light);
+  background-color: var(--color-semiblack);
   padding         : 4px 8px;
   border-radius   : 10px;
   transition      : color 0.3s ease-out;
 }
 
+.light-mode .network-details strong, .light-mode .device-details strong {
+  color           : var(--color-quaternary);
+  background-color: var(--color-light-grey);
+}
+
 .network-details i,
 .device-details i {
-  color        : var(--color-black);
+  color        : var(--color-white);
   padding-right: 5px;
 
+}
+
+.light-mode .network-details i, .light-mode .device-details i {
+  color: var(--color-black);
 }
 
 .network-details strong:hover,
@@ -518,20 +543,33 @@ body.light-mode {
   color: var(--color-main);
 }
 
+.light-mode .network-details strong:hover, .device-details strong:hover {
+  color: var(--color-tertiary);
+}
+
 /* Botón en cada tarjeta */
 .select-network-btn {
   margin-top      : 10px;
   color           : var(--color-white);
   background-color: var(--color-semiblack);
-
   border-radius: 30px;
   padding      : 5px 10px;
   transition   : background-color 0.5s ease, border 0.5s ease;
 }
 
+.light-mode .select-network-btn {
+  background-color: var(--color-white);
+  color           : var(--color-black);
+}
+
 .select-network-btn:hover {
-  background-color: var(--color-black);
+  background-color: var(--color-dark);
   color           : var(--color-white);
+}
+
+.light-mode .select-network-btn:hover {
+  background-color: var(--color-light-grey);
+  color           : var(--color-black);
 }
 
 
@@ -745,7 +783,7 @@ body.light-mode {
 }
 
 .light-mode .configuration strong,
-.last-network strong {
+.light-mode .last-network strong {
   color           : var(--color-black);
   background-color: var(--color-light-grey);
 }
@@ -839,13 +877,14 @@ body.light-mode {
   font-family     : "neue";
   font-size       : 0.9em;
   font-weight     : lighter;
-  background-color: var(--color-light);
+  background-color: var(--color-black);
+  color: var(--color-white);
   transition      : background-color 0.3s ease, color 0.3s ease;
 }
 
 .light-mode .alert {
-  background-color: var(--color-black);
-  color           : var(--color-white);
+  background-color: var(--color-light-grey);
+  color           : var(--color-black);
 }
 
 /* Estilo para alertas de éxito */
@@ -855,11 +894,19 @@ body.light-mode {
   padding      : 10px;
 }
 
+.light-mode .alert-success {
+  color: #28d24f;
+}
+
 /* Estilo para alertas de error */
 .alert-error {
   color        : #c72334;
   border-radius: 30px;
   padding      : 10px;
+}
+
+.light-mode .alert-error {
+  color: #c72334;
 }
 
 /* Definimos la animación de escala más lenta y con un inicio más pequeño */

@@ -27,28 +27,33 @@ document.addEventListener("DOMContentLoaded", function () {
       body.classList.add("light-mode");
       body.classList.remove("dark-mode");
       modeIcon.classList.replace("fa-sun", "fa-moon"); // Cambia el ícono de luna a sol
-
-      // Cambia la imagen de fondo para el modo claro
-      wallpaperImage.src = "complements/styles/images/wallhaven-1kjr83.jpg"; // Imagen para el modo claro
+  
+      // Cambia la imagen de fondo solo si wallpaperImage existe
+      if (wallpaperImage) {
+        wallpaperImage.src = "complements/styles/images/wallhaven-1kjr83.jpg"; // Imagen para el modo claro
+      }
     } else {
       body.classList.add("dark-mode");
       body.classList.remove("light-mode");
       modeIcon.classList.replace("fa-moon", "fa-sun"); // Cambia el ícono de sol a luna
-
-      // Cambia la imagen de fondo para el modo oscuro
-      wallpaperImage.src = "complements/styles/images/wallhaven-p9p59j.png"; // Imagen para el modo oscuro
+  
+      // Cambia la imagen de fondo solo si wallpaperImage existe
+      if (wallpaperImage) {
+        wallpaperImage.src = "complements/styles/images/wallhaven-p9p59j.png"; // Imagen para el modo oscuro
+      }
     }
-
+  
     // Verifica si `updateParticlesColor` está disponible antes de llamarlo
     if (typeof updateParticlesColor === "function") {
       updateParticlesColor(mode); // Actualiza el color de las partículas si está disponible
     }
-
+  
     // Verifica si `updateSphereColor` está disponible antes de llamarlo
     if (typeof updateSphereColor === "function") {
       updateSphereColor(mode); // Actualiza los colores de la esfera si está disponible
     }
   }
+  
 
   // Función para crear cookies
   function setCookie(name, value, days) {

@@ -65,11 +65,11 @@
     <div id="userModal" class="modal">
       <span class="close">&times;</span>
       <div class="modal-content">
-        <h2>User Information</h2>
-        <p><strong>Name:</strong> <?= session('user')->name; ?></p>
-        <p><strong>Email:</strong> <?= session('user')->email; ?></p>
-        <p><strong>Account created at:</strong> <?= session('user')->created_at; ?></p>
-        <p><strong>Verification:</strong>
+        <h2><i class="fa-solid fa-user"></i> User Information</h2>
+        <p><strong><i class="fa-solid fa-signature"></i> Name:</strong> <?= session('user')->name; ?></p>
+        <p><strong><i class="fa-solid fa-envelope"></i> Email:</strong> <?= session('user')->email; ?></p>
+        <p><strong><i class="fa-solid fa-clock"></i> Account created at:</strong> <?= session('user')->created_at; ?></p>
+        <p><strong><i class="fa-solid fa-lock"></i> Verification:</strong>
           <?= session('user')->verification == 1 ? 'Enabled' : 'Disabled'; ?>
         </p>
       </div>
