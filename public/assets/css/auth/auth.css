@@ -1,0 +1,401 @@
+.box {
+    position: relative;
+    width: 900px;
+    height: 550px;
+    background-color: var(--color-black);
+    border: 1px solid var(--color-grey);
+    border-radius: 10px;
+    overflow: hidden;
+    animation: scaleUp 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  }
+  
+  .box-signup {
+    position: relative;
+    width: 900px;
+    height: 620px;
+    background-color: var(--color-black);
+    border: 1px solid var(--color-grey);
+    border-radius: 10px;
+    overflow: hidden;
+    animation: scaleUp 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  }
+  
+  .box-content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .image-container {
+    width: 49%;
+    background-color: var(--color-black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .light-mode .image-container {
+    background-color: var(--color-light);
+  }
+  
+  .icon-top-left {
+    position: absolute;
+    bottom: 30px;
+    left: 45%;
+    font-size: 2.5em;
+    z-index: 10;
+  }
+
+  .back-to-website {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    font-size: 1.2em;
+    color: var(--color-light-grey);
+    z-index: 10;
+    font-family: "neue";
+    background-color: var(--color-black);
+    border-radius: 20px;
+    border: 1px solid var(--color-grey);
+    display: inline-block;
+    padding: 5px 10px;
+  }
+  
+  .light-mode .back-to-website {
+    background-color: var(--color-light);
+    color: var(--color-black);
+  }
+  
+  .back-to-website a {
+    text-decoration: none;
+    color: var(--color-light-grey);
+    transition: color 0.5s;
+  }
+  
+  .light-mode .back-to-website a {
+    color: var(--color-black);
+  }
+  
+  .back-to-website a:hover {
+    color: var(--color-main);
+  }
+  
+  .light-mode .back-to-website a:hover {
+    color: var(--color-tertiary);
+  }
+  
+  .form {
+    width: 51%;
+    padding: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-color: var(--color-black);
+    border-radius: 0 10px 10px 0;
+    z-index: 100;
+  }
+  
+  .light-mode .form {
+    background-color: var(--color-light);
+  }
+  
+  h2 {
+    font-size: 3em;
+    font-weight: 900;
+    color: var(--color-main);
+    font-family: "neue-medium";
+    font-weight: lighter;
+    letter-spacing: 2.5px;
+    text-align: center;
+  }
+  
+  .light-mode h2 {
+    color: var(--color-tertiary);
+  }
+  
+  .intro {
+    font-size: 1.8em;
+    font-weight: lighter;
+    color: var(--color-light-grey);
+    font-family: "neue";
+    text-align: center;
+    user-select: none;
+  }
+  
+  .light-mode .intro {
+    color: var(--color-black);
+  }
+  
+  p {
+    font-size: 1.2em;
+    font-weight: lighter;
+    color: var(--color-semigrey);
+    font-family: "neue";
+    text-align: left;
+    user-select: none;
+  }
+  
+  p a {
+    color: var(--color-secondary);
+    font-family: "neue";
+    font-weight: lighter;
+    transition: color 0.5s;
+    user-select: none;
+  }
+  
+  .light-mode p a {
+    color: var(--color-quaternary);
+  }
+  
+  p a:hover {
+    color: var(--color-main);
+  }
+  
+  .light-mode p a:hover {
+    color: var(--color-tertiary);
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--color-secondary);
+    font-size: 0.9em;
+  }
+  
+  .light-mode a {
+    color: var(--color-quaternary);
+  }
+  
+  .form-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  
+  }
+
+  .form-label {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    position: relative;
+  
+  }
+
+  label {
+    font-size: 1.2em;
+    font-weight: lighter;
+    color: var(--color-semigrey);
+    font-family: "neue";
+    user-select: none;
+  }
+  
+  .form-label input {
+    width: 100%;
+    height: 100%;
+    padding: 10px 30px;
+    outline: none;
+    background-color: var(--color-semiblack);
+    border-radius: 10px;
+    border: 1px solid var(--color-grey);
+    color: var(--color-light-grey);
+    font-family: "neue";
+    font-size: 1.2em;
+    font-weight: lighter;
+    transition: background-color 0.5s;
+  }
+  
+  .light-mode .form-label input {
+    background-color: var(--color-light-grey);
+    color: var(--color-black);
+    border: 1px solid var(--color-grey);
+  }
+  
+  .form-label input:focus {
+    background-color: var(--color-dark);
+  }
+  
+  .light-mode .form-label input:focus {
+    background-color: var(--color-white);
+  }
+
+  .form-label input[type="checkbox"] {
+    margin-right: 10px;
+    width       : 16px;
+    height      : 16px;
+    margin-top  : 4px;
+}
+
+.form-label a {
+  color          : var(--color-secondary);
+  text-decoration: none;
+  transition     : color 0.5s;
+}
+
+.light-mode .form-label a {
+  color: var(--color-quaternary);
+}
+
+.form-label a:hover {
+  text-decoration: underline;
+  color          : var(--color-main);
+}
+
+.light-mode .form-label a:hover {
+  color: var(--color-tertiary);
+}
+  
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .links a {
+    text-decoration: none;
+    color: var(--color-semigrey);
+    transition: .5s;
+    font-family: "neue";
+    font-weight: lighter;
+    font-size: 1.2em;
+    user-select: none;
+  }
+  
+  .links a:first-child:hover {
+    color: var(--color-main);
+  }
+  
+  .light-mode .links a {
+    color: var(--color-semigrey);
+  }
+  
+  .light-mode .links a:first-child:hover {
+    color: var(--color-tertiary);
+  }
+  
+  .links a:nth-child(2) {
+    color: var(--color-semigrey);
+  }
+  
+  .links a:nth-child(2):hover {
+    color: var(--color-main);
+  }
+  
+  .light-mode .links a:nth-child(2) {
+    color: var(--color-tertiary);
+  }
+  
+  input[type="submit"] {
+    background-color: var(--color-semiblack);
+    color: var(--color-light-grey);
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .5s;
+    border: 1px solid var(--color-grey);
+    font-family: "neue";
+    font-size: 1.2em;
+    font-weight: lighter;
+    transition: background-color 0.5s, border 0.5s;
+  }
+  
+  .light-mode input[type="submit"] {
+    background-color: var(--color-light-grey);
+    color: var(--color-black);
+    border: 1px solid var(--color-grey);
+  }
+  
+  input[type="submit"]:hover {
+    background-color: var(--color-secondary);
+    border: 1px solid var(--color-light-grey);
+  }
+  
+  .light-mode input[type="submit"]:hover {
+    background-color: var(--color-quaternary);
+    border: 1px solid var(--color-grey);
+  }
+   
+  .password-toggle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    cursor: pointer;
+  }
+  
+  .field-icon {
+    color: #9B9A9A;
+    transition: color 0.5s;
+  }
+  
+  .field-icon:hover {
+    color: var(--color-main);
+  }
+  
+  .light-mode .field-icon:hover {
+    color: var(--color-tertiary);
+  }
+  
+  .show-password .field-icon {
+    color: var(--color-main);
+  }
+    
+  .password-popup {
+    display: none;
+    position: absolute;
+    background-color: var(--color-black);
+    color: var(--color-light-grey);
+    padding: 10px;
+    border: 1px solid var(--color-grey);
+    border-radius: 5px;
+    z-index: 1000;
+    font-size: 12px;
+    width: 250px;
+    top: 100%;
+    left: 0;
+    margin-top: 5px;
+  }
+  
+  .password-popup p {
+    margin: 0 0 5px;
+    font-weight: lighter;
+    color: var(--color-light-grey);
+    text-decoration: underline;
+    font-family: "neue";
+    font-size: 14px;
+  }
+  
+  .password-popup ul {
+    list-style: none;
+    padding-left: 10px;
+    margin: 0;
+  }
+  
+  .password-popup ul li {
+    margin: 5px 0;
+  }
+  
+  .password-popup ul li.invalid {
+    color: var(--color-secondary);
+  }
+  
+  .password-popup ul li.valid {
+    color: rgb(26, 174, 26);
+  }
+  
+  input:focus+.password-toggle+.password-popup {
+    display: block;
+  }
+
+  @keyframes scaleUp {
+    0% {
+      transform: scale(0.2);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  

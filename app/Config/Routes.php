@@ -14,29 +14,29 @@ $routes->group('home', function ($routes) {
 });
 
 
-// Seccion controlador User/Login
+$routes->group('auth', function ($routes) {
+    $routes->get('animation', 'Auth\Login::animation');
+    $routes->get('login', 'Auth\Login::index');
+    $routes->post('login', 'Auth\Login::do_login');
+    $routes->get('logout', 'Auth\Login::logout');
+    $routes->get('2fa', 'Auth\Login::verify');
+    $routes->get('verificationcode', 'Auth\Login::sendemailverification');
+    $routes->post('confirmcode', 'Auth\Login::verificationconfirm');
+    $routes->get('s-animation', 'Auth\Signup::animation');
+    $routes->get('signup', 'Auth\Signup::index');
+    $routes->POST('signup', 'Auth\Signup::do_register');
+});
 
-$routes->get('login-animation', 'secondary\form\Login::animation');
-$routes->get('login', 'secondary\form\Login::index');
-$routes->POST('login', 'secondary\form\Login::do_login');
-$routes->get('logout', 'secondary\form\Login::logout');
-$routes->get('2stepverify', 'secondary\form\Login::verify');
-//envio de codigo mediante email para la verificaicon
-$routes->get('verificationcode', 'secondary\form\Login::sendemailverification');
-//confirmacion de codigo de verificaicon
-$routes->POST('confirmcode', 'secondary\form\Login::verificationconfirm');
+$routes->group('user', function ($routes) {
+    $routes->get('animation', 'secondary\profile\Dashboard::animation');
+    $routes->get('dashboard', 'secondary\profile\Dashboard::index');
+    $routes->get('configuration', 'secondary\profile\Dashboard::configuration');
+    $routes->get('change_password', 'secondary\profile\Dashboard::change_password');
+    $routes->POST('password_change', 'secondary\profile\Dashboard::password_change');
+    $routes->get('verification', 'secondary\profile\Dashboard::verification');
+});
 
-// Seccion controlador User/Register
-$routes->get('signup-animation', 'secondary\form\Signup::animation');
-$routes->get('signup', 'secondary\form\Signup::index');
-$routes->POST('signup', 'secondary\form\Signup::do_register');
 
-// get para la vista de cambio de contraseña y post para pasar los datos al controlador
-//solo para usuarios en sesion
-$routes->get('change_password', 'secondary\profile\Dashboard::change_password');
-$routes->POST('password_change', 'secondary\profile\Dashboard::password_change');
-//Cambia el estado de verificacion enable o disable
-$routes->get('verification', 'secondary\profile\Dashboard::verification');
 
 //gets para las vistas de se olvido la contraseña y post para el envio de datos al controlador
 $routes->get('forgot_password', 'secondary\user_functions\Change_Password::forgot_password');
@@ -46,11 +46,13 @@ $routes->POST('password_change_forgot', 'secondary\user_functions\Change_Passwor
 $routes->post('sendemail', 'secondary\user_functions\Change_Password::sendemail');
 
 // Seccion controlador User/Dashboard
-$routes->get('dashboard', 'secondary\profile\Dashboard::index');
+
+
+
+
+
 $routes->get('fetchNetworks', 'secondary\profile\Dashboard::fetchNetworks');
 $routes->get('fetchDevices', 'secondary\profile\Dashboard::fetchDevices');
-$routes->get('dashboard-animation', 'secondary\profile\Dashboard::animation');
-$routes->get('configuration', 'secondary\profile\Dashboard::configuration');
 $routes->post('setCredentials', 'secondary\profile\Dashboard::setCredentials');
 $routes->post('startApi', 'secondary\profile\Dashboard::startApi');
 $routes->post('stopApi', 'secondary\profile\Dashboard::stopApi');
