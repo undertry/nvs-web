@@ -1,0 +1,99 @@
+.about-comments {
+    width: 100%;
+    background: radial-gradient(circle, rgba(198, 21, 21, 0.245) 0%, #0c0b0b 35%);
+    text-align: center;
+    margin: 50px 0;
+    transition: background 0.3s ease;
+  }
+  
+  .light-mode .about-comments {
+    background: radial-gradient(circle, rgba(26, 85, 234, 0.245) 0%, #f3f2f2 35%);
+  }
+    
+  .comments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: start;
+  }
+  
+  .comment-card {
+    background-color: var(--color-black);
+    border: 1px solid var(--color-grey);
+    border-radius: 10px;
+    padding: 20px;
+    color: var(--color-light-grey);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    height: auto;
+    transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease;
+  }
+  
+  .light-mode .comment-card {
+    background-color: var(--color-light);
+    color: var(--color-black);
+    border: 1px solid var(--color-grey);
+  }
+  
+  .comment-card:hover {
+    border: 1px solid var(--color-light-grey);
+  }
+  
+  .light-mode .comment-card:hover {
+    border: 1px solid var(--color-dark);
+  }
+  
+  .comment-card h3 {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    color: var(--color-secondary);
+  }
+  
+  .light-mode .comment-card h3 {
+    color: var(--color-quaternary);
+  }
+  
+  .comment-card .occupation {
+    font-size: 0.9rem;
+    color: gray;
+    margin-top: 5px;
+  }
+  
+  .comment {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+  
+  .comment span {
+    color: var(--color-secondary);
+    background-color: var(--color-semiblack);
+    padding: 1px 5px;
+    border-radius: 10px;
+    display: inline-block;
+    transition: color 0.5s ease-out;
+  }
+  
+  .light-mode .comment span {
+    color: var(--color-quaternary);
+    background-color: var(--color-light-grey);
+  }
+  
+  .comment span:hover {
+    color: var(--color-main);
+  }
+  
+  .light-mode .comment span:hover {
+    color: var(--color-tertiary);
+  }
+  
+  .comments-grid .naahueel {
+    grid-column: 1 / -1;
+    justify-self: center;
+    max-width: 375px;
+    margin-top: -145px;
+  }

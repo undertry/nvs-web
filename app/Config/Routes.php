@@ -6,10 +6,14 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 
-// Seccion controlador Home/index
-$routes->get('/', 'main\Home::index');
-$routes->get('home', 'main\Home::home');
-$routes->get('home-animation', 'main\Home::animation');
+$routes->get('/', 'Home::index');
+
+$routes->group('home', function ($routes) {
+    $routes->get('/', 'Home::home');
+    $routes->get('animation', 'Home::animation');
+});
+
+
 // Seccion controlador User/Login
 
 $routes->get('login-animation', 'secondary\form\Login::animation');

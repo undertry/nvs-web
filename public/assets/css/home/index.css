@@ -1,0 +1,127 @@
+:root {
+  --color-main: #d60b0b;
+  --color-secondary: #bb0f0f;
+  --color-tertiary: #0046FE;
+  --color-quaternary: #3b6ff2;
+  --color-black: #151414;
+  --color-semiblack: #202020;
+  --color-dark: #0c0b0b;
+  --color-light: #fcfcfc;
+  --color-white: #f3f2f2;
+  --color-light-grey: #cfcfcf;
+  --color-semigrey: #565555;
+  --color-grey: #535151;
+}
+
+@font-face {
+  font-family: "schabo";
+  src: url("../../fonts/schabo/SCHABO-Condensed.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "neue";
+  src: url("../../fonts/neue/NeueMontreal-Regular.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "neue-medium";
+  src: url("../../fonts/neue/NeueMontreal-Medium.otf") format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "neue";
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+  user-select: none;
+}
+
+.cursor {
+  pointer-events: none;
+  position: absolute;
+  padding: 0.3vw;
+  border-radius: 50%;
+  z-index: 9000;
+  transition: transform 0.1s ease, width 0.3s ease, height 0.3s ease, background-color 0.5s ease;
+  background-color: var(--color-semigrey);
+}
+
+hr {
+  width: 80%;
+  margin: 50px auto;
+  border: 1px solid var(--color-semiblack);
+}
+
+.light-mode hr {
+  border-color: var(--color-semigrey);
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(70px);
+  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 60px;
+  right: 60px;
+  width: 100px;
+  height: 100px;
+  font-size: 2.5em;
+  background-color: transparent;
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  border: 2px solid var(--color-light-grey);
+  transition: width 0.5s, height 0.5s, opacity 0.5s, transform 0.5s ease;
+  opacity: 1;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.scroll-to-top.scrolled {
+  width: 50px;
+  height: 50px;
+  font-size: 15px;
+  opacity: 0.8;
+  transition: width 0.5s, height 0.5s, opacity 0.5s, transform 0.5s ease;
+  pointer-events: auto;
+}
+
+.light-mode .scroll-to-top {
+  background-color: transparent;
+  color: var(--color-black);
+  border: 2px solid var(--color-black);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "neue";
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow: hidden;
+}
+
+body.light-mode {
+  background: var(--color-white);
+  color: var(--color-black);
+}

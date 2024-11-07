@@ -1,0 +1,163 @@
+.section-header {
+    text-align: center;
+    margin: 50px;
+  }
+  
+  .section-header h2 {
+    margin-top: 2em;
+    font-size: 4.2em;
+    font-family: "schabo";
+    color: var(--color-secondary);
+    font-weight: lighter;
+  }
+  
+  .light-mode .section-header h2 i {
+    color: var(--color-tertiary);
+  }
+  
+  .section-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .text-image-block {
+    display: flex;
+    align-items: center;
+    margin: 50px 0;
+    padding: 20px;
+    width: 80%;
+    border-radius: 10px;
+  }
+  
+  .text {
+    position: relative;
+    z-index: 1000;
+  }
+  
+  .text h3 {
+    font-size: 1.3em;
+    font-family: "neue";
+    font-weight: lighter;
+    margin-bottom: 20px;
+    color: var(--color-light-grey);
+    background-color: var(--color-semiblack);
+    padding: 1px 8px;
+    border-radius: 10px;
+    display: inline-block;
+    transition: background-color 0.3s ease-out, color 0.3s ease-out;
+  }
+  
+  .light-mode .text h3 {
+    color: var(--color-black);
+    background-color: var(--color-light-grey);
+  }
+  
+  .text h3:hover {
+    color: var(--color-main) !important;
+  }
+  
+  .light-mode .text h3:hover {
+    color: var(--color-tertiary) !important;
+  }
+  
+  .text h4 {
+    position: relative;
+    display: block;
+    margin: 0;
+    font-size: 3.2em;
+    font-family: "neue-medium";
+    font-weight: lighter;
+    padding-bottom: 40px;
+    opacity: 0;
+    transform: translateX(-200px);
+    transition: opacity 0.9s ease-out, transform 0.9s ease-out, color 0.3s ease-out;
+    color: var(--color-light-grey);
+  }
+  
+  .light-mode .text h4 {
+    color: var(--color-black);
+  }
+  
+  .text.visible h4 {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .text.visible h4::after {
+    transform: scaleX(1);
+  }
+  
+  .text p {
+    font-size: 2em;
+    font-family: "neue";
+    font-weight: lighter;
+    color: var(--color-light-grey);
+    line-height: 1.5;
+  }
+  
+  .light-mode .text p {
+    color: var(--color-black);
+  }
+  
+  .text p span {
+    color: var(--color-secondary);
+    font-family: "neue";
+    transition: color 0.3s ease-out;
+    background-color: var(--color-semiblack);
+    padding: 1px 8px;
+    border-radius: 10px;
+  }
+  
+  .light-mode .text p span {
+    color: var(--color-quaternary);
+    background-color: var(--color-light-grey);
+  }
+  
+  .text p span:hover {
+    color: var(--color-main) !important;
+  }
+  
+  .light-mode .text p span:hover {
+    color: var(--color-tertiary) !important;
+  }
+  
+  .text ul {
+    font-size: 1.8em;
+    margin-top: 10px;
+    margin-left: 15px;
+  }
+  
+  .text ul li {
+    margin-bottom: 10px;
+    font-family: "neue";
+    font-weight: lighter;
+    color: var(--color-light-grey);
+  }
+  
+  .light-mode .text ul li {
+    color: var(--color-black);
+  }
+  
+  .text ul li span {
+    color: var(--color-secondary);
+    font-family: "neue";
+    font-weight: lighter;
+    transition: color 0.3s ease-out;
+    background-color: var(--color-semiblack);
+    padding: 1px 8px;
+    border-radius: 10px;
+  }
+  
+  .light-mode .text ul li span {
+    color: var(--color-quaternary);
+    background-color: var(--color-light-grey);
+  }
+  
+  .text ul li span:hover {
+    color: var(--color-main) !important;
+  }
+  
+  .light-mode .text ul li span:hover {
+    color: var(--color-tertiary) !important;
+  }

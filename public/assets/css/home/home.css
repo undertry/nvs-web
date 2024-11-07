@@ -1,0 +1,117 @@
+.home {
+	background-color: var(--color-dark);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: transform 1.5s ease, opacity 1.5s ease, background-color 0.3s ease;
+}
+
+.light-mode .home {
+	background-color: var(--color-white);
+}
+
+#particles-js {
+	position: absolute;
+	width: 100%;
+	height: 110vh;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background: var(--color-dark);
+	pointer-events: none;
+	transition: background 0.3s ease;
+}
+
+.light-mode #particles-js {
+	background: var(--color-white);
+}
+
+.intro {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 110vh;
+	padding-top: 0;
+	z-index: 10;
+	transition: transform 1.5s ease, opacity 1.5s ease;
+}
+
+.intro-text {
+	text-align: center;
+	position: relative;
+}
+
+.intro-subtext {
+	font-size: 2rem;
+	color: var(--color-grey);
+	font-family: "neue";
+	margin-top: 1rem;
+	overflow: hidden;
+	position: relative;
+	user-select: none;
+}
+
+.slide-in {
+	animation: slideIn 0.5s forwards;
+}
+
+.slide-out {
+	animation: slideOut 0.5s forwards;
+	opacity: 0;
+}
+
+@keyframes slideIn {
+	from {
+		opacity: 0;
+		transform: translateY(20%);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes slideOut {
+	from {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	to {
+		opacity: 0;
+		transform: translateY(-20%);
+	}
+}
+
+.word-slide {
+	display: inline-block;
+	animation: slideIn 0.5s forwards;
+	opacity: 0;
+	color: var(--color-secondary);
+	transform: translateY(20%);
+	transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.light-mode .word-slide {
+	color: var(--color-quaternary);
+}
+
+.intro-text h1 {
+	font-size: 8em;
+	font-weight: lighter;
+	font-family: "schabo";
+	text-align: center;
+	margin: 0 auto;
+	color: var(--color-secondary);
+	opacity: 0;
+	transition: opacity 1s ease-in-out;
+	overflow: hidden;
+	white-space: nowrap;
+	pointer-events: none;
+	user-select: none;
+}
+
+.light-mode .intro-text h1 {
+	color: var(--color-tertiary);
+}

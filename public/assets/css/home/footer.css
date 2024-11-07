@@ -1,0 +1,133 @@
+.footer {
+    background-color: var(--color-black);
+    color: var(--color-light-grey);
+    border-top: 1px solid var(--color-grey);
+    transition: background-color 0.5s ease, color 0.5s ease;
+    padding: 50px;
+    font-family: 'neue';
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  .light-mode .footer {
+    background-color: var(--color-light);
+    color: var(--color-black);
+    border-top: 1px solid var(--color-grey);
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .logo-section p {
+    margin-top: 15px;
+    font-size: 1.4em;
+    color: var(--color-light-grey);
+    text-align: center;
+  }
+  
+  .light-mode .logo-section p {
+    color: var(--color-black);
+  }
+  
+  .logo-section .logo {
+    font-size: 2em;
+    font-weight: lighter;
+    margin-left: 45%;
+    color: var(--color-secondary);
+  }
+  
+  .light-mode .logo-section .logo {
+    color: var(--color-quaternary);
+  }
+  
+  .links-section {
+    display: flex;
+  }
+  
+  .column {
+    margin-right: 5px;
+    padding-left: 90px;
+  }
+  
+  .column h3 {
+    font-size: 1.2em;
+    font-weight: lighter;
+    margin-bottom: 30px;
+    color: var(--color-light-grey);
+    text-decoration: underline;
+  }
+  
+  .light-mode .column h3 {
+    color: var(--color-black);
+  }
+  
+  .column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .column ul li {
+    margin-bottom: 20px;
+  }
+  
+  .column ul li a {
+    color: var(--color-light-grey);
+    font-size: 1.2em;
+    font-weight: lighter;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .light-mode .column ul li a {
+    color: var(--color-black);
+  }
+  
+  .column ul li a:hover {
+    color: var(--color-secondary);
+  }
+  
+  .light-mode .column ul li a:hover {
+    color: var(--color-quaternary);
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    color: var(--color-light-grey);
+    font-size: 1em;
+  }
+  
+  .footer-bottom hr {
+    border: none;
+    border-top: 1px solid var(--color-grey);
+    margin-bottom: 10px;
+  }
+  
+  .footer-bottom p {
+    margin: 0;
+    font-size: 0.9em;
+    font-family: "neue";
+    font-weight: lighter;
+    color: var(--color-light-grey);
+  }
+  
+  .footer-bottom a {
+    color: var(--color-light-grey);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .light-mode .footer-bottom a {
+    color: var(--color-black);
+  }
+  
+  .light-mode .footer-bottom p {
+    color: var(--color-black);
+  }
