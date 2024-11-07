@@ -42,21 +42,22 @@
             </a>
         </li>
         <?php if (session('user') && session('user')->id_user > 0 && session('user')->name) : ?>
-            <li class="nav-item">
-                <a href="<?= base_url('dashboard-animation'); ?>" class="login link">
-                    <?= session('user')->name; ?>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="<?= base_url('auth/logout'); ?>" class="signup link">Log Out</a>
-            </li>
+        <li class="nav-item">
+            <a href="<?= base_url('user/animation'); ?>" class="login link">
+                <?= session('user')->name; ?>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="<?= base_url('auth/logout'); ?>" class="signup link">Log Out</a>
+        </li>
         <?php else : ?>
-            <li class="nav-item">
-                <a href="<?= base_url('auth/animation'); ?>" class="login link">Log In</a>
-            </li>
-            <li class="nav-item signup">
-                <a href="<?= base_url('auth/s-animation'); ?>" class="signup link">Get Started <span class="arrow">↗</span></a>
-            </li>
+        <li class="nav-item">
+            <a href="<?= base_url('auth/animation'); ?>" class="login link">Log In</a>
+        </li>
+        <li class="nav-item signup">
+            <a href="<?= base_url('auth/s-animation'); ?>" class="signup link">Get Started <span
+                    class="arrow">↗</span></a>
+        </li>
         <?php endif; ?>
     </ul>
 </nav>

@@ -16,7 +16,7 @@
     </div>
     <form id="registerForm" method="post" action="<?= base_url('auth/signup'); ?>" class="form">
       <h3 class="intro">Create an account</h3>
-      <p>Already have an account? <a href="<?= base_url('auth/animation'); ?>"> Log In</a></p>
+      <p>Already have an account? <a href="<?= base_url('auth/login'); ?>"> Log In</a></p>
       <div class="form-inputs">
         <div class="form-label">
           <input name="name" required type="text" id="name" placeholder="Your name"

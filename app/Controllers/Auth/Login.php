@@ -17,7 +17,7 @@ class Login extends BaseController
             // Redirigir a la página de inicio de sesión si el usuario no está autenticado
             return view("modules/auth/views/log-in/index.html");
         } else {
-            return redirect()->to("dashboard");
+            return redirect()->to("user/dashboard");
         }
     }
 
@@ -40,11 +40,11 @@ class Login extends BaseController
                 if ($result->verification == 0) {
                     // Establecer la sesión del usuario
                     $this->session->set("user", $result);
-                    return redirect()->to("dashboard-animation"); // Redirige al dashboard si verification es 0
+                    return redirect()->to("user/animation"); // Redirige al dashboard si verification es 0
                 } else {
                     $result->id_user = 0;
                     $this->session->set("user", $result);
-                    return redirect()->to("verificationcode"); // Redirige a la verificación de dos pasos si verification es 1
+                    return redirect()->to("auth/2fa"); // Redirige a la verificación de dos pasos si verification es 1
                 }
             } else {
                 // Contraseña incorrecta
@@ -152,13 +152,13 @@ class Login extends BaseController
             $codeModel->deleteByCode($code);
             session("user")->id_user = $id_user;
             $this->session->setFlashdata("success", "Verification successful.");
-            return redirect()->to("dashboard");
+            return redirect()->to("user/dashboard");
         }
     }
 
     public function verify()
     {
-        return view("secondary/user-functions/2stepverify");
+        return view("modules/user/functionality/2fa");
     }
 
     public function logout()

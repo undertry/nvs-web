@@ -16,7 +16,7 @@
     </div>
     <form method="post" action="<?= base_url('auth/login'); ?>" class="form">
       <h3 class="intro">Welcome Back!</h3>
-      <p>New here? <a href="<?= base_url('auth/s-animation'); ?>"> Create your account</a></p>
+      <p>New here? <a href="<?= base_url('auth/signup'); ?>"> Create your account</a></p>
       <div class="form-inputs">
         <div class="form-label">
           <input name="email" type="email" id="email" placeholder="Email" required>
@@ -31,7 +31,7 @@
         </div>
       </div>
       <div class="links">
-        <a href="<?= base_url('forgot_password'); ?>">Forgot password?</a>
+        <a href="<?= base_url('auth/forgot_password'); ?>">Forgot password?</a>
       </div>
       <input type="submit" value="Enter">
     </form>

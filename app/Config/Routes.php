@@ -25,39 +25,36 @@ $routes->group('auth', function ($routes) {
     $routes->get('s-animation', 'Auth\Signup::animation');
     $routes->get('signup', 'Auth\Signup::index');
     $routes->POST('signup', 'Auth\Signup::do_register');
+    $routes->get('forgot_password', 'Auth\Change_Password::forgot_password');
+    $routes->get('change_forgot', 'Auth\Change_Password::change_forgot');
+    $routes->POST('password_change_forgot', 'Auth\Change_Password::password_change_forgot');
+    $routes->post('sendemail', 'Auth\Change_Password::sendemail');
 });
 
 $routes->group('user', function ($routes) {
-    $routes->get('animation', 'secondary\profile\Dashboard::animation');
-    $routes->get('dashboard', 'secondary\profile\Dashboard::index');
-    $routes->get('configuration', 'secondary\profile\Dashboard::configuration');
-    $routes->get('change_password', 'secondary\profile\Dashboard::change_password');
-    $routes->POST('password_change', 'secondary\profile\Dashboard::password_change');
-    $routes->get('verification', 'secondary\profile\Dashboard::verification');
+    $routes->get('animation', 'User\Dashboard::animation');
+    $routes->get('dashboard', 'User\Dashboard::index');
+    $routes->get('configuration', 'User\Dashboard::configuration');
+    $routes->get('change_password', 'User\Dashboard::change_password');
+    $routes->POST('password_change', 'User\Dashboard::password_change');
+    $routes->get('verification', 'User\Dashboard::verification');
+    $routes->get('fetchNetworks', 'User\Dashboard::fetchNetworks');
+    $routes->get('fetchDevices', 'User\Dashboard::fetchDevices');
+    $routes->post('setCredentials', 'User\Dashboard::setCredentials');
+    $routes->post('startApi', 'User\Dashboard::startApi');
+    $routes->post('stopApi', 'User\Dashboard::stopApi');
+    $routes->post('enableMonitor', 'User\Dashboard::enableMonitor');
+    $routes->post('desactiveMonitor', 'User\Dashboard::desactiveMonitor');
 });
 
 
 
-//gets para las vistas de se olvido la contraseña y post para el envio de datos al controlador
-$routes->get('forgot_password', 'secondary\user_functions\Change_Password::forgot_password');
-$routes->get('change_forgot', 'secondary\user_functions\Change_Password::change_forgot');
-$routes->POST('password_change_forgot', 'secondary\user_functions\Change_Password::password_change_forgot');
-//envio de codigo mediante email
-$routes->post('sendemail', 'secondary\user_functions\Change_Password::sendemail');
-
-// Seccion controlador User/Dashboard
 
 
 
 
 
-$routes->get('fetchNetworks', 'secondary\profile\Dashboard::fetchNetworks');
-$routes->get('fetchDevices', 'secondary\profile\Dashboard::fetchDevices');
-$routes->post('setCredentials', 'secondary\profile\Dashboard::setCredentials');
-$routes->post('startApi', 'secondary\profile\Dashboard::startApi');
-$routes->post('stopApi', 'secondary\profile\Dashboard::stopApi');
-$routes->post('enableMonitor', 'secondary\profile\Dashboard::enableMonitor');
-$routes->post('desactiveMonitor', 'secondary\profile\Dashboard::desactiveMonitor');
+
 
 
 // vista para el historial de escaneos del usuario

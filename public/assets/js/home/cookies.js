@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "dark" :
         "light";
       applyMode(currentMode);
-      setCookie("mode", currentMode, 7); 
+      setCookie("mode", currentMode, 7);
     });
   }
 
@@ -23,19 +23,19 @@ document.addEventListener("DOMContentLoaded", function () {
     if (mode === "light") {
       body.classList.add("light-mode");
       body.classList.remove("dark-mode");
-      modeIcon.classList.replace("fa-sun", "fa-moon"); 
+      modeIcon.classList.replace("fa-sun", "fa-moon");
 
       if (wallpaperImage) {
-        wallpaperImage.src = "complements/styles/images/wallhaven-1kjr83.jpg"; 
+        wallpaperImage.src = "../assets/images/wallhaven-1kjr83.jpg";
       }
-    } 
-      else {
+    }
+    else {
       body.classList.add("dark-mode");
       body.classList.remove("light-mode");
       modeIcon.classList.replace("fa-moon", "fa-sun");
 
       if (wallpaperImage) {
-        wallpaperImage.src = "complements/styles/images/wallhaven-p9p59j.png";
+        wallpaperImage.src = "../assets/images/wallhaven-p9p59j.png";
       }
     }
 
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     if (typeof updateSphereColor === "function") {
-      updateSphereColor(mode); 
+      updateSphereColor(mode);
     }
   }
 
