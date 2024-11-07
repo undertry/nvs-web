@@ -1,3 +1,6 @@
+<?php if (session()->getFlashdata('error')) : ?>
+    <div class="message error"><?= session()->getFlashdata('error'); ?></div>
+  <?php endif; ?>
 <div class="box-signup">
   <div class="box-content">
     <div class="image-container">
