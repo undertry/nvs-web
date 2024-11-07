@@ -62,7 +62,6 @@
                                         <ul>
                                             <li><strong>Port:</strong> <?= $portName ?></li>
                                             <li><strong>Service:</strong> <?= $portDetails[0]['service'] ?></li>
-                                            <li><strong>Protocol:</strong> <?= $portDetails[0]['protocol'] ?></li>
                                             <li><strong>Status:</strong> <?= $portDetails[0]['status'] ?></li>
                                             <?php foreach ($portDetails as $port) : ?>
                                                 <h3>Vulnerability details</h3>
@@ -201,7 +200,6 @@ document.querySelectorAll('.downloadPDF').forEach(button => {
                 }
                 acc[device.ip_address].ports[device.port_name].push({
                     service: device.service,
-                    protocol: device.protocol,
                     status: device.status,
                     vulnerability_code: device.vulnerability_code,
                     vuln_description: device.vuln_description,
@@ -231,7 +229,6 @@ document.querySelectorAll('.downloadPDF').forEach(button => {
 
                     y = formatText(doc, `Port: ${portName}`, 15, y + 10, 12, true, true);
                     y = formatText(doc, `Service: ${portDetails[0].service}`, 15, y, 12, true, true);
-                    y = formatText(doc, `Protocol: ${portDetails[0].protocol}`, 15, y, 12, true, true);
                     y = formatText(doc, `Status: ${portDetails[0].status}`, 15, y, 12, true, true);
                     
                     y += 10;
