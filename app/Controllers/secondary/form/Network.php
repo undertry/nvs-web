@@ -441,7 +441,6 @@ class Network extends BaseController
                 $port_id = $portsModel->insert([
                     'port_name' => $port_name ?? 'N/A',
                     'service' => $service_name ?? 'N/A',
-                    'protocol' => 'tcp', // o extraer del servicio si está disponible
                     'id_port_status' => $port_status['id_port_status'] ?? '1',
                 ]);
 

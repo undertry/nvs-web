@@ -2,7 +2,7 @@
 
 namespace App\Controllers\secondary\profile;
 
-use App\Controllers\main\BaseController;
+use App\Controllers\BaseController;
 
 use App\Models\secondary\form\ScanModel;
 
