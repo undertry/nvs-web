@@ -11,4 +11,10 @@ class Scan_detailsModel extends Model
     protected $allowedFields = ['id_scan', 'id_devices'];
 
     
+ public function insertDetails($detailsdat){
+
+    $this->insert($detailsdat);
+    return $this->insertID(); // Devuelve la ID del registro insertado
+    
+}
 }

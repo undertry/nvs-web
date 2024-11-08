@@ -8,11 +8,11 @@ class ScanModel extends Model
 {
     protected $table = 'scan';
     protected $primaryKey = 'id_scan';
-    protected $allowedFields = ['id_user', 'id_network', 'scan_date'];
+    protected $allowedFields = ['id_user', 'id_network'];
 
     public function getScanDetailsByUser($id_user)
     {
-        return $this->db->table('scan')
+        return $this//->db->table('scan')
     ->select('scan.*,
         users.name AS user_name, network.signal, network.essid,
         network.bssid, security_type.type AS security_type, devices.ip_address,
@@ -113,5 +113,9 @@ class ScanModel extends Model
 
 
     
+public function insertScan($scandat){
 
+    $this->insert($scandat);
+    return $this->insertID(); // Devuelve la ID del registro insertado
+}
 }
