@@ -63,9 +63,9 @@ class Network extends BaseController
         $this->session->set("mode", $mode);
         // Validar que el modo sea uno de los aceptados y asignar el tiempo en segundos
         $scanDurations = [
-            "rapido" => 10,
-            "intermedio" => 120,
-            "profundo" => 320,
+            "quick" => 10,
+            "intermediate" => 120,
+            "deep" => 320,
         ];
 
         if (!isset($scanDurations[$mode])) {
@@ -589,8 +589,7 @@ class Network extends BaseController
     {
         $ip = $this->request->getPost("ip");
         $this->session->set("ip", $ip);
-        return redirect()->back()
-        ->with("success", "Ip asignadas correctamentes");;
+        return redirect()->back()->with("success", "Ip asignadas correctamentes");;
     }
 
 }

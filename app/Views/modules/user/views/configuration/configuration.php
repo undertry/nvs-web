@@ -125,7 +125,7 @@
         <span class="toggle-title"><i class="fa-solid fa-chevron-up arrow-icon"></i></span>
         <div class="content">
           <form method="post" action="<?= base_url('scan/ipset'); ?>" class="form">
-            <label for="ip">Última IP: <span id="lastIP"><?= esc($last_ip) ?: 'N/A' ?></span></label>
+            <label for="ip">Current IP: <span id="lastIP"><?= esc($last_ip) ?: 'N/A' ?></span></label>
             <div class="form-inputs">
               <input name="ip" type="text" id="ip" placeholder="e.g. 192.168.2.170" required>
               <input type="submit" value="Enter" class="btn-submit">
@@ -139,13 +139,13 @@
         <span class="toggle-title"><i class="fa-solid fa-chevron-up arrow-icon"></i></span>
         <div class="content">
           <form action="<?= site_url('scan/setScanMode') ?>" method="post">
-            <label for="mode">Modo de escaneo:</label>
+            <label for="mode">Scan Mode:</label>
             <select name="mode" id="mode" required>
-              <option value="rapido">Rápido</option>
-              <option value="intermedio">Intermedio</option>
-              <option value="profundo">Profundo</option>
+              <option value="quick">Quick</option>
+              <option value="intermediate">Intermediate</option>
+              <option value="deep">Deep</option>
             </select>
-            <button type="submit">Establecer Modo</button>
+            <button type="submit">Set Scan Mode</button>
           </form>
         </div>
       </div>
