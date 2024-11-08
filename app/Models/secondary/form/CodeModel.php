@@ -45,7 +45,7 @@ class CodeModel extends Model
 
     public function getUserByCode($code)
 {
-    return $this->db->table($this->table)
+    return $this//->db->table($this->table)
         ->select('id_user')
         ->where('recovery_code', $code)
         ->get()

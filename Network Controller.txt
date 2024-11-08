@@ -484,31 +484,28 @@ class Network extends BaseController
         $solutionModel = new SolutionModel();
         $portStatusModel = new Port_statusModel(); // Asegúrate de que este modelo esté definido
 
-        $scandat = [
+        // Insertar un nuevo escaneo
+        $scan_id = $scanModel->insert([
             "id_user" => $id_user,
             "id_network" => $id_network,
-        ];
-        // Insertar un nuevo escaneo
-        $scan_id = $scanModel->insertScan($scandat);
+        ]);
         // Verificar si los datos están disponibles
         $ip = $nmap_ports_services["ip"] ?? "N/A";
         $mac = $nmap_ports_services["mac"] ?? "N/A";
         $os_info = $nmap_ports_services["os_info"] ?? "N/A";
 
-        $devicedat= [
-            "ip_address" => $ip,
-            "mac_address" => $mac,
-            "operating_system" => $os_info,
-        ];
         // Insertar dispositivo en la base de datos
-        $device_id = $deviceModel->insertDevice($devicedat);
+        $device_id = $deviceModel->insert([
+            "ip_address" => $ip ?? "N/A",
+            "mac_address" => $mac ?? "N/A",
+            "operating_system" => $os_info ?? "N/A",
+        ]);
 
-        $detailsdat= [
+        // Insertar detalles del escaneo
+        $scanDetailsModel->insert([
             "id_scan" => $scan_id,
             "id_devices" => $device_id,
-        ];
-        // Insertar detalles del escaneo
-        $scanDetailsModel->insertDetails($detailsdat);
+        ]);
 
         // Procesar puertos y servicios asociados al dispositivo
         $ports_services = $nmap_ports_services["ports_services"] ?? [];
@@ -520,22 +517,22 @@ class Network extends BaseController
                 $service_name = $service["service"] ?? "Unknown Service";
 
                 // Obtener el estado del puerto desde la tabla port_status
-                $port_status = $portStatusModel->getStatus($state);
-                  
-                $portdat= [
+                $port_status = $portStatusModel
+                    ->where("status", $state)
+                    ->first();
+
+                // Insertar información del puerto en la base de datos
+                $port_id = $portsModel->insert([
                     "port_name" => $port_name ?? "N/A",
                     "service" => $service_name ?? "N/A",
-                    "id_port_status" => $port_status["id_port_status"] ?? "unknown",
-                ];
-                // Insertar información del puerto en la base de datos
-                $port_id = $portsModel->insertPort($portdat);
+                    "id_port_status" => $port_status["id_port_status"] ?? "1",
+                ]);
 
-                $analysisdat = [
+                // Insertar en port_analysis para asociar el puerto al dispositivo
+                $port_analysis_id = $portAnalysisModel->insert([
                     "id_port" => $port_id,
                     "id_devices" => $device_id,
-                ];
-                // Insertar en port_analysis para asociar el puerto al dispositivo
-                $port_analysis_id = $portAnalysisModel->insertAnalysis($analysisdat);
+                ]);
 
                 // Procesar vulnerabilidades asociadas al puerto
                 $vulnerabilities = $service["vulnerabilities"] ?? [];
@@ -543,43 +540,39 @@ class Network extends BaseController
                     foreach ($vulnerabilities as $vuln) {
                         // Obtener detalles de la vulnerabilidad
                         $cve = $vuln["cve"] ?? "N/A";
-                        $description = $vuln["description"] ?? "No description available";
+                        $description =
+                            $vuln["description"] ?? "No description available";
 
-                        $solutiondat= [
-                            "vulnerability_code" => $cve,
-                            "vuln_description" => $description,
-                        ];
                         // Insertar la solución (vulnerabilidad) en la base de datos
-                        $solution_id = $solutionModel->insertSolution($solutiondat);
+                        $solution_id = $solutionModel->insert([
+                            "vulnerability_code" => $cve ?? "N/A",
+                            "vuln_description" => $description ?? "N/A",
+                        ]);
 
-                        $portdetdat= [
+                        // Asociar la vulnerabilidad con el análisis de puerto
+                        $portDetailsModel->insert([
                             "id_analysis" => $port_analysis_id,
                             "id_solution" => $solution_id,
-                        ]
-                        // Asociar la vulnerabilidad con el análisis de puerto
-                        $portDetailsModel->insertPortdet($portdetdat);
+                        ]);
                     }
                 } else {
-                    // Insertar sin solución
-                    $nosolut =[
+                    // Insertar la solución (vulnerabilidad) en la base de datos
+                    $solution_id = $solutionModel->insert([
                         "vulnerability_code" => "N/A",
                         "vuln_description" => "N/A",
-                    ]
-                    $solution_id = $solutionModel->insertNosolut($nosolut);
-                        
-                    //port detail no solution
-                    $portdetns=[
+                    ]);
+
+                    // Asociar la vulnerabilidad con el análisis de puerto
+                    $portDetailsModel->insert([
                         "id_analysis" => $port_analysis_id,
                         "id_solution" => $solution_id,
-                    ]
-                    // Asociar la vulnerabilidad con el análisis de puerto
-                    $portDetailsModel->insertPortdetns($portdetns);
+                    ]);
                 }
             }
         }
 
         // Pasar los datos a la vista (opcional)
-        return view("modules/scan/views/index.html", [
+        return view("modules/scan/views/scan", [
             "nmap_ports_services" => $nmap_ports_services,
             "nmap_vulnerabilities" => $nmap_vulnerabilities,
         ]);
