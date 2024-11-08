@@ -555,7 +555,7 @@ class Network extends BaseController
                         $portdetdat= [
                             "id_analysis" => $port_analysis_id,
                             "id_solution" => $solution_id,
-                        ]
+                        ];
                         // Asociar la vulnerabilidad con el análisis de puerto
                         $portDetailsModel->insertPortdet($portdetdat);
                     }
@@ -564,14 +564,14 @@ class Network extends BaseController
                     $nosolut =[
                         "vulnerability_code" => "N/A",
                         "vuln_description" => "N/A",
-                    ]
+                    ];
                     $solution_id = $solutionModel->insertNosolut($nosolut);
                         
                     //port detail no solution
                     $portdetns=[
                         "id_analysis" => $port_analysis_id,
                         "id_solution" => $solution_id,
-                    ]
+                    ];
                     // Asociar la vulnerabilidad con el análisis de puerto
                     $portDetailsModel->insertPortdetns($portdetns);
                 }
