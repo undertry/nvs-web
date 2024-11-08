@@ -309,9 +309,13 @@ class Network extends BaseController
                     "Error: No se pudo establecer conexión SSH."
                 );
             }
-
+            $smode = session("mode");
+            if ($smode && $smode == "deep") {
             // Ejecutar el comando para iniciar el escaneo de WiFi en segundo plano con nohup y disown
-            $output = $ssh->exec("cd ~/nvs_project && python3 nmap_scanner.py");
+            $output = $ssh->exec("cd ~/nvs_project && nohup python3 nmap_scanner.py &");
+            }else{
+                $output = $ssh->exec("cd ~/nvs_project && python3 nmap_scanner.py ");
+            }
 
             $ssh->disconnect();
 
