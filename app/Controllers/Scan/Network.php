@@ -572,7 +572,7 @@ class Network extends BaseController
         }
 
         // Pasar los datos a la vista (opcional)
-        return view("modules/scan/views/scan", [
+        return view("modules/scan/views/index.html", [
             "nmap_ports_services" => $nmap_ports_services,
             "nmap_vulnerabilities" => $nmap_vulnerabilities,
         ]);

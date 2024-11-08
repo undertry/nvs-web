@@ -210,6 +210,7 @@ class Dashboard extends BaseController
         }
     }
 
+
     public function setCredentials()
     {
         // Validar que el usuario esté logueado

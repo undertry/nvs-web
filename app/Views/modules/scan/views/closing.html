@@ -1,0 +1,17 @@
+<script>
+    document.getElementById("toggle-vulnerabilities").addEventListener("click", function () {
+        const vulnerabilitiesList = document.getElementById("vulnerabilities-list");
+        if (vulnerabilitiesList.style.display === "none") {
+            vulnerabilitiesList.style.display = "block"; // Muestra la lista
+            this.textContent = "Ocultar Vulnerabilidades"; // Cambia el texto del botón
+        } else {
+            vulnerabilitiesList.style.display = "none"; // Oculta la lista
+            this.textContent = "Ver Vulnerabilidades"; // Restablece el texto del botón
+        }
+    });
+</script>
+
+
+</body>
+
+</html>

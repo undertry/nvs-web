@@ -54,7 +54,7 @@ document.getElementById('fetch-networks').addEventListener('click', function () 
 });
 
 function selectNetwork(network) {
-    fetch('select-network', {
+    fetch('/NVS/public/scan/select-network', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
