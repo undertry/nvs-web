@@ -1,0 +1,61 @@
+:root {
+    --color-main: #d60b0b;
+    --color-secondary: #bb0f0f;
+    --color-tertiary: #0046FE;
+    --color-quaternary: #3b6ff2;
+    --color-black: #151414;
+    --color-semiblack: #202020;
+    --color-dark: #0c0b0b;
+    --color-light: #fcfcfc;
+    --color-white: #f3f2f2;
+    --color-light-grey: #cfcfcf;
+    --color-semigrey: #565555;
+    --color-grey: #535151;
+}
+
+@font-face {
+    font-family: "schabo";
+    src: url("../../fonts/schabo/SCHABO-Condensed.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "neue";
+    src: url("../../fonts/neue/NeueMontreal-Regular.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "neue-medium";
+    src: url("../../fonts/neue/NeueMontreal-Medium.otf") format("truetype");
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.cursor {
+    pointer-events: none;
+    position: absolute;
+    padding: 0.3vw;
+    border-radius: 50%;
+    z-index: 9000;
+    transition: transform 0.1s ease, width 0.3s ease, height 0.3s ease, background-color 0.5s ease;
+    background-color: var(--color-semigrey);
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    transition: background-color 0.3s ease;
+
+}
+
+body.light-mode {
+    background-color: var(--color-white);
+    color: var(--color-black);
+}

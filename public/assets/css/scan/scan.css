@@ -1,0 +1,241 @@
+.sidebar {
+    border: 1px solid var(--color-grey);
+    width: 80px;
+    height: 90vh;
+    margin-left: 20px;
+    margin-top: 2.5%;
+    border-radius: 20px;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.light-mode .sidebar {
+    background-color: var(--color-light);
+    color: var(--color-black);
+}
+
+.sidebar nav {
+    border-bottom: 1px solid var(--color-grey);
+}
+
+.sidebar .sidebar-icon {
+    color: var(--color-secondary);
+    border: none;
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+}
+
+.light-mode .sidebar .sidebar-icon {
+    color: var(--color-quaternary);
+}
+
+.sidebar a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color-grey);
+    color: var(--color-white);
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s ease;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.light-mode .sidebar a {
+    color: var(--color-black);
+}
+
+.sidebar a.active {
+    color: var(--color-main);
+    background-color: var(--color-semiblack);
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.light-mode .sidebar a.active {
+    color: var(--color-tertiary);
+    background-color: var(--color-light-grey);
+}
+
+.sidebar a:hover {
+    color: var(--color-main);
+    transition: color 0.3s ease;
+}
+
+.light-mode .sidebar a:hover {
+    color: var(--color-tertiary);
+}
+
+.sidebar a:hover::after {
+    content: attr(title);
+    position: absolute;
+    left: 100%;
+    margin-left: 10px;
+    padding: 5px 10px;
+    white-space: nowrap;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    border: 1px solid var(--color-grey);
+    border-radius: 4px;
+    font-size: 14px;
+    z-index: 1;
+    opacity: 1;
+    transition: opacity 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.light-mode .sidebar a:hover::after {
+    background-color: var(--color-white);
+    color: var(--color-black);
+    border: 1px solid var(--color-black);
+}
+
+.sidebar a::after {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.command-section {
+    padding-top: 50px;
+}
+
+.command-section a {
+    font-size: 0.9em;
+    padding: 10px;
+}
+
+.profile-section {
+    margin-top: auto;
+    border-top: 1px solid var(--color-grey);
+    padding-top: 20px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    font-family: "neue";
+    font-size: 1.1em;
+    font-weight: lighter;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    border: 1px solid var(--color-light-grey);
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 400px;
+    text-align: left;
+    user-select: none;
+}
+
+.light-mode .modal-content {
+    background-color: var(--color-light);
+    color: var(--color-black);
+    border: 1px solid var(--color-dark);
+}
+
+.modal-content h2 {
+    font-family: "neue-medium";
+    font-size: 1.5em;
+    font-weight: lighter;
+    margin-bottom: 10px;
+}
+
+.modal-content strong {
+    font-family: "neue-medium";
+    font-weight: lighter;
+    font-size: 1.2em;
+    padding: 5px;
+    border-radius: 10px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.modal-content p {
+    margin-bottom: 10px;
+}
+
+/* Estilos para el contenedor principal */
+.container {
+    padding: 20px;
+    margin: auto;
+    width: 80%;
+    max-width: 1200px;
+    color: var(--color-white);
+    background-color: var(--color-black);
+    border-radius: 8px;
+}
+
+/* Estilos para las columnas */
+.columns {
+    display: flex;
+    gap: 20px;
+    max-height: 70vh;
+    /* Limita la altura total */
+    overflow: hidden;
+    /* Oculta el desbordamiento */
+}
+
+/* Columna izquierda: Información de red y dispositivo */
+.left-column,
+.right-column {
+    flex: 1;
+    padding: 15px;
+    background-color: var(--color-secondary);
+    border-radius: 8px;
+    overflow-y: auto;
+    /* Agrega desplazamiento vertical */
+}
+
+/* Títulos en ambas columnas */
+.left-column h2,
+.right-column h2 {
+    font-family: "neue-medium";
+    font-weight: lighter;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: var(--color-main);
+}
+
+/* Listas */
+.left-column ul,
+.right-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+}
+
+.left-column ul li,
+.right-column ul li {
+    margin-bottom: 10px;
+    font-family: "neue";
+}
+
+/* Títulos de subsecciones */
+.left-column h3 {
+    font-size: 1.1em;
+    margin-top: 20px;
+    color: var(--color-main);
+}
+
+/* Definición de elementos fuertes */
+.left-column strong,
+.right-column strong {
+    font-weight: bold;
+}
