@@ -44,7 +44,7 @@ class Login extends BaseController
                 } else {
                     $result->id_user = 0;
                     $this->session->set("user", $result);
-                    return redirect()->to("auth/2fa"); // Redirige a la verificación de dos pasos si verification es 1
+                    return redirect()->to("auth/verificationcode"); // Redirige a la verificación de dos pasos si verification es 1
                 }
             } else {
                 // Contraseña incorrecta

@@ -11,7 +11,7 @@
       <a href="<?= base_url("home/animation"); ?>"><i class="fa-solid fa-arrow-left"></i></a>
     </div>
   </div>
-  <form method="post" action="<?= base_url('/sendemail'); ?>" class="form">
+  <form method="post" action="<?= base_url('auth/sendemail'); ?>" class="form">
     <h3 class="intro">Forgot Password</h3>
     <p>Do you have a code? <a href="<?= base_url('auth/change_forgot'); ?>"> Reset Password</a></p>
     <div class="form-inputs">
