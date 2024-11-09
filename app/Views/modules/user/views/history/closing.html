@@ -1,11 +1,27 @@
 <!-- Scripts Modules -->
+<script>
+    function toggleDetails(element) {
+        const details = element.nextElementSibling;
+        const allDetails = document.querySelectorAll('.scan-details');
+
+        // Cerrar todos los detalles abiertos
+        allDetails.forEach(detail => {
+            if (detail !== details && detail.classList.contains('active')) {
+                detail.classList.remove('active');
+            }
+        });
+
+        // Alternar el estado del detalle clickeado
+        details.classList.toggle('active');
+    }
+</script>
 <script src="<?php echo base_url('assets/js/home/cookies.js'); ?>"></script>
 <script src="<?php echo base_url('assets/js/home/cursor.js'); ?>"></script>
 <script src="<?php echo base_url('assets/js/user/ajax.js'); ?>"></script>
 <script src="<?php echo base_url('assets/js/user/modal.js'); ?>"></script>
 <script src="<?php echo base_url('assets/js/user/sidebar.js'); ?>"></script>
 <script src="<?php echo base_url('assets/js/user/pdf.js'); ?>"></script>
-<script src="<?php echo base_url('assets/js/user/dropdown.js'); ?>"></script>
+
 </body>
 
 </html>
