@@ -4,7 +4,7 @@
     <a class="active" title="Dashboard">
     <i class="fa-solid fa-inbox"></i>
     </a>
-    <a href="<?= base_url('scan/nmap-results'); ?>" title="Scan Results">
+    <a href="<?= base_url('scan/network'); ?>" title="Scan Results">
     <i class="fa-solid fa-shield-virus"></i>
     </a>
     <a href="<?= base_url('user/history'); ?>" title="History">

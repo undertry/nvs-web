@@ -1,13 +1,13 @@
 <div class="sidebar" id="sidebar">
   <a href="<?= base_url('home/animation'); ?>" class="sidebar-icon" title="Home"><i class="fa-solid fa-fingerprint"></i></a>
   <nav>
-    <a class="active" title="Dashboard">
+    <a href="<?= base_url('user/dashboard'); ?>" title="Dashboard">
     <i class="fa-solid fa-inbox"></i>
     </a>
     <a href="<?= base_url('scan/nmap-results'); ?>" title="Scan Results">
     <i class="fa-solid fa-shield-virus"></i>
     </a>
-    <a href="<?= base_url('user/history'); ?>" title="History">
+    <a href="<?= base_url('user/history'); ?>" class="active" title="History">
     <i class="fa-solid fa-clock-rotate-left"></i>
     </a>
     <a href="#help" title="Help Center">

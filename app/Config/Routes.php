@@ -52,6 +52,7 @@ $routes->group('user', function ($routes) {
 
 $routes->group('scan', function ($routes) {
     $routes->get('network', 'Scan\Network::index');
+    $routes->post('save-results', 'Scan\Network::saveResults');
     $routes->post('select-network', 'Scan\Network::selectNetwork');
     $routes->post('setScanMode', 'Scan\Network::setScanMode'); 
     $routes->post('startWifiScan', 'Scan\Network::startWifiScan');
@@ -59,7 +60,7 @@ $routes->group('scan', function ($routes) {
     $routes->post('startNmapScan', 'Scan\Network::startNmapScan');
     $routes->post('mac', 'Scan\Network::mac');
     $routes->get('nmap-results', 'Scan\Network::nmapResults');
-    $routes->POST('ipset', 'Scan\Network::ipset');
+    $routes->post('ipset', 'Scan\Network::ipset');
 });
 
 

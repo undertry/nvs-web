@@ -21,39 +21,28 @@ class Network extends BaseController
     // Función para mostrar las redes WiFi escaneadas
     public function index()
     {
-        $ip = session("ip");
+      
         $client = \Config\Services::curlrequest();
+        $ip = session("ip");
+        
+        // Obtener los datos de puertos, IP, MAC, servicios, OS
+        $nmap_ports_services = $this->getNmapPortsServices($client, $ip);
+        
+        // Obtener las vulnerabilidades
+        $nmap_vulnerabilities = $this->getNmapVulnerabilities($client, $ip);
 
-        try {
-            // Solicitar los resultados del escaneo de redes WiFi a la API
-            $response = $client->get("http://" . $ip . ":5000/scan");
-            log_message("info", "Solicitud realizada a la API.");
+        // Guardar los datos en la sesión para usarlos más tarde
+        session()->set('nmap_ports_services', $nmap_ports_services);
+        session()->set('nmap_vulnerabilities', $nmap_vulnerabilities);
 
-            if ($response->getStatusCode() == 200) {
-                $network = json_decode($response->getBody(), true);
-                log_message(
-                    "info",
-                    "Datos recibidos: " . print_r($network, true)
-                );
-            } else {
-                log_message(
-                    "error",
-                    "Error en la respuesta de la API: " .
-                        $response->getStatusCode()
-                );
-                $network = [];
-            }
-        } catch (\Exception $e) {
-            log_message(
-                "error",
-                "Excepción capturada al intentar conectarse a la API: " .
-                    $e->getMessage()
-            );
-            $network = [];
-        }
-
-        return view("tertiary/network/network", ["network" => $network]);
+        // Pasar los datos a la vista
+        return view("modules/scan/views/index.html", [
+            "nmap_ports_services" => $nmap_ports_services,
+            "nmap_vulnerabilities" => $nmap_vulnerabilities,
+        ]);
     }
+
+    
     // Función para manejar la selección del modo de escaneo
     public function setScanMode()
     {
@@ -390,93 +379,15 @@ class Network extends BaseController
         }
     }
 
-    // Nueva función para manejar los resultados de Nmap
-    public function nmapResults()
+    public function saveResults()
     {
-        $client = \Config\Services::curlrequest();
-        $ip = session("ip");
-        // Obtener los datos de puertos, IP, MAC, servicios, OS
-        try {
-            $response = $client->get(
-                "http://" . $ip . ":5000/nmap/ports-services"
-            );
-
-            log_message(
-                "info",
-                "Solicitud realizada a la API para puertos y servicios."
-            );
-
-            if ($response->getStatusCode() == 200) {
-                $nmap_ports_services = json_decode($response->getBody(), true);
-                log_message(
-                    "info",
-                    "Datos de puertos y servicios recibidos: " .
-                        print_r($nmap_ports_services, true)
-                );
-            } else {
-                log_message(
-                    "error",
-                    "Error en la respuesta de la API: " .
-                        $response->getStatusCode()
-                );
-                $nmap_ports_services = [];
-            }
-        } catch (\Exception $e) {
-            log_message(
-                "error",
-                "Excepción capturada al intentar conectarse a la API: " .
-                    $e->getMessage()
-            );
-            $nmap_ports_services = [];
-        }
-
-        // Obtener las vulnerabilidades
-        try {
-            $response = $client->get(
-                "http://" . $ip . ":5000/nmap/vulnerabilities"
-            );
-            log_message(
-                "info",
-                "Solicitud realizada a la API para vulnerabilidades."
-            );
-
-            if ($response->getStatusCode() == 200) {
-                $nmap_vulnerabilities = json_decode($response->getBody(), true);
-                log_message(
-                    "info",
-                    "Datos de vulnerabilidades recibidos: " .
-                        print_r($nmap_vulnerabilities, true)
-                );
-            } else {
-                log_message(
-                    "error",
-                    "Error en la respuesta de la API: " .
-                        $response->getStatusCode()
-                );
-                $nmap_vulnerabilities = [];
-            }
-        } catch (\Exception $e) {
-            log_message(
-                "error",
-                "Excepción capturada al intentar conectarse a la API: " .
-                    $e->getMessage()
-            );
-            $nmap_vulnerabilities = [];
-        }
+        // Recuperar los datos de la sesión
+        $nmap_ports_services = session('nmap_ports_services');
+        $nmap_vulnerabilities = session('nmap_vulnerabilities');
 
         // Obtener el id_user y id_network desde la sesión
         $id_user = session("user")->id_user;
-        $id_network = session("id_network"); // Verifica que esté correctamente almacenado en la sesión
-
-        // Datos a guardar en la sesión
-        $scanData = [
-            "ip" => $nmap_ports_services["ip"] ?? "N/A",
-            "mac" => $nmap_ports_services["mac"] ?? "N/A",
-            "os_info" => $nmap_ports_services["os_info"] ?? "N/A",
-        ];
-
-        // Guardar los datos en la sesión
-        session()->set("last_scan_data", $scanData);
+        $id_network = session("id_network");
 
         // Modelos
         $scanModel = new ScanModel();
@@ -486,107 +397,106 @@ class Network extends BaseController
         $portAnalysisModel = new Port_analysisModel();
         $portDetailsModel = new Port_detailsModel();
         $solutionModel = new SolutionModel();
-        $portStatusModel = new Port_statusModel(); // Asegúrate de que este modelo esté definido
+        $portStatusModel = new Port_statusModel();
 
-        $scandat = [
+        // Insertar un nuevo escaneo
+        $scan_id = $scanModel->insert([
             "id_user" => $id_user,
             "id_network" => $id_network,
-        ];
-        // Insertar un nuevo escaneo
-        $scan_id = $scanModel->insertScan($scandat);
-        // Verificar si los datos están disponibles
-        $ip = $nmap_ports_services["ip"] ?? "N/A";
-        $mac = $nmap_ports_services["mac"] ?? "N/A";
-        $os_info = $nmap_ports_services["os_info"] ?? "N/A";
+        ]);
 
-        $devicedat= [
-            "ip_address" => $ip,
-            "mac_address" => $mac,
-            "operating_system" => $os_info,
-        ];
         // Insertar dispositivo en la base de datos
-        $device_id = $deviceModel->insertDevice($devicedat);
+        $device_id = $deviceModel->insert([
+            "ip_address" => $nmap_ports_services["ip"] ?? "N/A",
+            "mac_address" => $nmap_ports_services["mac"] ?? "N/A",
+            "operating_system" => $nmap_ports_services["os_info"] ?? "N/A",
+        ]);
 
-        $detailsdat= [
+        // Insertar detalles del escaneo
+        $scanDetailsModel->insert([
             "id_scan" => $scan_id,
             "id_devices" => $device_id,
-        ];
-        // Insertar detalles del escaneo
-        $scanDetailsModel->insertDetails($detailsdat);
+        ]);
 
         // Procesar puertos y servicios asociados al dispositivo
+        $this->processPortsAndServices($nmap_ports_services, $device_id, $portsModel, $portAnalysisModel, $portDetailsModel, $solutionModel, $portStatusModel);
+
+        // Devolver una respuesta JSON
+        return $this->response->setJSON(['success' => true, 'message' => 'Resultados guardados con éxito']);
+    }
+
+    private function getNmapPortsServices($client, $ip)
+    {
+        try {
+            $response = $client->get("http://" . $ip . ":5000/nmap/ports-services");
+            if ($response->getStatusCode() == 200) {
+                return json_decode($response->getBody(), true);
+            }
+        } catch (\Exception $e) {
+            log_message("error", "Error al obtener puertos y servicios: " . $e->getMessage());
+        }
+        return [];
+    }
+
+    private function getNmapVulnerabilities($client, $ip)
+    {
+        try {
+            $response = $client->get("http://" . $ip . ":5000/nmap/vulnerabilities");
+            if ($response->getStatusCode() == 200) {
+                return json_decode($response->getBody(), true);
+            }
+        } catch (\Exception $e) {
+            log_message("error", "Error al obtener vulnerabilidades: " . $e->getMessage());
+        }
+        return [];
+    }
+
+    private function processPortsAndServices($nmap_ports_services, $device_id, $portsModel, $portAnalysisModel, $portDetailsModel, $solutionModel, $portStatusModel)
+    {
         $ports_services = $nmap_ports_services["ports_services"] ?? [];
-        if (!empty($ports_services)) {
-            foreach ($ports_services as $service) {
-                // Verificar los datos de cada puerto
-                $port_name = $service["port"] ?? "Unknown Port";
-                $state = $service["state"] ?? "Unknown State";
-                $service_name = $service["service"] ?? "Unknown Service";
+        foreach ($ports_services as $service) {
+            $port_name = $service["port"] ?? "Unknown Port";
+            $state = $service["state"] ?? "Unknown State";
+            $service_name = $service["service"] ?? "Unknown Service";
 
-                // Obtener el estado del puerto desde la tabla port_status
-                $port_status = $portStatusModel->getStatus($state);
-                  
-                $portdat= [
-                    "port_name" => $port_name ?? "N/A",
-                    "service" => $service_name ?? "N/A",
-                    "id_port_status" => $port_status["id_port_status"] ?? "unknown",
-                ];
-                // Insertar información del puerto en la base de datos
-                $port_id = $portsModel->insertPort($portdat);
+            $port_status = $portStatusModel->where('status', $state)->first();
+            
+            $port_id = $portsModel->insert([
+                "port_name" => $port_name,
+                "service" => $service_name,
+                "id_port_status" => $port_status ? $port_status['id_port_status'] : null,
+            ]);
 
-                $analysisdat = [
-                    "id_port" => $port_id,
-                    "id_devices" => $device_id,
-                ];
-                // Insertar en port_analysis para asociar el puerto al dispositivo
-                $port_analysis_id = $portAnalysisModel->insertAnalysis($analysisdat);
+            $port_analysis_id = $portAnalysisModel->insert([
+                "id_port" => $port_id,
+                "id_devices" => $device_id,
+            ]);
 
-                // Procesar vulnerabilidades asociadas al puerto
-                $vulnerabilities = $service["vulnerabilities"] ?? [];
-                if (!empty($vulnerabilities)) {
-                    foreach ($vulnerabilities as $vuln) {
-                        // Obtener detalles de la vulnerabilidad
-                        $cve = $vuln["cve"] ?? "N/A";
-                        $description = $vuln["description"] ?? "No description available";
+            $vulnerabilities = $service["vulnerabilities"] ?? [];
+            if (!empty($vulnerabilities)) {
+                foreach ($vulnerabilities as $vuln) {
+                    $solution_id = $solutionModel->insert([
+                        "vulnerability_code" => $vuln["cve"] ?? "N/A",
+                        "vuln_description" => $vuln["description"] ?? "No description available",
+                    ]);
 
-                        $solutiondat= [
-                            "vulnerability_code" => $cve,
-                            "vuln_description" => $description,
-                        ];
-                        // Insertar la solución (vulnerabilidad) en la base de datos
-                        $solution_id = $solutionModel->insertSolution($solutiondat);
-
-                        $portdetdat= [
-                            "id_analysis" => $port_analysis_id,
-                            "id_solution" => $solution_id,
-                        ];
-                        // Asociar la vulnerabilidad con el análisis de puerto
-                        $portDetailsModel->insertPortdet($portdetdat);
-                    }
-                } else {
-                    // Insertar sin solución
-                    $nosolut =[
-                        "vulnerability_code" => "N/A",
-                        "vuln_description" => "N/A",
-                    ];
-                    $solution_id = $solutionModel->insertNosolut($nosolut);
-                        
-                    //port detail no solution
-                    $portdetns=[
+                    $portDetailsModel->insert([
                         "id_analysis" => $port_analysis_id,
                         "id_solution" => $solution_id,
-                    ];
-                    // Asociar la vulnerabilidad con el análisis de puerto
-                    $portDetailsModel->insertPortdetns($portdetns);
+                    ]);
                 }
+            } else {
+                $solution_id = $solutionModel->insert([
+                    "vulnerability_code" => "N/A",
+                    "vuln_description" => "N/A",
+                ]);
+
+                $portDetailsModel->insert([
+                    "id_analysis" => $port_analysis_id,
+                    "id_solution" => $solution_id,
+                ]);
             }
         }
-
-        // Pasar los datos a la vista (opcional)
-        return view("modules/scan/views/index.html", [
-            "nmap_ports_services" => $nmap_ports_services,
-            "nmap_vulnerabilities" => $nmap_vulnerabilities,
-        ]);
     }
 
     public function ipset()

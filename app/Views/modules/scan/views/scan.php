@@ -1,6 +1,5 @@
-
-    <h1>Nmap Scan Results</h1>
-    <div class="container">
+<h1>Nmap Scan Results</h1>
+<div class="container">
     <section>
         <h2>Puertos, IP, MAC, Servicios y Sistema Operativo</h2>
         <p><strong>IP:</strong> <?= $nmap_ports_services['ip'] ?? 'N/A' ?></p>
@@ -22,22 +21,50 @@
     <!-- Vista de Vulnerabilidades -->
     <section>
         <h2>Vulnerabilidades</h2>
-        <button id="toggle-vulnerabilities">Ver Vulnerabilidades</button>
-        <div id="vulnerabilities-list" style="display: none;"> <!-- Inicialmente oculto -->
-        <?php if (!empty($nmap_vulnerabilities['vulnerabilities'])): ?>
-    <ul>
-        <?php foreach ($nmap_vulnerabilities['vulnerabilities'] as $vuln): ?>
-            <li>
-                <strong>CVE:</strong> <?= $vuln['cve'] ?? 'No CVE disponible' ?> 
-                - <?= $vuln['description'] ?>
-            </li>
-        <?php endforeach; ?>
-    </ul>
-<?php else: ?>
-    <p>No se encontraron vulnerabilidades.</p>
-<?php endif; ?>
-
+        <div id="vulnerabilities-list">
+            <?php if (!empty($nmap_vulnerabilities['vulnerabilities'])): ?>
+                <ul>
+                    <?php foreach ($nmap_vulnerabilities['vulnerabilities'] as $vuln): ?>
+                        <li>
+                            <strong>CVE:</strong> <?= $vuln['cve'] ?? 'No CVE disponible' ?> 
+                            - <?= $vuln['description'] ?>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+            <?php else: ?>
+                <p>No se encontraron vulnerabilidades.</p>
+            <?php endif; ?>
         </div>
     </section>
+
+    <!-- Botón para guardar resultados -->
+    <button id="save-results">Guardar Resultados</button>
 </div>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Save results
+    document.getElementById('save-results').addEventListener('click', function() {
+        fetch('<?= site_url('scan/save-results') ?>', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-Requested-With': 'XMLHttpRequest'
+            },
+            body: JSON.stringify({})
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert('Resultados guardados con éxito');
+            } else {
+                alert('Error al guardar los resultados');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Error al guardar los resultados');
+        });
+    });
+});
+</script>

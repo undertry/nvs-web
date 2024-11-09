@@ -125,7 +125,7 @@ body {
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
@@ -192,6 +192,7 @@ body {
     padding: 20px;
     margin-bottom: 20px;
     transition: background-color 0.3s ease;
+    animation: scaleUp 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
 .scan-summary {
@@ -357,3 +358,17 @@ body {
 }
 
 /* Animación y estilo al expandir/cerrar los detalles */
+
+
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(0.2);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
