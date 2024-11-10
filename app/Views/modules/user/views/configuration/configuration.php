@@ -8,7 +8,7 @@
     <a href="<?= base_url('scan/network'); ?>" title="Scan Results">
     <i class="fa-solid fa-shield-virus"></i>
     </a>
-    <a href="<?= base_url('user/history'); ?>" class="active" title="History">
+    <a href="<?= base_url('user/history'); ?>"  title="History">
     <i class="fa-solid fa-clock-rotate-left"></i>
     </a>
     <a href="#help" title="Help Center">
@@ -57,7 +57,7 @@
         </p>
       </div>
     </div>
-    <a  class="settings" title="Settings"><i class="fa-solid fa-gear"></i></a>
+    <a  class="settings active" title="Settings" ><i class="fa-solid fa-gear"></i></a>
     <a href="<?= base_url('auth/logout'); ?>" title="Logout">
     <i class="fa-solid fa-sign-out"></i>
     </a>
