@@ -178,7 +178,18 @@
     max-width: 1200px;
     color: var(--color-white);
     background-color: var(--color-black);
+    border: 1px solid var(--color-grey);
     border-radius: 8px;
+    animation: scaleUp 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+h1 {
+    font-family: "neue-medium";
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-weight: lighter;
+    margin-bottom: 20px;
+    color: var(--color-white);
 }
 
 /* Estilos para las columnas */
@@ -196,8 +207,9 @@
 .right-column {
     flex: 1;
     padding: 15px;
-    background-color: var(--color-secondary);
-    border-radius: 8px;
+    background-color: var(--color-black);
+    border: 1px solid var(--color-semiblack);
+    padding: 10px;
     overflow-y: auto;
     /* Agrega desplazamiento vertical */
 }
@@ -223,19 +235,63 @@
 
 .left-column ul li,
 .right-column ul li {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     font-family: "neue";
 }
 
 /* Títulos de subsecciones */
 .left-column h3 {
-    font-size: 1.1em;
+    font-size: 1.2em;
+    font-family: "neue-medium";
+    font-weight: lighter;
     margin-top: 20px;
+    margin-bottom: 15px;
     color: var(--color-main);
 }
 
 /* Definición de elementos fuertes */
 .left-column strong,
 .right-column strong {
-    font-weight: bold;
+    font-family: "neue-medium";
+    font-weight: lighter;
+    background-color: var(--color-semiblack);
+    padding: 5px;
+    border-radius: 10px;
+    transition: color 0.3s ease;
+}
+
+.right-column strong:hover {
+    color: var(--color-main);
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    border: none;
+    border-radius: 4px;
+    font-family: "neue-medium";
+    font-weight: lighter;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--color-main);
+}
+
+
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(0.2);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }

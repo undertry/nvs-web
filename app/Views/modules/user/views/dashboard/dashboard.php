@@ -28,17 +28,18 @@
       </a>
     </div>
     <div class="sidebar-item">
-      <form id="nmapForm" method="post" action="<?= base_url('scan/startNmapScan'); ?>"></form>
-      <a href="javascript:void(0);" onclick="submitNmapForm()" title="Nmap">
-      <i class="fa-solid fa-network-wired"></i>
-      </a>
-    </div>
-    <div class="sidebar-item">
       <form id="macForm" method="post" action="<?= base_url('scan/mac'); ?>"></form>
       <a href="javascript:void(0);" onclick="submitMacForm()" title="MAC">
       <i class="fa-solid fa-microchip"></i>
       </a>
     </div>
+    <div class="sidebar-item">
+      <form id="nmapForm" method="post" action="<?= base_url('scan/startNmapScan'); ?>"></form>
+      <a href="javascript:void(0);" onclick="submitNmapForm()" title="Nmap">
+      <i class="fa-solid fa-network-wired"></i>
+      </a>
+    </div>
+    
   </div>
   <div class="profile-section">
     <a title="Profile"><i class="fa-solid fa-user-secret user" id="user-icon"></i></a>

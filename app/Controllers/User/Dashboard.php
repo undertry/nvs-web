@@ -247,14 +247,14 @@ class Dashboard extends BaseController
         if (!$ip || !$user || !$password) {
             return redirect()
                 ->back()
-                ->with("api_message", "Error: IP o credenciales no asignadas.");
+                ->with("api_message", "Error: IP or credentials not assigned.");
         }
 
         try {
             $ssh = new SSH2($ip, 22, 10); // 10 segundos de espera
             if (!$ssh->login($user, $password)) {
                 throw new \Exception(
-                    "Error: No se pudo establecer conexión SSH."
+                    "Error: SSH connection could not be established.."
                 );
             }
 
@@ -266,7 +266,7 @@ class Dashboard extends BaseController
                     ->back()
                     ->with(
                         "api_message",
-                        "La API ya se encuentra en ejecución."
+                        "The API is already running."
                     );
             }
 
@@ -278,23 +278,23 @@ class Dashboard extends BaseController
             // Confirmar que la API se inició
             $status = $ssh->exec("pgrep -f api_server.py");
             $ssh->disconnect();
-
-            if (trim($status) != "") {
-                return redirect()
-                    ->back()
-                    ->with("api_message", "La API se inició correctamente.");
+            if (trim($status) == "") {
+                return redirect()->back()->with('alert', [
+                    'type' => 'success',
+                    'message' => 'The API was successfully activated.'
+                ]);
             } else {
-                throw new \Exception(
-                    "Error: No se pudo iniciar correctamente la API."
-                );
+                throw new \Exception("Error: The API could not be activated correctly.");
             }
         } catch (\Exception $e) {
+            // Asegurarse de cerrar la conexión en caso de error
             if (isset($ssh)) {
                 $ssh->disconnect();
             }
-            return redirect()
-                ->back()
-                ->with("api_message", $e->getMessage());
+            return redirect()->back()->with('alert', [
+                'type' => 'error',
+                'message' => $e->getMessage()
+            ]);
         }
     }
 
@@ -309,7 +309,7 @@ class Dashboard extends BaseController
         if (!$ip || !$user || !$password) {
             return redirect()
                 ->back()
-                ->with("api_message", "Error: IP o credenciales no asignadas.");
+                ->with("api_message", "Error: IP or credentials not assigned.");
         }
 
         try {
@@ -319,7 +319,7 @@ class Dashboard extends BaseController
             // Intentar la conexión usando el usuario y la contraseña
             if (!$ssh->login($user, $password)) {
                 throw new \Exception(
-                    "Error: No se pudo establecer conexión SSH."
+                    "Error: SSH connection could not be established."
                 );
             }
 
@@ -331,22 +331,22 @@ class Dashboard extends BaseController
             $ssh->disconnect();
 
             if (trim($status) == "") {
-                return redirect()
-                    ->back()
-                    ->with("api_message", "La API se detuvo correctamente.");
+                return redirect()->back()->with('alert', [
+                    'type' => 'success',
+                    'message' => 'The API stopped correctly.'
+                ]);
             } else {
-                throw new \Exception(
-                    "Error: No se pudo detener correctamente la API."
-                );
+                throw new \Exception("Error: The API could not be stopped correctly.");
             }
         } catch (\Exception $e) {
             // Asegurarse de cerrar la conexión en caso de error
             if (isset($ssh)) {
                 $ssh->disconnect();
             }
-            return redirect()
-                ->back()
-                ->with("api_message", $e->getMessage());
+            return redirect()->back()->with('alert', [
+                'type' => 'error',
+                'message' => $e->getMessage()
+            ]);
         }
     }
 
@@ -377,42 +377,25 @@ class Dashboard extends BaseController
             // Ejecutar el comando para iniciar el escaneo de WiFi en segundo plano con nohup y disown
             $output = $ssh->exec("sudo airmon-ng start wlan0");
 
-            // Verificar si el modo monitor se activó correctamente
-            if (
-                strpos($output, "monitor mode enabled") !== false ||
-                strpos($output, "wlan0mon") !== false
-            ) {
-                // El modo monitor se activó correctamente
-                $monitor_message = "Modo monitor activado correctamente.";
-            } else {
-                throw new \Exception(
-                    "Error: No se pudo activar el modo monitor."
-                );
-            }
-
+               // Verificar si el modo monitor se desactivó correctamente
+        if (strpos($output, "monitor mode enabled") !== false || strpos($output, "wlan0") !== false) {
             $ssh->disconnect();
-
-            // Evaluar el resultado para confirmar el éxito o el error
-            if (strpos($output, "Error") === false) {
-                return redirect()
-                    ->back()
-                    ->with(
-                        "monitor_message",
-                        "Se establecio correctamente el modo monitor."
-                    );
-            } else {
-                throw new \Exception(
-                    "Error durante la ejecución del escaneo de WiFi."
-                );
-            }
-        } catch (\Exception $e) {
-            if (isset($ssh)) {
-                $ssh->disconnect();
-            }
-            return redirect()
-                ->back()
-                ->with("monitor_message", $e->getMessage());
+            return redirect()->back()->with('alert', [
+                'type' => 'success',
+                'message' => 'Monitor mode enabled correctly.'
+            ]);
+        } else {
+            throw new \Exception("Error: Monitor mode could not be enabled.");
         }
+    } catch (\Exception $e) {
+        if (isset($ssh)) {
+            $ssh->disconnect();
+        }
+        return redirect()->back()->with('alert', [
+            'type' => 'error',
+            'message' => $e->getMessage()
+        ]);
+    }
     }
 
     public function desactiveMonitor()
@@ -442,42 +425,25 @@ class Dashboard extends BaseController
             // Ejecutar el comando para iniciar el escaneo de WiFi en segundo plano con nohup y disown
             $output = $ssh->exec("sudo airmon-ng stop wlan0mon");
 
-            // Verificar si el modo monitor se activó correctamente
-            if (
-                strpos($output, "monitor mode disabled") !== false ||
-                strpos($output, "wlan0") !== false
-            ) {
-                // El modo monitor se activó correctamente
-                $monitor_message = "Modo monitor desactivado correctamente.";
-            } else {
-                throw new \Exception(
-                    "Error: No se pudo desactivar el modo monitor."
-                );
-            }
-
+            // Verificar si el modo monitor se desactivó correctamente
+        if (strpos($output, "monitor mode disabled") !== false || strpos($output, "wlan0") !== false) {
             $ssh->disconnect();
-
-            // Evaluar el resultado para confirmar el éxito o el error
-            if (strpos($output, "Error") === false) {
-                return redirect()
-                    ->back()
-                    ->with(
-                        "monitor_message",
-                        "El escaneo de WiFi se inició correctamente."
-                    );
-            } else {
-                throw new \Exception(
-                    "Error durante la ejecución del escaneo de WiFi."
-                );
-            }
-        } catch (\Exception $e) {
-            if (isset($ssh)) {
-                $ssh->disconnect();
-            }
-            return redirect()
-                ->back()
-                ->with("monitor_message", $e->getMessage());
+            return redirect()->back()->with('alert', [
+                'type' => 'success',
+                'message' => 'Monitor mode deactivated correctly.'
+            ]);
+        } else {
+            throw new \Exception("Error: Monitor mode could not be deactivated.");
         }
+    } catch (\Exception $e) {
+        if (isset($ssh)) {
+            $ssh->disconnect();
+        }
+        return redirect()->back()->with('alert', [
+            'type' => 'error',
+            'message' => $e->getMessage()
+        ]);
+    }
     }
 
     public function animation()

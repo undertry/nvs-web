@@ -4,10 +4,10 @@
     <a href="<?= base_url('user/dashboard'); ?>" title="Dashboard">
     <i class="fa-solid fa-inbox"></i>
     </a>
-    <a href="<?= base_url('scan/nmap-results'); ?>" title="Scan Results">
+    <a href="<?= base_url('scan/network'); ?>" title="Scan Results">
     <i class="fa-solid fa-shield-virus"></i>
     </a>
-    <a href="<?= base_url('user/history'); ?>" class="active" title="History">
+    <a  class="active" title="History">
     <i class="fa-solid fa-clock-rotate-left"></i>
     </a>
     <a href="#help" title="Help Center">
@@ -28,17 +28,18 @@
       </a>
     </div>
     <div class="sidebar-item">
-      <form id="nmapForm" method="post" action="<?= base_url('scan/startNmapScan'); ?>"></form>
-      <a href="javascript:void(0);" onclick="submitNmapForm()" title="Nmap">
-      <i class="fa-solid fa-network-wired"></i>
-      </a>
-    </div>
-    <div class="sidebar-item">
       <form id="macForm" method="post" action="<?= base_url('scan/mac'); ?>"></form>
       <a href="javascript:void(0);" onclick="submitMacForm()" title="MAC">
       <i class="fa-solid fa-microchip"></i>
       </a>
     </div>
+    <div class="sidebar-item">
+      <form id="nmapForm" method="post" action="<?= base_url('scan/startNmapScan'); ?>"></form>
+      <a href="javascript:void(0);" onclick="submitNmapForm()" title="Nmap">
+      <i class="fa-solid fa-network-wired"></i>
+      </a>
+    </div>
+   
   </div>
   <div class="profile-section">
     <a title="Profile"><i class="fa-solid fa-user-secret user" id="user-icon"></i></a>
@@ -101,8 +102,8 @@
                                     <h2>Device Information</h2>
                                     <ul>
                                         <li><strong><i class="fa-solid fa-map-pin"></i> IP:</strong> <?= $deviceDetails[0]['ip_address'] ?></li>
-                                        <li><strong><i class="fas fa-laptop"></i>  Operating System:</strong> <?= $deviceDetails[0]['operating_system'] ?></li>
                                         <li><strong><i class="fa-solid fa-tag"></i> MAC:</strong> <?= $deviceDetails[0]['mac_address'] ?></li>
+                                        <li><strong><i class="fas fa-laptop"></i>  Operating System:</strong> <?= $deviceDetails[0]['operating_system'] ?></li>
                                     </ul>
 
                                     <?php
@@ -116,7 +117,7 @@
 
                                         <ul>
                                             <li><strong><i class="fas fa-plug"></i> Port:</strong> <?= $portName ?></li>
-                                            <li><strong><i class="fas fa-cogs"></i>  Service:</strong> <?= $portDetails[0]['service'] ?></li>
+                                            <li><strong><i class="fas fa-cogs"></i> Service:</strong> <?= $portDetails[0]['service'] ?></li>
                                             <li><strong><i class="fas fa-circle-check"></i> Status:</strong> <?= $portDetails[0]['status'] ?></li>
                                             <?php foreach ($portDetails as $port) : ?>
                                                 <h3>Vulnerability details</h3>

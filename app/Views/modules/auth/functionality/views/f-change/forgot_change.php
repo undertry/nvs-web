@@ -51,7 +51,12 @@
                         <input name="code" required type="text" id="code" placeholder="verification code">
                     </div>
                 </div>
+                <div class="links">
+  <a href="<?= base_url('auth/login'); ?>">Go back to Log In</a>
+  </div>
                 <input type="submit" value="Change Password">
             </form>
+
         </div>
+    
     </div>

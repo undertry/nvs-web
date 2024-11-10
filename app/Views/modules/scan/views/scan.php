@@ -1,10 +1,10 @@
 <div class="sidebar" id="sidebar">
   <a href="<?= base_url('home/animation'); ?>" class="sidebar-icon" title="Home"><i class="fa-solid fa-fingerprint"></i></a>
   <nav>
-    <a class="active" title="Dashboard">
+    <a href="<?= base_url('user/dashboard'); ?>" title="Dashboard">
     <i class="fa-solid fa-inbox"></i>
     </a>
-    <a href="<?= base_url('scan/network'); ?>" title="Scan Results">
+    <a class="active" title="Scan Results">
     <i class="fa-solid fa-shield-virus"></i>
     </a>
     <a href="<?= base_url('user/history'); ?>" title="History">
@@ -28,17 +28,18 @@
       </a>
     </div>
     <div class="sidebar-item">
-      <form id="nmapForm" method="post" action="<?= base_url('scan/startNmapScan'); ?>"></form>
-      <a href="javascript:void(0);" onclick="submitNmapForm()" title="Nmap">
-      <i class="fa-solid fa-network-wired"></i>
-      </a>
-    </div>
-    <div class="sidebar-item">
       <form id="macForm" method="post" action="<?= base_url('scan/mac'); ?>"></form>
       <a href="javascript:void(0);" onclick="submitMacForm()" title="MAC">
       <i class="fa-solid fa-microchip"></i>
       </a>
     </div>
+    <div class="sidebar-item">
+      <form id="nmapForm" method="post" action="<?= base_url('scan/startNmapScan'); ?>"></form>
+      <a href="javascript:void(0);" onclick="submitNmapForm()" title="Nmap">
+      <i class="fa-solid fa-network-wired"></i>
+      </a>
+    </div>
+  
   </div>
   <div class="profile-section">
     <a title="Profile"><i class="fa-solid fa-user-secret user" id="user-icon"></i></a>
@@ -61,26 +62,26 @@
     </a>
   </div>
 </div>
-<h1>Nmap Scan Results</h1>
+
 <div class="container">
+<h1>Scan Results</h1>
     <div class="columns">
         <!-- Columna izquierda: Información de red y dispositivo -->
         <div class="left-column">
-            <h2>Información de Red y Dispositivo</h2>
+            <h2>Device Information</h2>
             <ul>
-                <li><strong>IP:</strong> <?= $nmap_ports_services['ip'] ?? 'N/A' ?></li>
-                <li><strong>MAC:</strong> <?= $nmap_ports_services['mac'] ?? 'N/A' ?></li>
-                <li><strong>Sistema Operativo:</strong> <?= $nmap_ports_services['os_info'] ?? 'N/A' ?></li>
+                <li><strong><i class="fa-solid fa-map-pin"></i> IP:</strong> <?= $nmap_ports_services['ip'] ?? 'N/A' ?></li>
+                <li><strong><i class="fa-solid fa-tag"></i> MAC:</strong> <?= $nmap_ports_services['mac'] ?? 'N/A' ?></li>
+                <li><strong><i class="fas fa-laptop"></i> Operating System:</strong> <?= $nmap_ports_services['os_info'] ?? 'N/A' ?></li>
             </ul>
 
-            <h3>Puertos y Servicios</h3>
+            <h3>Port Information</h3>
             <?php if (!empty($nmap_ports_services['ports_services'])): ?>
                 <ul>
                     <?php foreach ($nmap_ports_services['ports_services'] as $service): ?>
-                        <li><strong>Puerto:</strong> <?= $service['port'] ?> - 
-                            <strong>Estado:</strong> <?= $service['state'] ?> - 
-                            <strong>Servicio:</strong> <?= $service['service'] ?>
-                        </li>
+                        <li><strong><i class="fas fa-plug"></i> Port:</strong> <?= $service['port'] ?></li> 
+                            <li><strong><i class="fas fa-circle-check"></i> Status:</strong> <?= $service['state'] ?></li> 
+                            <li><strong><i class="fas fa-cogs"></i> Service:</strong> <?= $service['service'] ?></li>
                     <?php endforeach; ?>
                 </ul>
             <?php else: ?>
@@ -90,11 +91,11 @@
 
         <!-- Columna derecha: Vulnerabilidades -->
         <div class="right-column">
-            <h2>Vulnerabilidades</h2>
+            <h2>Vulnerability details</h2>
             <?php if (!empty($nmap_vulnerabilities['vulnerabilities'])): ?>
                 <ul>
                     <?php foreach ($nmap_vulnerabilities['vulnerabilities'] as $vuln): ?>
-                        <li><strong>CVE:</strong> <?= $vuln['cve'] ?? 'No CVE disponible' ?> - <?= $vuln['description'] ?></li>
+                        <li><strong><i class="fas fa-code"></i> CVE:</strong> <?= $vuln['cve'] ?? 'No CVE disponible' ?> - <strong><?= $vuln['description'] ?></strong></li>
                     <?php endforeach; ?>
                 </ul>
             <?php else: ?>
