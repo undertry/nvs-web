@@ -35,4 +35,14 @@ class History extends BaseController
         }
     }
 
+    public function deleteAllScans($id_user)
+{
+    $scanModel = new ScanModel();
+       
+    if ($scanModel->deleteAllScansByUser($id_user)) {
+        return redirect()->back()->with('success', 'All scans have been successfully deleted.');
+    } else {
+        return redirect()->back()->with('error', 'Error deleting the scans.');
+    }
+}
 }

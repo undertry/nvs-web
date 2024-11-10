@@ -60,7 +60,7 @@ class Network extends BaseController
         if (!isset($scanDurations[$mode])) {
             return redirect()
                 ->back()
-                ->with("error", "Modo de escaneo inválido.");
+                ->with("error", "Invalid scan mode.");
         }
 
         // Enviar el modo seleccionado y la duración a la API de la Raspberry Pi
@@ -77,26 +77,26 @@ class Network extends BaseController
                     ->back()
                     ->with(
                         "success",
-                        "Modo de escaneo establecido correctamente."
+                        "Scan mode set successfully."
                     );
             } else {
                 log_message(
                     "error",
-                    "Error al establecer el modo de escaneo en la Raspberry Pi."
+                    "Error setting the scan mode on the Raspberry Pi."
                 );
                 return redirect()
                     ->back()
-                    ->with("error", "Error al establecer el modo de escaneo.");
+                    ->with("error", "Error setting the scan mode.");
             }
         } catch (\Exception $e) {
             log_message(
                 "error",
-                "Excepción capturada al intentar establecer el modo de escaneo: " .
+                "Exception caught when trying to set the scan mode: " .
                     $e->getMessage()
             );
             return redirect()
                 ->back()
-                ->with("error", "Excepción al establecer el modo de escaneo.");
+                ->with("error", "Exception while setting the scan mode.");
         }
     }
 
@@ -112,7 +112,7 @@ class Network extends BaseController
         if (!$selectedNetwork) {
             return $this->response->setJSON([
                 "success" => false,
-                "message" => "Datos de red no recibidos correctamente.",
+                "message" => "Network data not received correctly.",
             ]);
         }
 
@@ -151,22 +151,22 @@ class Network extends BaseController
             } else {
                 log_message(
                     "error",
-                    "Error al enviar la red seleccionada a la Raspberry Pi."
+                    "Error sending the selected network to the Raspberry Pi."
                 );
                 return $this->response->setJSON([
                     "success" => false,
-                    "message" => "Error al seleccionar la red.",
+                    "message" => "Error selecting the network.",
                 ]);
             }
         } catch (\Exception $e) {
             log_message(
                 "error",
-                "Excepción capturada al intentar enviar la red a la Raspberry Pi: " .
+                "Exception caught when trying to send the network to the Raspberry Pi: " .
                     $e->getMessage()
             );
             return $this->response->setJSON([
                 "success" => false,
-                "message" => "Excepción al seleccionar la red.",
+                "message" => "Exception when selecting the network.",
             ]);
         }
     }
@@ -182,7 +182,7 @@ class Network extends BaseController
                 ->back()
                 ->with(
                     "wifi_message",
-                    "Error: IP o credenciales no asignadas."
+                    "Error: Unassigned IP or credentials"
                 );
         }
 
@@ -191,7 +191,7 @@ class Network extends BaseController
             $ssh = new SSH2($ip, 22, 10); // 10 segundos de espera
             if (!$ssh->login($user, $password)) {
                 throw new \Exception(
-                    "Error: No se pudo establecer conexión SSH."
+                    "Error: SSH connection could not be established."
                 );
             }
 
@@ -206,11 +206,11 @@ class Network extends BaseController
                     ->back()
                     ->with(
                         "wifi_message",
-                        "El escaneo de WiFi se inició correctamente."
+                        "The WiFi scan started successfully"
                     );
             } else {
                 throw new \Exception(
-                    "Error durante la ejecución del escaneo de WiFi."
+                    "Error During the execution of the WiFi scan."
                 );
             }
         } catch (\Exception $e) {
@@ -234,7 +234,7 @@ class Network extends BaseController
                 ->back()
                 ->with(
                     "device_message",
-                    "Error: IP o credenciales no asignadas."
+                    "Error: Unassigned IP or credentials."
                 );
         }
 
@@ -243,7 +243,7 @@ class Network extends BaseController
             $ssh = new SSH2($ip, 22, 10); // 10 segundos de espera
             if (!$ssh->login($user, $password)) {
                 throw new \Exception(
-                    "Error: No se pudo establecer conexión SSH."
+                    "Error: SSH connection could not be established."
                 );
             }
 
@@ -258,11 +258,11 @@ class Network extends BaseController
                     ->back()
                     ->with(
                         "device_message",
-                        "El escaneo de Dispositivo se realizo correctamente."
+                        "The device scan was completed successfully."
                     );
             } else {
                 throw new \Exception(
-                    "Error durante la ejecución del escaneo de Dispositivos."
+                    "Error During the execution of the device scan.."
                 );
             }
         } catch (\Exception $e) {
@@ -286,7 +286,7 @@ class Network extends BaseController
                 ->back()
                 ->with(
                     "nmap_message",
-                    "Error: IP o credenciales no asignadas."
+                    "Error: Unassigned IP or credentials."
                 );
         }
 
@@ -295,7 +295,7 @@ class Network extends BaseController
             $ssh = new SSH2($ip, 22, 10); // 10 segundos de espera
             if (!$ssh->login($user, $password)) {
                 throw new \Exception(
-                    "Error: No se pudo establecer conexión SSH."
+                    "Error: SSH connection could not be established"
                 );
             }
         
@@ -310,11 +310,11 @@ class Network extends BaseController
                     ->back()
                     ->with(
                         "nmap_message",
-                        "El escaneo de Nmap se inició correctamente."
+                        "The Nmap scan started successfully."
                     );
             } else {
                 throw new \Exception(
-                    "Error durante la ejecución del escaneo de Nmap."
+                    "Error During the execution of the Nmap scan"
                 );
             }
         } catch (\Exception $e) {
@@ -336,7 +336,7 @@ class Network extends BaseController
         if (!$ip || !$user || !$password) {
             return redirect()
                 ->back()
-                ->with("mac_message", "Error: IP o credenciales no asignadas.");
+                ->with("mac_message", "Error: Unassigned IP or credentials.");
         }
 
         try {
@@ -344,7 +344,7 @@ class Network extends BaseController
             $ssh = new SSH2($ip, 22, 10); // 10 segundos de espera
             if (!$ssh->login($user, $password)) {
                 throw new \Exception(
-                    "Error: No se pudo establecer conexión SSH."
+                    "Error: SSH connection could not be established."
                 );
             }
 
@@ -359,10 +359,10 @@ class Network extends BaseController
             if (strpos($output, "Error") === false) {
                 return redirect()
                     ->back()
-                    ->with("mac_message", "Se encontraron dispositivos.");
+                    ->with("mac_message", "Devices were found.");
             } else {
                 throw new \Exception(
-                    "Error durante la ejecución del escaneo de ips."
+                    "Error During the execution of the IP scan."
                 );
             }
         } catch (\Exception $e) {
@@ -417,8 +417,11 @@ class Network extends BaseController
         // Procesar puertos y servicios asociados al dispositivo
         $this->processPortsAndServices($nmap_ports_services, $device_id, $portsModel, $portAnalysisModel, $portDetailsModel, $solutionModel, $portStatusModel);
 
+        // Eliminar las sesiones después de usarlas
+        session()->remove('nmap_ports_services');
+        session()->remove('nmap_vulnerabilities');
         // Devolver una respuesta JSON
-        return $this->response->setJSON(['success' => true, 'message' => 'Resultados guardados con éxito']);
+        return $this->response->setJSON(['success' => true, 'message' => 'Results saved successfully.']);
     }
 
     private function getNmapPortsServices($client, $ip)
@@ -429,7 +432,7 @@ class Network extends BaseController
                 return json_decode($response->getBody(), true);
             }
         } catch (\Exception $e) {
-            log_message("error", "Error al obtener puertos y servicios: " . $e->getMessage());
+            log_message("error", "Error obtaining ports and services.: " . $e->getMessage());
         }
         return [];
     }
@@ -442,7 +445,7 @@ class Network extends BaseController
                 return json_decode($response->getBody(), true);
             }
         } catch (\Exception $e) {
-            log_message("error", "Error al obtener vulnerabilidades: " . $e->getMessage());
+            log_message("error", "Error obtaining vulnerabilities.: " . $e->getMessage());
         }
         return [];
     }
@@ -499,7 +502,7 @@ class Network extends BaseController
     {
         $ip = $this->request->getPost("ip");
         $this->session->set("ip", $ip);
-        return redirect()->back()->with("success", "Ip asignadas correctamentes");;
+        return redirect()->back()->with("success", "IP assigned correctly");;
     }
 
 }

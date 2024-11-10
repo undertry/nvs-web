@@ -48,6 +48,8 @@ $routes->group('user', function ($routes) {
     $routes->get('h-animation', 'User\History::animation');
     $routes->get('history', 'User\History::history');
     $routes->post('history/deleteScan/(:num)', 'User\History::deleteScan/$1');
+    $routes->post('history/deleteallScans/(:num)', 'User\History::deleteAllScans/$1');
+
 });
 
 $routes->group('scan', function ($routes) {

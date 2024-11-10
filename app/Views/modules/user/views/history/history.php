@@ -143,12 +143,15 @@
                             Download Scan PDF
                         </button>
 
-                        <form action="<?= base_url('user/history/deleteScan/' . $detail['id_scan']) ?>" method="post" onsubmit="return confirm('¿Estás seguro de que deseas eliminar este escaneo?');">
-                            <button type="submit" class="btn btn-danger">Eliminar Scan</button>
+                        <form action="<?= base_url('user/history/deleteScan/' . $detail['id_scan']) ?>" method="post" onsubmit="return confirm('Are you sure you want to delete this scan?');">
+                            <button type="submit" class="btn btn-danger">Delete scan</button>
                         </form>
 
                     </div>
                 <?php endforeach; ?>
+                <form action="<?= base_url('user/history/deleteallScans/'. $detail['id_user'])?>" method="post" onsubmit="return confirm('Are you sure you want to delete all scans?');">
+                            <button type="submit" class="btn btn-danger">Delete all scans</button>
+                        </form>
 
             <?php else : ?>
                 <p>No details found for this scan</p>
