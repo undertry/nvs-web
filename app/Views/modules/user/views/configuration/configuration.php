@@ -112,15 +112,33 @@
         <div class="info-section">
           <h3>Alerts</h3>
           <div id="alerts-container">
-          <?php 
-    $alert = session()->getFlashdata('alert');
-    if ($alert): 
-    ?>
-      <div class="alert alert-<?= $alert['type'] ?>">
-        <?= $alert['message'] ?>
-      </div>
-    <?php endif; ?>
-          </div>
+          <?php
+$success = session()->getFlashdata('success');
+$error = session()->getFlashdata('error');
+$alert = session()->getFlashdata('alert');
+
+if ($success): 
+?>
+  <div class="alert alert-success">
+    <?= $success ?>
+  </div>
+<?php endif; 
+
+if ($error): 
+?>
+  <div class="alert alert-danger">
+    <?= $error ?>
+  </div>
+<?php endif;
+
+if ($alert && is_array($alert) && isset($alert['type']) && isset($alert['message'])): 
+  $alertClass = ($alert['type'] === 'error') ? 'alert-danger' : 'alert-' . $alert['type'];
+?>
+  <div class="alert <?= $alertClass ?>">
+    <?= $alert['message'] ?>
+  </div>
+<?php endif; ?>
+</div>
         </div>
       </div>
 

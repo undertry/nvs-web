@@ -49,7 +49,6 @@ class Network extends BaseController
         $ip = session("ip");
         $client = \Config\Services::curlrequest();
         $mode = $this->request->getPost("mode"); // Obtener el modo seleccionado desde la vista
-        $this->session->set("mode", $mode);
         // Validar que el modo sea uno de los aceptados y asignar el tiempo en segundos
         $scanDurations = [
             "quick" => 10,
@@ -73,6 +72,7 @@ class Network extends BaseController
             ]);
 
             if ($response->getStatusCode() == 200) {
+                $this->session->set("mode", $mode);
                 return redirect()
                     ->back()
                     ->with(
