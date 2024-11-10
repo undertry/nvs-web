@@ -142,7 +142,7 @@ class Dashboard extends BaseController
         if (empty($ip)) {
             return $this->response->setJSON([
                 "success" => false,
-                "message" => "Error: IP no asignada en la sesión.",
+                "message" => "Error: IP not assigned in the session.",
             ]);
         }
 
@@ -163,11 +163,11 @@ class Dashboard extends BaseController
             // Si falla la conexión con la API, retornar un mensaje de error
             log_message(
                 "error",
-                "Error al intentar conectarse a la API: " . $e->getMessage()
+                "Error trying to connect to the API: " . $e->getMessage()
             );
             return $this->response->setJSON([
                 "success" => false,
-                "message" => "Error: API no inicializada o inaccesible.",
+                "message" => "Error: API not initialized or inaccessible.",
             ]);
         }
     }
@@ -180,7 +180,7 @@ class Dashboard extends BaseController
         if (empty($ip)) {
             return $this->response->setJSON([
                 "success" => false,
-                "message" => "Error: IP no asignada en la sesión.",
+                "message" => "Error: IP not assigned in the session.",
             ]);
         }
 
@@ -201,11 +201,11 @@ class Dashboard extends BaseController
             // Si falla la conexión con la API, retornar un mensaje de error
             log_message(
                 "error",
-                "Error al intentar conectarse a la API: " . $e->getMessage()
+                "Error trying to connect to the API: " . $e->getMessage()
             );
             return $this->response->setJSON([
                 "success" => false,
-                "message" => "Error: API no inicializada o inaccesible.",
+                "message" => "Error: API not initialized or inaccessible.",
             ]);
         }
     }
@@ -230,11 +230,11 @@ class Dashboard extends BaseController
 
             return redirect()
                 ->back()
-                ->with("success", "Credenciales guardadas exitosamente.");
+                ->with("success", "Credentials saved successfully.");
         } else {
             return redirect()
                 ->back()
-                ->with("error", "Debe ingresar el usuario y la contraseña.");
+                ->with("error", "You must enter the username and password.");
         }
     }
 
@@ -361,7 +361,7 @@ class Dashboard extends BaseController
                 ->back()
                 ->with(
                     "monitor_message",
-                    "Error: IP o credenciales no asignadas."
+                    "Error: IP or credentials not assigned."
                 );
         }
 
@@ -370,7 +370,7 @@ class Dashboard extends BaseController
             $ssh = new SSH2($ip, 22, 10); // 10 segundos de espera
             if (!$ssh->login($user, $password)) {
                 throw new \Exception(
-                    "Error: No se pudo establecer conexión SSH."
+                    "Error: Could not establish SSH connection."
                 );
             }
 
@@ -409,7 +409,7 @@ class Dashboard extends BaseController
                 ->back()
                 ->with(
                     "monitor_message",
-                    "Error: IP o credenciales no asignadas."
+                    "Error: IP or credentials not assigned."
                 );
         }
 
@@ -418,7 +418,7 @@ class Dashboard extends BaseController
             $ssh = new SSH2($ip, 22, 10); // 10 segundos de espera
             if (!$ssh->login($user, $password)) {
                 throw new \Exception(
-                    "Error: No se pudo establecer conexión SSH."
+                    "Error: Could not establish SSH connection."
                 );
             }
 
