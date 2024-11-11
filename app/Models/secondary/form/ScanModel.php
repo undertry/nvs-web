@@ -160,10 +160,7 @@ public function deleteAllScansByUser($id_user)
                             $this->db->table('ports')->where('id_port', $portAnalysis['id_port'])->delete();
                         }
 
-                        // Verificar y eliminar el estado del puerto desde 'port_status'
-                        if (isset($portAnalysis['id_port_status'])) {
-                            $this->db->table('port_status')->where('id_port_status', $portAnalysis['id_port_status'])->delete();
-                        }
+                       
                     }
 
                     // Eliminar los registros de análisis de puertos relacionados con el dispositivo desde 'port_analysis'                
