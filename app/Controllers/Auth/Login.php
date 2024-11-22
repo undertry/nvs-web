@@ -158,7 +158,15 @@ class Login extends BaseController
 
     public function verify()
     {
-        return view("modules/user/functionality/2fa");
+        // Verificar si el usuario está autenticado y tiene un ID de usuario válido
+        $user = session("user");
+
+        if ($user && $user->id_user == 0) {
+            // Redirigir a la página de inicio de sesión si el usuario no está autenticado
+            return view("modules/user/functionality/2fa");
+        } else {
+            return view('modules/home/animations/index.html');
+        }
     }
 
     public function logout()

@@ -15,7 +15,7 @@ class Change_Password extends BaseController
         $user = session("user");
 
         if ($user && $user->id_user > 0) {
-            return view("modules/user/views/index.html");
+            return redirect()->to("user/dashboard");
         } else {
             return view("modules/auth/functionality/views/f-password/index.html");
         }
@@ -26,7 +26,7 @@ class Change_Password extends BaseController
         if (!$user) {
             return view("modules/auth/functionality/views/f-change/index.html");
         } else {
-            return view("modules/user/views/index.html");
+            return redirect()->to("user/dashboard");
         }
     }
 

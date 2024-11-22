@@ -18,7 +18,7 @@ class Signup extends BaseController
             // Redirigir a la página de inicio de sesión si el usuario no está autenticado
             return view('modules/auth/views/sign-up/index.html');
         } else {
-            return redirect()->to('dashboard');
+            return redirect()->to('user/dashboard');
         }
     }
     public function do_register()
