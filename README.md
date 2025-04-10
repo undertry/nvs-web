@@ -1,5 +1,10 @@
 ### 📄 `nvs-web` – README
+## Preview
 
+<p align="center">
+  <img src="showcase/nvs.png" alt="nvs" width="800" height="400">
+
+</p>
 
 # 🌐 NVS Web – Network Vulnerability Scanner Interface
 
