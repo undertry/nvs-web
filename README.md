@@ -1,60 +1,132 @@
-# CodeIgniter 4 Framework
+### 📄 `nvs-web` – README
 
-## What is CodeIgniter?
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+# 🌐 NVS Web – Network Vulnerability Scanner Interface
 
-This repository holds the distributable version of the framework.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+> `nvs-web` is the official frontend of the **NVS (Network Vulnerability Scanner)** project. It provides a clean, interactive dashboard to visualize and control network scans powered by [`nvs-core`](https://github.com/undertry/nvs-core). Built using **CodeIgniter 4**, enhanced with **GSAP** for rich animations, and styled with custom CSS and JavaScript.
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+![PHP](https://img.shields.io/badge/PHP-8.0%2B-blue)
+![CodeIgniter](https://img.shields.io/badge/CodeIgniter-4.x-red)
+![License](https://img.shields.io/github/license/undertry/nvs-web)
+![Status](https://img.shields.io/badge/Status-Active-brightgreen)
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+---
 
-## Important Change with index.php
+## 🧰 What It Does
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+- 🎛️ Offers a modern web UI for NVS
+- 📡 Sends scan requests to `nvs-core` via API
+- 📊 Displays scan results dynamically
+- 💡 Uses animations (GSAP) to enhance UX
+- ⚙️ Works seamlessly in local environments like XAMPP
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+---
 
-**Please** read the user guide for a better explanation of how CI4 works!
+## ⚙️ Tech Stack
 
-## Repository Management
+| Category       | Technology            |
+|----------------|------------------------|
+| Backend        | PHP 8.x, CodeIgniter 4 |
+| Frontend       | HTML5, CSS3, JavaScript |
+| Animations     | GSAP (GreenSock)      |
+| Server Env     | XAMPP / Apache        |
+| Database       | MySQL (optional)      |
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+---
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+## 🛠️ Requirements
 
-## Contributing
+- PHP 8.0+
+- XAMPP / Apache server
+- Composer (recommended)
+- [`nvs-core`](https://github.com/undertry/nvs-core) running locally or remotely
 
-We welcome contributions from the community.
+---
 
-Please read the [*Contributing to CodeIgniter*](https://github.com/codeigniter4/CodeIgniter4/blob/develop/CONTRIBUTING.md) section in the development repository.
+## 🚀 Getting Started
 
-## Server Requirements
+### 1. Clone the Repository
 
-PHP version 8.1 or higher is required, with the following extensions installed:
+```bash
+git clone https://github.com/undertry/nvs-web.git
+```
 
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
+### 2. Move to Your Web Server Directory
 
-> [!WARNING]
-> The end of life date for PHP 7.4 was November 28, 2022.
-> The end of life date for PHP 8.0 was November 26, 2023.
-> If you are still using PHP 7.4 or 8.0, you should upgrade immediately.
-> The end of life date for PHP 8.1 will be November 25, 2024.
+If using XAMPP on Windows:
 
-Additionally, make sure that the following extensions are enabled in your PHP:
+```bash
+mv nvs-web /c/xampp/htdocs/
+```
 
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+### 3. Configure `.env`
+
+Copy the example environment file and set the base URL + API endpoints:
+
+```bash
+cp .env.example .env
+```
+
+Edit the file and set:
+
+```env
+app.baseURL = 'http://localhost/nvs-web/public'
+api.nvsCoreURL = 'http://localhost:5000'  # Flask API from nvs-core
+```
+
+### 4. Install Dependencies
+
+```bash
+composer install
+```
+
+### 5. Generate Key & Run Migrations
+
+```bash
+php spark key:generate
+php spark migrate
+```
+
+### 6. Start the Server
+
+```bash
+php spark serve
+```
+
+Then go to: [http://localhost:8080](http://localhost:8080)
+
+---
+
+## 📁 Project Structure
+
+```
+nvs-web/
+├── app/                → Core application files (Controllers, Views, Models)
+├── public/             → Entry point (index.php)
+├── animations/         → GSAP-powered animation scripts
+├── .env                → Environment configuration
+└── README.md           → This file
+```
+
+---
+
+## 🔗 Related Projects
+
+- [nvs-core](https://github.com/undertry/nvs-core) – Core CLI & scanning engine for the NVS project.
+
+---
+
+## 👥 Authors
+
+- **Frontend Design & Animations:** [@undertry (Tiago Comba)](https://github.com/undertry)
+- **Backend & API Integration:** [@ezequielmonteverde](https://github.com/ezequielmonteverde)
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for more details.
+
+---
+
+> “NVS: scan smarter, not harder.” 🔐
